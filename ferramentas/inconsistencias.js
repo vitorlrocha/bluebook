@@ -42,8 +42,9 @@ const fx = (r) => (r.lo === r.hi ? fmt(r.lo) : fmt(r.lo) + '-' + fmt(r.hi)) + ' 
 const fmt = (x) => String(Math.round(x * 1000) / 1000).replace('.', ',');
 const sobrepoe = (a, b) => a.lo <= b.hi && b.lo <= a.hi;
 
-/* mesma regra do app (pedFind em src/app.js): prefixo normalizado mais longo */
-function pedFind(PED, nome) { const s = sem(nome); let best = null; PED.forEach((e) => { if (s.indexOf(e.k) === 0 && (!best || e.k.length > best.k.length)) best = e; }); return best; }
+/* mesma regra do app (pedFind em src/app.js): prefixo normalizado mais longo; associação só com entrada própria */
+function pedPrefixo(PED, nome) { const s = sem(nome); let best = null; PED.forEach((e) => { if (s.indexOf(e.k) === 0 && (!best || e.k.length > best.k.length)) best = e; }); return best; }
+function pedFind(PED, nome) { const b = pedPrefixo(PED, nome); return b && /\+/.test(nome) && !/\+/.test(b.n) ? null : b; }
 /* Só rotas com faixa em mg/kg (penicilina cristalina, por exemplo, é em UI/kg e não é comparável). */
 function rotasComDose(e) { return (e.v || []).filter((r) => Array.isArray(r.d) && r.d.length === 2 && (r.un || 'mg') === 'mg').map((r) => ({ via: r.via, lo: r.d[0], hi: r.d[1], base: r.b || 'dose', mx: r.mx, mxd: r.mxd, ob: r.ob || '' })); }
 /* Vias comparáveis: EV/IV/IO juntos; IM; VO; retal; nebulização; uso local (infiltrativa/tópica). */
@@ -77,10 +78,11 @@ function analisar() {
   // 2. Ficha do medicamento (campo Pediatria) × calculadora pediátrica
   const usados = new Set();
   for (const m of MEDS) {
-    const e = pedFind(PED, m.nome); if (!e) continue;
+    const e = pedFind(PED, m.nome);
+    const p0 = pedPrefixo(PED, m.nome);
+    if (!e && p0) { R.assoc.push([m.nome, p0.n]); continue; }   // associação: sem calculadora (por desenho, v72)
+    if (!e) continue;
     usados.add(e.k);
-    const assoc = /\+/.test(m.nome) && !/\+/.test(e.n);
-    if (assoc) { R.assoc.push([m.nome, e.n]); continue; }
     const rotas = rotasComDose(e);
     const fic = mgkg(m.pediatria).filter((x) => x.base);
     for (const base of ['dose', 'dia']) {
@@ -149,7 +151,7 @@ function markdown(R) {
   const sec = [
     ['1. Calculadora pediátrica: texto × números da mesma ficha', 'O texto de observação (`ob`) cita um máximo diferente do campo numérico usado no cálculo (`mx`/`mxd`), ou a dose padrão está fora da faixa.', ['Fármaco', 'Via', 'O quê', 'Texto', 'Campo'], R.pedInterno],
     ['2. Ficha do medicamento (Pediatria) × calculadora pediátrica', 'Faixa em mg/kg (mesma base: por dose ou por dia) ou máximo diário diferentes. "alta" = nenhuma faixa se sobrepõe.', ['Medicamento', 'Divergência', 'Ficha (campo Pediatria)', 'Calculadora (PED_DB)', 'Prioridade'], R.fichaXped.sort((a, b) => (a[4] === 'alta' ? 0 : 1) - (b[4] === 'alta' ? 0 : 1) || a[0].localeCompare(b[0], 'pt'))],
-    ['3. Associações que herdam a calculadora do fármaco isolado', 'O app escolhe os parâmetros pelo início do nome (`pedFind`). Estas fichas de associação mostram o quadro "Dose pediátrica por peso" com os parâmetros do primeiro fármaco — conferir se faz sentido (ex.: dose expressa pelo componente principal).', ['Ficha (associação)', 'Parâmetros usados'], R.assoc],
+    ['3. Associações sem calculadora pediátrica (informativo)', 'Desde a v72 (Etapa 3) uma ficha de associação ("A + B") não usa mais os parâmetros do fármaco isolado A — antes, por exemplo, o colírio de dexametasona mostrava a dose sistêmica. Estas fichas ficam sem o quadro "Dose pediátrica por peso" até que alguém cadastre, com fonte, uma entrada própria da associação no PED_DB.', ['Ficha (associação)', 'Parâmetros que usava até a v71'], R.assoc],
     ['4. Plantão × calculadora pediátrica', 'Dose por kg do protocolo fora da faixa da calculadora, ou máximo por dose diferente, para a mesma substância.', ['Protocolo', 'Item', 'Plantão', 'Calculadora (PED_DB)', 'Divergência'], R.plantaoXped],
     ['5. Prescrição das doenças pediátricas × calculadora pediátrica', 'Doenças da área Pediatria: dose em mg/kg citada logo após o nome do fármaco, sem sobreposição com a faixa da calculadora (mesma base: por dose ou por dia). Pode ser indicação específica (profilaxia, meningite, neonato): conferir se a calculadora deveria cobrir essa faixa ou se o texto deve citar a indicação.', ['Doença', 'Fármaco', 'Trecho da prescrição', 'Calculadora (PED_DB)'], R.prescXped],
     ['6. Prescrições sem linha "Base:"', 'Regra do projeto (CLAUDE.md): toda prescrição deve ter a linha "Base: ..." com a referência.', ['Doença', 'Área'], R.semBase],

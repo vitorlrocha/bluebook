@@ -2178,6 +2178,9 @@
     PED_DB.forEach(function (e) {
       if (s.indexOf(e.k) === 0 && (!best || e.k.length > best.k.length)) best = e;
     });
+    /* v72 (Etapa 3, INCONSISTENCIAS.md §3): uma associação ("A + B") não herda os parâmetros do fármaco
+       isolado A (ex.: colírio com dexametasona mostrava a dose sistêmica). Só vale entrada própria da associação. */
+    if (best && s.indexOf("+") !== -1 && best.n.indexOf("+") === -1) return null;
     return best;
   }
 

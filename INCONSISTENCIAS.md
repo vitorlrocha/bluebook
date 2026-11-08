@@ -8,7 +8,7 @@ Gerado por `node ferramentas/inconsistencias.js` a partir de `dados/*.json`. **N
 |---|---:|
 | 1. Calculadora pediátrica: texto × números da mesma ficha | 4 |
 | 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 9 |
-| 3. Associações que herdam a calculadora do fármaco isolado | 16 |
+| 3. Associações sem calculadora pediátrica (informativo) | 16 |
 | 4. Plantão × calculadora pediátrica | 3 |
 | 5. Prescrição das doenças pediátricas × calculadora pediátrica | 8 |
 | 6. Prescrições sem linha "Base:" | 16 |
@@ -42,11 +42,11 @@ Faixa em mg/kg (mesma base: por dose ou por dia) ou máximo diário diferentes. 
 | Gentamicina | faixa da ficha sai da faixa da calculadora | 4-5 mg/kg/dia; 5-7,5 mg/kg/dia | EV/IM 5-7,5 mg/kg/dia | média |
 | Hidrocortisona (injetável) | faixa da ficha sai da faixa da calculadora | 2-4 mg/kg/dose | EV/IM 4-8 mg/kg/dose | média |
 
-## 3. Associações que herdam a calculadora do fármaco isolado
+## 3. Associações sem calculadora pediátrica (informativo)
 
-O app escolhe os parâmetros pelo início do nome (`pedFind`). Estas fichas de associação mostram o quadro "Dose pediátrica por peso" com os parâmetros do primeiro fármaco — conferir se faz sentido (ex.: dose expressa pelo componente principal).
+Desde a v72 (Etapa 3) uma ficha de associação ("A + B") não usa mais os parâmetros do fármaco isolado A — antes, por exemplo, o colírio de dexametasona mostrava a dose sistêmica. Estas fichas ficam sem o quadro "Dose pediátrica por peso" até que alguém cadastre, com fonte, uma entrada própria da associação no PED_DB.
 
-| Ficha (associação) | Parâmetros usados |
+| Ficha (associação) | Parâmetros que usava até a v71 |
 |---|---|
 | Ampicilina + Sulbactam | Ampicilina |
 | Lidocaína + Prilocaína | Lidocaína (uso local) |

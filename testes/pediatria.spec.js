@@ -82,6 +82,19 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#fp-out')).toContainText('ACIMA da faixa usual');
   });
 
+  test('associação não herda a calculadora do fármaco isolado (v72); associação com entrada própria mantém', async ({ page }) => {
+    for (const nome of ['Dexametasona + Neomicina + Polimixina B (colírio)', 'Lidocaína + Prilocaína', 'Hidrocortisona + Neomicina + Bacitracina']) {
+      await page.locator('#search-input').fill(nome);
+      const ids = await page.locator('#sidebar .med-item[data-id]').evaluateAll((els, n) =>
+        els.filter((e) => e.querySelector('.med-item-main').firstChild.textContent.trim() === n).map((e) => e.getAttribute('data-id')), nome);
+      expect(ids.length, nome).toBeGreaterThan(0);
+      await page.locator(`#sidebar .med-item[data-id="${ids[0]}"]`).click();
+      await expect(page.locator('#detail h2').first()).toHaveText(nome);
+      await expect(page.locator('#fp-weight'), nome).toHaveCount(0);
+    }
+    await abrirFicha(page, 'Amoxicilina + Clavulanato de potássio');   // tem entrada própria no PED_DB
+  });
+
   test('sem peso pede o peso', async ({ page }) => {
     await abrirFicha(page, 'Amoxicilina');
     await expect(page.locator('#fp-out')).toContainText('Informe o peso');
