@@ -1,7 +1,7 @@
 // Teste de equivalência: dist/index.html x index.html original.
 // Uso: node ferramentas/testar_build.js [original] [dist]
-// Confere: contagens esperadas; cada variável de dados com o mesmo valor (funções e regex comparadas
-// pelo texto-fonte); e todo o restante do arquivo (HTML, CSS, código) idêntico byte a byte.
+// Confere: contagens esperadas e cada variável de dados com o mesmo valor (funções e regex comparadas
+// pelo texto-fonte). Informa se o restante do arquivo (HTML, CSS, código) ainda é idêntico à v71.
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -50,8 +50,15 @@ for (const cfg of L.VARS) {
   ok(igual, `${cfg.v.padEnd(15)} ${String(n).padStart(5)} itens, mesmo valor${bytes ? ' (texto idêntico)' : ' (só formatação difere)'}`);
 }
 
-// 3. Resto do arquivo
-ok(a.resto === b.resto, `HTML/CSS/código fora dos dados idêntico (${a.resto.length} caracteres)`);
+// 3. Resto do arquivo. Era idêntico na v72 (Etapa 1); a partir da Etapa 3 o código muda de propósito
+//    (PWA, limpeza), então aqui só informa. Os dados e as contagens continuam obrigatórios.
+if (a.resto === b.resto) console.log(`OK    HTML/CSS/código fora dos dados idêntico à v71 (${a.resto.length} caracteres)`);
+else {
+  let i = 0; while (a.resto[i] === b.resto[i]) i++;
+  const lin = a.resto.slice(0, i).split('\n').length;
+  console.log(`INFO  HTML/CSS/código difere da v71 (esperado após mudanças de código); 1ª diferença perto da linha ${lin} ` +
+    `(${a.resto.length} → ${b.resto.length} caracteres)`);
+}
 ok(/var CALC_ITEMS = CALCS\.map\(/.test(B), 'CALC_ITEMS continua derivado de CALCS');
 
 console.log(falhas ? `\n${falhas} FALHA(S)` : '\nTUDO OK');

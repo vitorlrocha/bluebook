@@ -15,6 +15,11 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
     `{"$re": "fonte", "flags": ""}` = regex (CLASS_GROUPS); `{"$ref": "SEXO"}` = variável de `app.js`.
   - `CALC_ITEMS` não é dado: é derivado de `CALCS` em tempo de execução (`CALCS.map`), por isso o arquivo é `calcs.json`.
 - `ferramentas/build.js` gera `dist/index.html` (Node puro, sem dependências). `dist/` não vai para o git.
+  Também copia o PWA de `src/pwa/` para `dist/`: `manifest.json`, `icones/`, `sw.js` (com a versão =
+  hash do conteúdo, que renova o cache a cada mudança) e `.nojekyll`.
+- PWA: ícones gerados de `src/pwa/icone.svg` por `node ferramentas/gerar_icones.js` (usa o Chromium do
+  Playwright; os PNG ficam no git). O registro do service worker fica no fim de `src/index.html` e é
+  ignorado quando o arquivo é aberto direto do disco (file://), que continua funcionando offline sozinho.
 - `ferramentas/testar_build.js` prova a equivalência com `referencia/index-v71-original.html`
   (contagens, valor de cada variável e todo o resto do arquivo idêntico).
 - `ferramentas/extrair.js` foi usado uma vez para separar a v71; não é preciso rodar de novo.
@@ -66,7 +71,8 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
 node ferramentas/build.js                     # gera dist/index.html
 node ferramentas/checar_sintaxe.js            # todos os <script> de dist/index.html válidos
 python3 ferramentas/validar_cid.py            # deve imprimir [] (lê dist/index.html)
-node ferramentas/testar_build.js              # só enquanto o conteúdo for igual ao da v71
+node ferramentas/testar_build.js              # contagens e dados iguais aos da v71 (enquanto não houver mudança de conteúdo)
+npx playwright test                           # testes de ponta a ponta (inclui PWA/offline)
 python3 ferramentas/test_cid.py dados/cid10-datasus dados/cid_full.json dist/index.html   # se regenerar o CID
 ```
 No Windows, use `py` no lugar de `python3`. O git está em
@@ -75,7 +81,7 @@ Para gerar `dados/cid_full.json` a partir dos CSVs: `python3 ferramentas/build_c
 
 ## Pendências conhecidas (sugestões para finalizar)
 1. ~~Separar dados do código~~ (feito na v72).
-2. Transformar em PWA instalável (manifest + service worker, ícones) para uso offline no celular.
+2. ~~PWA instalável~~ (feito na v72; testado no Chromium — instalação no iPhone/Safari não testada).
 3. 31 fichas ainda contêm "PENDENTE DE VERIFICAÇÃO" (ex.: posologia do glofitamabe).
 4. ~~Testes automatizados (Playwright)~~ (feito na v72). Problemas conhecidos marcados com `test.fail`:
    ranking de "AAS" e destaque de "Remédios" na barra inferior.

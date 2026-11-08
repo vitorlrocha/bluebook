@@ -30,3 +30,23 @@ const out = casca.replace('/*@css*/', () => css).replace('/*@app*/', () => app);
 fs.mkdirSync(path.dirname(saida), { recursive: true });
 fs.writeFileSync(saida, out, 'utf8');
 console.log('OK', path.relative(L.RAIZ, saida), (Buffer.byteLength(out) / 1048576).toFixed(2) + ' MB');
+
+// Arquivos do PWA (manifest, ícones e service worker) ao lado do index.html.
+const pasta = path.dirname(saida);
+const pwa = path.join(L.RAIZ, 'src', 'pwa');
+const hash = require('crypto').createHash('sha256').update(out);
+fs.copyFileSync(path.join(pwa, 'manifest.json'), path.join(pasta, 'manifest.json'));
+hash.update(fs.readFileSync(path.join(pwa, 'manifest.json')));
+fs.mkdirSync(path.join(pasta, 'icones'), { recursive: true });
+for (const f of fs.readdirSync(path.join(pwa, 'icones')).sort()) {
+  const b = fs.readFileSync(path.join(pwa, 'icones', f));
+  fs.writeFileSync(path.join(pasta, 'icones', f), b);
+  hash.update(b);
+}
+const sw = fs.readFileSync(path.join(pwa, 'sw.js'), 'utf8');
+hash.update(sw);
+const versao = hash.digest('hex').slice(0, 12);
+if (sw.split('__VERSAO__').length !== 2) throw new Error('sw.js: marcador __VERSAO__ ausente ou repetido');
+fs.writeFileSync(path.join(pasta, 'sw.js'), sw.replace('__VERSAO__', versao), 'utf8');
+fs.writeFileSync(path.join(pasta, '.nojekyll'), '');   // GitHub Pages: servir arquivos sem processar
+console.log('OK PWA: manifest.json, sw.js (versão ' + versao + '), icones/');

@@ -1,0 +1,21 @@
+{
+  "name": "Bluebook — consulta clínica",
+  "short_name": "Bluebook",
+  "description": "Consulta clínica rápida e offline: doenças, condutas, medicamentos, escores, CID-10 e doses de plantão.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F2F2F7",
+  "theme_color": "#0A66D8",
+  "categories": ["medical", "health", "education"],
+  "icons": [
+    { "src": "icones/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icones/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icones/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icones/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
