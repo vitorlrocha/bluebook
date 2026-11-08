@@ -30,13 +30,14 @@ test.describe('Navegação no celular', () => {
     await expect(page.locator('#detail .home-quick')).toBeVisible();
   });
 
-  // PROBLEMA CONHECIDO (v71): ao tocar em "Remédios" sem medicamento aberto, a barra destaca
-  // "Início", porque sync() considera "meds sem seleção e sem busca" como tela inicial.
-  // test.fail: passa enquanto o problema existir e avisa quando for corrigido.
-  test('"Remédios" deveria ficar destacado ao abrir a lista', async ({ page }) => {
-    test.fail(true, 'Destaque da barra inferior: Remédios x Início');
+  // Corrigido na v72: na v71, ao tocar em "Remédios" sem medicamento aberto, a barra destacava "Início".
+  test('"Remédios" fica destacado ao abrir a lista', async ({ page }) => {
     await tb(page, 'meds').click();
     await expect(tb(page, 'meds')).toHaveClass(/\bon\b/, { timeout: 2000 });
+    await expect(tb(page, 'home')).not.toHaveClass(/\bon\b/);
+    await tb(page, 'home').click();
+    await expect(tb(page, 'home')).toHaveClass(/\bon\b/);
+    await expect(tb(page, 'meds')).not.toHaveClass(/\bon\b/);
   });
 
   test('menu "Mais" abre a folha, navega e fecha', async ({ page }) => {

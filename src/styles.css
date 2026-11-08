@@ -469,6 +469,10 @@ footer { border-top: none; }
 /* <select> herdava a cor padrão do navegador (preto): no tema escuro, "Via" e "Apresentação" da calculadora
    pediátrica ficavam com texto preto sobre fundo preto (ilegíveis). O reset da base cobria só button/input/textarea. */
 select { color: inherit; }
+/* docs/DESIGN.md §9: nenhum texto abaixo de 12 px (exceto o rótulo da barra inferior, 10,5 px).
+   Estes estavam entre 10,5 e 11,5 px na v71 (testes/design.ambos.spec.js). */
+small { font-size: max(12px, .8333em); }
+.cov-row small, .quick-ref-item h4, .pop-note, .pl-table th, .area-chip .n, .recent-box h5, .cross-box h5, .rx-box h5, .pl-max { font-size: 12px; }
 /* foco visível pelo teclado em todos os controles */
 :where(button, a, select, summary, [tabindex]):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @media (max-width: 780px) {

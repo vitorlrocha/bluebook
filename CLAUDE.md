@@ -47,6 +47,11 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
   renal, IMC, risco CV, fluidos, infusão, corticoides) abre por `#calc-btn` (cabeçalho, computador) e pelo
   item `data-tb="tools"` da folha "Mais" (celular). Na v71 estava inacessível.
 
+- **Design:** siga `docs/DESIGN.md` (tokens, tipografia, componentes, o que não fazer). Conferido por
+  `testes/design.ambos.spec.js`. Ao mudar o visual de propósito, atualize o DESIGN.md e as capturas.
+- **Roadmap e etapas:** `ROADMAP.md`. Testes de uso real (favoritos, anotações, backup, Ajustes) em
+  `testes/uso_real.ambos.spec.js`.
+
 ## Estrutura do app (dentro de dist/index.html)
 - `<style>`: tokens de cor em `:root` (+ modo escuro em `@media (prefers-color-scheme: dark)`
   e `:root[data-theme="dark"]`). O tema moderno fica no FIM do `<style>` e sobrescreve o anterior.
@@ -96,8 +101,8 @@ Para gerar `dados/cid_full.json` a partir dos CSVs: `python3 ferramentas/build_c
 1. ~~Separar dados do código~~ (feito na v72).
 2. ~~PWA instalável~~ (feito na v72; testado no Chromium — instalação no iPhone/Safari não testada).
 3. 31 fichas ainda contêm "PENDENTE DE VERIFICAÇÃO" (ex.: posologia do glofitamabe).
-4. ~~Testes automatizados (Playwright)~~ (feito na v72). Problemas conhecidos marcados com `test.fail`:
-   ranking de "AAS" e destaque de "Remédios" na barra inferior.
+4. ~~Testes automatizados (Playwright)~~ (feito na v72). Os problemas conhecidos da v71 (ranking de "AAS",
+   destaque de "Remédios") foram corrigidos na etapa R1; `testes/regressao.spec.js` lista as buscas que mudaram de propósito.
 5. ~~Limpeza de CSS, desempenho e acessibilidade~~ (feito na v72). Resta: listas com 1-2 letras digitadas
    desenham ~1.800 itens (≈60 ms no computador, ≈370 ms em celular simulado 4× mais lento) — custo de DOM,
    não do índice; resolver exigiria lista virtualizada ou limite de itens (mudança de interface).

@@ -21,11 +21,8 @@ test.describe('Busca', () => {
     expect(nomes.slice(0, 3)).toContain('Ácido acetilsalicílico (AAS)');
   });
 
-  // PROBLEMA CONHECIDO (v71): "Clopidogrel + AAS" aparece antes de "Ácido acetilsalicílico (AAS)"
-  // porque relScore favorece o nome mais curto quando os dois casam no início de palavra.
-  // test.fail: o teste passa enquanto o problema existir e avisa quando for corrigido.
-  test('AAS: o próprio medicamento deveria vir em 1º lugar', async ({ page }) => {
-    test.fail(true, 'Ranking da busca: combinação aparece antes do fármaco isolado');
+  // Corrigido na v72: na v71 "Clopidogrel + AAS" aparecia antes de "Ácido acetilsalicílico (AAS)".
+  test('AAS: o próprio medicamento vem em 1º lugar', async ({ page }) => {
     const nomes = await buscar(page, 'AAS');
     expect(nomes[0]).toBe('Ácido acetilsalicílico (AAS)');
   });

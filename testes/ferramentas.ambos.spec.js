@@ -40,6 +40,10 @@ test('ferramentas calculam: calculadora básica e função renal', async ({ page
   await page.locator('#rn-cr').fill('1');
   // Cockcroft-Gault, homem: (140-60)*70/(72*1) = 77,8 mL/min
   await expect(page.locator('#rn-out')).toContainText(/77[,.]8/);
+  // v72: idade impossível não gera clearance negativo
+  await page.locator('#rn-age').fill('250');
+  await expect(page.locator('#rn-out')).toContainText('Confira os valores');
+  await expect(page.locator('#rn-out')).not.toContainText('-');
 });
 
 test('dose pediátrica na janela: escolher medicamento preenche o quadro', async ({ page }, info) => {

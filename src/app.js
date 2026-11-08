@@ -66,6 +66,9 @@
     var q = stripAccents(String(term || "").trim().toLowerCase()), ws = q.split(/\s+/).filter(Boolean).map(stemW);
     if (!q) return 0;
     if (n === q) return 1000;
+    /* v72: a sigla do próprio registro, entre parênteses no nome ("Ácido acetilsalicílico (AAS)"),
+       vale quase como nome exato; antes "Clopidogrel + AAS" (mais curto) vinha primeiro. */
+    if (n.indexOf("(" + q + ")") !== -1) return 950 - Math.min(n.length, 300) / 10;
     if (n.indexOf(q) === 0 && (q.length > 3 || !SYN[q] || !/[a-z0-9]/.test(n.charAt(q.length)))) return 900 - Math.min(n.length, 300) / 10;
     var wordStart = ws.every(function (t) { return new RegExp("(^|[^a-z0-9])" + t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).test(n); });
     if (wordStart) return 800 - Math.min(n.length, 300) / 10;
@@ -2518,6 +2521,10 @@
       '<p id="export-status" class="calc-note" style="margin-top:8px;"></p>' +
       '<p id="import-status" class="calc-note" style="margin-top:2px;"></p>' +
       "</div>" +
+      /* v72 (docs/DESIGN.md §7): no celular o rodapé fica oculto; o aviso legal aparece aqui. */
+      '<div class="field" id="settings-about"><label>Sobre</label>' +
+      '<p class="body-text" style="margin:0;font-size:13px;color:var(--ink-soft);">O Bluebook é uma ferramenta de apoio à consulta: não substitui o julgamento clínico nem a bula. ' +
+      escapeHtml((document.querySelector("footer") || {}).textContent ? document.querySelector("footer").textContent.trim() : "") + "</p></div>" +
       '<div class="modal-actions"><button type="button" class="btn-ghost btn" id="settings-close">Fechar</button></div>' +
       "</div>";
 
@@ -2938,13 +2945,15 @@
       var out = document.getElementById("rn-out");
       var age = numv("rn-age"), wt = numv("rn-wt"), cr = numv("rn-cr"), fem = document.getElementById("rn-sex").value === "F";
       if (!age || !cr) { out.innerHTML = '<p class="calc-note">Informe idade e creatinina.</p>'; return; }
+      /* v72: idade acima de 120 dava Cockcroft-Gault negativo. */
+      if (age > 120 || age < 0 || cr < 0 || wt < 0) { out.innerHTML = '<p class="calc-note">Confira os valores: idade de 0 a 120 anos e peso/creatinina positivos.</p>'; return; }
       var k = fem ? 0.7 : 0.9, a = fem ? -0.241 : -0.302;
       var egfr = 142 * Math.pow(Math.min(cr / k, 1), a) * Math.pow(Math.max(cr / k, 1), -1.2) * Math.pow(0.9938, age) * (fem ? 1.012 : 1);
       var rows = [["CKD-EPI 2021", f1(egfr) + " mL/min/1,73 m²"]];
       if (wt) { var cg = (140 - age) * wt / (72 * cr) * (fem ? 0.85 : 1); rows.unshift(["Cockcroft-Gault", f1(cg) + " mL/min"]); }
       var g = egfr >= 90 ? "G1" : egfr >= 60 ? "G2" : egfr >= 45 ? "G3a" : egfr >= 30 ? "G3b" : egfr >= 15 ? "G4" : "G5";
       rows.push(["Estágio (KDIGO)", g]);
-      out.innerHTML = box(rows, "Não use em injúria renal aguda (creatinina instável) nem em gestantes.");
+      out.innerHTML = box(rows, "Não use em injúria renal aguda (creatinina instável) nem em gestantes." + (age < 18 ? " Atenção: as duas fórmulas foram feitas para adultos (≥ 18 anos)." : ""));
     }
     function calcImc() {
       var out = document.getElementById("im-out");
@@ -3096,7 +3105,8 @@
     var bar = document.getElementById("tabbar"), sheet = document.getElementById("sheet");
     function sync() {
       if (!bar) return;
-      var home = viewMode === "meds" && !selectedId && !searchInput.value.trim();
+      /* v72: a tela inicial é a que tem a classe bb-home; antes "Remédios" (lista sem seleção) destacava "Início". */
+      var home = viewMode === "meds" && document.body.classList.contains("bb-home");
       Array.prototype.forEach.call(bar.querySelectorAll("[data-tb]"), function (b) {
         var k = b.getAttribute("data-tb");
         var on = k === "home" ? home : k === "meds" ? (viewMode === "meds" && !home) : k === "more" ? ["meds", "plantao", "diseases"].indexOf(viewMode) === -1 : viewMode === k;

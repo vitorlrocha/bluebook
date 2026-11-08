@@ -17,7 +17,8 @@ const MODOS = {
   rx: ['dip', 'amox'],
   vac: ['hpv', 'crianca'], flux: ['pcr', 'sepse'], ecg: ['qt', 'bloqueio'], lab: ['sodio', 'tsh'], calc: ['imc', 'renal'], plantao: ['pcr', 'convul', 'anafilaxia'],
 };
-const MUDANCAS_INTENCIONAIS = new Set([]);
+// v72: a sigla entre parênteses do próprio registro sobe na relevância ("Ácido acetilsalicílico (AAS)" em 1º).
+const MUDANCAS_INTENCIONAIS = new Set(['meds:AAS', 'meds:aas']);
 
 async function coletar(page, url) {
   await page.goto(url);
