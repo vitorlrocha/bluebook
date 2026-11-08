@@ -23,9 +23,10 @@ if (/\/\*@dados:/.test(app)) throw new Error('sobrou marcador de dados em app.js
 
 const casca = ler('src/index.html');
 const css = ler('src/styles.css');
-for (const mk of ['/*@css*/', '/*@app*/']) if (casca.split(mk).length !== 2) throw new Error('marcador da casca: ' + mk);
+const auth = ler('src/auth.js');   // acesso local (login), v72
+for (const mk of ['/*@css*/', '/*@auth*/', '/*@app*/']) if (casca.split(mk).length !== 2) throw new Error('marcador da casca: ' + mk);
 // Usa função na substituição para que "$" nos dados não seja interpretado.
-const out = casca.replace('/*@css*/', () => css).replace('/*@app*/', () => app);
+const out = casca.replace('/*@css*/', () => css).replace('/*@auth*/', () => auth).replace('/*@app*/', () => app);
 
 fs.mkdirSync(path.dirname(saida), { recursive: true });
 fs.writeFileSync(saida, out, 'utf8');

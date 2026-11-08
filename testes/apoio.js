@@ -2,7 +2,24 @@
 'use strict';
 const base = require('@playwright/test');
 
+/* Conta e sessão de TESTE (valores fictícios, só para os testes; não é a conta de ninguém).
+   Desde a Etapa 2 o app abre na tela de login; os testes que não são do login entram já conectados.
+   Para testar o login em si: test.use({ logado: false }). */
+const EMAIL_TESTE = 'teste@exemplo.com';
+
 const test = base.test.extend({
+  logado: [true, { option: true }],
+  page: async ({ page, logado }, use) => {
+    if (logado) {
+      await page.addInitScript((email) => {
+        try {
+          if (!localStorage.getItem('bluebook:conta')) localStorage.setItem('bluebook:conta', JSON.stringify({ v: 1, email: email, sal: '', hash: '', it: 1 }));
+          localStorage.setItem('bluebook:sessao', JSON.stringify({ email: email, ate: Date.now() + 864e5 }));
+        } catch (e) { /* página sem armazenamento */ }
+      }, EMAIL_TESTE);
+    }
+    await use(page);
+  },
   errosJs: [async ({ page }, use) => {
     const erros = [];
     page.on('pageerror', (e) => erros.push('pageerror: ' + e.message));
@@ -33,4 +50,4 @@ async function buscar(page, termo) {
   return (await itens.evaluateAll((els) => els.map((e) => e.firstChild.textContent.trim())));
 }
 
-module.exports = { test, expect: base.expect, abrir, aba, buscar };
+module.exports = { test, expect: base.expect, abrir, aba, buscar, EMAIL_TESTE };

@@ -20,7 +20,10 @@
 <body>
 <script>
   (function () { var z = 1.15; try { var s = parseFloat(window.localStorage.getItem("bluebook:zoom")); if (s >= 0.9 && s <= 1.6) z = s; } catch (e) {} document.documentElement.style.zoom = String(z); })();
+  /* Acesso (src/auth.js): sem sessão válida, esconde o app antes de desenhar a tela. */
+  (function () { var ok = false; try { var c = JSON.parse(localStorage.getItem("bluebook:conta") || "null"); var s = JSON.parse(sessionStorage.getItem("bluebook:sessao") || localStorage.getItem("bluebook:sessao") || "null"); ok = !!(c && s && s.email === c.email && s.ate > Date.now()); } catch (e) { ok = true; } if (!ok) document.documentElement.classList.add("bb-locked"); })();
 </script>
+<div id="auth" class="auth" hidden></div>
 <div class="app">
   <header>
     <div class="header-inner">
@@ -55,6 +58,7 @@
             <a class="menu-item" href="https://consultas.anvisa.gov.br/#/bulario/" target="_blank" rel="noopener">Bulário Anvisa</a>
             <button class="menu-item" id="export-notes-btn">Exportar anotações</button>
             <button class="menu-item" id="settings-btn">Ajustes</button>
+            <button class="menu-item" id="logout-btn" hidden>Sair</button>
           </div>
         </div>
       </div>
@@ -88,6 +92,7 @@
   </footer>
 </div>
 
+<script>/*@auth*/</script>
 <script>/*@app*/</script>
 <script>
   /* PWA: registra o service worker (uso offline). Não roda quando o arquivo é aberto direto do disco (file://). */

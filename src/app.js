@@ -2495,6 +2495,62 @@
     });
   }
 
+  /* ---------------- Perfil (v72, Etapa 2): dados pessoais ligados ao e-mail da conta local ---------------- */
+  function perfilDados() {
+    var dados = {};
+    window.BBAuth.PESSOAIS.forEach(function (k) { try { var v = window.localStorage.getItem(k); if (v !== null) dados[k] = v; } catch (e) {} });
+    var favs = medications.filter(function (m) { return m.favorito; }).map(function (m) { return m.nome; });
+    return { dados: dados, favoritos: favs };
+  }
+  function perfilResumo() {
+    var p = perfilDados(), notas = 0, dfav = 0;
+    try { notas = Object.keys(JSON.parse(p.dados["bluebook:notes"] || "{}")).length; } catch (e) {}
+    try { dfav = (JSON.parse(p.dados["bluebook:disease-favs"] || "[]") || []).length; } catch (e) {}
+    return "Neste aparelho: " + notas + " anotação(ões), " + p.favoritos.length + " medicamento(s) e " + dfav + " doença(s) favoritos.";
+  }
+  function ligarConta(overlay) {
+    var A = window.BBAuth;
+    document.getElementById("conta-sair").addEventListener("click", function () { overlay.remove(); A.sair(); });
+    var sb = document.getElementById("conta-senha-btn"), sp = document.getElementById("conta-senha");
+    sb.addEventListener("click", function () { sp.hidden = !sp.hidden; sb.setAttribute("aria-expanded", sp.hidden ? "false" : "true"); if (!sp.hidden) document.getElementById("cs-atual").focus(); });
+    document.getElementById("cs-salvar").addEventListener("click", function () {
+      var st = document.getElementById("cs-status"), nova = document.getElementById("cs-nova").value;
+      st.style.color = "var(--bad-ink)";
+      if (nova !== document.getElementById("cs-nova2").value) { st.textContent = "As senhas novas não conferem."; return; }
+      A.alterarSenha(document.getElementById("cs-atual").value, nova).then(function () {
+        st.style.color = "var(--ok)"; st.textContent = "Senha alterada.";
+        ["cs-atual", "cs-nova", "cs-nova2"].forEach(function (id) { document.getElementById(id).value = ""; });
+      }).catch(function (err) { st.textContent = err && err.message ? err.message : "Não foi possível alterar a senha."; });
+    });
+    document.getElementById("perfil-export").addEventListener("click", function () {
+      var p = perfilDados();
+      downloadJson("bluebook-perfil-" + todayInputValue() + ".json", { tipo: "bluebook-perfil", versao: 1, email: A.email(), exportadoEm: new Date().toISOString(), dados: p.dados, favoritos: p.favoritos });
+    });
+    var pf = document.getElementById("perfil-file");
+    document.getElementById("perfil-import").addEventListener("click", function () { pf.click(); });
+    pf.addEventListener("change", function () {
+      var file = pf.files[0]; if (!file) return;
+      var st = document.getElementById("perfil-status");
+      var rd = new FileReader();
+      rd.onload = function () {
+        var p = null; try { p = JSON.parse(rd.result); } catch (e) { p = null; }
+        st.style.color = "var(--bad-ink)";
+        if (!p || p.tipo !== "bluebook-perfil" || !p.dados || typeof p.dados !== "object") { st.textContent = "Este arquivo não é um backup de perfil do Bluebook."; return; }
+        if (String(p.email || "").toLowerCase() !== String(A.email()).toLowerCase()) { st.textContent = "Este perfil pertence a " + (p.email || "outro e-mail") + " e não pode ser importado na conta " + A.email() + "."; return; }
+        Object.keys(p.dados).forEach(function (k) { if (A.PESSOAIS.indexOf(k) !== -1 && typeof p.dados[k] === "string") { try { window.localStorage.setItem(k, p.dados[k]); } catch (e) {} } });
+        var nomes = {}; (p.favoritos || []).forEach(function (n) { nomes[String(n).trim().toLowerCase()] = 1; });
+        var map = {}; medications.forEach(function (m) { if (nomes[(m.nome || "").trim().toLowerCase()] && !m.favorito) map[m.id] = { favorito: true }; });
+        var feito = store && store.updateMany && Object.keys(map).length ? store.updateMany(map) : Promise.resolve();
+        feito.then(function () {
+          st.style.color = "var(--ok)"; st.textContent = "Perfil importado. Recarregando…";
+          setTimeout(function () { location.reload(); }, 600);
+        });
+      };
+      rd.readAsText(file);
+      pf.value = "";
+    });
+  }
+
   function openSettingsModal() {
     var overlay = document.createElement("div");
     overlay.className = "modal-overlay";
@@ -2521,6 +2577,29 @@
       '<p id="export-status" class="calc-note" style="margin-top:8px;"></p>' +
       '<p id="import-status" class="calc-note" style="margin-top:2px;"></p>' +
       "</div>" +
+      (window.BBAuth && window.BBAuth.email() ? (
+        /* v72 (Etapa 2): conta local (src/auth.js) e backup do perfil ligado ao e-mail. */
+        '<div class="field" id="settings-conta"><label>Conta</label>' +
+        '<p class="body-text" style="margin:0;font-size:14px;">Conectado como <strong id="conta-email">' + escapeHtml(window.BBAuth.email()) + '</strong></p>' +
+        '<p class="body-text" style="margin:4px 0 10px 0;font-size:13px;color:var(--ink-soft);">' + perfilResumo() + '</p>' +
+        '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+        '<button type="button" class="btn-ghost btn" id="conta-sair">Sair</button>' +
+        '<button type="button" class="btn-ghost btn" id="conta-senha-btn" aria-expanded="false">Alterar senha</button></div>' +
+        '<div id="conta-senha" hidden style="margin-top:10px;">' +
+        '<label for="cs-atual" style="font-size:13px;">Senha atual</label><input type="password" id="cs-atual" autocomplete="current-password">' +
+        '<label for="cs-nova" style="font-size:13px;">Nova senha (mínimo de 8 caracteres)</label><input type="password" id="cs-nova" autocomplete="new-password">' +
+        '<label for="cs-nova2" style="font-size:13px;">Confirme a nova senha</label><input type="password" id="cs-nova2" autocomplete="new-password">' +
+        '<button type="button" class="btn" id="cs-salvar" style="margin-top:8px;">Salvar nova senha</button>' +
+        '<p id="cs-status" class="calc-note" role="status"></p></div>' +
+        '</div>' +
+        '<div class="field" id="settings-perfil"><label>Backup do perfil</label>' +
+        '<p class="body-text" style="margin:0 0 10px 0;font-size:13px;color:var(--ink-soft);">Anotações, favoritos, recentes, prescrições e peso do plantão, ligados ao seu e-mail. Use para levar o perfil a outro aparelho (crie lá o acesso com o mesmo e-mail) ou como cópia de segurança. A senha não vai no arquivo.</p>' +
+        '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+        '<button type="button" class="btn" id="perfil-export">Exportar perfil (.json)</button>' +
+        '<button type="button" class="btn-ghost btn" id="perfil-import">Importar perfil (.json)</button>' +
+        '<input type="file" id="perfil-file" accept="application/json" style="display:none;"></div>' +
+        '<p id="perfil-status" class="calc-note" role="status" style="margin-top:8px;"></p></div>'
+      ) : "") +
       /* v72 (docs/DESIGN.md §7): no celular o rodapé fica oculto; o aviso legal aparece aqui. */
       '<div class="field" id="settings-about"><label>Sobre</label>' +
       '<p class="body-text" style="margin:0;font-size:13px;color:var(--ink-soft);">O Bluebook é uma ferramenta de apoio à consulta: não substitui o julgamento clínico nem a bula. ' +
@@ -2531,6 +2610,8 @@
     document.body.appendChild(overlay);
     overlay.addEventListener("mousedown", function (e) { if (e.target === overlay) overlay.remove(); });
     document.getElementById("settings-close").addEventListener("click", function () { overlay.remove(); });
+
+    if (document.getElementById("settings-conta")) ligarConta(overlay);
 
     document.getElementById("export-btn").addEventListener("click", function () {
       var stamp = todayInputValue();
@@ -3285,6 +3366,20 @@
     if (!b) return;
     setTimeout(function () { var sh = document.getElementById("sheet"); if (sh && !sh.hidden && e.detail === 0) { var f = sh.querySelector("button"); if (f) f.focus(); } }, 0);
   });
+
+  /* v72 (Etapa 2): "Sair" no menu ⋮ quando há conta local. */
+  var logoutBtn = document.getElementById("logout-btn");
+  function syncLogout() {
+    var e = window.BBAuth && window.BBAuth.email();
+    if (!logoutBtn) return;
+    logoutBtn.hidden = !e;
+    if (e) logoutBtn.textContent = "Sair (" + e + ")";
+  }
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () { if (window.BBAuth) window.BBAuth.sair(); });
+    syncLogout();
+    document.addEventListener("bb:login", syncLogout);
+  }
 
   var moreBtn = document.getElementById("more-btn");
   var moreMenu = document.getElementById("more-menu");

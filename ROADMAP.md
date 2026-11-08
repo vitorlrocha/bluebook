@@ -27,22 +27,30 @@ Atualizado em 08/11/2026 (v72). Cada etapa termina com as verificações do `CLA
      - textos menores que 12 px (DESIGN §9);
      - aviso legal ausente no celular, agora em Ajustes (DESIGN §7);
      - janela "Ferramentas" inacessível desde a v71.
+6. **Etapa 2 (login local):** concluída.
+   - **Tela inicial:** "Criar acesso", "Entrar" e "Esqueci a senha" (`src/auth.js`).
+   - **Senha:** só o hash PBKDF2-SHA-256 com sal (210.000 iterações) e bloqueio de 30 s após 5 tentativas.
+   - **Sessão:** "Manter conectado por 30 dias" (sem marcar, dura até fechar o navegador, no máximo 12 h). "Sair" no menu ⋮ e em Ajustes; "Alterar senha" em Ajustes.
+   - **Dados pessoais:** os que já existiam passam a pertencer ao e-mail cadastrado.
+   - **Backup do perfil** (anotações, favoritos, recentes, prescrições e peso do plantão): ligado ao e-mail, sem a senha, e recusado em outra conta.
+   - **Testes:** 28 testes (`testes/login.ambos.spec.js`), inclusive aberto por file:// e axe nos dois temas.
 
 ## Próximas etapas (na ordem combinada)
 
 | Etapa | O quê | Observações |
 |---|---|---|
-| **2. Login local** | Tela inicial com e-mail e senha. Você cadastra a própria senha. Os favoritos, anotações, recentes, peso do plantão e ajustes atuais passam a pertencer a seu e-mail | Só no aparelho, offline. A senha é guardada como hash (PBKDF2, WebCrypto), nunca em texto. É uma trava de acesso, não criptografia forte: quem tiver o arquivo lê o conteúdo clínico, que é público de qualquer forma |
+| ~~2. Login local~~ | Feito (ver acima). **Falta você:** abrir o app no seu aparelho e cadastrar o seu e-mail com a sua senha | Uma conta por aparelho. É uma trava de acesso, não criptografia dos dados |
 | **3. Pendências e inconsistências** | `PENDENCIAS.md` com os 31 registros "PENDENTE DE VERIFICAÇÃO" (campo e trecho). Relatório de divergências entre a ficha, a prescrição da doença e a calculadora pediátrica | Nada é preenchido sem fonte. Nenhuma dose é alterada automaticamente |
 | **4. Publicação e README** | GitHub Pages (ou Netlify) a partir de `dist/`. README em português com uso, build, testes, publicação e aviso legal | Você cria a conta ou repositório e eu preparo tudo para publicar |
-| **5. Entrar com o Google** | Botão "Entrar com o Google" que confirma que o e-mail é seu e-mail | Exige o app publicado em https e uma credencial OAuth gratuita criada por você no Google Cloud. Funciona só com internet; o login por senha continua offline |
+| **5. Entrar com o Google** | Botão "Entrar com o Google" que confirma o e-mail da conta | Exige o app publicado em https e uma credencial OAuth gratuita criada por você no Google Cloud. Funciona só com internet; o login por senha continua offline |
 
 ## O que falta (backlog, sem etapa definida)
 
 **Importante para o uso clínico**
 - 31 fichas com "PENDENTE DE VERIFICAÇÃO" (Etapa 3).
 - Teste de instalação e uso offline num iPhone real (Safari: "Adicionar à Tela de Início"). Não dá para simular aqui.
-- O backup (Ajustes → Exportar) leva só os medicamentos. Anotações, favoritos e recentes ficam de fora; resolver junto com o login (Etapa 2).
+- ~~O backup leva só os medicamentos~~: resolvido na Etapa 2 com o "Backup do perfil".
+- Login: não há como recuperar a senha sem apagar os dados pessoais, porque não existe servidor. Recomendo exportar o backup do perfil de vez em quando.
 
 **Desempenho**
 - No celular simulado 4× mais lento, a 1ª e a 2ª letra da busca levam até cerca de 370 ms, porque desenham cerca de 1.800 itens. Solução: lista virtualizada ou carregar mais ao rolar. Muda a interface, por isso precisa da sua aprovação.

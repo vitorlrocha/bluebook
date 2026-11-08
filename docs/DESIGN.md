@@ -197,6 +197,20 @@ O modo escuro é aplicado por `@media (prefers-color-scheme: dark)` com `:root:n
 - Um quadro recolhível no topo da lista: "▸ Também em outras seções — N resultados", com a contagem por seção embaixo.
 - Fica fechado quando a aba atual tem resultados e abre sozinho quando não tem.
 
+### 5.14 Tela de acesso (login local, v72)
+- **Página:** fundo `--paper`, com um cartão `--surface` de raio 14 px e sombra leve, centralizado, com largura máxima de 400 px e margens de 16 px no celular.
+- **Marca:** "BB" em 38 px (raio 10 px) com o título "Bluebook" (34 px/700). Abaixo, o subtítulo da tela ("Criar acesso", "Entrar" ou "Esqueci a senha") em 20 px/700.
+- **Campos:** iguais à busca (§5.2): fundo cinza translúcido, raio 12 px, 16 px de texto, altura mínima de 44 px e anel `--accent-soft` no foco.
+- **Botões:**
+  - Principal: largura total, 48 px de altura, fundo `--accent-fill` e texto branco 600.
+  - Secundário ("Entrar com o Google" e "Apagar acesso…"): fundo cinza translúcido.
+  - Links ("Esqueci a senha"): texto `--accent` 600.
+- **Mensagens:** erros em `--bad-ink` e confirmações em `--ok`, com `role="alert"`.
+- **"Entrar com o Google":** fica desativado, com a nota "Disponível depois que o app for publicado na internet", até a Etapa 5.
+- **Nota final** (12,5 px, `--ink-faint`, centralizada): o acesso fica só no aparelho, e o app é apoio e não substitui o julgamento clínico nem a bula.
+- **Sem sessão:** o `<html>` recebe a classe `bb-locked` antes de desenhar a tela, e `.app` fica oculto, para o conteúdo não piscar.
+- **Ajustes:** a seção "Conta" (e-mail, Sair, Alterar senha) e a seção "Backup do perfil" aparecem antes de "Sobre". O menu ⋮ tem "Sair (e-mail)".
+
 ---
 
 ## 6. Ícones

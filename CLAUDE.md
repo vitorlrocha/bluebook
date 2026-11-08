@@ -47,6 +47,13 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
   renal, IMC, risco CV, fluidos, infusão, corticoides) abre por `#calc-btn` (cabeçalho, computador) e pelo
   item `data-tb="tools"` da folha "Mais" (celular). Na v71 estava inacessível.
 
+- **Login local (Etapa 2):** `src/auth.js`, inserido pelo build no marcador `/*@auth*/` (antes do app). Ele expõe
+  `window.BBAuth` (email, sair, alterarSenha, PESSOAIS, MEDS_KEY). Chaves: `bluebook:conta` (e-mail, hash PBKDF2,
+  sal), `bluebook:sessao` (localStorage com "manter conectado", senão sessionStorage) e `bluebook:tentativas`. O script
+  no início do `<body>` põe `bb-locked` no `<html>` sem sessão válida. Ao criar uma chave de dado pessoal nova,
+  inclua-a em `PESSOAIS` (auth.js), para entrar no backup do perfil e no "Esqueci a senha".
+  Nos testes, `testes/apoio.js` entra com uma conta fictícia (teste@exemplo.com); para testar o login,
+  use `test.use({ logado: false })`.
 - **Design:** siga `docs/DESIGN.md` (tokens, tipografia, componentes, o que não fazer). Conferido por
   `testes/design.ambos.spec.js`. Ao mudar o visual de propósito, atualize o DESIGN.md e as capturas.
 - **Roadmap e etapas:** `ROADMAP.md`. Testes de uso real (favoritos, anotações, backup, Ajustes) em

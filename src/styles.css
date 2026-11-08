@@ -478,3 +478,31 @@ small { font-size: max(12px, .8333em); }
 @media (max-width: 780px) {
   .tabbar button.tb-urg.on, .tabbar button.tb-urg:active { color: var(--c-red-ink); }
 }
+
+/* ======================================================================
+   4. ACESSO (v72, Etapa 2) — tela de login local (src/auth.js). Segue docs/DESIGN.md:
+   fundo --paper, cartão --surface com raio 14 px, campos como a busca (§5.2), botão principal --accent-fill.
+   ====================================================================== */
+html.bb-locked .app { display: none; }
+.auth { min-height: 100vh; min-height: 100dvh; display: flex; align-items: flex-start; justify-content: center; padding: calc(24px + env(safe-area-inset-top, 0px)) 16px calc(24px + env(safe-area-inset-bottom, 0px)); background: var(--paper); box-sizing: border-box; }
+.auth[hidden] { display: none; }
+.auth-card { width: 100%; max-width: 400px; background: var(--surface); border-radius: var(--radius, 14px); box-shadow: var(--shadow); padding: 24px 20px 18px; margin-top: 4vh; font-family: var(--sans); color: var(--ink); }
+.auth-topo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.auth-topo h1 { margin: 0; font-size: 34px; font-weight: 700; letter-spacing: -0.03em; }
+.auth-mark { width: 38px; height: 38px; border-radius: 10px; font-size: 15px; }
+.auth-h2 { margin: 0 0 6px; font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+.auth-sub { margin: 0 0 14px; font-size: 14px; line-height: 1.5; color: var(--ink-soft); }
+.auth-label { display: block; margin: 12px 0 6px; font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+.auth-input { display: block; width: 100%; box-sizing: border-box; min-height: 44px; padding: 10px 14px; font-size: 16px; font-family: var(--sans); color: var(--ink); background: color-mix(in srgb, var(--ink) 7%, transparent); border: 1px solid transparent; border-radius: 12px; outline: none; }
+.auth-input:focus { background: var(--surface); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.auth-check { display: flex; align-items: center; gap: 8px; margin: 14px 0 4px; font-size: 14px; color: var(--ink-soft); min-height: 44px; cursor: pointer; }
+.auth-check input { width: 20px; height: 20px; accent-color: var(--accent); }
+.auth-msg { min-height: 1.2em; margin: 6px 0 8px; font-size: 14px; color: var(--bad-ink); }
+.auth-msg-ok { color: var(--ok); }
+.auth-btn { display: block; width: 100%; min-height: 48px; border: none; border-radius: 12px; background: var(--accent-fill); color: #fff; font-size: 16px; font-weight: 600; font-family: var(--sans); cursor: pointer; }
+.auth-btn[disabled] { opacity: .55; cursor: default; }
+.auth-btn-alt { background: color-mix(in srgb, var(--ink) 7%, transparent); color: var(--ink); }
+.auth-link { display: block; margin: 12px auto 0; min-height: 44px; padding: 0 10px; border: none; background: none; color: var(--accent); font-size: 15px; font-weight: 600; font-family: var(--sans); cursor: pointer; }
+.auth-sep { display: flex; align-items: center; gap: 10px; margin: 14px 0; color: var(--ink-faint); font-size: 13px; }
+.auth-sep::before, .auth-sep::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+.auth-nota { margin: 8px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--ink-faint); text-align: center; }
