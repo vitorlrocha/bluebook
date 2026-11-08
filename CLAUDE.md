@@ -97,7 +97,8 @@ node ferramentas/build.js                     # gera dist/index.html
 node ferramentas/checar_sintaxe.js            # todos os <script> de dist/index.html válidos
 python3 ferramentas/validar_cid.py            # deve imprimir [] (lê dist/index.html)
 node ferramentas/testar_build.js              # contagens e dados iguais aos da v71 (enquanto não houver mudança de conteúdo)
-npx playwright test                           # testes de ponta a ponta (inclui PWA/offline)
+npm run relatorios                            # regenera PENDENCIAS.md e INCONSISTENCIAS.md (após mudar dados/)
+npx playwright test                           # testes de ponta a ponta (inclui PWA/offline e relatórios em dia)
 python3 ferramentas/test_cid.py dados/cid10-datasus dados/cid_full.json dist/index.html   # se regenerar o CID
 ```
 No Windows, use `py` no lugar de `python3`. O git está em
@@ -107,7 +108,10 @@ Para gerar `dados/cid_full.json` a partir dos CSVs: `python3 ferramentas/build_c
 ## Pendências conhecidas (sugestões para finalizar)
 1. ~~Separar dados do código~~ (feito na v72).
 2. ~~PWA instalável~~ (feito na v72; testado no Chromium — instalação no iPhone/Safari não testada).
-3. 31 fichas ainda contêm "PENDENTE DE VERIFICAÇÃO" (ex.: posologia do glofitamabe).
+3. 31 fichas ainda contêm "PENDENTE DE VERIFICAÇÃO": lista completa em `PENDENCIAS.md`
+   (`ferramentas/pendencias.js`). Divergências entre ficha, calculadora pediátrica, plantão e prescrições em
+   `INCONSISTENCIAS.md` (`ferramentas/inconsistencias.js`). Os dois são gerados: corrija o dado (com fonte) e rode
+   `npm run relatorios`; nunca edite os .md à mão nem "corrija" uma divergência sem fonte.
 4. ~~Testes automatizados (Playwright)~~ (feito na v72). Os problemas conhecidos da v71 (ranking de "AAS",
    destaque de "Remédios") foram corrigidos na etapa R1; `testes/regressao.spec.js` lista as buscas que mudaram de propósito.
 5. ~~Limpeza de CSS, desempenho e acessibilidade~~ (feito na v72). Resta: listas com 1-2 letras digitadas
