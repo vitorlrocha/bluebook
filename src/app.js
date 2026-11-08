@@ -6,7 +6,6 @@
   var selectedId = null;
   var searchTerm = "";
   var store = null;
-  var editingId = null; // null = creating
 
   var sidebarEl = document.getElementById("sidebar");
   var detailEl = document.getElementById("detail");
@@ -165,11 +164,6 @@
         items = items.map(function (it) { return it.id === id ? Object.assign({}, it, data) : it; });
         notify();
         return Promise.resolve();
-      },
-      remove: function (id) {
-        items = items.filter(function (it) { return it.id !== id; });
-        notify();
-        return Promise.resolve();
       }
     };
   }
@@ -226,12 +220,6 @@
         notify();
         return Promise.resolve();
       },
-      remove: function (id) {
-        var items = readAll().filter(function (it) { return it.id !== id; });
-        writeAll(items);
-        notify();
-        return Promise.resolve();
-      },
       replaceAll: function (items) {
         writeAll(items);
         notify();
@@ -272,9 +260,6 @@
       },
       update: function (id, data) {
         return col.doc(id).update(data);
-      },
-      remove: function (id) {
-        return col.doc(id).delete();
       }
     };
   }
@@ -1024,7 +1009,6 @@
     if (back) back.addEventListener("click", function () {
       document.body.classList.remove("showing-detail");
     });
-    var delB = document.getElementById("delete-btn"); if (delB) delB.addEventListener("click", function () { confirmDelete(m); });
     document.getElementById("detail-fav-btn").addEventListener("click", function () { toggleFavorite(m); });
     document.getElementById("copy-btn").addEventListener("click", function () { copyText(medSummary(m), this); });
   }
@@ -1311,7 +1295,6 @@
     var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "bluebook-anotacoes.json";
     document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
   }
-  function crossMatch(hay, terms) { hay = stripAccents(hay.toLowerCase()); return terms.every(function (t) { return hay.indexOf(t) !== -1; }); }
   /* ---------------- Busca global (todo o app) ---------------- */
   function cidCats(s) {
     var out = []; String(s || "").replace(/[A-Z]\d\d(?:\.\d+)?/g, function (m) { out.push(m.slice(0, 3)); return m; });
@@ -1776,7 +1759,6 @@
         PL_KG = v > 0 && v <= 250 ? v : 0;
         try { window.localStorage.setItem("bluebook:pl-kg", String(PL_KG || "")); } catch (e) {}
         document.getElementById("pl-tab").innerHTML = table(p);
-        var th = detailEl.querySelector(".pl-table th:nth-child(2)");
       });
       var back = document.getElementById("back-btn");
       if (back) back.addEventListener("click", function () { document.body.classList.remove("showing-detail"); });
@@ -2080,7 +2062,7 @@
     if (window.__bbTabSync) window.__bbTabSync();
   }
 
-  /* ---------------- Modal (create / edit) ---------------- */
+  /* ---------------- Campos de medicamento (usados na importação de backup) ---------------- */
 
   var TARJA_OPTIONS = ["", "Sem tarja (venda livre)", "Tarja vermelha", "Tarja vermelha (retenção de receita)", "Tarja preta"];
 
@@ -2098,100 +2080,6 @@
     { key: "interacoes", label: "Interações medicamentosas", type: "textarea" },
     { key: "observacoes", label: "Observações", type: "textarea" }
   ];
-
-  function openCreateModal() {
-    editingId = null;
-    openModal("Novo medicamento", {});
-  }
-
-  function openModal(title, data) {
-    var overlay = document.createElement("div");
-    overlay.className = "modal-overlay";
-    overlay.id = "modal-overlay";
-
-    var fieldsHtml = FIELDS.map(function (f) {
-      var val = escapeHtml(data[f.key] || "");
-      var labelHtml = f.label + (f.required ? ' <span class="required">*</span>' : "");
-      if (f.type === "input") {
-        return '<div class="field"><label for="f-' + f.key + '">' + labelHtml + '</label><input id="f-' + f.key + '" type="text" value="' + val + '"' + (f.placeholder ? ' placeholder="' + escapeHtml(f.placeholder) + '"' : "") + (f.required ? " required" : "") + "></div>";
-      }
-      if (f.type === "select") {
-        var optsHtml = f.options.map(function (o) {
-          var selected = (data[f.key] || "") === o ? " selected" : "";
-          return '<option value="' + escapeHtml(o) + '"' + selected + ">" + (o ? escapeHtml(o) : "Não informado") + "</option>";
-        }).join("");
-        return '<div class="field"><label for="f-' + f.key + '">' + labelHtml + '</label><select id="f-' + f.key + '">' + optsHtml + "</select></div>";
-      }
-      return '<div class="field"><label for="f-' + f.key + '">' + labelHtml + '</label><textarea id="f-' + f.key + '"' + (f.placeholder ? ' placeholder="' + escapeHtml(f.placeholder) + '"' : "") + ">" + val + "</textarea></div>";
-    }).join("");
-
-    overlay.innerHTML =
-      '<div class="modal"><h2>' + title + '</h2><form id="med-form">' + fieldsHtml +
-      '<div class="modal-actions"><button type="button" class="btn-ghost btn" id="cancel-btn" style="background:transparent;color:var(--ink);">Cancelar</button><button type="submit" class="btn">Salvar</button></div></form></div>';
-
-    document.body.appendChild(overlay);
-
-    overlay.addEventListener("mousedown", function (e) {
-      if (e.target === overlay) closeModal();
-    });
-    document.getElementById("cancel-btn").addEventListener("click", closeModal);
-    document.getElementById("med-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      var payload = {};
-      FIELDS.forEach(function (f) {
-        var el = document.getElementById("f-" + f.key);
-        payload[f.key] = el.value.trim();
-      });
-      if (!payload.nome) {
-        document.getElementById("f-nome").focus();
-        return;
-      }
-      submitForm(payload);
-    });
-
-    setTimeout(function () {
-      var first = document.getElementById("f-nome");
-      if (first) first.focus();
-    }, 30);
-
-    function closeModal() {
-      overlay.remove();
-    }
-    overlay._close = closeModal;
-  }
-
-  function submitForm(payload) {
-    var overlay = document.getElementById("modal-overlay");
-    var promise;
-    if (editingId) {
-      payload.updatedAt = Date.now();
-      promise = store.update(editingId, payload);
-    } else {
-      payload.createdAt = Date.now();
-      payload.updatedAt = Date.now();
-      promise = store.add(payload).then(function (id) { selectedId = id; });
-    }
-    promise.then(function () {
-      if (overlay) overlay.remove();
-      document.body.classList.add("showing-detail");
-      render();
-    }).catch(function (err) {
-      console.error(err);
-      alert("Não foi possível salvar. Tente novamente.");
-    });
-  }
-
-  function confirmDelete(m) {
-    if (!confirm('Excluir "' + (m.nome || "este medicamento") + '"? Esta ação não pode ser desfeita.')) return;
-    store.remove(m.id).then(function () {
-      if (selectedId === m.id) selectedId = null;
-      document.body.classList.remove("showing-detail");
-      render();
-    }).catch(function (err) {
-      console.error(err);
-      alert("Não foi possível excluir. Tente novamente.");
-    });
-  }
 
   /* ---------------- Calculators ---------------- */
 
