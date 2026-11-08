@@ -41,7 +41,7 @@ Atualizado em 08/11/2026 (v72). Cada etapa termina com as verificações do `CLA
 |---|---|---|
 | ~~2. Login local~~ | Feito (ver acima). **Falta você:** abrir o app no seu aparelho e cadastrar o seu e-mail com a sua senha | Uma conta por aparelho. É uma trava de acesso, não criptografia dos dados |
 | ~~3. Pendências e inconsistências~~ | Feito: [`PENDENCIAS.md`](PENDENCIAS.md) (31 registros, 39 trechos) e [`INCONSISTENCIAS.md`](INCONSISTENCIAS.md) (8 verificações), gerados por `npm run relatorios` e conferidos nos testes. **Falta:** revisão humana com fonte de cada item | Nada foi preenchido nem alterado |
-| **4. Publicação e README** | GitHub Pages (ou Netlify) a partir de `dist/`. README em português com uso, build, testes, publicação e aviso legal | Você cria a conta ou repositório e eu preparo tudo para publicar |
+| **4. Publicação e README** | Preparado: [`README.md`](README.md), workflow do GitHub Pages (`.github/workflows/publicar.yml`), `netlify.toml` e um teste que simula a subpasta do Pages. **Falta:** criar o repositório e publicar (precisa da sua conta e autorização) | Pages gratuito exige repositório público |
 | **5. Entrar com o Google** | Botão "Entrar com o Google" que confirma o e-mail da conta | Exige o app publicado em https e uma credencial OAuth gratuita criada por você no Google Cloud. Funciona só com internet; o login por senha continua offline |
 
 ## O que falta (backlog, sem etapa definida)

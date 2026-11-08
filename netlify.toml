@@ -1,0 +1,15 @@
+# Alternativa ao GitHub Pages: Netlify (plano gratuito). Build Node puro, sem dependências.
+[build]
+  command = "node ferramentas/build.js"
+  publish = "dist"
+
+# O service worker precisa ser sempre revalidado para o app atualizar.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache"

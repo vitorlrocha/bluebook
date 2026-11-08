@@ -1,0 +1,52 @@
+# Publica o Bluebook no GitHub Pages a cada push na branch main.
+# Pré-requisito (uma vez): no GitHub, Settings → Pages → Build and deployment → Source: "GitHub Actions".
+# O build é Node puro (sem npm install): gera dist/ e confere sintaxe, CID e equivalência dos dados.
+name: Publicar no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build (dist/)
+        run: node ferramentas/build.js
+      - name: Verificações do CLAUDE.md
+        run: |
+          node ferramentas/checar_sintaxe.js
+          test "$(python3 ferramentas/validar_cid.py)" = "[]"
+          node ferramentas/testar_build.js
+          node ferramentas/pendencias.js --checar
+          node ferramentas/inconsistencias.js --checar
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
