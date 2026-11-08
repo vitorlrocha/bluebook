@@ -3109,6 +3109,7 @@
       if (k === "more") { sheet.hidden = false; return; }
       sheet.hidden = true;
       if (k === "fs") { var f = document.getElementById("fs-btn"); if (f) f.click(); return; }
+      if (k === "tools") { openCalcModal(); return; }
       if (k === "home") { selectedId = null; searchTerm = ""; searchInput.value = ""; classFilter = ""; espFilter = ""; bigArea = ""; switchViewMode("meds"); document.body.classList.add("showing-detail", "bb-home"); detailEl.scrollTop = 0; sync(); return; }
       document.body.classList.remove("bb-home");
       switchViewMode(k); sync();

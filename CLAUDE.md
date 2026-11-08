@@ -43,8 +43,9 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
   Bloom de trigramas (`matchRec`) descarta registros sem o termo — o resultado é idêntico ao de `matchTerm`.
   Se mudar os campos pesquisados, mude só `medHay`/`disHay`.
 - A calculadora pediátrica acessível ao usuário é o quadro "Dose pediátrica por peso" na ficha do
-  medicamento (prefixo `fp-`). O modal "Calculadoras" (`openCalcModal`) só abre por `#calc-btn`,
-  que o CSS esconde — ficou inacessível desde a v71.
+  medicamento (prefixo `fp-`). A janela "Ferramentas" (`openCalcModal`: calculadora, IG, dose pediátrica,
+  renal, IMC, risco CV, fluidos, infusão, corticoides) abre por `#calc-btn` (cabeçalho, computador) e pelo
+  item `data-tb="tools"` da folha "Mais" (celular). Na v71 estava inacessível.
 
 ## Estrutura do app (dentro de dist/index.html)
 - `<style>`: tokens de cor em `:root` (+ modo escuro em `@media (prefers-color-scheme: dark)`
