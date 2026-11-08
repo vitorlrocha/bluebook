@@ -3126,7 +3126,12 @@
   (function () {
     var LEVELS = [1, 1.15, 1.3, 1.45], btn = document.getElementById("fs-btn"), lbl = document.getElementById("fs-lbl");
     function cur() { return parseFloat(document.documentElement.style.zoom) || 1.15; }
-    function show() { if (lbl) lbl.textContent = Math.round(cur() * 100) + "%"; }
+    function show() {
+      var pct = Math.round(cur() * 100) + "%";
+      if (lbl) lbl.textContent = pct;
+      // nome acessível inclui o texto visível ("Aa 115%") e informa o tamanho atual
+      if (btn) btn.setAttribute("aria-label", "Tamanho do texto: Aa " + pct + " (toque para alternar)");
+    }
     show();
     if (btn) btn.addEventListener("click", function () {
       var c = cur(), i = 0; for (var k = 0; k < LEVELS.length; k++) if (Math.abs(LEVELS[k] - c) < 0.01) i = k;
@@ -3247,6 +3252,28 @@
       render();
     });
   }
+
+  /* Acessibilidade: Esc fecha (do mais recente para o mais antigo) janela modal, folha "Mais" ou menu ⋮
+     e devolve o foco a um ponto lógico. */
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    var ovs = document.querySelectorAll(".modal-overlay");
+    if (ovs.length) { ovs[ovs.length - 1].remove(); e.preventDefault(); return; }
+    var sh = document.getElementById("sheet");
+    if (sh && !sh.hidden) {
+      sh.hidden = true; e.preventDefault();
+      var mb = document.querySelector('#tabbar [data-tb="more"]'); if (mb) mb.focus();
+      return;
+    }
+    var mm = document.getElementById("more-menu"), mbtn = document.getElementById("more-btn");
+    if (mm && !mm.hidden) { mm.hidden = true; if (mbtn) { mbtn.setAttribute("aria-expanded", "false"); mbtn.focus(); } e.preventDefault(); }
+  });
+  /* Acessibilidade: ao abrir a folha "Mais" pelo teclado, o foco vai para o primeiro item. */
+  document.addEventListener("click", function (e) {
+    var b = e.target && e.target.closest ? e.target.closest('#tabbar [data-tb="more"]') : null;
+    if (!b) return;
+    setTimeout(function () { var sh = document.getElementById("sheet"); if (sh && !sh.hidden && e.detail === 0) { var f = sh.querySelector("button"); if (f) f.focus(); } }, 0);
+  });
 
   var moreBtn = document.getElementById("more-btn");
   var moreMenu = document.getElementById("more-menu");

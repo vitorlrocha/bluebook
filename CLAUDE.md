@@ -30,6 +30,18 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
   Projetos: `computador` (1366×860) e `celular` (Pixel 7); arquivos `*.celular.spec.js` só no celular,
   `*.ambos.spec.js` nos dois. `testes/apoio.js` falha qualquer teste com erro de JavaScript no console.
   Testes com `test.fail` documentam problemas conhecidos (passam enquanto o problema existir).
+- Testes de regressão: `testes/regressao.spec.js` exige que ~90 buscas deem a MESMA lista que a v71
+  (`referencia/`); `testes/visual.ambos.spec.js` compara capturas de tela (claro/escuro, computador/celular)
+  — mudança visual intencional: `npx playwright test visual --update-snapshots`; `testes/acessibilidade.ambos.spec.js`
+  roda axe-core (WCAG 2.1 AA) e testa teclado (Esc, foco), botão Aa e legibilidade.
+- Ferramentas de diagnóstico (dev): `ferramentas/medir_desempenho.js [--cpu=4]` (tempo de carga e de busca),
+  `ferramentas/estilos_computados.js` (impressão digital dos estilos para provar que CSS não mudou),
+  `ferramentas/css_limpar.js` (remove só declarações sobrescritas e seletores de classes inexistentes).
+- CSS em 3 camadas (ordem importa): 1. base, 2. tema moderno (padrão), 3. acessibilidade (contraste AA).
+  Fundos azuis com texto branco usam `--accent-fill` (no escuro é mais fechado que `--accent`).
+- Busca: o texto normalizado de cada registro fica em cache (`hayOf`, `medHay`, `disHay`) e um filtro de
+  Bloom de trigramas (`matchRec`) descarta registros sem o termo — o resultado é idêntico ao de `matchTerm`.
+  Se mudar os campos pesquisados, mude só `medHay`/`disHay`.
 - A calculadora pediátrica acessível ao usuário é o quadro "Dose pediátrica por peso" na ficha do
   medicamento (prefixo `fp-`). O modal "Calculadoras" (`openCalcModal`) só abre por `#calc-btn`,
   que o CSS esconde — ficou inacessível desde a v71.
@@ -85,5 +97,7 @@ Para gerar `dados/cid_full.json` a partir dos CSVs: `python3 ferramentas/build_c
 3. 31 fichas ainda contêm "PENDENTE DE VERIFICAÇÃO" (ex.: posologia do glofitamabe).
 4. ~~Testes automatizados (Playwright)~~ (feito na v72). Problemas conhecidos marcados com `test.fail`:
    ranking de "AAS" e destaque de "Remédios" na barra inferior.
-5. Limpeza de CSS: o arquivo acumula camadas de estilo; consolidar no tema moderno do fim.
+5. ~~Limpeza de CSS, desempenho e acessibilidade~~ (feito na v72). Resta: listas com 1-2 letras digitadas
+   desenham ~1.800 itens (≈60 ms no computador, ≈370 ms em celular simulado 4× mais lento) — custo de DOM,
+   não do índice; resolver exigiria lista virtualizada ou limite de itens (mudança de interface).
 6. Publicação: hospedar (ex.: GitHub Pages/Netlify) e, se desejado, empacotar para lojas.
