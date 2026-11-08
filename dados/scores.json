@@ -1,0 +1,3936 @@
+[
+  {
+    "id": "curb65",
+    "nome": "CURB-65 (gravidade da pneumonia)",
+    "areas": [
+      "Clínica Médica"
+    ],
+    "especialidade": "Pneumologia",
+    "desc": "Estratifica o risco de morte na pneumonia adquirida na comunidade e ajuda a decidir entre tratamento ambulatorial e internação.",
+    "fields": [
+      {
+        "id": "c",
+        "label": "Confusão mental (nova)",
+        "pts": 1
+      },
+      {
+        "id": "u",
+        "label": "Ureia > 50 mg/dL (BUN > 19 mg/dL)",
+        "pts": 1
+      },
+      {
+        "id": "r",
+        "label": "Frequência respiratória ≥ 30 irpm",
+        "pts": 1
+      },
+      {
+        "id": "b",
+        "label": "PA sistólica < 90 ou diastólica ≤ 60 mmHg",
+        "pts": 1
+      },
+      {
+        "id": "a",
+        "label": "Idade ≥ 65 anos",
+        "pts": 1
+      }
+    ],
+    "max": 5,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 1) return { nivel: \"ok\", t: \"Baixo risco (mortalidade ~1,5%)\", c: \"Tratamento ambulatorial é geralmente adequado, se não houver outros fatores (hipoxemia, comorbidades descompensadas, instabilidade social).\" };",
+        "        if (s === 2) return { nivel: \"warn\", t: \"Risco intermediário (mortalidade ~9%)\", c: \"Considerar internação hospitalar breve ou observação supervisionada.\" };",
+        "        return { nivel: \"bad\", t: \"Alto risco (mortalidade ~15–40%)\", c: s >= 4 ? \"Internar; considerar UTI se escore 4–5 ou critérios de pneumonia grave (ATS/IDSA).\" : \"Internar; avaliar necessidade de UTI.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Lim WS et al., Thorax 2003; diretrizes SBPT/ATS-IDSA."
+  },
+  {
+    "id": "qsofa",
+    "nome": "qSOFA (triagem de sepse)",
+    "areas": [
+      "Urgência e Emergência"
+    ],
+    "especialidade": "Urgência e Emergência",
+    "desc": "Triagem rápida à beira do leito de pacientes com infecção suspeita e maior risco de desfecho desfavorável.",
+    "fields": [
+      {
+        "id": "r",
+        "label": "Frequência respiratória ≥ 22 irpm",
+        "pts": 1
+      },
+      {
+        "id": "m",
+        "label": "Alteração do nível de consciência (Glasgow < 15)",
+        "pts": 1
+      },
+      {
+        "id": "p",
+        "label": "PA sistólica ≤ 100 mmHg",
+        "pts": 1
+      }
+    ],
+    "max": 3,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        return s >= 2 ? { nivel: \"bad\", t: \"Positivo (≥ 2 pontos)\", c: \"Alto risco de sepse e mortalidade: avaliar disfunção orgânica (SOFA), lactato, hemoculturas e iniciar antibiótico e ressuscitação volêmica na 1ª hora.\" }",
+        "          : { nivel: \"ok\", t: \"Negativo (< 2 pontos)\", c: \"Não exclui sepse. Se houver suspeita clínica, calcular o SOFA e dosar lactato; reavaliar seriadamente.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Singer M et al., JAMA 2016 (Sepsis-3); Surviving Sepsis Campaign 2021."
+  },
+  {
+    "id": "glasgow",
+    "nome": "Escala de Coma de Glasgow",
+    "areas": [
+      "Urgência e Emergência"
+    ],
+    "especialidade": "Neurologia",
+    "desc": "Avalia o nível de consciência em trauma e rebaixamento neurológico (3 a 15 pontos).",
+    "fields": [
+      {
+        "id": "o",
+        "label": "Abertura ocular",
+        "opts": [
+          [
+            "Espontânea",
+            4
+          ],
+          [
+            "Ao comando verbal",
+            3
+          ],
+          [
+            "À dor",
+            2
+          ],
+          [
+            "Nenhuma",
+            1
+          ]
+        ]
+      },
+      {
+        "id": "v",
+        "label": "Resposta verbal",
+        "opts": [
+          [
+            "Orientada",
+            5
+          ],
+          [
+            "Confusa",
+            4
+          ],
+          [
+            "Palavras inapropriadas",
+            3
+          ],
+          [
+            "Sons incompreensíveis",
+            2
+          ],
+          [
+            "Nenhuma",
+            1
+          ]
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Resposta motora",
+        "opts": [
+          [
+            "Obedece comandos",
+            6
+          ],
+          [
+            "Localiza a dor",
+            5
+          ],
+          [
+            "Retirada ao estímulo doloroso",
+            4
+          ],
+          [
+            "Flexão anormal (decorticação)",
+            3
+          ],
+          [
+            "Extensão anormal (descerebração)",
+            2
+          ],
+          [
+            "Nenhuma",
+            1
+          ]
+        ]
+      }
+    ],
+    "min": 3,
+    "max": 15,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s >= 15) return { nivel: \"ok\", t: \"Normal (15)\", c: \"Sem alteração do nível de consciência.\" };",
+        "        if (s >= 13) return { nivel: \"ok\", t: \"Traumatismo/rebaixamento leve (13–14)\", c: \"Observação; TC de crânio conforme regras de decisão (Canadian CT Head / New Orleans).\" };",
+        "        if (s >= 9) return { nivel: \"warn\", t: \"Moderado (9–12)\", c: \"TC de crânio, monitorização e avaliação neurocirúrgica; reavaliar seriadamente.\" };",
+        "        return { nivel: \"bad\", t: \"Grave (≤ 8)\", c: \"Considerar via aérea definitiva (IOT), TC de crânio imediata, neurocirurgia e UTI (ATLS).\" };",
+        "      }"
+      ]
+    },
+    "ref": "Teasdale G, Jennett B. Lancet 1974; ATLS 10ª ed."
+  },
+  {
+    "id": "wellstep",
+    "nome": "Wells para TEP",
+    "areas": [
+      "Urgência e Emergência",
+      "Clínica Médica"
+    ],
+    "especialidade": "Pneumologia",
+    "desc": "Probabilidade pré-teste de tromboembolismo pulmonar para definir D-dímero ou angio-TC.",
+    "fields": [
+      {
+        "id": "a",
+        "label": "Sinais clínicos de TVP (edema e dor à palpação da perna)",
+        "pts": 3
+      },
+      {
+        "id": "b",
+        "label": "TEP é o diagnóstico mais provável (ou igualmente provável)",
+        "pts": 3
+      },
+      {
+        "id": "c",
+        "label": "Frequência cardíaca > 100 bpm",
+        "pts": 1.5
+      },
+      {
+        "id": "d",
+        "label": "Imobilização ≥ 3 dias ou cirurgia nas últimas 4 semanas",
+        "pts": 1.5
+      },
+      {
+        "id": "e",
+        "label": "TEP ou TVP prévios",
+        "pts": 1.5
+      },
+      {
+        "id": "f",
+        "label": "Hemoptise",
+        "pts": 1
+      },
+      {
+        "id": "g",
+        "label": "Câncer ativo (tratamento nos últimos 6 meses ou paliativo)",
+        "pts": 1
+      }
+    ],
+    "max": 12.5,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        var tri = s > 6 ? \"alta (~60%)\" : s >= 2 ? \"moderada (~20%)\" : \"baixa (~2%)\";",
+        "        if (s > 4) return { nivel: \"bad\", t: \"TEP provável (> 4) — probabilidade \" + tri, c: \"Realizar angio-TC de tórax (ou cintilografia V/Q); iniciar anticoagulação enquanto aguarda se não houver contraindicação e o exame demorar.\" };",
+        "        return { nivel: s >= 2 ? \"warn\" : \"ok\", t: \"TEP improvável (≤ 4) — probabilidade \" + tri, c: \"Dosar D-dímero (ajustado à idade: idade × 10 µg/L se > 50 anos). Se negativo, TEP excluído; se positivo, angio-TC.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Wells PS et al., Thromb Haemost 2000; ESC 2019 (TEP)."
+  },
+  {
+    "id": "wellstvp",
+    "nome": "Wells para TVP",
+    "areas": [
+      "Clínica Médica"
+    ],
+    "especialidade": "Hematologia e Oncologia",
+    "desc": "Probabilidade pré-teste de trombose venosa profunda de membros inferiores.",
+    "fields": [
+      {
+        "id": "a",
+        "label": "Câncer ativo",
+        "pts": 1
+      },
+      {
+        "id": "b",
+        "label": "Paralisia, paresia ou imobilização recente com gesso",
+        "pts": 1
+      },
+      {
+        "id": "c",
+        "label": "Acamado ≥ 3 dias ou cirurgia maior nas últimas 12 semanas",
+        "pts": 1
+      },
+      {
+        "id": "d",
+        "label": "Dor à palpação ao longo do sistema venoso profundo",
+        "pts": 1
+      },
+      {
+        "id": "e",
+        "label": "Edema de todo o membro inferior",
+        "pts": 1
+      },
+      {
+        "id": "f",
+        "label": "Panturrilha > 3 cm maior que a contralateral (10 cm abaixo da tuberosidade tibial)",
+        "pts": 1
+      },
+      {
+        "id": "g",
+        "label": "Edema com cacifo (maior no membro sintomático)",
+        "pts": 1
+      },
+      {
+        "id": "h",
+        "label": "Veias superficiais colaterais (não varicosas)",
+        "pts": 1
+      },
+      {
+        "id": "i",
+        "label": "TVP prévia documentada",
+        "pts": 1
+      },
+      {
+        "id": "j",
+        "label": "Diagnóstico alternativo tão ou mais provável que TVP",
+        "pts": -2
+      }
+    ],
+    "min": -2,
+    "max": 9,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s >= 3) return { nivel: \"bad\", t: \"Alta probabilidade (≥ 3; ~75%)\", c: \"Realizar ultrassonografia com Doppler de compressão; se demorar, iniciar anticoagulação empírica.\" };",
+        "        if (s >= 1) return { nivel: \"warn\", t: \"Probabilidade moderada (1–2; ~17%)\", c: \"D-dímero de alta sensibilidade; se positivo, ultrassonografia com Doppler. (No modelo de 2 níveis, ≥ 2 = provável.)\" };",
+        "        return { nivel: \"ok\", t: \"Baixa probabilidade (≤ 0; ~5%)\", c: \"D-dímero; se negativo, TVP excluída.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Wells PS et al., Lancet 1997 e N Engl J Med 2003."
+  },
+  {
+    "id": "chadsvasc",
+    "nome": "CHA₂DS₂-VASc (FA e risco de AVC)",
+    "areas": [
+      "Clínica Médica"
+    ],
+    "especialidade": "Cardiologia",
+    "desc": "Risco de AVC/embolia sistêmica na fibrilação atrial não valvar, para decidir anticoagulação.",
+    "fields": [
+      {
+        "id": "c",
+        "label": "Insuficiência cardíaca / disfunção do VE",
+        "pts": 1
+      },
+      {
+        "id": "h",
+        "label": "Hipertensão arterial",
+        "pts": 1
+      },
+      {
+        "id": "a2",
+        "label": "Idade ≥ 75 anos",
+        "pts": 2
+      },
+      {
+        "id": "d",
+        "label": "Diabetes mellitus",
+        "pts": 1
+      },
+      {
+        "id": "s2",
+        "label": "AVC, AIT ou tromboembolismo prévio",
+        "pts": 2
+      },
+      {
+        "id": "v",
+        "label": "Doença vascular (IAM prévio, DAP, placa aórtica)",
+        "pts": 1
+      },
+      {
+        "id": "a",
+        "label": "Idade 65–74 anos",
+        "pts": 1
+      },
+      {
+        "id": "sc",
+        "label": "Sexo feminino",
+        "pts": 1,
+        "key": "fem"
+      }
+    ],
+    "max": 9,
+    "interp": {
+      "$fn": [
+        "function (s, v) {",
+        "        var base = s - (v.sc ? 1 : 0);",
+        "        if (base === 0) return { nivel: \"ok\", t: \"Risco baixo\", c: \"Anticoagulação não indicada (se o único ponto for sexo feminino, também não).\" };",
+        "        if (base === 1) return { nivel: \"warn\", t: \"Risco intermediário\", c: \"Considerar anticoagulação oral, individualizando risco de sangramento e preferência do paciente.\" };",
+        "        return { nivel: \"bad\", t: \"Risco alto\", c: \"Anticoagulação oral indicada (preferir DOAC; varfarina se estenose mitral moderada/grave ou prótese valvar mecânica). Calcular HAS-BLED para corrigir fatores de risco de sangramento.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Lip GYH et al., Chest 2010; ESC 2020 e Diretriz Brasileira de FA."
+  },
+  {
+    "id": "hasbled",
+    "nome": "HAS-BLED (risco de sangramento)",
+    "areas": [
+      "Clínica Médica"
+    ],
+    "especialidade": "Cardiologia",
+    "desc": "Estima o risco de sangramento maior em pacientes com FA em anticoagulação.",
+    "fields": [
+      {
+        "id": "h",
+        "label": "Hipertensão não controlada (PAS > 160 mmHg)",
+        "pts": 1
+      },
+      {
+        "id": "r",
+        "label": "Disfunção renal (diálise, transplante ou Cr > 2,26 mg/dL)",
+        "pts": 1
+      },
+      {
+        "id": "l",
+        "label": "Disfunção hepática (cirrose ou bilirrubina > 2× e TGO/TGP > 3×)",
+        "pts": 1
+      },
+      {
+        "id": "s",
+        "label": "AVC prévio",
+        "pts": 1
+      },
+      {
+        "id": "b",
+        "label": "Sangramento prévio ou predisposição (anemia, trombocitopenia)",
+        "pts": 1
+      },
+      {
+        "id": "i",
+        "label": "INR lábil (tempo na faixa < 60%)",
+        "pts": 1
+      },
+      {
+        "id": "e",
+        "label": "Idade > 65 anos",
+        "pts": 1
+      },
+      {
+        "id": "d1",
+        "label": "Uso de antiagregante ou AINE",
+        "pts": 1
+      },
+      {
+        "id": "d2",
+        "label": "Etilismo (≥ 8 doses por semana)",
+        "pts": 1
+      }
+    ],
+    "max": 9,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        return s >= 3 ? { nivel: \"bad\", t: \"Alto risco de sangramento (≥ 3)\", c: \"Não contraindica a anticoagulação por si só: corrigir fatores modificáveis (PA, AINE/antiagregante, álcool, INR lábil) e reavaliar com mais frequência.\" }",
+        "          : { nivel: s === 2 ? \"warn\" : \"ok\", t: s === 2 ? \"Risco intermediário (2)\" : \"Baixo risco (0–1)\", c: \"Manter seguimento rotineiro e revisar fatores modificáveis.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Pisters R et al., Chest 2010; ESC 2020."
+  },
+  {
+    "id": "apgar",
+    "nome": "Índice de Apgar",
+    "areas": [
+      "Pediatria",
+      "Ginecologia e Obstetrícia"
+    ],
+    "especialidade": "Pediatria",
+    "desc": "Avalia a vitalidade do recém-nascido no 1º e no 5º minuto de vida.",
+    "fields": [
+      {
+        "id": "fc",
+        "label": "Frequência cardíaca",
+        "opts": [
+          [
+            "≥ 100 bpm",
+            2
+          ],
+          [
+            "< 100 bpm",
+            1
+          ],
+          [
+            "Ausente",
+            0
+          ]
+        ]
+      },
+      {
+        "id": "fr",
+        "label": "Respiração",
+        "opts": [
+          [
+            "Forte, choro vigoroso",
+            2
+          ],
+          [
+            "Fraca ou irregular",
+            1
+          ],
+          [
+            "Ausente",
+            0
+          ]
+        ]
+      },
+      {
+        "id": "to",
+        "label": "Tônus muscular",
+        "opts": [
+          [
+            "Movimentos ativos",
+            2
+          ],
+          [
+            "Alguma flexão de extremidades",
+            1
+          ],
+          [
+            "Flácido",
+            0
+          ]
+        ]
+      },
+      {
+        "id": "ir",
+        "label": "Irritabilidade reflexa",
+        "opts": [
+          [
+            "Choro, tosse ou espirro",
+            2
+          ],
+          [
+            "Careta",
+            1
+          ],
+          [
+            "Sem resposta",
+            0
+          ]
+        ]
+      },
+      {
+        "id": "co",
+        "label": "Cor da pele",
+        "opts": [
+          [
+            "Corpo e extremidades rosados",
+            2
+          ],
+          [
+            "Corpo rosado, extremidades cianóticas",
+            1
+          ],
+          [
+            "Cianose ou palidez generalizada",
+            0
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 10,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s >= 7) return { nivel: \"ok\", t: \"Normal (7–10)\", c: \"Cuidados de rotina; contato pele a pele.\" };",
+        "        if (s >= 4) return { nivel: \"warn\", t: \"Depressão moderada (4–6)\", c: \"Estimulação, aspiração se necessário, oxigênio e ventilação com pressão positiva conforme fluxograma do PRN-SBP; reavaliar.\" };",
+        "        return { nivel: \"bad\", t: \"Depressão grave (0–3)\", c: \"Reanimação neonatal imediata (ventilação, compressões, adrenalina conforme algoritmo); não esperar o 1º minuto para iniciar.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Apgar V. Curr Res Anesth Analg 1953; Programa de Reanimação Neonatal (SBP)."
+  },
+  {
+    "id": "childpugh",
+    "nome": "Child-Pugh (cirrose)",
+    "areas": [
+      "Clínica Médica"
+    ],
+    "especialidade": "Gastroenterologia e Hepatologia",
+    "desc": "Classifica a gravidade da disfunção hepática na cirrose e orienta ajuste de doses.",
+    "fields": [
+      {
+        "id": "b",
+        "label": "Bilirrubina total",
+        "opts": [
+          [
+            "< 2 mg/dL",
+            1
+          ],
+          [
+            "2–3 mg/dL",
+            2
+          ],
+          [
+            "> 3 mg/dL",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "a",
+        "label": "Albumina",
+        "opts": [
+          [
+            "> 3,5 g/dL",
+            1
+          ],
+          [
+            "2,8–3,5 g/dL",
+            2
+          ],
+          [
+            "< 2,8 g/dL",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "i",
+        "label": "INR",
+        "opts": [
+          [
+            "< 1,7",
+            1
+          ],
+          [
+            "1,7–2,3",
+            2
+          ],
+          [
+            "> 2,3",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "as",
+        "label": "Ascite",
+        "opts": [
+          [
+            "Ausente",
+            1
+          ],
+          [
+            "Leve ou responsiva ao diurético",
+            2
+          ],
+          [
+            "Moderada a grave / refratária",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "e",
+        "label": "Encefalopatia hepática",
+        "opts": [
+          [
+            "Ausente",
+            1
+          ],
+          [
+            "Grau 1–2 (ou controlada)",
+            2
+          ],
+          [
+            "Grau 3–4 (ou refratária)",
+            3
+          ]
+        ]
+      }
+    ],
+    "min": 5,
+    "max": 15,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 6) return { nivel: \"ok\", t: \"Classe A (5–6)\", c: \"Doença compensada. Sobrevida em 1 e 2 anos ~100% e ~85%. Risco cirúrgico baixo.\" };",
+        "        if (s <= 9) return { nivel: \"warn\", t: \"Classe B (7–9)\", c: \"Comprometimento funcional significativo. Sobrevida ~80% (1 ano) e ~60% (2 anos). Reduzir doses de fármacos de metabolização hepática.\" };",
+        "        return { nivel: \"bad\", t: \"Classe C (10–15)\", c: \"Doença descompensada. Sobrevida ~45% (1 ano) e ~35% (2 anos). Avaliar transplante; evitar fármacos hepatotóxicos e ajustar doses.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Pugh RN et al., Br J Surg 1973."
+  },
+  {
+    "id": "meld",
+    "nome": "MELD-Na (cirrose / transplante)",
+    "areas": [
+      "Clínica Médica"
+    ],
+    "especialidade": "Gastroenterologia e Hepatologia",
+    "calc": true,
+    "desc": "Prognóstico de curto prazo na doença hepática terminal; usado na priorização para transplante.",
+    "fields": [
+      {
+        "id": "bili",
+        "label": "Bilirrubina total (mg/dL)",
+        "type": "num",
+        "step": "0.1"
+      },
+      {
+        "id": "inr",
+        "label": "INR",
+        "type": "num",
+        "step": "0.01"
+      },
+      {
+        "id": "cr",
+        "label": "Creatinina (mg/dL)",
+        "type": "num",
+        "step": "0.01"
+      },
+      {
+        "id": "na",
+        "label": "Sódio sérico (mEq/L)",
+        "type": "num",
+        "step": "1"
+      },
+      {
+        "id": "dial",
+        "label": "Diálise ≥ 2 vezes na última semana",
+        "check": true
+      }
+    ],
+    "run": {
+      "$fn": [
+        "function (v) {",
+        "        var bili = parseFloat(v.bili), inr = parseFloat(v.inr), cr = parseFloat(v.cr), na = parseFloat(v.na);",
+        "        if (!isFinite(bili) || !isFinite(inr) || !isFinite(cr)) return null;",
+        "        bili = Math.max(1, bili); inr = Math.max(1, inr); cr = v.dial ? 4 : Math.min(4, Math.max(1, cr));",
+        "        var meld = Math.round(3.78 * Math.log(bili) + 11.2 * Math.log(inr) + 9.57 * Math.log(cr) + 6.43);",
+        "        meld = Math.max(6, Math.min(40, meld));",
+        "        var out = { valor: meld, rotulo: \"MELD\", extra: \"\" };",
+        "        if (isFinite(na)) {",
+        "          var n = Math.min(137, Math.max(125, na));",
+        "          var mn = meld > 11 ? Math.round(meld + 1.32 * (137 - n) - 0.033 * meld * (137 - n)) : meld;",
+        "          mn = Math.max(6, Math.min(40, mn));",
+        "          out.valor = mn; out.rotulo = \"MELD-Na\"; out.extra = \"MELD sem sódio: \" + meld;",
+        "        }",
+        "        var s = out.valor, mort = s < 10 ? \"~2%\" : s < 20 ? \"~6%\" : s < 30 ? \"~20%\" : s < 40 ? \"~53%\" : \"~71%\";",
+        "        out.nivel = s < 15 ? \"ok\" : s < 25 ? \"warn\" : \"bad\";",
+        "        out.t = out.rotulo + \" \" + s + \" — mortalidade em 3 meses \" + mort;",
+        "        out.c = s >= 15 ? \"Considerar referência para avaliação de transplante hepático (MELD ≥ 15).\" : \"Seguimento hepatológico; reavaliar periodicamente.\";",
+        "        return out;",
+        "      }"
+      ]
+    },
+    "ref": "Kamath PS et al., Hepatology 2001; Kim WR et al., N Engl J Med 2008 (MELD-Na)."
+  },
+  {
+    "id": "alvarado",
+    "nome": "Alvarado (apendicite aguda)",
+    "areas": [
+      "Cirurgia Geral"
+    ],
+    "especialidade": "Cirurgia Geral",
+    "desc": "Probabilidade clínica de apendicite aguda em dor abdominal.",
+    "fields": [
+      {
+        "id": "m",
+        "label": "Dor migratória para a fossa ilíaca direita",
+        "pts": 1
+      },
+      {
+        "id": "a",
+        "label": "Anorexia",
+        "pts": 1
+      },
+      {
+        "id": "n",
+        "label": "Náuseas ou vômitos",
+        "pts": 1
+      },
+      {
+        "id": "d",
+        "label": "Dor à palpação na fossa ilíaca direita",
+        "pts": 2
+      },
+      {
+        "id": "b",
+        "label": "Dor à descompressão brusca (Blumberg)",
+        "pts": 1
+      },
+      {
+        "id": "t",
+        "label": "Temperatura ≥ 37,3 °C",
+        "pts": 1
+      },
+      {
+        "id": "l",
+        "label": "Leucocitose > 10.000/mm³",
+        "pts": 2
+      },
+      {
+        "id": "o",
+        "label": "Desvio à esquerda (neutrófilos > 75%)",
+        "pts": 1
+      }
+    ],
+    "max": 10,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s >= 9) return { nivel: \"bad\", t: \"Apendicite muito provável (9–10)\", c: \"Avaliação cirúrgica imediata; apendicectomia.\" };",
+        "        if (s >= 7) return { nivel: \"bad\", t: \"Apendicite provável (7–8)\", c: \"Avaliação cirúrgica; imagem (USG/TC) se dúvida diagnóstica.\" };",
+        "        if (s >= 5) return { nivel: \"warn\", t: \"Possível (5–6)\", c: \"Observação e exame de imagem (USG ou TC) antes da decisão.\" };",
+        "        return { nivel: \"ok\", t: \"Improvável (≤ 4)\", c: \"Considerar outros diagnósticos; reavaliar em 6–12 h se persistir dor.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Alvarado A. Ann Emerg Med 1986."
+  },
+  {
+    "id": "centor",
+    "nome": "Centor / McIsaac (faringite estreptocócica)",
+    "areas": [
+      "Clínica Médica",
+      "Pediatria"
+    ],
+    "especialidade": "Otorrino e Oftalmologia",
+    "desc": "Probabilidade de faringoamigdalite por Streptococcus pyogenes para decidir teste rápido e antibiótico.",
+    "fields": [
+      {
+        "id": "e",
+        "label": "Exsudato ou edema amigdaliano",
+        "pts": 1
+      },
+      {
+        "id": "l",
+        "label": "Linfonodos cervicais anteriores dolorosos",
+        "pts": 1
+      },
+      {
+        "id": "f",
+        "label": "Febre > 38 °C",
+        "pts": 1
+      },
+      {
+        "id": "t",
+        "label": "Ausência de tosse",
+        "pts": 1
+      },
+      {
+        "id": "i",
+        "label": "Idade",
+        "opts": [
+          [
+            "3–14 anos",
+            1
+          ],
+          [
+            "15–44 anos",
+            0
+          ],
+          [
+            "≥ 45 anos",
+            -1
+          ]
+        ],
+        "def": 1
+      }
+    ],
+    "min": -1,
+    "max": 5,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 1) return { nivel: \"ok\", t: \"Baixo risco (≤ 1; < 10%)\", c: \"Sem teste e sem antibiótico; tratamento sintomático.\" };",
+        "        if (s <= 3) return { nivel: \"warn\", t: \"Risco intermediário (2–3; 15–35%)\", c: \"Teste rápido ou cultura; tratar com penicilina benzatina/amoxicilina se positivo.\" };",
+        "        return { nivel: \"bad\", t: \"Alto risco (≥ 4; ~50%)\", c: \"Teste rápido/cultura (ou tratar empiricamente conforme protocolo local); penicilina benzatina IM ou amoxicilina 10 dias.\" };",
+        "      }"
+      ]
+    },
+    "ref": "McIsaac WJ et al., CMAJ 1998; IDSA 2012."
+  },
+  {
+    "id": "heart",
+    "nome": "HEART (dor torácica na emergência)",
+    "areas": [
+      "Cardiologia",
+      "Urgência e Emergência"
+    ],
+    "especialidade": "Cardiologia",
+    "desc": "Estratifica o risco de eventos cardíacos adversos maiores em 6 semanas em pacientes com dor torácica sem supra de ST.",
+    "fields": [
+      {
+        "id": "h",
+        "label": "História",
+        "opts": [
+          [
+            "Pouco suspeita",
+            0
+          ],
+          [
+            "Moderadamente suspeita",
+            1
+          ],
+          [
+            "Muito suspeita",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "e",
+        "label": "ECG",
+        "opts": [
+          [
+            "Normal",
+            0
+          ],
+          [
+            "Alteração inespecífica da repolarização",
+            1
+          ],
+          [
+            "Desvio significativo do ST",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "a",
+        "label": "Idade",
+        "opts": [
+          [
+            "< 45 anos",
+            0
+          ],
+          [
+            "45–64 anos",
+            1
+          ],
+          [
+            "≥ 65 anos",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "r",
+        "label": "Fatores de risco (HAS, DM, dislipidemia, tabagismo, obesidade, história familiar)",
+        "opts": [
+          [
+            "Nenhum",
+            0
+          ],
+          [
+            "1–2 fatores",
+            1
+          ],
+          [
+            "≥ 3 fatores ou doença aterosclerótica conhecida",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "t",
+        "label": "Troponina",
+        "opts": [
+          [
+            "≤ limite normal",
+            0
+          ],
+          [
+            "1–3× o limite",
+            1
+          ],
+          [
+            "> 3× o limite",
+            2
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 10,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 3) return { nivel: \"ok\", t: \"Baixo risco (0–3; MACE ~1–2%)\", c: \"Considerar alta com seguimento ambulatorial se troponina seriada normal e sem outros achados.\" };",
+        "        if (s <= 6) return { nivel: \"warn\", t: \"Risco intermediário (4–6; MACE ~12–17%)\", c: \"Observação, troponina seriada e investigação de isquemia (teste funcional ou angio-TC de coronárias).\" };",
+        "        return { nivel: \"bad\", t: \"Alto risco (7–10; MACE ~50–65%)\", c: \"Internar, tratar como síndrome coronariana aguda e considerar estratégia invasiva precoce.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Six AJ et al., Neth Heart J 2008; Backus BE et al., Int J Cardiol 2013."
+  },
+  {
+    "id": "timi",
+    "nome": "TIMI (angina instável / IAMSSST)",
+    "areas": [
+      "Cardiologia"
+    ],
+    "especialidade": "Cardiologia",
+    "desc": "Prediz o risco de morte, infarto ou revascularização urgente em 14 dias na síndrome coronariana aguda sem supra de ST.",
+    "fields": [
+      {
+        "id": "a",
+        "label": "Idade ≥ 65 anos",
+        "pts": 1
+      },
+      {
+        "id": "f",
+        "label": "≥ 3 fatores de risco para DAC",
+        "pts": 1
+      },
+      {
+        "id": "d",
+        "label": "Estenose coronariana ≥ 50% conhecida",
+        "pts": 1
+      },
+      {
+        "id": "s",
+        "label": "Uso de AAS nos últimos 7 dias",
+        "pts": 1
+      },
+      {
+        "id": "g",
+        "label": "≥ 2 episódios de angina em 24 h",
+        "pts": 1
+      },
+      {
+        "id": "st",
+        "label": "Desvio do segmento ST ≥ 0,5 mm",
+        "pts": 1
+      },
+      {
+        "id": "m",
+        "label": "Marcadores cardíacos elevados",
+        "pts": 1
+      }
+    ],
+    "max": 7,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 2) return { nivel: \"ok\", t: \"Baixo risco (0–2; ~5–8%)\", c: \"Estratégia conservadora ou invasiva seletiva conforme evolução.\" };",
+        "        if (s <= 4) return { nivel: \"warn\", t: \"Risco intermediário (3–4; ~13–20%)\", c: \"Considerar estratégia invasiva precoce (< 24–72 h).\" };",
+        "        return { nivel: \"bad\", t: \"Alto risco (5–7; ~26–41%)\", c: \"Estratégia invasiva precoce e terapia antitrombótica intensiva.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Antman EM et al., JAMA 2000."
+  },
+  {
+    "id": "perc",
+    "nome": "PERC (exclusão de embolia pulmonar)",
+    "areas": [
+      "Urgência e Emergência",
+      "Pneumologia"
+    ],
+    "especialidade": "Pneumologia",
+    "desc": "Em pacientes de baixa probabilidade clínica, a ausência de todos os critérios exclui EP sem D-dímero (marque os critérios presentes).",
+    "fields": [
+      {
+        "id": "a",
+        "label": "Idade ≥ 50 anos",
+        "pts": 1
+      },
+      {
+        "id": "f",
+        "label": "Frequência cardíaca ≥ 100 bpm",
+        "pts": 1
+      },
+      {
+        "id": "s",
+        "label": "SpO₂ < 95% em ar ambiente",
+        "pts": 1
+      },
+      {
+        "id": "e",
+        "label": "Edema unilateral de perna",
+        "pts": 1
+      },
+      {
+        "id": "h",
+        "label": "Hemoptise",
+        "pts": 1
+      },
+      {
+        "id": "c",
+        "label": "Cirurgia ou trauma recente (≤ 4 semanas)",
+        "pts": 1
+      },
+      {
+        "id": "t",
+        "label": "Tromboembolismo venoso prévio",
+        "pts": 1
+      },
+      {
+        "id": "o",
+        "label": "Uso de estrogênio",
+        "pts": 1
+      }
+    ],
+    "max": 8,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        return s === 0 ? { nivel: \"ok\", t: \"PERC negativo (nenhum critério)\", c: \"Apenas se a probabilidade pré-teste for baixa (< 15%): EP excluída sem D-dímero.\" }",
+        "          : { nivel: \"warn\", t: \"PERC positivo (\" + s + \" critério\" + (s > 1 ? \"s\" : \"\") + \")\", c: \"Não exclui EP: dosar D-dímero (baixa probabilidade) ou prosseguir com angio-TC conforme Wells.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Kline JA et al., J Thromb Haemost 2004; Kline JA et al., Ann Emerg Med 2018."
+  },
+  {
+    "id": "geneva",
+    "nome": "Genebra revisado (probabilidade de EP)",
+    "areas": [
+      "Urgência e Emergência",
+      "Pneumologia"
+    ],
+    "especialidade": "Pneumologia",
+    "desc": "Alternativa ao escore de Wells para estimar a probabilidade clínica de embolia pulmonar (sem julgamento subjetivo).",
+    "fields": [
+      {
+        "id": "i",
+        "label": "Idade > 65 anos",
+        "pts": 1
+      },
+      {
+        "id": "t",
+        "label": "TVP ou EP prévia",
+        "pts": 3
+      },
+      {
+        "id": "c",
+        "label": "Cirurgia sob anestesia geral ou fratura de MMII no último mês",
+        "pts": 2
+      },
+      {
+        "id": "n",
+        "label": "Neoplasia ativa ou em remissão < 1 ano",
+        "pts": 2
+      },
+      {
+        "id": "d",
+        "label": "Dor unilateral em membro inferior",
+        "pts": 3
+      },
+      {
+        "id": "h",
+        "label": "Hemoptise",
+        "pts": 2
+      },
+      {
+        "id": "p",
+        "label": "Dor à palpação venosa profunda e edema unilateral",
+        "pts": 4
+      },
+      {
+        "id": "fc",
+        "label": "Frequência cardíaca",
+        "opts": [
+          [
+            "< 75 bpm",
+            0
+          ],
+          [
+            "75–94 bpm",
+            3
+          ],
+          [
+            "≥ 95 bpm",
+            5
+          ]
+        ]
+      }
+    ],
+    "max": 25,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 3) return { nivel: \"ok\", t: \"Baixa probabilidade (0–3; ~8%)\", c: \"D-dímero; se negativo, EP improvável.\" };",
+        "        if (s <= 10) return { nivel: \"warn\", t: \"Probabilidade intermediária (4–10; ~29%)\", c: \"D-dímero ajustado por idade ou angio-TC conforme disponibilidade.\" };",
+        "        return { nivel: \"bad\", t: \"Alta probabilidade (≥ 11; ~74%)\", c: \"Angio-TC de tórax; considerar anticoagulação empírica enquanto aguarda.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Le Gal G et al., Ann Intern Med 2006."
+  },
+  {
+    "id": "sofa",
+    "nome": "SOFA (disfunção orgânica na sepse)",
+    "areas": [
+      "Urgência e Emergência"
+    ],
+    "especialidade": "Urgência e Emergência",
+    "desc": "Quantifica a disfunção de seis sistemas; aumento ≥ 2 pontos em relação à linha de base define sepse (Sepsis-3).",
+    "fields": [
+      {
+        "id": "r",
+        "label": "Respiração (PaO₂/FiO₂)",
+        "opts": [
+          [
+            "≥ 400",
+            0
+          ],
+          [
+            "< 400",
+            1
+          ],
+          [
+            "< 300",
+            2
+          ],
+          [
+            "< 200 com suporte ventilatório",
+            3
+          ],
+          [
+            "< 100 com suporte ventilatório",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "c",
+        "label": "Coagulação (plaquetas, ×10³/µL)",
+        "opts": [
+          [
+            "≥ 150",
+            0
+          ],
+          [
+            "< 150",
+            1
+          ],
+          [
+            "< 100",
+            2
+          ],
+          [
+            "< 50",
+            3
+          ],
+          [
+            "< 20",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "f",
+        "label": "Fígado (bilirrubina, mg/dL)",
+        "opts": [
+          [
+            "< 1,2",
+            0
+          ],
+          [
+            "1,2–1,9",
+            1
+          ],
+          [
+            "2,0–5,9",
+            2
+          ],
+          [
+            "6,0–11,9",
+            3
+          ],
+          [
+            "≥ 12,0",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "v",
+        "label": "Cardiovascular",
+        "opts": [
+          [
+            "PAM ≥ 70 mmHg",
+            0
+          ],
+          [
+            "PAM < 70 mmHg",
+            1
+          ],
+          [
+            "Dopamina ≤ 5 ou dobutamina",
+            2
+          ],
+          [
+            "Dopamina > 5, epinefrina ≤ 0,1 ou norepinefrina ≤ 0,1",
+            3
+          ],
+          [
+            "Dopamina > 15, epinefrina > 0,1 ou norepinefrina > 0,1",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "s",
+        "label": "Sistema nervoso central (Glasgow)",
+        "opts": [
+          [
+            "15",
+            0
+          ],
+          [
+            "13–14",
+            1
+          ],
+          [
+            "10–12",
+            2
+          ],
+          [
+            "6–9",
+            3
+          ],
+          [
+            "< 6",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "k",
+        "label": "Renal (creatinina mg/dL ou diurese)",
+        "opts": [
+          [
+            "< 1,2",
+            0
+          ],
+          [
+            "1,2–1,9",
+            1
+          ],
+          [
+            "2,0–3,4",
+            2
+          ],
+          [
+            "3,5–4,9 ou diurese < 500 mL/dia",
+            3
+          ],
+          [
+            "≥ 5,0 ou diurese < 200 mL/dia",
+            4
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 24,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s < 2) return { nivel: \"ok\", t: \"SOFA < 2\", c: \"Sem disfunção orgânica significativa; reavaliar seriadamente se infecção suspeita.\" };",
+        "        if (s < 7) return { nivel: \"warn\", t: \"Disfunção orgânica (2–6; mortalidade < 10–20%)\", c: \"Se infecção presente, critério de sepse: antibiótico precoce, lactato, ressuscitação guiada.\" };",
+        "        return { nivel: \"bad\", t: \"Disfunção grave (≥ 7; mortalidade ≥ 20–50%)\", c: \"Cuidados intensivos; mortalidade eleva-se com escores ≥ 10 e quanto maior a pontuação inicial e sua evolução.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Vincent JL et al., Intensive Care Med 1996; Singer M et al., JAMA 2016."
+  },
+  {
+    "id": "news2",
+    "nome": "NEWS2 (deterioração clínica)",
+    "areas": [
+      "Urgência e Emergência",
+      "Clínica Médica"
+    ],
+    "especialidade": "Urgência e Emergência",
+    "desc": "Escore de alerta precoce que combina sinais vitais e nível de consciência para detectar deterioração clínica (escala SpO₂ 1).",
+    "fields": [
+      {
+        "id": "fr",
+        "label": "Frequência respiratória (irpm)",
+        "opts": [
+          [
+            "12–20",
+            0
+          ],
+          [
+            "9–11",
+            1
+          ],
+          [
+            "21–24",
+            2
+          ],
+          [
+            "≤ 8 ou ≥ 25",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "sp",
+        "label": "SpO₂ (%) — escala 1",
+        "opts": [
+          [
+            "≥ 96",
+            0
+          ],
+          [
+            "94–95",
+            1
+          ],
+          [
+            "92–93",
+            2
+          ],
+          [
+            "≤ 91",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "label": "Oxigênio suplementar",
+        "opts": [
+          [
+            "Não (ar ambiente)",
+            0
+          ],
+          [
+            "Sim",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "pa",
+        "label": "PA sistólica (mmHg)",
+        "opts": [
+          [
+            "111–219",
+            0
+          ],
+          [
+            "101–110",
+            1
+          ],
+          [
+            "91–100",
+            2
+          ],
+          [
+            "≤ 90 ou ≥ 220",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "fc",
+        "label": "Frequência cardíaca (bpm)",
+        "opts": [
+          [
+            "51–90",
+            0
+          ],
+          [
+            "41–50 ou 91–110",
+            1
+          ],
+          [
+            "111–130",
+            2
+          ],
+          [
+            "≤ 40 ou ≥ 131",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "co",
+        "label": "Consciência",
+        "opts": [
+          [
+            "Alerta",
+            0
+          ],
+          [
+            "Confusão nova, V, P ou U",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "te",
+        "label": "Temperatura (°C)",
+        "opts": [
+          [
+            "36,1–38,0",
+            0
+          ],
+          [
+            "35,1–36,0 ou 38,1–39,0",
+            1
+          ],
+          [
+            "≥ 39,1",
+            2
+          ],
+          [
+            "≤ 35,0",
+            3
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 20,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 4) return { nivel: \"ok\", t: \"Baixo risco (0–4)\", c: \"Monitorização de rotina; atenção se qualquer parâmetro isolado pontuar 3 (revisão urgente).\" };",
+        "        if (s <= 6) return { nivel: \"warn\", t: \"Risco médio (5–6)\", c: \"Revisão clínica urgente e monitorização mais frequente.\" };",
+        "        return { nivel: \"bad\", t: \"Alto risco (≥ 7)\", c: \"Resposta de emergência: avaliação médica imediata e considerar cuidados intensivos.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Royal College of Physicians, NEWS2, 2017."
+  },
+  {
+    "id": "blatchford",
+    "nome": "Glasgow-Blatchford (hemorragia digestiva alta)",
+    "areas": [
+      "Gastroenterologia e Hepatologia",
+      "Urgência e Emergência"
+    ],
+    "especialidade": "Gastroenterologia e Hepatologia",
+    "desc": "Identifica pacientes com HDA de baixo risco que podem receber alta, antes da endoscopia.",
+    "fields": [
+      {
+        "id": "u",
+        "label": "Ureia (mg/dL)",
+        "opts": [
+          [
+            "< 18,2",
+            0
+          ],
+          [
+            "18,2–22,3",
+            2
+          ],
+          [
+            "22,4–27,9",
+            3
+          ],
+          [
+            "28–69,9",
+            4
+          ],
+          [
+            "≥ 70",
+            6
+          ]
+        ]
+      },
+      {
+        "id": "hm",
+        "label": "Hemoglobina — homem (g/dL)",
+        "opts": [
+          [
+            "≥ 13 / não aplicável",
+            0
+          ],
+          [
+            "12,0–12,9",
+            1
+          ],
+          [
+            "10,0–11,9",
+            3
+          ],
+          [
+            "< 10",
+            6
+          ]
+        ]
+      },
+      {
+        "id": "hf",
+        "label": "Hemoglobina — mulher (g/dL)",
+        "opts": [
+          [
+            "≥ 12 / não aplicável",
+            0
+          ],
+          [
+            "10,0–11,9",
+            1
+          ],
+          [
+            "< 10",
+            6
+          ]
+        ]
+      },
+      {
+        "id": "p",
+        "label": "PA sistólica (mmHg)",
+        "opts": [
+          [
+            "≥ 110",
+            0
+          ],
+          [
+            "100–109",
+            1
+          ],
+          [
+            "90–99",
+            2
+          ],
+          [
+            "< 90",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "fc",
+        "label": "Pulso ≥ 100 bpm",
+        "pts": 1
+      },
+      {
+        "id": "me",
+        "label": "Melena",
+        "pts": 1
+      },
+      {
+        "id": "si",
+        "label": "Síncope",
+        "pts": 2
+      },
+      {
+        "id": "hp",
+        "label": "Hepatopatia",
+        "pts": 2
+      },
+      {
+        "id": "ic",
+        "label": "Insuficiência cardíaca",
+        "pts": 2
+      }
+    ],
+    "max": 23,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 1) return { nivel: \"ok\", t: \"Muito baixo risco (0–1)\", c: \"Considerar manejo ambulatorial com endoscopia eletiva.\" };",
+        "        if (s <= 6) return { nivel: \"warn\", t: \"Risco intermediário (2–6)\", c: \"Internar para endoscopia em até 24 h.\" };",
+        "        return { nivel: \"bad\", t: \"Alto risco (≥ 7)\", c: \"Internação, ressuscitação, IBP em dose alta e endoscopia precoce; maior chance de intervenção.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Blatchford O et al., Lancet 2000; ACG 2021; SOBED."
+  },
+  {
+    "id": "bisap",
+    "nome": "BISAP (pancreatite aguda)",
+    "areas": [
+      "Gastroenterologia e Hepatologia",
+      "Cirurgia Geral"
+    ],
+    "especialidade": "Gastroenterologia e Hepatologia",
+    "desc": "Prediz a mortalidade na pancreatite aguda nas primeiras 24 h de internação.",
+    "fields": [
+      {
+        "id": "u",
+        "label": "Ureia (BUN) > 25 mg/dL",
+        "pts": 1
+      },
+      {
+        "id": "m",
+        "label": "Alteração do estado mental (Glasgow < 15)",
+        "pts": 1
+      },
+      {
+        "id": "s",
+        "label": "SIRS (≥ 2 critérios)",
+        "pts": 1
+      },
+      {
+        "id": "a",
+        "label": "Idade > 60 anos",
+        "pts": 1
+      },
+      {
+        "id": "d",
+        "label": "Derrame pleural",
+        "pts": 1
+      }
+    ],
+    "max": 5,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 2) return { nivel: \"ok\", t: \"Baixo risco (0–2; mortalidade < 2%)\", c: \"Hidratação criteriosa, analgesia e realimentação precoce.\" };",
+        "        return { nivel: \"bad\", t: \"Alto risco (3–5; mortalidade > 15–20%)\", c: \"Considerar UTI/unidade semi-intensiva e avaliação de necrose e falência orgânica.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Wu BU et al., Gut 2008."
+  },
+  {
+    "id": "padua",
+    "nome": "Padua (risco de TEV em internados)",
+    "areas": [
+      "Clínica Médica",
+      "Hematologia e Oncologia"
+    ],
+    "especialidade": "Hematologia e Oncologia",
+    "desc": "Estratifica o risco de tromboembolismo venoso em pacientes clínicos internados e a indicação de profilaxia.",
+    "fields": [
+      {
+        "id": "c",
+        "label": "Câncer ativo",
+        "pts": 3
+      },
+      {
+        "id": "t",
+        "label": "TEV prévio",
+        "pts": 3
+      },
+      {
+        "id": "m",
+        "label": "Mobilidade reduzida (≥ 3 dias)",
+        "pts": 3
+      },
+      {
+        "id": "tr",
+        "label": "Trombofilia conhecida",
+        "pts": 3
+      },
+      {
+        "id": "cx",
+        "label": "Trauma ou cirurgia no último mês",
+        "pts": 2
+      },
+      {
+        "id": "i",
+        "label": "Idade ≥ 70 anos",
+        "pts": 1
+      },
+      {
+        "id": "ic",
+        "label": "Insuficiência cardíaca ou respiratória",
+        "pts": 1
+      },
+      {
+        "id": "iam",
+        "label": "IAM ou AVC isquêmico agudo",
+        "pts": 1
+      },
+      {
+        "id": "inf",
+        "label": "Infecção aguda ou doença reumatológica",
+        "pts": 1
+      },
+      {
+        "id": "ob",
+        "label": "Obesidade (IMC ≥ 30)",
+        "pts": 1
+      },
+      {
+        "id": "h",
+        "label": "Terapia hormonal",
+        "pts": 1
+      }
+    ],
+    "max": 20,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        return s >= 4 ? { nivel: \"bad\", t: \"Alto risco (≥ 4)\", c: \"Profilaxia farmacológica (enoxaparina 40 mg SC 1x/dia ou heparina) se sem contraindicação; considerar risco de sangramento.\" }",
+        "          : { nivel: \"ok\", t: \"Baixo risco (< 4)\", c: \"Mobilização precoce e medidas mecânicas; profilaxia farmacológica geralmente dispensável.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Barbar S et al., J Thromb Haemost 2010; ACCP."
+  },
+  {
+    "id": "nihss",
+    "nome": "NIHSS (gravidade do AVC)",
+    "areas": [
+      "Neurologia",
+      "Urgência e Emergência"
+    ],
+    "especialidade": "Neurologia",
+    "desc": "Escala neurológica de 0 a 42 pontos para quantificar o déficit no AVC e orientar a terapia de reperfusão.",
+    "fields": [
+      {
+        "id": "a",
+        "label": "1a. Nível de consciência",
+        "opts": [
+          [
+            "Alerta",
+            0
+          ],
+          [
+            "Sonolento",
+            1
+          ],
+          [
+            "Estuporoso",
+            2
+          ],
+          [
+            "Coma",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "b",
+        "label": "1b. Perguntas (mês, idade)",
+        "opts": [
+          [
+            "Ambas corretas",
+            0
+          ],
+          [
+            "Uma correta",
+            1
+          ],
+          [
+            "Nenhuma",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "c",
+        "label": "1c. Comandos (abrir/fechar olhos e mão)",
+        "opts": [
+          [
+            "Ambos",
+            0
+          ],
+          [
+            "Um",
+            1
+          ],
+          [
+            "Nenhum",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "g",
+        "label": "2. Olhar conjugado",
+        "opts": [
+          [
+            "Normal",
+            0
+          ],
+          [
+            "Paralisia parcial",
+            1
+          ],
+          [
+            "Desvio forçado",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "v",
+        "label": "3. Campo visual",
+        "opts": [
+          [
+            "Normal",
+            0
+          ],
+          [
+            "Hemianopsia parcial",
+            1
+          ],
+          [
+            "Hemianopsia completa",
+            2
+          ],
+          [
+            "Cegueira bilateral",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "f",
+        "label": "4. Paralisia facial",
+        "opts": [
+          [
+            "Normal",
+            0
+          ],
+          [
+            "Leve",
+            1
+          ],
+          [
+            "Parcial",
+            2
+          ],
+          [
+            "Completa",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "be",
+        "label": "5a. Braço esquerdo",
+        "opts": [
+          [
+            "Sem queda",
+            0
+          ],
+          [
+            "Queda antes de 10 s",
+            1
+          ],
+          [
+            "Algum esforço contra a gravidade",
+            2
+          ],
+          [
+            "Sem esforço contra a gravidade",
+            3
+          ],
+          [
+            "Sem movimento",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "bd",
+        "label": "5b. Braço direito",
+        "opts": [
+          [
+            "Sem queda",
+            0
+          ],
+          [
+            "Queda antes de 10 s",
+            1
+          ],
+          [
+            "Algum esforço contra a gravidade",
+            2
+          ],
+          [
+            "Sem esforço contra a gravidade",
+            3
+          ],
+          [
+            "Sem movimento",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "pe",
+        "label": "6a. Perna esquerda",
+        "opts": [
+          [
+            "Sem queda",
+            0
+          ],
+          [
+            "Queda antes de 5 s",
+            1
+          ],
+          [
+            "Algum esforço contra a gravidade",
+            2
+          ],
+          [
+            "Sem esforço contra a gravidade",
+            3
+          ],
+          [
+            "Sem movimento",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "pd",
+        "label": "6b. Perna direita",
+        "opts": [
+          [
+            "Sem queda",
+            0
+          ],
+          [
+            "Queda antes de 5 s",
+            1
+          ],
+          [
+            "Algum esforço contra a gravidade",
+            2
+          ],
+          [
+            "Sem esforço contra a gravidade",
+            3
+          ],
+          [
+            "Sem movimento",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "at",
+        "label": "7. Ataxia de membros",
+        "opts": [
+          [
+            "Ausente",
+            0
+          ],
+          [
+            "Em um membro",
+            1
+          ],
+          [
+            "Em dois membros",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "se",
+        "label": "8. Sensibilidade",
+        "opts": [
+          [
+            "Normal",
+            0
+          ],
+          [
+            "Perda leve a moderada",
+            1
+          ],
+          [
+            "Perda grave ou total",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "l",
+        "label": "9. Linguagem",
+        "opts": [
+          [
+            "Normal",
+            0
+          ],
+          [
+            "Afasia leve a moderada",
+            1
+          ],
+          [
+            "Afasia grave",
+            2
+          ],
+          [
+            "Mutismo ou afasia global",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "d",
+        "label": "10. Disartria",
+        "opts": [
+          [
+            "Normal",
+            0
+          ],
+          [
+            "Leve a moderada",
+            1
+          ],
+          [
+            "Grave",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "ne",
+        "label": "11. Extinção/negligência",
+        "opts": [
+          [
+            "Ausente",
+            0
+          ],
+          [
+            "Em uma modalidade",
+            1
+          ],
+          [
+            "Em mais de uma modalidade",
+            2
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 42,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s === 0) return { nivel: \"ok\", t: \"Sem déficit (0)\", c: \"Sem déficit neurológico mensurável no momento.\" };",
+        "        if (s <= 4) return { nivel: \"ok\", t: \"AVC leve (1–4)\", c: \"Avaliar a gravidade funcional do déficit na decisão sobre trombólise; dupla antiagregação em AVC minor (até 24 h).\" };",
+        "        if (s <= 15) return { nivel: \"warn\", t: \"AVC moderado (5–15)\", c: \"Candidato a trombólise (até 4,5 h) e trombectomia se oclusão de grande vaso.\" };",
+        "        if (s <= 20) return { nivel: \"bad\", t: \"AVC moderado a grave (16–20)\", c: \"Trombectomia em oclusão proximal; unidade de AVC.\" };",
+        "        return { nivel: \"bad\", t: \"AVC grave (21–42)\", c: \"Alto risco de complicações e mortalidade; avaliar trombectomia e suporte intensivo.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Brott T et al., Stroke 1989; AHA/ASA 2019."
+  },
+  {
+    "id": "abcd2",
+    "nome": "ABCD² (risco de AVC após AIT)",
+    "areas": [
+      "Neurologia",
+      "Urgência e Emergência"
+    ],
+    "especialidade": "Neurologia",
+    "desc": "Prediz o risco de AVC nos 2 a 7 dias após um ataque isquêmico transitório.",
+    "fields": [
+      {
+        "id": "a",
+        "label": "Idade ≥ 60 anos",
+        "pts": 1
+      },
+      {
+        "id": "b",
+        "label": "PA ≥ 140/90 mmHg na avaliação",
+        "pts": 1
+      },
+      {
+        "id": "c",
+        "label": "Características clínicas",
+        "opts": [
+          [
+            "Outras",
+            0
+          ],
+          [
+            "Alteração da fala sem fraqueza",
+            1
+          ],
+          [
+            "Fraqueza unilateral",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Duração dos sintomas",
+        "opts": [
+          [
+            "< 10 min",
+            0
+          ],
+          [
+            "10–59 min",
+            1
+          ],
+          [
+            "≥ 60 min",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "dm",
+        "label": "Diabetes mellitus",
+        "pts": 1
+      }
+    ],
+    "min": 0,
+    "max": 7,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 3) return { nivel: \"ok\", t: \"Baixo risco (0–3; ~1–3% em 2 dias)\", c: \"Investigação em até 24 h; antiagregação e controle de fatores de risco.\" };",
+        "        if (s <= 5) return { nivel: \"warn\", t: \"Risco moderado (4–5; ~4% em 2 dias)\", c: \"Observação hospitalar e investigação urgente.\" };",
+        "        return { nivel: \"bad\", t: \"Alto risco (6–7; ~8% em 2 dias)\", c: \"Internar, dupla antiagregação, investigação vascular imediata.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Johnston SC et al., Lancet 2007."
+  },
+  {
+    "id": "hunthess",
+    "nome": "Hunt-Hess (hemorragia subaracnóidea)",
+    "areas": [
+      "Neurologia",
+      "Urgência e Emergência"
+    ],
+    "especialidade": "Neurologia",
+    "desc": "Classifica a gravidade clínica da hemorragia subaracnóidea aneurismática.",
+    "fields": [
+      {
+        "id": "g",
+        "label": "Grau clínico",
+        "opts": [
+          [
+            "I — assintomático ou cefaleia leve",
+            1
+          ],
+          [
+            "II — cefaleia moderada/intensa, rigidez de nuca, sem déficit (exceto nervo craniano)",
+            2
+          ],
+          [
+            "III — sonolência, confusão ou déficit focal leve",
+            3
+          ],
+          [
+            "IV — estupor, hemiparesia moderada a grave",
+            4
+          ],
+          [
+            "V — coma, postura de descerebração",
+            5
+          ]
+        ]
+      }
+    ],
+    "min": 1,
+    "max": 5,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 2) return { nivel: \"ok\", t: \"Grau \" + s + \" (bom prognóstico)\", c: \"Candidato à exclusão precoce do aneurisma; nimodipina e monitorização.\" };",
+        "        if (s === 3) return { nivel: \"warn\", t: \"Grau III\", c: \"Tratamento precoce do aneurisma; atenção ao vasoespasmo e à hidrocefalia.\" };",
+        "        return { nivel: \"bad\", t: \"Grau \" + s + \" (alta mortalidade)\", c: \"UTI, DVE se hidrocefalia e discussão individual sobre intervenção.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Hunt WE, Hess RM. J Neurosurg 1968."
+  },
+  {
+    "id": "phq9",
+    "nome": "PHQ-9 (depressão)",
+    "areas": [
+      "Psiquiatria"
+    ],
+    "especialidade": "Psiquiatria",
+    "desc": "Rastreia e quantifica a gravidade de sintomas depressivos nas últimas 2 semanas (0 = nunca; 3 = quase todos os dias).",
+    "fields": [
+      {
+        "id": "1",
+        "label": "Pouco interesse ou prazer nas atividades",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "2",
+        "label": "Sentir-se deprimido, triste ou sem esperança",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "3",
+        "label": "Dificuldade para dormir ou dormir demais",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "4",
+        "label": "Cansaço ou pouca energia",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "5",
+        "label": "Falta de apetite ou comer demais",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "6",
+        "label": "Sentir-se mal consigo mesmo, fracasso ou culpa",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "7",
+        "label": "Dificuldade de concentração",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "8",
+        "label": "Lentidão ou agitação perceptível",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "9",
+        "label": "Pensamentos de morte ou de se ferir",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 27,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 4) return { nivel: \"ok\", t: \"Mínimo (0–4)\", c: \"Sem tratamento específico; reavaliar se persistirem sintomas. Verifique sempre o item 9.\" };",
+        "        if (s <= 9) return { nivel: \"ok\", t: \"Leve (5–9)\", c: \"Vigilância ativa, psicoeducação, psicoterapia; antidepressivo individualizado.\" };",
+        "        if (s <= 14) return { nivel: \"warn\", t: \"Moderado (10–14)\", c: \"Psicoterapia e/ou antidepressivo; reavaliar em 4–6 semanas.\" };",
+        "        if (s <= 19) return { nivel: \"bad\", t: \"Moderadamente grave (15–19)\", c: \"Tratamento combinado (antidepressivo + psicoterapia); avaliar risco de suicídio.\" };",
+        "        return { nivel: \"bad\", t: \"Grave (20–27)\", c: \"Tratamento imediato, avaliação de risco de suicídio e encaminhamento psiquiátrico.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Kroenke K, Spitzer RL. J Gen Intern Med 2001; validação brasileira (Santos IS et al., 2013)."
+  },
+  {
+    "id": "gad7",
+    "nome": "GAD-7 (ansiedade generalizada)",
+    "areas": [
+      "Psiquiatria"
+    ],
+    "especialidade": "Psiquiatria",
+    "desc": "Rastreia e mede a gravidade da ansiedade nas últimas 2 semanas.",
+    "fields": [
+      {
+        "id": "1",
+        "label": "Sentir-se nervoso, ansioso ou tenso",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "2",
+        "label": "Não conseguir parar ou controlar as preocupações",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "3",
+        "label": "Preocupar-se demais com diversas coisas",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "4",
+        "label": "Dificuldade para relaxar",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "5",
+        "label": "Ficar tão inquieto que é difícil permanecer parado",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "6",
+        "label": "Ficar facilmente irritado ou aborrecido",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "7",
+        "label": "Sentir medo, como se algo ruim fosse acontecer",
+        "opts": [
+          [
+            "Nenhuma vez",
+            0
+          ],
+          [
+            "Vários dias",
+            1
+          ],
+          [
+            "Mais da metade dos dias",
+            2
+          ],
+          [
+            "Quase todos os dias",
+            3
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 21,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 4) return { nivel: \"ok\", t: \"Mínima (0–4)\", c: \"Sem intervenção específica.\" };",
+        "        if (s <= 9) return { nivel: \"ok\", t: \"Leve (5–9)\", c: \"Psicoeducação, higiene do sono, atividade física; reavaliar.\" };",
+        "        if (s <= 14) return { nivel: \"warn\", t: \"Moderada (10–14)\", c: \"TCC e/ou ISRS/IRSN; avaliar comorbidades.\" };",
+        "        return { nivel: \"bad\", t: \"Grave (15–21)\", c: \"Tratamento combinado e encaminhamento psiquiátrico.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Spitzer RL et al., Arch Intern Med 2006."
+  },
+  {
+    "id": "auditc",
+    "nome": "AUDIT-C (uso de álcool)",
+    "areas": [
+      "Psiquiatria",
+      "Clínica Médica"
+    ],
+    "especialidade": "Psiquiatria",
+    "desc": "Rastreio breve de uso de risco de álcool (três primeiras questões do AUDIT).",
+    "fields": [
+      {
+        "id": "1",
+        "label": "Frequência de consumo",
+        "opts": [
+          [
+            "Nunca",
+            0
+          ],
+          [
+            "Mensal ou menos",
+            1
+          ],
+          [
+            "2–4 vezes por mês",
+            2
+          ],
+          [
+            "2–3 vezes por semana",
+            3
+          ],
+          [
+            "4 ou mais por semana",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "2",
+        "label": "Doses em um dia típico de consumo",
+        "opts": [
+          [
+            "1–2",
+            0
+          ],
+          [
+            "3–4",
+            1
+          ],
+          [
+            "5–6",
+            2
+          ],
+          [
+            "7–9",
+            3
+          ],
+          [
+            "10 ou mais",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "3",
+        "label": "Frequência de ≥ 6 doses em uma ocasião",
+        "opts": [
+          [
+            "Nunca",
+            0
+          ],
+          [
+            "Menos de 1 vez ao mês",
+            1
+          ],
+          [
+            "Mensal",
+            2
+          ],
+          [
+            "Semanal",
+            3
+          ],
+          [
+            "Diária ou quase",
+            4
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 12,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s >= 4) return { nivel: \"warn\", t: \"Positivo (≥ 4 em homens; ≥ 3 em mulheres)\", c: \"Aplicar o AUDIT completo, intervenção breve e avaliar dependência/abstinência.\" };",
+        "        if (s === 3) return { nivel: \"warn\", t: \"Limítrofe\", c: \"Positivo em mulheres (≥ 3); aplicar AUDIT completo.\" };",
+        "        return { nivel: \"ok\", t: \"Negativo\", c: \"Orientar sobre limites de baixo risco.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Bush K et al., Arch Intern Med 1998; OMS."
+  },
+  {
+    "id": "cage",
+    "nome": "CAGE (rastreio de alcoolismo)",
+    "areas": [
+      "Psiquiatria"
+    ],
+    "especialidade": "Psiquiatria",
+    "desc": "Questionário de 4 perguntas sobre problemas relacionados ao álcool ao longo da vida.",
+    "fields": [
+      {
+        "id": "c",
+        "label": "Já sentiu que deveria diminuir (Cut down) a bebida?",
+        "pts": 1
+      },
+      {
+        "id": "a",
+        "label": "As pessoas o aborrecem (Annoyed) ao criticar seu beber?",
+        "pts": 1
+      },
+      {
+        "id": "g",
+        "label": "Já se sentiu culpado (Guilty) por beber?",
+        "pts": 1
+      },
+      {
+        "id": "e",
+        "label": "Já bebeu pela manhã para acalmar os nervos ou ressaca (Eye-opener)?",
+        "pts": 1
+      }
+    ],
+    "max": 4,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        return s >= 2 ? { nivel: \"warn\", t: \"Positivo (≥ 2)\", c: \"Sugere uso problemático ou dependência: avaliação diagnóstica, AUDIT e intervenção.\" }",
+        "          : { nivel: \"ok\", t: \"Negativo (< 2)\", c: s === 1 ? \"1 resposta positiva: manter vigilância.\" : \"Sem indicativo de problema.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Ewing JA. JAMA 1984; Masur & Monteiro 1983."
+  },
+  {
+    "id": "epworth",
+    "nome": "Epworth (sonolência diurna)",
+    "areas": [
+      "Pneumologia",
+      "Neurologia"
+    ],
+    "especialidade": "Pneumologia",
+    "desc": "Mede a probabilidade de cochilar em oito situações cotidianas (0 = nunca; 3 = alta).",
+    "fields": [
+      {
+        "id": "1",
+        "label": "Sentado e lendo",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Pequena",
+            1
+          ],
+          [
+            "Moderada",
+            2
+          ],
+          [
+            "Alta",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "2",
+        "label": "Assistindo à televisão",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Pequena",
+            1
+          ],
+          [
+            "Moderada",
+            2
+          ],
+          [
+            "Alta",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "3",
+        "label": "Sentado, quieto, em local público",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Pequena",
+            1
+          ],
+          [
+            "Moderada",
+            2
+          ],
+          [
+            "Alta",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "4",
+        "label": "Como passageiro de carro por 1 hora",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Pequena",
+            1
+          ],
+          [
+            "Moderada",
+            2
+          ],
+          [
+            "Alta",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "5",
+        "label": "Deitado à tarde para descansar",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Pequena",
+            1
+          ],
+          [
+            "Moderada",
+            2
+          ],
+          [
+            "Alta",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "6",
+        "label": "Sentado conversando com alguém",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Pequena",
+            1
+          ],
+          [
+            "Moderada",
+            2
+          ],
+          [
+            "Alta",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "7",
+        "label": "Sentado após o almoço sem álcool",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Pequena",
+            1
+          ],
+          [
+            "Moderada",
+            2
+          ],
+          [
+            "Alta",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "8",
+        "label": "No carro parado no trânsito por poucos minutos",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Pequena",
+            1
+          ],
+          [
+            "Moderada",
+            2
+          ],
+          [
+            "Alta",
+            3
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 24,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 10) return { nivel: \"ok\", t: \"Normal (0–10)\", c: \"Sem sonolência excessiva diurna.\" };",
+        "        if (s <= 12) return { nivel: \"warn\", t: \"Sonolência leve (11–12)\", c: \"Avaliar higiene do sono, apneia e fármacos.\" };",
+        "        if (s <= 15) return { nivel: \"warn\", t: \"Moderada (13–15)\", c: \"Investigar apneia do sono e narcolepsia (polissonografia).\" };",
+        "        return { nivel: \"bad\", t: \"Grave (16–24)\", c: \"Investigação especializada do sono; orientar segurança ao dirigir.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Johns MW. Sleep 1991; versão brasileira (Bertolazi AN et al., 2009)."
+  },
+  {
+    "id": "katz",
+    "nome": "Katz (atividades básicas de vida diária)",
+    "areas": [
+      "Geriatria e Cuidados Paliativos"
+    ],
+    "especialidade": "Geriatria e Cuidados Paliativos",
+    "desc": "Avalia a independência em seis atividades básicas de vida diária (marque as que o paciente realiza sem ajuda).",
+    "fields": [
+      {
+        "id": "b",
+        "label": "Banhar-se",
+        "pts": 1
+      },
+      {
+        "id": "v",
+        "label": "Vestir-se",
+        "pts": 1
+      },
+      {
+        "id": "h",
+        "label": "Higiene pessoal/uso do banheiro",
+        "pts": 1
+      },
+      {
+        "id": "t",
+        "label": "Transferência (cama/cadeira)",
+        "pts": 1
+      },
+      {
+        "id": "c",
+        "label": "Continência",
+        "pts": 1
+      },
+      {
+        "id": "a",
+        "label": "Alimentar-se",
+        "pts": 1
+      }
+    ],
+    "max": 6,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s === 6) return { nivel: \"ok\", t: \"Independente (6)\", c: \"Sem comprometimento das ABVD.\" };",
+        "        if (s >= 4) return { nivel: \"warn\", t: \"Dependência moderada (4–5)\", c: \"Reabilitação, avaliação das AIVD e suporte domiciliar.\" };",
+        "        return { nivel: \"bad\", t: \"Dependência importante (≤ 3)\", c: \"Plano de cuidados, avaliação do cuidador e prevenção de complicações (quedas, lesões por pressão).\" };",
+        "      }"
+      ]
+    },
+    "ref": "Katz S et al., JAMA 1963; SBGG."
+  },
+  {
+    "id": "bishop",
+    "nome": "Bishop (indução do parto)",
+    "areas": [
+      "Ginecologia e Obstetrícia"
+    ],
+    "especialidade": "Ginecologia e Obstetrícia",
+    "desc": "Avalia a maturidade do colo uterino para predizer sucesso da indução do trabalho de parto.",
+    "fields": [
+      {
+        "id": "d",
+        "label": "Dilatação (cm)",
+        "opts": [
+          [
+            "0",
+            0
+          ],
+          [
+            "1–2",
+            1
+          ],
+          [
+            "3–4",
+            2
+          ],
+          [
+            "≥ 5",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "a",
+        "label": "Apagamento (%)",
+        "opts": [
+          [
+            "0–30",
+            0
+          ],
+          [
+            "40–50",
+            1
+          ],
+          [
+            "60–70",
+            2
+          ],
+          [
+            "≥ 80",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "e",
+        "label": "Altura da apresentação (De Lee)",
+        "opts": [
+          [
+            "-3",
+            0
+          ],
+          [
+            "-2",
+            1
+          ],
+          [
+            "-1 ou 0",
+            2
+          ],
+          [
+            "+1 ou +2",
+            3
+          ]
+        ]
+      },
+      {
+        "id": "c",
+        "label": "Consistência do colo",
+        "opts": [
+          [
+            "Firme",
+            0
+          ],
+          [
+            "Intermediária",
+            1
+          ],
+          [
+            "Amolecida",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "p",
+        "label": "Posição do colo",
+        "opts": [
+          [
+            "Posterior",
+            0
+          ],
+          [
+            "Intermediária",
+            1
+          ],
+          [
+            "Anterior",
+            2
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 13,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s >= 8) return { nivel: \"ok\", t: \"Colo favorável (≥ 8)\", c: \"Indução com ocitocina costuma ter sucesso semelhante ao trabalho de parto espontâneo.\" };",
+        "        if (s >= 6) return { nivel: \"warn\", t: \"Intermediário (6–7)\", c: \"Considerar preparo do colo antes da ocitocina conforme indicação.\" };",
+        "        return { nivel: \"warn\", t: \"Colo desfavorável (≤ 5)\", c: \"Maturação cervical (misoprostol, sonda de Foley) antes da ocitocina, se a indução for indicada.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Bishop EH. Obstet Gynecol 1964; FEBRASGO."
+  },
+  {
+    "id": "silverman",
+    "nome": "Silverman-Andersen (desconforto respiratório do RN)",
+    "areas": [
+      "Pediatria"
+    ],
+    "especialidade": "Pediatria",
+    "desc": "Avalia o esforço respiratório do recém-nascido por cinco sinais (0 a 2 pontos cada).",
+    "fields": [
+      {
+        "id": "1",
+        "label": "Movimento toracoabdominal",
+        "opts": [
+          [
+            "Sincrônico",
+            0
+          ],
+          [
+            "Tórax imóvel / assincronia leve",
+            1
+          ],
+          [
+            "Balancim",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "2",
+        "label": "Tiragem intercostal",
+        "opts": [
+          [
+            "Ausente",
+            0
+          ],
+          [
+            "Pouco visível",
+            1
+          ],
+          [
+            "Marcada",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "3",
+        "label": "Retração xifoide",
+        "opts": [
+          [
+            "Ausente",
+            0
+          ],
+          [
+            "Pouco visível",
+            1
+          ],
+          [
+            "Marcada",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "4",
+        "label": "Batimento de asa nasal",
+        "opts": [
+          [
+            "Ausente",
+            0
+          ],
+          [
+            "Discreto",
+            1
+          ],
+          [
+            "Intenso",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "5",
+        "label": "Gemido expiratório",
+        "opts": [
+          [
+            "Ausente",
+            0
+          ],
+          [
+            "Audível com estetoscópio",
+            1
+          ],
+          [
+            "Audível sem estetoscópio",
+            2
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 10,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s === 0) return { nivel: \"ok\", t: \"Sem desconforto (0)\", c: \"Observação de rotina.\" };",
+        "        if (s <= 3) return { nivel: \"warn\", t: \"Desconforto leve a moderado (1–3)\", c: \"Oxigenoterapia/CPAP conforme necessidade e reavaliação seriada.\" };",
+        "        if (s <= 6) return { nivel: \"bad\", t: \"Desconforto moderado a grave (4–6)\", c: \"Suporte respiratório (CPAP) e avaliação para surfactante; considerar UTI neonatal.\" };",
+        "        return { nivel: \"bad\", t: \"Falência respiratória iminente (≥ 7)\", c: \"Ventilação mecânica, surfactante e transferência para UTI neonatal.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Silverman WA, Andersen DH. Pediatrics 1956."
+  },
+  {
+    "id": "westley",
+    "nome": "Westley (crupe viral)",
+    "areas": [
+      "Pediatria"
+    ],
+    "especialidade": "Pediatria",
+    "desc": "Classifica a gravidade do crupe viral e orienta a conduta.",
+    "fields": [
+      {
+        "id": "c",
+        "label": "Nível de consciência",
+        "opts": [
+          [
+            "Normal",
+            0
+          ],
+          [
+            "Desorientado",
+            5
+          ]
+        ]
+      },
+      {
+        "id": "z",
+        "label": "Cianose",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Com agitação",
+            4
+          ],
+          [
+            "Em repouso",
+            5
+          ]
+        ]
+      },
+      {
+        "id": "e",
+        "label": "Estridor",
+        "opts": [
+          [
+            "Nenhum",
+            0
+          ],
+          [
+            "Quando agitado",
+            1
+          ],
+          [
+            "Em repouso",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Entrada de ar",
+        "opts": [
+          [
+            "Normal",
+            0
+          ],
+          [
+            "Diminuída",
+            1
+          ],
+          [
+            "Muito diminuída",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "t",
+        "label": "Retrações",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Leve",
+            1
+          ],
+          [
+            "Moderada",
+            2
+          ],
+          [
+            "Grave",
+            3
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 17,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 2) return { nivel: \"ok\", t: \"Leve (≤ 2)\", c: \"Dexametasona 0,15 mg/kg VO dose única; orientar retorno se piora.\" };",
+        "        if (s <= 5) return { nivel: \"warn\", t: \"Moderado (3–5)\", c: \"Dexametasona + nebulização com adrenalina; observar por 3–4 h.\" };",
+        "        if (s <= 11) return { nivel: \"bad\", t: \"Grave (6–11)\", c: \"Adrenalina nebulizada, dexametasona, oxigênio; internação.\" };",
+        "        return { nivel: \"bad\", t: \"Insuficiência respiratória iminente (≥ 12)\", c: \"Via aérea avançada, UTI pediátrica.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Westley CR et al., Am J Dis Child 1978."
+  },
+  {
+    "id": "sgarbossa",
+    "nome": "Sgarbossa (IAM com BRE)",
+    "areas": [
+      "Cardiologia",
+      "Urgência e Emergência"
+    ],
+    "especialidade": "Cardiologia",
+    "desc": "Critérios de ECG para identificar infarto com supradesnível de ST em presença de bloqueio de ramo esquerdo.",
+    "fields": [
+      {
+        "id": "a",
+        "label": "Supradesnível de ST ≥ 1 mm concordante com o QRS",
+        "pts": 5
+      },
+      {
+        "id": "b",
+        "label": "Infradesnível de ST ≥ 1 mm em V1–V3",
+        "pts": 3
+      },
+      {
+        "id": "c",
+        "label": "Supradesnível de ST ≥ 5 mm discordante (ou ≥ 25% da onda S, modificado)",
+        "pts": 2
+      }
+    ],
+    "max": 10,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        return s >= 3 ? { nivel: \"bad\", t: \"Positivo (≥ 3)\", c: \"Alta especificidade para oclusão coronariana: tratar como STEMI (ICP primária).\" }",
+        "          : { nivel: \"warn\", t: \"Negativo (< 3)\", c: \"Não exclui IAM; correlacionar com clínica, troponina e ECG seriado.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Sgarbossa EB et al., N Engl J Med 1996; Smith SW et al., Ann Emerg Med 2012."
+  },
+  {
+    "id": "4ts",
+    "nome": "4Ts (trombocitopenia induzida por heparina)",
+    "areas": [
+      "Hematologia e Oncologia"
+    ],
+    "especialidade": "Hematologia e Oncologia",
+    "desc": "Estima a probabilidade pré-teste de trombocitopenia induzida por heparina (TIH).",
+    "fields": [
+      {
+        "id": "t",
+        "label": "Trombocitopenia",
+        "opts": [
+          [
+            "Queda < 30% ou nadir < 10",
+            0
+          ],
+          [
+            "Queda 30–50% ou nadir 10–19",
+            1
+          ],
+          [
+            "Queda > 50% e nadir ≥ 20",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "o",
+        "label": "Tempo (início da queda)",
+        "opts": [
+          [
+            "≤ 4 dias sem exposição recente",
+            0
+          ],
+          [
+            "> 10 dias ou incerto; ≤ 1 dia com exposição 30–100 dias antes",
+            1
+          ],
+          [
+            "Dias 5–10 ou ≤ 1 dia com exposição < 30 dias",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "r",
+        "label": "Trombose ou outras sequelas",
+        "opts": [
+          [
+            "Nenhuma",
+            0
+          ],
+          [
+            "Trombose progressiva/recorrente, lesão cutânea não necrosante, suspeita",
+            1
+          ],
+          [
+            "Nova trombose, necrose cutânea ou reação sistêmica aguda",
+            2
+          ]
+        ]
+      },
+      {
+        "id": "a",
+        "label": "Outras causas de plaquetopenia",
+        "opts": [
+          [
+            "Definida",
+            0
+          ],
+          [
+            "Possível",
+            1
+          ],
+          [
+            "Nenhuma aparente",
+            2
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 8,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 3) return { nivel: \"ok\", t: \"Baixa probabilidade (0–3; < 5%)\", c: \"TIH improvável; manter heparina e investigar outras causas.\" };",
+        "        if (s <= 5) return { nivel: \"warn\", t: \"Probabilidade intermediária (4–5; ~14%)\", c: \"Teste ELISA anti-PF4; considerar suspender heparina e usar anticoagulante alternativo (fondaparinux, argatrobana).\" };",
+        "        return { nivel: \"bad\", t: \"Alta probabilidade (6–8; ~64%)\", c: \"Suspender heparina, anticoagulante não heparínico, confirmar com testes funcionais; evitar plaquetas.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Lo GK et al., J Thromb Haemost 2006; ASH 2018."
+  },
+  {
+    "id": "ottawa",
+    "nome": "Regras de Ottawa (tornozelo e pé)",
+    "areas": [
+      "Ortopedia e Traumatologia",
+      "Urgência e Emergência"
+    ],
+    "especialidade": "Ortopedia e Traumatologia",
+    "desc": "Indica radiografia em trauma de tornozelo/médio pé; marque os achados presentes.",
+    "fields": [
+      {
+        "id": "a",
+        "label": "Dor óssea à palpação na borda posterior ou ponta do maléolo lateral (6 cm distais)",
+        "pts": 1
+      },
+      {
+        "id": "b",
+        "label": "Dor óssea à palpação na borda posterior ou ponta do maléolo medial (6 cm distais)",
+        "pts": 1
+      },
+      {
+        "id": "c",
+        "label": "Dor óssea à palpação na base do 5º metatarso",
+        "pts": 1
+      },
+      {
+        "id": "d",
+        "label": "Dor óssea à palpação no osso navicular",
+        "pts": 1
+      },
+      {
+        "id": "e",
+        "label": "Incapacidade de dar 4 passos (imediatamente e no pronto-socorro)",
+        "pts": 1
+      }
+    ],
+    "max": 5,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        return s > 0 ? { nivel: \"warn\", t: \"Regra positiva\", c: \"Radiografia de tornozelo e/ou pé conforme a zona de dor; imobilização e avaliação ortopédica.\" }",
+        "          : { nivel: \"ok\", t: \"Regra negativa\", c: \"Fratura improvável (sensibilidade ~98%); tratamento funcional, gelo, elevação e orientação de retorno.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Stiell IG et al., JAMA 1994."
+  },
+  {
+    "id": "cchr",
+    "nome": "Canadian CT Head Rule (TCE leve)",
+    "areas": [
+      "Urgência e Emergência",
+      "Neurologia"
+    ],
+    "especialidade": "Urgência e Emergência",
+    "desc": "Define quais pacientes com TCE leve (Glasgow 13–15) necessitam de TC de crânio; marque os achados presentes.",
+    "fields": [
+      {
+        "id": "a",
+        "label": "Glasgow < 15 após 2 h do trauma",
+        "pts": 2
+      },
+      {
+        "id": "b",
+        "label": "Suspeita de fratura exposta ou com afundamento",
+        "pts": 2
+      },
+      {
+        "id": "c",
+        "label": "Sinais de fratura de base de crânio",
+        "pts": 2
+      },
+      {
+        "id": "d",
+        "label": "Dois ou mais episódios de vômito",
+        "pts": 2
+      },
+      {
+        "id": "e",
+        "label": "Idade ≥ 65 anos",
+        "pts": 2
+      },
+      {
+        "id": "f",
+        "label": "Amnésia retrógrada ≥ 30 min",
+        "pts": 1
+      },
+      {
+        "id": "g",
+        "label": "Mecanismo perigoso (atropelamento, ejeção, queda > 1 m ou 5 degraus)",
+        "pts": 1
+      }
+    ],
+    "max": 12,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s >= 2) return { nivel: \"bad\", t: \"Alto risco (critério de neurocirurgia)\", c: \"TC de crânio indicada (sensibilidade 100% para necessidade de intervenção neurocirúrgica).\" };",
+        "        if (s === 1) return { nivel: \"warn\", t: \"Risco médio (lesão clinicamente importante)\", c: \"TC de crânio indicada.\" };",
+        "        return { nivel: \"ok\", t: \"Baixo risco\", c: \"TC dispensável; observar e orientar retorno por sinais de alarme. Anticoagulados exigem cautela (regra não validada).\" };",
+        "      }"
+      ]
+    },
+    "ref": "Stiell IG et al., Lancet 2001."
+  },
+  {
+    "id": "braden",
+    "nome": "Braden (risco de lesão por pressão)",
+    "areas": [
+      "Geriatria e Cuidados Paliativos",
+      "Clínica Médica"
+    ],
+    "especialidade": "Geriatria e Cuidados Paliativos",
+    "desc": "Avalia o risco de desenvolver lesão por pressão em seis domínios.",
+    "fields": [
+      {
+        "id": "1",
+        "label": "Percepção sensorial",
+        "opts": [
+          [
+            "Totalmente limitada",
+            1
+          ],
+          [
+            "Muito limitada",
+            2
+          ],
+          [
+            "Levemente limitada",
+            3
+          ],
+          [
+            "Nenhuma limitação",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "2",
+        "label": "Umidade",
+        "opts": [
+          [
+            "Completamente molhada",
+            1
+          ],
+          [
+            "Muito molhada",
+            2
+          ],
+          [
+            "Ocasionalmente molhada",
+            3
+          ],
+          [
+            "Raramente molhada",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "3",
+        "label": "Atividade",
+        "opts": [
+          [
+            "Acamado",
+            1
+          ],
+          [
+            "Confinado à cadeira",
+            2
+          ],
+          [
+            "Anda ocasionalmente",
+            3
+          ],
+          [
+            "Anda frequentemente",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "4",
+        "label": "Mobilidade",
+        "opts": [
+          [
+            "Totalmente imóvel",
+            1
+          ],
+          [
+            "Muito limitada",
+            2
+          ],
+          [
+            "Levemente limitada",
+            3
+          ],
+          [
+            "Sem limitações",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "5",
+        "label": "Nutrição",
+        "opts": [
+          [
+            "Muito pobre",
+            1
+          ],
+          [
+            "Provavelmente inadequada",
+            2
+          ],
+          [
+            "Adequada",
+            3
+          ],
+          [
+            "Excelente",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "6",
+        "label": "Fricção e cisalhamento",
+        "opts": [
+          [
+            "Problema",
+            1
+          ],
+          [
+            "Problema potencial",
+            2
+          ],
+          [
+            "Nenhum problema",
+            3
+          ]
+        ]
+      }
+    ],
+    "min": 6,
+    "max": 23,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s <= 9) return { nivel: \"bad\", t: \"Risco muito alto (≤ 9)\", c: \"Colchão de redução de pressão, mudança de decúbito a cada 2 h, nutrição, cuidado com a pele.\" };",
+        "        if (s <= 12) return { nivel: \"bad\", t: \"Risco alto (10–12)\", c: \"Mudança de decúbito 2/2 h, superfícies de redistribuição e avaliação nutricional.\" };",
+        "        if (s <= 14) return { nivel: \"warn\", t: \"Risco moderado (13–14)\", c: \"Mudança de decúbito regular e proteção de proeminências ósseas.\" };",
+        "        if (s <= 18) return { nivel: \"warn\", t: \"Risco baixo (15–18)\", c: \"Medidas preventivas básicas e reavaliação periódica.\" };",
+        "        return { nivel: \"ok\", t: \"Sem risco significativo (19–23)\", c: \"Reavaliar se houver mudança clínica.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Bergstrom N et al., Nurs Res 1987; adaptação brasileira (Paranhos & Santos, 1999)."
+  },
+  {
+    "id": "morse",
+    "nome": "Morse (risco de queda)",
+    "areas": [
+      "Geriatria e Cuidados Paliativos",
+      "Clínica Médica"
+    ],
+    "especialidade": "Geriatria e Cuidados Paliativos",
+    "desc": "Estima o risco de quedas em pacientes hospitalizados.",
+    "fields": [
+      {
+        "id": "h",
+        "label": "Histórico de queda (atual ou nos últimos 3 meses)",
+        "pts": 25
+      },
+      {
+        "id": "d",
+        "label": "Diagnóstico secundário",
+        "pts": 15
+      },
+      {
+        "id": "a",
+        "label": "Auxílio na marcha",
+        "opts": [
+          [
+            "Nenhum / acamado / auxiliado por enfermagem",
+            0
+          ],
+          [
+            "Muletas, bengala ou andador",
+            15
+          ],
+          [
+            "Apoia-se em móveis",
+            30
+          ]
+        ]
+      },
+      {
+        "id": "i",
+        "label": "Terapia endovenosa/acesso salinizado",
+        "pts": 20
+      },
+      {
+        "id": "m",
+        "label": "Marcha",
+        "opts": [
+          [
+            "Normal / acamado / cadeira de rodas",
+            0
+          ],
+          [
+            "Fraca",
+            10
+          ],
+          [
+            "Comprometida",
+            20
+          ]
+        ]
+      },
+      {
+        "id": "e",
+        "label": "Estado mental",
+        "opts": [
+          [
+            "Orientado / capaz",
+            0
+          ],
+          [
+            "Superestima capacidade / esquece limitações",
+            15
+          ]
+        ]
+      }
+    ],
+    "min": 0,
+    "max": 125,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        if (s < 25) return { nivel: \"ok\", t: \"Baixo risco (0–24)\", c: \"Cuidados básicos de segurança.\" };",
+        "        if (s < 45) return { nivel: \"warn\", t: \"Risco moderado (25–44)\", c: \"Medidas padrão: pulseira, campainha ao alcance, ambiente seguro.\" };",
+        "        return { nivel: \"bad\", t: \"Alto risco (≥ 45)\", c: \"Medidas intensivas: acompanhamento, cama baixa, auxílio na deambulação, revisão de fármacos.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Morse JM et al., Can J Aging 1989; versão brasileira (Urbanetto JS et al., 2013)."
+  },
+  {
+    "id": "mascc",
+    "nome": "MASCC (risco na neutropenia febril)",
+    "areas": [
+      "Hematologia e Oncologia"
+    ],
+    "especialidade": "Hematologia e Oncologia",
+    "desc": "Identifica pacientes com neutropenia febril de baixo risco que podem receber tratamento ambulatorial (marque os itens presentes).",
+    "fields": [
+      {
+        "id": "s",
+        "label": "Sintomas leves ou ausentes",
+        "pts": 5
+      },
+      {
+        "id": "s2",
+        "label": "Sintomas moderados (em vez de leves)",
+        "pts": 3
+      },
+      {
+        "id": "h",
+        "label": "Sem hipotensão (PAS > 90 mmHg)",
+        "pts": 5
+      },
+      {
+        "id": "d",
+        "label": "Sem DPOC",
+        "pts": 4
+      },
+      {
+        "id": "t",
+        "label": "Tumor sólido ou hematológico sem infecção fúngica prévia",
+        "pts": 4
+      },
+      {
+        "id": "i",
+        "label": "Sem desidratação com necessidade de fluidos EV",
+        "pts": 3
+      },
+      {
+        "id": "a",
+        "label": "Ambulatorial no início da febre",
+        "pts": 3
+      },
+      {
+        "id": "id",
+        "label": "Idade < 60 anos",
+        "pts": 2
+      }
+    ],
+    "max": 26,
+    "interp": {
+      "$fn": [
+        "function (s) {",
+        "        return s >= 21 ? { nivel: \"ok\", t: \"Baixo risco (≥ 21)\", c: \"Candidato a antibiótico oral (ciprofloxacino + amoxicilina-clavulanato) e manejo ambulatorial em centro experiente.\" }",
+        "          : { nivel: \"bad\", t: \"Alto risco (< 21)\", c: \"Internação e antibiótico endovenoso de amplo espectro em até 60 min.\" };",
+        "      }"
+      ]
+    },
+    "ref": "Klastersky J et al., J Clin Oncol 2000; ASCO/IDSA."
+  }
+]

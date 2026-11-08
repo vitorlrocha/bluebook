@@ -1,0 +1,502 @@
+{
+  "Paracetamol": {
+    "mec": "Inibição da síntese central de prostaglandinas (COX, ação predominantemente central); analgésico e antipirético sem efeito anti-inflamatório relevante.",
+    "renal": "ClCr 10-50: intervalo mínimo de 6 h; ClCr <10: intervalo mínimo de 8 h.",
+    "hep": "Hepatopatia: limitar a 2 g/dia (cirrose, etilismo, desnutrição); contraindicado na insuficiência hepática grave.",
+    "ea": "Raros em dose terapêutica. Graves: hepatotoxicidade em superdose; reações cutâneas graves (SJS/NET), raras.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Dipirona sódica (Metamizol)": {
+    "mec": "Inibição da síntese de prostaglandinas (central e periférica); espasmolítico leve.",
+    "renal": "Evitar doses altas e repetidas em insuficiência renal grave.",
+    "hep": "Evitar doses altas repetidas em hepatopatia grave.",
+    "ea": "Comuns: hipotensão com uso EV rápido. Graves: agranulocitose, choque anafilático, SJS/NET (raros).",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Ibuprofeno": {
+    "mec": "Inibição não seletiva da COX-1/COX-2, reduzindo prostaglandinas.",
+    "renal": "Evitar se ClCr <30 mL/min; risco de piora da função renal.",
+    "hep": "Cautela em cirrose; evitar na hepatopatia grave.",
+    "ea": "Comuns: dispepsia, náuseas. Graves: sangramento e úlcera GI, lesão renal aguda, eventos CV, hipersensibilidade.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Naproxeno": {
+    "mec": "Inibição não seletiva da COX; meia-vida longa permite 2x/dia.",
+    "renal": "Evitar se ClCr <30 mL/min.",
+    "hep": "Evitar em hepatopatia grave.",
+    "ea": "Dispepsia, úlcera/sangramento GI, retenção hídrica, lesão renal, risco CV."
+  },
+  "Diclofenaco sódico": {
+    "mec": "Inibição da COX (maior afinidade pela COX-2).",
+    "renal": "Evitar se ClCr <30 mL/min.",
+    "hep": "Cautela; monitorar enzimas hepáticas; evitar em hepatopatia grave.",
+    "ea": "GI (úlcera, sangramento), aumento de transaminases, risco CV aumentado, lesão renal."
+  },
+  "Ácido acetilsalicílico (AAS)": {
+    "mec": "Inibição irreversível da COX-1 plaquetária (antiagregante em baixa dose); analgésico/anti-inflamatório em doses maiores.",
+    "renal": "Evitar doses analgésicas se ClCr <30; baixa dose cardiovascular em geral mantida.",
+    "hep": "Evitar em hepatopatia grave ou com coagulopatia.",
+    "ea": "Sangramento GI e intracraniano, dispepsia, broncoespasmo em asma sensível a AAS; síndrome de Reye em crianças com viroses.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Amoxicilina": {
+    "mec": "Antibiótico beta-lactâmico: inibe a síntese da parede celular bacteriana.",
+    "renal": "ClCr 10-30: 250-500 mg 12/12h; ClCr <10: 250-500 mg a cada 24 h (hemodiálise: dose após a sessão).",
+    "hep": "Cautela; sem ajuste definido de dose.",
+    "ea": "Diarreia, náuseas, exantema. Graves: anafilaxia, colite por C. difficile, SJS (raros).",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Amoxicilina + Clavulanato de potássio": {
+    "mec": "Beta-lactâmico associado a inibidor de beta-lactamase (clavulanato).",
+    "renal": "ClCr 10-30: reduzir para 500/125 mg 12/12h; ClCr <10: 500/125 mg a cada 24 h; não usar a forma 875/125 se ClCr <30.",
+    "hep": "Cautela; risco de hepatite colestática; evitar em histórico de icterícia por clavulanato.",
+    "ea": "Diarreia, náuseas, candidíase. Graves: hepatotoxicidade colestática, anafilaxia, colite por C. difficile.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Cefalexina": {
+    "mec": "Cefalosporina de 1ª geração: inibe a síntese da parede celular.",
+    "renal": "ClCr 10-50: 250-500 mg 8/8h a 12/12h conforme gravidade; ClCr <10: 250-500 mg a cada 12-24 h.",
+    "hep": "Sem ajuste definido.",
+    "ea": "Diarreia, náuseas, exantema; anafilaxia (rara), colite por C. difficile.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Ceftriaxona": {
+    "mec": "Cefalosporina de 3ª geração: inibe a síntese da parede celular; eliminação biliar e renal.",
+    "renal": "Sem ajuste isolado; se disfunção renal e hepática combinadas, dose máxima de 2 g/dia.",
+    "hep": "Sem ajuste isolado (ver renal).",
+    "ea": "Diarreia, flebite, litíase biliar (pseudolitíase), anemia hemolítica imune; evitar cálcio EV concomitante em neonatos.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Azitromicina": {
+    "mec": "Macrolídeo: liga-se à subunidade 50S do ribossomo, inibindo a síntese proteica.",
+    "renal": "Sem ajuste definido para ClCr >10; cautela se ClCr <10.",
+    "hep": "Cautela; evitar em hepatopatia grave.",
+    "ea": "Náuseas, diarreia, dor abdominal. Graves: prolongamento do QT/arritmias, hepatotoxicidade.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Claritromicina": {
+    "mec": "Macrolídeo; inibidor potente do CYP3A4.",
+    "renal": "ClCr <30: reduzir a dose em 50%.",
+    "hep": "Cautela em hepatopatia grave.",
+    "ea": "Gosto metálico, náuseas, diarreia; QT longo, hepatotoxicidade; muitas interações medicamentosas.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Ciprofloxacino": {
+    "mec": "Fluoroquinolona: inibe a DNA girase e a topoisomerase IV.",
+    "renal": "ClCr 30-50: 250-500 mg 12/12h; ClCr 5-29: 250-500 mg a cada 18-24 h.",
+    "hep": "Cautela em hepatopatia grave.",
+    "ea": "Náuseas, diarreia, tontura. Graves: tendinite/ruptura de tendão, neuropatia periférica, QT longo, dissecção aórtica, alterações do SNC.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Levofloxacino": {
+    "mec": "Fluoroquinolona respiratória: inibe a DNA girase e a topoisomerase IV.",
+    "renal": "ClCr 20-49: dose inicial de 500 mg, depois 250 mg a cada 24 h (ou 750 mg a cada 48 h); ClCr 10-19: 500 mg inicial, depois 250 mg a cada 48 h.",
+    "hep": "Sem ajuste definido.",
+    "ea": "Náuseas, cefaleia, insônia. Graves: tendinopatia, neuropatia, QT longo, hipoglicemia/hiperglicemia, aneurisma/dissecção aórtica."
+  },
+  "Metronidazol": {
+    "mec": "Nitroimidazólico: forma metabólitos que lesam o DNA de anaeróbios e protozoários.",
+    "renal": "Sem ajuste na maioria dos casos; hemodiálise remove o fármaco (dar após a sessão).",
+    "hep": "Cirrose grave (Child-Pugh C): reduzir a dose em cerca de 50%.",
+    "ea": "Gosto metálico, náuseas, urina escura. Graves: neuropatia periférica, encefalopatia; efeito dissulfiram com álcool.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Sulfametoxazol + Trimetoprima": {
+    "mec": "Inibe sequencialmente a síntese de folato bacteriano (sulfonamida + diaminopirimidina).",
+    "renal": "ClCr 15-30: reduzir a dose em 50%; ClCr <15: evitar ou reduzir em 50% sob monitorização. Atenção à hipercalemia.",
+    "hep": "Evitar em hepatopatia grave.",
+    "ea": "Náuseas, exantema, hipercalemia. Graves: SJS/NET, mielossupressão, hepatotoxicidade, lesão renal.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Doxiciclina": {
+    "mec": "Tetraciclina: liga-se à subunidade 30S do ribossomo, inibindo a síntese proteica.",
+    "renal": "Sem ajuste (não nefrotóxica).",
+    "hep": "Cautela em hepatopatia.",
+    "ea": "Fotossensibilidade, esofagite (tomar com água), náuseas; contraindicada na gestação e em crianças <8 anos em geral.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Gentamicina": {
+    "mec": "Aminoglicosídeo: liga-se à subunidade 30S, bactericida concentração-dependente.",
+    "renal": "Ajustar intervalo/dose pelo ClCr e monitorar níveis séricos (esquemas de dose única diária exigem intervalos maiores).",
+    "hep": "Sem ajuste hepático.",
+    "ea": "Graves: nefrotoxicidade, ototoxicidade (coclear e vestibular), bloqueio neuromuscular.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Vancomicina": {
+    "mec": "Glicopeptídeo: inibe a síntese da parede celular em Gram-positivos.",
+    "renal": "Ajustar por ClCr e níveis séricos (vale 10-20 mg/L; considerar AUC/CIM 400-600).",
+    "hep": "Sem ajuste definido.",
+    "ea": "Infusão rápida causa síndrome do homem vermelho; nefrotoxicidade, ototoxicidade, neutropenia."
+  },
+  "Meropenem": {
+    "mec": "Carbapenêmico: beta-lactâmico de amplo espectro.",
+    "renal": "ClCr 26-50: dose habitual a cada 12 h; ClCr 10-25: metade da dose a cada 12 h; ClCr <10: metade da dose a cada 24 h.",
+    "hep": "Sem ajuste.",
+    "ea": "Diarreia, náuseas, flebite. Graves: convulsões (altas doses/IR), colite por C. difficile, reação alérgica."
+  },
+  "Metformina": {
+    "mec": "Reduz a produção hepática de glicose e aumenta a sensibilidade periférica à insulina (ativação da AMPK).",
+    "renal": "TFG 45-59: manter com monitorização; TFG 30-44: reduzir a dose máxima para 1.000 mg/dia; TFG <30: contraindicada.",
+    "hep": "Evitar em insuficiência hepática (risco de acidose láctica).",
+    "ea": "Comuns: diarreia, náuseas, sabor metálico (usar com alimentos). Grave: acidose láctica (rara); deficiência de B12 no longo prazo.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Glibenclamida": {
+    "mec": "Sulfonilureia: estimula a secreção de insulina pelas células beta.",
+    "renal": "Evitar se ClCr <60 (metabólitos ativos, hipoglicemia prolongada).",
+    "hep": "Evitar em hepatopatia grave.",
+    "ea": "Hipoglicemia (prolongada), ganho de peso; evitar em idosos (Beers).",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Gliclazida": {
+    "mec": "Sulfonilureia: estimula a secreção de insulina.",
+    "renal": "Usar com cautela em IR leve a moderada; evitar em IR grave.",
+    "hep": "Evitar em hepatopatia grave.",
+    "ea": "Hipoglicemia, ganho de peso, distúrbios GI.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Insulina NPH": {
+    "mec": "Insulina humana de ação intermediária: promove captação de glicose e inibe a produção hepática de glicose.",
+    "renal": "Reduzir a dose em IR (clearance de insulina diminui); monitorar glicemia.",
+    "hep": "Reduzir a dose e monitorar na hepatopatia grave.",
+    "ea": "Hipoglicemia, ganho de peso, lipodistrofia no local da aplicação.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Insulina Regular": {
+    "mec": "Insulina humana de ação rápida/curta.",
+    "renal": "Reduzir a dose em IR; monitorar glicemia.",
+    "hep": "Reduzir a dose e monitorar na hepatopatia grave.",
+    "ea": "Hipoglicemia, lipodistrofia, reação local.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Losartana potássica": {
+    "mec": "Antagonista do receptor AT1 da angiotensina II.",
+    "renal": "Sem ajuste habitual; monitorar creatinina e potássio; evitar em estenose bilateral de artéria renal.",
+    "hep": "Hepatopatia: iniciar com 25 mg/dia.",
+    "ea": "Tontura, hipercalemia, hipotensão. Graves: lesão renal aguda, angioedema (raro); contraindicada na gestação.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Enalapril maleato": {
+    "mec": "Inibidor da ECA: reduz a angiotensina II e aumenta bradicinina.",
+    "renal": "ClCr 10-30: iniciar com 2,5 mg/dia; ClCr <10 ou diálise: 2,5 mg/dia após a diálise.",
+    "hep": "Pró-fármaco (ativado no fígado): cautela na hepatopatia grave.",
+    "ea": "Tosse seca, hipotensão, hipercalemia. Graves: angioedema, lesão renal aguda; contraindicado na gestação.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Captopril": {
+    "mec": "Inibidor da ECA.",
+    "renal": "ClCr 10-50: reduzir a dose/intervalo; ClCr <10: dose mínima com monitorização.",
+    "hep": "Sem ajuste definido.",
+    "ea": "Tosse seca, alteração do paladar, hipercalemia; angioedema, neutropenia (raro), lesão renal.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Anlodipino besilato": {
+    "mec": "Bloqueador de canal de cálcio di-hidropiridínico: vasodilatação arterial.",
+    "renal": "Sem ajuste.",
+    "hep": "Hepatopatia: iniciar com 2,5 mg/dia.",
+    "ea": "Edema de tornozelo, cefaleia, rubor, taquicardia reflexa; hiperplasia gengival (rara).",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Hidroclorotiazida": {
+    "mec": "Diurético tiazídico: inibe o cotransportador Na-Cl no túbulo distal.",
+    "renal": "Menos eficaz se TFG <30; usar clortalidona ou diurético de alça.",
+    "hep": "Cautela (distúrbio hidroeletrolítico pode precipitar encefalopatia).",
+    "ea": "Hipocalemia, hiponatremia, hiperuricemia, hiperglicemia; fotossensibilidade; raro risco de câncer de pele não melanoma.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Furosemida": {
+    "mec": "Diurético de alça: inibe o cotransportador Na-K-2Cl na alça de Henle.",
+    "renal": "Pode exigir doses maiores em DRC avançada; ototoxicidade com doses altas EV rápidas.",
+    "hep": "Cirrose: iniciar com baixas doses e monitorar eletrólitos.",
+    "ea": "Hipocalemia, hiponatremia, hipovolemia, ototoxicidade, hiperuricemia.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Espironolactona": {
+    "mec": "Antagonista do receptor mineralocorticoide.",
+    "renal": "Evitar se TFG <30 ou K >5,0 mEq/L; monitorar potássio e creatinina.",
+    "hep": "Cirrose: iniciar com 50-100 mg/dia; monitorar eletrólitos.",
+    "ea": "Hipercalemia, ginecomastia, irregularidade menstrual, lesão renal aguda.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Atenolol": {
+    "mec": "Betabloqueador beta-1 seletivo (hidrofílico).",
+    "renal": "ClCr 15-35: máximo de 50 mg/dia; ClCr <15: 25 mg/dia ou 50 mg a cada 48 h.",
+    "hep": "Sem ajuste.",
+    "ea": "Bradicardia, fadiga, extremidades frias; bloqueio AV, broncoespasmo; evitar suspensão abrupta.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Propranolol": {
+    "mec": "Betabloqueador não seletivo (lipofílico).",
+    "renal": "Sem ajuste.",
+    "hep": "Reduzir a dose em hepatopatia (metabolismo de primeira passagem).",
+    "ea": "Bradicardia, broncoespasmo, fadiga, hipoglicemia mascarada, depressão.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Carvedilol": {
+    "mec": "Betabloqueador com bloqueio alfa-1.",
+    "renal": "Sem ajuste.",
+    "hep": "Contraindicado na hepatopatia grave.",
+    "ea": "Tontura, hipotensão, bradicardia, retenção hídrica, fadiga.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Sinvastatina": {
+    "mec": "Inibidor da HMG-CoA redutase.",
+    "renal": "TFG <30: iniciar com 5 mg/dia; evitar doses altas.",
+    "hep": "Contraindicada em hepatopatia ativa.",
+    "ea": "Mialgia, elevação de transaminases; raro: rabdomiólise, miopatia (maior risco com 80 mg, fibratos, amiodarona, diltiazem).",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Atorvastatina": {
+    "mec": "Inibidor da HMG-CoA redutase de alta potência.",
+    "renal": "Sem ajuste.",
+    "hep": "Contraindicada em hepatopatia ativa ou elevação persistente de transaminases.",
+    "ea": "Mialgia, aumento de transaminases, risco discreto de diabetes; rabdomiólise (rara)."
+  },
+  "Rosuvastatina": {
+    "mec": "Inibidor da HMG-CoA redutase de alta potência.",
+    "renal": "TFG <30: dose inicial 5 mg e máximo 10 mg/dia.",
+    "hep": "Contraindicada em hepatopatia ativa.",
+    "ea": "Mialgia, cefaleia, aumento de transaminases, proteinúria; rabdomiólise (rara)."
+  },
+  "Omeprazol": {
+    "mec": "Inibidor da bomba de prótons (H+/K+ ATPase) da célula parietal.",
+    "renal": "Sem ajuste.",
+    "hep": "Hepatopatia grave: máximo de 20 mg/dia.",
+    "ea": "Cefaleia, diarreia; uso prolongado: hipomagnesemia, deficiência de B12, fraturas, infecções entéricas.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Pantoprazol": {
+    "mec": "Inibidor da bomba de prótons.",
+    "renal": "Sem ajuste.",
+    "hep": "Hepatopatia grave: máximo de 20 mg/dia.",
+    "ea": "Cefaleia, diarreia; hipomagnesemia e deficiência de B12 em uso prolongado."
+  },
+  "Varfarina sódica": {
+    "mec": "Antagonista da vitamina K: reduz os fatores II, VII, IX e X.",
+    "renal": "Sem ajuste fixo; maior sensibilidade na DRC — monitorar INR com mais frequência.",
+    "hep": "Maior sensibilidade na hepatopatia; ajustar pelo INR.",
+    "ea": "Sangramentos; necrose cutânea (rara); inúmeras interações com fármacos e alimentos.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Rivaroxabana": {
+    "mec": "Inibidor direto do fator Xa.",
+    "renal": "ClCr 15-49: reduzir (p.ex. 15 mg/dia na FA); ClCr <15: evitar.",
+    "hep": "Evitar em Child-Pugh B e C.",
+    "ea": "Sangramento (GI, geniturinário), anemia, elevação de transaminases."
+  },
+  "Apixabana": {
+    "mec": "Inibidor direto do fator Xa.",
+    "renal": "Na FA: reduzir para 2,5 mg 12/12h se ≥2 critérios (idade ≥80, peso ≤60 kg, creatinina ≥1,5); ClCr <15: uso limitado.",
+    "hep": "Evitar em Child-Pugh C; cautela em B.",
+    "ea": "Sangramento, anemia, náuseas."
+  },
+  "Enoxaparina": {
+    "mec": "Heparina de baixo peso molecular: potencializa a antitrombina e inibe o fator Xa.",
+    "renal": "ClCr <30: reduzir para 30 mg/dia (profilaxia) ou 1 mg/kg 1x/dia (tratamento); monitorar anti-Xa.",
+    "hep": "Cautela na hepatopatia com coagulopatia.",
+    "ea": "Sangramento, hematoma no local, trombocitopenia induzida por heparina (rara), osteoporose em uso prolongado.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Levotiroxina sódica": {
+    "mec": "Hormônio tireoidiano sintético (T4): repõe a tiroxina.",
+    "renal": "Sem ajuste.",
+    "hep": "Cautela na cirrose descompensada.",
+    "ea": "Excesso de dose: taquicardia, tremor, insônia, perda de peso, fibrilação atrial e perda óssea.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Prednisona": {
+    "mec": "Glicocorticoide: anti-inflamatório e imunossupressor via receptor de glicocorticoide.",
+    "renal": "Sem ajuste.",
+    "hep": "Pró-fármaco (convertido em prednisolona): preferir prednisolona em hepatopatia grave.",
+    "ea": "Hiperglicemia, hipertensão, retenção hídrica, insônia, osteoporose, supressão adrenal, infecções, miopatia.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Dexametasona": {
+    "mec": "Glicocorticoide de longa ação, sem ação mineralocorticoide relevante.",
+    "renal": "Sem ajuste.",
+    "hep": "Sem ajuste definido.",
+    "ea": "Hiperglicemia, insônia, agitação, supressão adrenal, miopatia, imunossupressão.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Salbutamol (Sulfato de salbutamol)": {
+    "mec": "Agonista beta-2 adrenérgico de curta ação: broncodilatação.",
+    "renal": "Sem ajuste.",
+    "hep": "Sem ajuste.",
+    "ea": "Tremor, taquicardia, hipocalemia, palpitações; broncoespasmo paradoxal (raro).",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Fluoxetina": {
+    "mec": "Inibidor seletivo da recaptação de serotonina (ISRS).",
+    "renal": "Sem ajuste.",
+    "hep": "Hepatopatia: reduzir a dose ou espaçar (meia-vida longa).",
+    "ea": "Náuseas, insônia, ansiedade, disfunção sexual; síndrome serotoninérgica, hiponatremia, QT longo (raro).",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Sertralina": {
+    "mec": "ISRS.",
+    "renal": "Sem ajuste.",
+    "hep": "Hepatopatia leve: reduzir a dose; evitar em grave.",
+    "ea": "Náuseas, diarreia, insônia, disfunção sexual; hiponatremia, sangramento, síndrome serotoninérgica."
+  },
+  "Amitriptilina": {
+    "mec": "Antidepressivo tricíclico: inibe a recaptação de noradrenalina e serotonina; efeito anticolinérgico.",
+    "renal": "Sem ajuste definido; cautela.",
+    "hep": "Reduzir a dose em hepatopatia.",
+    "ea": "Sonolência, boca seca, constipação, retenção urinária, hipotensão ortostática; arritmias, QT longo; tóxica em superdose.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Carbamazepina": {
+    "mec": "Bloqueia canais de sódio dependentes de voltagem; indutor enzimático potente (CYP3A4).",
+    "renal": "Cautela; ajustar em IR grave.",
+    "hep": "Evitar em hepatopatia grave; monitorar enzimas.",
+    "ea": "Tontura, sonolência, hiponatremia. Graves: SJS/NET (HLA-B*1502), aplasia/agranulocitose, hepatotoxicidade.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Fenitoína": {
+    "mec": "Bloqueia canais de sódio; cinética não linear (saturável).",
+    "renal": "Níveis séricos totais subestimam a fração livre se albumina baixa ou IR; usar fração livre.",
+    "hep": "Reduzir a dose e monitorar níveis na hepatopatia.",
+    "ea": "Nistagmo, ataxia, hiperplasia gengival, hirsutismo; SJS/NET, síndrome da hipersensibilidade, arritmia em infusão EV rápida.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Fenobarbital": {
+    "mec": "Barbitúrico: potencializa o GABA-A; indutor enzimático.",
+    "renal": "Reduzir a dose em IR; monitorar.",
+    "hep": "Reduzir a dose em hepatopatia; evitar em encefalopatia hepática.",
+    "ea": "Sedação, depressão respiratória, tolerância e dependência; efeitos cognitivos.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Ácido valproico": {
+    "mec": "Aumenta o GABA e bloqueia canais de sódio; amplo espectro.",
+    "renal": "Níveis livres podem aumentar em IR; monitorar.",
+    "hep": "Contraindicado em hepatopatia grave.",
+    "ea": "Ganho de peso, tremor, queda de cabelo, plaquetopenia. Graves: hepatotoxicidade, pancreatite, hiperamonemia, teratogenicidade.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Lamotrigina": {
+    "mec": "Bloqueia canais de sódio e reduz a liberação de glutamato.",
+    "renal": "Cautela em IR grave.",
+    "hep": "Reduzir a dose em Child-Pugh B/C.",
+    "ea": "Tontura, cefaleia, diplopia. Grave: SJS/NET (titulação lenta; maior risco com valproato)."
+  },
+  "Levetiracetam": {
+    "mec": "Liga-se à proteína SV2A das vesículas sinápticas.",
+    "renal": "ClCr 50-79: 500-1.000 mg 12/12h; 30-49: 250-750 mg 12/12h; <30: 250-500 mg 12/12h.",
+    "hep": "Child-Pugh C: reduzir a dose em 50%.",
+    "ea": "Sonolência, irritabilidade, alterações do humor/agressividade."
+  },
+  "Diazepam": {
+    "mec": "Benzodiazepínico: potencializa o GABA-A.",
+    "renal": "Cautela e redução de dose em IR.",
+    "hep": "Reduzir a dose; evitar em encefalopatia hepática.",
+    "ea": "Sedação, ataxia, amnésia, depressão respiratória, dependência.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Clonazepam": {
+    "mec": "Benzodiazepínico de ação longa.",
+    "renal": "Reduzir a dose em IR.",
+    "hep": "Cautela; reduzir dose em hepatopatia.",
+    "ea": "Sedação, ataxia, tolerância, dependência, abstinência."
+  },
+  "Haloperidol": {
+    "mec": "Antipsicótico típico: antagonista D2.",
+    "renal": "Sem ajuste.",
+    "hep": "Reduzir a dose e monitorar.",
+    "ea": "Sintomas extrapiramidais, discinesia tardia, QT longo/torsades, síndrome neuroléptica maligna.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Risperidona": {
+    "mec": "Antipsicótico atípico: antagonista D2 e 5-HT2A.",
+    "renal": "ClCr <30: iniciar com 0,5 mg 12/12h e titular devagar.",
+    "hep": "Child-Pugh C: iniciar com 0,5 mg 12/12h.",
+    "ea": "Ganho de peso, hiperprolactinemia, sintomas extrapiramidais, sedação, hipotensão ortostática.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Quetiapina": {
+    "mec": "Antipsicótico atípico: antagonista D2, 5-HT2A e H1.",
+    "renal": "Sem ajuste.",
+    "hep": "Hepatopatia: iniciar com 25 mg/dia e titular devagar.",
+    "ea": "Sedação, ganho de peso, hipotensão ortostática, dislipidemia, síndrome metabólica."
+  },
+  "Metoclopramida": {
+    "mec": "Antagonista D2 central e periférico, pró-cinético.",
+    "renal": "ClCr <40: reduzir a dose em 50%.",
+    "hep": "Cautela em cirrose com ascite.",
+    "ea": "Sonolência, sintomas extrapiramidais (distonia), discinesia tardia; uso por mais de 12 semanas deve ser evitado.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Ondansetrona": {
+    "mec": "Antagonista do receptor 5-HT3.",
+    "renal": "Sem ajuste.",
+    "hep": "Child-Pugh C: máximo de 8 mg/dia.",
+    "ea": "Cefaleia, constipação; QT longo (dose EV alta)."
+  },
+  "Digoxina": {
+    "mec": "Inibe a Na-K-ATPase, aumentando a contratilidade e o tônus vagal.",
+    "renal": "Reduzir a dose e monitorar nível sérico em IR (ClCr <50); evitar hipocalemia.",
+    "hep": "Sem ajuste.",
+    "ea": "Náuseas, vômitos, visão amarelada, arritmias e bloqueios; faixa terapêutica estreita.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Amiodarona": {
+    "mec": "Antiarrítmico classe III com ações em canais de K, Na e Ca e bloqueio beta.",
+    "renal": "Sem ajuste.",
+    "hep": "Cautela; monitorar enzimas hepáticas.",
+    "ea": "Disfunção tireoidiana, fibrose pulmonar, hepatotoxicidade, depósitos corneanos, fotossensibilidade, QT longo, bradicardia.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Gabapentina": {
+    "mec": "Liga-se à subunidade α2δ de canais de cálcio.",
+    "renal": "ClCr 30-59: 400-1.400 mg/dia em 2 doses; 15-29: 200-700 mg/dia; <15: 100-300 mg/dia.",
+    "hep": "Sem ajuste.",
+    "ea": "Sonolência, tontura, edema periférico, ganho de peso, ataxia; depressão respiratória com opioides.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Tramadol": {
+    "mec": "Agonista opioide fraco mais inibição da recaptação de serotonina e noradrenalina.",
+    "renal": "ClCr <30: intervalo de 12 h e dose máxima de 200 mg/dia.",
+    "hep": "Cirrose: 50 mg a cada 12 h.",
+    "ea": "Náuseas, tontura, constipação; convulsões, síndrome serotoninérgica, dependência."
+  },
+  "Morfina": {
+    "mec": "Agonista opioide μ.",
+    "renal": "Reduzir a dose/aumentar o intervalo em IR (metabólito ativo M6G acumula).",
+    "hep": "Reduzir a dose; risco de encefalopatia na cirrose.",
+    "ea": "Constipação, náuseas, sedação, prurido; depressão respiratória, dependência, íleo.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Fluconazol": {
+    "mec": "Triazólico: inibe a 14-α-desmetilase fúngica.",
+    "renal": "ClCr ≤50: reduzir a dose em 50% após a dose de ataque.",
+    "hep": "Cautela; monitorar enzimas.",
+    "ea": "Náuseas, cefaleia, elevação de transaminases; QT longo, hepatotoxicidade; interações via CYP2C9/3A4.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Aciclovir": {
+    "mec": "Análogo nucleosídico: inibe a DNA polimerase viral após fosforilação pela timidina quinase viral.",
+    "renal": "ClCr 10-25: intervalo de 8 h (oral 800 mg 5x/dia→3x/dia); ClCr <10: 200 mg 12/12h (oral); EV: 5-10 mg/kg a cada 24 h.",
+    "hep": "Sem ajuste.",
+    "ea": "Náuseas, cefaleia; EV: nefropatia por cristais, neurotoxicidade, flebite.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Alopurinol": {
+    "mec": "Inibidor da xantina oxidase: reduz a síntese de ácido úrico.",
+    "renal": "Iniciar com 50-100 mg/dia e titular pela função renal; HLA-B*5801 em risco.",
+    "hep": "Cautela; monitorar enzimas.",
+    "ea": "Exantema, intolerância GI. Graves: síndrome de hipersensibilidade ao alopurinol, SJS/NET, hepatotoxicidade.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Colchicina": {
+    "mec": "Inibe a polimerização de microtúbulos, reduzindo a quimiotaxia de neutrófilos.",
+    "renal": "ClCr 30-50: dose reduzida; ClCr <30: reduzir fortemente e monitorar; evitar em diálise.",
+    "hep": "Cautela; reduzir em hepatopatia grave.",
+    "ea": "Diarreia (primeiro sinal de toxicidade), náuseas; mielossupressão e miopatia na intoxicação; interação grave com claritromicina e inibidores da P-gp.",
+    "sus": "Consta na RENAME (confirmar versão e componente vigentes)"
+  },
+  "Baclofeno": {
+    "mec": "Agonista GABA-B: reduz a espasticidade.",
+    "renal": "ClCr <50: reduzir a dose; evitar em IR grave (encefalopatia).",
+    "hep": "Sem ajuste definido.",
+    "ea": "Sonolência, fraqueza, tontura; abstinência (convulsões, alucinações) se suspensão abrupta."
+  }
+}

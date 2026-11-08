@@ -1,0 +1,162 @@
+[
+  {
+    "id": "v-crianca",
+    "nome": "Criança: do nascimento aos 15 meses",
+    "grupo": "Calendário por idade",
+    "s": [
+      [
+        "Ao nascer",
+        "BCG (dose única) e hepatite B (1ª dose, idealmente nas primeiras 24 h)."
+      ],
+      [
+        "2 meses",
+        "Pentavalente (DTP + Hib + hepatite B), VIP (poliomielite inativada), pneumocócica 10-valente e rotavírus humano, 1ª dose de cada."
+      ],
+      [
+        "3 meses",
+        "Meningocócica C conjugada, 1ª dose."
+      ],
+      [
+        "4 meses",
+        "Pentavalente, VIP, pneumocócica 10-valente e rotavírus, 2ª dose de cada."
+      ],
+      [
+        "5 meses",
+        "Meningocócica C, 2ª dose."
+      ],
+      [
+        "6 meses",
+        "Pentavalente e VIP, 3ª dose."
+      ],
+      [
+        "9 meses",
+        "Febre amarela, 1ª dose."
+      ],
+      [
+        "12 meses",
+        "Tríplice viral (sarampo, caxumba, rubéola), pneumocócica 10-valente (reforço) e meningocócica C (reforço)."
+      ],
+      [
+        "15 meses",
+        "DTP (1º reforço), VOP (1º reforço), hepatite A (dose única) e tetraviral (sarampo, caxumba, rubéola e varicela)."
+      ],
+      [
+        "Limites",
+        "Rotavírus tem idade máxima para 1ª e 2ª doses (consulte a norma vigente). Influenza e Covid-19 seguem campanhas e faixas atualizadas anualmente."
+      ]
+    ]
+  },
+  {
+    "id": "v-4a",
+    "nome": "Criança: 4 anos e idade escolar",
+    "grupo": "Calendário por idade",
+    "s": [
+      [
+        "4 anos",
+        "DTP (2º reforço), VOP (2º reforço) e febre amarela (reforço)."
+      ],
+      [
+        "Observações",
+        "Verificar também influenza anual e atualização de qualquer esquema atrasado. Esquemas atrasados seguem a regra de completar doses, sem reiniciar o esquema."
+      ]
+    ]
+  },
+  {
+    "id": "v-adol",
+    "nome": "Adolescente (9 a 19 anos)",
+    "grupo": "Calendário por idade",
+    "s": [
+      [
+        "9 a 14 anos",
+        "HPV quadrivalente (esquema atual do PNI para essa faixa; confirmar número de doses vigente)."
+      ],
+      [
+        "11 a 14 anos",
+        "Meningocócica ACWY, conforme o calendário vigente."
+      ],
+      [
+        "Conforme situação vacinal",
+        "Hepatite B (3 doses), dupla adulta (dT: 3 doses ou reforço a cada 10 anos), tríplice viral (2 doses), febre amarela."
+      ]
+    ]
+  },
+  {
+    "id": "v-adulto",
+    "nome": "Adulto (20 a 59 anos)",
+    "grupo": "Calendário por idade",
+    "s": [
+      [
+        "Esquema",
+        "Hepatite B (3 doses se nunca vacinado), dT ou dTpa (reforço a cada 10 anos), febre amarela (dose única conforme calendário), tríplice viral (2 doses até 29 anos; 1 dose de 30 a 59 anos)."
+      ],
+      [
+        "Observações",
+        "Verificar a caderneta e completar os esquemas incompletos."
+      ]
+    ]
+  },
+  {
+    "id": "v-idoso",
+    "nome": "Idoso (60 anos ou mais)",
+    "grupo": "Calendário por idade",
+    "s": [
+      [
+        "Esquema",
+        "Influenza anual, dT (reforço a cada 10 anos), hepatite B conforme situação vacinal e Covid-19 conforme campanhas vigentes."
+      ],
+      [
+        "Observações",
+        "Vacinas fora do PNI (pneumocócica 13/20, herpes-zóster, VSR) são indicadas pela SBIm e disponíveis em clínicas privadas e em algumas campanhas."
+      ]
+    ]
+  },
+  {
+    "id": "v-gest",
+    "nome": "Gestante e puérpera",
+    "grupo": "Situações especiais",
+    "s": [
+      [
+        "Em cada gestação",
+        "dTpa a partir de 20 semanas (idealmente entre 20 e 36 semanas), influenza (1 dose) e Covid-19 conforme campanha vigente. Hepatite B se esquema incompleto (3 doses)."
+      ],
+      [
+        "Vacina VSR",
+        "Vacina contra o vírus sincicial respiratório para gestantes vem sendo incorporada ao PNI; confirmar disponibilidade e faixa gestacional vigentes."
+      ],
+      [
+        "Contraindicadas",
+        "Vacinas de vírus vivo atenuado (tríplice viral, varicela, febre amarela, exceto em situação epidemiológica de risco com avaliação). Puérpera sem imunidade pode receber tríplice viral."
+      ]
+    ]
+  },
+  {
+    "id": "v-trab",
+    "nome": "Trabalhador de saúde",
+    "grupo": "Situações especiais",
+    "s": [
+      [
+        "Recomendações",
+        "Hepatite B (3 doses e anti-HBs de controle), dT/dTpa, tríplice viral (2 doses), varicela (2 doses se não imune), influenza anual e Covid-19 conforme campanhas."
+      ]
+    ]
+  },
+  {
+    "id": "v-contra",
+    "nome": "Contraindicações e precauções gerais",
+    "grupo": "Situações especiais",
+    "s": [
+      [
+        "Contraindicações gerais",
+        "Reação anafilática grave a dose anterior ou a componente da vacina. Vacinas vivas atenuadas: imunossupressão grave e gestação (salvo exceções avaliadas)."
+      ],
+      [
+        "Precauções",
+        "Doença febril aguda moderada ou grave: adiar. Uso de imunoglobulina ou hemoderivados pode interferir em vacinas virais vivas (intervalos específicos)."
+      ],
+      [
+        "Não são contraindicações",
+        "Resfriado leve, uso de antibiótico, prematuridade (vacinar pela idade cronológica), aleitamento."
+      ]
+    ]
+  }
+]

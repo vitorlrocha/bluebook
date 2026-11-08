@@ -1,0 +1,174 @@
+[
+  {
+    "id": "l-hemo",
+    "nome": "Hemograma",
+    "grupo": "Hematologia",
+    "s": [
+      [
+        "Eritrograma",
+        "Hemoglobina: H 13,5–17,5 g/dL; M 12–16 g/dL. Hematócrito: H 41–53%; M 36–46%. VCM 80–100 fL. HCM 27–33 pg. CHCM 32–36 g/dL. RDW 11,5–14,5%. Reticulócitos 0,5–2,5%."
+      ],
+      [
+        "Leucograma",
+        "Leucócitos 4.000–11.000/mm³. Neutrófilos 40–70% (1.800–7.700). Bastões até 5%. Linfócitos 20–40%. Monócitos 2–10%. Eosinófilos 1–5%. Basófilos até 1%."
+      ],
+      [
+        "Plaquetas",
+        "150.000–450.000/mm³."
+      ],
+      [
+        "VHS / PCR",
+        "VHS: H até 15 mm/h; M até 20 mm/h (aumenta com a idade). PCR < 5 mg/L (< 0,5 mg/dL)."
+      ]
+    ]
+  },
+  {
+    "id": "l-coag",
+    "nome": "Coagulação",
+    "grupo": "Hematologia",
+    "s": [
+      [
+        "Provas",
+        "TP: 11–14 s; INR 0,8–1,2 (alvo 2–3 na maioria das indicações de varfarina; 2,5–3,5 em prótese mecânica mitral). TTPa 25–35 s (relação 0,8–1,2). Fibrinogênio 200–400 mg/dL. D-dímero < 500 ng/mL (ajustar por idade em > 50 anos: idade × 10)."
+      ]
+    ]
+  },
+  {
+    "id": "l-ferro",
+    "nome": "Ferro, vitaminas e hemólise",
+    "grupo": "Hematologia",
+    "s": [
+      [
+        "Ferro",
+        "Ferritina: H 30–400 ng/mL; M 15–150 ng/mL (deficiência provável < 30; < 45 em alguns serviços). Ferro sérico 60–170 µg/dL. Saturação de transferrina 20–45%. CTLF 250–450 µg/dL."
+      ],
+      [
+        "Vitaminas",
+        "Vitamina B12 200–900 pg/mL (borderline 200–300: dosar ácido metilmalônico). Folato > 4 ng/mL. Vitamina D 25-OH: ≥ 20 ng/mL (adultos saudáveis), 30–60 ng/mL (grupos de risco)."
+      ],
+      [
+        "Hemólise",
+        "LDH 140–280 U/L. Bilirrubina indireta até 0,8 mg/dL. Haptoglobina 30–200 mg/dL."
+      ]
+    ]
+  },
+  {
+    "id": "l-eletro",
+    "nome": "Eletrólitos",
+    "grupo": "Bioquímica",
+    "s": [
+      [
+        "Valores",
+        "Sódio 135–145 mEq/L. Potássio 3,5–5,0 mEq/L. Cloro 98–107 mEq/L. Bicarbonato 22–28 mEq/L. Cálcio total 8,5–10,5 mg/dL (iônico 4,5–5,3 mg/dL). Magnésio 1,6–2,6 mg/dL. Fósforo 2,5–4,5 mg/dL."
+      ]
+    ]
+  },
+  {
+    "id": "l-renal",
+    "nome": "Função renal",
+    "grupo": "Bioquímica",
+    "s": [
+      [
+        "Valores",
+        "Ureia 15–40 mg/dL. Creatinina: H 0,7–1,3 mg/dL; M 0,6–1,1 mg/dL. Ácido úrico: H 3,5–7,2; M 2,6–6,0 mg/dL. Relação albumina/creatinina urinária: < 30 mg/g (A1); 30–300 (A2); > 300 (A3)."
+      ]
+    ]
+  },
+  {
+    "id": "l-hep",
+    "nome": "Função hepática e pâncreas",
+    "grupo": "Bioquímica",
+    "s": [
+      [
+        "Hepática",
+        "AST (TGO) até 40 U/L. ALT (TGP) até 41 U/L (H) e 33 U/L (M). Fosfatase alcalina 40–129 U/L. GGT: H até 60; M até 40 U/L. Bilirrubina total até 1,2 mg/dL; direta até 0,3 mg/dL. Albumina 3,5–5,0 g/dL. Proteínas totais 6,0–8,0 g/dL."
+      ],
+      [
+        "Pâncreas",
+        "Amilase 28–100 U/L. Lipase 13–60 U/L (pancreatite: > 3× o limite superior)."
+      ]
+    ]
+  },
+  {
+    "id": "l-gli",
+    "nome": "Glicemia e diabetes",
+    "grupo": "Endocrinologia",
+    "s": [
+      [
+        "Critérios (SBD/ADA)",
+        "Glicemia de jejum: normal < 100; pré-diabetes 100–125; diabetes ≥ 126 mg/dL. TOTG 2 h: normal < 140; pré-diabetes 140–199; diabetes ≥ 200 mg/dL. HbA1c: normal < 5,7%; pré-diabetes 5,7–6,4%; diabetes ≥ 6,5%. Glicemia ao acaso ≥ 200 com sintomas."
+      ],
+      [
+        "Gestação (diabetes gestacional)",
+        "Jejum ≥ 92; 1 h ≥ 180; 2 h ≥ 153 mg/dL no TOTG 75 g (qualquer valor alterado fecha o diagnóstico). Jejum ≥ 126 no 1º trimestre = diabetes prévio."
+      ]
+    ]
+  },
+  {
+    "id": "l-lip",
+    "nome": "Perfil lipídico",
+    "grupo": "Endocrinologia",
+    "s": [
+      [
+        "Valores (referência SBC 2017/2025)",
+        "Colesterol total desejável < 190 mg/dL. HDL > 40 mg/dL (alvo ≥ 60 como protetor). Triglicerídeos < 150 mg/dL em jejum (< 175 sem jejum). LDL: meta depende do risco cardiovascular — baixo < 130; intermediário < 100; alto < 70; muito alto < 50 mg/dL (e < 40 em extremo risco). Não-HDL: 30 mg/dL acima da meta de LDL."
+      ]
+    ]
+  },
+  {
+    "id": "l-tireo",
+    "nome": "Tireoide",
+    "grupo": "Endocrinologia",
+    "s": [
+      [
+        "Valores",
+        "TSH 0,4–4,5 mUI/L (gestante 1º tri: 0,1–4,0). T4 livre 0,8–1,8 ng/dL. T3 total 80–200 ng/dL. Anti-TPO < 35 UI/mL. Interpretação: TSH alto + T4L baixo = hipotireoidismo; TSH alto + T4L normal = subclínico; TSH baixo + T4L alto = tireotoxicose."
+      ]
+    ]
+  },
+  {
+    "id": "l-gaso",
+    "nome": "Gasometria arterial",
+    "grupo": "Ácido-base",
+    "s": [
+      [
+        "Valores",
+        "pH 7,35–7,45. PaCO₂ 35–45 mmHg. PaO₂ 80–100 mmHg (ar ambiente, jovem). HCO₃ 22–26 mEq/L. BE −2 a +2. SaO₂ 95–100%. Lactato < 2 mmol/L (> 4 = hipoperfusão grave)."
+      ],
+      [
+        "Padrões",
+        "Acidose metabólica: ↓pH e ↓HCO₃. Alcalose metabólica: ↑pH e ↑HCO₃. Acidose respiratória: ↓pH e ↑PaCO₂. Alcalose respiratória: ↑pH e ↓PaCO₂."
+      ]
+    ]
+  },
+  {
+    "id": "l-card",
+    "nome": "Marcadores cardíacos",
+    "grupo": "Cardiologia",
+    "s": [
+      [
+        "Valores",
+        "Troponina: cortes dependem do ensaio (usar o percentil 99 do laboratório; curva seriada em 0–1 h ou 0–3 h). CK-MB < 5 ng/mL (hoje pouco usada). BNP < 100 pg/mL; NT-proBNP < 125 pg/mL (< 75 anos) — valores maiores sugerem IC aguda (BNP > 400; NT-proBNP > 450 a 900 conforme a idade)."
+      ]
+    ]
+  },
+  {
+    "id": "l-urina",
+    "nome": "Urina e líquor",
+    "grupo": "Outros líquidos",
+    "s": [
+      [
+        "Urina tipo 1",
+        "Densidade 1,005–1,030. pH 4,5–8. Proteína, glicose, cetonas, nitrito e sangue: negativos. Leucócitos < 5/campo (ou < 10.000/mL); hemácias < 3/campo (ou < 10.000/mL). Urocultura positiva: ≥ 100.000 UFC/mL (≥ 1.000 em sintomáticas jovens)."
+      ],
+      [
+        "Líquor",
+        "Células: até 5/mm³ (mononucleares). Proteína 15–45 mg/dL. Glicose 50–80 mg/dL (≥ 60% da glicemia). Pressão de abertura 10–20 cmH₂O. Meningite bacteriana: neutrófilos, proteína alta, glicose baixa."
+      ],
+      [
+        "Líquido pleural (critérios de Light)",
+        "Exsudato se: proteína pleura/soro > 0,5, DHL pleura/soro > 0,6 ou DHL pleural > 2/3 do limite superior sérico."
+      ]
+    ]
+  }
+]

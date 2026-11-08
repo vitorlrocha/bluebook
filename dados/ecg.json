@@ -1,0 +1,143 @@
+[
+  {
+    "id": "e-sist",
+    "nome": "Sistemática de leitura",
+    "grupo": "Fundamentos",
+    "s": [
+      [
+        "Passo a passo",
+        "1) Calibração e qualidade do traçado. 2) Frequência cardíaca. 3) Ritmo: onda P presente, relação P:QRS, regularidade. 4) Eixo do QRS. 5) Intervalos (PR, QRS, QT/QTc). 6) Onda P, hipertrofias e sobrecargas. 7) Onda Q patológica. 8) Segmento ST e onda T. 9) Comparação com ECG anterior."
+      ],
+      [
+        "Valores normais (adulto)",
+        "FC 60–100 bpm; PR 120–200 ms; QRS < 120 ms; QTc < 450 ms em homens e < 460 ms em mulheres (risco aumentado acima de 500 ms); eixo do QRS entre –30° e +90°."
+      ]
+    ]
+  },
+  {
+    "id": "e-fa",
+    "nome": "Fibrilação atrial e flutter",
+    "grupo": "Arritmias",
+    "s": [
+      [
+        "Fibrilação atrial",
+        "Ritmo irregularmente irregular, sem onda P identificável, linha de base fibrilatória. Avaliar estabilidade, risco tromboembólico (CHA2DS2-VASc, aba Escores) e controle de frequência ou ritmo."
+      ],
+      [
+        "Flutter atrial",
+        "Ondas F em dente de serra (melhor em DII, DIII, aVF), frequência atrial ~ 300 bpm; condução 2:1 costuma dar FC ~ 150 bpm regular."
+      ]
+    ]
+  },
+  {
+    "id": "e-tsv",
+    "nome": "Taquicardias de QRS estreito e largo",
+    "grupo": "Arritmias",
+    "s": [
+      [
+        "QRS estreito regular (TSV)",
+        "FC 150–250 bpm, regular, P geralmente ausente ou retrógrada. Manobra vagal e adenosina na estável; cardioversão na instável."
+      ],
+      [
+        "QRS largo regular",
+        "Considerar taquicardia ventricular até prova em contrário (dissociação AV, batimentos de captura/fusão, concordância precordial, QRS > 160 ms). Instável: cardioversão; estável: antiarrítmico e avaliação especializada."
+      ],
+      [
+        "Torsades de pointes",
+        "TV polimórfica com giro do eixo, associada a QT longo. Sulfato de magnésio 2 g EV, corrigir potássio, suspender fármacos que prolongam o QT."
+      ]
+    ]
+  },
+  {
+    "id": "e-bav",
+    "nome": "Bloqueios atrioventriculares e de ramo",
+    "grupo": "Condução",
+    "s": [
+      [
+        "BAV 1º grau",
+        "PR > 200 ms, fixo; todas as P conduzidas. Em geral benigno."
+      ],
+      [
+        "BAV 2º grau Mobitz I (Wenckebach)",
+        "PR aumenta progressivamente até uma P bloqueada. Costuma ser nodal e benigno."
+      ],
+      [
+        "BAV 2º grau Mobitz II",
+        "PR fixo com P bloqueada súbita; risco de progressão para BAV total; geralmente exige marca-passo."
+      ],
+      [
+        "BAV total (3º grau)",
+        "Dissociação AV, P e QRS independentes; escape juncional (QRS estreito) ou ventricular (QRS largo). Instável: atropina, marca-passo transcutâneo."
+      ],
+      [
+        "Bloqueios de ramo",
+        "QRS ≥ 120 ms. BRD: rSR' em V1 e S empastada em V6. BRE: QRS largo com R monofásico em V5–V6; BRE novo com dor torácica pode indicar IAM (critérios de Sgarbossa)."
+      ]
+    ]
+  },
+  {
+    "id": "e-iam",
+    "nome": "Isquemia e infarto",
+    "grupo": "Isquemia",
+    "s": [
+      [
+        "Supra de ST (IAMCSST)",
+        "Supra de ST em ≥ 2 derivações contíguas: ≥ 1 mm na maioria; ≥ 2 mm em V2–V3 em homens ≥ 40 anos (≥ 2,5 mm se < 40) e ≥ 1,5 mm em mulheres. Reperfusão imediata (aba Fluxogramas)."
+      ],
+      [
+        "Localização",
+        "Anterior: V1–V4 (descendente anterior). Lateral: I, aVL, V5–V6 (circunflexa/diagonal). Inferior: II, III, aVF (coronária direita ou circunflexa); suspeitar de VD com V4R e evitar nitrato. Posterior: infra de ST em V1–V3 (usar V7–V9)."
+      ],
+      [
+        "Equivalentes de supra",
+        "Padrão de Wellens (T bifásica ou profundamente invertida em V2–V3, por estenose crítica da DA), de Winter (infra de ST ascendente com T alta em precordiais), BRE com critérios de Sgarbossa."
+      ],
+      [
+        "Observação",
+        "ECG normal não exclui síndrome coronariana; repetir a cada 15–30 min se a dor persistir."
+      ]
+    ]
+  },
+  {
+    "id": "e-eletro",
+    "nome": "Distúrbios eletrolíticos",
+    "grupo": "Metabólico",
+    "s": [
+      [
+        "Hipercalemia",
+        "T apiculada e simétrica, PR longo, P achatada, QRS alargado, padrão sinusoide; tratar com gluconato de cálcio se alterações no ECG."
+      ],
+      [
+        "Hipocalemia",
+        "Onda U, T achatada, infra de ST, QT aparente longo, risco de arritmias ventriculares."
+      ],
+      [
+        "Hipercalcemia / hipocalcemia",
+        "Hipercalcemia: QT curto. Hipocalcemia: QT longo por alongamento do ST."
+      ]
+    ]
+  },
+  {
+    "id": "e-outros",
+    "nome": "Embolia pulmonar, pericardite e outros",
+    "grupo": "Outros achados",
+    "s": [
+      [
+        "Embolia pulmonar",
+        "Taquicardia sinusal é o achado mais comum; padrão S1Q3T3, BRD novo, inversão de T em V1–V4 e sinais de sobrecarga de VD são menos frequentes."
+      ],
+      [
+        "Pericardite aguda",
+        "Supra de ST côncavo e difuso, infra de PR, sem imagem em espelho (exceto aVR)."
+      ],
+      [
+        "Hipertrofia ventricular esquerda",
+        "Critérios de voltagem (ex.: Sokolow-Lyon: S em V1 + R em V5 ou V6 ≥ 35 mm) com alterações de repolarização (strain) quando presente."
+      ],
+      [
+        "Síndrome de Brugada",
+        "Supra de ST côncavo/convexo em V1–V2 com T negativa (tipo 1); risco de morte súbita; encaminhar à cardiologia."
+      ]
+    ]
+  }
+]

@@ -1,0 +1,415 @@
+[
+  [
+    "Vacinas",
+    {
+      "$re": "vacin|imunizante|toxoide",
+      "flags": ""
+    }
+  ],
+  [
+    "Soros e imunoglobulinas",
+    {
+      "$re": "\\bsoro (anti|heter)|imunoglobulin|antiveneno|antitoxin|antiofid|antiescorp|antiaracn",
+      "flags": ""
+    }
+  ],
+  [
+    "Antídotos e quelantes",
+    {
+      "$re": "uroprot|antidot|quelant|reversor|antagonista opioide|antagonista de opioide|antagonista benzod",
+      "flags": ""
+    }
+  ],
+  [
+    "Antivirais e antirretrovirais",
+    {
+      "$re": "endonucleas|transcriptas|nucleot|inibidor de entrada|antivir|antirretrov|\\barv\\b|itrnn?|inibidor de protease|integrase|neuraminidas|anti-?hiv|hepatite c|vhc|anti-?hbv|anti-?cmv|antiherp|antiinfluenza|fusao|capsideo|ccr5",
+      "flags": ""
+    }
+  ],
+  [
+    "Antifúngicos",
+    {
+      "$re": "azolic|antifung|equinocandin|poliênico|polieno",
+      "flags": ""
+    }
+  ],
+  [
+    "Antiparasitários e antimaláricos",
+    {
+      "$re": "antimonial|antiparasit|anti-?helmint|antiprotoz|antimalar|escabicid|pediculicid|leishman|tripanoss|amebicid|giardi|vermifug",
+      "flags": ""
+    }
+  ],
+  [
+    "Antibióticos e antimicobacterianos",
+    {
+      "$re": "pleuromutil|antibiot|antibacter|antimicrob|penicilin|cefalospor|carbapen|aminoglicos|macrolid|quinolon|tetraciclin|glicilcicl|glicopept|lipopept|sulfonamid|lincosam|oxazolidin|polimixin|nitroimidaz|monobact|beta-?lactam|fosfomic|nitrofuran|tuberc|hansen|rifamic|anfenic|estreptogram|antimicobac|lipoglicopept|ureia|antissept urin",
+      "flags": ""
+    }
+  ],
+  [
+    "Antineoplásicos e terapia-alvo",
+    {
+      "$re": "mek|braf|cyp17|antracenedion|antineopl|quimioter|alquilant|antimetabol|antraciclin|taxan|vinca|quinase|cdk|parp|antiandrog|antiestrog|aromatas|platin|topoisomeras|biespecif|car-?t|checkpoint|pd-?1|pd-?l1|ctla|proteassom|bcl-?2|btk|her2|egfr|alk\\b|kras|mtor|hedgehog|antiangiog|vegf(?!.*ocul)|conjugado anticorpo|adc\\b|hipometil|epotilon|antitumor|citotox|imunoconjug|radioligant|lutecio|antineo|hormonioterapia onc|degradador|selet.*receptor de estrog.*degrad|menin|idh|flt3",
+      "flags": ""
+    }
+  ],
+  [
+    "Imunossupressores e imunobiológicos",
+    {
+      "$re": "pde-?4|il-?\\d|jak|toxina b|imunossupress|imunomodul|anti-?tnf|anti-?il|interleucin|\\bjak\\b|anti-?cd|biolog|dmard|modulador|anticorpo monoclon|inibidor de calcineurin|antiproliferat|esfingosin|s1p|integrin|complemento|fcrn|anti-?ige|anti-?tslp|anti-?ifn|blys|cd20|cd38|anti-?c5",
+      "flags": ""
+    }
+  ],
+  [
+    "Corticoides",
+    {
+      "$re": "corticoid|glicocortic|mineralocortic|corticosteroid",
+      "flags": ""
+    }
+  ],
+  [
+    "Opioides",
+    {
+      "$re": "opioid|opiace|morfin",
+      "flags": ""
+    }
+  ],
+  [
+    "Analgésicos e antipiréticos",
+    {
+      "$re": "analges|antipiret",
+      "flags": ""
+    }
+  ],
+  [
+    "Anti-inflamatórios (AINEs)",
+    {
+      "$re": "\\baines?\\b|anti-?inflamat.rio n|cox-?2|coxib|oxicam",
+      "flags": ""
+    }
+  ],
+  [
+    "Antigotosos e hipouricemiantes",
+    {
+      "$re": "gota|uric|xantina",
+      "flags": ""
+    }
+  ],
+  [
+    "Anestésicos e bloqueadores neuromusculares",
+    {
+      "$re": "anestes|neuromusc|curare|reversor de bloqueio",
+      "flags": ""
+    }
+  ],
+  [
+    "Relaxantes musculares e antiespásticos",
+    {
+      "$re": "relaxante muscul|miorrelax|antiespast",
+      "flags": ""
+    }
+  ],
+  [
+    "Antidepressivos",
+    {
+      "$re": "neuroesteroid|antidepress|isrs|irsn|triciclic|imao|recaptac",
+      "flags": ""
+    }
+  ],
+  [
+    "Antipsicóticos",
+    {
+      "$re": "antipsic|neurolep",
+      "flags": ""
+    }
+  ],
+  [
+    "Ansiolíticos, hipnóticos e sedativos",
+    {
+      "$re": "benzodiaz|ansiol|hipnot|sedat|melaton|orexin|indutor do sono",
+      "flags": ""
+    }
+  ],
+  [
+    "Anticonvulsivantes",
+    {
+      "$re": "antiepil|anticonvul",
+      "flags": ""
+    }
+  ],
+  [
+    "Estabilizadores do humor",
+    {
+      "$re": "estabilizador d[eo] humor|estabilizador do humor|\\blitio\\b",
+      "flags": ""
+    }
+  ],
+  [
+    "Psicoestimulantes e tratamento da dependência",
+    {
+      "$re": "vigilia|aversiv|alcool|\\bh3\\b|psicoestim|estimulante|tdah|anfetamin|metilfenid|dependenc|tabagis|alcoolism|abstinenc|anticraving|cessacao",
+      "flags": ""
+    }
+  ],
+  [
+    "Antiparkinsonianos, antidemência e outros neurológicos",
+    {
+      "$re": "glutamato|\\bela\\b|radicais livres|parkins|dopamin|levodopa|colinesteras|demenc|nmda|amiloid|comt|mao-?b|antidisc|coreia|vmat",
+      "flags": ""
+    }
+  ],
+  [
+    "Antienxaqueca",
+    {
+      "$re": "ergot|5-?ht1|triptan|enxaquec|cgrp|gepant|ditan",
+      "flags": ""
+    }
+  ],
+  [
+    "Anti-hipertensivos: IECA, BRA e afins",
+    {
+      "$re": "ieca|inibidor da (enzima|eca)|\\bbra\\b|receptor (de|da) angiotens|sartan|aliscir|arni|neprilis",
+      "flags": ""
+    }
+  ],
+  [
+    "Betabloqueadores",
+    {
+      "$re": "betabloq|beta-?bloq|bloqueador beta",
+      "flags": ""
+    }
+  ],
+  [
+    "Bloqueadores de canal de cálcio",
+    {
+      "$re": "canal de calcio|\\bbcc\\b",
+      "flags": ""
+    }
+  ],
+  [
+    "Diuréticos",
+    {
+      "$re": "aldoster|anidrase|diuret",
+      "flags": ""
+    }
+  ],
+  [
+    "Antiarrítmicos",
+    {
+      "$re": "antiarrit",
+      "flags": ""
+    }
+  ],
+  [
+    "Inotrópicos e vasopressores",
+    {
+      "$re": "glicosideo|cardiot|inodilat|natriuret|cardioprot|beta-?agonista|simpatic|inotrop|vasopress|catecolam|simpatomim|vasoconst|adrenerg",
+      "flags": ""
+    }
+  ],
+  [
+    "Antianginosos e vasodilatadores",
+    {
+      "$re": "flebot|venot|hemorreol|vasculoprot|nitrat|antiangin|vasodilat|hipertensao pulmonar|endotelin|prostacicl|guanilato|miosina|cardiomiopat|transtirret|if\\b|ivabrad",
+      "flags": ""
+    }
+  ],
+  [
+    "Outros anti-hipertensivos",
+    {
+      "$re": "imidazolin|alfa-?1|renina|anti-?hipertens|alfa-?2|alfa-?bloq|alfabloq|simpatolit",
+      "flags": ""
+    }
+  ],
+  [
+    "Hipolipemiantes",
+    {
+      "$re": "atp-?citrato|mtp|angptl|antissens|estatin|hipolip|fibrat|ezetim|pcsk9|omega|colesterol|dislipid|triglicer|bempedo|lipoprote",
+      "flags": ""
+    }
+  ],
+  [
+    "Antiplaquetários",
+    {
+      "$re": "glicoproteina iib|par-?1|antiplaq|antiagreg|p2y12|gp ?iib",
+      "flags": ""
+    }
+  ],
+  [
+    "Anticoagulantes e trombolíticos",
+    {
+      "$re": "hbpm|anticoag|heparin|vitamina k|fator xa|xa\\b|trombin|trombolit|fibrinolit",
+      "flags": ""
+    }
+  ],
+  [
+    "Hemostáticos e fatores de coagulação",
+    {
+      "$re": "concentrad|hemoderiv|hemostat|antifibrinol|fator (de coag|viii|ix|vii|von)|coagulac|hemofil",
+      "flags": ""
+    }
+  ],
+  [
+    "Antidiabéticos e insulinas",
+    {
+      "$re": "antidiab|insulin|hipoglicem|glp-?1|sglt|dpp-?4|sulfonil|biguan|glitaz|tiazolidin|\\bgip\\b|amilin|meglitin",
+      "flags": ""
+    }
+  ],
+  [
+    "Tireoide",
+    {
+      "$re": "tireoid|tiroid",
+      "flags": ""
+    }
+  ],
+  [
+    "Hormônios sexuais e contraceptivos",
+    {
+      "$re": "contracep|anticoncep|estrog|progest|androg|testost|hormonio sexual|serm\\b|gonadotrof|gnrh|ovulac|menopaus|tocolit|uterotonic|ocitoc|prostaglandin|abortiv|maturacao cervical",
+      "flags": ""
+    }
+  ],
+  [
+    "Osteometabólicos",
+    {
+      "$re": "condroprot|rankl|bisfosf|antirreabs|osteopor|anabolico os|denosum|paratorm|calcimim|esclerostin|calcitonin|raquit",
+      "flags": ""
+    }
+  ],
+  [
+    "Outros hormônios e endocrinologia",
+    {
+      "$re": "terapia de reposicao|hormon|somatostat|vasopressin|desmopres|somatrop|\\bgh\\b|adrenal|cortisol|prolactin|acromeg|obesid|anorexigen|saciet|lipase",
+      "flags": ""
+    }
+  ],
+  [
+    "Antiulcerosos e antiácidos",
+    {
+      "$re": "mucosa gastr|bomba de prot|\\bibp\\b|antiacid|anti-?h2|antagonista h2|antiulcer|protetor gastr|bloqueador de acido|vonoprazan",
+      "flags": ""
+    }
+  ],
+  [
+    "Antieméticos e procinéticos",
+    {
+      "$re": "nk1|5-?ht3|5-?ht4|antiemet|procinet|antivertig|antinause",
+      "flags": ""
+    }
+  ],
+  [
+    "Laxantes e antidiarreicos",
+    {
+      "$re": "laxant|gc-?c|canais de cloreto|laxat|antidiarr|catart|constip|enem|secretagog|motilidade intest",
+      "flags": ""
+    }
+  ],
+  [
+    "Outros gastrointestinais e hepáticos",
+    {
+      "$re": "antiespasm|digest|enzima|biliar|antiflat|probiot|hepat|ursodes|gastro|intestin|pancreat|colitic|aminossalic|amonia|antigases|carminat",
+      "flags": ""
+    }
+  ],
+  [
+    "Broncodilatadores e antiasmáticos",
+    {
+      "$re": "leucotri|broncodil|beta-?2|antiasm|antileucot|anticolinergico inal|corticoide inal|muscarin.*inal|lama|laba|saba|xantin|anti-?il-?5|anti-?ige|ensifentr|respirat|dpoc|asma",
+      "flags": ""
+    }
+  ],
+  [
+    "Tosse, muco e vias aéreas",
+    {
+      "$re": "mucolit|expector|antitus|descongest|surfactant|fibrose pulm|antifibrot|nasal|mucoat|fluidific",
+      "flags": ""
+    }
+  ],
+  [
+    "Anti-histamínicos e antialérgicos",
+    {
+      "$re": "anti-?histam|antialerg|\\bh1\\b|estabilizador de mastocit",
+      "flags": ""
+    }
+  ],
+  [
+    "Dermatológicos",
+    {
+      "$re": "pele|reparad|caustic|fator de crescimento|dermat|queratol|retinoid|antiacne|cicatriz|emolien|despigm|fotopro|antipsori|acne|alopec|hidrat|antiprurig|topic|calcipot|vitiligo|verrug|cerat",
+      "flags": ""
+    }
+  ],
+  [
+    "Oftalmológicos",
+    {
+      "$re": "lfa-?1|ciclopleg|oftalm|colir|glaucom|midriat|ocular|cicloplég|miotico|retina|olho",
+      "flags": ""
+    }
+  ],
+  [
+    "Otológicos",
+    {
+      "$re": "cerumen|otolog|otic|ouvido",
+      "flags": ""
+    }
+  ],
+  [
+    "Urológicos e disfunção sexual",
+    {
+      "$re": "urolog|antimuscar|5-?alfa|disfuncao eret|pde-?5|fosfodiester|beta-?3|bexiga|prostat|urinar|alcalinizant urin|litiase",
+      "flags": ""
+    }
+  ],
+  [
+    "Hematológicos e eritropoéticos",
+    {
+      "$re": "tpo\\b|antianem|eritropo|colonia|g-?csf|trombopo|hematopo|ferro|hemoglobinur|anemia|falciform|hemocromat",
+      "flags": ""
+    }
+  ],
+  [
+    "Vitaminas, minerais e suplementos",
+    {
+      "$re": "folat|vitamin|suplement|mineral|polivit|calcio|magnes|potass|zinco|oligoel|nutric|aminoacid|probiot|fibra|cianocob|folic",
+      "flags": ""
+    }
+  ],
+  [
+    "Soluções, eletrólitos e expansores",
+    {
+      "$re": "acidific|alcaliniz|soluc|soro|cristaloid|coloid|albumin|expansor|eletrolit|parenteral|glicose|bicarbonat|sodio|reposicao hidr|reidrat",
+      "flags": ""
+    }
+  ],
+  [
+    "Antissépticos e desinfetantes",
+    {
+      "$re": "antissep|desinfet|germicid",
+      "flags": ""
+    }
+  ],
+  [
+    "Contrastes e diagnóstico",
+    {
+      "$re": "contrast|diagnost|radiofarm|marcador",
+      "flags": ""
+    }
+  ],
+  [
+    "Fitoterápicos e homeopáticos",
+    {
+      "$re": "fitoter|homeop|planta|extrato",
+      "flags": ""
+    }
+  ],
+  [
+    "Doenças raras e terapias gênicas",
+    {
+      "$re": "terapia genic|enzimatica|reposicao enzim|oligonucleot|antisense|sirna|chaperon|doenca rara|lisossom|orfa",
+      "flags": ""
+    }
+  ]
+]

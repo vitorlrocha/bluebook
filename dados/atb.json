@@ -1,0 +1,599 @@
+[
+  {
+    "id": "pac-amb",
+    "nome": "Pneumonia comunitária — ambulatorial",
+    "grupo": "Respiratório",
+    "s": [
+      [
+        "Sem comorbidade",
+        "Amoxicilina 500 mg–1 g VO 8/8h por 5–7 dias. Alternativa: azitromicina 500 mg/dia por 3–5 dias (se resistência pneumocócica a macrolídeo local < 25%) ou doxiciclina 100 mg VO 12/12h."
+      ],
+      [
+        "Com comorbidade (DPOC, DM, cardiopatia, hepatopatia, uso recente de antibiótico)",
+        "Amoxicilina-clavulanato 875/125 mg 12/12h + macrolídeo (ou doxiciclina), OU levofloxacino 750 mg/dia (monoterapia). Duração mínima de 5 dias e estabilidade clínica."
+      ],
+      [
+        "Observações",
+        "Avaliar gravidade (CURB-65 na aba Escores). Pneumonia aspirativa não precisa de anaeróbio extra, salvo abscesso/empiema."
+      ]
+    ]
+  },
+  {
+    "id": "pac-enf",
+    "nome": "Pneumonia comunitária — enfermaria",
+    "grupo": "Respiratório",
+    "s": [
+      [
+        "Esquema usual",
+        "Ceftriaxona 1–2 g EV/dia (ou ampicilina-sulbactam 3 g EV 6/6h) + azitromicina 500 mg/dia. Alternativa: levofloxacino 750 mg/dia (VO/EV) em monoterapia."
+      ],
+      [
+        "Duração",
+        "5–7 dias, desde que afebril ≥ 48 h e estável."
+      ],
+      [
+        "Observações",
+        "Considerar MRSA ou Pseudomonas apenas com fatores de risco (isolamento prévio, internação com antibiótico EV nos últimos 90 dias)."
+      ]
+    ]
+  },
+  {
+    "id": "pac-uti",
+    "nome": "Pneumonia comunitária — grave/UTI",
+    "grupo": "Respiratório",
+    "s": [
+      [
+        "Esquema usual",
+        "Ceftriaxona 2 g/dia + azitromicina 500 mg/dia (ou fluoroquinolona respiratória). Início imediato."
+      ],
+      [
+        "Se risco de Pseudomonas",
+        "Piperacilina-tazobactam 4,5 g 6/6h ou cefepime 2 g 8/8h ou meropenem 1 g 8/8h + (ciprofloxacino ou azitromicina)."
+      ],
+      [
+        "Se risco de MRSA",
+        "Acrescentar vancomicina (ataque 25 mg/kg, depois por nível sérico) ou linezolida 600 mg 12/12h."
+      ],
+      [
+        "Observações",
+        "Considerar corticoide (ex.: hidrocortisona 200 mg/dia) na pneumonia grave; discutir com a equipe. Pesquisar influenza no período sazonal."
+      ]
+    ]
+  },
+  {
+    "id": "pav",
+    "nome": "Pneumonia hospitalar / associada à ventilação",
+    "grupo": "Respiratório",
+    "s": [
+      [
+        "Esquema empírico",
+        "Cobertura antipseudomonas: piperacilina-tazobactam 4,5 g EV 6/6h ou cefepime 2 g 8/8h ou meropenem 1 g 8/8h."
+      ],
+      [
+        "Acrescentar MRSA se risco",
+        "Vancomicina ou linezolida 600 mg 12/12h."
+      ],
+      [
+        "Acrescentar 2º antipseudomonas se choque ou alta resistência local",
+        "Amicacina 15–20 mg/kg/dia ou ciprofloxacino 400 mg 8/8h."
+      ],
+      [
+        "Duração",
+        "Em geral 7 dias; ajustar por cultura (aspirado traqueal/lavado) e evolução. Descalonar em 48–72 h."
+      ]
+    ]
+  },
+  {
+    "id": "cistite",
+    "nome": "Cistite não complicada (mulher)",
+    "grupo": "Urinário",
+    "s": [
+      [
+        "1ª linha",
+        "Nitrofurantoína 100 mg VO 6/6h por 5 dias OU fosfomicina 3 g VO dose única."
+      ],
+      [
+        "Alternativas",
+        "Sulfametoxazol-trimetoprima 800/160 mg 12/12h por 3 dias (só se resistência local < 20%); cefalexina 500 mg 6/6h por 5–7 dias. Evitar quinolonas como 1ª escolha."
+      ],
+      [
+        "Observações",
+        "Nitrofurantoína: evitar se ClCr < 30 mL/min e em pielonefrite. Sem urocultura de rotina em quadro típico não complicado."
+      ]
+    ]
+  },
+  {
+    "id": "pielo",
+    "nome": "Pielonefrite / ITU complicada",
+    "grupo": "Urinário",
+    "s": [
+      [
+        "Ambulatorial",
+        "Ciprofloxacino 500 mg 12/12h por 7 dias ou levofloxacino 750 mg/dia por 5 dias (se resistência a quinolona < 10%); ou ceftriaxona 1 g IM/EV dose inicial."
+      ],
+      [
+        "Internação",
+        "Ceftriaxona 1–2 g/dia ou cefepime 2 g 8/8h; piperacilina-tazobactam se risco de enterococo/Pseudomonas."
+      ],
+      [
+        "Risco de ESBL (uso recente de antibiótico, internação, ESBL prévia)",
+        "Ertapenem 1 g/dia ou meropenem 1 g 8/8h."
+      ],
+      [
+        "Duração",
+        "7 dias se boa resposta e antibiótico ativo; 10–14 dias com beta-lactâmico oral. Obstrução/abscesso: drenagem. Sempre urocultura antes."
+      ]
+    ]
+  },
+  {
+    "id": "itu-gest",
+    "nome": "ITU e bacteriúria na gestação",
+    "grupo": "Urinário",
+    "s": [
+      [
+        "Bacteriúria assintomática ou cistite",
+        "Cefalexina 500 mg 6/6h, amoxicilina-clavulanato 500/125 mg 8/8h por 5–7 dias, ou fosfomicina 3 g dose única, guiado por urocultura. Nitrofurantoína é opção quando não há alternativa, evitando-se no 1º trimestre e perto do termo."
+      ],
+      [
+        "Pielonefrite",
+        "Internação; ceftriaxona 1–2 g/dia EV; completar 10–14 dias."
+      ],
+      [
+        "Evitar",
+        "Quinolonas e tetraciclinas; sulfametoxazol-trimetoprima no 1º trimestre e no fim da gestação."
+      ],
+      [
+        "Observações",
+        "Urocultura de controle após o tratamento; considerar profilaxia se recorrência."
+      ]
+    ]
+  },
+  {
+    "id": "pele-cel",
+    "nome": "Erisipela / celulite",
+    "grupo": "Pele e partes moles",
+    "s": [
+      [
+        "Ambulatorial (não purulenta)",
+        "Cefalexina 500 mg VO 6/6h por 5–7 dias; alternativa clindamicina 300–450 mg 6/6h ou amoxicilina-clavulanato."
+      ],
+      [
+        "Internação",
+        "Cefazolina 1–2 g EV 8/8h ou oxacilina 2 g EV 4/4h; clindamicina em alergia a penicilina."
+      ],
+      [
+        "Observações",
+        "Elevar o membro, tratar porta de entrada (tinea pedis, úlcera), considerar profilaxia com penicilina benzatina na erisipela de repetição."
+      ]
+    ]
+  },
+  {
+    "id": "pele-abs",
+    "nome": "Abscesso cutâneo / MRSA",
+    "grupo": "Pele e partes moles",
+    "s": [
+      [
+        "Tratamento",
+        "Drenagem é a base. Antibiótico se febre, celulite extensa, imunossupressão ou lesão em face/mão."
+      ],
+      [
+        "Oral",
+        "Sulfametoxazol-trimetoprima 800/160 mg 12/12h ou doxiciclina 100 mg 12/12h por 5–7 dias (cobrem MRSA comunitário)."
+      ],
+      [
+        "Grave/EV",
+        "Vancomicina EV ou linezolida 600 mg 12/12h."
+      ]
+    ]
+  },
+  {
+    "id": "fn",
+    "nome": "Infecção necrosante de partes moles",
+    "grupo": "Pele e partes moles",
+    "s": [
+      [
+        "Conduta",
+        "Emergência cirúrgica: desbridamento precoce. Não atrasar para exames."
+      ],
+      [
+        "Antibióticos",
+        "Piperacilina-tazobactam 4,5 g 6/6h (ou meropenem) + vancomicina + clindamicina 600–900 mg 8/8h (inibe produção de toxina)."
+      ]
+    ]
+  },
+  {
+    "id": "pe-dm",
+    "nome": "Pé diabético infectado",
+    "grupo": "Pele e partes moles",
+    "s": [
+      [
+        "Leve",
+        "Cefalexina 500 mg 6/6h ou amoxicilina-clavulanato 875/125 mg 12/12h por 1–2 semanas."
+      ],
+      [
+        "Moderada/grave",
+        "Ampicilina-sulbactam 3 g 6/6h ou piperacilina-tazobactam 4,5 g 6/6h; acrescentar vancomicina se risco de MRSA."
+      ],
+      [
+        "Osteomielite",
+        "Ressecção cirúrgica e antibiótico por semanas (ver Osteoarticular). Avaliar perfusão arterial."
+      ]
+    ]
+  },
+  {
+    "id": "mening",
+    "nome": "Meningite bacteriana aguda (adulto)",
+    "grupo": "Sistema nervoso central",
+    "s": [
+      [
+        "Empírico",
+        "Ceftriaxona 2 g EV 12/12h + vancomicina (ataque 25 mg/kg). Acrescentar ampicilina 2 g EV 4/4h se > 50 anos, imunossupressão ou gestação (Listeria)."
+      ],
+      [
+        "Corticoide",
+        "Dexametasona 0,15 mg/kg EV 6/6h por 4 dias, iniciada junto ou antes da primeira dose do antibiótico (suspender se não for pneumococo, conforme caso)."
+      ],
+      [
+        "Duração",
+        "Meningococo 7 dias; pneumococo 10–14 dias; Listeria ≥ 21 dias."
+      ],
+      [
+        "Quimioprofilaxia de contatos (meningococo)",
+        "Rifampicina 600 mg VO 12/12h por 2 dias, ou ciprofloxacino 500 mg dose única, ou ceftriaxona 250 mg IM dose única. Notificação compulsória."
+      ],
+      [
+        "Observações",
+        "Não atrasar antibiótico para tomografia ou punção. Hemoculturas antes se possível."
+      ]
+    ]
+  },
+  {
+    "id": "sepse",
+    "nome": "Sepse / choque séptico (foco indefinido)",
+    "grupo": "Sistêmico e hospitalar",
+    "s": [
+      [
+        "Tempo",
+        "Antibiótico EV em até 1 hora do reconhecimento de choque séptico (até 3 h se sepse sem choque e incerteza diagnóstica). Hemoculturas e lactato antes, sem atrasar."
+      ],
+      [
+        "Comunitária sem risco de resistência",
+        "Ceftriaxona 2 g/dia ± metronidazol se foco abdominal/pélvico."
+      ],
+      [
+        "Com risco de resistência / hospitalar",
+        "Piperacilina-tazobactam 4,5 g 6/6h ou cefepime 2 g 8/8h ou meropenem 1 g 8/8h; acrescentar vancomicina se risco de MRSA/cateter/pele."
+      ],
+      [
+        "Observações",
+        "Controle do foco (drenagem, retirada de cateter). Ajustar para função renal após as primeiras 24 h. Ver escore qSOFA/SOFA na aba Escores."
+      ]
+    ]
+  },
+  {
+    "id": "neutro",
+    "nome": "Neutropenia febril",
+    "grupo": "Sistêmico e hospitalar",
+    "s": [
+      [
+        "Empírico",
+        "Cefepime 2 g EV 8/8h ou piperacilina-tazobactam 4,5 g 6/6h ou meropenem 1 g 8/8h, em até 60 min da triagem."
+      ],
+      [
+        "Acrescentar",
+        "Vancomicina se instabilidade, infecção de cateter/pele, pneumonia ou colonização por MRSA. Considerar antifúngico se febre persistente após 4–7 dias."
+      ],
+      [
+        "Observações",
+        "Estratificar risco (MASCC/CISNE). Discutir com hematologia/infectologia."
+      ]
+    ]
+  },
+  {
+    "id": "endoc",
+    "nome": "Endocardite infecciosa",
+    "grupo": "Sistêmico e hospitalar",
+    "s": [
+      [
+        "Conduta",
+        "Pelo menos 3 pares de hemoculturas de sítios diferentes antes do antibiótico. Esquema empírico e duração (geralmente 4–6 semanas) definidos com infectologia/cardiologia, pois dependem de válvula nativa ou protética e do agente."
+      ],
+      [
+        "Empírico habitual (válvula nativa, comunitária)",
+        "Vancomicina + ceftriaxona 2 g/dia; ajustar rapidamente ao agente isolado."
+      ],
+      [
+        "Profilaxia odontológica (alto risco: prótese valvar, endocardite prévia, cardiopatia congênita cianótica)",
+        "Amoxicilina 2 g VO 30–60 min antes do procedimento (alérgicos: azitromicina 500 mg ou clindamicina 600 mg)."
+      ]
+    ]
+  },
+  {
+    "id": "osteo",
+    "nome": "Artrite séptica / osteomielite",
+    "grupo": "Osteoarticular",
+    "s": [
+      [
+        "Empírico",
+        "Cefazolina 2 g EV 8/8h ou oxacilina 2 g 4/4h; acrescentar vancomicina se risco de MRSA; ceftriaxona ou cefepime se risco de gram-negativo."
+      ],
+      [
+        "Duração",
+        "Artrite séptica: 2–4 semanas; osteomielite: ~6 semanas (menos após ressecção completa). Drenagem articular/desbridamento são parte do tratamento."
+      ],
+      [
+        "Observações",
+        "Hemocultura e cultura do material antes do antibiótico, se o paciente estiver estável."
+      ]
+    ]
+  },
+  {
+    "id": "intra",
+    "nome": "Infecção intra-abdominal comunitária",
+    "grupo": "Abdominal e digestivo",
+    "s": [
+      [
+        "Esquema usual",
+        "Ceftriaxona 1–2 g/dia + metronidazol 500 mg EV 8/8h; ou piperacilina-tazobactam 4,5 g 6/6h; ertapenem 1 g/dia em casos graves."
+      ],
+      [
+        "Duração",
+        "Cerca de 4 dias após controle adequado do foco (estudo STOP-IT); apendicite não complicada pode dispensar antibiótico pós-operatório."
+      ],
+      [
+        "Observações",
+        "O controle cirúrgico/drenagem do foco é o principal determinante do resultado."
+      ]
+    ]
+  },
+  {
+    "id": "divert",
+    "nome": "Diverticulite aguda",
+    "grupo": "Abdominal e digestivo",
+    "s": [
+      [
+        "Não complicada, imunocompetente",
+        "Pode-se tratar sem antibiótico, com vigilância. Se usar: amoxicilina-clavulanato 875/125 mg 12/12h por 4–7 dias."
+      ],
+      [
+        "Complicada/internação",
+        "Ceftriaxona + metronidazol ou piperacilina-tazobactam; abscessos > 4 cm: drenagem percutânea."
+      ]
+    ]
+  },
+  {
+    "id": "colang",
+    "nome": "Colecistite / colangite",
+    "grupo": "Abdominal e digestivo",
+    "s": [
+      [
+        "Esquema",
+        "Ceftriaxona 2 g/dia + metronidazol 500 mg 8/8h; ou piperacilina-tazobactam 4,5 g 6/6h (grave)."
+      ],
+      [
+        "Observações",
+        "Colangite: drenagem biliar urgente (CPRE) nos graves. Colecistite: colecistectomia precoce; antibiótico por ~4 dias após cirurgia se foco resolvido."
+      ]
+    ]
+  },
+  {
+    "id": "pbe",
+    "nome": "Peritonite bacteriana espontânea (cirrose)",
+    "grupo": "Abdominal e digestivo",
+    "s": [
+      [
+        "Tratamento",
+        "Ceftriaxona 2 g/dia (ou cefotaxima 2 g 8/8h) por 5–7 dias. Paracentese diagnóstica com neutrófilos ≥ 250/mm³."
+      ],
+      [
+        "Albumina",
+        "1,5 g/kg no dia 1 e 1 g/kg no dia 3, principalmente se creatinina > 1 mg/dL, ureia > 60 ou bilirrubina > 4."
+      ],
+      [
+        "Profilaxia secundária",
+        "Norfloxacino 400 mg/dia ou ciprofloxacino 500 mg/dia, conforme disponibilidade."
+      ]
+    ]
+  },
+  {
+    "id": "diarreia",
+    "nome": "Diarreia infecciosa / C. difficile",
+    "grupo": "Abdominal e digestivo",
+    "s": [
+      [
+        "Diarreia aguda bacteriana",
+        "Maioria não precisa de antibiótico (hidratação). Indicar se grave, disenteria com febre, imunossupressão ou viajante: azitromicina 500 mg/dia por 3 dias (ou 1 g dose única)."
+      ],
+      [
+        "Clostridioides difficile (1º episódio)",
+        "Vancomicina 125 mg VO 6/6h por 10 dias ou fidaxomicina 200 mg 12/12h por 10 dias; metronidazol 500 mg 8/8h é alternativa se as anteriores indisponíveis. Suspender antibiótico causador quando possível."
+      ]
+    ]
+  },
+  {
+    "id": "hp",
+    "nome": "Helicobacter pylori",
+    "grupo": "Abdominal e digestivo",
+    "s": [
+      [
+        "Terapia tríplice",
+        "IBP em dose plena 12/12h + amoxicilina 1 g 12/12h + claritromicina 500 mg 12/12h por 14 dias."
+      ],
+      [
+        "Quádrupla com bismuto",
+        "IBP 12/12h + subsalicilato/subcitrato de bismuto + tetraciclina + metronidazol por 14 dias (alternativa se resistência a claritromicina ou falha prévia)."
+      ],
+      [
+        "Observações",
+        "Confirmar erradicação ≥ 4 semanas após o fim, com IBP suspenso por 2 semanas."
+      ]
+    ]
+  },
+  {
+    "id": "faringo",
+    "nome": "Faringoamigdalite estreptocócica",
+    "grupo": "Otorrino",
+    "s": [
+      [
+        "1ª linha",
+        "Penicilina benzatina 1.200.000 UI IM dose única (adulto e criança ≥ 27 kg; 600.000 UI se < 27 kg) OU amoxicilina 500 mg 8/8h por 10 dias."
+      ],
+      [
+        "Alergia à penicilina",
+        "Azitromicina 500 mg/dia por 5 dias, ou cefalexina 500 mg 6/6h por 10 dias se alergia não grave."
+      ],
+      [
+        "Observações",
+        "Tratar se teste rápido/cultura positivo ou Centor/McIsaac alto. Prevenção da febre reumática é o objetivo principal."
+      ]
+    ]
+  },
+  {
+    "id": "oma",
+    "nome": "Otite média aguda e sinusite bacteriana",
+    "grupo": "Otorrino",
+    "s": [
+      [
+        "Otite média aguda (criança)",
+        "Amoxicilina 80–90 mg/kg/dia em 2 doses por 10 dias (< 2 anos) ou 5–7 dias (≥ 2 anos). Observação sem antibiótico é possível em ≥ 2 anos com quadro leve e unilateral. Falha: amoxicilina-clavulanato."
+      ],
+      [
+        "Sinusite bacteriana aguda (adulto)",
+        "Só se > 10 dias sem melhora, piora após melhora inicial ou quadro grave. Amoxicilina ± clavulanato por 5–7 dias; alternativa doxiciclina."
+      ],
+      [
+        "Observações",
+        "Resfriado e rinossinusite viral não indicam antibiótico."
+      ]
+    ]
+  },
+  {
+    "id": "pac-ped",
+    "nome": "Pneumonia comunitária — pediatria",
+    "grupo": "Respiratório",
+    "s": [
+      [
+        "Ambulatorial",
+        "Amoxicilina 50–90 mg/kg/dia em 2–3 doses por 5–7 dias."
+      ],
+      [
+        "Internação",
+        "Penicilina cristalina 150.000 UI/kg/dia 6/6h ou ampicilina 150–200 mg/kg/dia; ceftriaxona se grave. Acrescentar macrolídeo (azitromicina 10 mg/kg/dia) se suspeita de atípicos, sobretudo em ≥ 5 anos."
+      ],
+      [
+        "Observações",
+        "Avaliar sinais de gravidade e saturação. Doses conforme protocolo pediátrico local."
+      ]
+    ]
+  },
+  {
+    "id": "uretrite",
+    "nome": "Uretrite e cervicite (gonococo e clamídia)",
+    "grupo": "ISTs e ginecologia",
+    "s": [
+      [
+        "Esquema (MS Brasil)",
+        "Ceftriaxona 500 mg IM dose única + azitromicina 1 g VO dose única."
+      ],
+      [
+        "Observações",
+        "Tratar parceiros; pesquisar sífilis, HIV e hepatites. Notificação conforme norma local."
+      ]
+    ]
+  },
+  {
+    "id": "sifilis",
+    "nome": "Sífilis",
+    "grupo": "ISTs e ginecologia",
+    "s": [
+      [
+        "Recente (primária, secundária, latente < 1 ano)",
+        "Penicilina G benzatina 2.400.000 UI IM dose única."
+      ],
+      [
+        "Tardia ou de duração ignorada",
+        "Penicilina G benzatina 2.400.000 UI IM por semana, 3 doses."
+      ],
+      [
+        "Neurossífilis",
+        "Penicilina cristalina 18–24 milhões UI/dia EV por 14 dias."
+      ],
+      [
+        "Gestante",
+        "Somente penicilina; se alergia, dessensibilizar. Seguimento com VDRL/teste não treponêmico."
+      ]
+    ]
+  },
+  {
+    "id": "dip",
+    "nome": "Doença inflamatória pélvica",
+    "grupo": "ISTs e ginecologia",
+    "s": [
+      [
+        "Ambulatorial",
+        "Ceftriaxona 500 mg IM dose única + doxiciclina 100 mg VO 12/12h + metronidazol 500 mg VO 12/12h, por 14 dias."
+      ],
+      [
+        "Internação (grave, abscesso tubo-ovariano, gestante)",
+        "Ceftriaxona 1 g/dia EV + doxiciclina + metronidazol; considerar clindamicina + gentamicina."
+      ]
+    ]
+  },
+  {
+    "id": "vagin",
+    "nome": "Vaginites e vaginoses",
+    "grupo": "ISTs e ginecologia",
+    "s": [
+      [
+        "Vaginose bacteriana",
+        "Metronidazol 500 mg VO 12/12h por 7 dias (ou gel vaginal 5 dias)."
+      ],
+      [
+        "Candidíase vulvovaginal",
+        "Fluconazol 150 mg VO dose única ou antifúngico tópico (miconazol, clotrimazol)."
+      ],
+      [
+        "Tricomoníase",
+        "Metronidazol 2 g VO dose única ou 500 mg 12/12h por 7 dias; tratar parceiro."
+      ]
+    ]
+  },
+  {
+    "id": "tb",
+    "nome": "Tuberculose pulmonar (esquema básico)",
+    "grupo": "Outros",
+    "s": [
+      [
+        "Esquema (MS Brasil, adulto e adolescente)",
+        "RIPE em dose fixa combinada por 2 meses (rifampicina, isoniazida, pirazinamida, etambutol), seguido de RH por 4 meses."
+      ],
+      [
+        "Observações",
+        "Doença de notificação compulsória; tratamento supervisionado. Casos especiais (resistência, hepatopatia, TB extrapulmonar/meníngea) com serviço de referência."
+      ]
+    ]
+  },
+  {
+    "id": "prof-cir",
+    "nome": "Profilaxia antibiótica cirúrgica",
+    "grupo": "Outros",
+    "s": [
+      [
+        "Esquema",
+        "Cefazolina 2 g EV (3 g se > 120 kg) 30–60 min antes da incisão; repetir a cada 4 h ou se perda sanguínea > 1,5 L."
+      ],
+      [
+        "Cirurgia colorretal",
+        "Cefazolina + metronidazol 500 mg EV (ou cefoxitina)."
+      ],
+      [
+        "Alergia grave a beta-lactâmico ou risco de MRSA",
+        "Clindamicina 900 mg EV ou vancomicina 15 mg/kg."
+      ],
+      [
+        "Duração",
+        "Dose única ou até 24 h; não estender para manter dreno ou cateter."
+      ]
+    ]
+  }
+]

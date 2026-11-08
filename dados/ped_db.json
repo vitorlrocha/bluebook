@@ -1,0 +1,2550 @@
+[
+  {
+    "k": "cefuroxima",
+    "n": "Cefuroxima",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          20,
+          30
+        ],
+        "dd": 25,
+        "b": "dia",
+        "f": 2,
+        "mxd": 1000,
+        "fonte": "Ref",
+        "ob": "20-30 mg/kg/dia em 2 doses (otite/sinusite: 15 mg/kg/dose 12/12 h; faringite: 10 mg/kg/dose); máx. 1 g/dia VO (500 mg/dose). Tomar com alimentos. Comprimidos apenas ≥ 13 anos; suspensão e comprimidos não são intercambiáveis mg a mg.",
+        "ap": [
+          {
+            "l": "Suspensão 250 mg/5 mL (50 mg/mL)",
+            "c": 50
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "racecadotrila",
+    "n": "Racecadotrila",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          1.5,
+          1.5
+        ],
+        "b": "dose",
+        "f": 3,
+        "mx": 100,
+        "fonte": "Ref",
+        "ob": "1,5 mg/kg/dose 3x/dia antes das refeições, por até 7 dias, como adjuvante da reidratação oral.",
+        "ap": [
+          {
+            "l": "Sachê infantil 10 mg (lactentes < 9 kg)",
+            "mg": 10,
+            "u": "sachê(s)"
+          },
+          {
+            "l": "Sachê infantil 30 mg (≥ 13 kg)",
+            "mg": 30,
+            "u": "sachê(s)"
+          }
+        ],
+        "rev": ""
+      }
+    ]
+  },
+  {
+    "k": "cefazolina",
+    "n": "Cefazolina",
+    "v": [
+      {
+        "via": "EV",
+        "d": [
+          25,
+          150
+        ],
+        "dd": 75,
+        "b": "dia",
+        "f": 3,
+        "mxd": 6000,
+        "fonte": "Ref",
+        "ob": "Infecções leves a moderadas: 25-50 mg/kg/dia em 3 doses (máx. 3 g/dia); graves: 100-150 mg/kg/dia em 3 doses (máx. 6 g/dia). Profilaxia cirúrgica: 30 mg/kg 30-60 min antes da incisão (máx. 2 g; 3 g se ≥ 120 kg), repetir após 4 h. Endocardite: 100 mg/kg/dia, máx. 12 g/dia. RN: 25 mg/kg a cada 12 h.",
+        "ap": [
+          {
+            "l": "Frasco 1 g (diluir conforme bula)",
+            "c": 100
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "oxacilina",
+    "n": "Oxacilina",
+    "v": [
+      {
+        "via": "EV",
+        "d": [
+          100,
+          200
+        ],
+        "dd": 150,
+        "b": "dia",
+        "f": 4,
+        "mxd": 12000,
+        "fonte": "Ref",
+        "ob": "100-200 mg/kg/dia em 4-6 doses (máx. 12 g/dia); meningite/endocardite: até 200 mg/kg/dia. Infecções leves: 50 mg/kg/dia. ≥ 40 kg: 250 mg-1 g a cada 4-6 h. RN: 25 mg/kg/dose com intervalo conforme IG e idade.",
+        "ap": [
+          {
+            "l": "Frasco 500 mg (diluir conforme bula)",
+            "c": 50
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "ampicilina",
+    "n": "Ampicilina",
+    "v": [
+      {
+        "via": "EV",
+        "d": [
+          50,
+          200
+        ],
+        "dd": 100,
+        "b": "dia",
+        "f": 4,
+        "mxd": 8000,
+        "fonte": "Ref",
+        "ob": "Infecção geral: 50-200 mg/kg/dia em 4 doses (máx. 8 g/dia). Meningite: 300-400 mg/kg/dia em 4-6 doses (máx. 12 g/dia — altere o campo 'dose máxima diária'). RN: IG ≤ 34 s e ≤ 7 d: 50 mg/kg a cada 12 h; > 34 s: 50 mg/kg a cada 8 h. Profilaxia cirúrgica: 50 mg/kg (máx. 2 g).",
+        "ap": [
+          {
+            "l": "Frasco 1 g (diluir conforme bula)",
+            "c": 100
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "gentamicina",
+    "n": "Gentamicina",
+    "v": [
+      {
+        "via": "EV/IM",
+        "d": [
+          5,
+          7.5
+        ],
+        "dd": 5,
+        "b": "dia",
+        "f": 1,
+        "mxd": 480,
+        "fonte": "Ref",
+        "ob": "Dose única diária: 5-7,5 mg/kg/dia (RN a termo ≤ 7 d: 4 mg/kg/dia; pré-termo < 30 sem: 5 mg/kg a cada 48 h). Esquema fracionado: 2-2,5 mg/kg a cada 8 h. Metas: pico 5-10 mcg/mL e vale < 1-1,5 mcg/mL. Monitorar creatinina e audição.",
+        "ap": [
+          {
+            "l": "Ampola 40 mg/mL",
+            "c": 40
+          },
+          {
+            "l": "Ampola 10 mg/mL (pediátrica)",
+            "c": 10
+          }
+        ],
+        "al": "Aminoglicosídeo: nefro e ototóxico — ajustar pela função renal e dosar nível sérico.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "paracetamol",
+    "n": "Paracetamol",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          10,
+          15
+        ],
+        "b": "dose",
+        "f": 4,
+        "mdk": 75,
+        "mxd": 4000,
+        "fonte": "HILF + Ref",
+        "ob": "SBP 2021: 10-15 mg/kg/dose a cada 4-6 h; máx. 75 mg/kg/dia (e 4 g/dia; dose única máx. 1 g). Dose tóxica: ≥ 120 mg/kg. Único antitérmico recomendado em < 1 mês (dose ajustada à idade gestacional). Não alternar antitérmicos (SBP). Gotejadores variam: prefira seringa dosadora.",
+        "ap": [
+          {
+            "l": "Gotas 200 mg/mL",
+            "c": 200,
+            "gt": 1,
+            "mxMl": 2.5
+          },
+          {
+            "l": "Solução oral 32 mg/mL",
+            "c": 32
+          }
+        ],
+        "mx": 1000,
+        "rev": "Conferida em 11/2026: SBP — DC Manejo da febre aguda (2021); rótulo FDA"
+      },
+      {
+        "via": "EV",
+        "d": [
+          15,
+          15
+        ],
+        "b": "dose",
+        "f": 4,
+        "mx": 750,
+        "mdk": 75,
+        "fonte": "Ref",
+        "ob": "2-12 anos e < 50 kg: 15 mg/kg a cada 6 h ou 12,5 mg/kg a cada 4 h (máx. 750 mg/dose; 75 mg/kg/dia, até 3.750 mg). ≥ 50 kg: 1.000 mg a cada 6 h (máx. 4 g/dia). Lactentes < 2 anos: 15 mg/kg a cada 6 h, máx. 60 mg/kg/dia; RN (≤ 28 dias): 12,5 mg/kg a cada 6 h, máx. 50 mg/kg/dia — reduzir a dose nessas faixas (bula nacional: lactentes < 10 kg usar 7,5 mg/kg/dose, máx. 30 mg/kg/dia).",
+        "ap": [
+          {
+            "l": "Solução EV 10 mg/mL",
+            "c": 10
+          }
+        ],
+        "mxd": 4000,
+        "al": "Menores de 10 kg: não use 15 mg/kg; reduza conforme a bula (7,5 mg/kg/dose). RN: máx. 50 mg/kg/dia.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "dipirona",
+    "n": "Dipirona sódica (Metamizol)",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          10,
+          12
+        ],
+        "dd": 12,
+        "b": "dose",
+        "f": 4,
+        "fonte": "Ref",
+        "ob": "SBP 2021: 10-12 mg/kg/dose (ação 4-6 h), até 4x/dia. ATENÇÃO: a dose tradicional de 1 gota/kg (gotas 500 mg/mL ≈ 25 mg/gota) equivale a ~25 mg/kg e leva a SUPERDOSE (hipotensão, hipotermia, sudorese) — use ~0,5 gota/kg. Contraindicada em < 3 meses ou < 5 kg (bula). Não alternar antitérmicos.",
+        "ap": [
+          {
+            "l": "Gotas 500 mg/mL",
+            "c": 500,
+            "gt": 1,
+            "mxMl": 2
+          },
+          {
+            "l": "Solução oral 50 mg/mL (infantil, 250 mg/5 mL)",
+            "c": 50,
+            "mxMl": 20
+          }
+        ],
+        "rev": "Conferida em 11/2026: SBP — DC Manejo da febre aguda (2021)",
+        "al": "SBP 2021: 1 gota/kg de dipirona é superdose (≈ 25 mg/kg). Dose recomendada: 10-12 mg/kg (≈ 0,5 gota/kg).",
+        "mx": 1000,
+        "mxd": 4000
+      },
+      {
+        "via": "IM/EV",
+        "d": [
+          15,
+          25
+        ],
+        "dd": 15,
+        "b": "dose",
+        "f": 4,
+        "fonte": "HILF",
+        "ob": "Bula/HILF: 15-25 mg/kg/dose a cada 6 h, diluída, infusão lenta (risco de hipotensão). Para febre, a SBP 2021 recomenda 10-12 mg/kg/dose — use a menor dose eficaz. Contraindicada em < 3 meses ou < 5 kg.",
+        "ap": [
+          {
+            "l": "Solução injetável 500 mg/mL",
+            "c": 500,
+            "mxMl": 2
+          }
+        ],
+        "rev": "Faixa da bula/HILF; SBP 2021 citada para antitérmico",
+        "mx": 1000,
+        "mxd": 4000
+      }
+    ]
+  },
+  {
+    "k": "ibuprofeno",
+    "n": "Ibuprofeno",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          5,
+          10
+        ],
+        "dd": 5,
+        "b": "dose",
+        "f": 4,
+        "mdk": 40,
+        "fonte": "HILF + Ref",
+        "ob": "SBP 2021: antitérmico 5-10 mg/kg/dose a cada 6-8 h; máx. 40 mg/kg/dia e 400 mg/dose. Idade mínima: 6 meses. Não usar em asma induzida por AINE (pode em outras asmas), desidratação, suspeita de dengue ou varicela. Não alternar antitérmicos.",
+        "ap": [
+          {
+            "l": "Gotas 50 mg/mL",
+            "c": 50,
+            "gt": 1
+          },
+          {
+            "l": "Gotas 100 mg/mL",
+            "c": 100,
+            "gt": 1,
+            "mxMl": 2
+          },
+          {
+            "l": "Suspensão 20 mg/mL (100 mg/5 mL)",
+            "c": 20
+          }
+        ],
+        "mx": 400,
+        "al": "Não usar em menores de 6 meses. Evitar na suspeita de dengue, desidratação e varicela.",
+        "rev": "Conferida em 11/2026: SBP — DC Manejo da febre aguda (2021); rótulo FDA"
+      }
+    ]
+  },
+  {
+    "k": "cetoprofeno",
+    "n": "Cetoprofeno",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          1,
+          1
+        ],
+        "b": "dose",
+        "f": 3,
+        "fonte": "HILF",
+        "ob": "HILF: 1 gota/kg/dose a cada 8 h por 2-5 dias (> 1 ano; máx. 50 gotas).",
+        "ap": [
+          {
+            "l": "Gotas 20 mg/mL",
+            "c": 20,
+            "gt": 1,
+            "mxMl": 2.5
+          }
+        ],
+        "rev": "",
+        "mx": 100,
+        "mxd": 300
+      },
+      {
+        "via": "IM/EV",
+        "d": [
+          1,
+          1
+        ],
+        "b": "dose",
+        "f": 3,
+        "fonte": "HILF",
+        "ob": "HILF: 1 mg/kg/dose a cada 8 h (> 1 ano); EV diluído e infundido lentamente.",
+        "ap": [
+          {
+            "l": "Solução injetável 50 mg/mL",
+            "c": 50
+          }
+        ],
+        "rev": "",
+        "mx": 100,
+        "mxd": 300
+      }
+    ]
+  },
+  {
+    "k": "amoxicilina + clavulanato",
+    "n": "Amoxicilina + Clavulanato de potássio",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          25,
+          90
+        ],
+        "dd": 50,
+        "b": "dia",
+        "f": 3,
+        "mxd": 4000,
+        "fonte": "HILF",
+        "ob": "Dose calculada pela AMOXICILINA. 20-40 mg/kg/dia 8/8 h (125 ou 250 mg/5 mL) ou 25-45 mg/kg/dia 12/12 h (200 ou 400 mg/5 mL); ES-600 (600+42,9 mg/5 mL): 90 mg/kg/dia em 2 doses para otite/sinusite persistente. Menores de 3 meses: 30 mg/kg/dia em 2 doses (125 mg/5 mL). ≥ 40 kg: doses de adulto.",
+        "ap": [
+          {
+            "l": "Suspensão 250+62,5 mg/5 mL (50 mg/mL)",
+            "c": 50,
+            "mxMl": 10
+          },
+          {
+            "l": "Suspensão 400+57 mg/5 mL (80 mg/mL)",
+            "c": 80,
+            "d": [
+              25,
+              45
+            ],
+            "dd": 26.667,
+            "b": "dose",
+            "f": 2,
+            "mxMl": 10
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "amoxicilina",
+    "n": "Amoxicilina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          25,
+          90
+        ],
+        "dd": 50,
+        "b": "dia",
+        "f": 3,
+        "mxd": 4000,
+        "fonte": "HILF + Ref",
+        "ob": "20-50 mg/kg/dia (8/8 h ou 12/12 h). Otite/sinusite/pneumonia com alta dose: 80-90 mg/kg/dia em 2 doses (ES-600: 45 mg/kg/dose 12/12 h; não usar se ≥ 40 kg). Faringite (estreptococo A): 50 mg/kg 1x/dia (máx. 1.000 mg) ou 25 mg/kg 12/12 h (máx. 500 mg/dose). Máx. 4 g/dia; ≥ 40 kg: doses de adulto. ≤ 3 meses: até 30 mg/kg/dia em 2 doses. HILF: peso ÷ 3 = mL 8/8 h (250 mg/5 mL) ou 12/12 h (400 mg/5 mL), 7-14 dias. PAC ambulatorial 2 meses-5 anos (SBP): 50 mg/kg/dia a cada 8 ou 12 h por no mínimo 7 dias, reavaliando em 48-72 h.",
+        "ap": [
+          {
+            "l": "Suspensão 250 mg/5 mL (50 mg/mL)",
+            "c": 50,
+            "mxMl": 10
+          },
+          {
+            "l": "Suspensão 400 mg/5 mL (80 mg/mL)",
+            "c": 80,
+            "d": [
+              25,
+              45
+            ],
+            "dd": 26.667,
+            "b": "dose",
+            "f": 2,
+            "mxMl": 10
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "azitromicina",
+    "n": "Azitromicina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          10,
+          10
+        ],
+        "b": "dose",
+        "f": 1,
+        "mx": 500,
+        "fonte": "HILF",
+        "ob": "10 mg/kg/dose 1x/dia por 3 dias (otite, sinusite; máx. 500 mg). Pneumonia/coqueluche: 10 mg/kg no dia 1 (máx. 500 mg), depois 5 mg/kg/dia (máx. 250 mg) por mais 4 dias. Faringite (≥ 2 anos): 12 mg/kg/dia por 5 dias (máx. 500 mg). Otite em dose única: 30 mg/kg (máx. 1.500 mg).",
+        "ap": [
+          {
+            "l": "Suspensão 200 mg/5 mL (40 mg/mL)",
+            "c": 40
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "cefalexina",
+    "n": "Cefalexina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          25,
+          100
+        ],
+        "dd": 50,
+        "b": "dia",
+        "f": 4,
+        "mxd": 4000,
+        "fonte": "HILF",
+        "ob": "Leve a moderada: 25-50 mg/kg/dia em 2-4 doses; grave/pneumonia por MSSA: 75-100 mg/kg/dia em 3-4 doses. Máx. 4 g/dia. Segurança não estabelecida em < 1 ano (rótulo).",
+        "ap": [
+          {
+            "l": "Suspensão 250 mg/5 mL (50 mg/mL)",
+            "c": 50,
+            "mxMl": 10
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "cefaclor",
+    "n": "Cefaclor",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          10,
+          15
+        ],
+        "b": "dose",
+        "f": 2,
+        "mxd": 1000,
+        "fonte": "HILF",
+        "ob": "20-40 mg/kg/dia a cada 8-12 h (otite média: 40 mg/kg/dia), máx. 1 g/dia (bula).",
+        "ap": [
+          {
+            "l": "Suspensão 375 mg/5 mL (75 mg/mL)",
+            "c": 75
+          }
+        ],
+        "rev": ""
+      }
+    ]
+  },
+  {
+    "k": "claritromicina",
+    "n": "Claritromicina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          7.5,
+          7.5
+        ],
+        "b": "dose",
+        "f": 2,
+        "mxd": 1000,
+        "fonte": "HILF",
+        "ob": "7,5 mg/kg/dose a cada 12 h (máx. 500 mg/dose; 1 g/dia). Otite/faringite 10 dias; coqueluche 7 dias. ≥ 6 meses (não estabelecido abaixo).",
+        "ap": [
+          {
+            "l": "Suspensão 250 mg/5 mL (50 mg/mL)",
+            "c": 50
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "metronidazol",
+    "n": "Metronidazol",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          5,
+          10
+        ],
+        "dd": 6.7,
+        "b": "dose",
+        "f": 3,
+        "mx": 500,
+        "fonte": "HILF + Ref",
+        "ob": "Giardíase (SBP): 15 mg/kg/dia em 3 doses por 5-7 dias. Amebíase intestinal/extraintestinal (SBP): 35-50 mg/kg/dia em 3 doses por 10 dias, seguida de amebicida intraluminal. Infecção por anaeróbios: 7,5-10 mg/kg/dose a cada 8 h. C. difficile: 7,5 mg/kg/dose 3-4x/dia (máx. 500 mg/dose). Máx. 2,25 g/dia VO.",
+        "ap": [
+          {
+            "l": "Suspensão 200 mg/5 mL (40 mg/mL)",
+            "c": 40
+          }
+        ],
+        "mdk": 50,
+        "mxd": 2250,
+        "rev": "Conferida em 11/2026: SBP — GPA Parasitoses intestinais: diagnóstico e tratamento; rótulos FDA/AAP"
+      },
+      {
+        "via": "EV",
+        "d": [
+          7.5,
+          7.5
+        ],
+        "b": "dose",
+        "f": 3,
+        "mx": 500,
+        "fonte": "Ref",
+        "ob": "7,5 mg/kg/dose a cada 8 h (22,5-40 mg/kg/dia; máx. 500 mg/dose e 4 g/dia). C. difficile grave: 10 mg/kg/dose 3x/dia (máx. 500 mg).",
+        "ap": [
+          {
+            "l": "Bolsa 5 mg/mL (500 mg/100 mL)",
+            "c": 5
+          }
+        ],
+        "mxd": 4000,
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "meropenem",
+    "n": "Meropenem",
+    "v": [
+      {
+        "via": "EV",
+        "d": [
+          30,
+          120
+        ],
+        "dd": 60,
+        "b": "dia",
+        "f": 3,
+        "mxd": 6000,
+        "fonte": "Ref",
+        "ob": "10-20 mg/kg/dose a cada 8 h (pele/abdome: 10-20 mg/kg; máx. 1 g/dose); meningite: 40 mg/kg/dose a cada 8 h (máx. 2 g/dose). RN: 20-30 mg/kg a cada 8-12 h conforme IG e idade. Infundir em 15-30 min.",
+        "ap": [
+          {
+            "l": "Frasco 500 mg (reconstituir em 10 mL = 50 mg/mL)",
+            "c": 50
+          }
+        ],
+        "mx": 2000,
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "ceftriaxona",
+    "n": "Ceftriaxona",
+    "v": [
+      {
+        "via": "IM",
+        "d": [
+          50,
+          50
+        ],
+        "b": "dose",
+        "f": 1,
+        "mx": 1000,
+        "fonte": "HILF",
+        "ob": "Otite média (dose única IM): 50 mg/kg (máx. 1 g). Diluir com lidocaína 1% conforme bula.",
+        "ap": [
+          {
+            "l": "Frasco 500 mg + 2 mL de lidocaína 1% (≈ 250 mg/mL)",
+            "c": 250
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      },
+      {
+        "via": "EV",
+        "d": [
+          50,
+          100
+        ],
+        "dd": 50,
+        "b": "dia",
+        "f": 1,
+        "mxd": 4000,
+        "fonte": "Ref",
+        "ob": "Sepse/pneumonia: 50-75 mg/kg/dia em 1-2 doses (máx. 2 g/dia na pneumonia); infecções graves e meningite: 100 mg/kg/dia (dose de ataque 100 mg/kg), máx. 4 g/dia. RN: 50 mg/kg a cada 24 h.",
+        "ap": [
+          {
+            "l": "Frasco 1 g em 10 mL (≈ 100 mg/mL)",
+            "c": 100
+          }
+        ],
+        "al": "Neonatos: não usar com soluções EV que contenham cálcio (precipitação); cautela na hiperbilirrubinemia. Contraindicada em prematuros até 41 semanas de idade corrigida.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "sulfametoxazol",
+    "n": "Sulfametoxazol + Trimetoprima",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          3,
+          6
+        ],
+        "dd": 4,
+        "b": "dose",
+        "f": 2,
+        "mx": 160,
+        "fonte": "Ref",
+        "ob": "Dose pelo TMP: ITU/otite 4 mg/kg/dose a cada 12 h (8 mg/kg/dia); PJP tratamento: 15-20 mg/kg/dia de TMP em 3-4 doses; profilaxia PJP: 2,5-5 mg/kg 12/12 h, 3 dias/semana (máx. 160 mg/dose). Idade mínima: 2 meses (teoricamente kernicterus no RN).",
+        "ap": [
+          {
+            "l": "Suspensão 200+40 mg/5 mL (trimetoprima 8 mg/mL)",
+            "c": 8
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "doxiciclina",
+    "n": "Doxiciclina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          2,
+          4
+        ],
+        "dd": 2,
+        "b": "dia",
+        "f": 2,
+        "mxd": 200,
+        "fonte": "Ref",
+        "ob": "< 45 kg: 2,2-4,4 mg/kg/dia (2 doses); infecção grave: 2,2 mg/kg a cada 12 h; ≥ 45 kg: 100 mg a cada 12 h. Máx. 200 mg/dia. Evitar < 8 anos, exceto riquetsioses (febre maculosa), cólera e outras infecções graves em que o benefício supera o risco de pigmentação dentária.",
+        "ap": [
+          {
+            "l": "Comprimido 100 mg",
+            "mg": 100,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "aciclovir",
+    "n": "Aciclovir",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          20,
+          20
+        ],
+        "b": "dose",
+        "f": 4,
+        "mx": 800,
+        "fonte": "Ref",
+        "ob": "Varicela (≥ 2 anos, ≤ 40 kg): 20 mg/kg/dose 4x/dia por 5 dias (máx. 800 mg/dose e 3,2 g/dia). Herpes labial/genital recorrente: 20-25 mg/kg 2x/dia. Não estabelecido em < 2 anos (VO).",
+        "ap": [
+          {
+            "l": "Suspensão 200 mg/5 mL (40 mg/mL)",
+            "c": 40
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      },
+      {
+        "via": "EV",
+        "d": [
+          5,
+          20
+        ],
+        "dd": 10,
+        "b": "dose",
+        "f": 3,
+        "fonte": "Ref",
+        "ob": "10 mg/kg a cada 8 h (imunossuprimido, HSV grave; < 1 ano varicela); encefalite herpética 3 meses-12 anos: 10-20 mg/kg a cada 8 h; RN HSV: 20 mg/kg a cada 8 h por 14-21 dias. Não ultrapassar 20 mg/kg a cada 8 h. Infundir em ≥ 1 h (≤ 7 mg/mL).",
+        "ap": [
+          {
+            "l": "Reconstituído 25 mg/mL",
+            "c": 25
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)",
+        "mdk": 60
+      }
+    ]
+  },
+  {
+    "k": "oseltamivir",
+    "n": "Oseltamivir",
+    "v": [
+      {
+        "via": "VO (≥ 1 ano, por peso)",
+        "fx": [
+          [
+            15,
+            30
+          ],
+          [
+            23,
+            45
+          ],
+          [
+            40,
+            60
+          ],
+          [
+            9999,
+            75
+          ]
+        ],
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "ob": "Dose fixa por faixa de peso, 12/12 h por 5 dias: ≤ 15 kg 30 mg; 15-23 kg 45 mg; 23-40 kg 60 mg; > 40 kg 75 mg.",
+        "ap": [
+          {
+            "l": "Suspensão extemporânea 15 mg/mL (cápsula 75 mg + 5 mL de água; confirme o protocolo local — outras orientações usam 7,5 mL = 10 mg/mL)",
+            "c": 15
+          },
+          {
+            "l": "Cápsula 30 mg",
+            "mg": 30,
+            "u": "cápsula"
+          },
+          {
+            "l": "Cápsula 45 mg",
+            "mg": 45,
+            "u": "cápsula"
+          },
+          {
+            "l": "Cápsula 75 mg",
+            "mg": 75,
+            "u": "cápsula"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); pré-termo: 1 mg/kg 12/12 h (< 38 sem) ou 1,5 mg/kg (38-40 sem) por idade pós-menstrual"
+      },
+      {
+        "via": "VO (< 1 ano)",
+        "d": [
+          3,
+          3.5
+        ],
+        "dd": 3,
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "ob": "Lactentes < 1 ano: 0-8 meses 3 mg/kg/dose; 9-11 meses 3,5 mg/kg/dose (MS/CDC), 12/12 h por 5 dias.",
+        "ap": [
+          {
+            "l": "Suspensão extemporânea 15 mg/mL (cápsula 75 mg + 5 mL de água; confirme o protocolo local — outras orientações usam 7,5 mL = 10 mg/mL)",
+            "c": 15
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); pré-termo: 1 mg/kg 12/12 h (< 38 sem) ou 1,5 mg/kg (38-40 sem) por idade pós-menstrual",
+        "mx": 30
+      }
+    ]
+  },
+  {
+    "k": "fluconazol",
+    "n": "Fluconazol",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          3,
+          12
+        ],
+        "dd": 6,
+        "b": "dose",
+        "f": 1,
+        "mx": 600,
+        "fonte": "Ref",
+        "ob": "Candidíase orofaríngea: 6 mg/kg no 1º dia, depois 3 mg/kg/dia; esofágica 3-12 mg/kg/dia; sistêmica/candidemia 6-12 mg/kg/dia (candidemia: ataque 12 mg/kg). Máx. 600 mg/dia (400 mg orofaríngea). RN/< 2 sem: a cada 72 h; eficácia não estabelecida < 6 meses.",
+        "ap": [
+          {
+            "l": "Suspensão 10 mg/mL (confirme no frasco)",
+            "c": 10
+          },
+          {
+            "l": "Cápsula 150 mg",
+            "mg": 150,
+            "u": "cápsula"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "prednisona",
+    "n": "Prednisona",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.5,
+          2
+        ],
+        "dd": 1,
+        "b": "dose",
+        "f": 1,
+        "mx": 60,
+        "fonte": "Ref",
+        "ob": "Asma/crupe/alergia: 1-2 mg/kg/dia (máx. 40-60 mg/dia) por 3-5 dias; imunossupressão: individualizar.",
+        "ap": [
+          {
+            "l": "Comprimido 5 mg",
+            "mg": 5,
+            "u": "comprimido"
+          },
+          {
+            "l": "Comprimido 20 mg",
+            "mg": 20,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "prednisolona",
+    "n": "Prednisolona (solução oral)",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          1,
+          2
+        ],
+        "dd": 1,
+        "b": "dose",
+        "f": 1,
+        "mx": 60,
+        "fonte": "HILF + Ref",
+        "ob": "HILF: peso ÷ 3 = mL (3 mg/mL) 1x/dia por 5-7 dias (1 mg/kg).",
+        "ap": [
+          {
+            "l": "Solução oral 3 mg/mL",
+            "c": 3,
+            "mxMl": 20
+          },
+          {
+            "l": "Solução oral 1 mg/mL",
+            "c": 1
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "dexametasona",
+    "n": "Dexametasona",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.025,
+          0.025
+        ],
+        "b": "dose",
+        "f": 4,
+        "fonte": "HILF",
+        "ob": "HILF: peso ÷ 4 = mL a cada 6 h por 5-7 dias (0,1 mg/kg/dia).",
+        "ap": [
+          {
+            "l": "Elixir 0,1 mg/mL",
+            "c": 0.1,
+            "mxMl": 15
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); meningite Hib: 0,15 mg/kg a cada 6 h por 2-4 dias; edema cerebral 0,2 mg/kg/dia",
+        "mx": 16
+      },
+      {
+        "via": "VO (crupe — dose única)",
+        "d": [
+          0.15,
+          0.6
+        ],
+        "dd": 0.15,
+        "b": "dose",
+        "f": 1,
+        "mx": 16,
+        "fonte": "Ref",
+        "ob": "Crupe: dose única 0,15-0,6 mg/kg VO/IM/IV (máx. 16 mg; muitos serviços usam 0,15 mg/kg e máx. 10 mg). Asma aguda: 0,6 mg/kg dose única.",
+        "ap": [
+          {
+            "l": "Elixir 0,1 mg/mL",
+            "c": 0.1
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); meningite Hib: 0,15 mg/kg a cada 6 h por 2-4 dias; edema cerebral 0,2 mg/kg/dia"
+      },
+      {
+        "via": "IM/EV",
+        "d": [
+          0.15,
+          0.6
+        ],
+        "dd": 0.15,
+        "b": "dose",
+        "f": 3,
+        "mx": 16,
+        "fonte": "HILF",
+        "ob": "HILF: ataque 0,6 mg/kg e manutenção 0,15 mg/kg (máx. 10 mg/dose).",
+        "ap": [
+          {
+            "l": "Solução injetável 4 mg/mL",
+            "c": 4
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); meningite Hib: 0,15 mg/kg a cada 6 h por 2-4 dias; edema cerebral 0,2 mg/kg/dia"
+      }
+    ]
+  },
+  {
+    "k": "hidrocortisona",
+    "n": "Hidrocortisona (injetável)",
+    "v": [
+      {
+        "via": "EV/IM",
+        "d": [
+          4,
+          8
+        ],
+        "dd": 4,
+        "b": "dose",
+        "f": 4,
+        "mx": 250,
+        "fonte": "Ref",
+        "ob": "Anafilaxia/asma grave: 4-8 mg/kg/dose (máx. 250 mg). Crise adrenal: 2-3 mg/kg EV/IO em bolus (máx. 100 mg), depois 50-100 mg/m²/dia em 4 doses. Reposição fisiológica: 8-10 mg/m²/dia VO em 3 doses; estresse: dobrar/triplicar a dose na febre.",
+        "ap": [
+          {
+            "l": "Frasco 100 mg/2 mL (50 mg/mL — confira a bula)",
+            "c": 50
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "adrenalina",
+    "n": "Adrenalina (Epinefrina)",
+    "v": [
+      {
+        "via": "IM (anafilaxia)",
+        "d": [
+          0.01,
+          0.01
+        ],
+        "b": "dose",
+        "f": 1,
+        "mx": 0.5,
+        "fonte": "HILF",
+        "ob": "HILF: 0,01 mg/kg (peso × 0,01 mL), máx. 0,5 mL IM na face lateral da coxa; repetir em 5-15 min se necessário.",
+        "ap": [
+          {
+            "l": "Ampola 1 mg/mL (1:1.000)",
+            "c": 1,
+            "mxMl": 0.5
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); IM anafilaxia: 0,01 mg/kg (máx. 0,3 mg se < 30 kg; 0,5 mg ≥ 30 kg), repetir a cada 5-10 min; PCR 0,01 mg/kg IV/IO (máx. 1 mg) a cada 3-5 min"
+      },
+      {
+        "via": "EV/IO (parada cardíaca)",
+        "d": [
+          0.01,
+          0.01
+        ],
+        "b": "dose",
+        "f": 1,
+        "mx": 1,
+        "fonte": "Ref",
+        "ob": "PCR: 0,01 mg/kg (0,1 mL/kg da diluição 1:10.000) a cada 3-5 min. Diluição: 1 mL de 1 mg/mL + 9 mL de SF.",
+        "ap": [
+          {
+            "l": "Diluição 1:10.000 (0,1 mg/mL)",
+            "c": 0.1
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); IM anafilaxia: 0,01 mg/kg (máx. 0,3 mg se < 30 kg; 0,5 mg ≥ 30 kg), repetir a cada 5-10 min; PCR 0,01 mg/kg IV/IO (máx. 1 mg) a cada 3-5 min"
+      }
+    ]
+  },
+  {
+    "k": "prometazina",
+    "n": "Prometazina",
+    "v": [
+      {
+        "via": "IM",
+        "d": [
+          0.25,
+          0.25
+        ],
+        "b": "dose",
+        "f": 1,
+        "fonte": "HILF",
+        "ob": "HILF: peso × 0,01 mL IM (máx. 0,5 mL). CONTRAINDICADA em < 2 anos (depressão respiratória) — confirmar na bula.",
+        "ap": [
+          {
+            "l": "Solução injetável 25 mg/mL (50 mg/2 mL)",
+            "c": 25,
+            "mxMl": 0.5
+          }
+        ],
+        "mx": 25,
+        "al": "CONTRAINDICADA em menores de 2 anos (depressão respiratória fatal) — rótulo FDA e bulas.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); náusea/sedação VO/IM: até 1,1 mg/kg/dose, máx. 25 mg (≥ 2 anos)"
+      }
+    ]
+  },
+  {
+    "k": "dexclorfeniramina",
+    "n": "Dexclorfeniramina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.15,
+          0.15
+        ],
+        "b": "dia",
+        "f": 3,
+        "fonte": "Ref",
+        "ob": "0,15 mg/kg/dia ÷ 3-4 doses. Evitar em < 2 anos (bula).",
+        "ap": [
+          {
+            "l": "Xarope 0,4 mg/mL (2 mg/5 mL)",
+            "c": 0.4
+          }
+        ],
+        "rev": ""
+      }
+    ]
+  },
+  {
+    "k": "desloratadina",
+    "n": "Desloratadina",
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "1x/dia (xarope 0,5 mg/mL): 6-11 meses 1 mg (2 mL); 1-5 anos 1,25 mg (2,5 mL); 6-11 anos 2,5 mg (5 mL); ≥ 12 anos 5 mg (10 mL). Não usar em < 6 meses.",
+        "fonte": "Ref",
+        "ap": [
+          {
+            "l": "Xarope 0,5 mg/mL (2,5 mg/5 mL)"
+          },
+          {
+            "l": "Comprimido 5 mg"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); conferida: 6-11 m 1 mg; 12 m-5 a 1,25 mg; 6-11 a 2,5 mg; ≥ 12 a 5 mg"
+      }
+    ]
+  },
+  {
+    "k": "loratadina",
+    "n": "Loratadina",
+    "v": [
+      {
+        "via": "VO (≥ 2 anos)",
+        "fx": [
+          [
+            30,
+            5
+          ],
+          [
+            9999,
+            10
+          ]
+        ],
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "ob": "≤ 30 kg: 5 mg 1x/dia; > 30 kg: 10 mg 1x/dia (≥ 2 anos).",
+        "ap": [
+          {
+            "l": "Xarope 1 mg/mL",
+            "c": 1
+          },
+          {
+            "l": "Comprimido 10 mg",
+            "mg": 10,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "salbutamol",
+    "n": "Salbutamol (Sulfato de salbutamol)",
+    "v": [
+      {
+        "via": "Nebulização",
+        "d": [
+          0.1,
+          0.15
+        ],
+        "dd": 0.15,
+        "b": "dose",
+        "f": 1,
+        "mn": 2.5,
+        "mx": 5,
+        "fonte": "Ref",
+        "ob": "Crise de asma: 0,15 mg/kg/dose (mín. 2,5 mg, máx. 5 mg) a cada 20 min na 1ª hora; diluir em 3-5 mL de SF. Depois, a cada 4-6 h.",
+        "ap": [
+          {
+            "l": "Solução para nebulização 5 mg/mL",
+            "c": 5,
+            "gt": 1
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); FDA: nebulização 2,5 mg/dose (0,1-0,15 mg/kg se < 15 kg); spray em ≥ 4 anos"
+      },
+      {
+        "via": "Spray dosimetrado (com espaçador)",
+        "fixo": "Spray 100 mcg/jato com espaçador (+ máscara se < 4 anos). Crise: 2-4 jatos (até 10 jatos em crise moderada/grave) a cada 20 min na 1ª hora (máx. 3 séries), reavaliando; depois 2-4 jatos a cada 4-6 h conforme resposta. Agitar o frasco; 1 jato por vez, 5-6 respirações por jato.",
+        "fonte": "Ref",
+        "ap": [
+          {
+            "l": "Spray 100 mcg/jato"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); FDA: nebulização 2,5 mg/dose (0,1-0,15 mg/kg se < 15 kg); spray em ≥ 4 anos"
+      }
+    ]
+  },
+  {
+    "k": "diazepam",
+    "n": "Diazepam",
+    "v": [
+      {
+        "via": "EV",
+        "d": [
+          0.1,
+          0.3
+        ],
+        "dd": 0.2,
+        "b": "dose",
+        "f": 1,
+        "mx": 10,
+        "fonte": "Ref",
+        "ob": "0,1-0,3 mg/kg/dose lento (máx. 0,25 mg/kg/min ou ≥ 3 min). Rótulo: 30 dias-5 anos 0,2-0,5 mg/dose, máx. 5 mg; ≥ 5 anos 1 mg/dose, máx. 10 mg, repetir a cada 2-5 min.",
+        "ap": [
+          {
+            "l": "Ampola 5 mg/mL",
+            "c": 5
+          }
+        ],
+        "al": "Risco de depressão respiratória: ventilação disponível; máx. 5 mg < 5 anos, 10 mg ≥ 5 anos.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      },
+      {
+        "via": "Retal",
+        "d": [
+          0.3,
+          0.5
+        ],
+        "dd": 0.5,
+        "b": "dose",
+        "f": 1,
+        "mx": 10,
+        "fonte": "Ref",
+        "ob": "0,5 mg/kg (2-5 anos), 0,3 mg/kg (6-11 anos), 0,2 mg/kg (≥ 12 anos); repetir em 4-12 h se necessário. Não estabelecido < 2 anos (retal).",
+        "ap": [
+          {
+            "l": "Ampola 5 mg/mL (uso retal)",
+            "c": 5
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "fenobarbital",
+    "n": "Fenobarbital",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          3,
+          6
+        ],
+        "dd": 3,
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "ob": "Manutenção 3-6 mg/kg/dia (RN 3-4 mg/kg/dia); nível terapêutico 15-40 mcg/mL. Crianças em geral necessitam de mais mg/kg que adultos.",
+        "ap": [
+          {
+            "l": "Solução oral 40 mg/mL (gotas)",
+            "c": 40
+          },
+          {
+            "l": "Comprimido 100 mg",
+            "mg": 100,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      },
+      {
+        "via": "EV/IM (ataque)",
+        "d": [
+          15,
+          20
+        ],
+        "dd": 20,
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "ob": "Ataque 15-20 mg/kg em 10-15 min (≤ 1-2 mg/kg/min); manutenção EV 5 mg/kg/dia.",
+        "ap": [
+          {
+            "l": "Solução injetável 100 mg/mL",
+            "c": 100
+          }
+        ],
+        "al": "Depressão respiratória e hipotensão no ataque — monitorização contínua.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)",
+        "mx": 1000
+      }
+    ]
+  },
+  {
+    "k": "fenitoina",
+    "n": "Fenitoína",
+    "v": [
+      {
+        "via": "EV (ataque)",
+        "d": [
+          15,
+          20
+        ],
+        "dd": 20,
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "ob": "Ataque 15-20 mg/kg EV; velocidade máx. 1-3 mg/kg/min ou 50 mg/min (o que for menor); manutenção 4-8 mg/kg/dia em 2-3 doses (máx. 300 mg/dia). Nível total 10-20 mcg/mL.",
+        "ap": [
+          {
+            "l": "Ampola 50 mg/mL",
+            "c": 50
+          }
+        ],
+        "al": "Infusão rápida causa arritmia/hipotensão: respeite a velocidade máxima; diluir em SF (precipita em glicose).",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)",
+        "mx": 1500
+      }
+    ]
+  },
+  {
+    "k": "clonazepam",
+    "n": "Clonazepam",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.01,
+          0.2
+        ],
+        "dd": 0.03,
+        "b": "dia",
+        "f": 2,
+        "mdk": 0.2,
+        "fonte": "Ref",
+        "ob": "Início 0,01-0,03 mg/kg/dia (máx. 0,05 mg/kg/dia), em 2-3 doses, aumentando 0,25-0,5 mg a cada 3 dias; manutenção 0,1-0,2 mg/kg/dia; ≥ 10 anos ou ≥ 30 kg: máx. 20 mg/dia. Maior dose à noite.",
+        "ap": [
+          {
+            "l": "Gotas 2,5 mg/mL (25 gotas/mL)",
+            "c": 2.5,
+            "gt": 1,
+            "gm": 25
+          }
+        ],
+        "mxd": 20,
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "acido valproico",
+    "n": "Ácido valproico",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          10,
+          30
+        ],
+        "dd": 15,
+        "b": "dia",
+        "f": 2,
+        "mdk": 60,
+        "fonte": "Ref",
+        "ob": "Início 10-15 mg/kg/dia, aumentando 5-10 mg/kg/semana; máx. 60 mg/kg/dia; dividir se > 250 mg/dia. Nível 50-100 mcg/mL.",
+        "ap": [
+          {
+            "l": "Xarope 50 mg/mL",
+            "c": 50
+          },
+          {
+            "l": "Comprimido 250 mg",
+            "mg": 250,
+            "u": "comprimido"
+          }
+        ],
+        "al": "< 2 anos: risco de hepatotoxicidade fatal — usar em monoterapia e com extrema cautela. Contraindicado se suspeita de doença mitocondrial por POLG. Meninas/adolescentes: teratogênico.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "carbamazepina",
+    "n": "Carbamazepina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          10,
+          20
+        ],
+        "dd": 10,
+        "b": "dia",
+        "f": 3,
+        "mdk": 35,
+        "fonte": "Ref",
+        "ob": "< 6 anos: 10-20 mg/kg/dia (máx. 35 mg/kg/dia); 6-12 anos: 100 mg 12/12 h, manutenção 400-800 mg/dia (máx. 1.000 mg/dia); > 12 anos: 200 mg 12/12 h, manutenção 800-1.200 mg/dia (máx. 1.000 mg 12-15 anos; 1.200 mg > 15 anos).",
+        "ap": [
+          {
+            "l": "Suspensão 20 mg/mL",
+            "c": 20
+          },
+          {
+            "l": "Comprimido 200 mg",
+            "mg": 200,
+            "u": "comprimido"
+          }
+        ],
+        "mxd": 1200,
+        "al": "Risco de SJS/NET: considerar HLA-B*1502 em ascendência asiática.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "furosemida",
+    "n": "Furosemida",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          1,
+          2
+        ],
+        "dd": 1,
+        "b": "dose",
+        "f": 2,
+        "mdk": 6,
+        "fonte": "Ref",
+        "ob": "VO: 2 mg/kg/dose (faixa usual 1-2 mg/kg), repetir em 6-8 h; EV/IM: 1 mg/kg/dose, a cada ≥ 2 h; máx. 6 mg/kg/dia. Prematuros: máx. 1 mg/kg/dia EV (ototoxicidade).",
+        "ap": [
+          {
+            "l": "Comprimido 40 mg",
+            "mg": 40,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      },
+      {
+        "via": "EV/IM",
+        "d": [
+          0.5,
+          2
+        ],
+        "dd": 1,
+        "b": "dose",
+        "f": 2,
+        "mdk": 6,
+        "fonte": "Ref",
+        "ob": "VO: 2 mg/kg/dose (faixa usual 1-2 mg/kg), repetir em 6-8 h; EV/IM: 1 mg/kg/dose, a cada ≥ 2 h; máx. 6 mg/kg/dia. Prematuros: máx. 1 mg/kg/dia EV (ototoxicidade).",
+        "ap": [
+          {
+            "l": "Ampola 10 mg/mL",
+            "c": 10
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "espironolactona",
+    "n": "Espironolactona",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          1,
+          3
+        ],
+        "dd": 2,
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "ob": "1-3 mg/kg/dia em 1-2 doses (máx. 100 mg/dia ou 3,3 mg/kg/dia). Monitorar potássio, sobretudo com IECA.",
+        "ap": [
+          {
+            "l": "Comprimido 25 mg",
+            "mg": 25,
+            "u": "comprimido"
+          },
+          {
+            "l": "Comprimido 50 mg",
+            "mg": 50,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "",
+        "mxd": 100
+      }
+    ]
+  },
+  {
+    "k": "hidroclorotiazida",
+    "n": "Hidroclorotiazida",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          1,
+          2
+        ],
+        "dd": 1,
+        "b": "dia",
+        "f": 2,
+        "mxd": 100,
+        "fonte": "Ref",
+        "ob": "1-2 mg/kg/dia em 1-2 doses; < 6 meses: até 3 mg/kg/dia em 2 doses; máx. 37,5 mg/dia < 2 anos e 100 mg/dia 2-12 anos.",
+        "ap": [
+          {
+            "l": "Comprimido 25 mg",
+            "mg": 25,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "captopril",
+    "n": "Captopril",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.3,
+          0.5
+        ],
+        "dd": 0.3,
+        "b": "dose",
+        "f": 3,
+        "mdk": 6,
+        "fonte": "Ref",
+        "ob": "Iniciar 0,3-0,5 mg/kg/dose a cada 8 h e titular; monitorar PA, potássio e creatinina.",
+        "ap": [
+          {
+            "l": "Comprimido 25 mg",
+            "mg": 25,
+            "u": "comprimido"
+          }
+        ],
+        "rev": ""
+      }
+    ]
+  },
+  {
+    "k": "propranolol",
+    "n": "Propranolol",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.5,
+          4
+        ],
+        "dd": 1,
+        "b": "dia",
+        "f": 3,
+        "fonte": "Ref",
+        "ob": "Hipertensão: 1-2 mg/kg/dia em 2-3 doses (máx. 4 mg/kg/dia, até 640 mg/dia); arritmia: 2-4 mg/kg/dia (máx. 16 mg/kg/dia). Hemangioma infantil (solução 4,28 mg/mL): 0,6 mg/kg/dia na 1ª semana, 1,1 na 2ª e 1,7 mg/kg/dia a partir da 3ª, em 2 doses (≥ 9 h de intervalo); iniciar entre 5 semanas e 5 meses, com monitorização de FC/PA e glicemia.",
+        "ap": [
+          {
+            "l": "Comprimido 40 mg",
+            "mg": 40,
+            "u": "comprimido"
+          }
+        ],
+        "mdk": 8,
+        "al": "Risco de hipoglicemia e broncoespasmo: evitar jejum prolongado e asma.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "omeprazol",
+    "n": "Omeprazol",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.7,
+          2
+        ],
+        "dd": 1,
+        "b": "dose",
+        "f": 1,
+        "mx": 40,
+        "fonte": "Ref",
+        "ob": "Rótulo FDA: refluxo/esofagite, 1x/dia: 5 mg (5-< 10 kg), 10 mg (10-< 20 kg), 20 mg (≥ 20 kg). Referência BR: 0,7-3,3 mg/kg/dia (máx. 40 mg/dia). Antes das refeições; não estabelecido < 1 mês.",
+        "ap": [
+          {
+            "l": "Cápsula 20 mg (abrir/MUPS — ver bula)",
+            "mg": 20,
+            "u": "cápsula"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "hioscina",
+    "n": "Hioscina (Butilbrometo de escopolamina)",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.3,
+          0.6
+        ],
+        "dd": 0.3,
+        "b": "dose",
+        "f": 3,
+        "mdk": 1.5,
+        "fonte": "Ref",
+        "ob": "Bula: 0,3-0,6 mg/kg/dose, 3-5x/dia (máx. 1,5 mg/kg/dia). Evitar em < 6 anos sem orientação médica.",
+        "ap": [
+          {
+            "l": "Gotas 10 mg/mL",
+            "c": 10
+          }
+        ],
+        "rev": ""
+      }
+    ]
+  },
+  {
+    "k": "metoclopramida",
+    "n": "Metoclopramida",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.1,
+          0.15
+        ],
+        "dd": 0.1,
+        "b": "dose",
+        "f": 3,
+        "mx": 10,
+        "mdk": 0.5,
+        "fonte": "Ref",
+        "ob": "0,1-0,15 mg/kg/dose a cada 8 h (máx. 0,5 mg/kg/dia). Risco de efeitos extrapiramidais; CONTRAINDICADA em < 1 ano (bula/Anvisa); uso por no máx. 5 dias.",
+        "ap": [
+          {
+            "l": "Gotas 4 mg/mL",
+            "c": 4
+          }
+        ],
+        "al": "Restrita a uso de 2ª linha por risco de reações extrapiramidais (EMA/ANVISA): evitar < 1 ano; máx. 0,5 mg/kg/dia; não exceder 5 dias.",
+        "rev": ""
+      },
+      {
+        "via": "IM/EV",
+        "d": [
+          0.1,
+          0.15
+        ],
+        "dd": 0.1,
+        "b": "dose",
+        "f": 3,
+        "mx": 10,
+        "mdk": 0.5,
+        "fonte": "Ref",
+        "ob": "0,1-0,15 mg/kg/dose a cada 8 h (máx. 0,5 mg/kg/dia); EV lento (≥ 3 min). CONTRAINDICADA em < 1 ano (bula/Anvisa).",
+        "ap": [
+          {
+            "l": "Ampola 5 mg/mL",
+            "c": 5
+          }
+        ],
+        "al": "Restrita a uso de 2ª linha por risco de reações extrapiramidais (EMA/ANVISA): evitar < 1 ano; máx. 0,5 mg/kg/dia; não exceder 5 dias.",
+        "rev": ""
+      }
+    ]
+  },
+  {
+    "k": "domperidona",
+    "n": "Domperidona",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.25,
+          0.25
+        ],
+        "b": "dose",
+        "f": 3,
+        "mx": 10,
+        "mdk": 0.75,
+        "fonte": "Ref",
+        "ob": "0,25 mg/kg/dose até 3x/dia antes das refeições (máx. 0,75 mg/kg/dia e 30 mg/dia).",
+        "ap": [
+          {
+            "l": "Suspensão 1 mg/mL",
+            "c": 1
+          },
+          {
+            "l": "Comprimido 10 mg",
+            "mg": 10,
+            "u": "comprimido"
+          }
+        ],
+        "rev": ""
+      }
+    ]
+  },
+  {
+    "k": "ondansetrona",
+    "n": "Ondansetrona",
+    "v": [
+      {
+        "via": "EV/IM",
+        "d": [
+          0.1,
+          0.15
+        ],
+        "dd": 0.1,
+        "b": "dose",
+        "f": 3,
+        "mx": 16,
+        "fonte": "Ref",
+        "ob": "Quimioterapia: 0,15 mg/kg/dose (máx. 16 mg; aos 0, 4 e 8 h). Pós-operatório (1 mês-12 anos): 0,1 mg/kg se < 40 kg (máx. 4 mg). Gastroenterite: dose única 0,1-0,15 mg/kg. Segurança IV não estabelecida < 6 meses.",
+        "ap": [
+          {
+            "l": "Ampola 2 mg/mL",
+            "c": 2
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      },
+      {
+        "via": "VO",
+        "d": [
+          0.1,
+          0.15
+        ],
+        "dd": 0.15,
+        "b": "dose",
+        "f": 3,
+        "mx": 8,
+        "fonte": "Ref",
+        "ob": "0,1-0,15 mg/kg/dose; quimioterapia: 4 mg 8/8 h (4-11 anos) ou 8 mg 12/12 h (≥ 12 anos). Gastroenterite: dose única (8-15 kg: 2 mg; 15-30 kg: 4 mg; > 30 kg: 8 mg). Segurança oral não estabelecida < 4 anos no rótulo.",
+        "ap": [
+          {
+            "l": "Solução oral 0,8 mg/mL (4 mg/5 mL)",
+            "c": 0.8
+          },
+          {
+            "l": "Comprimido orodispersível 4 mg",
+            "mg": 4,
+            "u": "comprimido"
+          },
+          {
+            "l": "Comprimido orodispersível 8 mg",
+            "mg": 8,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "tramadol",
+    "n": "Tramadol",
+    "v": [
+      {
+        "via": "EV",
+        "d": [
+          1,
+          1.5
+        ],
+        "b": "dose",
+        "f": 3,
+        "fonte": "HILF",
+        "ob": "HILF: 1-1,5 mg/kg/dose EV a cada 8 h, diluído em SF 0,9% 50-100 mL. Uso pediátrico com cautela (evitar < 12 anos fora de indicação especializada).",
+        "ap": [
+          {
+            "l": "Ampola 50 mg/mL",
+            "c": 50
+          }
+        ],
+        "al": "FDA: CONTRAINDICADO em < 12 anos (e < 18 anos após amigdalectomia/adenoidectomia); risco de depressão respiratória em metabolizadores ultrarrápidos (CYP2D6). Confirme na bula nacional.",
+        "rev": "alerta regulatório conferido em 11/2026 (rótulo FDA); a dose da base não foi conferida",
+        "mx": 100,
+        "mxd": 400
+      }
+    ]
+  },
+  {
+    "k": "colecalciferol",
+    "n": "Colecalciferol (vitamina D3)",
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "PREVENÇÃO (SBP 2024): < 1 ano 400 UI/dia (iniciar na 1ª semana, inclusive em aleitamento materno); 1-18 anos 600 UI/dia; com fatores de risco 1.200-1.800 UI/dia. TRATAMENTO da deficiência (opções citadas pela SBP): < 1 ano 2.000 UI/dia por 6-12 semanas (ou 50.000 UI/semana por 6 semanas), manutenção 400-1.000 UI/dia; 1-12 anos 2.000-6.000 UI/dia por 6-12 semanas (ou 50.000 UI/semana por 6 semanas), manutenção 600-1.000 UI/dia; > 12 anos até 6.000 UI/dia. Toxicidade: 25(OH)D > 100-150 ng/mL. Conferir UI/gota do produto.",
+        "fonte": "Ref",
+        "ap": [
+          {
+            "l": "Gotas (conferir UI/gota do produto)"
+          }
+        ],
+        "rev": "Conferida em 11/2026: SBP — DC nº 181 Hipovitaminose D (11/2024)"
+      }
+    ]
+  },
+  {
+    "k": "sulfato ferroso",
+    "n": "Sulfato ferroso",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          1,
+          6
+        ],
+        "dd": 3,
+        "b": "dia",
+        "f": 1,
+        "mxd": 200,
+        "fonte": "Ref",
+        "ob": "Ferro ELEMENTAR. TRATAMENTO (SBP): 3-6 mg/kg/dia em 1-2 tomadas por 6 meses ou até repor estoques; hemograma em 30-45 dias (esperar ↑ Hb ≥ 1 g/dL). PROFILAXIA (SBP 2021): termo sem risco 1 mg/kg/dia dos 6 aos 24 meses (com fator de risco, desde 3 meses); termo < 2.500 g ou pré-termo > 1.500 g: 2 mg/kg/dia; 1.000-1.500 g: 3 mg/kg/dia; < 1.000 g: 4 mg/kg/dia — do 30º dia por 1 ano, depois 1 mg/kg/dia por mais 1 ano. Atualização SBP 2026 (conferir documento): termo pode usar dose fixa 10-12,5 mg/dia em 2 ciclos de 3 meses. Longe do leite.",
+        "ap": [
+          {
+            "l": "Gotas 25 mg de Fe elementar/mL",
+            "c": 25
+          }
+        ],
+        "al": "Superdose de ferro é causa grave de intoxicação infantil — guardar fora do alcance.",
+        "rev": "Conferida em 11/2026: SBP — Consenso sobre anemia ferropriva (atualização 2021); resumo da atualização SBP 2026"
+      }
+    ]
+  },
+  {
+    "k": "benzilpenicilina benzatina",
+    "n": "Benzilpenicilina benzatina (Penicilina G benzatina)",
+    "v": [
+      {
+        "via": "IM (por kg)",
+        "d": [
+          50000,
+          50000
+        ],
+        "b": "dose",
+        "f": 1,
+        "mx": 2400000,
+        "un": "UI",
+        "fonte": "Ref",
+        "ob": "Sífilis (congênita/adquirida em criança): 50.000 UI/kg IM (máx. 2.400.000 UI): dose única na sífilis recente; 1x/semana por 3 semanas na latente tardia/terciária. EXCLUSIVAMENTE IM profunda — NUNCA por via EV (risco de parada cardiorrespiratória).",
+        "ap": [],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      },
+      {
+        "via": "IM (faringite — dose fixa)",
+        "fx": [
+          [
+            27,
+            600000
+          ],
+          [
+            9999,
+            1200000
+          ]
+        ],
+        "b": "dose",
+        "f": 1,
+        "un": "UI",
+        "fonte": "Ref",
+        "ob": "Faringoamigdalite estreptocócica: ≤ 27 kg 600.000 UI; > 27 kg 1.200.000 UI, dose única (alguns protocolos usam 20 kg como corte).",
+        "ap": [],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "penicilina g procaina",
+    "n": "Penicilina G procaína",
+    "v": [
+      {
+        "via": "IM",
+        "d": [
+          50000,
+          50000
+        ],
+        "b": "dose",
+        "f": 1,
+        "un": "UI",
+        "fonte": "Ref",
+        "ob": "Sífilis congênita sem neurossífilis (MS): 50.000 UI/kg IM 1x/dia por 10 dias. Se perder > 1 dia de tratamento, reiniciar o esquema.",
+        "ap": [],
+        "rev": "Conferida em 11/2026: Ministério da Saúde — PCDT IST (sífilis congênita)"
+      }
+    ]
+  },
+  {
+    "k": "penicilina cristalina",
+    "n": "Penicilina cristalina (Benzilpenicilina potássica)",
+    "v": [
+      {
+        "via": "EV",
+        "d": [
+          100000,
+          400000
+        ],
+        "dd": 100000,
+        "b": "dia",
+        "f": 6,
+        "mxd": 24000000,
+        "un": "UI",
+        "fonte": "Ref",
+        "ob": "Infecções graves: 100.000-400.000 UI/kg/dia a cada 4-6 h (meningite 300.000-400.000; máx. 24 milhões UI/dia). Sífilis congênita (MS): 50.000 UI/kg/dose EV a cada 12 h na 1ª semana de vida e a cada 8 h após 7 dias, por 10 dias.",
+        "ap": [],
+        "rev": "Conferida em 11/2026: Ministério da Saúde — PCDT IST (sífilis congênita); literatura"
+      }
+    ]
+  },
+  {
+    "k": "rifampicina",
+    "n": "Rifampicina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          10,
+          20
+        ],
+        "dd": 15,
+        "b": "dose",
+        "f": 1,
+        "mx": 600,
+        "fonte": "Ref",
+        "ob": "TB: 10-20 mg/kg/dia (BR: 15 mg/kg), máx. 600 mg; profilaxia de meningococo: 10 mg/kg 12/12 h por 2 dias (RN: 5 mg/kg), máx. 600 mg/dose.",
+        "ap": [
+          {
+            "l": "Suspensão 20 mg/mL",
+            "c": 20
+          },
+          {
+            "l": "Cápsula 300 mg",
+            "mg": 300,
+            "u": "cápsula"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "isoniazida",
+    "n": "Isoniazida",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          7,
+          15
+        ],
+        "dd": 10,
+        "b": "dose",
+        "f": 1,
+        "mx": 300,
+        "fonte": "Ref",
+        "ob": "TB e ILTB: 10 mg/kg/dia (faixa 7-15), máx. 300 mg/dia. Associar piridoxina 1-2 mg/kg/dia (desnutridos).",
+        "ap": [
+          {
+            "l": "Comprimido 100 mg",
+            "mg": 100,
+            "u": "comprimido"
+          },
+          {
+            "l": "Comprimido 300 mg",
+            "mg": 300,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "pirazinamida",
+    "n": "Pirazinamida",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          30,
+          40
+        ],
+        "dd": 35,
+        "b": "dose",
+        "f": 1,
+        "mx": 2000,
+        "fonte": "Ref",
+        "ob": "30-40 mg/kg/dia (BR: 35), máx. 2 g/dia, por 2 meses; calculada pelo peso magro.",
+        "ap": [
+          {
+            "l": "Comprimido 500 mg",
+            "mg": 500,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "etambutol",
+    "n": "Etambutol",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          20,
+          30
+        ],
+        "dd": 25,
+        "b": "dose",
+        "f": 1,
+        "mx": 1600,
+        "fonte": "Ref",
+        "ob": "15-25 mg/kg/dia (BR: 25 mg/kg, faixa 20-30), máx. 2,5 g/dia nos EUA / 1,6 g BR; neurite óptica: avaliação ocular mensal; não recomendado quando não for possível avaliar acuidade visual (crianças pequenas).",
+        "ap": [
+          {
+            "l": "Comprimido 400 mg",
+            "mg": 400,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "secnidazol",
+    "n": "Secnidazol",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          30,
+          30
+        ],
+        "b": "dose",
+        "f": 1,
+        "mx": 2000,
+        "fonte": "Ref",
+        "ob": "SBP: giardíase e amebíase intestinal: 30 mg/kg em dose única (máx. 2 g); amebíase: ≥ 3 anos. Evitar álcool.",
+        "ap": [
+          {
+            "l": "Suspensão 30 mg/mL",
+            "c": 30
+          }
+        ],
+        "rev": "Conferida em 11/2026: SBP — GPA Parasitoses intestinais: diagnóstico e tratamento"
+      }
+    ]
+  },
+  {
+    "k": "tinidazol",
+    "n": "Tinidazol",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          50,
+          50
+        ],
+        "b": "dose",
+        "f": 1,
+        "mx": 2000,
+        "fonte": "Ref",
+        "ob": "SBP: giardíase/amebíase: 50 mg/kg em dose única (máx. 2 g); idade mínima 3 anos.",
+        "ap": [
+          {
+            "l": "Comprimido 500 mg",
+            "mg": 500,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026: SBP — GPA Parasitoses intestinais: diagnóstico e tratamento"
+      }
+    ]
+  },
+  {
+    "k": "ivermectina",
+    "n": "Ivermectina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.2,
+          0.2
+        ],
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "ob": "SBP: ascaridíase 150-200 mcg/kg dose única; tricuríase 200 mcg/kg/dia por 3 dias; estrongiloidíase (1ª linha) 200 mcg/kg/dia por 1-2 dias (hiperinfecção: 2 semanas). Escabiose: 200 mcg/kg, repetir em 7-14 dias. Em jejum. Segurança não estabelecida < 15 kg.",
+        "ap": [
+          {
+            "l": "Comprimido 6 mg",
+            "mg": 6,
+            "u": "comprimido"
+          }
+        ],
+        "al": "Segurança não estabelecida em crianças < 15 kg (rótulo FDA).",
+        "rev": "Conferida em 11/2026: SBP — GPA Parasitoses intestinais: diagnóstico e tratamento; rótulo FDA"
+      }
+    ]
+  },
+  {
+    "k": "nitrofurantoina",
+    "n": "Nitrofurantoína",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          5,
+          7
+        ],
+        "dd": 5,
+        "b": "dia",
+        "f": 4,
+        "mxd": 400,
+        "fonte": "Ref",
+        "ob": "5-7 mg/kg/dia em 4 doses (máx. 400 mg/dia); profilaxia: 1-2 mg/kg à noite (máx. 100 mg).",
+        "ap": [
+          {
+            "l": "Cápsula 100 mg",
+            "mg": 100,
+            "u": "cápsula"
+          }
+        ],
+        "al": "Contraindicada em < 1 mês e se ClCr < 60 mL/min.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "vancomicina",
+    "n": "Vancomicina",
+    "v": [
+      {
+        "via": "EV",
+        "d": [
+          40,
+          60
+        ],
+        "dd": 40,
+        "b": "dia",
+        "f": 4,
+        "mxd": 3600,
+        "fonte": "Ref",
+        "ob": "Dose usual 40-60 mg/kg/dia a cada 6-8 h (infecção invasiva por MRSA: 60-80 mg/kg/dia, ≥ 3 meses, até 3.600 mg/dia; meningite 60-70 mg/kg/dia). Infundir em ≥ 60 min (síndrome do homem vermelho). Vale 10-15 mcg/mL (15-20 em infecção grave). RN: dose por IG, idade e creatinina.",
+        "ap": [
+          {
+            "l": "Frasco 500 mg (reconstituir em 10 mL = 50 mg/mL; diluir a ≤ 5 mg/mL)",
+            "c": 50
+          }
+        ],
+        "al": "Monitorizar nível sérico (vale/AUC) e função renal.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); C. difficile VO: 10 mg/kg a cada 6 h (máx. 125 mg/dose)"
+      }
+    ]
+  },
+  {
+    "k": "clindamicina",
+    "n": "Clindamicina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          8,
+          20
+        ],
+        "dd": 10,
+        "b": "dia",
+        "f": 3,
+        "mxd": 1800,
+        "fonte": "Ref",
+        "ob": "8-16 mg/kg/dia em 3-4 doses (grave: 17-25 mg/kg/dia); máx. 1,8 g/dia VO. Cápsulas 150 mg: ≥ 11 kg. Tomar com água cheia (esofagite).",
+        "ap": [
+          {
+            "l": "Cápsula 300 mg",
+            "mg": 300,
+            "u": "cápsula"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      },
+      {
+        "via": "IM/EV",
+        "d": [
+          20,
+          40
+        ],
+        "dd": 20,
+        "b": "dia",
+        "f": 3,
+        "mxd": 2700,
+        "fonte": "Ref",
+        "ob": "20-40 mg/kg/dia em 3-4 doses (RN 15-20 mg/kg/dia). Máx. 2,7 g/dia (BR; até 4,8 g/dia em adultos). Dose única IM ≤ 600 mg; infusão EV de 1 h ≤ 1.200 mg (≤ 30 mg/min; ≤ 18 mg/mL).",
+        "ap": [
+          {
+            "l": "Ampola 150 mg/mL",
+            "c": 150
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "acido tranexamico",
+    "n": "Ácido tranexâmico",
+    "v": [
+      {
+        "via": "EV",
+        "d": [
+          10,
+          15
+        ],
+        "dd": 15,
+        "b": "dose",
+        "f": 3,
+        "mx": 1000,
+        "fonte": "Ref",
+        "ob": "10 mg/kg/dose EV 3-4x/dia (máx. 1 g/dose), infusão lenta (≤ 1 mL/min). Hemofilia/extração dentária: 10 mg/kg antes do procedimento e 3-4x/dia por 2-8 dias.",
+        "ap": [
+          {
+            "l": "Ampola 50 mg/mL",
+            "c": 50
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "lidocaina",
+    "n": "Lidocaína (uso local)",
+    "v": [
+      {
+        "via": "Infiltrativa (DOSE MÁXIMA)",
+        "d": [
+          4.5,
+          7
+        ],
+        "dd": 4.5,
+        "b": "dose",
+        "f": 1,
+        "mx": 300,
+        "fonte": "Ref",
+        "ob": "Infiltração: 4,5 mg/kg sem vasoconstritor e até 7 mg/kg com adrenalina; máx. absoluto 300 mg. 1% = 10 mg/mL; 2% = 20 mg/mL.",
+        "ap": [
+          {
+            "l": "1% sem vasoconstritor (10 mg/mL)",
+            "c": 10,
+            "d": [
+              4.5,
+              4.5
+            ],
+            "dd": 4.5,
+            "mx": 300
+          },
+          {
+            "l": "2% sem vasoconstritor (20 mg/mL)",
+            "c": 20,
+            "d": [
+              4.5,
+              4.5
+            ],
+            "dd": 4.5,
+            "mx": 300
+          },
+          {
+            "l": "1% com vasoconstritor (10 mg/mL)",
+            "c": 10,
+            "d": [
+              7,
+              7
+            ],
+            "dd": 7,
+            "mx": 500
+          },
+          {
+            "l": "2% com vasoconstritor (20 mg/mL)",
+            "c": 20,
+            "d": [
+              7,
+              7
+            ],
+            "dd": 7,
+            "mx": 500
+          }
+        ],
+        "al": "Toxicidade sistêmica (convulsões, arritmia) se ultrapassar a dose máxima total — some todas as vias.",
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); máximo pediátrico: usar mg/kg (rótulo não fixa teto específico para crianças)"
+      }
+    ]
+  },
+  {
+    "k": "albendazol",
+    "n": "Albendazol",
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "SBP: ascaridíase, ancilostomíase e enterobíase: 400 mg dose única (200 mg se < 2 anos); enterobíase: repetir em 2 semanas. Tricuríase: 400 mg/dia por 3-7 dias. Estrongiloidíase: 400 mg 2x/dia por 7-14 dias (1ª escolha é ivermectina). Giardíase: 400 mg/dia por 5 dias (≥ 1 ano). Toxocaríase: 400 mg 2x/dia por 5 dias. Neurocisticercose/hidatidose: 10-15 mg/kg/dia em 2 doses (máx. 800 mg/dia). Larva migrans: contraindicado < 2 anos (CDC).",
+        "fonte": "Ref",
+        "ap": [
+          {
+            "l": "Suspensão 40 mg/mL"
+          },
+          {
+            "l": "Comprimido 400 mg"
+          }
+        ],
+        "rev": "Conferida em 11/2026: SBP — GPA Parasitoses intestinais: diagnóstico e tratamento"
+      }
+    ]
+  },
+  {
+    "k": "mebendazol",
+    "n": "Mebendazol",
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "SBP: ascaridíase/ancilostomíase: 100 mg 1x/dia por 3 dias (esquema clássico alternativo: 100 mg 2x/dia por 3 dias); tricuríase: 100 mg/dia por 3-7 dias; enterobíase: 100 mg dose única, repetir em 2 semanas. Dose independe do peso; evitar < 1-2 anos (bula).",
+        "fonte": "Ref",
+        "ap": [
+          {
+            "l": "Suspensão 20 mg/mL"
+          },
+          {
+            "l": "Comprimido 100 mg"
+          }
+        ],
+        "rev": "Conferida em 11/2026: SBP — GPA Parasitoses intestinais: diagnóstico e tratamento"
+      }
+    ]
+  },
+  {
+    "k": "nistatina",
+    "n": "Nistatina (suspensão oral)",
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "Candidíase oral: prematuros/baixo peso 100.000 UI (1 mL) 4x/dia; lactentes 1-12 meses 200.000 UI (2 mL) 4x/dia; 1-18 anos 400.000-600.000 UI (4-6 mL) 4x/dia. Metade da dose em cada lado da boca, reter o máximo possível; não alimentar por 5-10 min. Manter até 48 h após a resolução.",
+        "fonte": "Ref",
+        "ap": [
+          {
+            "l": "Suspensão oral 100.000 UI/mL"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulo FDA/literatura pediátrica (via Drugs.com)"
+      }
+    ]
+  },
+  {
+    "k": "sulfato de zinco",
+    "n": "Sulfato de zinco",
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "Diarreia aguda (OMS/UNICEF): < 6 meses 10 mg/dia; ≥ 6 meses 20 mg/dia de zinco ELEMENTAR, por 10-14 dias. Doses menores (5-10 mg/dia) tiveram eficácia semelhante com menos vômitos em estudo recente (6-59 meses). Maior benefício em crianças desnutridas.",
+        "fonte": "Ref",
+        "ap": [
+          {
+            "l": "Solução oral / comprimido (zinco elementar)"
+          }
+        ],
+        "rev": "Conferida em 11/2026: OMS/UNICEF (diarreia aguda); uso não universal — maior benefício em desnutridos"
+      }
+    ]
+  },
+  {
+    "k": "hidroxizina",
+    "n": "Hidroxizina",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.66667,
+          0.66667
+        ],
+        "b": "dose",
+        "f": 3,
+        "fonte": "HILF",
+        "ob": "HILF: peso ÷ 3 = mL a cada 8 h (≈ 0,67 mg/kg/dose; 2 mg/kg/dia). Rótulo: prurido/ansiedade < 6 anos máx. 50 mg/dia; ≥ 6 anos 50-100 mg/dia, em doses divididas; sedação 0,6 mg/kg dose única.",
+        "ap": [
+          {
+            "l": "Solução oral 2 mg/mL (10 mg/5 mL)",
+            "c": 2,
+            "mxMl": 10
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulo FDA/literatura pediátrica (via Drugs.com)",
+        "mxd": 100
+      }
+    ]
+  },
+  {
+    "k": "bromoprida",
+    "n": "Bromoprida",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          0.2,
+          0.2
+        ],
+        "b": "dose",
+        "f": 3,
+        "fonte": "HILF",
+        "ob": "HILF: 1 gota/kg/dose a cada 8 h (máx. 40 gotas). Bula: contraindicada em < 1 ano.",
+        "ap": [
+          {
+            "l": "Gotas 4 mg/mL",
+            "c": 4,
+            "gt": 1,
+            "mxMl": 2
+          }
+        ],
+        "rev": "",
+        "mx": 10
+      },
+      {
+        "via": "IM/EV",
+        "d": [
+          0.15,
+          0.15
+        ],
+        "b": "dose",
+        "f": 3,
+        "fonte": "HILF",
+        "ob": "HILF: peso × 0,03 mL a cada 8 h. O documento de origem indica NÃO usar em menores de 18 anos — confirmar na bula antes de qualquer uso.",
+        "ap": [
+          {
+            "l": "Ampola 10 mg/2 mL (5 mg/mL)",
+            "c": 5,
+            "mxMl": 2
+          }
+        ],
+        "rev": "",
+        "mx": 10
+      }
+    ]
+  },
+  {
+    "k": "dimenidrato",
+    "n": "Dimenidrato",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          1.25,
+          1.25
+        ],
+        "b": "dose",
+        "f": 4,
+        "fonte": "HILF",
+        "ob": "HILF: 1 gota/kg/dose a cada 6 h (1,25 mg/kg). Rótulo: 2-5 anos 12,5-25 mg a cada 6-8 h (máx. 75 mg/dia); 6-11 anos 25-50 mg a cada 6-8 h (máx. 150 mg/dia); ≥ 12 anos 50-100 mg a cada 4-6 h (máx. 400 mg/dia). Suspender se excitação paradoxal.",
+        "ap": [
+          {
+            "l": "Gotas 25 mg/mL",
+            "c": 25,
+            "gt": 1,
+            "mxMl": 2
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulo FDA/literatura pediátrica (via Drugs.com)",
+        "mxd": 150,
+        "al": "Não recomendado em menores de 2 anos."
+      }
+    ]
+  },
+  {
+    "k": "nitazoxanida",
+    "n": "Nitazoxanida",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          7.5,
+          7.5
+        ],
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "ob": "SBP: 7,5 mg/kg/dose a cada 12 h por 3 dias (máx. 500 mg/dose); ≥ 1 ano. Bula: 12-47 meses 100 mg (5 mL); 4-11 anos 200 mg (10 mL); > 11 anos 500 mg — 12/12 h por 3 dias. Criptosporidiose: 3-14 dias.",
+        "ap": [
+          {
+            "l": "Suspensão 20 mg/mL",
+            "c": 20,
+            "mxMl": 15
+          }
+        ],
+        "rev": "Conferida em 11/2026: SBP — GPA Parasitoses intestinais: diagnóstico e tratamento; bula Anvisa",
+        "mx": 500
+      }
+    ]
+  },
+  {
+    "k": "pirvinio",
+    "n": "Pirvínio",
+    "v": [
+      {
+        "via": "VO",
+        "d": [
+          10,
+          10
+        ],
+        "b": "dose",
+        "f": 1,
+        "fonte": "HILF",
+        "ob": "HILF (oxiuríase): 1 mL/kg em dose única; repetir em 2-3 semanas.",
+        "ap": [
+          {
+            "l": "Suspensão 10 mg/mL",
+            "c": 10,
+            "mxMl": 60
+          }
+        ],
+        "rev": ""
+      }
+    ]
+  }
+]

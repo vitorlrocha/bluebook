@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bluebook-dist",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["ferramentas/servir.js", "dist", "8080"],
+      "port": 8080
+    },
+    {
+      "name": "bluebook-original",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["ferramentas/servir.js", "referencia", "8081"],
+      "port": 8081
+    }
+  ]
+}

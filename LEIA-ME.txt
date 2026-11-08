@@ -1,6 +1,7 @@
 BLUEBOOK — pacote para continuar no Claude Code
 
-1) Descompacte esta pasta (bluebook) em um local do seu computador.
-2) Abra index.html no navegador para ver o app funcionando.
+1) Gere o app:  node ferramentas/build.js   (cria dist/index.html)
+2) Abra dist/index.html no navegador para ver o app funcionando.
 3) No terminal:  cd caminho/para/bluebook   e depois   claude
 4) O Claude Code lê automaticamente o arquivo CLAUDE.md com a estrutura e as regras do projeto.
+A versão original de arquivo único (v71) está em referencia/index-v71-original.html.

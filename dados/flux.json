@@ -1,0 +1,413 @@
+[
+  {
+    "id": "f-pcr",
+    "nome": "Parada cardiorrespiratória (adulto)",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "1. Reconhecer e iniciar",
+        "Inconsciente, sem respiração normal e sem pulso: chamar ajuda/carrinho de parada, iniciar compressões torácicas (100–120/min, profundidade 5–6 cm, retorno total) e ventilação 30:2; monitor/desfibrilador assim que disponível."
+      ],
+      [
+        "2. Ritmo chocável (FV/TV sem pulso)",
+        "Choque bifásico (120–200 J conforme o aparelho) → RCP 2 min → reavaliar. Epinefrina 1 mg EV/IO a cada 3–5 min após o 2º choque ou conforme protocolo; amiodarona 300 mg EV/IO após o 3º choque, 150 mg na 2ª dose (ou lidocaína 1–1,5 mg/kg)."
+      ],
+      [
+        "3. Ritmo não chocável (assistolia/AESP)",
+        "Epinefrina 1 mg EV/IO o mais cedo possível, repetir a cada 3–5 min; RCP contínua em ciclos de 2 min; procurar causas reversíveis."
+      ],
+      [
+        "4. Causas reversíveis (5H e 5T)",
+        "Hipovolemia, hipóxia, acidose (H+), hiper/hipocalemia, hipotermia; tensão (pneumotórax hipertensivo), tamponamento cardíaco, tóxicos, trombose coronariana, trombose pulmonar."
+      ],
+      [
+        "5. Pós-PCR",
+        "Via aérea e oxigenação (SpO2 92–98%), PAM ≥ 65 mmHg, ECG de 12 derivações, glicemia, controle direcionado de temperatura (evitar febre), coronariografia se supra de ST, UTI."
+      ]
+    ]
+  },
+  {
+    "id": "f-taqui",
+    "nome": "Taquiarritmia e bradicardia com instabilidade",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Taquicardia instável (hipotensão, choque, dor torácica, rebaixamento, IC aguda)",
+        "Cardioversão elétrica sincronizada (TSV/flutter 50–100 J; FA 120–200 J bifásico; TV monomórfica 100 J), com sedação se possível."
+      ],
+      [
+        "Taquicardia estável de QRS estreito regular",
+        "Manobra vagal; adenosina 6 mg rápido, depois 12 mg se necessário."
+      ],
+      [
+        "Bradicardia instável",
+        "Atropina 1 mg EV (repetir a cada 3–5 min, máx. 3 mg); se refratária, marca-passo transcutâneo ou infusão de dopamina/epinefrina."
+      ],
+      [
+        "Observações",
+        "Procurar e tratar causa (hipóxia, distúrbio eletrolítico, isquemia, intoxicação). Cardiologista/UTI para casos refratários."
+      ]
+    ]
+  },
+  {
+    "id": "f-anafilaxia",
+    "nome": "Anafilaxia",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "1ª linha",
+        "Epinefrina (adrenalina) IM na face lateral da coxa: 0,3–0,5 mg no adulto (0,01 mg/kg, máx. 0,5 mg) e 0,01 mg/kg (máx. 0,3 mg) na criança; repetir a cada 5–15 min se necessário. Não retardar."
+      ],
+      [
+        "Suporte",
+        "Decúbito dorsal com pernas elevadas (sentado se dispneia), oxigênio, acesso venoso, cristaloide 1–2 L rápido (20 mL/kg na criança); monitorização."
+      ],
+      [
+        "Adjuvantes (não substituem a adrenalina)",
+        "Anti-histamínico, broncodilatador inalatório se broncoespasmo, corticoide para reduzir risco de recorrência."
+      ],
+      [
+        "Refratária",
+        "Epinefrina EV em infusão contínua em ambiente monitorado; expansão volêmica; vasopressores; UTI."
+      ],
+      [
+        "Alta",
+        "Observação de 4 a 6 h (reação bifásica); orientar adrenalina autoinjetável e encaminhar ao alergista."
+      ]
+    ]
+  },
+  {
+    "id": "f-sepse",
+    "nome": "Sepse e choque séptico",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Hora 1",
+        "Medir lactato; hemoculturas (sem atrasar); antibiótico de amplo espectro EV em até 1 h se choque; cristaloide balanceado 30 mL/kg em hipotensão ou lactato ≥ 4 mmol/L, com reavaliação de resposta a volume."
+      ],
+      [
+        "Vasopressor",
+        "Noradrenalina se PAM < 65 mmHg apesar de volume; vasopressina como segunda droga; hidrocortisona 200 mg/dia se necessidade persistente de vasopressor."
+      ],
+      [
+        "Foco",
+        "Identificar e controlar o foco (drenagem, retirada de cateter, cirurgia) o quanto antes."
+      ],
+      [
+        "Reavaliação",
+        "Lactato seriado, diurese, perfusão periférica; descalonar antibiótico em 48–72 h. Veja a aba Antibióticos."
+      ]
+    ]
+  },
+  {
+    "id": "f-avc",
+    "nome": "AVC isquêmico agudo",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Triagem",
+        "Definir horário de início (ou do último momento visto bem), glicemia capilar, NIHSS, TC de crânio sem contraste imediata (angiotomografia de vasos se candidato a trombectomia)."
+      ],
+      [
+        "Trombólise EV",
+        "Até 4,5 h do início, na ausência de contraindicações (sangramento, PA > 185/110 não controlada, uso de anticoagulante em dose plena, cirurgia/trauma recentes, glicemia < 50 mg/dL): alteplase 0,9 mg/kg (máx. 90 mg), 10% em bolus e o restante em 60 min."
+      ],
+      [
+        "Trombectomia",
+        "Oclusão de grande vaso (ex.: carótida interna, M1) até 6 h, e até 24 h em casos selecionados por neuroimagem."
+      ],
+      [
+        "PA e suporte",
+        "Se trombólise: manter PA < 185/110 antes e < 180/105 após. Sem trombólise, tolerar até 220/120. Evitar hipoglicemia e hipertermia; AAS 160–325 mg após excluir hemorragia (aguardar 24 h se trombolisado)."
+      ]
+    ]
+  },
+  {
+    "id": "f-iam",
+    "nome": "Síndrome coronariana aguda com supra de ST",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Primeiros 10 min",
+        "ECG em até 10 min, acesso venoso e monitorização, AAS 160–325 mg mastigado, analgesia se necessário. Oxigênio apenas se SpO2 < 90%."
+      ],
+      [
+        "Reperfusão",
+        "Angioplastia primária idealmente em até 90 min do primeiro contato (até 120 min se transferência). Se não for possível, fibrinólise em até 30 min (tenecteplase por peso ou alteplase) na ausência de contraindicações."
+      ],
+      [
+        "Antitrombóticos",
+        "Segundo antiagregante (ticagrelor, prasugrel ou clopidogrel conforme estratégia) e anticoagulante (heparina não fracionada ou enoxaparina)."
+      ],
+      [
+        "Cautelas",
+        "Nitrato para dor/hipertensão (evitar com hipotensão, IAM de VD, uso de inibidor de PDE-5). Betabloqueador oral sem sinais de insuficiência cardíaca ou choque. Estatina de alta potência."
+      ]
+    ]
+  },
+  {
+    "id": "f-sca",
+    "nome": "Síndrome coronariana aguda sem supra de ST",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Avaliação",
+        "ECG seriado, troponina de alta sensibilidade (0 e 1–3 h), estratificação com HEART/GRACE (aba Escores)."
+      ],
+      [
+        "Tratamento",
+        "AAS 160–325 mg, anticoagulação (ex.: enoxaparina 1 mg/kg 12/12h), antiagregante adicional conforme estratégia, betabloqueador, estatina, nitrato se dor."
+      ],
+      [
+        "Estratificação invasiva",
+        "Muito alto risco (instabilidade, arritmia grave, dor refratária): cineangiocoronariografia imediata. Alto risco: em até 24 h. Risco intermediário: durante a internação."
+      ]
+    ]
+  },
+  {
+    "id": "f-trauma",
+    "nome": "Trauma: atendimento inicial (ABCDE)",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "A — Via aérea",
+        "Avaliar permeabilidade com proteção da coluna cervical; manobras, aspiração, via aérea definitiva se necessário."
+      ],
+      [
+        "B — Respiração",
+        "Identificar e tratar pneumotórax hipertensivo (descompressão por agulha/dreno), pneumotórax aberto, tórax instável e hemotórax maciço; oxigênio."
+      ],
+      [
+        "C — Circulação",
+        "Controlar hemorragia externa (compressão direta, torniquete), 2 acessos calibrosos, reposição com cristaloide mínima e hemoderivados em choque hemorrágico (protocolo de transfusão maciça); ácido tranexâmico 1 g EV em 10 min nas primeiras 3 h, depois 1 g em 8 h."
+      ],
+      [
+        "D — Neurológico",
+        "Glasgow, pupilas, déficits focais, glicemia."
+      ],
+      [
+        "E — Exposição",
+        "Despir o paciente, examinar o corpo todo e prevenir hipotermia."
+      ],
+      [
+        "Complementares e conduta",
+        "FAST/eFAST, radiografia de tórax e pelve; reavaliações repetidas; cirurgia ou transferência para centro de trauma se instável."
+      ]
+    ]
+  },
+  {
+    "id": "f-convuls",
+    "nome": "Estado de mal epiléptico",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "0–5 min",
+        "Proteger via aérea, oxigênio, monitorização, acesso venoso, glicemia (se < 70 mg/dL, glicose; tiamina antes em suspeita de etilismo)."
+      ],
+      [
+        "1ª linha (benzodiazepínico)",
+        "Midazolam IM 10 mg (> 40 kg) ou diazepam 0,15–0,2 mg/kg EV (máx. 10 mg por dose), repetível uma vez, ou lorazepam 4 mg EV."
+      ],
+      [
+        "2ª linha (se persistir > 5–10 min)",
+        "Levetiracetam 60 mg/kg EV (máx. 4.500 mg) ou fenitoína 20 mg/kg EV (máx. 50 mg/min, monitor cardíaco) ou valproato 40 mg/kg EV."
+      ],
+      [
+        "Refratário",
+        "Sedação contínua em UTI (midazolam, propofol ou tiopental) com monitorização por EEG; investigar causa (infecção SNC, metabólico, hemorragia, tóxico)."
+      ]
+    ]
+  },
+  {
+    "id": "f-cad",
+    "nome": "Cetoacidose diabética (adulto)",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Diagnóstico",
+        "Glicemia > 250 mg/dL (pode ser menor em uso de iSGLT2), cetonemia ≥ 3 mmol/L ou cetonúria ++, pH < 7,3 e/ou bicarbonato < 18 mEq/L. Buscar fator precipitante (infecção, IAM, omissão de insulina)."
+      ],
+      [
+        "1ª hora",
+        "SF 0,9% 15–20 mL/kg na 1ª hora (ajustar se cardiopata/renal); depois 250–500 mL/h conforme sódio corrigido e hidratação."
+      ],
+      [
+        "Potássio",
+        "Dosar antes da insulina. K < 3,3: repor 20–30 mEq/h e adiar insulina. K 3,3–5,2: 20–30 mEq em cada litro de soro. K > 5,2: não repor, repetir em 2 h."
+      ],
+      [
+        "Insulina",
+        "Insulina regular EV contínua 0,1 UI/kg/h (ou 0,14 UI/kg/h sem bolus), queda de glicemia de 50–75 mg/dL/h. Quando glicemia < 200–250 mg/dL, acrescentar glicose 5–10% e manter insulina até resolver a acidose."
+      ],
+      [
+        "Monitorização",
+        "Glicemia capilar de hora em hora; eletrólitos e gasometria a cada 2–4 h. Resolução: pH > 7,3, bicarbonato ≥ 18 e cetonemia < 0,6. Transição para insulina SC com sobreposição de 1–2 h."
+      ],
+      [
+        "Bicarbonato",
+        "Considerar apenas se pH < 6,9 (100 mmol em 400 mL de água com KCl, por 2 h)."
+      ]
+    ]
+  },
+  {
+    "id": "f-hipercal",
+    "nome": "Hipercalemia",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Avaliação",
+        "K ≥ 5,5 mEq/L (grave ≥ 6,5 ou alterações no ECG: T apiculada, QRS largo). Descartar hemólise, revisar medicamentos (IECA/BRA, espironolactona, AINE, trimetoprima) e função renal."
+      ],
+      [
+        "Estabilizar a membrana",
+        "Gluconato de cálcio 10% 10–20 mL EV em 5–10 min com monitor; repetir em 5 min se o ECG persistir alterado."
+      ],
+      [
+        "Deslocar para dentro da célula",
+        "Insulina regular 10 UI EV + glicose 50% 50 mL (monitorar glicemia por 4–6 h); salbutamol 10–20 mg inalatório."
+      ],
+      [
+        "Eliminar",
+        "Furosemida EV se diurese preservada; resina de troca (ciclossilicato de zircônio ou poliestireno) ; hemodiálise se refratária, oligúrica ou K muito elevado."
+      ]
+    ]
+  },
+  {
+    "id": "f-hiponatremia",
+    "nome": "Hiponatremia",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Classificação",
+        "Na < 135 mEq/L. Osmolalidade, volemia, sódio e osmolalidade urinários orientam a causa (SIADH, hipovolemia, insuficiência cardíaca, cirrose, tiazídicos)."
+      ],
+      [
+        "Sintomas graves (convulsão, coma, vômitos)",
+        "Salina hipertônica 3% 100–150 mL EV em 10 min, repetir até 2–3 vezes, meta de elevação de 4–6 mEq/L nas primeiras horas."
+      ],
+      [
+        "Limite de correção",
+        "Máximo 8–10 mEq/L em 24 h (6–8 se alto risco de desmielinização osmótica: alcoolismo, desnutrição, hipocalemia, hepatopatia). Dosar sódio a cada 2–4 h."
+      ],
+      [
+        "Crônica e assintomática",
+        "Tratar a causa: restrição hídrica no SIADH, suspender tiazídico, SF 0,9% na hipovolemia. Evitar correção rápida."
+      ]
+    ]
+  },
+  {
+    "id": "f-hda",
+    "nome": "Hemorragia digestiva alta",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Ressuscitação",
+        "Dois acessos calibrosos, cristaloide, monitorização; transfusão se Hb < 7 g/dL (< 8 em cardiopatas); protocolo de transfusão maciça se instável."
+      ],
+      [
+        "Medicações",
+        "IBP EV (pantoprazol 80 mg em bolus, depois 40 mg 12/12 h). Suspeita de varizes: terlipressina ou octreotida + ceftriaxona 1 g/dia por até 7 dias."
+      ],
+      [
+        "Endoscopia",
+        "Em até 24 h (até 12 h se varizes); hemostasia endoscópica em úlceras com estigmas de alto risco (Forrest Ia–IIb). Estratificar com Glasgow-Blatchford (aba Escores)."
+      ],
+      [
+        "Falha",
+        "Reendoscopia, embolização angiográfica ou cirurgia; balão de Sengstaken-Blakemore como ponte em varizes refratárias."
+      ]
+    ]
+  },
+  {
+    "id": "f-choque",
+    "nome": "Choque: abordagem inicial",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Reconhecer",
+        "Hipotensão (PAS < 90 ou PAM < 65), hipoperfusão (lactato > 2, extremidades frias, oligúria, alteração de consciência)."
+      ],
+      [
+        "Tipos",
+        "Hipovolêmico (hemorragia, desidratação), distributivo (sepse, anafilaxia, neurogênico), cardiogênico (IAM, arritmia), obstrutivo (TEP, tamponamento, pneumotórax hipertensivo)."
+      ],
+      [
+        "Conduta imediata",
+        "Via aérea e oxigênio, 2 acessos, monitorização, ultrassom à beira-leito (POCUS: VCI, função de VE, derrame pericárdico, pneumotórax). Tratar a causa."
+      ],
+      [
+        "Fluidos e vasopressor",
+        "Cristaloide 500 mL em bolus com reavaliação em hipovolêmico/séptico; noradrenalina se PAM < 65 apesar de volume; dobutamina em disfunção ventricular; hemoderivados em hemorragia."
+      ]
+    ]
+  },
+  {
+    "id": "f-via",
+    "nome": "Via aérea difícil / intubação de sequência rápida",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Avaliação",
+        "LEMON: olhar externamente, avaliar 3-3-2, Mallampati, obstrução, mobilidade do pescoço. Preparar plano A (laringoscopia), B (dispositivo supraglótico), C (máscara facial) e D (cricotireoidostomia)."
+      ],
+      [
+        "Preparo",
+        "Pré-oxigenação 3–5 min (ou alto fluxo nasal), posicionamento, aspiração, monitor, ressuscitação hemodinâmica prévia."
+      ],
+      [
+        "Drogas (dose usual)",
+        "Indução: etomidato 0,3 mg/kg ou cetamina 1–2 mg/kg; bloqueador: succinilcolina 1,5 mg/kg ou rocurônio 1,2 mg/kg. Reduzir doses em choque."
+      ],
+      [
+        "Confirmação",
+        "Capnografia com onda, ausculta e expansão torácica simétricas. Falha: não insistir mais de 3 tentativas, chamar ajuda, ventilar com máscara e acionar plano de resgate."
+      ]
+    ]
+  },
+  {
+    "id": "f-tep",
+    "nome": "Tromboembolismo pulmonar",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Probabilidade",
+        "Escores de Wells e de Genebra revisado (aba Escores); D-dímero se probabilidade baixa/intermediária ou PERC não cumprido."
+      ],
+      [
+        "Imagem",
+        "Angiotomografia de tórax; cintilografia V/Q se contraindicação a contraste; ecocardiograma à beira-leito para avaliar VD em instáveis."
+      ],
+      [
+        "Anticoagulação",
+        "Iniciar já se probabilidade alta: enoxaparina 1 mg/kg 12/12 h ou rivaroxabana/apixabana nas doses de ataque; heparina não fracionada se insuficiência renal grave ou possível trombólise."
+      ],
+      [
+        "Alto risco (instável)",
+        "Trombólise sistêmica (alteplase 100 mg em 2 h) se sem contraindicação; embolectomia/cateter se contraindicada."
+      ]
+    ]
+  },
+  {
+    "id": "f-hipoglic",
+    "nome": "Hipoglicemia grave",
+    "grupo": "Emergência",
+    "s": [
+      [
+        "Critério",
+        "Glicemia < 70 mg/dL; grave se alteração de consciência ou incapacidade de ingerir."
+      ],
+      [
+        "Paciente consciente",
+        "15–20 g de carboidrato simples VO, repetir glicemia em 15 min."
+      ],
+      [
+        "Inconsciente",
+        "Glicose 50% 40–50 mL EV (ou glicose 10% 150–200 mL), seguida de infusão de glicose 5–10%; glucagon 1 mg IM/SC sem acesso. Em etilista, tiamina 100 mg antes da glicose."
+      ],
+      [
+        "Seguimento",
+        "Observar por horas se sulfonilureia ou insulina de ação prolongada; investigar causa e rever o esquema."
+      ]
+    ]
+  }
+]

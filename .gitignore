@@ -1,0 +1,4 @@
+# Gerado por "node ferramentas/build.js"
+dist/
+node_modules/
+*.bak

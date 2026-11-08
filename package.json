@@ -1,0 +1,12 @@
+{
+  "name": "bluebook",
+  "version": "0.72.0",
+  "private": true,
+  "description": "Bluebook — app de consulta clínica offline (arquivo único gerado por build).",
+  "scripts": {
+    "build": "node ferramentas/build.js",
+    "test:build": "node ferramentas/build.js && node ferramentas/testar_build.js",
+    "checar": "node ferramentas/checar_sintaxe.js",
+    "servir": "node ferramentas/servir.js dist 8080"
+  }
+}

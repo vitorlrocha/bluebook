@@ -1,0 +1,407 @@
+[
+  {
+    "id": "k-imc",
+    "nome": "IMC (índice de massa corporal)",
+    "grupo": "Antropometria",
+    "campos": [
+      [
+        "peso",
+        "Peso (kg)"
+      ],
+      [
+        "alt",
+        "Altura (cm)"
+      ]
+    ],
+    "formula": "IMC = peso (kg) ÷ altura² (m)",
+    "ref": "OMS (adultos): < 18,5 baixo peso; 18,5–24,9 normal; 25–29,9 sobrepeso; ≥ 30 obesidade (grau I 30–34,9; II 35–39,9; III ≥ 40). Não vale para crianças (usar curvas OMS).",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.peso || !v.alt) return null; var i = v.peso / Math.pow(v.alt / 100, 2); var c = i < 18.5 ? \"Baixo peso\" : i < 25 ? \"Normal\" : i < 30 ? \"Sobrepeso\" : i < 35 ? \"Obesidade grau I\" : i < 40 ? \"Obesidade grau II\" : \"Obesidade grau III\"; return fx(i) + \" kg/m² — \" + c; }"
+      ]
+    }
+  },
+  {
+    "id": "k-sc",
+    "nome": "Superfície corporal (Mosteller)",
+    "grupo": "Antropometria",
+    "campos": [
+      [
+        "peso",
+        "Peso (kg)"
+      ],
+      [
+        "alt",
+        "Altura (cm)"
+      ]
+    ],
+    "formula": "SC (m²) = √(altura em cm × peso em kg ÷ 3600)",
+    "ref": "Mosteller R. N Engl J Med 1987. Usada em quimioterapia e queimados.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.peso || !v.alt) return null; return fx(Math.sqrt(v.alt * v.peso / 3600), 2) + \" m²\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-ideal",
+    "nome": "Peso ideal (Devine)",
+    "grupo": "Antropometria",
+    "campos": [
+      [
+        "alt",
+        "Altura (cm)"
+      ],
+      [
+        "sexo",
+        "Sexo",
+        {
+          "$ref": "SEXO"
+        }
+      ]
+    ],
+    "formula": "Homem: 50 + 0,91 × (altura − 152,4). Mulher: 45,5 + 0,91 × (altura − 152,4)",
+    "ref": "Devine BJ. Drug Intell Clin Pharm 1974. Válido para altura > 152 cm.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.alt || !v.sexo) return null; return fx((v.sexo === \"m\" ? 50 : 45.5) + 0.91 * (v.alt - 152.4)) + \" kg\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-cg",
+    "nome": "Clearance de creatinina (Cockcroft-Gault)",
+    "grupo": "Função renal",
+    "campos": [
+      [
+        "idade",
+        "Idade (anos)"
+      ],
+      [
+        "peso",
+        "Peso (kg)"
+      ],
+      [
+        "cr",
+        "Creatinina sérica (mg/dL)"
+      ],
+      [
+        "sexo",
+        "Sexo",
+        {
+          "$ref": "SEXO"
+        }
+      ]
+    ],
+    "formula": "ClCr = [(140 − idade) × peso] ÷ (72 × creatinina); × 0,85 se mulher",
+    "ref": "Cockcroft DW, Gault MH. Nephron 1976. Usada para ajuste de doses de medicamentos. Em obesos, usar peso ajustado/ideal.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.idade || !v.peso || !v.cr || !v.sexo) return null; var c = (140 - v.idade) * v.peso / (72 * v.cr) * (v.sexo === \"f\" ? 0.85 : 1); return fx(c) + \" mL/min\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-ckd",
+    "nome": "TFG estimada (CKD-EPI 2021, sem raça)",
+    "grupo": "Função renal",
+    "campos": [
+      [
+        "idade",
+        "Idade (anos)"
+      ],
+      [
+        "cr",
+        "Creatinina sérica (mg/dL)"
+      ],
+      [
+        "sexo",
+        "Sexo",
+        {
+          "$ref": "SEXO"
+        }
+      ]
+    ],
+    "formula": "TFG = 142 × mín(Cr/κ;1)^α × máx(Cr/κ;1)^−1,200 × 0,9938^idade × 1,012 (se mulher). κ = 0,7 (F) ou 0,9 (M); α = −0,241 (F) ou −0,302 (M)",
+    "ref": "Inker LA et al. N Engl J Med 2021. KDIGO 2024: G1 ≥ 90; G2 60–89; G3a 45–59; G3b 30–44; G4 15–29; G5 < 15 mL/min/1,73 m².",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.idade || !v.cr || !v.sexo) return null; var f = v.sexo === \"f\", k = f ? 0.7 : 0.9, a = f ? -0.241 : -0.302, r = v.cr / k; var t = 142 * Math.pow(Math.min(r, 1), a) * Math.pow(Math.max(r, 1), -1.2) * Math.pow(0.9938, v.idade) * (f ? 1.012 : 1); var e = t >= 90 ? \"G1\" : t >= 60 ? \"G2\" : t >= 45 ? \"G3a\" : t >= 30 ? \"G3b\" : t >= 15 ? \"G4\" : \"G5\"; return fx(t) + \" mL/min/1,73 m² — estágio \" + e + \" (se alterações por ≥ 3 meses)\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-na",
+    "nome": "Sódio corrigido pela glicemia",
+    "grupo": "Eletrólitos e ácido-base",
+    "campos": [
+      [
+        "na",
+        "Sódio medido (mEq/L)"
+      ],
+      [
+        "gli",
+        "Glicemia (mg/dL)"
+      ]
+    ],
+    "formula": "Na corrigido = Na + 1,6 × (glicemia − 100) ÷ 100 (fator 2,4 em glicemias > 400 mg/dL)",
+    "ref": "Katz MA. N Engl J Med 1973; Hillier TA. Am J Med 1999.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.na || !v.gli) return null; var d = (v.gli - 100) / 100; return fx(v.na + 1.6 * d) + \" mEq/L (fator 1,6) · \" + fx(v.na + 2.4 * d) + \" mEq/L (fator 2,4)\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-ca",
+    "nome": "Cálcio corrigido pela albumina",
+    "grupo": "Eletrólitos e ácido-base",
+    "campos": [
+      [
+        "ca",
+        "Cálcio total (mg/dL)"
+      ],
+      [
+        "alb",
+        "Albumina (g/dL)"
+      ]
+    ],
+    "formula": "Ca corrigido = Ca total + 0,8 × (4,0 − albumina)",
+    "ref": "Payne RB et al. BMJ 1973. Em doença crítica, preferir cálcio iônico.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.ca || !v.alb) return null; return fx(v.ca + 0.8 * (4 - v.alb), 2) + \" mg/dL (normal ≈ 8,5–10,5)\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-ag",
+    "nome": "Ânion gap (com correção pela albumina)",
+    "grupo": "Eletrólitos e ácido-base",
+    "campos": [
+      [
+        "na",
+        "Sódio (mEq/L)"
+      ],
+      [
+        "cl",
+        "Cloro (mEq/L)"
+      ],
+      [
+        "hco3",
+        "Bicarbonato (mEq/L)"
+      ],
+      [
+        "alb",
+        "Albumina (g/dL) — opcional"
+      ]
+    ],
+    "formula": "AG = Na − (Cl + HCO₃). AG corrigido = AG + 2,5 × (4,0 − albumina)",
+    "ref": "Figge J et al. Crit Care Med 1998. Normal ≈ 8–12 mEq/L; elevado sugere acidose metabólica com AG aumentado (cetoacidose, lactato, uremia, intoxicações).",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.na || !v.cl || v.hco3 == null) return null; var ag = v.na - v.cl - v.hco3; var s = fx(ag) + \" mEq/L\"; if (v.alb) s += \" · corrigido: \" + fx(ag + 2.5 * (4 - v.alb)) + \" mEq/L\"; return s; }"
+      ]
+    }
+  },
+  {
+    "id": "k-osm",
+    "nome": "Osmolaridade sérica calculada",
+    "grupo": "Eletrólitos e ácido-base",
+    "campos": [
+      [
+        "na",
+        "Sódio (mEq/L)"
+      ],
+      [
+        "gli",
+        "Glicemia (mg/dL)"
+      ],
+      [
+        "ur",
+        "Ureia (mg/dL)"
+      ]
+    ],
+    "formula": "Osm = 2 × Na + glicemia ÷ 18 + ureia ÷ 6 (ou BUN ÷ 2,8)",
+    "ref": "Normal ≈ 275–295 mOsm/kg. Gap osmolar = medida − calculada (> 10 sugere álcoois tóxicos).",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.na || !v.gli || !v.ur) return null; return fx(2 * v.na + v.gli / 18 + v.ur / 6) + \" mOsm/kg\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-dag",
+    "nome": "Déficit de água livre (hipernatremia)",
+    "grupo": "Eletrólitos e ácido-base",
+    "campos": [
+      [
+        "peso",
+        "Peso (kg)"
+      ],
+      [
+        "na",
+        "Sódio (mEq/L)"
+      ],
+      [
+        "sexo",
+        "Sexo",
+        {
+          "$ref": "SEXO"
+        }
+      ]
+    ],
+    "formula": "Déficit (L) = ACT × (Na ÷ 140 − 1). ACT = 0,6 × peso (homem) ou 0,5 × peso (mulher)",
+    "ref": "Adrogué HJ, Madias NE. N Engl J Med 2000. Corrigir Na em no máximo 10–12 mEq/L em 24 h.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.peso || !v.na || !v.sexo) return null; return fx((v.sexo === \"m\" ? 0.6 : 0.5) * v.peso * (v.na / 140 - 1), 2) + \" L\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-pf",
+    "nome": "Relação PaO₂/FiO₂",
+    "grupo": "Respiratório",
+    "campos": [
+      [
+        "pao2",
+        "PaO₂ (mmHg)"
+      ],
+      [
+        "fio2",
+        "FiO₂ (%)"
+      ]
+    ],
+    "formula": "P/F = PaO₂ ÷ FiO₂ (em fração, ex.: 40% = 0,40)",
+    "ref": "Definição de Berlim (SDRA, PEEP ≥ 5): leve 200–300; moderada 100–200; grave < 100.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.pao2 || !v.fio2) return null; var p = v.pao2 / (v.fio2 / 100); return fx(p, 0) + \" mmHg — \" + (p > 300 ? \"acima de 300\" : p > 200 ? \"faixa leve\" : p > 100 ? \"faixa moderada\" : \"faixa grave\"); }"
+      ]
+    }
+  },
+  {
+    "id": "k-qtc",
+    "nome": "QT corrigido (Bazett e Fridericia)",
+    "grupo": "Cardiovascular",
+    "campos": [
+      [
+        "qt",
+        "QT (ms)"
+      ],
+      [
+        "fc",
+        "Frequência cardíaca (bpm)"
+      ]
+    ],
+    "formula": "Bazett: QTc = QT ÷ √RR. Fridericia: QTc = QT ÷ ∛RR (RR em segundos = 60 ÷ FC)",
+    "ref": "Normal: < 450 ms (H) e < 460 ms (M); > 500 ms = risco de torsades. Bazett superestima em FC alta.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.qt || !v.fc) return null; var rr = 60 / v.fc; return \"Bazett \" + fx(v.qt / Math.sqrt(rr), 0) + \" ms · Fridericia \" + fx(v.qt / Math.cbrt(rr), 0) + \" ms\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-gota",
+    "nome": "Gotejamento de soro",
+    "grupo": "Infusão",
+    "campos": [
+      [
+        "vol",
+        "Volume (mL)"
+      ],
+      [
+        "h",
+        "Tempo (horas)"
+      ]
+    ],
+    "formula": "Gotas/min = volume ÷ (horas × 3). Microgotas/min = volume ÷ horas (1 mL = 20 gotas = 60 microgotas)",
+    "ref": "Fórmula padrão de enfermagem. Também dá a vazão em mL/h.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.vol || !v.h) return null; return fx(v.vol / (v.h * 3), 0) + \" gotas/min · \" + fx(v.vol / v.h, 0) + \" microgotas/min · \" + fx(v.vol / v.h, 0) + \" mL/h\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-bic",
+    "nome": "Bomba de infusão: dose em mcg/kg/min",
+    "grupo": "Infusão",
+    "campos": [
+      [
+        "dose",
+        "Dose desejada (mcg/kg/min)"
+      ],
+      [
+        "peso",
+        "Peso (kg)"
+      ],
+      [
+        "conc",
+        "Concentração da solução (mg/mL)"
+      ]
+    ],
+    "formula": "Vazão (mL/h) = dose × peso × 60 ÷ (concentração em mcg/mL). Ex.: 4 mg/mL = 4000 mcg/mL",
+    "ref": "Conferir sempre a diluição padrão do serviço e o limite de dose da droga.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.dose || !v.peso || !v.conc) return null; return fx(v.dose * v.peso * 60 / (v.conc * 1000), 2) + \" mL/h\"; }"
+      ]
+    }
+  },
+  {
+    "id": "k-ped",
+    "nome": "Dose pediátrica por peso",
+    "grupo": "Infusão",
+    "campos": [
+      [
+        "peso",
+        "Peso (kg)"
+      ],
+      [
+        "mgkg",
+        "Dose (mg/kg/dia)"
+      ],
+      [
+        "n",
+        "Número de doses por dia"
+      ],
+      [
+        "max",
+        "Dose máxima diária (mg) — opcional"
+      ],
+      [
+        "conc",
+        "Concentração (mg/mL) — opcional"
+      ]
+    ],
+    "formula": "Dose por tomada = (mg/kg/dia × peso) ÷ nº de doses. Limitar à dose máxima diária",
+    "ref": "Usar a posologia pediátrica da ficha do medicamento. Confirmar na bula e em protocolo local; não ultrapassar a dose de adulto.",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.peso || !v.mgkg || !v.n) return null; var d = v.mgkg * v.peso, lim = \"\"; if (v.max && d > v.max) { d = v.max; lim = \" (limitada à dose máxima)\"; } var pt = d / v.n, s = fx(d, 1) + \" mg/dia → \" + fx(pt, 1) + \" mg por tomada\" + lim; if (v.conc) s += \" = \" + fx(pt / v.conc, 1) + \" mL por tomada\"; return s; }"
+      ]
+    }
+  },
+  {
+    "id": "k-dpp",
+    "nome": "Idade gestacional e data provável do parto",
+    "grupo": "Obstetrícia",
+    "campos": [
+      [
+        "dum",
+        "Data da última menstruação",
+        "date"
+      ]
+    ],
+    "formula": "IG = hoje − DUM. DPP (regra de Naegele) = DUM + 280 dias",
+    "ref": "Confirmar sempre pelo ultrassom do 1º trimestre quando houver diferença > 7 dias (FEBRASGO/ACOG).",
+    "f": {
+      "$fn": [
+        "function (v) { if (!v.dum) return null; var d = new Date(v.dum + \"T12:00:00\"), h = new Date(); h.setHours(12, 0, 0, 0); var dias = Math.round((h - d) / 86400000); if (dias < 0) return \"Data no futuro\"; var dpp = new Date(d.getTime() + 280 * 86400000); return \"IG: \" + Math.floor(dias / 7) + \" semanas e \" + (dias % 7) + \" dias · DPP: \" + dpp.toLocaleDateString(\"pt-BR\"); }"
+      ]
+    }
+  }
+]
