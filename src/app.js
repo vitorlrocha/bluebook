@@ -33,13 +33,37 @@
   var SYN2 = { pac: ["pneumonia adquirida na comunidade"], gea: ["gastroenterite aguda"], ira: ["insuficiencia respiratoria aguda"], ivu: ["infeccao urinaria"], bcp: ["pneumonia"], hic: ["hipertensao intracraniana"], hds: ["hemorragia digestiva"], rge: ["refluxo gastroesofagico"], pti: ["purpura trombocitopenica imune"], lma: ["leucemia mieloide aguda"], lla: ["leucemia linfoblastica aguda"], llc: ["leucemia linfocitica cronica"], lmc: ["leucemia mieloide cronica"], sdra: ["desconforto respiratorio agudo"], hcv: ["hepatite c"], hbv: ["hepatite b"], hpp: ["hemorragia pos-parto"], dmg: ["diabetes gestacional"], eh: ["encefalopatia hepatica"], pbe: ["peritonite bacteriana espontanea"], cah: ["cetoacidose"], ehh: ["estado hiperglicemico hiperosmolar"], dpoc: ["doenca pulmonar obstrutiva cronica"], tdm: ["transtorno depressivo maior", "depressao"], tab: ["transtorno afetivo bipolar", "bipolar"], ela: ["esclerose lateral amiotrofica"], em: ["esclerose multipla"], fr: ["febre reumatica"], vsr: ["virus sincicial respiratorio"], dengue: ["dengue"], ivas: ["infeccao de vias aereas superiores"], amigdalite: ["faringoamigdalite"], ac: ["anticoagulante"], doac: ["anticoagulante oral direto"], noac: ["anticoagulante oral direto"], isrs: ["inibidor seletivo da recaptacao de serotonina", "isrs"], bcc: ["bloqueador de canal de calcio", "canal de calcio"], bb: ["betabloqueador"] };
   Object.keys(SYN2).forEach(function (k) { if (!SYN[k]) SYN[k] = SYN2[k]; });
   function stemW(w) { return w.length > 4 && /[^s]s$/.test(w) && !/(ose|ase|ite|us|is)$/.test(w.slice(0, -1) + "s") ? w.slice(0, -1) : w; }
+  /* Desempenho: termSets é chamado para cada item a cada tecla; o resultado só depende do termo. */
+  var _termSetsMemo = {}, _termSetsN = 0;
   function termSets(term) {
-    var words = stripAccents(String(term || "").trim().toLowerCase()).split(/\s+/).filter(Boolean).map(stemW), sets = [words];
+    var key = String(term || "");
+    if (Object.prototype.hasOwnProperty.call(_termSetsMemo, key)) return _termSetsMemo[key];
+    var words = stripAccents(key.trim().toLowerCase()).split(/\s+/).filter(Boolean).map(stemW), sets = [words];
     words.forEach(function (w, i) { (SYN[w] || []).forEach(function (e) { sets.push(words.slice(0, i).concat(e.split(" "), words.slice(i + 1))); }); });
-    return sets;
+    if (++_termSetsN > 500) { _termSetsMemo = {}; _termSetsN = 1; }
+    return (_termSetsMemo[key] = sets);
+  }
+  /* Desempenho: um único Collator (mesmo resultado de localeCompare(x, "pt-BR"), bem mais rápido). */
+  var COLL_PT = new Intl.Collator("pt-BR");
+  function cmpPt(a, b) { return COLL_PT.compare(a, b); }
+  /* Desempenho: texto normalizado (sem acento, minúsculo) de cada registro, calculado uma vez por objeto. */
+  var _hayCache = typeof WeakMap === "function" ? new WeakMap() : null;
+  function hayOf(obj, kind, build) {
+    if (!_hayCache) return build();
+    var e = _hayCache.get(obj); if (!e) { e = {}; _hayCache.set(obj, e); }
+    return e[kind] !== undefined ? e[kind] : (e[kind] = build());
+  }
+  /* Desempenho: nomes normalizados (sem acento, minúsculos) memorizados; resultado idêntico a stripAccents(s.toLowerCase()). */
+  var _normMemo = typeof Map === "function" ? new Map() : null;
+  function normLower(s) {
+    s = String(s || "");
+    if (!_normMemo) return stripAccents(s.toLowerCase());
+    var v = _normMemo.get(s);
+    if (v === undefined) { if (_normMemo.size > 20000) _normMemo.clear(); v = stripAccents(s.toLowerCase()); _normMemo.set(s, v); }
+    return v;
   }
   function relScore(name, alt, term) {
-    var n = stripAccents(String(name || "").toLowerCase()), a = stripAccents(String(alt || "").toLowerCase());
+    var n = normLower(name), a = normLower(alt);
     var q = stripAccents(String(term || "").trim().toLowerCase()), ws = q.split(/\s+/).filter(Boolean).map(stemW);
     if (!q) return 0;
     if (n === q) return 1000;
@@ -62,6 +86,24 @@
     return rx.test(hay);
   }
   function matchTerm(hay, term) { return termSets(term).some(function (set) { return set.every(function (t) { return tokMatch(hay, t); }); }); }
+  /* Desempenho: pré-filtro exato por trigramas (filtro de Bloom de 4096 bits por registro).
+     Se t está contido no texto, todos os trigramas de t estão no filtro; logo, um bit ausente prova que
+     tokMatch daria falso. O filtro só descarta registros e nunca muda o resultado de matchTerm. */
+  function _tri(s, i) { return (s.charCodeAt(i) * 961 + s.charCodeAt(i + 1) * 31 + s.charCodeAt(i + 2)) & 4095; }
+  function bloomOf(hay) {
+    var b = new Uint32Array(128);
+    for (var i = 0, n = hay.length - 2; i < n; i++) { var h = _tri(hay, i); b[h >>> 5] |= 1 << (h & 31); }
+    return b;
+  }
+  function bloomMay(b, t) {
+    for (var i = 0, n = t.length - 2; i < n; i++) { var h = _tri(t, i); if (!(b[h >>> 5] & (1 << (h & 31)))) return false; }
+    return true;
+  }
+  /* matchTerm com o pré-filtro; obj = registro (chave do cache), hay = texto normalizado do registro. */
+  function matchRec(obj, hay, term) {
+    var b = typeof Uint32Array === "function" ? hayOf(obj, "bloom", function () { return bloomOf(hay); }) : null;
+    return termSets(term).some(function (set) { return set.every(function (t) { return (!b || bloomMay(b, t)) && tokMatch(hay, t); }); });
+  }
   var HIST = [];
   try { HIST = JSON.parse(window.localStorage.getItem("bluebook:hist") || "[]"); } catch (e) { HIST = []; }
   function histAdd(t) {
@@ -368,11 +410,21 @@
     for (var i = 0; i < CLASS_GROUPS.length; i++) if (CLASS_GROUPS[i][1].test(c)) return (m._g = CLASS_GROUPS[i][0]);
     return (m._g = "Outros");
   }
+  /* Texto de busca de cada registro (sem acento, minúsculo), em cache por objeto. */
+  function medHay(m) {
+    return hayOf(m, "busca", function () { return stripAccents(((m.nome || "") + " " + (m.referencias || "") + " " + (m.classe || "") + " " + medGroup(m) + " " + (m.esp || "") + " " + (m.indicacoes || "") + " " + (m.apresentacoes || "") + " " + (m.posologia || "") + " " + (m.observacoes || "") + " " + (m.areas || "")).toLowerCase()); });
+  }
+  function disHay(d) {
+    return hayOf(d, "busca", function () { return stripAccents(((d.nome || "") + " " + (d.cid || "") + " " + (d.area || "") + " " + (d.esp || "") + " " + (d.introducao || "") + " " + (d.criterios || "") + " " + (d.exames || "") + " " + (d.tratamento || "") + " " + (d.conduta || "") + " " + (d.prescricao || "")).toLowerCase()); });
+  }
+  var _medSorted = { src: null, list: [] };
   function filteredSorted() {
     var term = stripAccents(searchTerm.trim().toLowerCase());
-    var list = medications.slice().sort(function (a, b) {
-      return (a.nome || "").localeCompare(b.nome || "", "pt-BR");
-    });
+    /* Desempenho: a ordem alfabética só muda quando a lista "medications" é trocada pelo store. */
+    if (_medSorted.src !== medications) {
+      _medSorted = { src: medications, list: medications.slice().sort(function (a, b) { return cmpPt(a.nome || "", b.nome || ""); }) };
+    }
+    var list = _medSorted.list.slice();
     if (classFilter) {
       list = list.filter(function (m) { return medGroup(m) === classFilter || (m.classe || "").trim() === classFilter; });
     }
@@ -385,17 +437,16 @@
     }
     if (!term) return list;
     var exact = list.filter(function (m) {
-      var hay = stripAccents(((m.nome || "") + " " + (m.referencias || "") + " " + (m.classe || "") + " " + medGroup(m) + " " + (m.esp || "") + " " + (m.indicacoes || "") + " " + (m.apresentacoes || "") + " " + (m.posologia || "") + " " + (m.observacoes || "") + " " + (m.areas || "")).toLowerCase());
-      return matchTerm(hay, term);
+      return matchRec(m, medHay(m), term);
     });
     if (exact.length) {
       exact.forEach(function (m) { m._rs = relScore(m.nome, (m.referencias || "") + " " + (m.classe || "") + " " + medGroup(m), term); });
-      return exact.sort(function (a, b) { return (b._rs - a._rs) || (a.nome || "").localeCompare(b.nome || "", "pt-BR"); });
+      return exact.sort(function (a, b) { return (b._rs - a._rs) || cmpPt(a.nome || "", b.nome || ""); });
     }
     if (term.length < 4) return exact;
     /* Busca tolerante a erros de grafia (ex.: "tansulosina" -> Tamsulosina) */
     return list.filter(function (m) {
-      var words = stripAccents(((m.nome || "") + " " + (m.referencias || "")).toLowerCase()).split(/[^a-z0-9]+/);
+      var words = hayOf(m, "palavras", function () { return stripAccents(((m.nome || "") + " " + (m.referencias || "")).toLowerCase()).split(/[^a-z0-9]+/); });
       return term.split(/\s+/).every(function (t) {
         var tol = t.length >= 9 ? 2 : 1;
         return words.some(function (w) {
@@ -1110,14 +1161,19 @@
 
   var DISEASE_AREAS = ["Clínica Médica", "Cardiologia", "Pneumologia", "Gastroenterologia e Hepatologia", "Nefrologia e Urologia", "Endocrinologia e Metabologia", "Infectologia", "Reumatologia", "Hematologia e Oncologia", "Geriatria e Cuidados Paliativos", "Pediatria", "Cirurgia Geral", "Ginecologia e Obstetrícia", "Urgência e Emergência", "Psiquiatria", "Ortopedia e Traumatologia", "Dermatologia", "Neurologia", "Otorrino e Oftalmologia"];
 
+  var _disOrder = null;
   function filteredDiseases() {
     var term = stripAccents(diseaseSearchTerm.trim().toLowerCase());
-    var list = DISEASES.map(function (d, i) { return Object.assign({ _idx: i }, d); })
-      .sort(function (a, b) {
+    /* Desempenho: DISEASES não muda; a ordem (área, nome) é calculada uma vez. */
+    if (!_disOrder) {
+      _disOrder = DISEASES.map(function (d, i) { return i; }).sort(function (x, y) {
+        var a = DISEASES[x], b = DISEASES[y];
         var ia = DISEASE_AREAS.indexOf(a.area), ib = DISEASE_AREAS.indexOf(b.area);
         if (ia !== ib) return ia - ib;
-        return (a.nome || "").localeCompare(b.nome || "", "pt-BR");
+        return cmpPt(a.nome || "", b.nome || "") || x - y;
       });
+    }
+    var list = _disOrder.map(function (i) { return Object.assign({ _idx: i }, DISEASES[i]); });
     if (bigArea) {
       list = list.filter(function (d) { return diseaseBig(d) === bigArea; });
     }
@@ -1135,12 +1191,12 @@
     }
     if (!term) return list;
     var res = list.filter(function (d) {
-      var hay = stripAccents(((d.nome || "") + " " + (d.cid || "") + " " + (d.area || "") + " " + (d.esp || "") + " " + (d.introducao || "") + " " + (d.criterios || "") + " " + (d.exames || "") + " " + (d.tratamento || "") + " " + (d.conduta || "") + " " + (d.prescricao || "")).toLowerCase());
-      return matchTerm(hay, term);
+      var src = DISEASES[d._idx];   // cache no objeto original (as cópias de "list" são refeitas a cada busca)
+      return matchRec(src, disHay(src), term);
     });
     if (!res.length && term.length >= 4) {
       res = list.filter(function (d) {
-        var words = stripAccents((d.nome || "").toLowerCase()).split(/[^a-z0-9]+/);
+        var words = hayOf(DISEASES[d._idx], "palavras", function () { return stripAccents((d.nome || "").toLowerCase()).split(/[^a-z0-9]+/); });
         return term.split(/\s+/).every(function (t) {
           var tol = t.length >= 9 ? 2 : 1;
           return words.some(function (w) { if (w.length < 3) return false; if (w.indexOf(t) !== -1) return true; var cut = w.length > t.length ? w.slice(0, t.length + tol) : w; return editDist(t, w) <= tol || editDist(t, cut) <= tol; });
@@ -1148,7 +1204,7 @@
       });
     }
     res.forEach(function (d) { d._rs = relScore(d.nome, (d.cid || "") + " " + (d.area || ""), term); });
-    return res.sort(function (a, b) { return (b._rs - a._rs) || (a.nome || "").localeCompare(b.nome || "", "pt-BR"); });
+    return res.sort(function (a, b) { return (b._rs - a._rs) || cmpPt(a.nome || "", b.nome || ""); });
   }
 
   function updateDiseaseAreaOptions() {
@@ -1276,7 +1332,10 @@
   }
   function gsAll(list, terms) {
     var sets = termSets(terms.join(" "));
-    var hits = list.filter(function (e) { return sets.some(function (set) { return set.every(function (t) { return tokMatch(e.h, t); }); }); });
+    var hits = list.filter(function (e) {
+      var b = typeof Uint32Array === "function" ? hayOf(e, "bloom", function () { return bloomOf(e.h); }) : null;
+      return sets.some(function (set) { return set.every(function (t) { return (!b || bloomMay(b, t)) && tokMatch(e.h, t); }); });
+    });
     hits.sort(function (a, b) {
       var an = terms.every(function (t) { return a.n.indexOf(t) !== -1; }) ? 0 : 1, bn = terms.every(function (t) { return b.n.indexOf(t) !== -1; }) ? 0 : 1;
       return an - bn;
@@ -3326,4 +3385,27 @@
 
   render();
   initStore();
+
+  /* Desempenho: prepara os índices de busca (texto normalizado + trigramas) em pedaços, no tempo ocioso
+     após a abertura, para que a primeira tecla não pague esse custo. Não altera nada visível. */
+  (function () {
+    var idle = window.requestIdleCallback || function (fn) { return setTimeout(function () { fn({ timeRemaining: function () { return 8; } }); }, 50); };
+    var fila = null, pos = 0;
+    function montarFila() {
+      gsBuild();
+      fila = [];
+      medications.forEach(function (m) { fila.push(function () { matchRec(m, medHay(m), "zz"); }); });
+      DISEASES.forEach(function (d) { fila.push(function () { matchRec(d, disHay(d), "zz"); }); });
+      [GS.m, GS.d, GS.s, GS.a].concat(Object.keys(GS.r).map(function (k) { return GS.r[k]; })).forEach(function (lst) {
+        lst.forEach(function (e) { fila.push(function () { hayOf(e, "bloom", function () { return bloomOf(e.h); }); }); });
+      });
+    }
+    function passo(dl) {
+      if (!medications.length) { setTimeout(function () { idle(passo); }, 500); return; }   // espera a biblioteca carregar
+      if (!fila) montarFila();
+      while (pos < fila.length && dl.timeRemaining() > 2) fila[pos++]();
+      if (pos < fila.length) idle(passo);
+    }
+    setTimeout(function () { idle(passo); }, 800);
+  })();
 })();
