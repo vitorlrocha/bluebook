@@ -2505,26 +2505,89 @@
     var favs = medications.filter(function (m) { return m.favorito; }).map(function (m) { return m.nome; });
     return { dados: dados, favoritos: favs };
   }
+  /* Grava um perfil (arquivo ou Google Drive) e recarrega o app para ler os dados novos. */
+  function perfilImportar(p) {
+    var A = window.BBAuth;
+    Object.keys(p.dados || {}).forEach(function (k) { if (A.PESSOAIS.indexOf(k) !== -1 && typeof p.dados[k] === "string") { try { window.localStorage.setItem(k, p.dados[k]); } catch (e) {} } });
+    var nomes = {}; (p.favoritos || []).forEach(function (n) { nomes[String(n).trim().toLowerCase()] = 1; });
+    var map = {}; medications.forEach(function (m) { if (nomes[(m.nome || "").trim().toLowerCase()] && !m.favorito) map[m.id] = { favorito: true }; });
+    var feito = store && store.updateMany && Object.keys(map).length ? store.updateMany(map) : Promise.resolve();
+    return feito.then(function () { setTimeout(function () { location.reload(); }, 600); });
+  }
+  window.BBPerfil = { dados: perfilDados, importar: perfilImportar };
+
   function perfilResumo() {
     var p = perfilDados(), notas = 0, dfav = 0;
     try { notas = Object.keys(JSON.parse(p.dados["bluebook:notes"] || "{}")).length; } catch (e) {}
     try { dfav = (JSON.parse(p.dados["bluebook:disease-favs"] || "[]") || []).length; } catch (e) {}
     return "Neste aparelho: " + notas + " anotação(ões), " + p.favoritos.length + " medicamento(s) e " + dfav + " doença(s) favoritos.";
   }
+  function quando(iso) { try { return new Date(iso).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }); } catch (e) { return iso; } }
+  /* Ajustes → Backup no Google Drive */
+  function ligarDrive(overlay) {
+    var G = window.BBGoogle;
+    var st = document.getElementById("drive-status"), bt = document.getElementById("drive-botoes"), ms = document.getElementById("drive-msg");
+    function aviso(t, ok) { ms.style.color = ok ? "var(--ok)" : "var(--bad-ink)"; ms.textContent = t || ""; }
+    function acao(id, rot, fn, principal) { return '<button type="button" class="' + (principal ? "btn" : "btn-ghost btn") + '" id="' + id + '">' + rot + "</button>"; }
+    function rodar(p, okMsg) { aviso("Aguarde…", true); return p.then(function (x) { aviso(typeof okMsg === "function" ? okMsg(x) : okMsg, true); desenhar(); }, function (e) { aviso(e && e.message ? e.message : "Não foi possível."); desenhar(); }); }
+    function desenhar() {
+      if (!document.body.contains(st)) return;
+      var e = G ? G.estado() : { configurado: false };
+      if (!e.configurado) { st.textContent = "Disponível depois que o acesso ao Google for configurado no app."; bt.innerHTML = ""; return; }
+      if (!e.conectado) {
+        st.textContent = "Desligado. Conecte com a conta Google " + window.BBAuth.email() + " para guardar uma cópia automática.";
+        bt.innerHTML = acao("drive-conectar", "Conectar ao Google Drive", null, true);
+        document.getElementById("drive-conectar").addEventListener("click", function () { rodar(G.conectar(), "Conectado. Backup feito."); });
+        return;
+      }
+      st.textContent = "Conectado (" + e.email + "). Último backup: " + (e.ultimo ? quando(e.ultimo) : "nenhum") + (e.pendente ? " · há mudanças a enviar" : " · em dia") + (e.online ? "" : " · sem internet agora");
+      bt.innerHTML = acao("drive-agora", "Fazer backup agora", null, true) + acao("drive-restaurar", "Restaurar do Drive") + acao("drive-desligar", "Desconectar");
+      document.getElementById("drive-agora").addEventListener("click", function () { rodar(G.backup(), function (u) { return "Backup feito em " + quando(u) + "."; }); });
+      document.getElementById("drive-restaurar").addEventListener("click", function () {
+        if (!window.confirm("Substituir as anotações, favoritos e demais dados pessoais deste aparelho pelo backup do Google Drive?")) return;
+        rodar(G.restaurar(), function (u) { return "Backup de " + (u ? quando(u) : "Drive") + " restaurado. Recarregando…"; });
+      });
+      document.getElementById("drive-desligar").addEventListener("click", function () { G.desconectar(); aviso("Desconectado. O backup que já está no Drive continua lá.", true); desenhar(); });
+    }
+    desenhar();
+    document.addEventListener("bb:drive", desenhar);
+  }
+
+  /* Aviso "backup pendente": aparece quando há mudanças, internet e o acesso do Google expirou (1 toque renova). */
+  (function () {
+    var bar = document.createElement("div");
+    bar.id = "drive-aviso"; bar.className = "drive-aviso"; bar.hidden = true; bar.setAttribute("role", "status");
+    bar.innerHTML = '<span>Backup no Google Drive pendente</span><button type="button" id="drive-sync">Sincronizar</button>';
+    document.body.appendChild(bar);
+    function atualizar() {
+      var G = window.BBGoogle, e = G && G.estado();
+      bar.hidden = !(e && e.configurado && e.conectado && e.pendente && e.online && !e.tokenValido);
+    }
+    document.getElementById("drive-sync").addEventListener("click", function () {
+      var b = this; b.disabled = true;
+      window.BBGoogle.backup().then(function () { atualizar(); }, function () { atualizar(); }).then(function () { b.disabled = false; });
+    });
+    document.addEventListener("bb:drive", atualizar);
+    window.addEventListener("online", atualizar); window.addEventListener("offline", atualizar);
+    setTimeout(atualizar, 2000);
+  })();
+
   function ligarConta(overlay) {
     var A = window.BBAuth;
     document.getElementById("conta-sair").addEventListener("click", function () { overlay.remove(); A.sair(); });
     var sb = document.getElementById("conta-senha-btn"), sp = document.getElementById("conta-senha");
-    sb.addEventListener("click", function () { sp.hidden = !sp.hidden; sb.setAttribute("aria-expanded", sp.hidden ? "false" : "true"); if (!sp.hidden) document.getElementById("cs-atual").focus(); });
+    sb.addEventListener("click", function () { sp.hidden = !sp.hidden; sb.setAttribute("aria-expanded", sp.hidden ? "false" : "true"); if (!sp.hidden) (document.getElementById("cs-atual") || document.getElementById("cs-nova")).focus(); });
     document.getElementById("cs-salvar").addEventListener("click", function () {
       var st = document.getElementById("cs-status"), nova = document.getElementById("cs-nova").value;
       st.style.color = "var(--bad-ink)";
       if (nova !== document.getElementById("cs-nova2").value) { st.textContent = "As senhas novas não conferem."; return; }
-      A.alterarSenha(document.getElementById("cs-atual").value, nova).then(function () {
-        st.style.color = "var(--ok)"; st.textContent = "Senha alterada.";
-        ["cs-atual", "cs-nova", "cs-nova2"].forEach(function (id) { document.getElementById(id).value = ""; });
+      var atual = document.getElementById("cs-atual");
+      A.alterarSenha(atual ? atual.value : "", nova).then(function () {
+        st.style.color = "var(--ok)"; st.textContent = atual ? "Senha alterada." : "Senha definida. Agora você também entra sem internet.";
+        ["cs-atual", "cs-nova", "cs-nova2"].forEach(function (id) { var e = document.getElementById(id); if (e) e.value = ""; });
       }).catch(function (err) { st.textContent = err && err.message ? err.message : "Não foi possível alterar a senha."; });
     });
+    if (document.getElementById("settings-drive")) ligarDrive(overlay);
     document.getElementById("perfil-export").addEventListener("click", function () {
       var p = perfilDados();
       downloadJson("bluebook-perfil-" + todayInputValue() + ".json", { tipo: "bluebook-perfil", versao: 1, email: A.email(), exportadoEm: new Date().toISOString(), dados: p.dados, favoritos: p.favoritos });
@@ -2540,14 +2603,8 @@
         st.style.color = "var(--bad-ink)";
         if (!p || p.tipo !== "bluebook-perfil" || !p.dados || typeof p.dados !== "object") { st.textContent = "Este arquivo não é um backup de perfil do Bluebook."; return; }
         if (String(p.email || "").toLowerCase() !== String(A.email()).toLowerCase()) { st.textContent = "Este perfil pertence a " + (p.email || "outro e-mail") + " e não pode ser importado na conta " + A.email() + "."; return; }
-        Object.keys(p.dados).forEach(function (k) { if (A.PESSOAIS.indexOf(k) !== -1 && typeof p.dados[k] === "string") { try { window.localStorage.setItem(k, p.dados[k]); } catch (e) {} } });
-        var nomes = {}; (p.favoritos || []).forEach(function (n) { nomes[String(n).trim().toLowerCase()] = 1; });
-        var map = {}; medications.forEach(function (m) { if (nomes[(m.nome || "").trim().toLowerCase()] && !m.favorito) map[m.id] = { favorito: true }; });
-        var feito = store && store.updateMany && Object.keys(map).length ? store.updateMany(map) : Promise.resolve();
-        feito.then(function () {
-          st.style.color = "var(--ok)"; st.textContent = "Perfil importado. Recarregando…";
-          setTimeout(function () { location.reload(); }, 600);
-        });
+        st.style.color = "var(--ok)"; st.textContent = "Perfil importado. Recarregando…";
+        perfilImportar(p);
       };
       rd.readAsText(file);
       pf.value = "";
@@ -2587,9 +2644,9 @@
         '<p class="body-text" style="margin:4px 0 10px 0;font-size:13px;color:var(--ink-soft);">' + perfilResumo() + '</p>' +
         '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
         '<button type="button" class="btn-ghost btn" id="conta-sair">Sair</button>' +
-        '<button type="button" class="btn-ghost btn" id="conta-senha-btn" aria-expanded="false">Alterar senha</button></div>' +
+        '<button type="button" class="btn-ghost btn" id="conta-senha-btn" aria-expanded="false">' + (window.BBAuth.temSenha() ? "Alterar senha" : "Definir senha (para entrar sem internet)") + '</button></div>' +
         '<div id="conta-senha" hidden style="margin-top:10px;">' +
-        '<label for="cs-atual" style="font-size:13px;">Senha atual</label><input type="password" id="cs-atual" autocomplete="current-password">' +
+        (window.BBAuth.temSenha() ? '<label for="cs-atual" style="font-size:13px;">Senha atual</label><input type="password" id="cs-atual" autocomplete="current-password">' : "") +
         '<label for="cs-nova" style="font-size:13px;">Nova senha (mínimo de 8 caracteres)</label><input type="password" id="cs-nova" autocomplete="new-password">' +
         '<label for="cs-nova2" style="font-size:13px;">Confirme a nova senha</label><input type="password" id="cs-nova2" autocomplete="new-password">' +
         '<button type="button" class="btn" id="cs-salvar" style="margin-top:8px;">Salvar nova senha</button>' +
@@ -2601,7 +2658,14 @@
         '<button type="button" class="btn" id="perfil-export">Exportar perfil (.json)</button>' +
         '<button type="button" class="btn-ghost btn" id="perfil-import">Importar perfil (.json)</button>' +
         '<input type="file" id="perfil-file" accept="application/json" style="display:none;"></div>' +
-        '<p id="perfil-status" class="calc-note" role="status" style="margin-top:8px;"></p></div>'
+        '<p id="perfil-status" class="calc-note" role="status" style="margin-top:8px;"></p></div>' +
+        /* v72 (Etapa 5): backup automático no Google Drive (src/google.js). */
+        '<div class="field" id="settings-drive"><label>Backup no Google Drive</label>' +
+        '<p id="drive-status" class="body-text" style="margin:0 0 8px 0;font-size:13px;color:var(--ink-soft);"></p>' +
+        '<div id="drive-botoes" style="display:flex;gap:8px;flex-wrap:wrap;"></div>' +
+        '<p id="drive-msg" class="calc-note" role="status" style="margin-top:8px;"></p>' +
+        '<p class="calc-note" style="margin-top:6px;">O backup vai para uma pasta privada do Bluebook no seu Google Drive (o app não vê seus outros arquivos) e é atualizado sozinho a cada mudança quando há internet. ' +
+        '<strong>Não escreva nas anotações nome ou dados que identifiquem pacientes</strong> (LGPD: dados de saúde são sensíveis).</p></div>'
       ) : "") +
       /* v72 (docs/DESIGN.md §7): no celular o rodapé fica oculto; o aviso legal aparece aqui. */
       '<div class="field" id="settings-about"><label>Sobre</label>' +

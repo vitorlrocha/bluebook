@@ -81,9 +81,42 @@
   }
   var NOTA = '<p class="auth-nota">O acesso fica guardado só neste aparelho e funciona sem internet. ' +
     'O Bluebook é uma ferramenta de apoio: não substitui o julgamento clínico nem a bula.</p>';
-  var GOOGLE = '<div class="auth-sep" aria-hidden="true"><span>ou</span></div>' +
-    '<button type="button" class="auth-btn auth-btn-alt" id="auth-google" disabled aria-describedby="auth-google-nota">Entrar com o Google</button>' +
-    '<p class="auth-nota" id="auth-google-nota">Disponível depois que o app for publicado na internet.</p>';
+  /* Etapa 5: "Entrar com o Google" (src/google.js). Fica desativado se o Client ID não estiver configurado. */
+  function googleOk() { return !!(window.BBGoogle && window.BBGoogle.configurado()); }
+  function GOOGLE() {
+    var ok = googleOk();
+    return '<div class="auth-sep" aria-hidden="true"><span>ou</span></div>' +
+      '<button type="button" class="auth-btn auth-btn-alt" id="auth-google"' + (ok ? "" : " disabled") + ' aria-describedby="auth-google-nota">Entrar com o Google</button>' +
+      '<p class="auth-nota" id="auth-google-nota">' + (ok
+        ? "Precisa de internet. Usa só o seu e-mail do Google; a senha do Google nunca passa pelo Bluebook."
+        : "Disponível depois que o app for publicado na internet.") + "</p>";
+  }
+  /* Entrada pelo Google: o e-mail vem verificado pelo Google (src/google.js). */
+  function entrarGoogle(email, manter) {
+    email = normEmail(email);
+    var c = conta();
+    if (c && c.email !== email) throw new Error("Este aparelho já tem o acesso de " + c.email + ". Entre com essa conta Google ou com a senha.");
+    if (!c) {
+      c = { v: 1, email: email, google: true, criada: new Date().toISOString() };
+      if (!gravar(localStorage, K_CONTA, c)) throw new Error("Não foi possível salvar o acesso neste navegador.");
+    } else if (!c.google) { c.google = true; gravar(localStorage, K_CONTA, c); }
+    apagar(K_TENT);
+    abrirSessao(email, manter);
+    if (window.BBGoogle && window.BBGoogle.vincular) window.BBGoogle.vincular(email);
+    entrarNoApp();
+  }
+  function ligarGoogle() {
+    var b = el("auth-google");
+    if (!b || b.disabled) return;
+    b.addEventListener("click", function () {
+      msg("");
+      var manter = el("auth-manter") ? el("auth-manter").checked : true;
+      b.disabled = true;
+      window.BBGoogle.entrar().then(function (email) { entrarGoogle(email, manter); })
+        .catch(function (err) { msg(err && err.message ? err.message : "Não foi possível entrar com o Google."); })
+        .then(function () { if (el("auth-google")) el("auth-google").disabled = false; });
+    });
+  }
 
   function tela(modo) {
     var c = conta();
@@ -98,7 +131,7 @@
         campo("auth-senha2", "Confirme a senha", "password", "new-password", ' minlength="8" required') +
         '<label class="auth-check"><input type="checkbox" id="auth-manter" checked> Manter conectado neste aparelho por 30 dias</label>' +
         '<p id="auth-msg" class="auth-msg" role="alert" aria-live="assertive"></p>' +
-        '<button type="submit" class="auth-btn" id="auth-ok">Criar acesso</button></form>' + GOOGLE + NOTA;
+        '<button type="submit" class="auth-btn" id="auth-ok">Criar acesso</button></form>' + GOOGLE() + NOTA;
     } else if (modo === "esqueci") {
       h += '<h2 class="auth-h2">Esqueci a senha</h2>' +
         '<p class="auth-sub">O Bluebook não tem servidor, então não há como enviar um e-mail de recuperação. ' +
@@ -118,10 +151,11 @@
         '<label class="auth-check"><input type="checkbox" id="auth-manter" checked> Manter conectado neste aparelho por 30 dias</label>' +
         '<p id="auth-msg" class="auth-msg" role="alert" aria-live="assertive"></p>' +
         '<button type="submit" class="auth-btn" id="auth-ok">Entrar</button></form>' +
-        '<button type="button" class="auth-link" id="auth-esqueci">Esqueci a senha</button>' + GOOGLE + NOTA;
+        '<button type="button" class="auth-link" id="auth-esqueci">Esqueci a senha</button>' + GOOGLE() + NOTA;
     }
     raiz.innerHTML = h + "</div>";
     el("auth-form").addEventListener("submit", function (e) { e.preventDefault(); enviar(modo); });
+    ligarGoogle();
     if (el("auth-esqueci")) el("auth-esqueci").addEventListener("click", function () { tela("esqueci"); });
     if (el("auth-voltar")) el("auth-voltar").addEventListener("click", function () { tela(conta() ? "entrar" : "criar"); });
     var aviso = null; try { aviso = sessionStorage.getItem("bluebook:aviso"); sessionStorage.removeItem("bluebook:aviso"); } catch (e) {}
@@ -156,6 +190,7 @@
     var c = conta();
     if (!c) { tela("criar"); return; }
     if (!senha) { msg("Digite a senha."); el("auth-senha").focus(); return; }
+    if (!c.hash) { msg("Este acesso foi criado com o Google. Use \"Entrar com o Google\" (ou defina uma senha em Ajustes para entrar sem internet)."); return; }
     ocupado(true);
     conferir(senha).then(function (ok) {
       if (ok && email === c.email) { apagar(K_TENT); abrirSessao(email, manter); entrarNoApp(); return; }
@@ -167,7 +202,7 @@
   }
 
   function apagarAcessoEDados() {
-    [K_CONTA, K_SESSAO, K_TENT, MEDS_KEY].concat(PESSOAIS).forEach(apagar);
+    [K_CONTA, K_SESSAO, K_TENT, MEDS_KEY, "bluebook:drive"].concat(PESSOAIS).forEach(apagar);
   }
 
   function bloquear(modo) {
@@ -186,12 +221,14 @@
   window.BBAuth = {
     email: function () { var c = conta(); return c ? c.email : null; },
     criada: function () { var c = conta(); return c ? c.criada : null; },
+    temSenha: function () { var c = conta(); return !!(c && c.hash); },
     PESSOAIS: PESSOAIS.slice(),
     MEDS_KEY: MEDS_KEY,
     sair: function () { apagar(K_SESSAO); bloquear("entrar"); },
     alterarSenha: function (atual, nova) {
       if (String(nova).length < 8) return Promise.reject(new Error("A nova senha precisa ter pelo menos 8 caracteres."));
-      return conferir(atual).then(function (ok) {
+      var semSenha = !(conta() || {}).hash;   // acesso criado pelo Google: define a primeira senha
+      return (semSenha ? Promise.resolve(true) : conferir(atual)).then(function (ok) {
         if (!ok) throw new Error("A senha atual está incorreta.");
         return novoHash(nova).then(function (h) {
           var c = conta(); c.sal = h.sal; c.hash = h.hash; c.it = h.it; c.alterada = new Date().toISOString();
