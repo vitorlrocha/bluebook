@@ -20,6 +20,14 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
 - `ferramentas/extrair.js` foi usado uma vez para separar a v71; não é preciso rodar de novo.
 - `ferramentas/servir.js`: servidor estático local (`node ferramentas/servir.js dist 8080`).
 - Para editar conteúdo: altere `dados/*.json` (ou `src/`), rode o build e as verificações.
+- Testes de ponta a ponta (Playwright, só dependência de desenvolvimento): `testes/*.spec.js`,
+  config em `playwright.config.js`. Rodar: `npx playwright test` (faz o build e sobe o servidor na porta 4173).
+  Projetos: `computador` (1366×860) e `celular` (Pixel 7); arquivos `*.celular.spec.js` só no celular,
+  `*.ambos.spec.js` nos dois. `testes/apoio.js` falha qualquer teste com erro de JavaScript no console.
+  Testes com `test.fail` documentam problemas conhecidos (passam enquanto o problema existir).
+- A calculadora pediátrica acessível ao usuário é o quadro "Dose pediátrica por peso" na ficha do
+  medicamento (prefixo `fp-`). O modal "Calculadoras" (`openCalcModal`) só abre por `#calc-btn`,
+  que o CSS esconde — ficou inacessível desde a v71.
 
 ## Estrutura do app (dentro de dist/index.html)
 - `<style>`: tokens de cor em `:root` (+ modo escuro em `@media (prefers-color-scheme: dark)`
@@ -69,6 +77,7 @@ Para gerar `dados/cid_full.json` a partir dos CSVs: `python3 ferramentas/build_c
 1. ~~Separar dados do código~~ (feito na v72).
 2. Transformar em PWA instalável (manifest + service worker, ícones) para uso offline no celular.
 3. 31 fichas ainda contêm "PENDENTE DE VERIFICAÇÃO" (ex.: posologia do glofitamabe).
-4. Testes automatizados (Playwright) para busca, CID, calculadora pediátrica e modo plantão.
+4. ~~Testes automatizados (Playwright)~~ (feito na v72). Problemas conhecidos marcados com `test.fail`:
+   ranking de "AAS" e destaque de "Remédios" na barra inferior.
 5. Limpeza de CSS: o arquivo acumula camadas de estilo; consolidar no tema moderno do fim.
 6. Publicação: hospedar (ex.: GitHub Pages/Netlify) e, se desejado, empacotar para lojas.

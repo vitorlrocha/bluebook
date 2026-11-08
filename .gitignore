@@ -2,3 +2,6 @@
 dist/
 node_modules/
 *.bak
+# Saídas do Playwright
+testes/resultados/
+testes/relatorio/

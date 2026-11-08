@@ -7,6 +7,12 @@
     "build": "node ferramentas/build.js",
     "test:build": "node ferramentas/build.js && node ferramentas/testar_build.js",
     "checar": "node ferramentas/checar_sintaxe.js",
-    "servir": "node ferramentas/servir.js dist 8080"
+    "servir": "node ferramentas/servir.js dist 8080",
+    "test": "playwright test",
+    "test:celular": "playwright test --project=celular",
+    "test:computador": "playwright test --project=computador"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0"
   }
 }
