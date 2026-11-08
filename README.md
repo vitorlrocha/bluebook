@@ -1,5 +1,7 @@
 # Bluebook
 
+**Acesse:** <https://vitorlrocha.github.io/bluebook/> (funciona offline depois da primeira abertura e pode ser instalado no celular).
+
 Consulta clínica rápida e **offline**, em português do Brasil: doenças, condutas, medicamentos, CID-10,
 escores, calculadoras, dose pediátrica por peso e modo plantão, num único arquivo que funciona sem internet.
 
