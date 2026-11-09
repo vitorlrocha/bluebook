@@ -6,6 +6,10 @@ const { test, expect, EMAIL_TESTE } = require('./apoio');
 
 const SENHA = 'senha-de-teste-123';
 
+// No WebKit (iPhone), o Playwright não intercepta requisições de páginas controladas pelo service worker;
+// o SW não é o assunto destes testes (está coberto em pwa.ambos.spec.js), então fica desligado aqui.
+test.use({ serviceWorkers: 'block' });
+
 /* Instala o Google falso. Devolve o "Drive" em memória para o teste inspecionar. */
 async function simularGoogle(page, { email = EMAIL_TESTE, negar = false } = {}) {
   const drive = { conteudo: null, envios: 0, semToken: 0, email };
@@ -18,10 +22,13 @@ async function simularGoogle(page, { email = EMAIL_TESTE, negar = false } = {}) 
       hasGrantedAllScopes: function () { return true; },
       revoke: function (t, cb) { if (cb) cb(); } } } };`,
   }));
+  // O Safari (WebKit) aplica CORS também às respostas simuladas: responder como a API real responde.
+  const CORS = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Authorization, Content-Type', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, OPTIONS' };
   await page.route('https://www.googleapis.com/**', async (route) => {
     const req = route.request(), url = new URL(req.url());
-    if (req.headers().authorization !== 'Bearer tok-teste') { drive.semToken++; return route.fulfill({ status: 401, body: '{}' }); }
-    const json = (o) => route.fulfill({ contentType: 'application/json', body: JSON.stringify(o) });
+    if (req.method() === 'OPTIONS') return route.fulfill({ status: 204, headers: CORS, body: '' });
+    if (req.headers().authorization !== 'Bearer tok-teste') { drive.semToken++; return route.fulfill({ status: 401, headers: CORS, body: '{}' }); }
+    const json = (o) => route.fulfill({ contentType: 'application/json', headers: CORS, body: JSON.stringify(o) });
     if (url.pathname === '/oauth2/v3/userinfo') return json({ email: drive.email, email_verified: true });
     if (url.pathname === '/drive/v3/files' && req.method() === 'GET') return json({ files: drive.conteudo ? [{ id: 'arq1' }] : [] });
     if (url.pathname === '/upload/drive/v3/files' && req.method() === 'POST') {
@@ -31,7 +38,7 @@ async function simularGoogle(page, { email = EMAIL_TESTE, negar = false } = {}) 
     }
     if (url.pathname === '/upload/drive/v3/files/arq1' && req.method() === 'PATCH') { drive.conteudo = JSON.parse(req.postData()); drive.envios++; return json({ id: 'arq1' }); }
     if (url.pathname === '/drive/v3/files/arq1' && url.searchParams.get('alt') === 'media') return json(drive.conteudo);
-    return route.fulfill({ status: 404, body: '{}' });
+    return route.fulfill({ status: 404, headers: CORS, body: '{}' });
   });
   return drive;
 }

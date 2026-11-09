@@ -4,7 +4,7 @@
 const { test, expect, abrir } = require('./apoio');
 
 async function abrirFerramentas(page, projeto) {
-  if (projeto === 'celular') {
+  if (projeto !== 'computador') {
     await page.locator('#tabbar [data-tb="more"]').click();
     await page.locator('#sheet [data-tb="tools"]').click();
     await expect(page.locator('#sheet')).toBeHidden();

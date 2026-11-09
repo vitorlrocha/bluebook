@@ -47,7 +47,7 @@ test('consulta: exportar anotações gera um arquivo JSON com a anotação', asy
 
 test('plantão: peso inválido (0, negativo, texto) não mostra dose calculada', async ({ page }, info) => {
   await abrir(page);
-  if (info.project.name === 'celular') {
+  if (info.project.name !== 'computador') {
     await page.locator('#tabbar [data-tb="plantao"]').click();
     await page.locator('#sidebar .med-item').first().click();
   } else await page.locator('.view-tab[data-mode="plantao"]').click();
@@ -91,6 +91,35 @@ test('backup: exportar e importar de volta não duplica; medicamento novo é imp
   const novo = { name: 'novo.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify([{ nome: 'Medicamento de teste importado', classe: 'Teste' }])) };
   await page.locator('#import-file').setInputFiles(novo);
   await expect(page.locator('#import-status')).toHaveText('1 medicamento(s) importado(s). 0 já existiam e foram ignorados.');
+});
+
+test('armazenamento: a biblioteca não é copiada para o localStorage (limite de ~5 MB do Safari/iPhone)', async ({ page }) => {
+  await abrir(page);
+  await expect(page.locator('#sidebar .med-item').first()).toBeAttached();
+  const tam = await page.evaluate(() => (localStorage.getItem('formulario-clinico:medications') || '').length);
+  expect(tam).toBeLessThan(20000);
+  expect(await page.locator('#sidebar .med-item[data-id]').count()).toBeGreaterThan(1000);
+});
+
+test('migração do formato antigo (array completo) mantém favoritos e medicamentos importados', async ({ page }) => {
+  await page.goto('/');
+  await page.evaluate(() => {
+    localStorage.setItem('formulario-clinico:medications', JSON.stringify([
+      { id: 'local-1-0-abc', nome: 'Amoxicilina', classe: 'x', favorito: true },
+      { id: 'local-1-1-def', nome: 'Dipirona sódica (Metamizol)', classe: 'x' },
+      { id: 'local-1-2-ghi', nome: 'Medicamento antigo importado', classe: 'Importado', favorito: true },
+    ]));
+  });
+  await page.reload();
+  await expect(page.locator('#sidebar .med-item').first()).toBeAttached();
+  const novo = await page.evaluate(() => JSON.parse(localStorage.getItem('formulario-clinico:medications')));
+  expect(novo.v).toBe(2);
+  expect(novo.fav).toEqual({ amoxicilina: true });
+  expect(novo.extras.map((m) => m.nome)).toEqual(['Medicamento antigo importado']);
+  await page.locator('#fav-filter-btn').click();
+  const favs = await page.locator('#sidebar .med-item[data-id] .med-item-main').evaluateAll((els) => els.map((e) => e.firstChild.textContent.trim()));
+  expect(favs).toEqual(expect.arrayContaining(['Amoxicilina', 'Medicamento antigo importado']));
+  expect(favs).not.toContain('Dipirona sódica (Metamizol)');
 });
 
 test('recarregar o app mantém o tamanho do texto escolhido', async ({ page }, info) => {

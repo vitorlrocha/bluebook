@@ -47,7 +47,7 @@ test.describe('Teclado e leitura', () => {
   });
 
   test('folha "Mais": teclado abre com foco no 1º item e Esc fecha', async ({ page }, info) => {
-    test.skip(info.project.name !== 'celular', 'barra inferior só no celular');
+    test.skip(info.project.name === 'computador', 'barra inferior só no celular');
     await abrir(page);
     await page.locator('#tabbar [data-tb="more"]').focus();
     await page.keyboard.press('Enter');

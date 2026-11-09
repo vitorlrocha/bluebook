@@ -64,7 +64,7 @@ test.describe('DESIGN.md §3 — tipografia', () => {
 
 test.describe('DESIGN.md §5 — componentes', () => {
   test('§5.8 atalhos da página inicial na ordem do documento', async ({ page }, info) => {
-    test.skip(info.project.name !== 'celular', 'a página inicial com atalhos é a aba Início do celular');
+    test.skip(info.project.name === 'computador', 'a página inicial com atalhos é a aba Início do celular');
     await abrir(page);
     const t = await page.locator('#detail .home-quick button').evaluateAll((bs) => bs.map((b) => (b.querySelector('strong, b, span:not(.ic)') || b).textContent.trim()));
     const esperado = ['Plantão', 'Doenças', 'Calculadoras', 'Escores', 'CID-10', 'Antibióticos', 'Fluxogramas', 'Laboratório'];
@@ -72,7 +72,7 @@ test.describe('DESIGN.md §5 — componentes', () => {
   });
 
   test('§5.9 barra inferior: 5 botões, rótulos e área de toque ≥ 44 px', async ({ page }, info) => {
-    test.skip(info.project.name !== 'celular', 'só no celular');
+    test.skip(info.project.name === 'computador', 'só no celular');
     await abrir(page);
     const bs = page.locator('#tabbar > button');
     await expect(bs).toHaveCount(5);
@@ -82,7 +82,7 @@ test.describe('DESIGN.md §5 — componentes', () => {
   });
 
   test('§5.10 folha "Mais": itens na ordem do documento', async ({ page }, info) => {
-    test.skip(info.project.name !== 'celular', 'só no celular');
+    test.skip(info.project.name === 'computador', 'só no celular');
     await abrir(page);
     await page.locator('#tabbar [data-tb="more"]').click();
     const t = await page.locator('#sheet .sheet-list button').evaluateAll((bs) => bs.map((b) => b.textContent.replace('›', '').trim()));

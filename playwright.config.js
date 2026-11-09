@@ -36,5 +36,11 @@ module.exports = defineConfig({
       testMatch: /\.(celular|ambos)\.spec\.js$/,
       use: { ...devices['Pixel 7'] },
     },
+    {
+      // Motor do Safari (WebKit), como em todo navegador do iPhone. Requer: npx playwright install webkit
+      name: 'iphone',
+      testMatch: /\.(celular|ambos)\.spec\.js$/,
+      use: { ...devices['iPhone 14'] },
+    },
   ],
 });

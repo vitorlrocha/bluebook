@@ -203,7 +203,9 @@ test.describe('Login local', () => {
     await expect(page.locator('#auth-google-nota')).toHaveText('Disponível depois que o app for publicado na internet.');
   });
 
-  test('funciona aberto direto do arquivo (file://, offline)', async ({ page }) => {
+  test('funciona aberto direto do arquivo (file://, offline)', async ({ page, browserName }) => {
+    // No iPhone o app é sempre aberto pelo endereço (https); o Safari bloqueia manifest.json em file://.
+    test.skip(browserName === 'webkit', 'file:// não é um caso de uso no iPhone');
     await page.goto('file://' + path.join(__dirname, '..', 'dist', 'index.html').replace(/\\/g, '/'));
     await expect(page.locator('#auth .auth-card')).toBeVisible();
     await criarAcesso(page);

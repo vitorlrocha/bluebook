@@ -54,6 +54,13 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
   inclua-a em `PESSOAIS` (auth.js), para entrar no backup do perfil e no "Esqueci a senha".
   Nos testes, `testes/apoio.js` entra com uma conta fictícia (teste@exemplo.com); para testar o login,
   use `test.use({ logado: false })`.
+- **iPhone (Safari/WebKit):** projeto de teste `iphone` (iPhone 14; requer `npx playwright install webkit`).
+  O Safari limita o localStorage a ~5 MB: NUNCA grave a biblioteca (SEED_MEDS) nele. A chave
+  `formulario-clinico:medications` guarda só `{v:2, fav:{nome: true}, extras:[importados]}`; o formato antigo
+  (array completo) é migrado na 1ª leitura (`makeLocalStorageStore`). `color-scheme` por tema evita controles
+  nativos claros no tema escuro.
+- **Google (Etapa 5):** `src/google.js` (marcador `/*@google*/`, antes do auth). `CLIENT_ID` vazio = botão
+  desativado. Testes simulam o Google (`testes/google.ambos.spec.js`, com service worker bloqueado).
 - **Design:** siga `docs/DESIGN.md` (tokens, tipografia, componentes, o que não fazer). Conferido por
   `testes/design.ambos.spec.js`. Ao mudar o visual de propósito, atualize o DESIGN.md e as capturas.
 - **Roadmap e etapas:** `ROADMAP.md`. Testes de uso real (favoritos, anotações, backup, Ajustes) em

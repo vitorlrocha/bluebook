@@ -468,7 +468,12 @@ footer { border-top: none; }
 .pop-bad, .sr-bad .score-num, .rx-item.grave .tag { color: var(--bad-ink); }
 /* <select> herdava a cor padrão do navegador (preto): no tema escuro, "Via" e "Apresentação" da calculadora
    pediátrica ficavam com texto preto sobre fundo preto (ilegíveis). O reset da base cobria só button/input/textarea. */
-select { color: inherit; }
+select { color: inherit; font-family: var(--sans); }
+/* iPhone (Safari/WebKit): sem color-scheme, os controles nativos (select, date, number) ficam com o visual
+   claro do sistema; no tema escuro os filtros do topo viravam caixas brancas com texto branco (ilegíveis). */
+:root { color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme: dark; } }
+:root[data-theme="dark"] { color-scheme: dark; }
 /* docs/DESIGN.md §9: nenhum texto abaixo de 12 px (exceto o rótulo da barra inferior, 10,5 px).
    Estes estavam entre 10,5 e 11,5 px na v71 (testes/design.ambos.spec.js). */
 small { font-size: max(12px, .8333em); }

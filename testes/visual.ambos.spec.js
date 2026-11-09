@@ -45,7 +45,7 @@ for (const tema of ['light', 'dark']) {
     test.use({ colorScheme: tema });
     for (const [nome, preparar] of Object.entries(TELAS)) {
       test(nome, async ({ page }, info) => {
-        if (nome === 'folha-mais' && info.project.name !== 'celular') test.skip(true, 'só no celular');
+        if (nome === 'folha-mais' && info.project.name === 'computador') test.skip(true, 'só no celular');
         await page.clock.setFixedTime(new Date('2026-11-07T10:00:00-03:00'));
         await abrir(page);
         await preparar(page);

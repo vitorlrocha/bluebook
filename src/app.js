@@ -171,17 +171,69 @@
     };
   }
 
+  /* v72 (iPhone): a biblioteca (SEED_MEDS, ~1.851 itens, vários MB) NÃO é mais copiada para o localStorage.
+     O Safari limita o localStorage a ~5 MB: a cópia estourava (QuotaExceededError) e a lista ficava vazia.
+     Agora a chave guarda só o que é da pessoa: {v:2, fav:{nome em minúsculas: true}, extras:[medicamentos importados]}.
+     A biblioteca vem sempre de SEED_MEDS (dentro do app). O formato antigo (array completo) é migrado na 1ª leitura,
+     mantendo favoritos e medicamentos importados. Se uma gravação falhar, o estado continua válido na memória. */
   function makeLocalStorageStore() {
     var KEY = "formulario-clinico:medications";
     var listeners = [];
-    function readAll() {
-      try {
-        var raw = window.localStorage.getItem(KEY);
-        return raw ? JSON.parse(raw) : [];
-      } catch (e) { return []; }
+    var est = null, seedIdx = null;
+    function low(n) { return String(n || "").trim().toLowerCase(); }
+    function indice() {
+      if (!seedIdx) { seedIdx = {}; SEED_MEDS.forEach(function (s, i) { seedIdx[low(s.nome)] = i; }); }
+      return seedIdx;
     }
-    function writeAll(items) {
-      try { window.localStorage.setItem(KEY, JSON.stringify(items)); } catch (e) { console.error(e); }
+    function ehSeed(id) { return /^local-0-\d+-seed$/.test(id); }
+    function salvar() {
+      try { window.localStorage.setItem(KEY, JSON.stringify(est)); } catch (e) { /* cheio ou indisponível: segue na memória */ }
+    }
+    function carregar() {
+      if (est) return est;
+      var raw = null;
+      try { raw = JSON.parse(window.localStorage.getItem(KEY) || "null"); } catch (e) { raw = null; }
+      if (Array.isArray(raw)) {           // formato antigo (até a v72 R1): array completo
+        var idx = indice(); est = { v: 2, fav: {}, extras: [] };
+        raw.forEach(function (m) {
+          if (!m || !m.nome) return;
+          if (idx[low(m.nome)] !== undefined) { if (m.favorito) est.fav[low(m.nome)] = true; }
+          else est.extras.push(m);
+        });
+        salvar();
+      } else if (raw && raw.v === 2) {
+        est = { v: 2, fav: raw.fav || {}, extras: Array.isArray(raw.extras) ? raw.extras : [] };
+      } else {
+        est = { v: 2, fav: {}, extras: [] };
+      }
+      return est;
+    }
+    function readAll() {
+      var e = carregar();
+      var itens = SEED_MEDS.map(function (s, i) {
+        var o = Object.assign({ id: "local-0-" + i + "-seed" }, s, { createdAt: 0, updatedAt: 0, seedRev: SEED_REV });
+        if (e.fav[low(s.nome)]) o.favorito = true;
+        return o;
+      });
+      return itens.concat(e.extras.slice());
+    }
+    function aplicar(id, data) {
+      var e = carregar();
+      if (ehSeed(id)) {
+        var s = SEED_MEDS[Number(id.split("-")[2])];
+        if (s && data && Object.prototype.hasOwnProperty.call(data, "favorito")) {
+          if (data.favorito) e.fav[low(s.nome)] = true; else delete e.fav[low(s.nome)];
+        }
+        return;   // a biblioteca é somente leitura
+      }
+      e.extras = e.extras.map(function (it) { return it.id === id ? Object.assign({}, it, data) : it; });
+    }
+    function novo(data, i) {
+      var e = carregar();
+      if (indice()[low(data && data.nome)] !== undefined) return null;   // já está na biblioteca
+      var id = "local-" + Date.now() + "-" + (i || 0) + "-" + Math.random().toString(36).slice(2, 8);
+      e.extras.push(Object.assign({ id: id }, data));
+      return id;
     }
     function notify() {
       var items = readAll();
@@ -194,39 +246,14 @@
         fn(readAll());
         return function () { listeners = listeners.filter(function (l) { return l !== fn; }); };
       },
-      add: function (data) {
-        var items = readAll();
-        var id = "local-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8);
-        items.push(Object.assign({ id: id }, data));
-        writeAll(items);
-        notify();
-        return Promise.resolve(id);
-      },
-      updateMany: function (map) {
-        var items = readAll().map(function (it) { return map[it.id] ? Object.assign({}, it, map[it.id]) : it; });
-        writeAll(items);
-        notify();
-        return Promise.resolve();
-      },
-      addMany: function (arr) {
-        var items = readAll();
-        arr.forEach(function (data, i) {
-          items.push(Object.assign({ id: "local-" + Date.now() + "-" + i + "-" + Math.random().toString(36).slice(2, 8) }, data));
-        });
-        writeAll(items);
-        notify();
-        return Promise.resolve();
-      },
-      update: function (id, data) {
-        var items = readAll().map(function (it) { return it.id === id ? Object.assign({}, it, data) : it; });
-        writeAll(items);
-        notify();
-        return Promise.resolve();
-      },
+      add: function (data) { var id = novo(data, 0); salvar(); notify(); return Promise.resolve(id); },
+      updateMany: function (map) { Object.keys(map).forEach(function (id) { aplicar(id, map[id]); }); salvar(); notify(); return Promise.resolve(); },
+      addMany: function (arr) { arr.forEach(function (d, i) { novo(d, i + 1); }); salvar(); notify(); return Promise.resolve(); },
+      update: function (id, data) { aplicar(id, data); salvar(); notify(); return Promise.resolve(); },
       replaceAll: function (items) {
-        writeAll(items);
-        notify();
-        return Promise.resolve();
+        var idx = indice(); est = { v: 2, fav: {}, extras: [] };
+        (items || []).forEach(function (m) { if (!m || !m.nome) return; if (idx[low(m.nome)] !== undefined) { if (m.favorito) est.fav[low(m.nome)] = true; } else est.extras.push(m); });
+        salvar(); notify(); return Promise.resolve();
       }
     };
   }
