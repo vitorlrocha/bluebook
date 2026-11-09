@@ -1323,7 +1323,7 @@
     var out = Object.keys(NOTES).map(function (k) { var i = k.indexOf(":"); return { tipo: k.slice(0, i) === "m" ? "medicamento" : "doença", nome: k.slice(i + 1), anotacao: NOTES[k].t || "", revisar: !!NOTES[k].rev, data: NOTES[k].at }; });
     var blob = new Blob([JSON.stringify(out, null, 2)], { type: "application/json" });
     var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "bluebook-anotacoes.json";
-    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 60000);   /* v72: o Safari/iPhone ainda lê o blob depois do clique; revogar cedo cortava o download */
   }
   /* ---------------- Busca global (todo o app) ---------------- */
   function cidCats(s) {
@@ -2500,7 +2500,7 @@
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 60000);   /* v72: idem (Safari/iPhone) */
   }
 
   function downloadJson(filename, dataObj) {

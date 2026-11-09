@@ -196,11 +196,11 @@ test.describe('Login local', () => {
     await expect.poll(() => page.evaluate(() => localStorage.getItem('bluebook:notes'))).toContain('nota do perfil');
   });
 
-  test('"Entrar com o Google" aparece, desativado até a publicação', async ({ page }) => {
+  test('"Entrar com o Google" aparece e está ativo (Client ID configurado na Etapa 5)', async ({ page }) => {
     await irParaLogin(page);
     await expect(page.locator('#auth-google')).toBeVisible();
-    await expect(page.locator('#auth-google')).toBeDisabled();
-    await expect(page.locator('#auth-google-nota')).toHaveText('Disponível depois que o app for publicado na internet.');
+    await expect(page.locator('#auth-google')).toBeEnabled();
+    await expect(page.locator('#auth-google-nota')).toContainText('Precisa de internet');
   });
 
   test('funciona aberto direto do arquivo (file://, offline)', async ({ page, browserName }) => {

@@ -42,7 +42,7 @@ Atualizado em 08/11/2026 (v72). Cada etapa termina com as verificações do `CLA
 | ~~2. Login local~~ | Feito (ver acima). **Falta você:** abrir o app no seu aparelho e cadastrar o seu e-mail com a sua senha | Uma conta por aparelho. É uma trava de acesso, não criptografia dos dados |
 | ~~3. Pendências e inconsistências~~ | Feito: [`PENDENCIAS.md`](PENDENCIAS.md) (31 registros, 39 trechos) e [`INCONSISTENCIAS.md`](INCONSISTENCIAS.md) (8 verificações), gerados por `npm run relatorios` e conferidos nos testes. **Falta:** revisão humana com fonte de cada item | Nada foi preenchido nem alterado |
 | ~~4. Publicação e README~~ | Publicado em **<https://vitorlrocha.github.io/bluebook/>** (repositório público `vitorlrocha/bluebook`, GitHub Pages via Actions a cada push na `main`). Testado no ar: login, busca, instalação e uso offline (computador e celular) | Commits com o e-mail privado do GitHub |
-| **5. Entrar com o Google** | Botão "Entrar com o Google" que confirma o e-mail da conta | Exige o app publicado em https e uma credencial OAuth gratuita criada por você no Google Cloud. Funciona só com internet; o login por senha continua offline |
+| ~~5. Entrar com o Google + backup no Drive~~ | Feito: `src/google.js`; projeto Google Cloud "Bluebook" (modo de teste, Drive API, cliente OAuth só para https://vitorlrocha.github.io); backup automático em appDataFolder, "Sincronizar" quando o acesso de 1 h vence, restaurar. **Falta:** seu 1º login real no ar e teste num iPhone real | Gratuito, sem faturamento |
 
 ## O que falta (backlog, sem etapa definida)
 

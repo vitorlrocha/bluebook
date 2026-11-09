@@ -41,6 +41,18 @@ O acesso fica **só neste aparelho** (não há servidor): a senha não é guarda
 (hash PBKDF2). Se esquecer a senha, a opção "Esqueci a senha" apaga o acesso **e os dados pessoais** do
 aparelho — por isso, de vez em quando, use **⋮ → Ajustes → Exportar perfil** para guardar um backup.
 
+### Entrar com o Google e backup automático no Google Drive
+- **Entrar com o Google** (precisa de internet): cria ou abre o acesso com o seu e-mail do Google. Para entrar
+  também sem internet, defina uma senha em **Ajustes → Conta**.
+- **Backup no Google Drive** (**Ajustes → Backup no Google Drive**): uma cópia do seu perfil fica numa pasta
+  privada do Bluebook no seu Drive (o app não vê seus outros arquivos) e é atualizada sozinha a cada mudança
+  quando há internet. Por segurança o Google libera o acesso por ~1 hora; depois disso aparece
+  "Backup pendente · Sincronizar" e um toque envia. Num aparelho novo: entre com o mesmo e-mail e use
+  **Restaurar do Drive**.
+- O app está em **modo de teste** no Google Cloud: só e-mails cadastrados como usuários de teste conseguem entrar
+  (na primeira vez o Google mostra "app não verificado" — toque em Continuar).
+- **Não escreva nas anotações nome ou dados que identifiquem pacientes** (LGPD: dados de saúde são sensíveis).
+
 ### Levar seus dados para outro aparelho ou navegador
 Cada navegador (e cada endereço) guarda os dados separadamente. No aparelho antigo: **Ajustes → Exportar perfil**.
 No novo: crie o acesso **com o mesmo e-mail** e use **Ajustes → Importar perfil**.

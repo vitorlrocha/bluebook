@@ -59,8 +59,9 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
   `formulario-clinico:medications` guarda só `{v:2, fav:{nome: true}, extras:[importados]}`; o formato antigo
   (array completo) é migrado na 1ª leitura (`makeLocalStorageStore`). `color-scheme` por tema evita controles
   nativos claros no tema escuro.
-- **Google (Etapa 5):** `src/google.js` (marcador `/*@google*/`, antes do auth). `CLIENT_ID` vazio = botão
-  desativado. Testes simulam o Google (`testes/google.ambos.spec.js`, com service worker bloqueado).
+- **Google (Etapa 5):** `src/google.js` (marcador `/*@google*/`, antes do auth). `CLIENT_ID` = cliente OAuth
+  "Bluebook (GitHub Pages)" do projeto Google Cloud `nimble-lead-514122-e4` (modo de teste; só funciona na origem
+  https://vitorlrocha.github.io). Vazio = botão desativado. Escopo do Drive: só `drive.appdata`. Testes simulam o Google (`testes/google.ambos.spec.js`, com service worker bloqueado).
 - **Design:** siga `docs/DESIGN.md` (tokens, tipografia, componentes, o que não fazer). Conferido por
   `testes/design.ambos.spec.js`. Ao mudar o visual de propósito, atualize o DESIGN.md e as capturas.
 - **Roadmap e etapas:** `ROADMAP.md`. Testes de uso real (favoritos, anotações, backup, Ajustes) em

@@ -13,7 +13,10 @@
      Google Cloud (https://vitorlrocha.github.io). */
 (function () {
   "use strict";
-  var CLIENT_ID = "";   // Google Cloud → APIs e serviços → Credenciais → ID do cliente OAuth (aplicativo da Web)
+  /* Google Cloud, projeto "Bluebook" (nimble-lead-514122-e4) → Google Auth Platform → Clientes →
+     "Bluebook (GitHub Pages)", tipo aplicativo da Web, origem autorizada https://vitorlrocha.github.io.
+     App em modo de teste: só os usuários de teste cadastrados no console conseguem entrar. */
+  var CLIENT_ID = "937386831610-3nnitjchhtbsnlofgueoq1ig69h7l5sr.apps.googleusercontent.com";
   var SCOPES = "openid email profile https://www.googleapis.com/auth/drive.appdata";
   var GSI = "https://accounts.google.com/gsi/client";
   var DRIVE = "https://www.googleapis.com/drive/v3/files";
