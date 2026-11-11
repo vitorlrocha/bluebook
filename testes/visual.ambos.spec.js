@@ -51,6 +51,8 @@ for (const tema of ['light', 'dark']) {
         await preparar(page);
         // tira o foco (o anel de foco/spinner de campo numérico renderiza com ruído de 1-8 pixels)
         await page.evaluate(() => document.activeElement && document.activeElement.blur && document.activeElement.blur());
+        // a linha de versão muda a cada publicação (número e data): texto fixo para a captura não variar
+        await page.evaluate(() => { const v = document.querySelector('.home-versao'); if (v) v.textContent = 'Versão de teste · atualizado em 07/11/2026'; });
         await page.waitForTimeout(150);
         // threshold 0: qualquer variação de cor conta. Até 40 pixels de tolerância porque o Chromium tem
         // ruído de rasterização de 1-18 pixels entre execuções (desfoque translúcido do cabeçalho);

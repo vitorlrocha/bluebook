@@ -520,3 +520,12 @@ html.bb-locked .app { display: none; }
 .home-tag { margin: 2px 0 6px; font-size: 16px; line-height: 1.45; color: var(--ink-soft); }
 .home-legal { display: none; margin: 18px 0 8px; padding: 12px 14px; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); font-size: 13px; line-height: 1.5; color: var(--ink-soft); }
 @media (max-width: 780px) { .home-legal { display: block; } }
+/* v73: área de avisos flutuantes (atualização, sem internet, backup pendente) — src/atualiza.js */
+.avisos { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 45; display: flex; flex-direction: column; align-items: center; gap: 8px; width: max-content; max-width: calc(100% - 32px); pointer-events: none; }
+.avisos > * { pointer-events: auto; }
+.avisos .drive-aviso { position: static; transform: none; max-width: 100%; }
+html.bb-locked #atualiza-aviso:not([hidden]) { display: flex; }
+.aviso-pilula { padding: 8px 14px; border-radius: 999px; background: var(--ink); color: var(--paper); font-family: var(--sans); font-size: 13px; font-weight: 600; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+.aviso-pilula[hidden] { display: none; }
+@media (max-width: 780px) { .avisos { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); } html.bb-locked .avisos { bottom: calc(16px + env(safe-area-inset-bottom, 0px)); } }
+.home-versao { margin: 14px 0 4px; font-size: 12.5px; color: var(--ink-faint); text-align: center; }

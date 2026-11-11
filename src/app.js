@@ -962,6 +962,14 @@
   /* Texto de um elemento fixo do HTML (frase da marca, rodapé), para não duplicar o texto no código. */
   function textoDe(sel) { var e = document.querySelector(sel); return e ? e.textContent.replace(/\s+/g, " ").trim() : ""; }
 
+  /* v73: "Versão 0.73.0 · atualizado em 11/11/2026" (dados gravados pelo build em window.BB_VERSAO). */
+  function versaoTexto() {
+    var v = window.BB_VERSAO || {};
+    var d = v.data ? new Date(v.data) : null;
+    var dt = d && !isNaN(d) ? d.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" }) : "";
+    return "Versão " + (v.versao || "?") + (dt ? " · atualizado em " + dt : "");
+  }
+
   function renderDetail() {
     if (!selectedId) {
       detailEl.innerHTML =
@@ -974,7 +982,9 @@
             '<p>Busca universal: medicamentos, doenças, CID-10, escores e protocolos.</p>' + homeQuickHtml()) +
         "</div>" + (medications.length ? coverageHtml() : "") +
         /* v72: no celular o rodapé fica oculto; o aviso legal aparece no fim da página inicial. */
-        '<p class="home-legal">' + escapeHtml(textoDe("footer")) + "</p>";
+        '<p class="home-legal">' + escapeHtml(textoDe("footer")) + "</p>" +
+        /* v73: versão e data da última atualização do app/conteúdo. */
+        '<p class="home-versao">' + escapeHtml(versaoTexto()) + "</p>";
       attachCoverage();
       return;
     }
@@ -2578,6 +2588,45 @@
     try { dfav = (JSON.parse(p.dados["bluebook:disease-favs"] || "[]") || []).length; } catch (e) {}
     return "Neste aparelho: " + notas + " anotação(ões), " + p.favoritos.length + " medicamento(s) e " + dfav + " doença(s) favoritos.";
   }
+  /* Ajustes → Versão e atualização */
+  function ligarVersao() {
+    var U = window.BBAtualiza, v = window.BB_VERSAO || {};
+    var linha = document.getElementById("versao-linha"), verif = document.getElementById("versao-verif"), st = document.getElementById("versao-status");
+    var bV = document.getElementById("versao-verificar"), bA = document.getElementById("versao-aplicar"), bI = document.getElementById("versao-instalar"), nota = document.getElementById("versao-nota");
+    function desenhar() {
+      if (!document.body.contains(linha)) return;
+      linha.textContent = versaoTexto() + (v.build ? " (build " + v.build + ")" : "");
+      if (!U || !U.temSW) {
+        verif.textContent = "Aberto direto do arquivo: funciona sem internet, mas não se atualiza sozinho.";
+        nota.textContent = "Para receber atualizações automáticas, use o endereço publicado e instale o app por ele.";
+        bV.hidden = true; return;
+      }
+      var u = U.ultimaVerificacao();
+      verif.textContent = "Última verificação: " + (u ? quando(new Date(u).toISOString()) : "ainda não feita") + (navigator.onLine === false ? " · sem internet agora" : "");
+      bA.hidden = !U.novaPronta();
+      bI.hidden = !U.podeInstalar();
+      nota.textContent = U.instalado()
+        ? "App instalado neste aparelho. Com internet, ele procura versão nova ao abrir e a cada hora; sem internet, usa a versão salva."
+        : "Com internet, o app procura versão nova ao abrir e a cada hora; sem internet, usa a versão salva. Para instalar no computador: no Chrome ou Edge, use o ícone de instalar na barra de endereço (ou o botão acima, quando aparecer).";
+    }
+    bV.addEventListener("click", function () {
+      st.style.color = "var(--ink-soft)"; st.textContent = "Verificando…"; bV.disabled = true;
+      U.verificar().then(function (r) {
+        bV.disabled = false;
+        st.style.color = r === "nova" || r === "atualizado" ? "var(--ok)" : "var(--bad-ink)";
+        st.textContent = r === "nova" ? "Há uma versão nova. Ela é baixada em segundo plano; quando estiver pronta aparece o botão Atualizar."
+          : r === "atualizado" ? "Você já está na versão mais recente."
+          : r === "offline" ? "Sem internet: não foi possível verificar. O app continua funcionando com a versão salva."
+          : "Não foi possível verificar agora. Tente de novo em instantes.";
+        desenhar();
+      });
+    });
+    bA.addEventListener("click", function () { bA.disabled = true; U.aplicar(); });
+    bI.addEventListener("click", function () { U.instalar().then(desenhar); });
+    document.addEventListener("bb:atualiza", desenhar);
+    desenhar();
+  }
+
   function quando(iso) { try { return new Date(iso).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }); } catch (e) { return iso; } }
   /* Ajustes → Backup no Google Drive */
   function ligarDrive(overlay) {
@@ -2614,7 +2663,7 @@
     var bar = document.createElement("div");
     bar.id = "drive-aviso"; bar.className = "drive-aviso"; bar.hidden = true; bar.setAttribute("role", "status");
     bar.innerHTML = '<span>Backup no Google Drive pendente</span><button type="button" id="drive-sync">Sincronizar</button>';
-    document.body.appendChild(bar);
+    (document.getElementById("avisos") || document.body).appendChild(bar);   // área de avisos criada por src/atualiza.js
     function atualizar() {
       var G = window.BBGoogle, e = G && G.estado();
       bar.hidden = !(e && e.configurado && e.conectado && e.pendente && e.online && !e.tokenValido);
@@ -2727,6 +2776,16 @@
       '<div class="field" id="settings-about"><label>Sobre</label>' +
       '<p class="body-text" style="margin:0;font-size:13px;color:var(--ink-soft);">O Bluebook é uma ferramenta de apoio à consulta: não substitui o julgamento clínico nem a bula. ' +
       escapeHtml((document.querySelector("footer") || {}).textContent ? document.querySelector("footer").textContent.trim() : "") + "</p></div>" +
+      /* v73: versão, data, verificação de atualização e instalação (src/atualiza.js). */
+      '<div class="field" id="settings-versao"><label>Versão e atualização</label>' +
+      '<p class="body-text" id="versao-linha" style="margin:0;font-size:14px;"></p>' +
+      '<p class="body-text" id="versao-verif" style="margin:4px 0 10px 0;font-size:13px;color:var(--ink-soft);"></p>' +
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+      '<button type="button" class="btn-ghost btn" id="versao-verificar">Verificar atualização agora</button>' +
+      '<button type="button" class="btn" id="versao-aplicar" hidden>Atualizar agora</button>' +
+      '<button type="button" class="btn-ghost btn" id="versao-instalar" hidden>Instalar o app</button></div>' +
+      '<p id="versao-status" class="calc-note" role="status" style="margin-top:8px;"></p>' +
+      '<p class="calc-note" id="versao-nota" style="margin-top:6px;"></p></div>' +
       '<div class="modal-actions"><button type="button" class="btn-ghost btn" id="settings-close">Fechar</button></div>' +
       "</div>";
 
@@ -2735,6 +2794,7 @@
     document.getElementById("settings-close").addEventListener("click", function () { overlay.remove(); });
 
     if (document.getElementById("settings-conta")) ligarConta(overlay);
+    ligarVersao();
 
     document.getElementById("export-btn").addEventListener("click", function () {
       var stamp = todayInputValue();

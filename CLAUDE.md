@@ -65,6 +65,13 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
 - **Google (Etapa 5):** `src/google.js` (marcador `/*@google*/`, antes do auth). `CLIENT_ID` = cliente OAuth
   "Bluebook (GitHub Pages)" do projeto Google Cloud `nimble-lead-514122-e4` (modo de teste; só funciona na origem
   https://vitorlrocha.github.io). Vazio = botão desativado. Escopo do Drive: só `drive.appdata`. Testes simulam o Google (`testes/google.ambos.spec.js`, com service worker bloqueado).
+- **Atualização automática (v73):** `src/atualiza.js` (marcador `/*@atualiza*/`, antes do google) registra o
+  service worker, procura versão nova (ao abrir, ao voltar a internet, a cada hora), mostra "Nova versão
+  disponível · Atualizar" e o aviso "Sem internet". O `sw.js` novo fica ESPERANDO e só assume com a mensagem
+  `ATUALIZAR` ou quando o app é fechado — nunca recarregue o app sozinho. O build grava
+  `window.BB_VERSAO = {versao, build, data}` (marcador `/*@versao*/`) e `dist/versao.json`: `versao` vem do
+  `package.json` (aumente a cada entrega de conteúdo), `build` é o hash do conteúdo e `data` é a do último
+  commit que tocou `src/` ou `dados/`. Teste do cenário completo: `testes/atualizacao.ambos.spec.js`.
 - **Design:** siga `docs/DESIGN.md` (tokens, tipografia, componentes, o que não fazer). Conferido por
   `testes/design.ambos.spec.js`. Ao mudar o visual de propósito, atualize o DESIGN.md e as capturas.
 - **Roadmap e etapas:** `ROADMAP.md`. Testes de uso real (favoritos, anotações, backup, Ajustes) em

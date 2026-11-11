@@ -13,12 +13,20 @@ var ARQUIVOS = [
   './icones/favicon-32.png'
 ];
 
+/* Atualização (v73): a versão nova é baixada inteira em segundo plano e fica ESPERANDO. Ela só assume quando
+   a pessoa toca em "Atualizar" (mensagem ATUALIZAR, enviada por src/atualiza.js) ou quando todas as janelas do
+   app são fechadas — nunca troca o app por baixo de uma consulta aberta. Na 1ª instalação (sem versão anterior
+   ativa) assume na hora, para o app já funcionar offline. */
 self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE)
       .then(function (c) { return c.addAll(ARQUIVOS.map(function (u) { return new Request(u, { cache: 'reload' }); })); })
-      .then(function () { return self.skipWaiting(); })
+      .then(function () { if (!self.registration.active) return self.skipWaiting(); })
   );
+});
+
+self.addEventListener('message', function (e) {
+  if (e.data && e.data.tipo === 'ATUALIZAR') self.skipWaiting();
 });
 
 self.addEventListener('activate', function (e) {

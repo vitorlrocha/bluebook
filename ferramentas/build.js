@@ -25,18 +25,35 @@ const casca = ler('src/index.html');
 const css = ler('src/styles.css');
 const auth = ler('src/auth.js');     // acesso local (login), v72 Etapa 2
 const google = ler('src/google.js'); // Entrar com o Google + backup no Drive, v72 Etapa 5
-for (const mk of ['/*@css*/', '/*@google*/', '/*@auth*/', '/*@app*/']) if (casca.split(mk).length !== 2) throw new Error('marcador da casca: ' + mk);
+const atualiza = ler('src/atualiza.js'); // atualização automática, versão e data, v73
+for (const mk of ['/*@css*/', '/*@versao*/', '/*@atualiza*/', '/*@google*/', '/*@auth*/', '/*@app*/']) if (casca.split(mk).length !== 2) throw new Error('marcador da casca: ' + mk);
 // Usa função na substituição para que "$" nos dados não seja interpretado.
-const out = casca.replace('/*@css*/', () => css).replace('/*@google*/', () => google).replace('/*@auth*/', () => auth).replace('/*@app*/', () => app);
+const semVersao = casca.replace('/*@css*/', () => css).replace('/*@atualiza*/', () => atualiza).replace('/*@google*/', () => google).replace('/*@auth*/', () => auth).replace('/*@app*/', () => app);
 
-fs.mkdirSync(path.dirname(saida), { recursive: true });
-fs.writeFileSync(saida, out, 'utf8');
-console.log('OK', path.relative(L.RAIZ, saida), (Buffer.byteLength(out) / 1048576).toFixed(2) + ' MB');
+/* Data da última mudança do app/conteúdo: data do último commit que tocou src/ ou dados/ (igual em qualquer
+   máquina e no GitHub Actions). Sem git, usa a data do build. */
+function dataDoConteudo() {
+  const { execFileSync } = require('child_process');
+  const cands = ['git'];
+  try {
+    const base = path.join(process.env.LOCALAPPDATA || '', 'GitHubDesktop');
+    for (const d of fs.readdirSync(base).filter((n) => /^app-/.test(n)).sort().reverse()) cands.push(path.join(base, d, 'resources', 'app', 'git', 'cmd', 'git.exe'));
+  } catch (e) { /* sem GitHub Desktop */ }
+  for (const g of cands) {
+    try {
+      const s = execFileSync(g, ['log', '-1', '--format=%cI', '--', 'src', 'dados'], { cwd: L.RAIZ, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+      if (s) return new Date(s).toISOString();
+    } catch (e) { /* tenta o próximo */ }
+  }
+  return new Date().toISOString();
+}
 
 // Arquivos do PWA (manifest, ícones e service worker) ao lado do index.html.
 const pasta = path.dirname(saida);
 const pwa = path.join(L.RAIZ, 'src', 'pwa');
-const hash = require('crypto').createHash('sha256').update(out);
+fs.mkdirSync(pasta, { recursive: true });
+// O código do build é o hash de tudo MENOS o bloco de versão (senão seria circular).
+const hash = require('crypto').createHash('sha256').update(semVersao);
 fs.copyFileSync(path.join(pwa, 'manifest.json'), path.join(pasta, 'manifest.json'));
 hash.update(fs.readFileSync(path.join(pwa, 'manifest.json')));
 fs.mkdirSync(path.join(pasta, 'icones'), { recursive: true });
@@ -51,4 +68,12 @@ const versao = hash.digest('hex').slice(0, 12);
 if (sw.split('__VERSAO__').length !== 2) throw new Error('sw.js: marcador __VERSAO__ ausente ou repetido');
 fs.writeFileSync(path.join(pasta, 'sw.js'), sw.replace('__VERSAO__', versao), 'utf8');
 fs.writeFileSync(path.join(pasta, '.nojekyll'), '');   // GitHub Pages: servir arquivos sem processar
-console.log('OK PWA: manifest.json, sw.js (versão ' + versao + '), icones/');
+
+// Versão exibida no app (Ajustes → Sobre e página inicial) e publicada em versao.json, que o app consulta
+// para saber se há versão nova: { versao: número do package.json, build: hash do conteúdo, data: ISO }.
+const info = { versao: require(path.join(L.RAIZ, 'package.json')).version, build: versao, data: dataDoConteudo() };
+const out = semVersao.replace('/*@versao*/', () => 'window.BB_VERSAO = ' + JSON.stringify(info) + ';');
+fs.writeFileSync(saida, out, 'utf8');
+fs.writeFileSync(path.join(pasta, 'versao.json'), JSON.stringify(info) + '\n', 'utf8');
+console.log('OK', path.relative(L.RAIZ, saida), (Buffer.byteLength(out) / 1048576).toFixed(2) + ' MB');
+console.log('OK PWA: manifest.json, sw.js, icones/, versao.json — versão ' + info.versao + ' (build ' + versao + ', ' + info.data.slice(0, 10) + ')');

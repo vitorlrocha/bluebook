@@ -19,6 +19,7 @@
 </head>
 <body>
 <script>
+  /*@versao*/
   (function () { var z = 1.15; try { var s = parseFloat(window.localStorage.getItem("bluebook:zoom")); if (s >= 0.9 && s <= 1.6) z = s; } catch (e) {} document.documentElement.style.zoom = String(z); })();
   /* Acesso (src/auth.js): sem sessão válida, esconde o app antes de desenhar a tela. */
   (function () { var ok = false; try { var c = JSON.parse(localStorage.getItem("bluebook:conta") || "null"); var s = JSON.parse(sessionStorage.getItem("bluebook:sessao") || localStorage.getItem("bluebook:sessao") || "null"); ok = !!(c && s && s.email === c.email && s.ate > Date.now()); } catch (e) { ok = true; } if (!ok) document.documentElement.classList.add("bb-locked"); })();
@@ -92,14 +93,10 @@
   </footer>
 </div>
 
+<script>/*@atualiza*/</script>
 <script>/*@google*/</script>
 <script>/*@auth*/</script>
 <script>/*@app*/</script>
-<script>
-  /* PWA: registra o service worker (uso offline). Não roda quando o arquivo é aberto direto do disco (file://). */
-  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
-    window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
-  }
-</script>
+<!-- O service worker (uso offline e atualização automática) é registrado por src/atualiza.js. -->
 </body>
 </html>

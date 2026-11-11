@@ -106,7 +106,9 @@ test.describe('PWA', () => {
 
   test('sem service worker (arquivo aberto do disco) o registro é ignorado', async ({ page }) => {
     await page.goto('/');
-    const src = await page.locator('script').last().textContent();
-    expect(src).toContain('/^https?:$/.test(location.protocol)');
+    // o registro fica em src/atualiza.js e só acontece em http(s)
+    const src = (await page.locator('script').allTextContents()).join('\n');
+    expect(src).toContain('var temSW = "serviceWorker" in navigator && /^https?:$/.test(location.protocol);');
+    expect(src).toContain('navigator.serviceWorker.register("sw.js")');
   });
 });

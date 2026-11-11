@@ -29,8 +29,25 @@ Abra o endereço publicado (veja [Publicação](#publicação)) ou o arquivo `di
 - **Android (Chrome):** abra o endereço → menu ⋮ → **Instalar app** (ou "Adicionar à tela inicial").
 - **iPhone (Safari):** abra o endereço → botão **Compartilhar** → **Adicionar à Tela de Início**.
 
-Depois da primeira abertura, o app fica guardado no aparelho e abre **sem internet**. Quando houver versão nova
-publicada, ela é baixada em segundo plano numa abertura com internet e passa a valer **na abertura seguinte**.
+### Instalar no computador (Windows, Mac ou Linux)
+1. Abra o endereço no **Chrome** ou no **Edge**.
+2. Clique no ícone **Instalar Bluebook** no fim da barra de endereço (ou menu ⋮ → *Transmitir, salvar e
+   compartilhar* → *Instalar página como app*; no Edge: menu … → *Aplicativos* → *Instalar este site como um aplicativo*).
+   Também há o botão **Instalar o app** em **⋮ → Ajustes → Versão e atualização**, quando o navegador permite.
+3. O Bluebook ganha ícone no menu Iniciar/área de trabalho, abre em janela própria e funciona sem internet.
+   Os dados (login, favoritos, anotações) são os mesmos do navegador em que você instalou.
+
+### Offline e atualização automática
+- Depois da primeira abertura, o app inteiro (com todo o conteúdo) fica guardado no aparelho e abre **sem internet**.
+  Sem conexão aparece o aviso "Sem internet · usando a versão salva".
+- **Com internet, o app procura versão nova sozinho**: ao abrir, quando a conexão volta, a cada hora e ao voltar
+  para a janela. A versão nova é baixada em segundo plano e aparece **"Nova versão disponível · Atualizar"**:
+  um toque troca e recarrega. Se você não tocar, ela entra na próxima vez que abrir o app. O app nunca
+  recarrega sozinho no meio do uso, e seus dados pessoais não são afetados pela atualização.
+- **Versão e data** da última atualização aparecem no fim da página inicial e em **⋮ → Ajustes → Versão e
+  atualização**, onde também ficam a data da última verificação e o botão **Verificar atualização agora**.
+- Como o conteúdo vem dentro do app, atualizar o app atualiza o conteúdo (uma versão só).
+- Abrir o arquivo `dist/index.html` direto do disco também funciona sem internet, mas **não se atualiza sozinho**.
 
 ### Primeiro acesso (login)
 1. Na tela inicial, em **Criar acesso**, informe seu e-mail e uma senha (mínimo de 8 caracteres).

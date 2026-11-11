@@ -15,6 +15,10 @@ são as capturas de `testes/visual.ambos.spec.js-snapshots/` (v72). A v71 origin
 >   "Calculadoras (IG, pediátrica, renal…)", "Idade gestacional (DUM/USG)" e "Fórmulas clínicas (lista)" (= REFS.calc).
 > - **Aba "Fórmulas clínicas"** (computador): é a antiga aba "Calculadoras" (lista REFS.calc), renomeada para não
 >   se confundir com o botão "Calculadoras", que abre o painel. No celular, é "Fórmulas clínicas (lista)" no "Mais".
+> - **Avisos flutuantes (v73, `.avisos`):** centralizados embaixo (acima da barra inferior no celular), empilhados:
+>   "Sem internet · usando a versão salva" (pílula `--ink`/`--paper`), "Nova versão disponível · Atualizar" e
+>   "Backup no Google Drive pendente · Sincronizar" (cartão `--surface` com botão `--accent-fill`, 44 px).
+>   No fim da página inicial, linha "Versão X · atualizado em DD/MM/AAAA" (`.home-versao`, 12,5 px, `--ink-faint`).
 > - **Página inicial:** frase original do app (`.home-tag`) abaixo do título; no celular, aviso legal no fim (`.home-legal`).
 > - **Filtro de classe:** optgroups "Grupos terapêuticos" e "Classes detalhadas".
 > - **`<select>`:** herda a cor do texto, porque no escuro ficava preto sobre preto.
