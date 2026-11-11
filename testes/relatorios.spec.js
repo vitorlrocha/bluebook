@@ -8,7 +8,7 @@ const raiz = path.join(__dirname, '..');
 
 test.describe('Relatórios gerados a partir de dados/', () => {
   test.beforeEach(({}, info) => { test.skip(info.project.name !== 'computador', 'não depende do navegador'); });
-  for (const f of ['pendencias', 'inconsistencias']) {
+  for (const f of ['pendencias', 'inconsistencias', 'revisao']) {
     test(`${f}: arquivo em dia com dados/*.json`, () => {
       expect(() => execFileSync(process.execPath, [path.join(raiz, 'ferramentas', f + '.js'), '--checar'], { stdio: 'pipe' })).not.toThrow();
     });

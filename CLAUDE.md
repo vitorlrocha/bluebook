@@ -134,6 +134,8 @@ Para gerar `dados/cid_full.json` a partir dos CSVs: `python3 ferramentas/build_c
    (`ferramentas/pendencias.js`). Divergências entre ficha, calculadora pediátrica, plantão e prescrições em
    `INCONSISTENCIAS.md` (`ferramentas/inconsistencias.js`). Os dois são gerados: corrija o dado (com fonte) e rode
    `npm run relatorios`; nunca edite os .md à mão nem "corrija" uma divergência sem fonte.
+   `REVISAO_CLINICA.md` (`ferramentas/revisao.js`) junta os dois numa lista de trabalho por prioridade
+   (P1 = pode mostrar dose errada); também é gerado e conferido nos testes.
 4. ~~Testes automatizados (Playwright)~~ (feito na v72). Os problemas conhecidos da v71 (ranking de "AAS",
    destaque de "Remédios") foram corrigidos na etapa R1; `testes/regressao.spec.js` lista as buscas que mudaram de propósito.
 5. ~~Limpeza de CSS, desempenho e acessibilidade~~ (feito na v72). Resta: listas com 1-2 letras digitadas
