@@ -80,11 +80,12 @@ test.describe('Regressão de funções (correções da v73)', () => {
   });
 
   test('d) todas as seções acessíveis (abas no computador; barra inferior ou "Mais" no celular)', async ({ page }, info) => {
-    const SECOES = { plantao: 'Plantão', meds: 'Medicamentos', diseases: 'Doenças', scores: 'Escores', rx: 'Prescrição', atb: 'Antibióticos', vac: 'Vacinas', flux: 'Fluxogramas', ecg: 'ECG', calc: 'Calculadoras', lab: 'Laboratório', cid: 'CID-10' };
+    const SECOES = { plantao: 'Plantão', meds: 'Medicamentos', diseases: 'Doenças', scores: 'Escores', rx: 'Prescrição', atb: 'Antibióticos', vac: 'Vacinas', flux: 'Fluxogramas', ecg: 'ECG', calc: 'Fórmulas clínicas', lab: 'Laboratório', cid: 'CID-10' };
     for (const [modo, nome] of Object.entries(SECOES)) {
       if (pc(info)) {
         const aba = page.locator(`.view-tab[data-mode="${modo}"]`);
         await expect(aba, nome).toBeVisible();
+        await expect(aba).toContainText(nome);
         await aba.click();
       } else if (['plantao', 'diseases', 'meds'].includes(modo)) {
         await page.locator(`#tabbar [data-tb="${modo}"]`).click();

@@ -43,9 +43,12 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
   Bloom de trigramas (`matchRec`) descarta registros sem o termo — o resultado é idêntico ao de `matchTerm`.
   Se mudar os campos pesquisados, mude só `medHay`/`disHay`.
 - A calculadora pediátrica acessível ao usuário é o quadro "Dose pediátrica por peso" na ficha do
-  medicamento (prefixo `fp-`). A janela "Ferramentas" (`openCalcModal`: calculadora, IG, dose pediátrica,
-  renal, IMC, risco CV, fluidos, infusão, corticoides) abre por `#calc-btn` (cabeçalho, computador) e pelo
-  item `data-tb="tools"` da folha "Mais" (celular). Na v71 estava inacessível.
+  medicamento (prefixo `fp-`). O painel de calculadoras (`openCalcModal`: calculadora, IG por DUM/USG, dose
+  pediátrica, renal, IMC adulto e infantil, risco CV, fluidos, infusão, corticoides) abre por: botão
+  "Calculadoras" `#calc-btn` (cabeçalho, computador); atalhos "Calculadoras" e "Idade gestacional" da página
+  inicial (`openCalcTab("ga")` abre direto uma aba); itens `data-tb="tools"` e `data-tb="ga"` da folha "Mais".
+  A lista de fórmulas `REFS.calc` é a aba "Fórmulas clínicas" (computador) / "Fórmulas clínicas (lista)" (celular).
+  Na v71 o painel estava inacessível.
 
 - **Login local (Etapa 2):** `src/auth.js`, inserido pelo build no marcador `/*@auth*/` (antes do app). Ele expõe
   `window.BBAuth` (email, sair, alterarSenha, PESSOAIS, MEDS_KEY). Chaves: `bluebook:conta` (e-mail, hash PBKDF2,

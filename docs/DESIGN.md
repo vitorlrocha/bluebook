@@ -13,6 +13,8 @@ são as capturas de `testes/visual.ambos.spec.js-snapshots/` (v72). A v71 origin
 > - **Painel de calculadoras** (`openCalcModal`): botão "Calculadoras" (`#calc-btn`) no cabeçalho do computador;
 >   atalhos "Calculadoras" e "Idade gestacional" (`openCalcTab("ga")`) na página inicial; na folha "Mais":
 >   "Calculadoras (IG, pediátrica, renal…)", "Idade gestacional (DUM/USG)" e "Fórmulas clínicas (lista)" (= REFS.calc).
+> - **Aba "Fórmulas clínicas"** (computador): é a antiga aba "Calculadoras" (lista REFS.calc), renomeada para não
+>   se confundir com o botão "Calculadoras", que abre o painel. No celular, é "Fórmulas clínicas (lista)" no "Mais".
 > - **Página inicial:** frase original do app (`.home-tag`) abaixo do título; no celular, aviso legal no fim (`.home-legal`).
 > - **Filtro de classe:** optgroups "Grupos terapêuticos" e "Classes detalhadas".
 > - **`<select>`:** herda a cor do texto, porque no escuro ficava preto sobre preto.
