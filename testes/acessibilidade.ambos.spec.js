@@ -52,7 +52,7 @@ test.describe('Teclado e leitura', () => {
     await page.locator('#tabbar [data-tb="more"]').focus();
     await page.keyboard.press('Enter');
     await expect(page.locator('#sheet')).toBeVisible();
-    await expect(page.locator('#sheet [data-tb="calc"]')).toBeFocused();
+    await expect(page.locator('#sheet [data-tb="tools"]')).toBeFocused();   // 1º item: painel de calculadoras
     await page.keyboard.press('Escape');
     await expect(page.locator('#sheet')).toBeHidden();
     await expect(page.locator('#tabbar [data-tb="more"]')).toBeFocused();

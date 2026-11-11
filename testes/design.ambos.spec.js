@@ -67,7 +67,7 @@ test.describe('DESIGN.md §5 — componentes', () => {
     test.skip(info.project.name === 'computador', 'a página inicial com atalhos é a aba Início do celular');
     await abrir(page);
     const t = await page.locator('#detail .home-quick button').evaluateAll((bs) => bs.map((b) => (b.querySelector('strong, b, span:not(.ic)') || b).textContent.trim()));
-    const esperado = ['Plantão', 'Doenças', 'Calculadoras', 'Escores', 'CID-10', 'Antibióticos', 'Fluxogramas', 'Laboratório'];
+    const esperado = ['Plantão', 'Doenças', 'Calculadoras', 'Idade gestacional', 'Escores', 'CID-10', 'Antibióticos', 'Fluxogramas', 'Laboratório'];
     expect(t.slice(0, esperado.length).map((s) => esperado.find((e) => s.startsWith(e)) || s)).toEqual(esperado);
   });
 
@@ -86,7 +86,7 @@ test.describe('DESIGN.md §5 — componentes', () => {
     await abrir(page);
     await page.locator('#tabbar [data-tb="more"]').click();
     const t = await page.locator('#sheet .sheet-list button').evaluateAll((bs) => bs.map((b) => b.textContent.replace('›', '').trim()));
-    expect(t).toEqual(['Calculadoras', 'Ferramentas de cálculo', 'Escores', 'CID-10', 'Antibióticos por foco', 'Fluxogramas', 'ECG', 'Laboratório', 'Vacinas', 'Prescrição e interações', 'Tamanho do texto']);
+    expect(t).toEqual(['Calculadoras (IG, pediátrica, renal…)', 'Idade gestacional (DUM/USG)', 'Fórmulas clínicas (lista)', 'Escores', 'CID-10', 'Antibióticos por foco', 'Fluxogramas', 'ECG', 'Laboratório', 'Vacinas', 'Prescrição e interações', 'Tamanho do texto']);
   });
 });
 

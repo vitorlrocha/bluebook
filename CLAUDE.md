@@ -98,6 +98,10 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
 - Doses pediátricas: preferir SBP, Ministério da Saúde/PCDT, bula Anvisa; citar fonte e ano.
 - Não reintroduzir botões de editar/excluir/novo medicamento.
 - Não usar marca, textos ou layout proprietário de outros apps (ex.: Whitebook).
+- **Nenhuma mudança de layout, design ou CSS pode esconder, remover ou tornar inacessível uma função existente
+  sem aviso explícito ao autor. Antes de entregar qualquer mudança visual, compare com a versão anterior: liste
+  todos os botões, abas, itens de menu, calculadoras e textos legais, e confirme que continuam acessíveis no
+  computador (1366 px) e no celular (390 px).** (Conferido por `testes/regressao_funcoes.ambos.spec.js`.)
 
 ## Verificações antes de entregar qualquer mudança
 ```bash

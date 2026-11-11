@@ -516,3 +516,7 @@ html.bb-locked .app { display: none; }
 .drive-aviso[hidden], html.bb-locked .drive-aviso { display: none; }
 .drive-aviso button { min-height: 44px; padding: 0 14px; border: none; border-radius: 10px; background: var(--accent-fill); color: #fff; font-weight: 600; font-size: 14px; font-family: var(--sans); cursor: pointer; }
 @media (max-width: 780px) { .drive-aviso { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); } }
+/* v72 (correções da v73): frase original e aviso legal na página inicial */
+.home-tag { margin: 2px 0 6px; font-size: 16px; line-height: 1.45; color: var(--ink-soft); }
+.home-legal { display: none; margin: 18px 0 8px; padding: 12px 14px; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); font-size: 13px; line-height: 1.5; color: var(--ink-soft); }
+@media (max-width: 780px) { .home-legal { display: block; } }

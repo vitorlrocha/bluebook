@@ -10,7 +10,11 @@ são as capturas de `testes/visual.ambos.spec.js-snapshots/` (v72). A v71 origin
 >   - Novos tokens: `--muted`, `--accent-fill`, `--c-red-ink`, `--c-red-fill`, `--warn-ink` e `--bad-ink` (camada 3 de `src/styles.css`).
 >   - O subtítulo do item selecionado passou de 85% para 95% de branco.
 > - **Foco visível:** contorno de 2 px em `--accent` em todos os controles, quando navegados pelo teclado.
-> - **Janela "Ferramentas":** botão no cabeçalho do computador e item na folha "Mais" do celular.
+> - **Painel de calculadoras** (`openCalcModal`): botão "Calculadoras" (`#calc-btn`) no cabeçalho do computador;
+>   atalhos "Calculadoras" e "Idade gestacional" (`openCalcTab("ga")`) na página inicial; na folha "Mais":
+>   "Calculadoras (IG, pediátrica, renal…)", "Idade gestacional (DUM/USG)" e "Fórmulas clínicas (lista)" (= REFS.calc).
+> - **Página inicial:** frase original do app (`.home-tag`) abaixo do título; no celular, aviso legal no fim (`.home-legal`).
+> - **Filtro de classe:** optgroups "Grupos terapêuticos" e "Classes detalhadas".
 > - **`<select>`:** herda a cor do texto, porque no escuro ficava preto sobre preto.
 
 ---
@@ -124,7 +128,7 @@ O modo escuro é aplicado por `@media (prefers-color-scheme: dark)` com `:root:n
 
 ### 5.1 Cabeçalho
 - Fundo translúcido com desfoque: `background: color-mix(in srgb, var(--paper) 82%, transparent)` com `backdrop-filter: saturate(180%) blur(20px)` e borda inferior de 1 px.
-- **Computador:** uma linha com a marca "BB" (quadrado de 32 px com gradiente `#2F80ED → #0A4FA8` e raio de 9 px) + "Bluebook", seguida da busca (flexível, de 180 a 420 px), dos filtros (classe e especialidade, até 200 px cada), de Favoritos, de **Ferramentas** (v72: abre a janela com calculadora, IG, dose pediátrica, renal, IMC, risco CV, fluidos, infusão e corticoides), do Aa e do menu ⋮. Sem slogan.
+- **Computador:** uma linha com a marca "BB" (quadrado de 32 px com gradiente `#2F80ED → #0A4FA8` e raio de 9 px) + "Bluebook", seguida da busca (flexível, de 180 a 420 px), dos filtros (classe e especialidade, até 200 px cada), de Favoritos, de **Calculadoras** (`#calc-btn`: abre o painel com calculadora, IG por DUM/USG, dose pediátrica, renal, IMC adulto e infantil, risco CV, fluidos, infusão e corticoides), do Aa e do menu ⋮. Sem slogan.
 - **Celular:** a marca numa linha; abaixo, uma grade com a busca (4 colunas), a estrela e o ⋮ (44 px cada); na linha seguinte, o filtro de classe e o de especialidade lado a lado. O cabeçalho fica fixo no topo (`position: sticky`).
 
 ### 5.2 Campo de busca
@@ -165,7 +169,7 @@ O modo escuro é aplicado por `@media (prefers-color-scheme: dark)` com `:root:n
 
 ### 5.8 Página inicial
 - Data em cinza e com inicial maiúscula ("Sábado, 7 De Novembro"), seguida do título "Bluebook" (34 px) e de uma linha de descrição.
-- **Atalhos em cartões** (grade `minmax(190px,1fr)` no computador, 2 colunas no celular), cada um com um quadrado colorido de 38 px com ícone branco, o título (15 px/600) e a descrição (12,5 px cinza). Ordem: Plantão, Doenças, Calculadoras, Escores, CID-10, Antibióticos, Fluxogramas, Laboratório.
+- **Atalhos em cartões** (grade `minmax(190px,1fr)` no computador, 2 colunas no celular), cada um com um quadrado colorido de 38 px com ícone branco, o título (15 px/600) e a descrição (12,5 px cinza). Ordem: Plantão, Doenças, Calculadoras (abre o painel), Idade gestacional (abre a aba "ga" do painel), Escores, CID-10, Antibióticos, Fluxogramas, Laboratório. Abaixo do título "Bluebook" fica a frase original do app (`.home-tag`, 16 px, `--ink-soft`); no celular, o aviso legal fecha a página (`.home-legal`).
 - **Cobertura do conteúdo**, abaixo: totais em pílulas brancas e a grade de especialidades (cartões clicáveis com "n doenças · n meds"). As especialidades com menos de 20 doenças têm uma faixa laranja à esquerda.
 - No celular, a aba "Início" mostra essa página. A busca e as listas ficam nas outras abas.
 
@@ -178,7 +182,7 @@ O modo escuro é aplicado por `@media (prefers-color-scheme: dark)` com `:root:n
 
 ### 5.10 Folha "Mais" (bottom sheet)
 - Fundo escurecido `rgba(0,0,0,.35)`. A folha `--paper` sobe de baixo com cantos de 18 px no topo, puxador cinza (40×5 px) e título "Mais seções" (20 px/700).
-- A lista agrupada tem linhas com ícone colorido de 30 px, o rótulo de 16 px e a seta › à direita: Calculadoras, Ferramentas de cálculo (v72: abre a janela Ferramentas), Escores, CID-10, Antibióticos por foco, Fluxogramas, ECG, Laboratório, Vacinas, Prescrição e interações, Tamanho do texto.
+- A lista agrupada tem linhas com ícone colorido de 30 px, o rótulo de 16 px e a seta › à direita: Calculadoras (IG, pediátrica, renal…) (painel), Idade gestacional (DUM/USG), Fórmulas clínicas (lista), Escores, CID-10, Antibióticos por foco, Fluxogramas, ECG, Laboratório, Vacinas, Prescrição e interações, Tamanho do texto.
 - Botão "Fechar" separado, branco, com texto azul em 600. Tocar fora também fecha.
 
 ### 5.11 Modo plantão
