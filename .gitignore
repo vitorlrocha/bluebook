@@ -5,3 +5,10 @@ node_modules/
 # Saídas do Playwright
 testes/resultados/
 testes/relatorio/
+# Configuração local do banco na nuvem (nunca vai para o GitHub; modelo em .env.exemplo)
+.env
+.env.*
+!.env.exemplo
+# Chaves de administração do Firebase/Google, se algum dia existirem
+*service-account*.json
+*serviceAccount*.json
