@@ -1,0 +1,292 @@
+{
+  "lote": "01",
+  "criadoEm": "2026-11-12",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Hipertensão gestacional",
+        "introducao": "Hipertensão arterial que surge na segunda metade da gestação em mulher antes normotensa, sem proteinúria e sem outros sinais de pré-eclâmpsia. É diagnóstico provisório: 10% a 50% evoluem para pré-eclâmpsia, e a PA deve normalizar até 12 semanas após o parto (se persistir, reclassificar como hipertensão crônica).",
+        "criterios": "PAS ≥ 140 mmHg e/ou PAD ≥ 90 mmHg (5º ruído de Korotkoff), com a gestante sentada, manguito de 13 cm no braço direito, na altura do coração e mais de uma medida com intervalo de 4 a 6 h, a partir da 20ª semana, sem proteinúria significativa (< 300 mg/24 h ou relação proteína/creatinina < 0,3) e sem disfunção de órgão-alvo nem sinais de comprometimento placentário. Em braço > 30 cm sem manguito adequado, usar tabela de correção.",
+        "exames": "Monitorar o surgimento de pré-eclâmpsia: proteinúria (urina 24 h, relação proteína/creatinina ou fita: 1+ ≈ 30 mg/dL) e, se houver suspeita, os exames mínimos da pré-eclâmpsia (hemograma com plaquetas, DHL, bilirrubinas, creatinina, AST); avaliação do crescimento e da vitalidade fetal. Periodicidade dos exames: PENDENTE DE VERIFICAÇÃO (não definida na fonte).",
+        "tratamento": "Manter PA entre 110-140 x 85 mmHg, com anti-hipertensivo oral quando necessário (metildopa, nifedipino, anlodipino, entre outros); IECA, BRA e inibidores diretos da renina são contraindicados. Vigiar a evolução para pré-eclâmpsia. Com PA controlada, feto bem e sem pré-eclâmpsia, a gestação pode seguir até 39 semanas e 6 dias.",
+        "conduta": "Confirmar o diagnóstico e afastar pré-eclâmpsia (proteinúria, plaquetas, função hepática e renal, sintomas). Controle pressórico com meta 110-140 x 85 mmHg. Orientar sinais de alarme (cefaleia, alterações visuais, dor epigástrica ou em hipocôndrio direito, dispneia, redução dos movimentos fetais). PA ≥ 160/110 mmHg confirmada em 15 min, sintomas ou alteração laboratorial: conduzir como pré-eclâmpsia com sinais de gravidade (internação, sulfato de magnésio, anti-hipertensivo de ação rápida). Resolução até 39+6 semanas se compensada. Reavaliar a PA no puerpério até 12 semanas.",
+        "prescricao": "1) Manutenção (via oral; ajustar à PA): metildopa 750 a 2.000 mg/dia em 2 a 4 tomadas; ou nifedipino retard 20 a 120 mg/dia em 1 a 3 tomadas; ou anlodipino 5 a 20 mg/dia em 1 a 2 tomadas. Outras opções da fonte: clonidina 0,2 a 0,6 mg/dia em 2 a 3 tomadas; hidralazina VO 50 a 150 mg/dia em 2 a 3 tomadas; metoprolol 100 a 200 mg/dia em 1 a 2 tomadas.\n2) Meta pressórica: 110-140 x 85 mmHg.\n3) Contraindicados na gestação: IECA, BRA e inibidores diretos da renina.\n4) Crise hipertensiva (PA ≥ 160/110 mmHg): nifedipino 10 mg VO, repetir 10 mg a cada 20-30 min se necessário (máx. 30 mg); ou hidralazina 5 mg IV (1 ampola de 20 mg/mL diluída em 19 mL de água destilada = 1 mg/mL), repetir 5 mg a cada 20 min (máx. 30 mg). Reduzir a PA 15% a 25% na primeira hora, sem queda abrupta. Associar sulfato de magnésio conforme o registro de pré-eclâmpsia.\n5) Parto: até 39 semanas e 6 dias se PA controlada, vitalidade fetal preservada e sem pré-eclâmpsia.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco, cap. 11 (2022), com quadros do Protocolo da Rede Brasileira de Estudos sobre Hipertensão na Gravidez (Peraçoli, 2020).",
+        "cid": "O13",
+        "esp": "Obstetrícia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco, cap. 11 Síndromes hipertensivas na gestação (p. 142-151)",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção Primária à Saúde)",
+          "ano": "2022",
+          "url": "https://projetomellyssa.mpmg.mp.br/wp-content/uploads/2022/08/MS-MANUAL-DE-GESTACAO-DE-ALTO-RISCO-2022-1.pdf",
+          "usadoPara": "definição, critérios, meta pressórica, momento do parto, doses dos quadros 2 e 3 (anti-hipertensivos de manutenção e de crise), sinais de gravidade"
+        }
+      ],
+      "observacoes": "1) O manual não define periodicidade de exames nem de consultas na hipertensão gestacional; ficou PENDENTE. 2) AAS e cálcio profiláticos não foram incluídos porque o capítulo lido não os aborda para hipertensão gestacional já instalada. 3) Labetalol não consta do quadro do manual (não comercializado no Brasil); por isso não foi citado. 4) O registro de pré-eclâmpsia já existente no acervo cita 'meta 140-150/90-100' na crise; o manual do MS usa 110-140 x 85 na manutenção: o revisor pode querer harmonizar."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Sepse na gestação (sepse materna)",
+        "introducao": "Disfunção orgânica ameaçadora à vida causada por infecção na gestação, no parto, após aborto ou no puerpério. É a terceira causa de morbimortalidade materna. Focos mais comuns: genital, urinário e pulmonar; cesárea é fator de risco. Agentes: bacilos Gram-negativos (sobretudo E. coli), estreptococos, estafilococos, anaeróbios e vírus respiratórios (influenza, SARS-CoV-2).",
+        "criterios": "Suspeita ou confirmação de infecção + disfunção orgânica. Triagem com qSOFA (FR ≥ 22 irpm, PAS ≤ 100 mmHg, alteração do nível de consciência (Glasgow < 15)): 2 ou mais critérios indicam alto risco e exigem avaliação imediata. Confirmação: aumento de 2 ou mais pontos no SOFA. Choque séptico: necessidade de vasopressor para manter PAM ≥ 65 mmHg e lactato > 2 mmol/L apesar de reposição volêmica adequada (Sepsis-3, referência do cap. 38). Sinais de alerta: febre ou calafrios, diarreia ou vômitos (choque tóxico), exantema, dor abdominal ou pélvica, leucorreia ou loquiação alterada, tosse produtiva, sintomas urinários, mamas ou ferida operatória com rubor, involução uterina lenta, letargia. As alterações fisiológicas da gestação (FC maior, PA menor) podem mascarar o quadro.",
+        "exames": "Gasometria arterial com lactato (repetir se > 2 mmol/L), hemograma com plaquetas, creatinina e diurese, bilirrubinas, coagulação; hemoculturas e culturas do foco antes do antibiótico (sem atrasá-lo); exames de imagem conforme o foco.",
+        "tratamento": "Antibiótico de amplo espectro na primeira hora após o reconhecimento (o atraso do antibiótico aumenta a mortalidade a cada hora), escolhido pelo foco provável; reposição volêmica com cristaloide; noradrenalina se PAM < 65 mmHg apesar do volume; controle do foco (drenagem, curetagem de aborto infectado, abordagem cirúrgica) decidido com obstetrícia e terapia intensiva; cuidado em UTI.",
+        "conduta": "Pacote da primeira hora contado da chegada à triagem: lactato, culturas, antibiótico, oxigênio, cristaloide (Ringer lactato) e vasopressor se hipotensão persistente. Esquemas empíricos por foco (MS 2022): corioamnionite: ampicilina + gentamicina (alternativa amoxicilina-clavulanato); endometrite pós-parto ou pós-aborto: clindamicina + gentamicina (alternativas ampicilina + gentamicina + metronidazol ou amoxicilina-clavulanato); pielonefrite: ceftriaxona (alternativas amoxicilina-clavulanato ou gentamicina, esta sobretudo no puerpério); pneumonia bacteriana: amoxicilina-clavulanato + azitromicina (alternativas ceftriaxona ou cefazolina + azitromicina); influenza suspeita até 48 h: oseltamivir; pele e partes moles (inclui ferida operatória e mastite): clindamicina + cefazolina (alternativa oxacilina). Ajustar ao perfil local e descalonar pela cultura. Transferir para UTI após a abordagem inicial.",
+        "prescricao": "1) Antibiótico empírico na 1ª hora conforme o foco (ver conduta). Doses de ampicilina, gentamicina, clindamicina, metronidazol, amoxicilina-clavulanato, cefazolina, oxacilina e ceftriaxona na sepse materna: PENDENTE DE VERIFICAÇÃO (a fonte obstétrica lida não traz posologia).\n2) Pneumonia bacteriana (esquema citado pelo MS no capítulo de covid-19): ceftriaxona 2 g IV 1 vez ao dia (duração não informada na fonte: PENDENTE DE VERIFICAÇÃO) + azitromicina 500 mg IV ou VO 1 vez ao dia por 5 dias.\n3) Influenza suspeita ou confirmada: oseltamivir 75 mg VO 12/12 h por 5 dias.\n4) Cristaloide (Ringer lactato) 20 mL/kg nas primeiras 3 horas, com meta de PAM > 65 mmHg (MS 2022, cap. 38, fig. 3); reavaliar volemia e risco de congestão pulmonar a cada etapa. Fontes não específicas da gestação (Fiocruz 2019; Anvisa) citam 30 mL/kg em 30 a 60 min.\n5) Noradrenalina se PAM < 65 mmHg após volume (acesso central preferível; periférico se indisponível). Dose: PENDENTE DE VERIFICAÇÃO.\n6) Controle do foco e UTI.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco, cap. 27, 28 e 38, incluindo a fig. 3 do cap. 38 (2022); Fiocruz/IFF, Portal de Boas Práticas, Principais questões sobre sepse em pacientes obstétricas (2019); Anvisa/CAMO-Net, Antimicrobianos na prática clínica: guia para a APS (publicado em 2025).",
+        "cid": "A41.9, O98.8, O75.3, O85, O08.0",
+        "esp": "Obstetrícia; Medicina Intensiva; Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco, cap. 38 Sepse na gestação (p. 380-387); cap. 27 Influenza e cap. 28 Covid-19 (doses de oseltamivir, ceftriaxona e azitromicina)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2022",
+          "url": "https://projetomellyssa.mpmg.mp.br/wp-content/uploads/2022/08/MS-MANUAL-DE-GESTACAO-DE-ALTO-RISCO-2022-1.pdf",
+          "usadoPara": "definição, sinais de alerta, qSOFA/SOFA, antibiótico na 1ª hora, quadro de esquemas empíricos por foco, UTI e controle do foco"
+        },
+        {
+          "titulo": "Principais questões sobre sepse em pacientes obstétricas",
+          "instituicao": "Fiocruz / Instituto Fernandes Figueira, Portal de Boas Práticas em Saúde da Mulher, da Criança e do Adolescente",
+          "ano": "2019",
+          "url": "https://portaldeboaspraticas.iff.fiocruz.br/atencao-mulher/principais-questoes-sobre-sepse-em-pacientes-obstetricas/",
+          "usadoPara": "pacote da primeira hora, limiares do qSOFA, lactato, cristaloide 30 mL/kg (Ringer lactato), noradrenalina, definição de choque séptico"
+        },
+        {
+          "titulo": "Antimicrobianos na prática clínica: um guia para profissionais da Atenção Primária (seção Identificação de sepse)",
+          "instituicao": "Anvisa / CAMO-Net",
+          "ano": "2025 (data de publicação no portal da Anvisa; o documento não traz o ano)",
+          "url": "https://www.gov.br/anvisa/pt-br/assuntos/servicosdesaude/ebook_AntimicrobianosnaPrticaClnica_GuiaparaAPS.pdf",
+          "usadoPara": "volume de cristaloide (30 mL/kg em 30 a 60 min) e encaminhamento; é fonte para adultos em geral, não específica da gestação"
+        }
+      ],
+      "observacoes": "1) CID: não existe código único para sepse antes do parto na CID-10 do DATASUS. Usei A41.9 (septicemia não especificada) + O98.8 (outras doenças infecciosas maternas complicando a gravidez), O75.3 (outras infecções durante o trabalho de parto), O85 (infecção puerperal) e O08.0 (infecção pós-aborto). U07.1 não existe em cid_full.json. O revisor deve decidir se mantém todos. 2) Nenhuma fonte lida traz doses dos antibióticos do quadro de esquemas empíricos; ficaram PENDENTES. 3) Após a revisão de fontes: o volume passou a seguir a fig. 3 do cap. 38 do manual do MS (20 mL/kg até a 3ª hora, lida pelo revisor); 30 mL/kg (Fiocruz, Anvisa) ficou só como menção. 4) A figura do qSOFA do manual é imagem e não pôde ser lida; os limiares seguem a Sepsis-3 (Singer 2016, referência do cap. 38): FR ≥ 22, PAS ≤ 100, Glasgow < 15. Choque séptico exige vasopressor e lactato > 2 juntos. 5) Não há registro FEBRASGO de acesso aberto localizado sobre sepse materna."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Esteatose hepática aguda da gravidez",
+        "introducao": "Emergência obstétrica rara (cerca de 1:20.000 nascimentos) e potencialmente fatal, com insuficiência hepática aguda por infiltração gordurosa microvesicular, coagulopatia grave, lesão renal aguda e falência de múltiplos órgãos. Ocorre da segunda metade da gestação ao puerpério, sobretudo no 3º trimestre (74%). Associa-se a defeito da oxidação de ácidos graxos na unidade feto-placentária (sobretudo deficiência de LCHAD), em geral com mãe heterozigota.",
+        "criterios": "Suspeitar em gestante com náuseas e vômitos, dor abdominal, polidipsia/poliúria, encefalopatia ou alteração do sensório, pulso de repouso > 100 bpm e comprometimento fetal. Critérios de Swansea (6 ou mais, sem outra explicação, sugerem o diagnóstico): vômitos; dor abdominal; polidipsia/poliúria; encefalopatia; bilirrubina > 0,8 mg/dL; AST/ALT > 42 UI/L; amônia > 47 µmol/L; ácido úrico > 5,7 mg/dL; creatinina > 1,7 mg/dL; glicemia < 72 mg/dL; leucócitos > 11.000/µL; TP > 14 s ou TTPa > 34 s; fígado brilhante ou ascite na ultrassonografia; esteatose microvesicular na biópsia. Principal diferencial: síndrome HELLP (na EHAG são mais comuns hipofibrinogenemia, hipoglicemia, hipocolesterolemia, hiperbilirrubinemia e lesão renal; cerca de 70% têm hipertensão).",
+        "exames": "Transaminases, bilirrubinas, glicemia, colesterol, fibrinogênio, TP/TTPa, D-dímero, plaquetas e hemograma, creatinina e ureia, ácido úrico, amônia; ultrassonografia de abdome; avaliação fetal contínua. Escore de CIVD adaptado à gestação. No pós-parto, exames hematológicos, hepáticos e renais a cada 6 a 12 h nos primeiros dias. A histologia (esteatose microvesicular) é patognomônica e faz parte dos critérios de Swansea.",
+        "tratamento": "Diagnóstico precoce, estabilização materna em equipe multidisciplinar e interrupção da gestação o mais rápido possível após estabilização, pois a disfunção hepática só regride após o parto. Preparar banco de sangue para hemorragia e corrigir coagulopatia. Pós-parto em UTI. Plasmaférese pode acelerar a recuperação (sem reduzir mortalidade); considerar ECMO e transplante hepático em falência hepática grave.",
+        "conduta": "Internar em centro com UTI; proteger via aérea se houver alteração de consciência; corrigir hipoglicemia; acionar protocolo de hemorragia pós-parto e banco de sangue diante de coagulopatia; anti-hipertensivo e sulfato de magnésio se houver suspeita de pré-eclâmpsia grave/HELLP associada. Via de parto: EHAG não indica cesárea por si; com feto reativo, preferir via vaginal; se cesárea, preparo para hemorragia, incisão vertical se houver coagulopatia e drenos. Esperar melhora das transaminases em 1 a 2 dias, de colesterol e bilirrubinas em 3 a 4 dias, da CIVD em 4 a 6 dias e da creatinina em 7 a 10 dias. Rastrear distúrbios da oxidação de ácidos graxos na mulher após o evento.",
+        "prescricao": "1) Interrupção da gestação após estabilização (via conforme condição fetal e coagulação).\n2) Correção da hipoglicemia com glicose IV: dose e concentração PENDENTE DE VERIFICAÇÃO.\n3) Hemocomponentes (plasma, crioprecipitado/fibrinogênio, plaquetas, hemácias) guiados por coagulograma e sangramento: alvos e doses PENDENTE DE VERIFICAÇÃO. O manual pede atenção ao fibrinogênio antes da cesárea, mas o valor mínimo impresso precisa ser conferido.\n4) Se pré-eclâmpsia grave/HELLP associada: anti-hipertensivo e sulfato de magnésio conforme os registros de pré-eclâmpsia e HELLP.\n5) Pós-parto em UTI, exames seriados a cada 6 a 12 h; plasmaférese, ECMO ou transplante hepático em casos selecionados.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco, cap. 15 (2022).",
+        "cid": "O26.6",
+        "esp": "Obstetrícia; Hepatologia; Medicina Intensiva"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco, cap. 15 Esteatose hepática aguda da gravidez (p. 188-194)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2022",
+          "url": "https://projetomellyssa.mpmg.mp.br/wp-content/uploads/2022/08/MS-MANUAL-DE-GESTACAO-DE-ALTO-RISCO-2022-1.pdf",
+          "usadoPara": "todo o registro: epidemiologia, critérios de Swansea, diferencial com HELLP, conduta, via de parto, recuperação, plasmaférese/ECMO/transplante, rastreio materno"
+        }
+      ],
+      "observacoes": "1) O manual escreve 'fibrinogênio, no mínimo de 50 g/dL', valor que parece erro de unidade (provavelmente mg/dL); não reproduzi o número e deixei PENDENTE. 2) O manual não traz doses de glicose nem de hemocomponentes; PENDENTE. 3) O26.6 já é usado pelo registro de colestase intra-hepática da gestação; o código é de transtornos do fígado na gravidez e serve aos dois. 4) Não localizei protocolo FEBRASGO de acesso aberto sobre EHAG."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Covid-19 e influenza na gestação e no puerpério",
+        "introducao": "Gestantes e puérperas (até 2 semanas após o parto, incluindo aborto ou perda fetal) têm maior risco de formas graves de influenza e de covid-19, com mais internação em UTI, intubação, prematuridade e óbito. O manejo difere do adulto geral: limiar baixo para internação, antiviral para influenza em toda síndrome gripal e vigilância fetal nos casos moderados e graves.",
+        "criterios": "Síndrome gripal: febre, tosse ou dor de garganta, com coriza, mialgia, cefaleia, artralgia, anosmia/ageusia, diarreia ou fadiga. Covid-19 moderada: tosse e febre persistentes diárias, ou tosse persistente com piora de outro sintoma, ou sintoma + fator de risco. SRAG (grave): dispneia/desconforto respiratório, pressão persistente no tórax, SpO2 < 95% em ar ambiente ou cianose; na gestante, observar também hipotensão e oligúria. Sinais de alarme na gestante: FR > 20 irpm e FC > 100 bpm; valorizar a queixa de dispneia. Usar escore de alerta obstétrico (MEOWS): 2 ou mais alertas amarelos ou 1 vermelho indicam risco de evolução desfavorável.",
+        "exames": "RT-PCR para SARS-CoV-2 em swab nasofaríngeo (melhor entre o 3º e o 7º dia) ou teste de antígeno; pesquisa de influenza (RT-PCR ou teste rápido) em caso de dúvida diagnóstica, sintomas prolongados ou fora da sazonalidade; não atrasar o oseltamivir por causa do exame. Leve: sem exames de rotina. Moderada/grave: hemograma, ureia, creatinina, sódio, potássio, TGO, TGP, LDH, PCR, TP, TTPa, D-dímero, ferritina, gasometria; radiografia ou TC de tórax com proteção abdominal (não adiar imagem por causa da gestação). Vitalidade fetal diária nos casos moderados e graves.",
+        "tratamento": "Influenza: oseltamivir para toda gestante ou puérpera com síndrome gripal, vacinada ou não e mesmo sem sinais de gravidade, iniciar o quanto antes, sem esperar exame; na gestante o maior benefício é até 72 h, mas ainda há benefício quando iniciado entre o 3º e o 4º dia (Guia de Influenza 2023). Covid-19 leve: isolamento, repouso, hidratação, antitérmico (paracetamol) e monitoramento 2 a 3 vezes por semana, diário do 7º ao 14º dia. Moderada: internação, oxigênio, heparina profilática, corticoide se comprometimento pulmonar importante, antibiótico só se pneumonia bacteriana. Grave: UTI. Febre deve ser sempre tratada. Aleitamento mantido com máscara e higiene das mãos.",
+        "conduta": "Classificar a gravidade (leve, moderada, grave, crítica) e aplicar o MEOWS. SpO2 < 94%: oxigênio, monitorização e internação. Gestante de alto risco obstétrico com covid leve: internar se não houver como acompanhar de perto. Critérios de UTI: SpO2 < 95% com O2 a 6 L/min, esforço respiratório, PaO2/FiO2 < 300, PAS < 100 ou PAM < 65 mmHg, má perfusão, alteração de consciência ou oligúria. Posição prona se PaO2/FiO2 < 150. Resolução da gestação pode ser necessária se a oxigenação materna ou fetal não for sustentada. Prevenção: vacina contra influenza (qualquer trimestre, anual) e contra covid-19 (qualquer trimestre, fora de quadro gripal). Notificar SRAG. Quimioprofilaxia de gestante exposta: não recomendada de rotina pelo Guia de Influenza 2023 (o manual de 2022 a indicava para não vacinadas expostas há até 48 h).",
+        "prescricao": "1) Oseltamivir 75 mg VO 12/12 h por 5 dias para toda gestante/puérpera com síndrome gripal (ajustar se clearance < 60 mL/min).\n2) Antitérmico: paracetamol (opção preferida na gestação). Dose: 3 a 4 g/dia divididos em 3 a 4 tomadas, máx. 4 g/dia.\n3) Covid moderada/grave, pneumonia bacteriana suspeita: ceftriaxona 2 g IV 1 vez ao dia (duração: PENDENTE DE VERIFICAÇÃO) + azitromicina 500 mg IV ou VO 1 vez ao dia por 5 dias.\n4) Tromboprofilaxia (moderada/grave; não usar se plaquetas < 50.000/mm³ ou sangramento): heparina não fracionada SC 5.000 UI 12/12 h (até 60 kg), 5.000 UI 8/8 h (60-90 kg), 7.500 UI 8/8 h (> 90 kg); ou enoxaparina SC 40 mg 1 vez ao dia (até 80 kg), 60 mg 1 vez ao dia (80-120 kg), 40 mg 12/12 h (> 120 kg). Intervalo de 12 h entre a última enoxaparina e anestesia/parto. Manter após a alta por tempo individualizado.\n5) Corticoide se comprometimento pulmonar importante (após 7 dias de sintomas): dexametasona 6 mg/dia por 7 a 10 dias; ou metilprednisolona 0,7 a 1,0 mg/kg IV 12/12 h.\n6) Antivirais específicos para covid-19 na gestante (ex.: nirmatrelvir/ritonavir): PENDENTE DE VERIFICAÇÃO.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco, cap. 27 e 28 (2022); Ministério da Saúde, Guia de Manejo e Tratamento de Influenza (2023); Ministério da Saúde, CAB 28 v. II, quadro 61 (2013) para a dose de paracetamol.",
+        "cid": "O98.5, O99.5, B34.2, J11.1, J10.1",
+        "esp": "Infectologia; Obstetrícia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco, cap. 27 Influenza (p. 294-297) e cap. 28 Covid-19 (p. 298-311)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2022",
+          "url": "https://projetomellyssa.mpmg.mp.br/wp-content/uploads/2022/08/MS-MANUAL-DE-GESTACAO-DE-ALTO-RISCO-2022-1.pdf",
+          "usadoPara": "classificação de gravidade, MEOWS, exames por estágio, antibiótico, heparina, corticoide, prona, critérios de UTI, vigilância fetal, aleitamento, vacinas"
+        },
+        {
+          "titulo": "Guia de Manejo e Tratamento de Influenza 2023",
+          "instituicao": "Ministério da Saúde (Secretaria de Vigilância em Saúde)",
+          "ano": "2023",
+          "url": "https://goias.gov.br/saude/wp-content/uploads/sites/34/2012/06/guia_tratamento-influenza-2023-d45.pdf",
+          "usadoPara": "gestantes e puérperas como grupo de risco, oseltamivir para toda síndrome gripal mesmo vacinada, sinais de alarme (FR > 20, FC > 100), paracetamol como antitérmico, dose e ajuste renal do oseltamivir, indicações restritas de quimioprofilaxia"
+        },
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, Acolhimento à demanda espontânea: queixas mais comuns, quadro 61",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "dose de paracetamol no adulto"
+        }
+      ],
+      "observacoes": "1) CID: U07.1 (covid-19) NÃO existe em cid_full.json; usei B34.2, como os outros registros de covid do acervo. Pela regra da CID-10, influenza na gestação se codifica em O99.5 (doença respiratória complicando a gravidez) + J10/J11, e covid em O98.5; mantive os dois. 2) Divergência: o manual de 2022 indica quimioprofilaxia com oseltamivir 75 mg/dia por 10 dias para gestante/puérpera não vacinada exposta (até 48 h); o Guia de Influenza 2023 restringe a quimioprofilaxia a imunodeprimidos graves e residentes de instituições de longa permanência. Após a revisão, prevalece o Guia de 2023: a conduta diz que a quimioprofilaxia não é de rotina. O manual de 2022 limitava o oseltamivir a < 48 h; também prevalece o Guia de 2023 (maior benefício até 72 h, ainda útil no 3º-4º dia). 3) O capítulo de covid do manual é de 2021-2022 e não trata de antivirais para covid nem de esquemas vacinais atuais; marcado PENDENTE. 4) O manual escreve 'dexametasona 6 mg/dia (0,75 mg/kg/dia)', e o 0,75 mg/kg parece erro; usei só 6 mg/dia. 5) Área 'Infectologia' segue a sugestão do mapeador; poderia ser Ginecologia e Obstetrícia."
+    },
+    {
+      "registro": {
+        "area": "Clínica Médica",
+        "nome": "Resfriado comum (nasofaringite aguda)",
+        "introducao": "Infecção viral autolimitada das vias aéreas superiores, principal causa de rinossinusite aguda e de tosse aguda. Mais de 200 vírus envolvidos, sobretudo rinovírus, além de coronavírus, VSR, parainfluenza, adenovírus, enterovírus e metapneumovírus. Adultos têm 2 a 5 infecções de vias aéreas superiores por ano e crianças 6 a 8.",
+        "criterios": "Diagnóstico clínico: início súbito de rinorreia hialina ou mucoide, obstrução nasal, espirros, irritação de garganta, gotejamento pós-nasal e tosse, com ou sem febre (em geral baixa); ausculta pulmonar normal. Sintomas mais intensos nos 3 primeiros dias, regressão entre o 7º e o 10º dia (a tosse pode durar mais). Secreção que fica espessa e esverdeada após alguns dias não indica, por si, infecção bacteriana. Suspeitar de rinossinusite bacteriana se sintomas persistirem além de 10-14 dias ou piorarem após o 5º dia. Diferenciar de síndrome gripal (febre alta, mialgia, prostração) e de rinite alérgica.",
+        "exames": "Não são necessários. Radiografia ou TC de seios da face não estão indicadas na primeira semana nem para separar viral de bacteriano; reservar para suspeita de complicação (edema periorbitário, cefaleia intensa, alteração visual, toxemia, sinais meníngeos).",
+        "tratamento": "Suporte: hidratação, lavagem nasal com soro fisiológico 0,9%, analgésico/antitérmico (paracetamol ou dipirona). Antibiótico não deve ser usado de rotina. AINE e corticoide não são recomendados pelo MS. Descongestionante tópico só ocasionalmente e por no máximo 3 dias (evitar em lactentes). Anti-histamínicos, mucolíticos, antitussígenos e vitamina C sem benefício comprovado na maioria dos casos. Orientar sobre a evolução autolimitada.",
+        "conduta": "Confirmar quadro de vias aéreas superiores sem sinais de gravidade; afastar síndrome gripal em grupo de risco (que pode exigir antiviral), pneumonia e rinossinusite bacteriana. Orientar retorno se febre alta persistente, piora após o 5º dia, sintomas além de 10-14 dias, dispneia, edema periorbitário ou cefaleia intensa. Em lactentes, aspiração nasal com dispositivo próprio, poucas vezes ao dia. Cuidado com queimaduras na inalação de vapor em crianças pequenas. A SBPT (2006) admite anti-histamínico de 1ª geração com descongestionante; o MS (2013) não recomenda anti-histamínico em não atópicos.",
+        "prescricao": "1) Soro fisiológico 0,9% nasal para desobstrução (frequência não definida na fonte).\n2) Paracetamol se dor ou febre: adulto 3 a 4 g/dia divididos em 3 a 4 tomadas (máx. 4 g/dia); criança 10 a 15 mg/kg/dose a cada 4 a 6 h. Dipirona como alternativa: dose PENDENTE DE VERIFICAÇÃO.\n3) Descongestionante nasal tópico: no máximo 3 dias; não usar em lactentes. Fármaco e dose: PENDENTE DE VERIFICAÇÃO.\n4) NÃO prescrever antibiótico, corticoide sistêmico, mucolítico ou vitamina C.\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 28, v. II, cap. 2.18 e quadro 61 (2013); SBPT, II Diretrizes Brasileiras no Manejo da Tosse Crônica, seção Tosse aguda (2006).",
+        "cid": "J00",
+        "esp": "Medicina de Família e Comunidade; Clínica Médica"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, cap. 2.18 Rinossinusites/síndromes gripais (p. 167-174) e quadro 61",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "quadro clínico, evolução, quando suspeitar de bactéria, exames, tratamento de suporte, posição sobre AINE, corticoide, descongestionantes, anti-histamínicos, mucolíticos, vitamina C; dose de paracetamol"
+        },
+        {
+          "titulo": "II Diretrizes Brasileiras no Manejo da Tosse Crônica (J Bras Pneumol 2006;32 Supl 6:S403-S446), seções Tosse aguda e Tosse pós-infecciosa",
+          "instituicao": "Sociedade Brasileira de Pneumologia e Tisiologia (SBPT)",
+          "ano": "2006",
+          "url": "https://www.scielo.br/j/jbpneu/a/X6G48YN9xtddvFdDmBc94hh/",
+          "usadoPara": "etiologia viral, ausculta normal, imagem desnecessária na 1ª semana, antibiótico não indicado de rotina, posição sobre anti-histamínico com descongestionante (citada na conduta)"
+        }
+      ],
+      "observacoes": "1) Divergência entre fontes: a SBPT (2006) considera anti-histamínico de 1ª geração com descongestionante o tratamento mais eficaz e cita naproxeno 500 mg 3x/dia por 5 dias para dor de garganta intensa; o MS (2013, mais recente) diz que anti-histamínicos não aliviam o resfriado em não atópicos e não recomenda AINE. Após a revisão de fontes, prevalece o MS: a dexclorfeniramina saiu da prescrição (fica só a nota da divergência na conduta) e o naproxeno continua de fora. 2) Doses de dipirona e do descongestionante tópico não constam das fontes lidas: PENDENTE. 3) O acervo tem 'Síndrome gripal e COVID-19 leve' (J11.1, B34.2), que não é duplicata: este registro trata do resfriado sem febre alta."
+    },
+    {
+      "registro": {
+        "area": "Pneumologia",
+        "nome": "Bronquite aguda (traqueobronquite aguda)",
+        "introducao": "Infecção aguda das vias aéreas inferiores manifestada sobretudo por tosse, uma das maiores causas de uso desnecessário de antibiótico. Etiologia viral na maioria (influenza A e B, parainfluenza, VSR); bactérias em menos de 10% (Mycoplasma pneumoniae, Chlamydophila pneumoniae e, às vezes, Bordetella pertussis). Até 40% têm broncoespasmo e hiper-responsividade passageiros, que somem em menos de 6 semanas.",
+        "criterios": "Tosse aguda (até 3 semanas), seca ou produtiva, mesmo com escarro purulento, sem evidência clínica ou radiológica de resfriado comum, sinusite, pneumonia, exacerbação de DPOC ou crise de asma. A tosse costuma melhorar em 3 a 4 semanas. Sinais de gravidade (Anvisa/CAMO-Net): confusão mental, FR ≥ 30 irpm, PAS < 90 ou PAD ≤ 60 mmHg ou SpO2 ≤ 94% → encaminhar ao hospital. Idade ≥ 65 anos, alteração de ausculta, comorbidade (diabetes, insuficiência cardíaca, imunossupressão, neoplasia, insuficiência renal, cirrose), queda do estado geral, FR > 25, FC > 125 ou temperatura < 35 ou > 40 °C → radiografia de tórax e conduzir como possível pneumonia.",
+        "exames": "Diagnóstico clínico. Radiografia de tórax se suspeita de pneumonia (alteração de ausculta, sinais sistêmicos, idoso com quadro atípico). Considerar teste para SARS-CoV-2 e influenza em síndrome gripal.",
+        "tratamento": "Sintomático e orientação sobre a evolução (tosse por até 3 a 4 semanas). Não prescrever antibiótico de rotina em quem não está sistemicamente muito doente nem tem alto risco de complicação: antibiótico encurta a tosse em cerca de meio dia e causa efeitos adversos. Mucolíticos não indicados; antitussígenos têm pouco efeito. Broncodilatador só se houver sinais de obstrução ao fluxo aéreo (SBPT) ou doença de vias aéreas de base, como asma (NICE).",
+        "conduta": "Afastar pneumonia e outras causas graves. Antibiótico imediato se sistemicamente muito doente; imediato ou prescrição de reserva (usar só se piorar) se alto risco de complicação: comorbidade importante (cardíaca, pulmonar, renal, hepática, neuromuscular, imunossupressão, fibrose cística), > 65 anos com 2 ou mais de (internação no último ano, diabetes, insuficiência cardíaca, corticoide oral) ou > 80 anos com 1 ou mais. Macrolídeo em surto de atípicos ou suspeita de coqueluche (tosse emetizante, guincho, contato) com menos de 2 semanas de tosse. Reavaliar se piora rápida ou importante, ou se tosse além de 3 a 4 semanas.",
+        "prescricao": "1) Sem antibiótico na maioria; explicar o motivo e a duração esperada da tosse.\n2) Sintomáticos: paracetamol 3 a 4 g/dia divididos em 3 a 4 tomadas (máx. 4 g/dia). Mel pode aliviar a tosse (só acima de 1 ano).\n3) Se indicado antibiótico (adulto, 5 dias): doxiciclina 200 mg VO no 1º dia e 100 mg VO 1 vez ao dia por mais 4 dias; ou amoxicilina 500 mg VO 8/8 h; ou claritromicina 250 a 500 mg VO 12/12 h. Na gestação, não usar doxiciclina; amoxicilina é a preferida (se precisar de macrolídeo, eritromicina).\n4) Suspeita de coqueluche com tosse < 2 semanas: macrolídeo (ver registro de coqueluche; dose neste contexto PENDENTE DE VERIFICAÇÃO).\n5) Broncodilatador inalatório apenas se sibilância/obstrução ou asma de base: fármaco e dose PENDENTE DE VERIFICAÇÃO.\n6) NÃO usar mucolítico nem corticoide de rotina.\nBase: SBPT, II Diretrizes Brasileiras no Manejo da Tosse Crônica, seção Tosse aguda (2006); Anvisa/CAMO-Net, Antimicrobianos na prática clínica: guia para a APS (2025); NICE NG120, Cough (acute): antimicrobial prescribing (2019); Ministério da Saúde, CAB 28 v. II, quadro 61 (2013).",
+        "cid": "J20.9",
+        "esp": "Pneumologia; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "II Diretrizes Brasileiras no Manejo da Tosse Crônica, seções Tosse aguda (Traqueobronquite aguda) e Tosse pós-infecciosa",
+          "instituicao": "Sociedade Brasileira de Pneumologia e Tisiologia (SBPT)",
+          "ano": "2006",
+          "url": "https://www.scielo.br/j/jbpneu/a/X6G48YN9xtddvFdDmBc94hh/",
+          "usadoPara": "definição, etiologia, hiper-responsividade transitória, tratamento (sem medicação eficaz, mucolítico não indicado, broncodilatador se obstrução, macrolídeo em situações especiais)"
+        },
+        {
+          "titulo": "Antimicrobianos na prática clínica: um guia para profissionais da Atenção Primária, seção Infecções do trato respiratório inferior",
+          "instituicao": "Anvisa / CAMO-Net",
+          "ano": "2025 (data de publicação no portal da Anvisa)",
+          "url": "https://www.gov.br/anvisa/pt-br/assuntos/servicosdesaude/ebook_AntimicrobianosnaPrticaClnica_GuiaparaAPS.pdf",
+          "usadoPara": "fluxograma de tosse aguda < 14 dias: sinais de gravidade, não prescrever antimicrobiano, testar SARS-CoV-2/influenza"
+        },
+        {
+          "titulo": "Cough (acute): antimicrobial prescribing (NG120)",
+          "instituicao": "National Institute for Health and Care Excellence (NICE), Reino Unido",
+          "ano": "2019 (atualizado 2021)",
+          "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations",
+          "usadoPara": "complemento: critérios de alto risco, prescrição de reserva, efeito do antibiótico, autocuidado (mel), doses de doxiciclina, amoxicilina e claritromicina, gestação"
+        },
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, quadro 61",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "dose de paracetamol"
+        }
+      ],
+      "observacoes": "1) O CAB 28 não tem capítulo de bronquite aguda (o mapeamento citava o cap. 2.6, que é Dispneia); a fonte brasileira principal é a SBPT 2006, antiga. As doses de antibiótico vêm só do NICE (internacional, usado como complemento por falta de dose em fonte brasileira). 2) O fluxograma da Anvisa usa tosse < 14 dias; a SBPT define tosse aguda como < 3 semanas. 3) Dose de macrolídeo para coqueluche e do broncodilatador: PENDENTE. 4) O NICE cita mel, pelargônio e expectorante (guaifenesina) com evidência limitada; incluí apenas o mel."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Urgências odontológicas na APS: pulpite, abscesso periapical e abscesso periodontal",
+        "introducao": "A maioria das urgências odontológicas na atenção básica é infecção aguda de origem endodôntica (polpa e periápice) ou periodontal. Raramente há risco de vida, exceto nas infecções orofaciais disseminadas (risco de obstrução de via aérea e sepse) e nas hemorragias. O tratamento é remover a causa (procedimento odontológico) e aliviar sintomas; o médico atua na analgesia, no antibiótico quando indicado, no reconhecimento da gravidade e no encaminhamento à equipe de saúde bucal.",
+        "criterios": "Pulpite reversível: dor provocada (frio, doce) que dura um pouco após o estímulo. Pulpite irreversível: dor intensa, espontânea, contínua, difusa ou referida, que piora deitado; dente vital e sensível a testes térmicos. Pericementite apical aguda: dor espontânea e contínua, dor à percussão, testes de sensibilidade negativos. Abscesso periapical agudo: dor pulsátil intensa, sensação de dente crescido, dor extrema à percussão e palpação, tumefação no fundo do vestíbulo e mobilidade. Abscesso periodontal: dor pulsátil localizada a partir de bolsa periodontal, vitalidade pulpar em geral preservada (exceto na lesão endopério). Gravidade: edema facial extenso, trismo, disfagia, febre, toxemia, dificuldade respiratória.",
+        "exames": "Diagnóstico clínico odontológico (percussão, palpação, testes de sensibilidade pulpar, sondagem periodontal). Infecção disseminada: avaliar via aérea e sinais de sepse e acionar o serviço de urgência (SAMU).",
+        "tratamento": "Procedimento odontológico é o tratamento principal: remoção de cárie e selamento (pulpite reversível), pulpotomia/pulpectomia (pulpite irreversível), drenagem via canal, ligamento periodontal ou incisão (abscessos), drenagem da bolsa (abscesso periodontal). Analgésico em todos. Antibiótico no abscesso com edema, envolvimento sistêmico ou antes de drenagem por incisão (iniciar pelo menos 1 h antes). Anti-inflamatório não deve ser usado na pericementite apical aguda infecciosa nem quando há foco infeccioso. Bochechos com água morna e sal na tumefação inicial; clorexidina 0,12% na doença periodontal necrosante e na pericoronarite.",
+        "conduta": "Classificar o risco: infecção disseminada (edema facial progressivo, trismo, disfagia, dispneia, febre alta, toxemia) ou hemorragia não controlada: acionar urgência/SAMU. Demais casos: analgesia, antibiótico quando indicado e agendamento breve com a equipe de saúde bucal da UBS ou referência ao Centro de Especialidades Odontológicas (endodontia, periodontia). Reavaliar a drenagem em 48 h. Orientar retorno se a dor persistir ou o edema aumentar. O CAB 28 (2013) associa antimicrobiano à pulpotomia na pulpite irreversível; a indicação de antibiótico sem sinais de infecção disseminada está PENDENTE DE VERIFICAÇÃO em fonte mais recente.",
+        "prescricao": "1) Analgesia (adulto): paracetamol 3 a 4 g/dia divididos em 3 a 4 tomadas (máx. 4 g/dia); ou paracetamol + codeína 1 a 2 comprimidos a cada 4 a 6 h (máx. 8 comprimidos/dia). Criança < 12 anos: paracetamol 10 a 15 mg/kg/dose a cada 4 a 6 h.\n2) Anti-inflamatório (quando não há foco infeccioso, p. ex. pulpite reversível ou trauma sem infecção): ibuprofeno 200 a 400 mg VO a cada 4 a 6 h (máx. 3.200 mg/dia).\n3) Antibiótico (abscesso com edema ou envolvimento sistêmico, antes de incisão): amoxicilina 250 a 500 mg VO 8/8 h (criança 20 a 50 mg/kg/dia; máx. 2,4 g/dia). Alergia a penicilina: estolato de eritromicina 1 a 2 g/dia, em tomadas a cada 6 ou 12 h (Quadro 61; conferir em bula Anvisa) (criança 20 a 30 mg/kg/dia). Duração: PENDENTE DE VERIFICAÇÃO (não informada na fonte).\n4) Clorexidina 0,12% em bochechos na doença periodontal necrosante e na pericoronarite (frequência e duração PENDENTE DE VERIFICAÇÃO).\n5) Encaminhar à equipe de saúde bucal para o procedimento definitivo.\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 28, v. II, cap. 2.21 Urgências odontológicas e quadro 61 (2013).",
+        "cid": "K04.0, K04.4, K04.7, K05.2",
+        "esp": "Medicina de Emergência; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, cap. 2.21 Urgências odontológicas (p. 190-206) e quadro 61 Fármacos utilizados para o tratamento de enfermidades odontológicas",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "todo o registro: classificação das dores dentinopulpares, periapicais e periodontais, tratamento, indicação de antibiótico e analgésico, encaminhamento, doses do quadro 61"
+        }
+      ],
+      "observacoes": "1) Após a revisão de fontes, a conduta mostra a posição do CAB 28 (antimicrobiano junto à pulpotomia na pulpite irreversível) e marca como PENDENTE a indicação sem sinais de infecção disseminada. A Figura 45 (gatilhos para acionar o SAMU) é imagem e deve ser conferida pelo autor. 2) O quadro 61 não traz duração do antibiótico; as doses pediátricas de amoxicilina e ibuprofeno estão escritas de forma ambígua no quadro (ibuprofeno '30-50 mg/kg, máximo 2,4 g/dia' sem intervalo), por isso omiti o ibuprofeno pediátrico. 3) A forma do estolato de eritromicina ('1-2 g, intervalo 6/12 horas') foi interpretada como dose diária; conferir. 4) Acrescentei K04.4 (periodontite apical aguda de origem pulpar = pericementite) aos códigos sugeridos. 5) K05.2 (periodontite aguda) inclui o abscesso periodontal na CID-10 da OMS (confirmado pelo revisor). 6) Não localizei guia mais recente do MS sobre antibiótico em odontologia; o guia Anvisa/CAMO-Net só trata de profilaxia."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Lesões benignas da pele do recém-nascido (eritema tóxico, miliária, milium)",
+        "introducao": "Achados cutâneos transitórios e muito comuns no RN, que não precisam de tratamento, mas devem ser reconhecidos para evitar exames e antibióticos desnecessários e para diferenciar de infecção (impetigo, candidíase). Eritema tóxico: erupção benigna, idiopática, típica do RN a termo. Miliária: retenção de suor por obstrução dos ductos écrinos, favorecida por prematuridade, calor, excesso de roupa e produtos oclusivos. Milium sebáceo: presente em cerca de 40% dos RN, por obstrução de glândulas sebáceas sob ação do estrógeno materno.",
+        "criterios": "Eritema tóxico: máculas, pápulas e pústulas eritematosas que surgem por volta do 3º-4º dia de vida, na fronte, face, tronco e membros, poupando palmas e plantas; somem de uma área e aparecem em outra em horas. Miliária cristalina (sudâmina): vesículas superficiais transparentes de 1-2 mm, sem inflamação, em dobras, pescoço, axilas e tronco. Miliária rubra (brotoeja): pápulas e vesículas eritematosas pruriginosas não foliculares em áreas cobertas e dobras; é a forma mais comum; pode infectar (miliária pustulosa). Miliária profunda: rara no RN. Milium: pontos brancos < 1 mm no nariz, queixo e fronte, que desaparecem em poucas semanas.",
+        "exames": "Diagnóstico clínico. No eritema tóxico, em dúvida, o esfregaço ou a biópsia da pústula mostra eosinófilos (pode haver eosinofilia periférica); na melanose pustular transitória predominam neutrófilos. Cultura e hemocultura apenas se suspeita de impetigo ou infecção sistêmica.",
+        "tratamento": "Eritema tóxico e milium: nenhum tratamento, regridem sozinhos. Miliária: evitar calor e umidade excessivos, roupas justas e sintéticas, pastas e cremes oleosos; preferir roupas de algodão e banhos mais frios; corticoide tópico de baixa potência por curto período só se prurido intenso.",
+        "conduta": "Tranquilizar a família e orientar a evolução benigna. Diferenciais: impetigo (vesículas, pústulas ou bolhas sobre base eritematosa que viram crostas, em dobras e área de fraldas; tratar com mupirocina 2% tópica ou antibiótico parenteral se sinais sistêmicos), melanose pustular transitória (mais comum em pele negra, deixa máculas hiperpigmentadas), candidíase, foliculite, acne neonatal. Se o RN não estiver bem, pensar em infecção. Reavaliar se houver sinais sistêmicos de infecção ou lesões que se espalham e formam crostas amarelo-acastanhadas (impetigo).",
+        "prescricao": "1) Eritema tóxico e milium: sem medicação.\n2) Miliária: medidas ambientais (roupas leves de algodão, evitar superaquecimento, evitar cremes e óleos oclusivos, banhos mais frescos).\n3) Miliária rubra muito pruriginosa: corticoide tópico de baixa potência por período curto (fármaco, concentração e duração: PENDENTE DE VERIFICAÇÃO).\n4) Se impetigo no diagnóstico diferencial sem sinais sistêmicos: mupirocina 2% creme ou pomada nas lesões, evitando os olhos (frequência e duração: PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1 cap. 3 e v. 3 cap. 31, 2ª ed. (2014).",
+        "cid": "P83.1, L74.0, L74.1, P83.8",
+        "esp": "Neonatologia; Pediatria; Dermatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31 Problemas dermatológicos (p. 184-190)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "miliária (tipos, prevenção, corticoide tópico), eritema tóxico (quadro, exames, diferenciais), melanose pustular, impetigo (mupirocina 2%)"
+        },
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 3 (exame físico do RN, pele)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "milium sebáceo (40% dos RN, localização, evolução) e eritema tóxico desencadeado por atrito ou pressão, confusão com impetigo"
+        }
+      ],
+      "observacoes": "1) Milium não tem código específico na CID-10 DATASUS para o RN; usei P83.8 (outras afecções especificadas do tegumento próprias do RN). Incluí L74.1 (miliária cristalina) além de L74.0 (rubra). 2) A fonte não diz qual corticoide nem por quanto tempo na miliária; PENDENTE. 3) Não localizei documento de acesso aberto da SBP específico sobre dermatoses benignas do RN; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Criança exposta à hepatite C (transmissão vertical do HCV)",
+        "introducao": "Filho de mãe com anti-HCV reagente. A taxa de transmissão vertical é de cerca de 5,8%, maior com viremia materna (HCV-RNA detectável) e coinfecção pelo HIV; a maior parte das infecções ocorre no parto. Não há vacina nem imunoglobulina, e não há via de parto preferencial; para reduzir o risco, evitar procedimentos invasivos, parto laborioso e ruptura de membranas por mais de 6 h (PCDT 2020). A testagem para HCV é universal no pré-natal (primeira consulta). Dos infectados, 20% a 40% eliminam o vírus, cerca de 50% evoluem com infecção crônica assintomática e cerca de 30% com infecção crônica ativa.",
+        "criterios": "Exposição: mãe anti-HCV reagente na gestação. O anti-HCV materno (IgG) atravessa a placenta e pode persistir até os 18 meses, por isso a sorologia antes dessa idade não define infecção; abaixo de 18 meses o diagnóstico é por teste molecular. Infecção confirmada: anti-HCV reagente após 18 meses com HCV-RNA detectável. Anti-HCV reagente com HCV-RNA não detectável após 18 meses: contato passado e provável cura espontânea. Anti-HCV não reagente e HCV-RNA não detectável aos 18 meses: transmissão vertical descartada.",
+        "exames": "Carga viral do HCV (HCV-RNA) entre 3 e 6 meses de idade. Se não detectável: anti-HCV (laboratorial ou teste rápido) aos 18 meses; se reagente, fazer HCV-RNA. Se detectável: notificar, encaminhar ao serviço especializado e repetir anti-HCV e HCV-RNA aos 18 meses (avaliar clareamento espontâneo). Criança infectada: AST, ALT, GGT, fosfatase alcalina e carga viral anualmente; sem imagem de rotina.",
+        "tratamento": "Não há profilaxia para o RN exposto. Banho em água corrente logo após o nascimento (ou limpeza com compressas e banho em seguida); aspiração gástrica para retirar secreções, com cuidado para não lesar mucosas. Aleitamento materno permitido; suspender temporariamente a mama com fissura ou ferida sangrante até cicatrizar, mantendo ordenha e descarte desse leite. Na criança infectada com enzimas hepáticas acima de 1,5 vez o limite superior, tratamento antiviral a partir de 3 anos (genótipo 1) ou 4 anos (genótipo 3), em serviço especializado.",
+        "conduta": "Identificar a exposição no pré-natal. Seguir o fluxograma do PCDT: HCV-RNA aos 3-6 meses e anti-HCV aos 18 meses. Notificar caso com HCV-RNA detectável. Se a mãe amamentou com mama lesionada e sangrante, manter o mesmo seguimento laboratorial. Encaminhar a mãe ao especialista após o parto para tratamento da hepatite C (antivirais contraindicados na gestação). Seguir a criança infectada em serviço especializado.",
+        "prescricao": "1) Sem medicação profilática para o RN exposto.\n2) Banho do RN em água corrente na sala de parto; aleitamento materno mantido (exceto na mama com lesão sangrante, até cicatrizar).\n3) Exames: HCV-RNA aos 3-6 meses; anti-HCV aos 18 meses (com HCV-RNA se reagente ou se o primeiro HCV-RNA foi detectável).\n4) Criança infectada: enzimas hepáticas e carga viral anuais; tratamento antiviral a partir de 3 anos (genótipo 1) ou 4 anos (genótipo 3) se enzimas > 1,5 x LSN. Esquema e doses: PENDENTE DE VERIFICAÇÃO (definidos no PCDT de hepatite C, não consultado neste lote).\nBase: Ministério da Saúde, PCDT para Prevenção da Transmissão Vertical do HIV, Sífilis e Hepatites Virais (Portaria SCTIE/MS nº 55/2020; arquivo vigente no portal, anexo alterado em 2024).",
+        "cid": "Z20.5, P00.2",
+        "esp": "Pediatria; Infectologia; Neonatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolo Clínico e Diretrizes Terapêuticas para Prevenção da Transmissão Vertical do HIV, Sífilis e Hepatites Virais, Parte V (hepatite C na gestante e criança exposta, fluxograma 18)",
+          "instituicao": "Ministério da Saúde / Conitec",
+          "ano": "2020 (Portaria SCTIE/MS nº 55/2020; arquivo do portal com anexo alterado em 04/07/2024)",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/p/prevencao-da-transmissao-vertical-do-hiv-sifilis-e-hepatites-virais/view",
+          "usadoPara": "taxa de transmissão, testagem universal no pré-natal, cuidados com o RN, aleitamento, desfechos, diagnóstico molecular, fluxograma de seguimento, notificação, tratamento a partir de 3/4 anos"
+        },
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 2, cap. 19 Infecção pelo vírus da hepatite C",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v2.pdf",
+          "usadoPara": "fatores de risco de transmissão (viremia, coinfecção HIV, ruptura prolongada de membranas, procedimentos invasivos), ausência de imunoprofilaxia; o fluxograma deste manual foi substituído pelo do PCDT"
+        }
+      ],
+      "observacoes": "1) CID: P35.3 (hepatite viral congênita) só se aplica quando a infecção é confirmada; para a criança apenas exposta usei Z20.5 (contato com e exposição à hepatite viral) e P00.2 (feto e RN afetados por doença infecciosa materna). O revisor pode acrescentar P35.3 com a ressalva. 2) O manual do RN (2014) recomenda TGP e anti-HCV aos 6 e aos 18-24 meses e HCV-RNA aos 3 meses quando a mãe é virêmica; o PCDT (mais recente) simplifica para HCV-RNA aos 3-6 meses e anti-HCV aos 18 meses. Segui o PCDT. 3) O PDF baixado do portal traz a Portaria 55/2020; não confirmei se há edição posterior com mudança na Parte V. 4) Esquema antiviral pediátrico: PENDENTE (PCDT de hepatite C não lido)."
+    }
+  ]
+}

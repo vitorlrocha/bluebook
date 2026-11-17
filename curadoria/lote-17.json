@@ -1,0 +1,311 @@
+{
+  "lote": "17",
+  "criadoEm": "2026-11-13",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Síndrome alcoólica fetal e transtornos do espectro alcoólico fetal (TEAF)",
+        "introducao": "Conjunto de alterações físicas, de crescimento e neurocomportamentais causadas pela exposição do embrião e do feto ao álcool materno. A síndrome alcoólica fetal (SAF) é a forma mais grave e completa; o termo TEAF (FASD) é \"guarda-chuva\" e inclui SAF parcial, transtorno do neurodesenvolvimento relacionado ao álcool e defeitos congênitos ligados ao álcool. Não há nível seguro de consumo na gestação. É causa evitável de deficiência intelectual e os danos ao sistema nervoso central são permanentes.",
+        "criterios": "SAF (critérios de Hoyme, citados pela SBP): duas ou mais características faciais (fissura palpebral pequena ≤ P10; borda vermelha do lábio superior fina; filtro nasal liso) + comprimento e/ou peso ≤ P10 pré ou pós-natal + déficit de crescimento cerebral (perímetro cefálico ≤ P10, anomalia estrutural do cérebro ou convulsões afebris frequentes) + alteração neurocomportamental (atraso do desenvolvimento ≥ 1,5 DP abaixo da média em < 3 anos; alteração cognitiva ou comportamental ≥ 1,5 DP em ≥ 3 anos); a exposição documentada ao álcool não é obrigatória para SAF. SAF parcial, transtorno do neurodesenvolvimento e defeitos congênitos relacionados ao álcool exigem exposição pré-natal documentada. Exposição pré-natal: ≥ 6 doses/semana por ≥ 2 semanas, ≥ 3 doses por ocasião em ≥ 2 ocasiões, triagem validada positiva ou biomarcador positivo (1 dose = 14 g de álcool puro). Triagem materna: T-ACE, em que mais de 2 pontos indicam ingestão de risco.",
+        "exames": "Não existe exame único e específico: o diagnóstico é clínico e feito por equipe multiprofissional. Medir comprimento, peso e perímetro cefálico e comparar com curvas; medir fissura palpebral e avaliar lábio/filtro. Neuroimagem (anomalias como hipoplasia do cerebelo ou do corpo caloso). No período neonatal, pode-se pesquisar ésteres etílicos de ácidos graxos (FAEEs) no mecônio ou cabelo do recém-nascido, método ainda indisponível em nosso meio segundo o documento. Avaliação neuropsicológica e do desenvolvimento; avaliar cardiopatia, rins, olhos e esqueleto, que podem estar acometidos.",
+        "tratamento": "Não há cura nem tratamento específico: o manejo mitiga sinais e sintomas, com estimulação precoce, apoio educacional e acompanhamento do comportamento, da linguagem e da aprendizagem por equipe multiprofissional. Tratar as anomalias associadas (cardíacas, renais, oculares, esqueléticas). Na gestante: intervenção breve e encaminhamento multidisciplinar (obstetra, psiquiatra, assistente social, especialista em dependência); farmacoterapia com benzodiazepínicos é controversa pelo risco fetal. A prevenção é a melhor estratégia.",
+        "conduta": "1) Perguntar sobre álcool e outras drogas a toda gestante, na primeira oportunidade e em cada consulta pré-natal (T-ACE ou outro questionário validado). 2) Orientar tolerância zero: nenhuma quantidade, nenhum trimestre e nenhum tipo de bebida é seguro. 3) No recém-nascido com baixo peso ou comprimento, microcefalia ou dismorfismo facial, pensar em SAF mesmo sem história relatada. 4) Reavaliar ao longo da infância: as dismorfias esmaecem com a idade (fotos da primeira infância ajudam) e o quadro costuma ser confundido com TDAH. 5) Encaminhar para equipe multiprofissional e acompanhar aprendizagem e comportamento; na adolescência, vigiar abuso de substâncias e problemas sociais.",
+        "prescricao": "Não há medicamento específico para a SAF; nenhuma dose consta nos documentos lidos. Sintomas associados (déficit de atenção, convulsões, cardiopatia) seguem os registros próprios.\nBase: Sociedade Brasileira de Pediatria, Grupo de Trabalho TEAF, Documentos Científicos nº 197 (20/03/2025) e nº 208 (23/05/2025).",
+        "cid": "Q86.0",
+        "esp": "Pediatria;Neonatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Síndrome Alcoólica Fetal ou Transtorno do Espectro Alcoólico Fetal? (Documento Científico nº 197)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Grupo de Trabalho TEAF",
+          "ano": "2025",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/24731e-DC_Sindr_Alcoolica_Fetal_TEAF.pdf",
+          "usadoPara": "definição, critérios diagnósticos (Hoyme), T-ACE, orientação sobre álcool na gestação, quadro neonatal"
+        },
+        {
+          "titulo": "Síndrome Alcoólica Fetal e suas possíveis apresentações clínicas de acordo com a idade cronológica do paciente (Documento Científico nº 208)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Grupo de Trabalho TEAF",
+          "ano": "2025",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/sbp/2025/maio/23/24835b-DC_-_Sindr_Alcoolica_Fetal_e_suas_possiveis_apresent_clinicas.pdf",
+          "usadoPara": "evolução da apresentação por idade, ausência de cura, prevenção"
+        }
+      ],
+      "observacoes": "Documentos abertos e lidos (texto; figuras não avaliadas). Sem doses porque não há tratamento medicamentoso específico na fonte. Os critérios de SAF parcial, ARND e ARBD foram resumidos, não transcritos item a item."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Dor de crescimento (dor recorrente benigna dos membros na infância)",
+        "introducao": "Dor recorrente, benigna e autolimitada, em membros inferiores de crianças, sem relação real com fase do crescimento físico (o nome é consagrado pelo uso). Ocorre em 10% a 20% das crianças em alguma fase, geralmente entre 3 e 10 anos, sem predileção por sexo. É diagnóstico de exclusão e de base clínica: precisa ser distinguido de causas inflamatórias, infecciosas, ortopédicas e neoplásicas.",
+        "criterios": "Típico: dor bilateral (cerca de 80%) em coxas, panturrilhas, canelas ou face posterior dos joelhos; surge no fim da tarde ou à noite e pode acordar a criança; pela manhã está ausente e não limita a atividade; há dias ou semanas sem dor; não se relaciona de forma constante com esforço; melhora com massagem (cerca de 95%) ou analgésico; a gravidade não aumenta com o tempo; exame físico normal (marcha normal, sem edema, massa, deformidade, limitação, fraqueza ou alteração de reflexos). História familiar positiva em 20% a 47%. Sinais de alerta (investigar): dor unilateral, dor sempre no mesmo local, dor diurna ou piorada com atividade, dor ou rigidez ao acordar, edema ou limitação articular, claudicação, massas palpáveis, dor à palpação óssea, linfonodos ou esplenomegalia.",
+        "exames": "Se história e exame são típicos, em geral não são necessários exames. Em caso de dúvida: hemograma, VHS e PCR como triagem inicial (nas dores de crescimento são normais); anemia, trombocitopenia, leucocitose ou aumento de VHS/PCR afastam o diagnóstico. LDH e ácido úrico na suspeita de leucemia (o mielograma confirma). Radiografia simples para tumor, infecção, fratura e dor mecânica; ressonância magnética se a radiografia é normal e há suspeita de Legg-Calvé-Perthes, osteomielite inicial ou neoplasia; cintilografia ou ressonância de corpo inteiro na doença óssea difusa (osteomielite multifocal crônica, metástases). Questionário de 12 perguntas para triagem de artrite idiopática juvenil: 5 ou mais respostas positivas indicam encaminhamento ao reumatologista pediátrico.",
+        "tratamento": "Tranquilizar a família e explicar a natureza benigna. Medidas locais: massagem e, nas crises mais longas, analgésico comum (a fonte não especifica droga nem dose). Sem restrição de atividade. Não medicar com corticosteroide dor noturna intensa sem diagnóstico, pelo risco de mascarar leucemia.",
+        "conduta": "1) Confirmar o padrão típico e o exame normal. 2) Se houver sinal de alerta, investigar: dor unilateral (infecção, tumor); dor noturna muito intensa com linfonodos, esplenomegalia ou dor óssea (leucemia); dor sempre no mesmo local que cede com anti-inflamatório (osteoma osteoide); dor ao acordar ou com edema (artrite; pensar em artrite idiopática juvenil); dor diurna com claudicação (Legg-Calvé-Perthes, osteocondroses como Osgood-Schlatter, Sever, Köhler). 3) Dor no fim do dia com sinais de hipermobilidade e exames normais sugere síndrome de hipermobilidade articular benigna. 4) Explicar à família o curso autolimitado e retornar se o padrão mudar.",
+        "prescricao": "Sem prescrição específica com dose na fonte. Alívio: massagem local; analgésico comum nas crises prolongadas (droga e dose: PENDENTE DE VERIFICAÇÃO, não definidas no documento). Não usar corticosteroide empírico.\nBase: Sociedade Brasileira de Pediatria, Departamento Científico de Reumatologia, Documento Científico nº 4, \"Isso é dor de crescimento ou algo mais sério?\" (agosto/2019).",
+        "cid": "M79.6",
+        "esp": "Pediatria;Reumatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Isso é dor de crescimento ou algo mais sério? (Documento Científico nº 4)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Departamento Científico de Reumatologia (2016-2018)",
+          "ano": "2019",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/_21148e-DC_-_Isso_e_dor_de_crescimento.pdf",
+          "usadoPara": "critérios típicos, sinais de alerta, diagnóstico diferencial, exames e conduta"
+        }
+      ],
+      "observacoes": "CID M79.6 (dor em membro) escolhido por aproximação: o documento não traz CID. Analgésico sem droga/dose, marcado PENDENTE. Existe o documento nº 171 (2024) \"Dor recorrente em membros\", aberto e não usado; a ficha usa só o nº 4."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Síndrome de enterocolite induzida por proteínas alimentares (FPIES)",
+        "introducao": "Alergia alimentar não mediada por IgE do trato gastrointestinal, mais comum abaixo de 2 anos e provavelmente subdiagnosticada (incidência cumulativa estimada em 0,15% a 0,7%). Na forma aguda, o alimento ingerido de modo intermitente provoca vômitos profusos 1 a 4 horas depois, às vezes com letargia, palidez e choque; na forma crônica, a exposição diária causa diarreia e baixo ganho de peso. O leite de vaca é o desencadeante mais comum; arroz, aveia, soja, ovo, peixe e banana também. Deve ser tratada como urgência pediátrica nas formas moderadas e graves.",
+        "criterios": "Fenótipos: agudo, crônico, atípico (IgE específica positiva para o alimento), do adulto e durante o aleitamento materno exclusivo (raro). Critério maior da FPIES aguda: vômitos entre 1 e 4 h após ingestão do alimento suspeito, sem sintomas clássicos mediados por IgE (pele ou respiratórios). Critérios menores: segundo episódio de vômitos repetitivos com o mesmo alimento; vômitos repetitivos 1-4 h após outro alimento; letargia extrema; palidez acentuada; ida à emergência; necessidade de hidratação intravenosa; diarreia em 24 h (em geral 5-10 h); hipotensão; hipotermia. Diagnóstico: critério maior mais 3 ou mais menores. A reação típica se resolve em horas (a gastroenterite viral dura dias). Na forma crônica o diagnóstico é presuntivo: melhora em dias após retirar o alimento e recorrência aguda ao reintroduzir. O teste de provocação oral (TPO) confirma, sobretudo quando houve um único episódio.",
+        "exames": "Não há biomarcador sorológico confiável. Na reação aguda podem ocorrer leucocitose, aumento de neutrófilos (pico em cerca de 6 h), trombocitose, acidose metabólica e metemoglobinemia; na forma crônica, hipoalbuminemia, anemia e eosinofilia. IgE específica ou teste cutâneo só definem o fenótipo atípico. Diagnóstico diferencial: gastroenterite, sepse, enterocolite necrosante, erros inatos do metabolismo, alergia IgE-mediada. TPO supervisionado: 0,06 a 0,6 g de proteína do alimento/kg (em geral 0,3 g/kg), em 3 doses iguais a cada 30 minutos, sem passar de 3 g de proteína ou 10 g do alimento total, com observação de 4 a 6 h; a reação é positiva quando há sintomas e, entre outros sinais, aumento de neutrófilos ≥ 1.500/mL acima do basal.",
+        "tratamento": "Base: eliminação completa do alimento desencadeante e suporte clínico das crises. Leve (1 a 2 episódios de vômito): reidratação oral, inclusive em casa, mantendo o seio materno. Moderada a grave: internação, acesso venoso, reposição volêmica com solução salina, ondansetrona, correção de acidose (bicarbonato) e de metemoglobinemia (azul de metileno) e drogas vasoativas se choque; metilprednisolona pode ser usada na crise grave (sem dados robustos). Adrenalina e anti-histamínicos têm pouca eficácia; domperidona e bromoprida não têm indicação. Lactente com leite de vaca como gatilho: fórmula extensamente hidrolisada nos casos leves e de aminoácidos nos graves; fórmula de soja não é recomendada; outros leites animais não devem ser usados no primeiro ano. Mães lactantes não precisam de dieta. Acompanhamento nutricional.",
+        "conduta": "1) Reação aguda: avaliar sinais vitais e gravidade; reidratar; tratar vômitos; transferir para UTI se hipotensão grave ou persistente, letargia grave, choque ou desconforto respiratório; alta quando retornar ao basal, tolerar líquidos por via oral e passadas mais de 4 a 6 h do início. 2) Evitar o alimento e orientar a família com plano escrito para ingestões acidentais. 3) Reintroduzir por TPO em intervalos (o fluxograma da fonte sugere oferecer TPO 12 a 18 meses após a última reação, ou antes se a família quiser ampliar a dieta). 4) Rastrear deficiências nutricionais. 5) Discutir com gastropediatra e alergologista nos casos com múltiplos alimentos ou fenótipo atípico.",
+        "prescricao": "Reação moderada/grave (fonte): solução salina 10 a 20 mL/kg IV (o fluxograma usa 20 mL/kg em bolus, conforme necessário); ondansetrona 0,15 mg/kg/dose (máximo 16 mg/dose) em maiores de 6 meses (VO, IV ou IM); metilprednisolona 1 mg/kg IV, dose única, máximo 60 a 80 mg (casos graves). Reação leve em casa: ondansetrona oral, repetindo uma vez se vomitar em até 10 minutos. Cardiopatia: avaliar risco de prolongamento do QT antes da ondansetrona.\nBase: Sociedade Brasileira de Pediatria, Departamentos Científicos de Gastroenterologia e Alergia, Diretriz nº 152, FPIES (13/05/2024).",
+        "cid": "K52.2",
+        "esp": "Pediatria;Gastroenterologia;Alergia e Imunologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Síndrome de enterocolite induzida por proteínas alimentares (FPIES) (Diretriz nº 152)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Departamentos Científicos de Gastroenterologia e Alergia",
+          "ano": "2024",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/24311e-DIRETRIZ_Sindrome_Enterocolite_Induzida_por_Proteinas_Alimentares_-FPIES.pdf",
+          "usadoPara": "fenótipos, critérios diagnósticos, TPO, tratamento agudo e doses, dieta"
+        }
+      ],
+      "observacoes": "Documento aberto e lido. O texto fala em 10 a 20 mL/kg de salina e o fluxograma em 20 mL/kg; ambos foram citados. O intervalo do TPO vem do fluxograma (12 a 18 meses). O CID K52.2 é o citado pelo próprio documento."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Proctocolite alérgica induzida por proteína alimentar",
+        "introducao": "Alergia alimentar não mediada por IgE em que a inflamação do cólon por proteínas alimentares (mais comumente leite de vaca, 65% dos casos) provoca raias de sangue vivo nas fezes em lactente de aparência saudável, em geral nos primeiros 6 meses (2 a 8 semanas é o início mais comum). É a apresentação mais comum de alergia não-IgE em lactentes em aleitamento materno exclusivo; em cerca de 60% a mãe ingere leite de vaca ou soja. É benigna e transitória, com tolerância por volta de 1 ano.",
+        "criterios": "Lactente bem, sem perda de peso nem comprometimento do estado geral, com raias de sangue vivo nas fezes, com ou sem muco ou diarreia; pode haver irritabilidade, dificuldade de evacuar e fissura anal. O diagnóstico é clínico, presuntivo, quando há resposta à eliminação do alérgeno por 2 a 4 semanas; o desencadeamento oral confirma. Diagnóstico diferencial: fissura anal, intussuscepção, colite infecciosa, enterocolite necrosante e doença inflamatória intestinal de início muito precoce. Se não houver melhora em 2 semanas com fórmula de aminoácidos, o diagnóstico é questionável.",
+        "exames": "Em geral nenhum exame é necessário. Pode haver eosinofilia no hemograma, sem valor diagnóstico. IgE específica não tem valor (a reação não é IgE). Calprotectina fecal ainda não é recomendada para esse fim. Colonoscopia com biópsia (colite focal ou difusa, edema, erosões) é reservada para casos graves ou diagnóstico diferencial.",
+        "tratamento": "Dieta de eliminação do alimento desencadeante: no lactente em aleitamento, manter e apoiar a amamentação e a mãe exclui o leite de vaca; se não melhorar, checar a adesão e depois excluir soja e então ovo (mais se há dermatite atópica). Em fórmula: fórmula extensamente hidrolisada (pode conter lactose, pois o acometimento é do cólon) e, se o sangramento persistir, fórmula de aminoácidos. Suplementar cálcio e vitamina D da mãe e acompanhamento nutricional. O sangramento costuma cessar em 72 a 96 h e até 2 semanas; a resolução é mais lenta em amamentados. Probióticos (Lactobacillus rhamnosus GG) ainda sem recomendação universal.",
+        "conduta": "1) Confirmar que o lactente está bem e descartar outras causas de sangue nas fezes. 2) Dieta materna sem leite de vaca (ou fórmula adequada) por cerca de 6 meses, até 9 a 12 meses de idade da criança. 3) Reavaliar a tolerância por reintrodução gradual do leite de vaca e derivados em casa, se não houve reação imediata nem dermatite atópica importante; se houve reação imediata, dermatite atópica importante ou testes de IgE positivos, encaminhar ao alergologista e fazer desencadeamento supervisionado. 4) Não prolongar dietas de exclusão sem necessidade: a doença é benigna e a restrição tem custo nutricional. 5) Encaminhar ao gastropediatra se persistir após ajuste.",
+        "prescricao": "Sem medicamento. Dieta e fórmula conforme acima; cálcio e vitamina D para a mãe em dieta de exclusão (dose: PENDENTE DE VERIFICAÇÃO, a fonte não especifica).\nBase: Sociedade Brasileira de Pediatria, Departamento Científico de Gastroenterologia, Guia Prático de Atualização nº 09 (27/09/2022), Alergia alimentar não-IgE mediada: formas leves e moderadas.",
+        "cid": "K52.2",
+        "esp": "Pediatria;Gastroenterologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Alergia Alimentar não-IgE mediada: formas leves e moderadas (Guia Prático de Atualização nº 09)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Departamento Científico de Gastroenterologia",
+          "ano": "2022",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/23562e-GPA_Diretriz_-_AlergiaAlim_nao-IgE_mediada-_LevesModeradas.pdf",
+          "usadoPara": "quadro clínico, diagnóstico, dieta materna, fórmulas, tempo de dieta, reintrodução"
+        }
+      ],
+      "observacoes": "Guia aberto e lido (proctocolite e enteropatia). A dose de cálcio e vitamina D não consta no trecho lido: PENDENTE. O CID K52.2 também é usado pelas fichas de FPIES e enteropatia (aviso esperado)."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Lúpus eritematoso neonatal",
+        "introducao": "Doença autoimune adquirida rara do período fetal e neonatal, causada pela passagem transplacentária de autoanticorpos IgG maternos, principalmente anti-Ro/SSA e anti-La/SSB (raramente anti-U1-RNP). Cerca de 50% das mães são saudáveis. Incidência de 1:12.500 a 1:20.000 nascidos vivos; risco de cerca de 2% em filhos de mães primigestas com os anticorpos e cerca de 10 vezes maior em gestações seguintes. Acomete pele, coração, fígado e sangue; o coração (bloqueio atrioventricular) é o que mais determina morbimortalidade. É distinto do lúpus sistêmico e raramente evolui para ele.",
+        "criterios": "Clínica compatível mais autoanticorpo na mãe e na criança. Pele (até 70%): eritema periorbitário (\"olhos de gavião\"), lesões anulares ou discoides, placas descamativas em região periorbitária, couro cabeludo, tronco e membros; surgem no período neonatal ou no 2º-3º mês, são fotossensíveis (podem aparecer após fototerapia) e somem entre 6 e 9 meses. Coração: bloqueio atrioventricular de 1º, 2º ou total, fibroelastose endocárdica, disfunção valvar, cardiomiopatia dilatada; o bloqueio total pode causar insuficiência cardíaca, hidropsia fetal, parto prematuro ou óbito intrauterino. Sangue: anemia, leucopenia, neutropenia e plaquetopenia (em geral leves). Fígado: icterícia, hepatomegalia, colestase. Em revisão de 755 casos: bloqueio total em 65%, pele em 33%, alterações hematológicas em 15,5% e hepáticas em 10,3%.",
+        "exames": "Anti-Ro/SSA, anti-La/SSB e anti-U1-RNP no soro da mãe e da criança; hemograma; provas de função hepática; eletrocardiograma e ecocardiograma. Biópsia de pele com imunofluorescência direta (IgG na junção dermoepidérmica) nos casos duvidosos. Diagnóstico diferencial: anemias hemolíticas, incompatibilidade sanguínea e sífilis congênita (hidropsia), cardiopatias congênitas, colestase neonatal, tinha, sarcoidose, granuloma anular, manchas salmão, síndrome de Sweet e urticárias.",
+        "tratamento": "A maioria das manifestações é autolimitada e resolve com o desaparecimento dos anticorpos maternos (6 a 9 meses): conduta expectante, proteção solar e corticoide tópico nas lesões. O bloqueio atrioventricular total não tem tratamento medicamentoso eficaz; requer marcapasso, às vezes ainda intraútero ou no período neonatal. Em bradiarritmia ou miocardite fetal, indica-se corticoide materno (dexametasona, que não é metabolizada pela placenta), conduzido por obstetra, reumatologista e ecocardiografista. A hidroxicloroquina na gestação reduz o bloqueio total e parece prevenir lesões de pele.",
+        "conduta": "1) Mãe com anti-Ro/La: ecocardiograma fetal semanal ou quinzenal da 16ª à 28ª semana. 2) Recém-nascido: ECG e ecocardiograma, hemograma, enzimas hepáticas e anticorpos. 3) Proteção solar; atenção à fototerapia. 4) Acometimento cardíaco: seguimento cardiológico a longo prazo (a disfunção pode aparecer tardiamente em quase 30% dos maiores de 17 anos que tiveram envolvimento cardíaco). 5) Pior prognóstico: bloqueio detectado antes da 20ª semana, frequência cardíaca < 50 bpm, doença miocárdica e hidropsia fetal; mortalidade fetal ou neonatal de até 17,5% (30% até o 1º trimestre de vida) nos graus 2 e 3; cerca de 70% dos sobreviventes precisam de marcapasso.",
+        "prescricao": "Sem doses na fonte. Lesões cutâneas: proteção solar e corticoide tópico (potência e posologia: PENDENTE DE VERIFICAÇÃO). Bradiarritmia ou miocardite fetal: dexametasona materna; prevenção: hidroxicloroquina materna (doses: PENDENTE DE VERIFICAÇÃO, prescrição pelo obstetra).\nBase: Sociedade Brasileira de Pediatria, Departamento Científico de Reumatologia, Documento Científico nº 10, \"Lúpus eritematoso neonatal\" (junho/2020).",
+        "cid": "P00.8",
+        "esp": "Pediatria;Neonatologia;Reumatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Lúpus eritematoso neonatal (Documento Científico nº 10)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Departamento Científico de Reumatologia (2019-2021)",
+          "ano": "2020",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/22559b-DC_-_Lupus_Eritematoso_Neonatal.pdf",
+          "usadoPara": "definição, incidência, manifestações, exames, diagnóstico diferencial, tratamento, prognóstico"
+        }
+      ],
+      "observacoes": "O documento não traz CID. P00.8 (feto e recém-nascido afetados por outras afecções maternas) foi escolhido por aproximação; Q24.6 (bloqueio congênito do coração) seria alternativa para a forma cardíaca. O revisor deve confirmar. Doses de dexametasona, hidroxicloroquina e corticoide tópico ficaram PENDENTES."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Doença inflamatória intestinal de início muito precoce (VEOIBD)",
+        "introducao": "Doença inflamatória intestinal (Crohn, colite ulcerativa ou colite não classificada) com início antes dos 6 anos de idade (VEOIBD); a DII infantil (< 2 anos) e a neonatal (< 28 dias) são subgrupos. Pode ser poligênica ou monogênica: as formas monogênicas (VEOIBD-M) são de 10% a 15% dos casos de VEOIBD e podem passar de 40% abaixo de 2 anos, com erros inatos da imunidade, defeitos da barreira epitelial ou síndromes autoinflamatórias. Costuma ser grave, extensa (pancolite), com doença perianal e pouca resposta ao tratamento convencional.",
+        "criterios": "Suspeitar em criança pequena com diarreia com sangue e muco, dor abdominal, perda de peso, déficit pôndero-estatural e doença perianal (fístulas, abscessos, fissuras profundas). Sinais de alerta para forma monogênica: início antes de 2 anos; infecções recorrentes, graves ou por agentes incomuns; doença perianal grave; autoimunidade múltipla; falha de crescimento; consanguinidade ou história familiar de DII ou óbito infantil; alterações de pele, cabelo, unhas e dentes (epidermólise bolhosa, cabelo lanoso, eczema, foliculite, úlceras orais); hepatoesplenomegalia; ausência de cicatriz de BCG ou de tonsilas. Diagnóstico diferencial em lactente com sangue nas fezes: proctocolite alérgica (questionável se persiste após 2 semanas de fórmula de aminoácidos) e infecção; considerar doença celíaca, enterocolite necrosante, doenças eosinofílicas e diarreias congênitas.",
+        "exames": "Hemograma com diferencial, VHS, PCR, calprotectina fecal (valores acima de 150 a 250 µg/g, com a clínica, sugerem DII; abaixo de 4 anos não há valor de referência e pode estar elevada em saudáveis) e sorologia de doença celíaca se pertinente. Fezes para Salmonella, Shigella, Yersinia, E. coli, Campylobacter, Cryptosporidium, Giardia e Clostridioides difficile (> 12 meses); considerar tuberculose e HIV. Avaliação imunológica inicial: hemograma (neutropenia, linfopenia, trombocitopenia), imunoglobulinas, subclasses de linfócitos T e B, teste de oxidação da dihidrorrodamina (DHR) para doença granulomatosa crônica e anticorpos vacinais. Endoscopia digestiva alta e ileocolonoscopia com biópsias de todos os segmentos (apoptose, eosinófilos, atrofia vilositária, ausência de plasmócitos). Teste genético (painel, exoma ou genoma) para todos com início antes de 2 anos; entre 2 e 6 anos se houver um dos fatores acima; em maiores de 6 anos se doença perianal complexa ou refratária; rendimento de cerca de 20%.",
+        "tratamento": "Não há algoritmo único: o tratamento é individualizado, por gastroenterologista e imunologista, com base em séries de casos. Terapias convencionais: corticosteroide sistêmico, metotrexato, tiopurinas (menos usadas pelo risco de linfoma hepatoesplênico de células T) e imunobiológicos, em geral semelhantes às DII clássicas, mas algumas causas monogênicas exigem tratamento específico e outras contraindicam determinados fármacos. Antes de imunossupressor ou biológico, excluir doença granulomatosa crônica pelo teste DHR. Metas: remissão clínica, crescimento e estado nutricional; evitar corticoide prolongado. A cirurgia (derivação ou colectomia) é mais frequente (cerca de 50% se início antes de 1 ano).",
+        "conduta": "1) Avaliar curva de peso e estatura, exame perianal, pele, cabelo, unhas, boca e linfonodos. 2) Excluir infecção e alergia alimentar (teste com fórmula de aminoácidos). 3) Se não melhorar ou houver suspeita inflamatória, endoscopia com biópsia. 4) Triagem imunológica e genética conforme idade e fenótipo; aconselhamento genético familiar. 5) Equipe multidisciplinar (gastroenterologia, imunologia, genética, nutrição). 6) Reavaliar o calendário vacinal: contraindicar vacinas de agentes vivos sob imunossupressão. 7) Monitorar toxicidade e infecções.",
+        "prescricao": "Sem doses na fonte. Fármacos citados (sem posologia): corticosteroides sistêmicos, metotrexato, azatioprina/6-mercaptopurina e imunobiológicos; doses: PENDENTE DE VERIFICAÇÃO (prescrição pelo especialista).\nBase: Sociedade Brasileira de Pediatria, Grupo de Trabalho Doenças Inflamatórias Intestinais, Documento Científico nº 67, \"Doença Inflamatória Intestinal de início muito precoce (VEOIBD)\" (setembro/2026).",
+        "cid": "K50.9,K51.9",
+        "esp": "Pediatria;Gastroenterologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Doença Inflamatória Intestinal de início muito precoce (VEOIBD) (Documento Científico nº 67)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Grupo de Trabalho Doenças Inflamatórias Intestinais (Gestão 2025-2028)",
+          "ano": "2026",
+          "url": "https://www.sbp.com.br/acervo/doenca-inflamatoria-intestinal-de-inicio-muito-precoce-veoibd/",
+          "usadoPara": "definição, subgrupos, epidemiologia, quadro clínico, exames, genética, tratamento"
+        }
+      ],
+      "observacoes": "PDF aberto e lido integralmente (acervo da SBP). Data conforme o cabeçalho do documento (nº 67, 18/09/2026). CIDs de Crohn e colite ulcerativa sem especificação, pois o documento não traz CID. O acervo já tem DII em adultos; esta ficha cobre a forma pediátrica de início precoce."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Doença renal crônica na infância e adolescência",
+        "introducao": "Dano renal por mais de 3 meses ou taxa de filtração glomerular estimada (TFG) < 60 mL/min/1,73 m², embora a definição pela TFG não seja consenso em pediatria; a classificação em 5 estágios não se aplica a menores de 2 anos (a TFG só atinge o valor do adulto aos 2 anos). As causas variam com a idade: abaixo de 5 anos predominam malformações do trato urinário (rins displásicos/hipoplásicos, válvula de uretra posterior); em escolares e adolescentes, glomerulopatias (a glomeruloesclerose segmentar e focal é a principal após 12 anos), uropatias, doenças hereditárias (Alport, nefronoftise, cistinose, doença renal policística) e sequelas de doenças sistêmicas. No Brasil, um terço das crianças que iniciam diálise crônica tem causa indeterminada.",
+        "criterios": "Estágios (KDIGO): 1, TFG ≥ 90; 2, 60-89; 3a, 45-59; 3b, 30-44; 4, 15-29; 5, < 15 ou em terapia de substituição renal; o risco aumenta com a albuminúria (< 30, 30-300, > 300 mg/g). TFG estimada pela equação de Schwartz: TFG = K x altura (cm) / creatinina (mg/dL), com K = 0,413 para 1 a 16 anos quando a creatinina tem calibração rastreável ao IDMS; K varia com a técnica (Jaffe: 0,55 para crianças e 0,70 para meninos adolescentes). Suspeitar de DRC quando: creatinina acima do valor para a idade, malformação renal bilateral na ultrassonografia (inclusive pré-natal), história familiar, proteinúria persistente, lesão renal aguda prévia, hipertensão, atraso de crescimento sem causa, noctúria ou anemia de difícil manejo.",
+        "exames": "Peso, estatura, estadiamento puberal, pressão arterial e perímetro cefálico (lactentes); hemograma e reservas de ferro (ferritina < 100 ng/mL e saturação de transferrina < 20% indicam deficiência absoluta de ferro na DRC); ureia, creatinina, eletrólitos e reserva alcalina (bicarbonato < 22 mEq/L exige correção); cálcio total e iônico, fósforo, PTH, fosfatase alcalina e 25(OH)vitamina D; urina tipo I e relação proteína/creatinina; ultrassonografia renal. Limiar de hemoglobina para anemia na DRC: 11,0 g/dL (6 meses a 5 anos), 11,5 (5 a 12 anos), 12,0 (12 a 15 anos); acima de 15 anos, 12,0 nas meninas e 13,0 nos meninos. Rastrear dislipidemia e alteração da glicemia.",
+        "tratamento": "Objetivos: retardar a progressão, tratar complicações, manter crescimento e desenvolvimento e preparar o transplante preemptivo. Controle rigoroso da pressão (o estudo ESCAPE mostrou benefício de manter abaixo do percentil 50 em vez de abaixo do percentil 90) com IECA ou BRA, sobretudo na proteinúria (efeito anulado por excesso de sódio). Tratar anemia (ferro, investigar outras causas), acidose, distúrbio mineral e ósseo (vitamina D, controle do fósforo e do PTH), nutrição (nos lactentes, aporte calórico máximo e dieta enteral precoce) e hidratação nos poliúricos. Evitar nefrotóxicos (AINEs, contrastes); suspender medicamentos nefrotóxicos se TFG < 60. Vacinação: calendário completo, sem vírus vivo sob imunossupressão; hepatite B precoce; influenza anual; pneumococo se TFG < 30 e em síndrome nefrótica; vacinas de vírus vivo até 6 semanas antes do transplante.",
+        "conduta": "1) Medir a pressão arterial em toda consulta e calcular a TFG (Schwartz) diante de sinais de alerta; encaminhar ao nefrologista pediátrico. 2) Evitar acesso venoso central, subclávio e cateter PICC para preservar o leito vascular. 3) Evitar derivados do sangue (sensibilização pré-transplante). 4) Planejar tratamento do trato urinário baixo, gastrostomia ou outros procedimentos antes do transplante. 5) Equipe multiprofissional (nefrologista, pediatra, nutricionista, psicólogo, enfermeiro, assistente social). 6) Atenção ao desenvolvimento cognitivo (déficit em 10% a 30%) e a depressão e ansiedade.",
+        "prescricao": "Doses de IECA/BRA, ferro, vitamina D, quelantes e eritropoetina não constam no documento lido: PENDENTE DE VERIFICAÇÃO (prescrição pelo nefrologista pediátrico). Meta pressórica (ESCAPE): abaixo do percentil 50 para idade, altura e sexo.\nBase: Sociedade Brasileira de Pediatria, Departamento Científico de Nefrologia, Documento Científico nº 4, \"Doença Renal Crônica em Pediatria: Diagnóstico e Prevenção\" (maio/2020).",
+        "cid": "N18.9",
+        "esp": "Pediatria;Nefrologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Doença Renal Crônica em Pediatria: Diagnóstico e Prevenção (Documento Científico nº 4)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Departamento Científico de Nefrologia (2019-2021)",
+          "ano": "2020",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/22484c-DC_-_DoenRenal_Cronica-_Diag_e_Prevencao.pdf",
+          "usadoPara": "definição, estadiamento, Schwartz, causas, fatores de risco, complicações, exames, prevenção e cuidados"
+        }
+      ],
+      "observacoes": "O acervo já tem DRC geral (adulto). A ficha cobre a particularidade pediátrica. Sem doses: PENDENTE. O documento não traz CID; N18.9 por aproximação."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Disquesia do lactente",
+        "introducao": "Distúrbio funcional benigno do lactente em que há incoordenação entre a contração da musculatura abdominal e o relaxamento do assoalho pélvico antes da evacuação, com esforço e choro, mas fezes de consistência normal. Ocorre em cerca de 4% dos lactentes até 9 meses; o esforço dura em geral 10 a 20 minutos, com choro e rosto vermelho ou roxo. Resolve espontaneamente.",
+        "criterios": "Critério de Roma IV (ambos, antes dos 9 meses): pelo menos 10 minutos de esforço ou choro antes da eliminação de fezes, com ou sem sucesso; ausência de outros problemas de saúde. Diferenciar da constipação funcional (duas ou menos evacuações por semana, fezes endurecidas, evacuações dolorosas, comportamento de retenção) e investigar se houver sinais de alarme (perda de peso, distensão, não eliminação de mecônio nas primeiras 24 h, vômitos biliosos, anormalidades sacrais, atraso do desenvolvimento).",
+        "exames": "Nenhum exame é necessário quando história e exame físico são típicos e o lactente cresce bem.",
+        "tratamento": "Não requer tratamento. Esclarecer e tranquilizar os pais (conquistar a confiança com a explicação de que não há doença). Não usar supositórios nem laxantes. Manter o aleitamento.",
+        "conduta": "1) Reconhecer o quadro e explicar que não é doença. 2) Evitar condutas desnecessárias (supositório, laxante). 3) Reavaliar se surgirem fezes duras, sangue, distensão, vômitos ou baixo ganho de peso; nesse caso investigar constipação ou alergia alimentar. 4) Seguimento de rotina da puericultura.",
+        "prescricao": "Sem prescrição. Não há indicação de laxantes nem de supositórios.\nBase: Sociedade Brasileira de Pediatria, Departamento Científico de Gastroenterologia, \"Distúrbios gastrointestinais funcionais no lactente e na criança abaixo de 4 anos: um guia para a prática diária\" (2022).",
+        "cid": "K59.8",
+        "esp": "Pediatria;Gastroenterologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Distúrbios gastrointestinais funcionais no lactente e na criança abaixo de 4 anos: um guia para a prática diária",
+          "instituicao": "Sociedade Brasileira de Pediatria, Departamento Científico de Gastroenterologia",
+          "ano": "2022",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/Manual_Disturbios_GI_funcionais_no_lactente_versao_site.pdf",
+          "usadoPara": "seção disquesia do lactente: definição, Roma IV, conduta"
+        }
+      ],
+      "observacoes": "CID K59.8 (outros transtornos funcionais especificados do intestino) por aproximação; o documento não traz CID."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Síndrome da ruminação no lactente",
+        "introducao": "Distúrbio gastrointestinal funcional raro (prevalência de 1,9% a 4,3%) em que o conteúdo gástrico é regurgitado voluntariamente para a boca, como autoestimulação, em geral no contexto de privação social prolongada, com pouco envolvimento materno; pode ocorrer em qualquer idade e em crianças com transtornos neurológicos ou psiquiátricos. A principal complicação é a desnutrição.",
+        "criterios": "Roma IV, todos por pelo menos 2 meses: (1) contrações repetitivas dos músculos abdominais, diafragma e língua; (2) regurgitação sem esforço do conteúdo gástrico, que é expulso da boca ou mastigado e deglutido de novo; (3) três ou mais de: início entre 3 e 8 meses, sem resposta ao tratamento de refluxo ou regurgitação, ausência de desconforto, e não ocorrência durante o sono nem na interação com o ambiente.",
+        "exames": "Nenhum exame laboratorial ou de imagem é requerido para o diagnóstico no lactente, que é clínico; avaliar o estado nutricional (peso, estatura) e outras causas de vômito se houver sinais de alarme.",
+        "tratamento": "Terapia comportamental nas crianças com distúrbios neurológicos; no lactente, fortalecer o vínculo afetivo e a interação (nenhuma técnica específica é preconizada pela fonte). A recuperação nutricional ocorre com o fim da ruminação. Não há medicamento indicado.",
+        "conduta": "1) Observar a regurgitação, a interação mãe-bebê e o contexto social. 2) Diferenciar de refluxo e de regurgitação do lactente (falta de resposta ao tratamento antirrefluxo é critério). 3) Monitorar crescimento e nutrição. 4) Orientar a família e reforçar o vínculo afetivo e a interação com o lactente (a fonte não preconiza técnica específica); se houver transtorno neurológico, terapia comportamental. Escopo: lactente e criança < 4 anos (Roma IV); para adolescentes e adultos ver \"Transtorno de ruminação e ARFID\".",
+        "prescricao": "Sem prescrição medicamentosa.\nBase: Sociedade Brasileira de Pediatria, Departamento Científico de Gastroenterologia, \"Distúrbios gastrointestinais funcionais no lactente e na criança abaixo de 4 anos: um guia para a prática diária\" (2022).",
+        "cid": "F98.2",
+        "esp": "Pediatria;Gastroenterologia;Psiquiatria"
+      },
+      "fontes": [
+        {
+          "titulo": "Distúrbios gastrointestinais funcionais no lactente e na criança abaixo de 4 anos: um guia para a prática diária",
+          "instituicao": "Sociedade Brasileira de Pediatria, Departamento Científico de Gastroenterologia",
+          "ano": "2022",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/Manual_Disturbios_GI_funcionais_no_lactente_versao_site.pdf",
+          "usadoPara": "seção síndrome da ruminação: definição, Roma IV, tratamento"
+        }
+      ],
+      "observacoes": "CID F98.2 (transtorno de alimentação na infância) por aproximação; o documento não traz CID. Seção curta na fonte. Possível sobreposição com \"Transtorno de ruminação e ARFID\" (Psiquiatria) já no acervo: esta ficha é o recorte do lactente (Roma IV, pediatria); o revisor pode descartar se considerar duplicata."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Diarreia funcional na criança pequena",
+        "introducao": "Antes chamada diarreia crônica inespecífica: evacuações diárias, indolores e recorrentes de fezes mal formadas em grande volume, em criança de 6 a 60 meses com crescimento normal. Prevalência relatada de até 7% em lactentes. Benigna; costuma resolver na idade escolar. Relaciona-se a fatores alimentares: excesso de volume, de suco de frutas e de carboidratos (sobretudo frutose), pouca gordura e sorbitol em alimentos industrializados.",
+        "criterios": "Roma IV (todos): 4 ou mais evacuações diárias, indolores e recorrentes, de fezes mal formadas e em grande volume; duração de mais de 4 semanas; início entre 6 e 60 meses; ausência de déficit de crescimento se a ingestão calórica é adequada. A criança não tem desconforto, assadura perianal, fezes impactadas ao exame, esteatorreia nem distúrbio hidroeletrolítico; as fezes podem ter muco ou restos alimentares e ficar mais amolecidas ao longo do dia. O ganho de peso adequado é essencial. Diagnóstico diferencial: doença celíaca e fibrose cística (se houver desequilíbrio nutricional).",
+        "exames": "Nenhum exame é necessário se o quadro é típico e o crescimento é normal; investigação dirigida (celíaca, fibrose cística) se houver déficit de crescimento, esteatorreia ou outros sinais de alarme.",
+        "tratamento": "Não requer medicamento nem procedimento. Avaliar o que a criança consome (volume, sucos, frutose, sorbitol, excesso de leite, balas e doces) e adequar e balancear a dieta, com a colaboração dos pais, que podem reduzir demais a oferta de nutrientes por crença ou temor. Investigar uso de laxativos ou antibióticos.",
+        "conduta": "1) Anamnese alimentar detalhada e curva de crescimento. 2) Tranquilizar a família: condição benigna que tende a resolver na idade escolar. 3) Ajustar a dieta (reduzir sucos e excesso de carboidratos, manter gordura adequada) sem restrições nutricionais excessivas. 4) Reavaliar se houver perda de peso, sangue nas fezes, febre ou esteatorreia.",
+        "prescricao": "Sem prescrição medicamentosa. Conduta dietética conforme acima.\nBase: Sociedade Brasileira de Pediatria, Departamento Científico de Gastroenterologia, \"Distúrbios gastrointestinais funcionais no lactente e na criança abaixo de 4 anos: um guia para a prática diária\" (2022).",
+        "cid": "K59.1",
+        "esp": "Pediatria;Gastroenterologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Distúrbios gastrointestinais funcionais no lactente e na criança abaixo de 4 anos: um guia para a prática diária",
+          "instituicao": "Sociedade Brasileira de Pediatria, Departamento Científico de Gastroenterologia",
+          "ano": "2022",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/Manual_Disturbios_GI_funcionais_no_lactente_versao_site.pdf",
+          "usadoPara": "seção diarreia funcional: Roma IV, fatores, conduta"
+        }
+      ],
+      "observacoes": "Documento aberto e lido; seção sobre diarreia funcional lida integralmente."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Obesidade monogênica e sindrômica na infância (obesidade \"não comum\")",
+        "introducao": "Cerca de 95% das obesidades da infância são \"comuns\" (exógenas, poligênicas), mas um subgrupo decorre de endocrinopatias, medicamentos ou alterações genéticas: obesidade monogênica (um gene, como LEP, LEPR, POMC, MC4R e PCSK1, ligados ao eixo leptina-melanocortina) e sindrômica (mais de 100 síndromes, como Prader-Willi, Bardet-Biedl, X frágil e osteodistrofia hereditária de Albright). Exigem condução e aconselhamento específicos e costumam cursar com hiperfagia intensa e início precoce.",
+        "criterios": "Diagnóstico de obesidade por IMC para idade e sexo (OMS): menores de 5 anos, sobrepeso de P97 a P99,9 (Z +2 a +3) e obesidade > P99,9 (Z +3); de 5 a 19 anos, sobrepeso de P85 a < P97, obesidade ≥ P97 (Z +2) e obesidade grave > P99,9 (Z +3) (Quadros 1 e 2 do documento). Sinais de alerta para causa não comum: obesidade iniciada no primeiro ano de vida; obesidade grave antes de 5 anos; déficit intelectual ou atraso do desenvolvimento; dismorfismos ou malformações; queda da velocidade de crescimento ou baixa estatura; hiperfagia intensa. Estatura normal ou alta sugere obesidade comum (ou SOP, hiperinsulinismo, medicamentos); estatura baixa sugere hipotireoidismo, deficiência de GH, Cushing, disfunção hipotalâmica ou obesidade genética.",
+        "exames": "Anamnese (pré-natal, aleitamento, início do ganho de peso, história familiar, hábitos, sono, saúde mental) e exame físico (acantose nigricans, estrias, fundo de olho, amígdalas, pressão, hepatomegalia, alterações ortopédicas como Blount e epifisiólise, estadiamento puberal, dismorfismos). Conforme a suspeita: função tireoidiana, avaliação de GH, cortisol, glicemia e insulina, perfil lipídico, estudo do sono e investigação genética (cariótipo, metilação 15q11-q13 para Prader-Willi, genes do eixo leptina-melanocortina). Rever medicamentos que causam ganho de peso (glicocorticoides, antipsicóticos, tricíclicos, anticonvulsivantes, propranolol, contraceptivos hormonais).",
+        "tratamento": "Tratar a causa quando existe (endocrinopatia, suspensão de fármaco), conduzir o excesso de peso e as comorbidades com equipe multiprofissional e acompanhar com endocrinologista e geneticista; a fonte afirma que a evolução, o risco familiar e às vezes o tratamento diferem da obesidade comum, sem detalhar as opções. Aconselhamento genético para a família.",
+        "conduta": "1) Medir peso e estatura e plotar o IMC nas curvas da OMS. 2) Aplicar os sinais de alerta e, se presentes, solicitar avaliação endocrinológica e genética. 3) Pesquisar comorbidades (hipertensão, apneia do sono, dislipidemia, esteatose, resistência insulínica, alterações ortopédicas e psicossociais). 4) Encaminhar a equipe multiprofissional; abordar a família, o estilo de vida e a saúde mental.",
+        "prescricao": "Sem medicamento ou dose na fonte lida. Tratamento específico, quando houver, pelo endocrinologista (PENDENTE DE VERIFICAÇÃO).\nBase: Sociedade Brasileira de Pediatria, Departamento Científico de Endocrinologia, Documento Científico nº 9, \"Quando suspeitar que a obesidade não é comum\" (outubro/2020).",
+        "cid": "E66.8",
+        "esp": "Pediatria;Endocrinologia e Metabologia;Genética Médica"
+      },
+      "fontes": [
+        {
+          "titulo": "Quando suspeitar que a obesidade \"não é comum\": orientações para o pediatra (Documento Científico nº 9)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Departamento Científico de Endocrinologia (2019-2021)",
+          "ano": "2020",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/22736c-DC-Qdo_suspeit_q_obesidade_nao_e_comum.pdf",
+          "usadoPara": "critérios de IMC, etiologia, sinais de alerta, causas monogênicas e sindrômicas"
+        }
+      ],
+      "observacoes": "O acervo tem \"Obesidade infantil\" e \"Síndrome de Prader-Willi\" separadamente; esta ficha foca na triagem de causas não comuns. O documento não detalha tratamento: sem doses."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Glioma pediátrico de baixo grau (DC SBP 2026)",
+      "motivo": "documento em área restrita a associados da SBP (a página pública só traz um parágrafo); conteúdo não lido"
+    },
+    {
+      "tema": "Distúrbios de movimento relacionados ao sono (DC SBP 2026)",
+      "motivo": "documento em área restrita; página pública sem conteúdo clínico"
+    },
+    {
+      "tema": "Disfagia e refluxo em prematuros / uso de espessantes (DC SBP)",
+      "motivo": "documento em área restrita; o acervo já tem \"Refluxo gastroesofágico no prematuro\""
+    },
+    {
+      "tema": "Insuficiência cardíaca na criança (2024); Dor torácica na criança (2017); Lesão renal aguda em pediatria (2023); Síndrome de Alagille (2026); Doenças gastrintestinais eosinofílicas (2025); Manifestações pulmonares dos erros inatos da imunidade (2026)",
+      "motivo": "PDFs em área restrita (o link redireciona ao login); sem fonte aberta lida, não foram escritos"
+    },
+    {
+      "tema": "Neuroblastoma; Dermatite da área das fraldas; Esofagite eosinofílica; DM1 (detecção precoce); Artrite idiopática juvenil e subtipos; Artrite aguda; Kawasaki; Hipertensão arterial; ITU; Asma grave; Urticária; Rinite alérgica; Síndrome de Down; Acondroplasia; Fimose; Neutropenia febril; Parasitoses e ectoparasitoses; Síndrome PFAPA; Coreia de Sydenham",
+      "motivo": "já existem no acervo (Neuroblastoma; Candidíase oral e dermatite de fralda; Esofagite eosinofílica; Diabetes mellitus tipo 1; Artrite idiopática juvenil; Artrite séptica; Doença de Kawasaki; Hipertensão na criança; Infecção do trato urinário na infância; Asma; Urticária aguda na criança; Rinite alérgica na criança; Síndrome de Down; Acondroplasia; Fimose; Neutropenia; Verminose, Escabiose, Pediculose; Febre periódica PFAPA; Coreia de Sydenham)"
+    },
+    {
+      "tema": "Síndrome das pernas inquietas; Hipermobilidade articular benigna; Arterite de Takayasu; Fenômeno de Raynaud; Esclerodermia localizada; Fibromialgia juvenil; Artrite psoriásica; Artrite relacionada à entesite; Síndrome de ativação macrofágica; Dermatomiosite juvenil",
+      "motivo": "já existem no acervo (nomes equivalentes em Neurologia e Reumatologia)"
+    },
+    {
+      "tema": "Calendários vacinais, canetas emagrecedoras, anti-histamínicos, uso de telas, brinquedos digitais, espiritualidade, EPAs, CLASSIND, imagem digital, ambientes alimentares, saúde do migrante, cuidados paliativos pediátricos (visão geral)",
+      "motivo": "não são condições clínicas com ficha de diagnóstico e conduta (políticas, vacinas, fármaco, temas educacionais); cuidados paliativos sem conteúdo clínico acessível"
+    },
+    {
+      "tema": "Enteropatia induzida por proteína alimentar",
+      "motivo": "reprovado na revisão: a fonte (GPA nº 09, SBP 2022) dedica cerca de 15 linhas à enteropatia; a ficha ficou curta demais e o diagnóstico diferencial (doença celíaca, fibrose cística, imunodeficiências, DII) não consta nessa seção. Não fundir com a proctocolite."
+    }
+  ]
+}

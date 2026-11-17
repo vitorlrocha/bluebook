@@ -1,0 +1,491 @@
+{
+  "lote": "14",
+  "criadoEm": "2026-11-13",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Tuberculose na gestação",
+        "introducao": "Tuberculose ativa (em geral pulmonar, por M. tuberculosis) em gestante. A gravidez não altera a história natural nem torna a mulher mais vulnerável, mas confunde o diagnóstico (inapetência, cansaço e mal-estar são queixas comuns da gestação). Sem tratamento há aumento de morbimortalidade materna e fetal; tratamento precoce com o esquema básico é seguro e melhora o curso da gestação.",
+        "criterios": "Suspeita: tosse por mais de 3 semanas, febre baixa vespertina, sudorese noturna, emagrecimento e inapetência. Todo sintomático respiratório deve ser investigado. Confirmação por baciloscopia (BAAR), teste rápido molecular (TRM-TB) ou cultura; radiografia de tórax com proteção abdominal sustenta o diagnóstico (cavitação, nódulos, consolidação, derrame, padrão miliar). Formas miliar e extrapulmonares são mais graves.",
+        "exames": "Baciloscopia de escarro em 2 amostras (no momento da suspeita e na manhã seguinte); TRM-TB (detecta resistência à rifampicina); cultura para micobactérias em todos os casos suspeitos, independentemente da baciloscopia; radiografia de tórax com proteção abdominal. Sorologia para HIV em toda gestante com tuberculose (alta coinfecção). Durante o tratamento: enzimas hepáticas mensais, hemograma no 2º e no 3º trimestres (anemia é mais frequente) e baciloscopia mensal até duas amostras negativas consecutivas. Ultrassonografia mensal do crescimento fetal a partir de 28 semanas.",
+        "tratamento": "Não adiar nem interromper o tratamento por causa da gravidez: os fármacos do esquema básico têm ampla evidência de segurança na gestação. Esquema básico de 6 meses: fase intensiva de 2 meses com rifampicina, isoniazida, pirazinamida e etambutol (dose fixa combinada, comprimido único diário, ideal sob observação direta) e fase de manutenção de 4 meses com rifampicina e isoniazida. Associar piridoxina (vitamina B6) a todas as gestantes durante todo o tratamento, para prevenir neurotoxicidade pela isoniazida. Falha de negativação, resistência ao esquema básico e formas extrapulmonares: encaminhar ao infectologista/serviço de referência.",
+        "conduta": "Iniciar tratamento assim que confirmado (ou fortemente suspeito), notificar e pedir HIV. Consultas mais frequentes e, se necessário, internação para anemia grave, perda de peso importante, forma extrapulmonar ou otimização nutricional. Parto vaginal não é contraindicado; evitar pós-datismo (resolver até 40 semanas). Se a paciente estiver bacilífera no parto, usar precauções respiratórias para aerossóis. Separar o RN da mãe bacilífera é controverso, exceto se bacilo multirresistente (separação indicada). Aleitamento permitido com máscara cirúrgica na mãe; contraindicado só em mastite tuberculosa (na mama acometida). Indicada profilaxia do recém-nascido com isoniazida (dose e duração: PENDENTE DE VERIFICAÇÃO, não constam no capítulo).",
+        "prescricao": "1) Fase intensiva (2 meses), RHZE em dose fixa combinada (rifampicina 150 mg + isoniazida 75 mg + pirazinamida 400 mg + etambutol 275 mg), 1 vez ao dia: 20-35 kg: 2 comprimidos; 36-50 kg: 3 comprimidos; 51-70 kg: 4 comprimidos; acima de 70 kg: 5 comprimidos.\n2) Fase de manutenção (4 meses), RH 1 vez ao dia: 20-35 kg: 1 comprimido de 300/150 mg; 36-50 kg: 1 comprimido de 300/150 mg + 1 de 150/75 mg (ou 3 de 150/75 mg); 51-70 kg: 2 comprimidos de 300/150 mg (ou 4 de 150/75 mg); acima de 70 kg: 2 de 300/150 mg + 1 de 150/75 mg (ou 5 de 150/75 mg).\n3) Piridoxina (vitamina B6) 50 mg/dia durante todo o tratamento, em todas as gestantes.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 30), que cita o Manual de Recomendações para o Controle da Tuberculose no Brasil (MS, 2019).",
+        "cid": "O98.0",
+        "esp": "Obstetrícia;Infectologia;Pneumologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 30 (Tuberculose): diagnóstico, esquema básico e tabela de doses por peso, piridoxina, particularidades na gravidez, parto, aleitamento"
+        }
+      ],
+      "observacoes": "Dose da profilaxia do RN com isoniazida não está no capítulo (PENDENTE). Esquemas para tuberculose resistente/extrapulmonar não detalhados na fonte; ver fichas gerais de tuberculose do acervo."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Doença de Chagas na gestação e transmissão congênita",
+        "introducao": "Infecção por Trypanosoma cruzi em gestante (aguda ou, mais comumente, crônica), em áreas endêmicas ou em mulheres vindas delas. A transmissão congênita pode ocorrer em qualquer fase da doença materna, sobretudo no 2º e 3º trimestres, e é mais frequente na infecção aguda adquirida na gravidez (parasitemia alta). A gestação pode reativar a doença crônica por imunossupressão.",
+        "criterios": "Triagem pré-natal em áreas endêmicas ou em mulheres procedentes delas. Fase aguda: febre prolongada e pouco elevada, chagoma/edema no local de inoculação, podendo evoluir com miocardite, derrame pericárdico ou meningoencefalite. Fase crônica: assintomática ou com forma cardíaca (miocardiopatia dilatada, insuficiência cardíaca) ou digestiva (megaesôfago, megacólon). Na infecção congênita há maior risco de parto prematuro, baixo peso, rotura prematura de membranas e inflamação placentária; sinais no RN são inespecíficos.",
+        "exames": "Fase aguda: pesquisa parasitológica direta (exame a fresco é o de escolha); se negativo, métodos de concentração (Strout, microhematócrito, creme leucocitário) ou gota espessa corada. Sorologia (hemaglutinação indireta, imunofluorescência) como complementar; se a sorologia inicial for negativa na suspeita aguda, repetir após 3 semanas. Identificada a infecção na mulher, testar todos os filhos; investigar exaustivamente o RN de mãe infectada.",
+        "tratamento": "Benznidazol e nifurtimox não são recomendados na gestação, exceto em caso agudo e grave, por toxicidade. Não há como prevenir a transmissão congênita durante a gravidez. Tratar a gestante infectada após o parto e o período de lactação, para evitar transmissão em gestações futuras. O tratamento antes da gravidez reduz a parasitemia e o risco de transmissão congênita em cerca de 95%: diagnosticar e tratar mulheres em idade fértil e em pré-concepção. Tratar o recém-nascido infectado.",
+        "conduta": "Rastrear a gestante procedente de área endêmica; reconhecida a infecção, acompanhar no alto risco, avaliar forma cardíaca/digestiva e programar a investigação do RN. Orientar o teste de todos os filhos da mulher infectada. Amamentação: manter, salvo risco claramente maior que o benefício; evitar na doença aguda ou com fissuras/sangramento mamilar (alternativa: extrair e tratar o leite por processos específicos). Prevenção coletiva: controle do barbeiro, educação em saúde e melhoria das moradias.",
+        "prescricao": "Sem prescrição antiparasitária na gestação, exceto doença aguda grave (decisão especializada; doses de benznidazol/nifurtimox: PENDENTE DE VERIFICAÇÃO, não constam no capítulo). Pós-parto e fora da lactação: tratamento com benznidazol conforme protocolo vigente do Ministério da Saúde (consultar ficha de doença de Chagas aguda e crônica).\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 36).",
+        "cid": "O98.8",
+        "esp": "Obstetrícia;Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 36 (Doença de Chagas): manifestações, diagnóstico laboratorial, tratamento, diagnóstico pré-natal, amamentação, prevenção"
+        }
+      ],
+      "observacoes": "O capítulo não traz doses de benznidazol/nifurtimox: marcadas PENDENTE. Sem CID específico B57 combinado para evitar erro de forma clínica."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Hepatite C na gestação",
+        "introducao": "Infecção pelo vírus C (HCV) em gestante. Em geral oligossintomática (75% dos adultos assintomáticos na fase aguda), cronifica em 50% a 80%; 20% dos crônicos evoluem para cirrose. A transmissão vertical ocorre em 3% a 10% e se associa a viremia materna alta (acima de 600.000 UI/mL), coinfecção pelo HIV (risco 4 vezes maior) e rotura prolongada de membranas.",
+        "criterios": "Diagnóstico laboratorial: anti-HCV (imunoensaio ou teste rápido), com confirmação por teste molecular (HCV-RNA) nos reagentes. O Ministério da Saúde recomenda pesquisar HCV em toda gestante, idealmente ao iniciar o pré-natal. Maior risco de diabetes gestacional, pré-eclâmpsia, restrição de crescimento, hemorragia pós-parto e colestase intra-hepática (até 20 vezes): atenção a icterícia e prurido.",
+        "exames": "Anti-HCV e HCV-RNA para confirmar. Na gestante com hepatite C crônica: transaminases, gama-GT, fosfatase alcalina, bilirrubinas, proteínas totais e frações; coagulograma se evolução desfavorável. Se surgir icterícia e prurido, repetir transaminases e dosar ácidos biliares.",
+        "tratamento": "Não há tratamento específico na gravidez e os medicamentos habituais são contraindicados; em mulheres em idade fértil o tratamento deve ser feito antes da gestação. Não há intervenção que reduza a transmissão vertical, exceto evitar procedimentos invasivos (se necessário, preferir amniocentese) e tratar a coinfecção pelo HIV. Doença avançada: seguimento multidisciplinar.",
+        "conduta": "Encaminhar mãe e recém-nascido a serviço de referência. Pré-natal individualizado pelos riscos, vigiando colestase. Via de parto por indicação obstétrica, com cuidados de proteção da equipe. Orientar prevenção aos contactantes e parcerias sexuais e reforçar vacinação contra outras hepatites virais. Aleitamento não é contraindicado, salvo lesões mamilares importantes com sangramento.",
+        "prescricao": "Sem antiviral na gestação. Pós-parto: avaliar tratamento conforme PCDT de hepatite C (ver ficha de hepatite C crônica). Vacinar contra hepatites A e B se suscetível (esquema: consultar calendário vigente; PENDENTE DE VERIFICAÇÃO no capítulo).\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 23.3).",
+        "cid": "O98.4,B18.2",
+        "esp": "Obstetrícia;Infectologia;Hepatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 23.3 (Hepatite C): introdução, diagnóstico, seguimento e conduta, transmissão vertical, aleitamento"
+        }
+      ],
+      "observacoes": "Capítulo não traz fármacos nem esquema vacinal; nada foi prescrito além do que consta."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Citomegalovirose na gestação: diagnóstico materno e prevenção da transmissão",
+        "introducao": "Infecção materna por citomegalovírus (herpesvírus 5), geralmente assintomática, com risco de transmissão transplacentária e disrupções fetais com tropismo pelo sistema nervoso central. Primoinfecção em 0,7% a 2% das gestantes (mais em mães de crianças em idade escolar, babás e professoras). Soroconversão no 1º trimestre causa sequelas neurológicas em 8% a 13% dos neonatos; no 2º e 3º trimestres, não está associada a sequelas neurológicas graves. Infecções não primárias transmitem em cerca de 1,4%.",
+        "criterios": "Sintomas, quando presentes, são inespecíficos (febre, calafrios, sudorese, exantema, artralgia, linfonodomegalia, mal-estar, linfócitos atípicos). Infecção aguda: IgM e IgG reagentes, idealmente com suscetibilidade documentada antes. IgM reagente e IgG não reagente: repetir a coleta em 7 a 10 dias; se o IgG permanecer não reagente, é falso-positivo (investigar parvovírus, Epstein-Barr, doenças autoimunes). Avidez de IgG: alta (60% ou mais) indica infecção provavelmente há mais de 12 semanas; baixa (40% ou menos), há menos de 12 semanas; 40% a 60% é indeterminada.",
+        "exames": "Sorologia (IgG, IgM e avidez de IgG): não é rotina do Ministério da Saúde, mas alguns serviços solicitam antes de 14 semanas para IgG não reagente/desconhecido e diante de suspeita clínica. Se IgG e IgM não reagentes antes de 20 semanas, pode-se repetir em 4 a 6 semanas. Amniocentese com PCR do líquido amniótico, quando disponível, após 21 semanas e pelo menos 7 semanas depois da estimativa da infecção. Seguimento com ultrassonografia, Doppler, ecocardiografia fetal e, em serviços especializados, neurossonografia.",
+        "tratamento": "Prevenção em suscetíveis (reduz em 86% a transmissão vertical nos grupos de alto risco): considerar que crianças menores de 3 anos eliminam o vírus em urina e saliva; lavar as mãos com água e sabão após cuidados com a criança; não compartilhar talheres, copos, toalhas, lençóis e travesseiros; evitar dormir na mesma cama; lavar roupas separadamente; usar máscara em infecção confirmada. A imunoglobulina hiperimune não reduziu a transmissão. Valaciclovir tem se mostrado promissor na soroconversão até 21 semanas, mas é caro e não está disponível no SUS; não é recomendado na soroconversão no 2º ou 3º trimestre.",
+        "conduta": "Confirmar infecção aguda com sorologia pareada e avidez, orientar prevenção nas suscetíveis e referir ao alto risco/medicina fetal as soroconversões. Amamentação: na infecção aguda a lactante pode transmitir; para RN com menos de 32 semanas ou 1,5 kg ou menos, não amamentar e oferecer leite materno pasteurizado ou fórmula; no RN de termo, recomendar amamentar informando o risco de doença sintomática.",
+        "prescricao": "Valaciclovir 2 g via oral de 6 em 6 horas, da confirmação diagnóstica até 21 semanas (uso off-label, não disponível no SUS; decisão em serviço de referência), com hemograma, creatinina, ureia e enzimas hepáticas a cada 4 semanas.\nPrevenção: medidas de higiene acima, sem fármaco.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 22).",
+        "cid": "O98.8,B25.9,O35.3",
+        "esp": "Obstetrícia;Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 22 (Citomegalovírus): epidemiologia, interpretação da sorologia e avidez, medidas profiláticas, valaciclovir, amniocentese, aleitamento"
+        }
+      ],
+      "observacoes": "O fluxograma (Figura 1) é imagem; usei o texto do capítulo. Ficha da infecção congênita já existe (Citomegalovirose congênita); esta trata da gestante."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Doença falciforme e talassemia na gestação",
+        "introducao": "Hemoglobinopatias hereditárias (hemoglobina S, C e variantes; talassemias) em gestantes. Na doença falciforme, o estado de hipercoagulabilidade da gestação torna a circulação placentária mais sujeita a vaso-oclusão, com risco de comprometimento do crescimento e da vitalidade fetal, pré-eclâmpsia e restrição de crescimento. Talassemia beta maior é raríssima na gestação; formas intermediária e menor em geral não comprometem a gravidez; entre as alfa, só traço e doença da hemoglobina H são vistos na gestação (a forma mais grave causa hidropisia e óbito fetal).",
+        "criterios": "Eletroforese de hemoglobina (genótipos SS, SC, S-beta-talassemia, AS). Doença falciforme: anemia hemolítica, crises álgicas vaso-oclusivas, síndrome torácica aguda (tosse, dor pleurítica, taquipneia, febre, infiltrado alveolar na radiografia), sequestro esplênico (queda súbita de Hb, choque hipovolêmico, baço aumentado). Talassemia: anemia microcítica e hipocrômica; diagnóstico por eletroforese e cinética do ferro.",
+        "exames": "Hemograma com reticulócitos mensal; cinética do ferro e ferritina na admissão; ferro sérico e capacidade de ligação trimestrais; função hepática (TGO, TGP) trimestral; bilirrubinas, fosfatase alcalina e DHL conforme transfusões; função renal (creatinina, ácido úrico, proteinúria de 24 h ou relação proteína/creatinina); sorologias (hepatites A e C, HTLV 1 e 2, CMV, Chagas se transfusão prévia); fenotipagem eritrocitária e Coombs indireto; ecocardiograma e fundo de olho. Propedêutica fetal individualizada pelo risco de pré-eclâmpsia e restrição de crescimento.",
+        "tratamento": "Equipe multidisciplinar com hematologista. Ácido fólico durante toda a gestação; ferro apenas em casos selecionados, guiado pela cinética do ferro. Consultas idealmente quinzenais no 2º trimestre e semanais no 3º. Crise vaso-oclusiva: afastar fatores desencadeantes (desidratação, hipotermia, acidose, estresse), investigar infecção (urinária, vias aéreas, pulmão), hidratar com cuidado para não sobrecarregar o coração e dar analgesia crescente e individualizada (\"dor zero\"). Síndrome torácica aguda: hidratação, analgesia, antibiótico, oxigênio e transfusão (preferencialmente exsanguineotransfusão). Sequestro esplênico: transfusão precoce. Talassemia: controle da anemia; ferro elementar não indicado nas formas intermediária e menor; quelantes de ferro contraindicados na gestação; talassemia maior exige transfusões seriadas. Em anemia microcítica refratária ao ferro, evitar ferro prolongado em formas hemolíticas (ex.: hemoglobina H).",
+        "conduta": "Indicações absolutas de transfusão (decidir com a hematologia): queda de mais de 30% da Hb basal; Hb abaixo de 6 g/dL ou hematócrito abaixo de 18%; pré-eclâmpsia grave; sepse ou bacteremia; insuficiência renal aguda; síndrome torácica aguda; hipoxemia; pré-operatório de cirurgia de médio e grande porte. Transfusão simples é a mais usada; exsanguineotransfusão pode ser preferível na síndrome torácica. Vigilância fetal por ultrassonografia e avaliação de vitalidade conforme risco.",
+        "prescricao": "Ácido fólico 4 a 5 mg/dia por via oral durante toda a gestação (doença falciforme).\nAnalgesia na crise: escalonar potência conforme dor (fármacos e doses específicos: PENDENTE DE VERIFICAÇÃO, não constam no capítulo).\nNão prescrever ferro de rotina nem quelantes de ferro.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 40.4).",
+        "cid": "O99.0,D57.1,D56.1",
+        "esp": "Obstetrícia;Hematologia e Hemoterapia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 40.4 (Hemoglobinopatias): doença falciforme, quadro de exames, indicações de transfusão, crise álgica, síndrome torácica, talassemia"
+        }
+      ],
+      "observacoes": "Tabela 1 (genótipos e Hb) saiu desalinhada na extração: não reproduzida. Analgésicos sem doses na fonte."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Prótese valvar mecânica e anticoagulação na gestação",
+        "introducao": "Gestantes com próteses valvares mecânicas ou arritmias trombogênicas (como fibrilação atrial) precisam de anticoagulação plena durante toda a gravidez e têm alto risco simultâneo de trombose e de hemorragia. O manual recomenda varfarina da 13ª à 36ª semana para reduzir o risco de trombose; no 1º trimestre há risco de teratogênese (síndrome varfarínica) e, nesse período, usa-se heparina em dose terapêutica. Pacientes com valvopatia reumática também precisam de profilaxia de recorrência da febre reumática.",
+        "criterios": "Gestante com prótese valvar mecânica ou arritmia trombogênica em curso. Acompanhar em serviço de alto risco com cardiologia; monitorar o controle da anticoagulação e sinais de trombose da prótese, descompensação cardíaca e sangramento.",
+        "exames": "RNI (tempo de protrombina) durante o uso de varfarina, com alvo 2,5 a 3,5; TTPA a cada 4 a 6 horas durante infusão de heparina não fracionada (alvo: relação de 1,7 a 2). Ecocardiograma e avaliação cardiológica seriada. Meta de anti-Xa para a HBPM na prótese mecânica não consta no cap. 41 (PENDENTE DE VERIFICAÇÃO); a única faixa de anti-Xa do manual (0,7 a 1 U/mL, cap. 50) refere-se à síndrome antifosfolípide com trombose prévia e não deve ser extrapolada para a prótese.",
+        "tratamento": "Esquema descrito no manual: no 1º trimestre, heparina de baixo peso molecular em dose terapêutica (ou heparina não fracionada intravenosa, com internação); da 13ª à 36ª semana, anticoagulante oral (varfarina) com RNI 2,5 a 3,5; 10 a 14 dias antes do parto, substituir o anticoagulante oral por heparina (baixo peso ou não fracionada); reintroduzir a anticoagulação a partir do 3º dia pós-parto. Valvopatia reumática: penicilina benzatina a cada 21 dias durante todo o pré-natal.",
+        "conduta": "Programar o parto para ajustar a anticoagulação. Cesariana programada: suspender a HBPM 24 horas antes e reintroduzir 12 horas depois. Indução do parto: trocar a HBPM por heparina não fracionada intravenosa, iniciada 24 horas antes e suspensa no início da fase ativa (permite analgesia e reduz sangramento); após o parto, reintroduzir a infusão em 8 a 12 horas e voltar à HBPM 24 horas depois. Encaminhar a paciente a cuidado especializado.",
+        "prescricao": "1) Heparina de baixo peso molecular em dose terapêutica: 2 mg/kg/dia divididos em duas doses, ou seja, 1 mg/kg a cada 12 horas (1º trimestre; é a dose plena de enoxaparina do Quadro 2 do cap. 50.8), conforme o manual; ou heparina não fracionada IV com paciente internada.\n2) Varfarina via oral da 13ª à 36ª semana, ajustada ao RNI 2,5 a 3,5 (dose inicial: PENDENTE DE VERIFICAÇÃO).\n3) Pré-parto programado/indução: heparina não fracionada 1.000 UI/hora IV, TTPA a cada 4 a 6 horas, alvo 1,7 a 2.\n4) Valvopatia reumática: penicilina benzatina 1.200.000 UI IM a cada 21 dias.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 41.6.2, 41.6.3 e 41.7.4).",
+        "cid": "O99.4,Z95.2",
+        "esp": "Obstetrícia;Cardiologia;Hematologia e Hemoterapia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 41.6.2 (prevenção da doença reumática), 41.6.3 (anticoagulação) e 41.7.4 (ajuste da anticoagulação no parto); cap. 50.8 (Quadro 2: dose plena de enoxaparina 1 mg/kg a cada 12 horas)"
+        }
+      ],
+      "observacoes": "Dose de HBPM conferida no cap. 41.6.3 (2 mg/kg/dia em duas doses) e equivalente à dose plena do Quadro 2 do cap. 50.8 (enoxaparina 1 mg/kg 12/12 h). Metas de anti-Xa para prótese mecânica e dose de varfarina não constam na fonte (PENDENTE). A penicilina benzatina vem grafada \"1.200.00 UI\" no manual (erro de digitação; usado 1.200.000 UI, dose habitual)."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Miastenia gravis na gestação e no parto",
+        "introducao": "Doença autoimune da junção neuromuscular (anticorpos contra receptor de acetilcolina em 80% a 90%) em gestante. O 1º trimestre e os primeiros dias do puerpério são os períodos de maior risco de exacerbação; a mortalidade materna é maior no 1º ano da doença. Pacientes bem controladas antes da gestação tendem a permanecer estáveis. Há risco de miastenia neonatal transitória em 10% a 20% dos RN e, raramente, artrogripose fetal.",
+        "criterios": "Fraqueza muscular flutuante com fadiga: ocular (ptose, diplopia) ou generalizada (bulbar, respiratória). Diagnóstico por anticorpos específicos e estudo eletrofisiológico. Na gestação, tosse ou dispneia podem indicar crise miastênica. Ultrassonografia pode mostrar polidrâmnio por deglutição fetal reduzida; a percepção dos movimentos fetais pode estar prejudicada.",
+        "exames": "Avaliação da força muscular e provas de função pulmonar; triagem de função tireoidiana (associação com Hashimoto e outras autoimunes); eletrocardiograma. Vitalidade fetal: perfil biofísico e cardiotocografia; monitorização fetal contínua durante crise miastênica. Oximetria contínua no trabalho de parto.",
+        "tratamento": "Planejamento multidisciplinar (neurologia e obstetrícia de alto risco). Piridostigmina (primeira linha) é segura e deve ser mantida, com ajuste de dose; a forma intravenosa pode desencadear contrações e só se usa no trabalho de parto. Corticoide é o imunossupressor de escolha; azatioprina e ciclosporina em casos selecionados, evitando doses altas; imunoglobulina e plasmaferese são seguros; ciclofosfamida, metotrexato e micofenolato são contraindicados; rituximabe é preferivelmente evitado. Timectomia não deve ser feita durante a gestação. Tratar infecções prontamente e evitar estresse físico/emocional.",
+        "conduta": "Evitar fármacos que pioram a miastenia: aminoglicosídeos, quinolonas, betabloqueadores, antiarrítmicos, hidroxicloroquina, toxina botulínica, contraste iodado e sulfato de magnésio (contraindicado, pode precipitar crise). Hipertensão grave: metildopa e/ou hidralazina, evitando betabloqueadores e bloqueadores de canal de cálcio. Convulsão: levetiracetam ou ácido valproico, reservando fenitoína. Parto por indicação obstétrica; o período expulsivo pode estar prejudicado (parto operatório é opção). Raquianestesia/duplo bloqueio nos quadros leve a moderado, evitando anestésicos locais tipo éster; anestesia geral com intubação em forma bulbar ou comprometimento respiratório. Puerpério é de risco; incentivar aleitamento (corticoide e piridostigmina seguros; azatioprina e ciclosporina contraindicadas).",
+        "prescricao": "1) Piridostigmina via oral, mantida na gestação com ajuste individual (dose: PENDENTE DE VERIFICAÇÃO); no trabalho de parto, via endovenosa na dose equivalente a 1/3 da dose oral.\n2) Corticoide como imunossupressor de escolha (dose: PENDENTE DE VERIFICAÇÃO), atentando para piora transitória inicial e intolerância a carboidratos.\n3) Evitar a lista de fármacos acima.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 60).",
+        "cid": "G70.0,O99.3",
+        "esp": "Obstetrícia;Neurologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 60 (Miastenia gravis): introdução, clínica, MG e gravidez, fármacos, anestesia, parto e puerpério"
+        }
+      ],
+      "observacoes": "Doses de piridostigmina e corticoide não constam no capítulo (PENDENTE). Complementa as fichas gerais Miastenia gravis e crise miastênica."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Tumores de ovário na gestação",
+        "introducao": "Massas anexiais malignas ou suspeitas diagnosticadas na gravidez. O tipo histológico mais comum é o de células germinativas, seguido do epitelial; entre os epiteliais predominam os de baixo potencial de malignidade (borderline, 10% a 20% dos cânceres de ovário na gravidez), de excelente prognóstico. A maioria é assintomática; dor ou desconforto em baixo ventre é o sintoma mais relatado.",
+        "criterios": "Muitas vezes achado da ultrassonografia morfológica por volta de 12 semanas. Tumores funcionais são totalmente císticos, de superfície interna regular, sem septos nem projeções sólidas. Sinais de malignidade: áreas sólidas, massas multiloculadas, septos espessos (acima de 4 mm), projeções papilares, tumor maior que 5 cm, bilateralidade e ascite. Doppler das massas anexiais não tem valor na gestação (baixa resistência vascular mesmo em tumores funcionais).",
+        "exames": "Ultrassonografia seriada; ressonância magnética quando a ultrassonografia for inconclusiva. Evitar tomografia (radiação, sem superar a ultrassonografia) e PET-CT (não recomendado na gravidez). Marcadores tumorais (CA125, alfafetoproteína, DHL, beta-HCG) têm pouca utilidade por estarem fisiologicamente alterados.",
+        "tratamento": "Individualizar por aspecto ultrassonográfico, sintomas, complicações, tamanho e idade gestacional. Diagnóstico no 1º trimestre: aguardar o 2º trimestre para operar (menos abortos). Descoberta tardia (3º trimestre) com imagem benigna: esperar o pós-parto, sem indicar cesárea só pelo tumor. Via laparoscópica (segura entre 16 e 18 semanas) se tumor até 6 a 7 cm, sem doença avançada e com retirada íntegra em endobag; evitar punção ou rotura do tumor. Cirurgia: salpingo-ooforectomia unilateral, citologia e biópsias peritoneais e inventário da cavidade. Estádio IA bem diferenciado em jovens: anexectomia unilateral, omentectomia infracólica e lavado peritoneal; demais estádios: cirurgia radical (pode ser postergada no 3º trimestre ou o parto antecipado após maturação pulmonar). Doença disseminada: citorredução; quimioterapia no 2º e 3º trimestres, cautelosa, a partir de 20 semanas. Neoplasia germinativa maligna: cirurgia conservadora mesmo em estádio avançado, pois o sucesso vem da quimioterapia.",
+        "conduta": "Referenciar a centro com oncologia ginecológica e medicina fetal. Decisão sobre manter a gravidez conforme idade gestacional e estádio (no 1º trimestre ainda há discussão). Tumores epiteliais avançados: considerar cirurgia completa após o término da gestação. Radioterapia contraindicada na gestação.",
+        "prescricao": "Sem prescrição medicamentosa específica; esquemas de quimioterapia (fármacos e doses): PENDENTE DE VERIFICAÇÃO, não constam no capítulo (decisão da oncologia).\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 49.2).",
+        "cid": "C56,O99.8",
+        "esp": "Obstetrícia;Oncologia;Ginecologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 49.1 e 49.2 (Câncer ginecológico: neoplasia de ovário na gestação): tipos, achados de imagem, tratamento"
+        }
+      ],
+      "observacoes": "Sem doses de quimioterápicos na fonte (PENDENTE). Fichas gerais de câncer de ovário e borderline já existem no acervo."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Câncer do colo do útero na gestação",
+        "introducao": "É a neoplasia ginecológica maligna mais frequente na gravidez. Os sintomas são os da não grávida: sangramento pós-coito indolor e corrimento anormal, que podem ser confundidos com complicações da gestação. A conduta depende de histologia, estádio, estado linfonodal, idade gestacional e desejo da paciente quanto à continuidade da gravidez.",
+        "criterios": "Diagnóstico por citologia/colposcopia e biópsia dirigida. Estadiamento com exame especular, toque retal para paramétrios e ressonância magnética (referência), cuja interpretação na gravidez é mais difícil (hiperintensidade fisiológica do colo, movimento fetal, sem contraste gadolíneo). Estádio inicial pela FIGO: IA a IIA.",
+        "exames": "Biópsia, ressonância magnética sem gadolínio, exame especular e toque retal; imagem de linfonodos na ressonância (indicação de linfadenectomia pélvica). Avaliação fetal e obstétrica seriadas.",
+        "tratamento": "Preservar o concepto e tratar na gravidez é o mais comum. Estádios IA a IIA: pode-se adiar a cirurgia com monitorização até 34 semanas. Estádio IA: conização entre 14 e 20 semanas; margens livres podem ser definitivas (parto vaginal possível); margens comprometidas: segunda conização e, se houver doença a reavaliar, cesárea para preservar o estudo histopatológico. Estádio IB1 com tumor até 2 cm: linfadenectomia pélvica se houver suspeita de linfonodos na ressonância; com metástase, tratar de imediato; sem metástase, aguardar maturidade fetal. Traquelectomia vaginal com linfadenectomia por videolaparoscopia em casos selecionados (IB1 menor que 2 cm, sem linfonodos). Quando a cirurgia conservadora não é possível: quimioterapia neoadjuvante (cisplatina com paclitaxel parece relativamente segura) até a maturidade fetal, cesárea e histerectomia radical (Wertheim-Meigs) 30 a 40 dias depois. IB2 após 12 semanas e desejo de manter a gestação: quimioterapia neoadjuvante. Diagnóstico no 3º trimestre: aguardar maturidade fetal, cesárea e tratamento 30 a 40 dias após.",
+        "conduta": "Discutir com equipe multidisciplinar, a paciente e o parceiro. No 1º trimestre de gravidez desejada, conduta conservadora até o 2º trimestre (momento para linfadenectomia, conização, traquelectomia e quimioterapia neoadjuvante). Radioterapia contraindicada na gestação.",
+        "prescricao": "Sem prescrição medicamentosa de rotina. Quimioterapia neoadjuvante: cisplatina com paclitaxel citados no capítulo, doses e ciclos PENDENTE DE VERIFICAÇÃO (decisão da oncologia).\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 49.3).",
+        "cid": "C53.9,O99.8",
+        "esp": "Obstetrícia;Oncologia;Ginecologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 49.3 (Neoplasia maligna do colo uterino na gravidez): diagnóstico, estadiamento, tratamento por estádio e idade gestacional"
+        }
+      ],
+      "observacoes": "Doses de quimioterapia não constam na fonte (PENDENTE). Já existem fichas de câncer de colo de útero invasivo e rastreamento no acervo."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Idade materna avançada",
+        "introducao": "Gestação em mulher com 35 anos ou mais (idade materna muito avançada: 45 ou 50 anos ou mais). No Brasil, a proporção de partos nessa faixa dobrou entre 1994 e 2018 (7,6% para 15,5%). Associa-se a mais intercorrências maternas e fetais e a maior mortalidade materna (quase 8 vezes maior acima de 40 anos), por hemorragia, infecção e doenças cardiovasculares.",
+        "criterios": "Idade de 35 anos ou mais no parto. Riscos associados: gravidez ectópica, doença trofoblástica, abortamento, anomalias cromossômicas e congênitas, gestação múltipla, baixo peso e parto pré-termo, óbito fetal, diabetes prévio e gestacional, pré-eclâmpsia, distúrbios da tireoide, placenta de inserção baixa, descolamento prematuro, distocias e cesárea. Risco de trissomia 21 (1 em n): 35 anos, 240; 40 anos, 52; 45 anos, 19. Risco de trissomia 18: 990, 205 e 60; de trissomia 13: 2.615, 730 e 350 (nas mesmas idades).",
+        "exames": "Rastreamento de aneuploidias e malformações conforme o desejo do casal (testes de triagem, morfologia). Idade acima de 35 anos, isoladamente, não é mais indicação formal de procedimento invasivo para diagnóstico de aneuploidias (manual, cap. 71); diante de pedido por ansiedade do casal, não se recomenda o procedimento e sim o esclarecimento amplo. Rastrear comorbidades (diabetes, tireoide, hipertensão) e acompanhar a vitalidade fetal conforme cada caso.",
+        "tratamento": "Sem tratamento específico: cuidado pré-natal qualificado, aconselhamento, medidas profiláticas (por exemplo, ácido acetilsalicílico quando indicado), atenção nutricional e vigilância fetal individualizada. Na consulta pré-concepcional, orientar estilo de vida, álcool, tabagismo, sedentarismo, obesidade e ajustar medicações de doenças crônicas.",
+        "conduta": "Estratificar o risco: idade acima de 40 anos consta entre as condições de maior risco na gestação atual (cap. 1, Quadro 1 do manual); entre 35 e 40 anos, definir o nível de cuidado pelos demais fatores, com equipe multidisciplinar quando necessário. Orientar mulheres entre 30 e 35 anos sobre o declínio da fertilidade. Cuidado na prova de trabalho de parto após cesárea (risco aumentado de falha de progressão e rotura uterina em mulheres mais velhas). A maior incidência de cesárea tem causas controversas (comorbidades, indução, posição fetal anômala e cesárea eletiva a pedido, mais aceita em gestação muito aguardada ou após reprodução assistida).",
+        "prescricao": "Sem prescrição específica. Ácido acetilsalicílico quando indicado (indicação e dose: PENDENTE DE VERIFICAÇÃO, não detalhadas no capítulo).\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 53).",
+        "cid": "Z35.5,Z35.8",
+        "esp": "Obstetrícia;Ginecologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 53 (Idade materna avançada): definição, eventos adversos, aconselhamento e tabela de risco de aneuploidias; cap. 71 (procedimentos invasivos) e cap. 1 (Quadro 1, fatores de maior risco)"
+        }
+      ],
+      "observacoes": "Tabela de aneuploidias reconferida linha a linha no PDF (extração em texto bruto): 35, 40 e 45 anos conferem para T21 (240, 52, 19), T18 (990, 205, 60) e T13 (2.615, 730, 350). Z35.5 é \"Supervisão de primigesta idosa\"; para multigesta idosa o CID-10 brasileiro não tem código próprio (sem O09), por isso Z35.8 foi acrescentado. Ficha mantida por trazer conduta prática (aconselhamento, rastreio, exame invasivo, estratificação, pré-concepção), não só fator de risco."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Gestação após cirurgia bariátrica",
+        "introducao": "Gestação em mulher com derivação gástrica em Y de Roux (RYGB), gastrectomia vertical ou outras técnicas bariátricas. Reduz diabetes gestacional, hipertensão, parto pré-termo e recém-nascidos grandes, mas aumenta recém-nascidos pequenos para a idade gestacional e baixo peso; há risco de deficiências de micronutrientes. A gravidez é uma janela de oportunidade para otimização nutricional.",
+        "criterios": "Antecedente de cirurgia bariátrica. Recomenda-se adiar a gravidez até a estabilidade do peso, em geral 1 a 2 anos após a cirurgia (intervalo curto associa-se a prematuridade, pequenos para a idade gestacional e UTI neonatal). Dor abdominal alta, náuseas e vômitos após RYGB: suspeitar de hérnia interna. Síndrome de dumping: mal-estar, tontura, rubor e palpitações cerca de 60 minutos após carboidratos de rápida absorção.",
+        "exames": "Triagem de deficiências na 1ª consulta e ao menos uma vez por trimestre: folato, vitamina B12, ferritina, hemograma, vitamina D, cálcio, PTH e tempo de protrombina (valores de referência da gestação). Ultrassonografia mensal do peso fetal além das habituais. Rastreio de diabetes: glicemia de jejum e hemoglobina glicada no 1º trimestre; teste oral de tolerância à glicose contraindicado após RYGB (dumping); alternativa: perfil glicêmico capilar por uma semana (jejum menor que 95, 1 h menor que 140, 2 h menor que 120 mg/dL; bom controle quando até 30% dos valores estão dentro do normal). Hérnia interna: ressonância magnética como imagem de primeira linha.",
+        "tratamento": "Suplementação (doses sugeridas no manual) iniciada 3 a 6 meses antes da concepção e mantida; polivitamínicos pré-natais habituais costumam ser insuficientes. Anemia moderada a grave: ferro intravenoso. Proteína mínima de 60 g/dia. Ganho de peso conforme as recomendações habituais para o IMC pré-gestacional (evitar excesso e insuficiência). Dumping: evitar carboidratos de rápida absorção e não ingerir líquidos 30 minutos antes e depois da refeição. Hérnia interna ou outras complicações cirúrgicas: diagnóstico e intervenção precoces.",
+        "conduta": "Orientar que todas as mulheres com RYGB conheçam os sintomas de hérnia interna e procurem atendimento cedo; investigar dor abdominal alta prontamente. Via de parto pelas indicações obstétricas habituais; se IMC acima de 30 kg/m2, cuidados da obesidade materna. Rastrear ansiedade e outros transtornos mentais. Lactação deve ser incentivada, mantendo monitorização e suplementação.",
+        "prescricao": "Suplementação na gravidez pós-bariátrica (Quadro 1 do manual): ferro elementar 60 a 100 mg/dia (ajustar pela ferritina); ácido fólico 400 mcg/dia na pré-concepção e 1º trimestre (4 a 5 mg/dia se obesa ou diabética); vitamina B12 1.000 mcg IM mensal; vitamina D 1.000 UI/dia (1.000 a 2.000 UI/dia na gestação e lactação, mais de 3.000 UI/dia se deficiência, meta 30 ng/mL ou mais); cálcio 1.200 a 1.500 mg/dia em doses divididas (preferir citrato); tiamina 12 mg/dia; vitamina K 90 a 120 mcg/dia; vitamina A 5.000 UI/dia como betacaroteno (evitar retinol).\nAnemia moderada a grave: sacarato de hidróxido férrico 400 mg por semana (200 mg, 2 vezes por semana) por 4 semanas, diluído em 200 mL de solução fisiológica, infusão de 2 horas, em hospital-dia.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 55).",
+        "cid": "O99.2,Z98.0",
+        "esp": "Obstetrícia;Nutrologia;Endocrinologia e Metabologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 55 (Gestação após cirurgia bariátrica): intervalo, desfechos, quadro de suplementação, dumping, rastreio de diabetes, complicações"
+        }
+      ],
+      "observacoes": "Quadro 1 legível em texto. Fichas gerais de cirurgia bariátrica e complicações já existem; esta cobre o pré-natal."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Gestação após reprodução assistida",
+        "introducao": "Gestações obtidas por inseminação intrauterina ou fertilização in vitro (FIV) têm riscos maternos e perinatais maiores que as espontâneas, ligados à estimulação ovariana, à idade materna e à gestação múltipla. A síndrome de hiperestimulação ovariana deve ser evitada (múltiplos folículos e estradiol alto no dia do hCG aumentam o risco).",
+        "criterios": "1º trimestre: maior risco de abortamento (29% na inseminação, 32,6% na FIV, versus 12% na gestação espontânea), de gravidez ectópica (2% a 5% pós-FIV, contra 1,3% a 2% espontânea) e de gravidez heterotópica (0,5% a 1% pós-FIV). 2º e 3º trimestres: gestação múltipla, pré-eclâmpsia, diabetes gestacional, placenta de inserção baixa, descolamento prematuro, prematuridade, baixo peso, restrição de crescimento, anomalias congênitas, cromossomopatias, mortalidade perinatal, parto operatório e hemorragia pós-parto. Síndromes raras mais vistas: Beckwith-Wiedemann, Angelman e Silver-Russell.",
+        "exames": "Ultrassonografia transvaginal precoce para localizar o saco gestacional (tópico ou ectópico), avaliar viabilidade e número de sacos. Datação em geral confiável pelo relatório do serviço. Cariótipo do casal na investigação de oligozoospermia, teratozoospermia e fibrose cística (azoospermia: 13,7% de cariótipo alterado, microdeleção Y). Diagnóstico genético pré-implantacional (FISH, a-CGH, NGS, PCR) quando disponível.",
+        "tratamento": "Pré-natal precoce, no 1º trimestre, com rotina habitual, atento a idade avançada, obesidade e comorbidades prévias. Progesterona micronizada, em doses variadas, mantida em geral até a 12ª semana; suspender medicamentos empíricos sem evidência que tragam riscos. Síndrome de hiperestimulação instalada: punção da ascite, cabergolina (inibe VEGF) e internação. Em idade avançada com falhas de implantação e abortamentos, discutir ovodoação. Gestação múltipla: pré-natal de alto risco; a redução embrionária é vedada (Resolução CFM 2.320/2022, item 8 dos princípios gerais). Oferecer suporte emocional desde a pré-concepção.",
+        "conduta": "Acompanhar como gestação de alto risco proporcional aos fatores presentes (múltipla, idade, comorbidades). Atenção a dor e sangramento no 1º trimestre (ectópica e heterotópica).",
+        "prescricao": "Progesterona micronizada (dose: PENDENTE DE VERIFICAÇÃO, o capítulo cita \"doses variadas\") até a 12ª semana. Limite de embriões transferidos: Resolução CFM 2.320/2022 (DOU de 20/09/2022): mulheres com até 37 anos, até 2 embriões; com mais de 37 anos, até 3; embriões euploides ao diagnóstico genético, até 2 em qualquer idade; na doação de oócitos vale a idade da doadora. A Resolução 1.957/2010, citada no manual de 2022 (até 2 embriões até 35 anos; até 3 de 36 a 39; até 4 com 40 ou mais), foi substituída e não deve ser usada. Não foi encontrada resolução posterior à 2.320/2022; confirmar no portal do CFM se houve alteração.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 59).",
+        "cid": "Z35.8",
+        "esp": "Obstetrícia;Reprodução Humana"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 59 (Gravidez após reprodução assistida): riscos maternos e perinatais, pré-natal, progesterona, gestação múltipla, ectópica/heterotópica"
+        },
+        {
+          "titulo": "Resolução CFM nº 2.320/2022: normas éticas para a utilização de técnicas de reprodução assistida",
+          "instituicao": "Conselho Federal de Medicina",
+          "ano": "2022",
+          "url": "https://sistemas.cfm.org.br/normas/arquivos/resolucoes/BR/2022/2320_2022.pdf",
+          "usadoPara": "Itens 7 e 8 dos princípios gerais (número de embriões transferidos por idade; vedação da redução embrionária); Art. 2º (revoga a 2.294/2021)"
+        }
+      ],
+      "observacoes": "Não há CID O09 no cid_full.json; usado Z35.8 (Supervisão de outras gravidezes de alto risco). O limite de embriões do manual (Resolução 1.957/2010) estava desatualizado e foi trocado pelo texto da Resolução CFM 2.320/2022, lida diretamente no PDF do CFM. Progesterona: dose PENDENTE (manual diz \"doses variadas\")."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Leiomioma uterino na gestação",
+        "introducao": "Coexistência de mioma e gravidez (2,7% a 10,7% das gestações), em geral conhecido antes ou achado na ultrassonografia inicial. Na maioria dos casos não altera o prognóstico; raramente causa abortamento, óbito fetal, restrição de crescimento, prematuridade, apresentação anômala, obstrução do canal de parto, placenta prévia, descolamento prematuro, retenção placentária e hemorragia pós-parto. Os miomas crescem em geral entre o 1º e o 2º trimestres e se estabilizam no 3º.",
+        "criterios": "Palpação de nódulos subserosos; mioma ístmico abaulando fórnice; desproporção entre altura uterina e idade gestacional em grandes nódulos intramurais. Complicação típica: degeneração vermelha (rubra), a \"síndrome dolorosa dos leiomiomas\" (cerca de 10%): dor localizada, náuseas, vômitos, febre baixa, leucocitose e aumento da atividade uterina, sobretudo no 2º e início do 3º trimestre, cedendo em média em 10 dias.",
+        "exames": "Ultrassonografia abdominal é o exame de escolha. Investigar o sítio placentário após o 1º trimestre (acretismo próximo a miomas submucosos); no 3º trimestre, avaliar o crescimento fetal (principalmente miomas retroplacentários) e a via de parto. Ressonância magnética pode ajudar a avaliar a ressecabilidade de nódulo retroplacentário.",
+        "tratamento": "Conduta expectante na imensa maioria; monitorar o volume em assintomáticas é desnecessário (atenção a nódulos maiores que 5 cm). Degeneração: tratamento clínico com anti-inflamatórios não esteroidais; opioides ou analgesia peridural contínua com internação em casos refratários. Miomectomia na gestação é rara (risco de sangramento incoercível, perda gestacional e histerectomia); se indicada, de preferência no 2º trimestre, após 12 semanas e até 20 a 22 semanas, por laparotomia mediana. Indicações: dor incontrolável refratária a opioides; hidronefrose (sobretudo bilateral, com perda de função); imagem de degeneração com dor crônica; suspeita de malignidade; compressão de veia cava inferior (com ou sem trombose); compressão de vias biliares com colestase.",
+        "conduta": "Orientar miomas submucosos sobre maior risco de abortamento; evitar supervalorizar a associação com prematuridade. Maior incidência de cesárea e de apresentação anômala. Na cesariana: histerotomia segmentar transversa a pelo menos 2 cm de nódulos ístmicos, ou incisão corporal/fúndica para evitar os miomas. Miomectomia na cesárea só em exceção: nódulos subserosos pediculados volumosos, miomas degenerados em sintomáticas ou nódulos ístmicos que dificultem a histerorrafia.",
+        "prescricao": "Dor por degeneração: anti-inflamatório não esteroidal (fármaco, dose e limite de uso na gestação: PENDENTE DE VERIFICAÇÃO; o capítulo não os detalha; observar restrições gestacionais) e, se refratária, opioide ou analgesia peridural contínua em internação.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 61).",
+        "cid": "O34.1,D25.9",
+        "esp": "Obstetrícia;Ginecologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 61 (Leiomioma do útero): diagnóstico, conduta expectante, degeneração, indicações de miomectomia, cesárea"
+        }
+      ],
+      "observacoes": "Ficha geral de leiomioma/mioma já existe; esta trata da gestação. Sem AINE ou dose na fonte."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Colo uterino curto e prevenção do parto pré-termo",
+        "introducao": "Parto pré-termo (até 36 semanas e 6 dias) ocorre em cerca de 11% dos nascimentos no Brasil e é a maior causa de morte neonatal. Um dos fatores de risco mais citados é o colo encurtado na ultrassonografia transvaginal; antecedente de parto pré-termo espontâneo é fator de grande importância na gestação seguinte. Outros fatores: intervalo interpartal menor que 18 meses, baixo IMC, anemia, sangramento precoce, polidrâmnio, gestação múltipla, tabagismo, malformações uterinas, conização, doença periodontal, vaginose bacteriana, bacteriúria e infecção urinária.",
+        "criterios": "Comprimento do canal cervical de 25 mm ou menos indica maior risco (quanto menor, maior o risco). Medida a partir de 16 semanas em casos de maior risco; nos demais, quando disponível, entre 19 e 24 semanas, na morfologia do 2º trimestre.",
+        "exames": "Ultrassonografia transvaginal para medida do colo. Em mulheres com parto pré-termo espontâneo prévio: avaliação seriada do comprimento cervical de 16 a 24 semanas. Vigilância de infecções cervicovaginais e urinárias.",
+        "tratamento": "Progesterona natural micronizada por via vaginal desde o diagnóstico do colo curto até 36 semanas e 6 dias. Em mulheres com parto pré-termo espontâneo anterior, iniciar a partir de 16 semanas, independentemente do colo, e fazer medidas seriadas até 24 semanas para decidir outras intervenções. Cerclagem cervical: decidir se houver sinais de insuficiência istmocervical. Pessário: uso ainda não bem estabelecido. Repouso restrito ao leito não tem efeito comprovado e pode causar tromboembolismo. Modificações do estilo de vida e vigilância de infecções.",
+        "conduta": "Pré-natal precoce e atento ao risco de parto pré-termo; gestantes de alto risco devem ser acompanhadas em serviço secundário ou terciário de referência. Em episódio de trabalho de parto prematuro, ver ficha própria (corticoide antenatal, tocólise, neuroproteção).",
+        "prescricao": "Progesterona natural micronizada 200 mg por via vaginal, à noite, do diagnóstico (ou de 16 semanas, se parto pré-termo prévio) até 36 semanas e 6 dias.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 6.2).",
+        "cid": "O26.8",
+        "esp": "Obstetrícia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 6.1 e 6.2 (Prematuridade): fatores de risco, colo curto, progesterona, cerclagem e pessário"
+        }
+      ],
+      "observacoes": "O34.3 (incompetência cervical) foi retirado do CID por duplicar a ficha de Incompetência istmocervical e não se aplicar a todo colo curto; O26.8 (outras afecções ligadas à gravidez) mantido. Já existem fichas de trabalho de parto prematuro e de incompetência istmocervical."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Malformações fetais incompatíveis com a vida",
+        "introducao": "Malformações são a segunda maior causa de mortalidade infantil, depois das condições da assistência perinatal. Não há consenso na literatura sobre \"malformação incompatível com a vida\"; a melhor definição é a de anomalia ou conjunto de anomalias com letalidade presumida e incapacidade de sobrevivência sem suporte vital após o nascimento. Todas as listadas têm chance de óbito acima de 90% no primeiro ano. Anencefalia/acrania pode ser diagnosticada já no 1º trimestre; as demais com mais segurança no 2º.",
+        "criterios": "Principais malformações consideradas incompatíveis com a vida pelo manual (todas com chance de óbito acima de 90% no primeiro ano; ver também as fichas de síndrome de Edwards, síndrome de Patau e anencefalia/encefalocele): anencefalia; trissomias 13 e 18; holoprosencefalia alobar e semilobar; encefalocele com exteriorização de grande parte do encéfalo; pentalogia de Cantrell; extenso defeito de parede abdominal com exteriorização de órgãos vitais; body stalk; síndrome da banda amniótica com lesão grave de órgãos vitais (individualizar); nefropatias graves com anidramnia/hipoplasia pulmonar (agenesia renal bilateral, rins policísticos ou multicísticos bilaterais, válvula de uretra posterior); displasia esquelética letal (hipoplasia torácica/pulmonar); gemelaridade imperfeita com órgãos nobres compartilhados.",
+        "exames": "Ultrassonografia obstétrica morfológica confirmada pela equipe de medicina fetal; cariótipo fetal por biópsia de vilo corial, amniocentese ou cordocentese conforme a idade gestacional. Em Rh negativa não sensibilizada, imunoglobulina anti-D após procedimento invasivo (ver cap. 71). Avaliação psicológica conjunta.",
+        "tratamento": "Sem tratamento curativo; condução multidisciplinar com pré-natal especializado em medicina fetal, independentemente da decisão do casal (manter a gestação até o parto espontâneo ou interrompê-la). Se a decisão for manter, acompanhar pré-natal, parto e puerpério.",
+        "conduta": "Expor diagnóstico e possibilidades ao casal. Anencefalia: por decisão do STF (2012) e Resolução CFM 1.989/2012, a pedido da gestante e sem autorização judicial, é possível interromper, com Termo de Consentimento Livre e Esclarecido e laudo de ultrassonografia com duas imagens (sagital e transversal do polo cefálico) mostrando ausência de calota craniana e de parênquima cerebral identificável, assinado por dois médicos. Demais malformações da lista: parecer médico com laudo confirmatório, parecer psicológico e carta da gestante/casal solicitando autorização judicial; com aprovação, internar para interrupção; se negada, manter o pré-natal. Após 21 semanas e 6 dias, discutir o feticídio antes da internação (cloreto de potássio 2 a 3 mL, de preferência intracardíaco, por especialista em medicina fetal guiado por ultrassonografia; assistolia em geral em menos de 1 minuto, confirmada após 2 minutos e 30 a 60 minutos), com observação por 3 horas e retorno em 7 dias para indução (ou antes, se trabalho de parto).",
+        "prescricao": "Indução da interrupção: misoprostol conforme recomendação FIGO 2017 por idade gestacional (Figura do capítulo, apresentada como imagem): doses PENDENTE DE VERIFICAÇÃO, não legíveis na extração do texto; consultar a figura original do manual.\nFeticídio (acima de 21 semanas e 6 dias): cloreto de potássio 2 a 3 mL, preferencialmente intracardíaco (ventrículo), guiado por ultrassonografia, exclusivamente por especialista em medicina fetal; a concentração da solução não consta no capítulo (PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 70).",
+        "cid": "O35.8,Q89.9",
+        "esp": "Obstetrícia;Genética Médica"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 70 (Malformações fetais incompatíveis com a vida): definição, lista, aspectos legais, conduta e feticídio"
+        }
+      ],
+      "observacoes": "Figura de misoprostol (FIGO 2017) é imagem: doses PENDENTE. Sobrepõe-se em parte à ficha \"Anencefalia e encefalocele\" (lote-06, mesmo capítulo); mantida por trazer a lista completa, a via legal das demais malformações e o feticídio. Concentração do cloreto de potássio não consta na fonte (PENDENTE). Existe também \"Malformações fetais: abordagem\" (O35.9) no acervo, genérica."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Arritmias fetais (bradiarritmias e taquiarritmias)",
+        "introducao": "Bradicardia fetal: frequência menor que 110 bpm por pelo menos 10 minutos. O bloqueio atrioventricular (BAV) pode ocorrer com cardiopatia estrutural ou em doenças maternas do tecido conjuntivo (lúpus, Sjögren) com anticorpos SSA/Ro ou SSB/La. Taquiarritmias: frequência acima de 180 a 200 bpm; a sustentada (acima de 200) é emergência obstétrica, podendo causar insuficiência cardíaca, hidropisia, polidrâmnio e óbito fetal.",
+        "criterios": "BAV de 1º grau: condução presente com PR prolongado (acima de 150 ms); 2º grau: nem todos os impulsos conduzidos; BAV total: dissociação AV e ventrículo abaixo de 60 bpm. Taquiarritmias: TSV por reentrada ou atrial ectópica (acima de 200 bpm, condução 1:1), flutter atrial (3º trimestre, átrio 350 a 500 bpm, bloqueio de 2:1 a 4:1), juncional (JET) e taquicardia ventricular (rara, 180 a 300 bpm, ventrículo maior que átrio).",
+        "exames": "Ecocardiografia fetal e ultrassonografia (sinais de hidropisia, polidrâmnio). Anticorpos maternos anti-Ro/SSA e anti-La/SSB quando houver BAV. Na terapia: avaliação cardiológica e eletrocardiograma materno e, com digoxina, nível sérico a cada 2 dias (risco de intoxicação).",
+        "tratamento": "Bradiarritmias: nos BAV de 1º e 2º graus, sobretudo em gestantes com doença do tecido conjuntivo, corticoide para evitar progressão a BAV total e reduzir a fibroelastose miocárdica; após BAV total instalado, avaliar frequência e sinais de hidropisia, que podem indicar antecipar o parto; marca-passo fetal percutâneo está abandonado. Taquiarritmias: preferir fármaco oral materno com passagem transplacentária; no feto hidrópico a passagem é deficiente (placenta hidrópica), então usar terapia direta por cordocentese guiada por ultrassonografia (via IM fetal é alternativa). Iniciar o antiarrítmico com a gestante internada, até ajustar a dose.",
+        "conduta": "Referenciar à medicina fetal e cardiologia fetal/materna. Monitorar efeitos colaterais maternos (náuseas, pró-arritmia, QTc acima de 0,48) e fetais.",
+        "prescricao": "Bradiarritmia (BAV de 1º e 2º graus): dexametasona ou betametasona 4 a 8 mg/dia.\nTaquiarritmias (via materna, Quadro 1 do manual): digoxina (TSV por reentrada, atrial ectópica, flutter): ataque 1.500 mcg/dia por 2 dias (0,5 mg a cada 8 horas), manutenção 0,25 a 0,75 mg/dia; sotalol (TSV por reentrada, atrial ectópica, juncional, flutter): 160 a 480 mg/dia a cada 8 a 12 horas; amiodarona (TSV por reentrada, juncional, flutter): ataque 1.800 a 2.400 mg/dia divididos a cada 6 horas por 2 dias, manutenção 200 a 600 mg/dia (convertido o ritmo ou resolvida a hidropisia: descontinuar e fazer transição para outro agente); flecainida (TSV por reentrada, atrial ectópica, juncional): 100 a 300 mg/dia divididos a cada 8 ou 12 horas. Taquicardia ventricular: lidocaína 1 a 1,5 mg/kg IV seguida de 1 a 4 mg/min contínuo; mexiletina 600 a 900 mg/dia divididos a cada 8 horas; sulfato de magnésio 2 a 6 g IV em 20 minutos seguido de 1 a 2 g/hora por 48 horas.\nVia fetal: só a digoxina tem dose fetal no Quadro 1 (IM fetal: 88 mcg/kg a cada 12 horas, repetir duas vezes; risco de lesão do nervo ciático ou da pele fetal); doses por cordocentese ou de outros fármacos por via fetal não constam (PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 72.7 e 72.8, adaptado de Bravo-Valenzuela, 2020).",
+        "cid": "O36.8",
+        "esp": "Obstetrícia;Cardiologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 72.7 e 72.8 (Terapêutica fetal clínica: bradiarritmias e taquiarritmias), Quadro 1"
+        }
+      ],
+      "observacoes": "Quadro 1 reconferido contra o PDF (extração em modo texto bruto): todas as doses maternas conferem. A dose fetal de 88 mcg/kg pertence à linha da digoxina (a extração em layout a deslocava para a linha do sotalol). A tabela é imagem de texto desalinhado; recomenda-se conferência visual final na p. 658-659 do manual."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Derrame pleural fetal (hidrotórax)",
+        "introducao": "Acomete 1 em 15.000 gestações, com maior morbimortalidade perinatal, que pode melhorar com intervenção fetal. O hidrotórax primário decorre sobretudo de anomalias do desenvolvimento linfático; o secundário, de anormalidades cromossômicas ou estruturais. Regressão espontânea em até 22% dos primários (mais em derrames unilaterais sem polidrâmnio ou hidropisia). Grandes derrames elevam a pressão intratorácica, comprimem o coração, causam hidropisia e hipoplasia pulmonar.",
+        "criterios": "À ultrassonografia: líquido anecoico em torno de um ou ambos os pulmões, distinguível do derrame pericárdico pelo aspecto de \"asa de morcego\" dos pulmões flutuando. Avaliar hidropisia, polidrâmnio e desvio do mediastino.",
+        "exames": "Ultrassonografia seriada; investigação de causa secundária (cariótipo e anomalias estruturais, ecocardiografia fetal) conforme o caso.",
+        "tratamento": "Conservador (derrames pequenos a moderados, unilaterais, sem hidropisia nem desvio do mediastino): ultrassonografia a cada 1 a 2 semanas. Toracocentese entre 17 e 37 semanas, com agulha 20 G guiada por ultrassonografia, única ou múltipla; reacúmulo comum em 1 a 10 dias. Derivação pleuroamniótica: fetos hidrópicos em que se suspeita o derrame como causa primária; também grandes derrames isolados sem hidropisia que ocupem mais da metade do tórax com desvio mediastinal, ou que cresçam rápido ou se associem a polidrâmnio. Após a derivação, ultrassonografia semanal para detectar reacúmulo, bloqueio ou deslocamento.",
+        "conduta": "Referência a centro de medicina fetal para terapia intrauterina; seguimento ultrassonográfico conforme o fluxograma do capítulo (Fluxograma 1, imagem).",
+        "prescricao": "Sem prescrição medicamentosa; tratamento intervencionista fetal por especialista.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 73.6, citando Yinon, 2010).",
+        "cid": "O36.8",
+        "esp": "Obstetrícia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 73.6 (Terapêutica fetal cirúrgica: derrame pleural): etiologia, ultrassonografia, conduta conservadora, toracocentese, derivação"
+        }
+      ],
+      "observacoes": "O fluxograma de manejo é imagem; usei apenas o texto. Sem CID específico de hidrotórax fetal; usado O36.8 (outros problemas fetais)."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Uso de álcool na gestação: rastreamento e conduta pré-natal",
+        "introducao": "O álcool é teratogênico, com efeitos irreversíveis no sistema nervoso central. A síndrome alcoólica fetal (SAF) é o complexo de sinais no recém-nascido por ingestão materna de álcool na gravidez e/ou no período pré-concepcional. Não existe dose segura. Efeito depende de quantidade, frequência e momento: 1º trimestre, anomalias faciais e estruturais (inclusive cerebrais); 2º, maior risco de aborto; 3º, peso, comprimento e crescimento cerebral. O feto elimina o álcool a apenas 3% a 4% da taxa materna e o álcool passa ao leite.",
+        "criterios": "Sinais da SAF: déficit de crescimento (baixo peso ao nascer), dismorfismo facial típico (fissuras palpebrais pequenas, filtro nasal ausente, borda vermelha do lábio superior fina) e comprometimento do sistema nervoso central. A SAF completa não exige confirmação da exposição; a parcial, sim (defeitos de nascimento e distúrbios do neurodesenvolvimento ligados ao álcool). O conjunto forma os distúrbios do espectro da síndrome alcoólica fetal.",
+        "exames": "Rastrear o uso de substâncias em todas as gestantes na 1ª consulta e nas seguintes (suposição baseada em fatores de risco não basta); anamnese detalhada, sem preconceito e com sigilo. Testes para comprovar uso em geral não são feitos (limitações e necessidade de consentimento). Estratégia SBIRT: triagem, intervenção breve e encaminhamento para tratamento multidisciplinar.",
+        "tratamento": "Não há tratamento da SAF no capítulo; a prevenção é a abstinência. Acompanhar em serviço de alto risco com equipe multiprofissional (tratamento, suporte psicossocial, reinserção social, planejamento familiar), concentrando consultas e exames no mesmo dia. Avisar o anestesiologista (plano de analgesia) e o pediatra (síndrome de abstinência neonatal) no parto. A gestação é momento motivacional para iniciar o tratamento. Considerar contracepção no pós-parto imediato (DIU hormonal ou implante de etonogestrel).",
+        "conduta": "Esclarecer consequências para gestação, período neonatal e longo prazo. Discutir no pré-natal e reavaliar no período neonatal os riscos e benefícios da amamentação. Investigar outras substâncias, doenças sexualmente transmissíveis e rede de apoio.",
+        "prescricao": "Sem prescrição medicamentosa específica; abordagem comportamental e multiprofissional (tratamento farmacológico do transtorno por uso de álcool na gestação: PENDENTE DE VERIFICAÇÃO, não consta no capítulo).\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 58.1 e 58.2).",
+        "cid": "O35.4,O99.3",
+        "esp": "Obstetrícia;Psiquiatria;Neonatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 58.1 e 58.2 (Usuária de álcool, fumo e drogas ilícitas: pré-natal e álcool)"
+        }
+      ],
+      "observacoes": "Renomeada e CID Q86.0 retirado: a ficha da síndrome alcoólica fetal e TEAF (Q86.0) já está no lote-17 (fonte SBP); esta cobre o pré-natal (rastreamento, SBIRT, parto, puerpério). Existe também \"Uso de drogas na gestação\" no acervo (genérica)."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Lesões intraepiteliais cervicais e citologia alterada na gestação",
+        "introducao": "A prevalência de câncer de colo ou lesões precursoras é igual em gestantes e não gestantes; o risco de progressão para carcinoma invasor na gravidez é baixo, e a conduta conservadora é aceitável, evitando procedimentos que arrisquem a gestação. O condiloma acuminado é a manifestação mais comum do HPV na gestação e pode proliferar rapidamente. A vacina contra HPV não deve ser aplicada em gestantes (dados limitados de segurança), mas é segura na lactação.",
+        "criterios": "Citologia (Papanicolaou) é segura na gravidez e indicada como nas não grávidas, evitando rastreamento antes de 25 anos; informar o citologista da gestação (a interpretação é mais difícil); pode-se coletar após o 1º trimestre para evitar ansiedade com sangramento. Colposcopia na gestação tem o papel de excluir câncer invasor, adiando biópsia e tratamento definitivo para o pós-parto sempre que possível; o colo é mais friável e a metaplasia ativa dificulta a leitura. Biópsias do colo são seguras.",
+        "exames": "Citologia, colposcopia e biópsia dirigida só quando houver suspeita de carcinoma invasor. Conduta inicial por resultado, como em não gestantes (Quadro do manual, baseado nas Diretrizes do INCA de 2016, que podem ter sido atualizadas: conferir a diretriz vigente): ASC-US menor que 25 anos, repetir em 3 anos; 25 a 29 anos, em 12 meses; 30 anos ou mais, em 6 meses; LIEBG: menor que 25 anos, repetir em 3 anos; 25 anos ou mais, repetir em 6 meses; ASC-H, AGC, LIEAG e suspeita de microinvasão/carcinoma: colposcopia (biópsia só se houver suspeita de carcinoma invasor). A tipagem viral não muda a conduta.",
+        "tratamento": "Condiloma: ácido tricloroacético ou métodos físicos excisionais; podofilina, interferon e 5-fluorouracil são contraindicados. NIC 2 ou 3: tratamento excisional não é recomendado na gestação (aumenta trabalho de parto prematuro e rotura de membranas, e a persistência é alta); reavaliar com citologia e colposcopia 90 dias após o parto e, se persistir, considerar biópsia ou excisão da zona de transformação. NIV e NIVA: postergar o tratamento para depois do parto; excisão ou ablação se sintomas intensos.",
+        "conduta": "Colposcopia normal ou sem indicação de biópsia: repetir citologia 90 dias após o parto. Mulheres com conização ou CAF prévia têm maior risco de colo curto, parto pré-termo e baixo peso. Via de parto obstétrica, exceto condilomas gigantes que obstruam o canal; a cesárea eletiva não protege contra a transmissão vertical nem modifica a evolução das lesões. Manifestação neonatal é rara (papilomatose nasofaríngea). Estimular uso de preservativo.",
+        "prescricao": "Condiloma na gestação: ácido tricloroacético tópico (concentração, aplicação e frequência: PENDENTE DE VERIFICAÇÃO, não constam no capítulo) ou excisão; evitar podofilina, interferon e 5-fluorouracil.\nBase: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap. 33.2 a 33.6).",
+        "cid": "O34.4,N87.9,A63.0",
+        "esp": "Obstetrícia;Ginecologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Gestação de Alto Risco",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção Primária à Saúde",
+          "ano": "2022",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+          "usadoPara": "Cap. 33 (Papiloma vírus humano): particularidades na gestação, citologia, colposcopia, condiloma, NIC, via de parto, vacina"
+        }
+      ],
+      "observacoes": "Conduta por resultado conferida contra o Quadro 1 do cap. 33.3.2 (LIEBG corrigido: o quadro manda repetir a citologia, não colposcopia). Conduta baseada nas diretrizes de 2016; a existência de diretriz nacional mais nova de rastreamento deve ser verificada. Fichas gerais \"Lesões intraepiteliais cervicais (NIC)\" (que indica excisão, o que não vale na gestação), \"Câncer de colo do útero: rastreamento e HPV\" e de condiloma existem no acervo; esta trata da gestação."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Estratificação do risco, mortalidade materna, métodos de avaliação do bem-estar/maturidade fetal, procedimentos invasivos, medicina integrativa, assistência pré-natal à indígena (cap. 1, 2, 64, 65, 67, 68, 71)",
+      "motivo": "Capítulos de organização do cuidado ou de métodos diagnósticos, sem condição clínica própria para ficha."
+    },
+    {
+      "tema": "Condições já presentes no acervo (cap. 3-5, 7-18, 19-29, 31-32, 34-35, 37-39, 40-48, 50-52, 54, 56-57, 62-63, 66, 69, 72-75 em parte)",
+      "motivo": "já existe: Hiperêmese gravídica; Abortamento/aborto espontâneo/habitual/infectado; Gravidez ectópica; Mola hidatiforme; Placenta prévia; DPP; Acretismo; Vasa prévia; Trabalho de parto prematuro; RPM; RCF; Gravidez prolongada; Diabetes gestacional; Pré-eclâmpsia/eclâmpsia/HELLP; Oligodrâmnio/polidrâmnio; Óbito fetal; Isoimunização Rh; Esteatose hepática aguda; Colestase; Gestação gemelar; HPP; Rubéola; Sífilis; Toxoplasmose; HIV e hepatite B na gestação; herpes genital; parvovirose; COVID/influenza; dengue/Zika; hanseníase; vulvovaginites; ITU; malária; pneumonia; sepse; GBS; anemia; cardiopatia; tireopatias; hipertensão crônica; diabetes pré-gestacional; LES; asma; epilepsia; depressão/psicofármacos; trombofilias/SAF; TEV; adolescência; obesidade; DRC; tabagismo; drogas; apendicite; colecistite; PCR; malformações, hérnia diafragmática, mielomeningocele, TTFF; interrupção por violência sexual; indução do parto."
+    },
+    {
+      "tema": "Hanseníase, herpes, HPV (condiloma), hepatites A/B/D/E, arboviroses e HIV na gestação",
+      "motivo": "já existem fichas gerais ou específicas da gestação; capítulos do manual não acrescentam condição distinta."
+    },
+    {
+      "tema": "Hiperplasia adrenal congênita e acidemia metilmalônica (terapêutica fetal clínica, cap. 72.3 e 72.4); obstrução do trato urinário baixo fetal (cap. 73.5)",
+      "motivo": "Condições raras de terapêutica fetal experimental; obstrução do trato urinário baixo já coberta por Válvula de uretra posterior e Hidronefrose antenatal."
+    },
+    {
+      "tema": "Interrupção da gestação: doses de misoprostol por idade gestacional (cap. 70, Figura 2)",
+      "motivo": "PENDENTE: figura em imagem não extraível pelo pdftotext; mantido PENDENTE na ficha de malformações incompatíveis com a vida."
+    }
+  ]
+}

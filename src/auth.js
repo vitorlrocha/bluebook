@@ -1,6 +1,10 @@
 /* Bluebook — acesso local com e-mail e senha (v72, Etapa 2 do ROADMAP.md).
    - Tudo fica neste aparelho (localStorage): não há servidor. A senha nunca é guardada;
      guarda-se só o hash PBKDF2-SHA-256 (210.000 iterações, sal aleatório de 16 bytes) via WebCrypto.
+   - Com a nuvem configurada (src/nuvem.js, window.BBNuvem.configurado()): a conta é do Firebase e vale em
+     todos os aparelhos. Criar acesso e o 1º login num aparelho novo precisam de internet; depois o aparelho
+     confere a senha pelo hash local e abre offline. "Esqueci a senha" envia o e-mail de redefinição (sem
+     apagar dados) e "Alterar senha" troca também na nuvem. Sem a nuvem, tudo abaixo funciona como antes.
    - É uma trava de acesso pessoal, não criptografia dos dados: o conteúdo clínico é público e os dados
      pessoais continuam legíveis por quem tiver acesso ao navegador do aparelho.
    - Uma conta por aparelho. Os dados pessoais já salvos (anotações, favoritos, recentes, prescrições,
@@ -21,6 +25,9 @@
   function gravar(st, k, v) { try { st.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } }
   function apagar(k) { try { localStorage.removeItem(k); } catch (e) {} try { sessionStorage.removeItem(k); } catch (e) {} }
   function armazenamentoOk() { try { localStorage.setItem("__bb_t", "1"); localStorage.removeItem("__bb_t"); return true; } catch (e) { return false; } }
+  /* Nuvem (src/nuvem.js): null quando o app foi gerado sem a configuração do Firebase. */
+  function nuvem() { var n = window.BBNuvem; return n && n.configurado() ? n : null; }
+  function online() { return navigator.onLine !== false; }
   function normEmail(e) { return String(e || "").trim().toLowerCase(); }
   function emailValido(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e); }
   function b64(buf) { var s = "", a = new Uint8Array(buf); for (var i = 0; i < a.length; i++) s += String.fromCharCode(a[i]); return btoa(s); }
@@ -72,15 +79,19 @@
   var raiz = null;
   function el(id) { return document.getElementById(id); }
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
-  function msg(t, ok) { var m = el("auth-msg"); if (!m) return; m.textContent = t || ""; m.className = "auth-msg" + (ok ? " auth-msg-ok" : ""); }
+  function msg(t, ok, id) { var m = el(id || "auth-msg"); if (!m) return; m.textContent = t || ""; m.className = "auth-msg" + (ok ? " auth-msg-ok" : ""); }
   function ocupado(sim) { var b = el("auth-ok"); if (b) { b.disabled = sim; b.setAttribute("aria-busy", sim ? "true" : "false"); } }
 
   function campo(id, rotulo, tipo, auto, extra) {
     return '<label class="auth-label" for="' + id + '">' + rotulo + '</label>' +
       '<input class="auth-input" id="' + id + '" type="' + tipo + '" autocomplete="' + auto + '"' + (extra || "") + '>';
   }
-  var NOTA = '<p class="auth-nota">O acesso fica guardado só neste aparelho e funciona sem internet. ' +
-    'O Bluebook é uma ferramenta de apoio: não substitui o julgamento clínico nem a bula.</p>';
+  function NOTA() {
+    return '<p class="auth-nota">' + (nuvem()
+      ? "Sua conta vale em todos os seus aparelhos: anotações, favoritos e prescrições sincronizam sozinhos. Depois do primeiro acesso, o app abre sem internet. "
+      : "O acesso fica guardado só neste aparelho e funciona sem internet. ") +
+      "O Bluebook é uma ferramenta de apoio: não substitui o julgamento clínico nem a bula.</p>";
+  }
   /* Etapa 5: "Entrar com o Google" (src/google.js). Fica desativado se o Client ID não estiver configurado. */
   function googleOk() { return !!(window.BBGoogle && window.BBGoogle.configurado()); }
   function GOOGLE() {
@@ -102,7 +113,9 @@
     } else if (!c.google) { c.google = true; gravar(localStorage, K_CONTA, c); }
     apagar(K_TENT);
     abrirSessao(email, manter);
-    if (window.BBGoogle && window.BBGoogle.vincular) window.BBGoogle.vincular(email);
+    /* Sem a nuvem, entrar com o Google já liga o backup no Drive (como antes). Com a nuvem, os dados
+       sincronizam pela conta e o Drive só é ligado se a pessoa pedir em Ajustes. */
+    if (!nuvem() && window.BBGoogle && window.BBGoogle.vincular) window.BBGoogle.vincular(email);
     entrarNoApp();
   }
   function ligarGoogle() {
@@ -112,26 +125,54 @@
       msg("");
       var manter = el("auth-manter") ? el("auth-manter").checked : true;
       b.disabled = true;
-      window.BBGoogle.entrar().then(function (email) { entrarGoogle(email, manter); })
+      window.BBGoogle.entrar().then(function (email) {
+        var n = nuvem(), c = conta();
+        if (!n || (c && c.email !== normEmail(email))) { entrarGoogle(email, manter); return; }
+        /* Com a nuvem: o token do Google vira a conta do Firebase (mesmos dados em todos os aparelhos). */
+        return n.entrarGoogle(window.BBGoogle.ultimoToken ? window.BBGoogle.ultimoToken() : null).then(function () { entrarGoogle(email, manter); }, function (e) {
+          if (conta()) { entrarGoogle(email, manter); return; }     // já havia acesso aqui: entra e sincroniza depois
+          throw new Error(n.mensagem(e, "google"));
+        });
+      })
         .catch(function (err) { msg(err && err.message ? err.message : "Não foi possível entrar com o Google."); })
         .then(function () { if (el("auth-google")) el("auth-google").disabled = false; });
     });
   }
 
   function tela(modo) {
-    var c = conta();
+    var c = conta(), nv = !!nuvem();
     var h = '<div class="auth-card" role="dialog" aria-modal="true" aria-labelledby="auth-titulo">' +
       '<div class="auth-topo"><span class="brand-mark auth-mark" aria-hidden="true">BB</span><h1 id="auth-titulo">Bluebook</h1></div>';
     if (modo === "criar") {
       h += '<h2 class="auth-h2">Criar acesso</h2>' +
-        '<p class="auth-sub">Cadastre seu e-mail e uma senha. Seus favoritos, anotações, recentes, prescrições e ajustes já salvos neste aparelho passam a ficar ligados a este e-mail.</p>' +
+        '<p class="auth-sub">Cadastre seu e-mail e uma senha. Seus favoritos, anotações, recentes, prescrições e ajustes já salvos neste aparelho passam a ficar ligados a este e-mail.' +
+        (nv ? " A conta vale em todos os seus aparelhos. Criar o acesso precisa de internet; depois o app abre offline." : "") + '</p>' +
         '<form id="auth-form" novalidate>' +
         campo("auth-email", "E-mail", "email", "username", ' inputmode="email" autocapitalize="off" spellcheck="false" required') +
         campo("auth-senha", "Senha (mínimo de 8 caracteres)", "password", "new-password", ' minlength="8" required') +
         campo("auth-senha2", "Confirme a senha", "password", "new-password", ' minlength="8" required') +
         '<label class="auth-check"><input type="checkbox" id="auth-manter" checked> Manter conectado neste aparelho por 30 dias</label>' +
         '<p id="auth-msg" class="auth-msg" role="alert" aria-live="assertive"></p>' +
-        '<button type="submit" class="auth-btn" id="auth-ok">Criar acesso</button></form>' + GOOGLE() + NOTA;
+        '<button type="submit" class="auth-btn" id="auth-ok">Criar acesso</button></form>' +
+        (nv && !c ? '<button type="button" class="auth-link" id="auth-ir-entrar">Já tenho acesso · Entrar</button>' : "") + GOOGLE() + NOTA();
+    } else if (modo === "esqueci" && nv) {
+      /* Com a nuvem: e-mail de redefinição (não apaga nada). Apagar o acesso do aparelho fica como alternativa, separada. */
+      h += '<h2 class="auth-h2">Esqueci a senha</h2>' +
+        '<p class="auth-sub">Enviamos um e-mail com um link para você criar uma senha nova. <strong>Nenhum dado é apagado.</strong> ' +
+        'Depois de trocar a senha, volte aqui e entre com a senha nova (com internet, na primeira vez).</p>' +
+        '<form id="auth-form" novalidate>' +
+        campo("auth-email", "E-mail", "email", "username", ' inputmode="email" autocapitalize="off" spellcheck="false" required value="' + esc(c ? c.email : "") + '"') +
+        '<p id="auth-msg" class="auth-msg" role="alert" aria-live="assertive"></p>' +
+        '<button type="submit" class="auth-btn" id="auth-ok">Enviar e-mail de redefinição</button></form>' +
+        '<button type="button" class="auth-link" id="auth-voltar">Voltar para o login</button>' +
+        (c ? '<div class="auth-sep" aria-hidden="true"><span>outra opção</span></div>' +
+          '<h2 class="auth-h2" id="auth-apagar-titulo">Apagar o acesso deste aparelho</h2>' +
+          '<p class="auth-sub">Remove deste aparelho o acesso e os dados pessoais (anotações, favoritos, recentes, prescrições e peso do plantão). ' +
+          'O que já foi sincronizado continua na nuvem e volta quando você entrar de novo. O conteúdo clínico não é afetado.</p>' +
+          '<form id="auth-form-apagar" novalidate aria-labelledby="auth-apagar-titulo">' +
+          campo("auth-confirma", 'Digite APAGAR para confirmar', "text", "off", ' autocapitalize="characters" spellcheck="false"') +
+          '<p id="auth-msg-apagar" class="auth-msg" role="alert" aria-live="assertive"></p>' +
+          '<button type="submit" class="auth-btn auth-btn-alt" id="auth-apagar">Apagar acesso e dados deste aparelho</button></form>' : "");
     } else if (modo === "esqueci") {
       h += '<h2 class="auth-h2">Esqueci a senha</h2>' +
         '<p class="auth-sub">O Bluebook não tem servidor, então não há como enviar um e-mail de recuperação. ' +
@@ -151,23 +192,38 @@
         '<label class="auth-check"><input type="checkbox" id="auth-manter" checked> Manter conectado neste aparelho por 30 dias</label>' +
         '<p id="auth-msg" class="auth-msg" role="alert" aria-live="assertive"></p>' +
         '<button type="submit" class="auth-btn" id="auth-ok">Entrar</button></form>' +
-        '<button type="button" class="auth-link" id="auth-esqueci">Esqueci a senha</button>' + GOOGLE() + NOTA;
+        '<button type="button" class="auth-link" id="auth-esqueci">Esqueci a senha</button>' +
+        (nv && !c ? '<button type="button" class="auth-link" id="auth-ir-criar">Ainda não tenho acesso · Criar</button>' : "") + GOOGLE() + NOTA();
     }
     raiz.innerHTML = h + "</div>";
-    el("auth-form").addEventListener("submit", function (e) { e.preventDefault(); enviar(modo); });
+    el("auth-form").addEventListener("submit", function (e) { e.preventDefault(); enviar(modo === "esqueci" && nv ? "redefinir" : modo); });
+    if (el("auth-form-apagar")) el("auth-form-apagar").addEventListener("submit", function (e) { e.preventDefault(); enviar("esqueci", "auth-msg-apagar"); });
+    if (el("auth-ir-entrar")) el("auth-ir-entrar").addEventListener("click", function () { tela("entrar"); });
+    if (el("auth-ir-criar")) el("auth-ir-criar").addEventListener("click", function () { tela("criar"); });
     ligarGoogle();
     if (el("auth-esqueci")) el("auth-esqueci").addEventListener("click", function () { tela("esqueci"); });
-    if (el("auth-voltar")) el("auth-voltar").addEventListener("click", function () { tela(conta() ? "entrar" : "criar"); });
+    if (el("auth-voltar")) el("auth-voltar").addEventListener("click", function () { tela(conta() || nv ? "entrar" : "criar"); });
     var aviso = null; try { aviso = sessionStorage.getItem("bluebook:aviso"); sessionStorage.removeItem("bluebook:aviso"); } catch (e) {}
     if (aviso) msg(aviso, true);
-    var foco = modo === "entrar" && c ? el("auth-senha") : el(modo === "esqueci" ? "auth-confirma" : "auth-email");
+    var foco = modo === "entrar" && c ? el("auth-senha") : el(modo === "esqueci" && !nv ? "auth-confirma" : "auth-email");
     if (foco) setTimeout(function () { try { foco.focus(); } catch (e) {} }, 0);
   }
 
-  function enviar(modo) {
-    msg("");
+  function enviar(modo, idMsg) {
+    msg(""); if (idMsg) msg("", false, idMsg);
+    var n = nuvem();
+    if (modo === "redefinir") {      // só com a nuvem: e-mail de redefinição de senha (não apaga nada)
+      var em = normEmail(el("auth-email").value);
+      if (!emailValido(em)) { msg("Informe um e-mail válido."); el("auth-email").focus(); return; }
+      if (!online()) { msg("Sem internet. Conecte-se para receber o e-mail de redefinição."); return; }
+      ocupado(true);
+      n.redefinir(em).then(function () {
+        msg("Se houver um acesso com este e-mail, a mensagem com o link chega em alguns minutos (confira também o spam). Depois, volte e entre com a senha nova.", true);
+      }, function (e) { msg(n.mensagem(e, "entrar")); }).then(function () { ocupado(false); });
+      return;
+    }
     if (modo === "esqueci") {
-      if (String(el("auth-confirma").value).trim().toUpperCase() !== "APAGAR") { msg("Digite APAGAR para confirmar."); return; }
+      if (String(el("auth-confirma").value).trim().toUpperCase() !== "APAGAR") { msg("Digite APAGAR para confirmar.", false, idMsg); return; }
       apagarAcessoEDados();
       /* recarrega para o app não manter na memória os dados apagados */
       try { sessionStorage.setItem("bluebook:aviso", "Acesso e dados pessoais apagados. Crie um acesso novo."); } catch (e) {}
@@ -179,6 +235,20 @@
     if (modo === "criar") {
       if (senha.length < 8) { msg("A senha precisa ter pelo menos 8 caracteres."); el("auth-senha").focus(); return; }
       if (senha !== el("auth-senha2").value) { msg("As senhas não conferem."); el("auth-senha2").focus(); return; }
+      if (n) {
+        /* Com a nuvem: a conta nasce no Firebase (precisa de internet) e o hash local permite abrir offline depois. */
+        if (!online()) { msg("Sem internet. Para criar o acesso é preciso estar conectado; depois ele funciona offline."); return; }
+        ocupado(true);
+        n.criarConta(email, senha).catch(function (e) {
+          /* e-mail já cadastrado e a senha digitada é a certa: simplesmente entra */
+          if (e && e.cod === "EMAIL_EXISTS") return n.entrar(email, senha).catch(function () { throw e; });
+          throw e;
+        }).then(function () { return criarConta(email, senha); })
+          .then(function () { abrirSessao(email, manter); entrarNoApp(); })
+          .catch(function (e) { msg(e && e.cod ? n.mensagem(e, "criar") : "Não foi possível salvar o acesso neste navegador."); })
+          .then(function () { ocupado(false); });
+        return;
+      }
       ocupado(true);
       criarConta(email, senha).then(function () { abrirSessao(email, manter); entrarNoApp(); })
         .catch(function () { msg("Não foi possível salvar o acesso neste navegador."); })
@@ -188,21 +258,52 @@
     var w = esperaRestante();
     if (w) { msg("Muitas tentativas. Aguarde " + w + " s e tente de novo."); return; }
     var c = conta();
+    if (!c && n) {
+      /* Aparelho novo: entra pela nuvem (precisa de internet), guarda o hash local e sincroniza. */
+      if (!senha) { msg("Digite a senha."); el("auth-senha").focus(); return; }
+      if (!online()) { msg("Sem internet. Este aparelho ainda não tem o seu acesso salvo: conecte-se para entrar pela primeira vez."); return; }
+      ocupado(true);
+      n.entrar(email, senha).then(function () { return criarConta(email, senha); })
+        .then(function () { apagar(K_TENT); abrirSessao(email, manter); entrarNoApp(); })
+        .catch(function (e) {
+          if (e && /^(EMAIL_NOT_FOUND|INVALID_PASSWORD|INVALID_LOGIN_CREDENTIALS)$/.test(e.cod)) registrarFalha();
+          msg(e && e.cod ? n.mensagem(e, "entrar") : "Não foi possível salvar o acesso neste navegador.");
+        }).then(function () { ocupado(false); });
+      return;
+    }
     if (!c) { tela("criar"); return; }
     if (!senha) { msg("Digite a senha."); el("auth-senha").focus(); return; }
     if (!c.hash) { msg("Este acesso foi criado com o Google. Use \"Entrar com o Google\" (ou defina uma senha em Ajustes para entrar sem internet)."); return; }
     ocupado(true);
     conferir(senha).then(function (ok) {
-      if (ok && email === c.email) { apagar(K_TENT); abrirSessao(email, manter); entrarNoApp(); return; }
-      var t = registrarFalha();
-      msg(t.ate ? "E-mail ou senha incorretos. Muitas tentativas: aguarde " + Math.ceil(ESPERA_MS / 1000) + " s." : "E-mail ou senha incorretos.");
-      el("auth-senha").value = ""; el("auth-senha").focus();
+      if (ok && email === c.email) {
+        apagar(K_TENT); abrirSessao(email, manter); entrarNoApp();
+        if (n) n.ligar(email, senha);      // em segundo plano: liga este aparelho à nuvem e sincroniza
+        return;
+      }
+      function recusar() {
+        var t = registrarFalha();
+        msg(t.ate ? "E-mail ou senha incorretos. Muitas tentativas: aguarde " + Math.ceil(ESPERA_MS / 1000) + " s." : "E-mail ou senha incorretos.");
+        el("auth-senha").value = ""; el("auth-senha").focus();
+      }
+      if (n && email === c.email && online()) {
+        /* A senha pode ter sido trocada em outro aparelho ou redefinida por e-mail: confere na nuvem e,
+           se estiver certa, refaz o hash deste aparelho. */
+        return n.entrar(email, senha).then(function () { return novoHash(senha); }).then(function (h) {
+          var c2 = conta(); c2.sal = h.sal; c2.hash = h.hash; c2.it = h.it; c2.alterada = new Date().toISOString();
+          gravar(localStorage, K_CONTA, c2);
+          apagar(K_TENT); abrirSessao(email, manter); entrarNoApp();
+        }, recusar);
+      }
+      recusar();
     }).catch(function () { msg("Não foi possível conferir a senha neste navegador."); })
       .then(function () { ocupado(false); });
   }
 
   function apagarAcessoEDados() {
-    [K_CONTA, K_SESSAO, K_TENT, MEDS_KEY, "bluebook:drive"].concat(PESSOAIS).forEach(apagar);
+    /* "bluebook:nuvem" e "bluebook:sinc" saem junto: sem isso a sincronização entenderia que a pessoa apagou
+       cada item e apagaria também na nuvem. Os dados já sincronizados continuam na nuvem. */
+    [K_CONTA, K_SESSAO, K_TENT, MEDS_KEY, "bluebook:drive", "bluebook:nuvem", "bluebook:sinc"].concat(PESSOAIS).forEach(apagar);
   }
 
   function bloquear(modo) {
@@ -220,6 +321,7 @@
   /* API usada por app.js (Ajustes e menu ⋮). */
   window.BBAuth = {
     email: function () { var c = conta(); return c ? c.email : null; },
+    logado: logado,
     criada: function () { var c = conta(); return c ? c.criada : null; },
     temSenha: function () { var c = conta(); return !!(c && c.hash); },
     PESSOAIS: PESSOAIS.slice(),
@@ -227,9 +329,13 @@
     sair: function () { apagar(K_SESSAO); bloquear("entrar"); },
     alterarSenha: function (atual, nova) {
       if (String(nova).length < 8) return Promise.reject(new Error("A nova senha precisa ter pelo menos 8 caracteres."));
-      var semSenha = !(conta() || {}).hash;   // acesso criado pelo Google: define a primeira senha
+      var c0 = conta() || {}, semSenha = !c0.hash;   // acesso criado pelo Google: define a primeira senha
+      var n = nuvem();
       return (semSenha ? Promise.resolve(true) : conferir(atual)).then(function (ok) {
         if (!ok) throw new Error("A senha atual está incorreta.");
+        /* Com a nuvem, a senha vale para todos os aparelhos: troca primeiro lá; se falhar, a local não muda. */
+        if (n) return n.trocarSenha(c0.email, semSenha ? null : atual, nova).catch(function (e) { throw new Error(n.mensagem(e, "senha")); });
+      }).then(function () {
         return novoHash(nova).then(function (h) {
           var c = conta(); c.sal = h.sal; c.hash = h.hash; c.it = h.it; c.alterada = new Date().toISOString();
           if (!gravar(localStorage, K_CONTA, c)) throw new Error("Não foi possível salvar.");

@@ -16,15 +16,17 @@ const CAMPO = { posologia: 'Posologia', pediatria: 'Pediatria', apresentacoes: '
   referencias: 'Nomes comerciais', generico: 'Genérico', classe: 'Classe', via: 'Via', tarja: 'Tarja', introducao: 'Introdução', criterios: 'Critérios', exames: 'Exames', ob: 'Observação (calculadora)', rev: 'Revisão', fonte: 'Fonte' };
 
 function nomeDe(reg, i) { return (reg && (reg.nome || reg.n || reg.name || reg.id || reg.k)) || ('#' + (i + 1)); }
-function trecho(txt) {
+/* Regra única (relatório e testes): CADA marca conta; um campo com 2 marcas gera 2 linhas, cada uma com o seu trecho. */
+const ALVO_G = new RegExp(ALVO.source, 'gi');
+function trecho(txt, n) {
   const s = String(txt).replace(/\s+/g, ' ');
-  const m = s.match(ALVO); const k = m ? m.index : 0;
+  const ms = [...s.matchAll(ALVO_G)], m = ms[n || 0]; const k = m ? m.index : 0;
   let ini = Math.max(0, k - 140), fim = Math.min(s.length, k + (m ? m[0].length : 0) + 100);
   return (ini > 0 ? '…' : '') + s.slice(ini, fim).trim() + (fim < s.length ? '…' : '');
 }
 /* Percorre o valor e devolve [{caminho, texto}] das strings que contêm o alvo. */
 function achar(v, caminho, out) {
-  if (typeof v === 'string') { if (ALVO.test(v)) out.push({ caminho, texto: v }); }
+  if (typeof v === 'string') { const n = (v.match(ALVO_G) || []).length; for (let i = 0; i < n; i++) out.push({ caminho, texto: v, n: i }); }
   else if (Array.isArray(v)) v.forEach((x, i) => achar(x, caminho.concat(i), out));
   else if (v && typeof v === 'object') Object.keys(v).forEach((k) => achar(v[k], caminho.concat(k), out));
   return out;
@@ -44,7 +46,7 @@ function coletar() {
       for (const a of achar(reg, [], [])) {
         let campo = rotuloCampo(a.caminho);
         if (cfg.v === 'PED_DB' && a.caminho[0] === 'v') { const via = reg.v[a.caminho[1]] && reg.v[a.caminho[1]].via; campo += via ? ' — via ' + via : ''; }
-        itens.push({ secao: SECAO[cfg.v] || cfg.v, arquivo: 'dados/' + cfg.arq, nome: String(nome), campo, trecho: trecho(a.texto) });
+        itens.push({ secao: SECAO[cfg.v] || cfg.v, arquivo: 'dados/' + cfg.arq, nome: String(nome), campo, trecho: trecho(a.texto, a.n) });
       }
     }
   }
@@ -58,7 +60,7 @@ function markdown(itens) {
   const esc = (s) => String(s).replace(/\|/g, '\\|');
   let md = '# Pendências de verificação\n\n' +
     'Gerado por `node ferramentas/pendencias.js` a partir de `dados/*.json`. **Não edite à mão**: corrija o dado com fonte e rode a ferramenta de novo.\n\n' +
-    'Cada linha é um trecho marcado "PENDENTE DE VERIFICAÇÃO". Regra do projeto: **nada é preenchido sem fonte citada** ' +
+    'Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo = duas linhas). Regra do projeto: **nada é preenchido sem fonte citada** ' +
     '(preferir SBP, Ministério da Saúde/PCDT, bula Anvisa; citar fonte e ano).\n\n' +
     `**Total: ${regs.size} registro(s), ${itens.length} trecho(s).**\n\n`;
   md += '| Seção | Registros | Trechos |\n|---|---:|---:|\n';
@@ -83,4 +85,4 @@ if (require.main === module) {
     console.log('OK PENDENCIAS.md:', new Set(itens.map((i) => i.arquivo + '|' + i.nome)).size, 'registros,', itens.length, 'trechos');
   }
 }
-module.exports = { coletar, ALVO };
+module.exports = { coletar, ALVO, ALVO_G };

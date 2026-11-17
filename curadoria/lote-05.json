@@ -1,0 +1,147 @@
+{
+  "lote": "05",
+  "criadoEm": "2026-11-12",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Otorrino e Oftalmologia",
+        "nome": "Otalgia (dor de ouvido): abordagem diagnóstica na atenção primária",
+        "introducao": "Queixa muito comum na demanda espontânea. A dor pode ser primária (orelha externa ou média) ou secundária, referida de outras regiões pela rica inervação sensitiva da orelha (nervos V, VII, IX, X e C2-C3). As causas mais frequentes são otite média aguda, otite externa e otite média com efusão, em geral sem complicações; entre as secundárias predominam as dentárias, da articulação temporomandibular, da coluna cervical e neuralgias.",
+        "criterios": "Anamnese: idade, tipo, intensidade e irradiação da dor, fatores de melhora e piora, sintomas associados, exposições (natação, trauma, barotrauma, resfriado recente, rinite), otites prévias e tubos de ventilação, uso de gotas tópicas. Otalgia com otorreia e febre favorece origem otológica. Exame: inspeção da orelha e das regiões pré e pós-auriculares, dor à mobilização do pavilhão ou à compressão do tragus (sugere otite externa), otoscopia, cavidade oral, orofaringe, nariz, pares cranianos V, VII, IX e X, ATM (palpar ao abrir e fechar a boca) e pescoço. Orelha normal à otoscopia aumenta a chance de causa secundária (dentes molares, terceiro molar impactado, pulpite, abscesso periodontal, faringite/tonsilite, sinusite, parotidite).",
+        "exames": "Na maioria dos casos o diagnóstico é clínico, sem investigação complementar extensa. VHS se houver suspeita de arterite temporal (idade ≥ 50 anos com VHS > 50 mm/h); investigação dirigida pelo fator de risco do Quadro 37 (por exemplo, fatores de risco coronarianos: considerar infarto do miocárdio); tomografia na suspeita de mastoidite como complicação da otite média aguda. O caderno não detalha exames para colesteatoma ou otite externa maligna: avaliação especializada (PENDENTE DE VERIFICAÇÃO).",
+        "tratamento": "Direcionado à causa: otite média aguda, otite externa, cerume, corpo estranho, causa dentária ou de ATM, etc., conforme as fichas específicas. Analgesia conforme a intensidade. O caderno não define esquema analgésico único para a otalgia inespecífica.",
+        "conduta": "1) Procurar causa primária (otoscopia). 2) Se a orelha for normal, buscar causa secundária: dentes, ATM, coluna cervical, orofaringe, seios da face, pares cranianos. 3) Procurar fatores de risco de pior prognóstico: idade ≥ 50 anos com VHS elevada (arterite temporal); risco coronariano (infarto); diabetes ou imunossupressão (otite externa maligna); tabagismo, etilismo, disfagia, perda de peso (tumor de cabeça e pescoço); retração timpânica superior ou otorreia (colesteatoma); perda auditiva unilateral. 4) Alerta para mastoidite, meningite, trombose de seio venoso, abscesso cerebral: febre, cefaleia intensa, vômitos, rebaixamento de consciência ou toxicidade indicam encaminhamento hospitalar imediato. 5) Otite média com efusão por 3 meses ou mais: avaliar audição e repetir a cada 3-6 meses.",
+        "prescricao": "1) Tratar a causa identificada, usando a ficha correspondente (otite média aguda, otite externa, cerume impactado, corpo estranho, etc.).\n2) Analgésico simples conforme necessidade; fármaco, dose e intervalo: PENDENTE DE VERIFICAÇÃO (não definidos no capítulo lido).\n3) Evitar cotonete e manipulação do conduto.\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 28, vol. II (Acolhimento à demanda espontânea: queixas mais comuns), capítulo Dor de ouvido, 2013.",
+        "cid": "H92.0",
+        "esp": "Medicina de Família e Comunidade; Otorrinolaringologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, vol. II - Acolhimento à demanda espontânea: queixas mais comuns na Atenção Básica",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, Departamento de Atenção Básica)",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "causas de otalgia (quadro 36), fatores de risco de pior prognóstico (quadro 37), anamnese e exame físico, sinais de alerta, seguimento da otite média com efusão (cap. 2.10, p. 102-109)"
+        }
+      ],
+      "observacoes": "Sem posologia de analgésicos na fonte lida: PENDENTE. H92.0 é o CID de otalgia."
+    },
+    {
+      "registro": {
+        "area": "Clínica Médica",
+        "nome": "Cárie dentária (abordagem na atenção primária)",
+        "introducao": "Doença multifatorial causada por desequilíbrio entre desmineralização e remineralização do dente, mediado pelo biofilme bacteriano; a lesão é a manifestação clínica de uma infecção. Os estágios anteriores à cavidade podem ser paralisados por ações de promoção e prevenção, e a restauração isolada não controla a doença. Fatores de risco: condições socioeconômicas e culturais, falta de acesso ao flúor, controle mecânico deficiente do biofilme, consumo frequente de açúcar e xerostomia. É causa frequente de dor odontogênica, inclusive otalgia referida.",
+        "criterios": "Diagnóstico visual por exame clínico, complementado por radiografia quando necessário. Avaliar a atividade: lesão ativa (mancha branca rugosa e opaca no esmalte, ou cavidade com dentina amolecida e marrom-clara) ou inativa (mancha branca brilhante, ou cavidade com dentina escurecida, lisa, brilhante e dura). Lesões sem cavidade com mudança de cor que sugerem cárie em dentina devem ter o diagnóstico complementado por radiografia. Avaliar também os fatores de risco presentes.",
+        "exames": "Exame clínico e radiografia odontológica quando indicada. Sem exames laboratoriais de rotina.",
+        "tratamento": "Individualizado: (1) instrução de higiene bucal (escovação com dentifrício fluoretado, fio dental, limpeza da língua, frequência); (2) remoção profissional de placa; (3) adequação do meio bucal: remoção da dentina cariada e selamento provisório das cavidades (ionômero de vidro ou cimento modificado), remoção de restos radiculares e cálculo; (4) controle da atividade com educação para o controle de placa, flúor tópico conforme risco, aconselhamento dietético e estímulo ao fluxo salivar; (5) restauração conservadora, evitando intervenção sempre que possível: lesões restritas ao esmalte são monitoradas, sulcos escurecidos não devem ser abertos, e em cavidade profunda preserva-se a dentina desorganizada para evitar exposição pulpar; na exposição, preferir tratamento conservador (pulpotomia, capeamento) à extração. O tratamento restaurador atraumático (sem anestesia, remoção manual do tecido amolecido, selamento com ionômero) é opção em populações com acesso restrito. Selante apenas por indicação individual de risco, não como rotina. Manutenção com retorno em frequência definida pelo risco e atividade da doença.",
+        "conduta": "Coletivamente: garantir acesso universal a escova e dentifrício fluoretado e apoiar a fluoretação da água; aplicação tópica de flúor coletiva apenas em populações com uma ou mais destas situações: água de abastecimento sem flúor ou com menos de 0,4 ppmF e sem acesso a dentifrício fluoretado; CPOD maior que 3 aos 12 anos; menos de 30% de indivíduos livres de cárie aos 12 anos (bochechos fluorados semanais ou diários, ou gel trimestral). Individualmente: classificar atividade e risco, tratar e agendar manutenção. O médico da atenção primária deve reconhecer a cárie como causa de dor facial e de ouvido, orientar higiene e dieta e encaminhar ao cirurgião-dentista. Selante: considerar quando o dente está presente há menos de 2 anos, o homólogo tem cárie e há placa visível (regra da FSP-USP citada no caderno).",
+        "prescricao": "1) Escovação com dentifrício fluoretado e fio dental, orientados individualmente; frequência e concentração do dentifrício: PENDENTE DE VERIFICAÇÃO (o caderno não detalha).\n2) Flúor tópico (bochecho semanal ou diário ou gel trimestral) somente nas situações coletivas de risco descritas; concentrações: PENDENTE DE VERIFICAÇÃO.\n3) Aconselhamento dietético: reduzir a frequência de açúcar.\n4) Dor odontogênica: analgésico simples, dose PENDENTE DE VERIFICAÇÃO; antibiótico não é tratamento da cárie.\n5) Encaminhar ao cirurgião-dentista para raspagem, selamento ou restauração.\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 17 - Saúde Bucal, capítulo Cárie dentária, 2006.",
+        "cid": "K02.9",
+        "esp": "Medicina de Família e Comunidade; Medicina Preventiva e Social"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 17 - Saúde Bucal (cap. 1, Cárie dentária)",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, Departamento de Atenção Básica)",
+          "ano": "2006",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/saude_bucal.pdf",
+          "usadoPara": "conceito, fatores de risco, diagnóstico, tratamento, flúor tópico coletivo, selantes, TRA, manutenção"
+        },
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, vol. II - Acolhimento à demanda espontânea: queixas mais comuns na Atenção Básica",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, Departamento de Atenção Básica)",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "cárie e terceiro molar impactado como causa de otalgia referida"
+        }
+      ],
+      "observacoes": "Não há área odontológica no acervo; usada Clínica Médica. Concentrações de flúor e posologias ausentes no caderno: PENDENTE. Dentes inclusos/pericoronarite (K01) não constam no CAB 17: pulado."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Infecção aguda das vias aéreas superiores / resfriado comum (J06.9)",
+      "motivo": "REPROVADO na revisão: duplicata de \"Resfriado comum (nasofaringite aguda)\" (J00, lote-01 aprovado): mesma fonte (CAB 28 v. II, rinossinusite/síndromes gripais), mesmo conteúdo, sem abordagem distinta das IVAS em geral."
+    },
+    {
+      "tema": "Lesão por pressão (L89)",
+      "motivo": "já existe: Lesão por pressão (L98.4) e estágios 1 a 4"
+    },
+    {
+      "tema": "Pneumonia pneumocócica (J13) e por H. influenzae (J14)",
+      "motivo": "a PAC geral cobre; sem fonte específica lida"
+    },
+    {
+      "tema": "Laringite crônica (J37)",
+      "motivo": "sem fonte oficial lida nesta tarefa"
+    },
+    {
+      "tema": "Bronquite crônica simples (J41)",
+      "motivo": "coberta por DPOC (várias fichas)"
+    },
+    {
+      "tema": "Pneumonite por inalação de produtos químicos/fumaça (J68)",
+      "motivo": "sem fonte lida; já existe Lesão por inalação de fumaça"
+    },
+    {
+      "tema": "Dentes inclusos/pericoronarite (K01)",
+      "motivo": "CAB 17 lido não aborda o tema; sem fonte"
+    },
+    {
+      "tema": "Glossites (K14)",
+      "motivo": "sem fonte oficial lida"
+    },
+    {
+      "tema": "Eritrodermia/dermatite esfoliativa (L26)",
+      "motivo": "já existe: Eritrodermia (L53.9)"
+    },
+    {
+      "tema": "Radiodermatite (L58)",
+      "motivo": "sem fonte oficial aberta (só protocolo institucional hospitalar não lido)"
+    },
+    {
+      "tema": "Miosite (M60)",
+      "motivo": "já existe: Miosite (polimiosite e dermatomiosite) e outras"
+    },
+    {
+      "tema": "Lesões meniscais (M23)",
+      "motivo": "já existe: Lesão de menisco / Lesão meniscal"
+    },
+    {
+      "tema": "Cifose (M40)",
+      "motivo": "sem fonte lida (existe apenas Cifose de Scheuermann)"
+    },
+    {
+      "tema": "Litíase vesical (N21)",
+      "motivo": "sem fonte oficial lida"
+    },
+    {
+      "tema": "Ectrópio do colo do útero (N86)",
+      "motivo": "sem fonte oficial lida"
+    },
+    {
+      "tema": "Doença renal hipertensiva (I12)",
+      "motivo": "sem fonte oficial lida"
+    },
+    {
+      "tema": "Oclusão/estenose de artérias cerebrais sem infarto (I66)",
+      "motivo": "sem fonte lida; existem AVC isquêmico e estenose carotídea"
+    },
+    {
+      "tema": "Paraplegia e tetraplegia - cuidados (G82)",
+      "motivo": "sem fonte oficial lida; existe lesão medular aguda"
+    },
+    {
+      "tema": "Encefalopatia tóxica (G92)",
+      "motivo": "sem fonte oficial lida"
+    },
+    {
+      "tema": "Disfunção da tuba auditiva (H68-H69)",
+      "motivo": "CAB 28 só a cita ao tratar da otite média com efusão, que já existe no acervo"
+    },
+    {
+      "tema": "Perfuração timpânica não traumática (H72-H73)",
+      "motivo": "já existe: Perfuração timpânica (H72.9)"
+    }
+  ]
+}

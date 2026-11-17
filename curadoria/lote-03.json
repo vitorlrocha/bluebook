@@ -1,0 +1,96 @@
+{
+  "lote": "03",
+  "criadoEm": "2026-11-12",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Hematologia e Oncologia",
+        "nome": "Anemia aguda pós-hemorrágica",
+        "introducao": "Queda rápida da hemoglobina por perda sanguínea (trauma, sangramento digestivo, obstétrico ou cirúrgico). Como a anemia se instala antes que o organismo se adapte, é muito menos tolerada que a anemia crônica; o risco principal é o choque hipovolêmico e a hipóxia tecidual. O volume sanguíneo do adulto é cerca de 8% do peso (aprox. 4,8 L em 60 kg).",
+        "criterios": "Sangramento agudo (visível ou oculto) com sinais de hipovolemia ou hipóxia: FC acima de 100-120 bpm, hipotensão, queda da diurese, taquipneia, enchimento capilar > 2 s, alteração do nível de consciência. Classes de hemorragia: I (até 15% da volemia), II (15-30%), III (30-40%), IV (> 40%). O hematócrito só começa a cair 1 a 2 h após o início do sangramento: valor inicial normal não afasta perda importante, e a decisão de transfundir se baseia no quadro clínico.",
+        "exames": "Hemograma seriado, tipagem ABO/RhD e prova de compatibilidade, coagulograma, função renal, lactato/gasometria se houver instabilidade (prática geral, não consta na seção 3.1 do guia); investigar a origem do sangramento conforme o sítio. Hemoglobina/hematócrito de controle após a transfusão (ver prescrição).",
+        "tratamento": "1) Controlar a fonte do sangramento. 2) Acesso venoso calibroso e reposição volêmica imediata. 3) Transfundir concentrado de hemácias (CH) quando houver sinais clínicos de descompensação ou perda volêmica acima de 25-30% (classes III e IV podem evoluir para óbito por falência de múltiplos órgãos se não ressuscitadas na primeira hora). 4) Corrigir coagulopatia e plaquetopenia associadas conforme o quadro. 5) Reavaliar clínica e hemoglobina após a transfusão. Não transfundir para dar sensação de bem-estar, para cicatrização ou de forma profilática.",
+        "conduta": "Priorizar via aérea, ventilação e controle do sangramento. Avaliar a classe da hemorragia pelos sinais clínicos, não pelo hematócrito inicial. Indicar CH se houver sinais de choque/hipóxia ou perda > 25-30% da volemia; em perda menor e paciente estável, repor volume e observar. Limiares do guia para anemia normovolêmica (referência após estabilização): Hb > 10 g/dL raramente exige transfusão; Hb < 7 g/dL costuma beneficiar-se; entre 7 e 10 g/dL decidir pelo estado clínico; manter Hb > 9-10 g/dL em coronariopatia aguda e > 10 g/dL em DPOC; idoso > 65 anos sintomático pode ser transfundido com Hb < 9 g/dL; pós-operatório estável sem hipóxia tolera Hb de 8 g/dL. Em urgência admite-se CH RhD positivo em paciente RhD negativo. Nenhuma transfusão deve exceder 4 h de infusão. Hemorragia maciça e outros hemocomponentes: PENDENTE DE VERIFICAÇÃO (não lidos nesta ficha).",
+        "prescricao": "1) Concentrado de hemácias (adulto): 1 unidade eleva a Hb em cerca de 1 g/dL e o Ht em 3%; transfundir a quantidade suficiente para corrigir os sinais de hipóxia ou atingir Hb aceitável; infundir cada unidade em 60 a 120 min.\n2) Criança: 10 a 15 mL/kg de CH para o mesmo ganho; velocidade máxima 20 a 30 mL/kg/h.\n3) Equipo com filtro de 170 micra; acesso compartilhado apenas com NaCl 0,9%; não adicionar fármaco ao hemocomponente; diluir o CH é desnecessário; no máximo 4 h por bolsa.\n4) Compatibilidade ABO/RhD (Quadro 3 do guia): O+ recebe O+ ou O-; A+ recebe A+ ou A-; B+ recebe B+ ou B-; AB+ recebe AB, O, A ou B (RhD positivo ou negativo); paciente RhD negativo recebe apenas RhD negativo (O- recebe O-; A- recebe A-; B- recebe B-; AB- recebe AB-, O-, A- ou B-). Em urgência, admite-se RhD positivo em RhD negativo. O quadro não lista hemácias O para pacientes A e B: seguir o banco de sangue.\n5) Controle: Hb/Ht 1 a 2 h após a transfusão (ambulatorial: 30 min após o fim) e resposta clínica.\n6) Cristaloide, plasma e plaquetas: doses PENDENTE DE VERIFICAÇÃO (não consultadas).\nBase: Ministério da Saúde, Guia para o uso de hemocomponentes, 2ª ed. (2015), seção 3.1 Concentrado de hemácias.",
+        "cid": "D62",
+        "esp": "Hematologia e Hemoterapia;Medicina de Emergência"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia para o uso de hemocomponentes, 2ª edição, seção 3.1 Concentrado de hemácias",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde)",
+          "ano": "2015",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_uso_hemocomponentes_2ed.pdf",
+          "usadoPara": "classes de hemorragia, critérios clínicos de transfusão, limiares de Hb, dose e velocidade, compatibilidade, controle pós-transfusão"
+        }
+      ],
+      "observacoes": "PDF baixado e lido (texto extraído), páginas 29-34. No texto extraído os hifens de intervalos sumiram ('12 horas', '2030 mL/kg/h'); interpretei como 1-2 h e 20-30 mL/kg/h (consistente com resumo de busca): revisor conferir na pág. 34. Cristaloides, ácido tranexâmico, plasma/plaquetas e transfusão maciça NÃO foram lidos: PENDENTE."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Melanoma in situ",
+        "introducao": "Melanoma restrito à epiderme (estágio 0 da AJCC 8ª ed., pTis), sem invasão da derme. Tem excelente prognóstico quando excisado com margens adequadas; é a fase em que o diagnóstico precoce mais muda o desfecho.",
+        "criterios": "Diagnóstico histopatológico de proliferação melanocítica atípica confinada à epiderme em biópsia excisional de lesão suspeita (assimetria, bordas irregulares, cor variada, diâmetro, evolução). A diretriz não recomenda biópsia por shaving superficial; em face e extremidades, quando a excisão total causaria defeito funcional ou estético, ou em lesões extensas, usar biópsia incisional no ponto mais profundo/suspeito da lesão.",
+        "exames": "Estágio 0 (in situ) com linfonodos clinicamente negativos: exames de imagem de rotina não são recomendados. Exame físico completo da pele e dos linfonodos regionais. Revisar o laudo: ausência de invasão dérmica, margens da biópsia.",
+        "tratamento": "Excisão cirúrgica ampliada com margem de 0,5 a 1 cm (nível de evidência muito baixo, recomendação forte, segundo a SBOC). Pesquisa de linfonodo sentinela e imagem de rotina não são indicadas no estágio 0. Seguimento dermatológico com exame da pele inteira.",
+        "conduta": "Encaminhar a dermatologia, cirurgia oncológica ou oncologia para ampliação de margens de 0,5-1 cm, ajustando à localização (face, região acral) para preservar função e estética. Se a revisão do material mostrar invasão da derme, reclassificar como melanoma invasivo e seguir a diretriz de melanoma cutâneo (margens conforme Breslow, linfonodo sentinela). Orientar fotoproteção, autoexame e retorno; acompanhamento dermatológico a cada 6 a 12 meses, ou mais frequentemente se indicado (SBOC, seção Seguimento da doença localizada, p. 19).",
+        "prescricao": "1) Excisão ampliada com margem de 0,5 a 1 cm (procedimento; sem fármaco sistêmico).\n2) Sem indicação de imagem de rotina, linfonodo sentinela ou terapia adjuvante no estágio 0.\n3) Fotoproteção, orientação de autoexame e seguimento dermatológico a cada 6 a 12 meses, ou mais frequente se indicado.\nBase: Sociedade Brasileira de Oncologia Clínica (SBOC), Diretrizes de tratamentos oncológicos: Melanoma cutâneo (2024).",
+        "cid": "D03.9",
+        "esp": "Dermatologia;Oncologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Diretrizes de tratamentos oncológicos: Melanoma cutâneo",
+          "instituicao": "Sociedade Brasileira de Oncologia Clínica (SBOC)",
+          "ano": "2024",
+          "url": "https://sboc.org.br/wp-content/uploads/2026/01/Melanoma-cutaneo-1.pdf",
+          "usadoPara": "estadiamento AJCC 8ª ed., biópsia, imagem em estágio 0, margem de 0,5-1 cm no melanoma in situ"
+        }
+      ],
+      "observacoes": "PDF baixado e lido nas seções de estadiamento, imagem, biópsia e margens. O ano 2024 vem do resumo da busca (capa do texto extraído ilegível; a URL é de upload 2026): revisor conferir. Já existe 'Melanoma' (C43.9), mas não ficha específica de D03. Seguimento não lido: PENDENTE."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Câncer de lábio e cavidade oral (C00-C06)",
+      "motivo": "já existe: Câncer de cavidade oral; Carcinoma epidermoide de cavidade oral"
+    },
+    {
+      "tema": "Hemofilia B (D67)",
+      "motivo": "já existe: Hemofilia A e B"
+    },
+    {
+      "tema": "Nódulo/adenoma de tireoide (D34)",
+      "motivo": "já existe: Nódulo tireoidiano; Bócio/nódulo tireoidiano"
+    },
+    {
+      "tema": "Carcinoma in situ / LIEAG do colo do útero (D06)",
+      "motivo": "já existe: Lesões intraepiteliais cervicais (NIC); Câncer de colo do útero: rastreamento e HPV"
+    },
+    {
+      "tema": "Neoplasia maligna das meninges (C70)",
+      "motivo": "raro; já existem Meningite carcinomatosa, Meningioma e Tumores do SNC; sem fonte oficial lida"
+    },
+    {
+      "tema": "Leucemias não especificadas (C94-C95)",
+      "motivo": "sem sentido clínico como ficha; as leucemias específicas já existem"
+    },
+    {
+      "tema": "Câncer de vesícula biliar (C23)",
+      "motivo": "sem fonte oficial brasileira aberta e lida: só uma diretriz de 2009 de instituição não identificada no documento; a diretriz do Brazilian Gastrointestinal Tumor Group (2016) não foi aberta. Sugestão de fonte: BGTG 2016"
+    },
+    {
+      "tema": "Carcinoma urotelial de pelve renal e ureter (C65-C66)",
+      "motivo": "única fonte (artigo INCA, Rev. Bras. Cancerologia) é PDF escaneado sem texto extraível; sem fonte lida"
+    },
+    {
+      "tema": "Metástase de sítio primário desconhecido (C77-C80)",
+      "motivo": "diretriz SBOC não acessada em 3 buscas; sem fonte lida"
+    },
+    {
+      "tema": "Doença granulomatosa crônica / D71",
+      "motivo": "só fontes secundárias (MSD Manual, artigos) nos resultados; sem fonte oficial brasileira lida"
+    }
+  ]
+}

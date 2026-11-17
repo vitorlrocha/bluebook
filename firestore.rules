@@ -1,26 +1,30 @@
 // Regras de acesso do banco na nuvem (Cloud Firestore) do Bluebook.
 // Cole este conteúdo em: console.firebase.google.com → Firestore Database → Regras → Publicar.
 //
-// Ideia: cada pessoa tem uma "pasta" própria (usuarios/<id da conta>/...). Só quem está conectado com
-// aquela conta lê ou grava ali. Todo o resto do banco é fechado para todo mundo.
+// Modelo (src/nuvem.js): UM documento por pessoa, em usuarios/<id da conta>, com os campos
+//   v   = versão do formato (número inteiro)
+//   reg = mapa de registros: "<tipo>|<id>" → { v: texto ou null (apagado), mod: milissegundos, ap: aparelho }
+// Só quem está conectado com aquela conta lê ou grava o próprio documento. Ninguém apaga o documento pelo app
+// (exclusões são marcas dentro de "reg"). Todo o resto do banco é fechado para todo mundo.
+//
+// Limite de tamanho: o Firestore já recusa documentos acima de 1 MiB; aqui limitamos também o número de
+// registros (o app para em 3.000 e em ~900 KB e avisa a pessoa).
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     // Dados pessoais: anotações, favoritos, recentes, prescrições, peso do plantão.
-    match /usuarios/{uid}/registros/{registro} {
-      allow read, delete: if request.auth != null && request.auth.uid == uid;
-      // Gravação: só o dono, com e-mail confirmado pelo provedor de login, registro pequeno e com os campos esperados.
+    match /usuarios/{uid} {
+      allow get: if request.auth != null && request.auth.uid == uid;
       allow create, update: if request.auth != null && request.auth.uid == uid
-        && request.resource.data.keys().hasOnly(['tipo', 'chave', 'valor', 'apagado', 'mod', 'aparelho', 'servidor'])
-        && request.resource.data.tipo is string && request.resource.data.tipo.size() <= 40
-        && request.resource.data.chave is string && request.resource.data.chave.size() <= 300
-        && request.resource.data.mod is int
-        && request.resource.data.servidor == request.time
-        && request.resource.size() < 200000;
+        && request.resource.data.keys().hasOnly(['v', 'reg'])
+        && request.resource.data.v is int
+        && request.resource.data.reg is map
+        && request.resource.data.reg.size() <= 3000;
+      // list (consultar vários usuários) e delete: negados.
     }
 
-    // Qualquer outro caminho: negado.
+    // Qualquer outro caminho (inclusive subcoleções de usuarios): negado.
     match /{document=**} {
       allow read, write: if false;
     }

@@ -50,6 +50,7 @@ test.describe('Busca', () => {
     const caixa = page.locator('#sidebar .gs-box');
     await expect(caixa).toContainText('Também em outras seções');
     await expect(caixa).toContainText('Doenças');
+    await expect(caixa).toHaveAttribute('open', '');   // v74: sempre aberta, mesmo com resultados na aba atual
   });
 
   test('busca sem resultado mostra mensagem', async ({ page }) => {

@@ -1,0 +1,618 @@
+{
+  "lote": "15",
+  "criadoEm": "2026-11-13",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Dor no recém-nascido: avaliação e analgesia",
+        "introducao": "O RN sente dor e responde a ela com alterações fisiológicas (taquicardia, aumento da PA e da pressão intracraniana, queda da saturação, menor motilidade gástrica, liberação de catecolaminas e corticoide), comportamentais (choro, mímica facial, atividade motora, sono/vigília) e, se repetida, com risco de piora de lesões neurológicas (hemorragia intraventricular, leucomalácia) e de alteração futura da resposta à dor.",
+        "criterios": "Avaliação por escalas validadas, aplicadas de forma sistemática: NIPS, EDIN, BIIP e COMFORT (as três primeiras para dor aguda/procedimentos; COMFORT para sedação e dor em RN criticamente doente). Indicações de analgesia: procedimentos dolorosos agudos (drenagem torácica, intubação eletiva, cateter central ou de diálise, punção liquórica, múltiplas punções), cirurgia de qualquer porte, fase aguda da enterocolite necrosante e tocotraumatismos (fraturas, lacerações extensas). Não há indicação absoluta nem profilática de opioide de rotina; a decisão é individualizada, mas a dor nunca deve ser negligenciada.",
+        "exames": "Não há exame específico; a avaliação é clínica e comportamental, com monitorização de frequência cardíaca, PA e saturação durante e após o procedimento. Em RN prematuro abaixo de 30 semanas, exigir pressão arterial média normal em ao menos duas medidas nas 2 h anteriores antes de iniciar opioide.",
+        "tratamento": "Medidas não farmacológicas são a base e têm eficácia comprovada: solução adocicada por via oral (sacarose ou glicose), sucção não nutritiva, amamentação, contato pele a pele e redução da estimulação tátil/ambiental (cuidado desenvolvimental). Farmacológico: paracetamol (único anti-inflamatório não hormonal considerado seguro no RN) para dor leve a moderada; opioides (morfina, fentanil) para dor intensa em RN criticamente doente; lidocaína infiltrada nos procedimentos invasivos. Anestésicos tópicos (EMLA, tetracaína) têm pouca utilidade em punções.",
+        "conduta": "Antes de procedimentos pequenos (punção de calcanhar ou veia): solução adocicada VO na parte anterior da língua 2 min antes, associada a sucção não nutritiva, pele a pele ou mamada. Procedimentos maiores (dreno de tórax, cateter central, punção lombar): lidocaína local e analgesia sistêmica. Opioide em prematuro < 30 semanas só com PA média normal prévia; evitar infusão contínua de morfina em prematuro extremo ventilado sem indicação clara (associação com pior desfecho neurológico). Retirada gradual de opioide após uso prolongado para evitar abstinência; metadona é reservada ao tratamento da abstinência. Tramadol: uso excepcional. Dipirona, AINE (ibuprofeno, indometacina, diclofenaco) e AAS não são liberados como analgésicos no período neonatal.",
+        "prescricao": "1) Não farmacológico: água com sacarose ou glicose (1 mL a 25%) VO, na porção anterior da língua, 2 min antes de punções.\n2) Paracetamol VO: 10 a 15 mg/kg/dose a cada 6 a 8 h no RN a termo; 10 mg/kg/dose a cada 8 a 12 h no prematuro (via retal pouco usada por absorção errática; não há apresentação parenteral no Brasil, segundo a fonte).\n3) Morfina IV: 0,05 a 0,2 mg/kg/dose a cada 4 h; infusão contínua 5 a 10 mcg/kg/h no RN a termo e 2 a 5 mcg/kg/h no prematuro. Retirada: uso ≤ 3 dias, suspender de uma vez; 4 a 7 dias, reduzir 20% da dose inicial por dia; 8 a 14 dias, 10% por dia; > 14 dias, 10% a cada 2 a 3 dias.\n4) Fentanil IV: 0,5 a 4 mcg/kg/dose a cada 2 a 4 h; infusão contínua 0,5 a 1 mcg/kg/h (modo preferido). Injeção rápida de dose alta pode causar rigidez torácica. Retirada gradual após > 3 dias.\n5) Tramadol (excepcional): 5 mg/kg/dia, VO ou IV, em 3 a 4 tomadas; retirar gradualmente se > 5 a 7 dias.\n6) Metadona (abstinência a opioides): equivalência 0,001 mg/kg/dia de fentanil IV = 0,1 mg/kg/dia de metadona; reduzir 20% da dose inicial a cada 3 dias.\n7) Lidocaína 0,5% sem adrenalina, 5 mg/kg SC no local do procedimento, após assepsia (ação imediata, 30 a 60 min).\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 2, cap. 11 (2ª ed., 2014).",
+        "cid": "R52.0",
+        "esp": "Neonatologia; Pediatria; Medicina da Dor"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 2, cap. 11 Dor no recém-nascido (p. 33-48)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v2.pdf",
+          "usadoPara": "manifestações da dor, escalas, indicações, analgesia não farmacológica e doses de paracetamol, morfina, fentanil, tramadol, metadona e lidocaína"
+        }
+      ],
+      "observacoes": "A fonte não traz os pontos de corte das escalas (só os nomes); não os reproduzi. CID: R52.0 (dor aguda) por não haver código específico de dor neonatal. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Hiperglicemia neonatal",
+        "introducao": "Elevação da glicemia plasmática no RN, frequente no prematuro de extremo baixo peso (< 1.000 g), que tolera mal a infusão venosa de glicose. Causas: oferta excessiva (iatrogenia), estresse (sepse), hipóxia, drogas hiperglicemiantes (teofilina, corticoide) e diabetes mellitus neonatal transitório. A hiperosmolaridade pode causar diurese osmótica, desidratação e hemorragia cerebral no prematuro.",
+        "criterios": "Glicemia plasmática > 145 mg/dL. Acima de 250 mg/dL a osmolaridade sobe o suficiente para causar diurese osmótica e, no muito baixo peso, risco de hemorragia cerebral. Quadro clínico: poliúria, desidratação e glicosúria; frequentemente não há sinais.",
+        "exames": "Fita reagente na glicosúria ou na gota de sangue e confirmação com glicemia plasmática. Em uso de insulina: acompanhar potássio, lactato e pH.",
+        "tratamento": "Reduzir gradualmente a oferta de glicose; aumentar o aporte de aminoácidos na nutrição parenteral (estimula a secreção de insulina); se persistir, insulina regular em baixa dose com monitorização cuidadosa. Suspender ou evitar drogas hiperglicemiantes sempre que possível.",
+        "conduta": "Rever a taxa de infusão de glicose (VIG), reduzindo cerca de 2 mg/kg/min por vez até normalizar ou chegar a 4 mg/kg/min; não usar soluções de glicose abaixo de 2,5% (hemólise por baixa osmolaridade). Em NPT, oferecer 1 a 4 g/kg/dia de aminoácidos. Insulina só se a redução da glicose e o aumento de proteína não bastarem. Prevenção: monitorizar glicemia nos grupos de risco (prematuros, sepse, NPT) e iniciar aminoácidos e dieta enteral precocemente. O diabetes mellitus neonatal transitório é uma das causas listadas e deve ser lembrado se a hiperglicemia persistir.",
+        "prescricao": "1) Reduzir a oferta de glicose em passos de ~2 mg/kg/min (3 g/kg/dia) até normalizar ou 4 mg/kg/min (5 a 6 g/kg/dia).\n2) Aminoácidos na NPT: 1 a 4 g/kg/dia.\n3) Insulina regular em infusão contínua: 0,01 a 0,03 UI/kg/h (acrescentar 1 mL de albumina a 5% para cada 10 mL de solução, para reduzir a adesão da insulina ao equipo); alternativa menos usada: 0,1 a 0,2 UI/kg/dose SC.\n4) Monitorar potássio, lactato e pH durante a insulina.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 25.2 (2ª ed., 2014).",
+        "cid": "P70.2, P70.8, P70.9",
+        "esp": "Neonatologia; Pediatria; Endocrinologia e Metabologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 25 Distúrbios da glicose, item 25.2 Hiperglicemia (p. 105-106)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "definição, causas, diagnóstico, redução da VIG, insulina e prevenção"
+        }
+      ],
+      "observacoes": "Frequência da checagem glicêmica e preparo da insulina em bomba não constam na fonte; ficaram sem detalhes. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Distúrbios do magnésio no recém-nascido (hipomagnesemia e hipermagnesemia)",
+        "introducao": "Hipomagnesemia neonatal costuma vir junto com hipocalcemia (o déficit de magnésio prejudica a secreção e a ação do PTH) e se associa a asfixia, restrição de crescimento intrauterino, exsanguineotransfusão com sangue citratado, hiperfosfatemia, hipoparatireoidismo, má absorção/diarreia e uso de furosemida. Hipermagnesemia ocorre sobretudo em filhos de mães que receberam sulfato de magnésio (pré-eclâmpsia) ou por excesso na nutrição parenteral.",
+        "criterios": "Hipomagnesemia: Mg plasmático < 1,5 mg/dL; quadro igual ao da hipocalcemia (assintomático, tremores, irritabilidade, hiperreflexia, convulsões). Tratar os sintomáticos com Mg < 1,2 mg/dL. Hipermagnesemia: Mg > 2,8 mg/dL; inicialmente sem sintomas, depois hipotonia, letargia, hiporreflexia, poliúria e desidratação; acima de 6 mg/dL, efeito curarizante com apneia e parada cardíaca por bloqueio AV.",
+        "exames": "Dosagem sérica de magnésio, junto com cálcio (idealmente iônico). Investigar hipermagnesemia em todo RN de mãe que recebeu sulfato de magnésio antes do parto.",
+        "tratamento": "Hipomagnesemia: sulfato de magnésio a 50% (IM no ataque, VO na manutenção); se houver hipocalcemia associada, corrigir primeiro o magnésio. Hipermagnesemia: suporte (monitorização, ventilação se apneia), hidratação e suspensão do magnésio, que resolvem a maioria; furosemida se Mg > 4 mg/dL; gluconato de cálcio como antagonista na urgência; exsanguineotransfusão ou diálise peritoneal só excepcionalmente.",
+        "conduta": "Mães em uso de sulfato de magnésio: monitorizar o RN (tônus, respiração, magnésio sérico). Hipomagnesemia sintomática: tratar antes da hipocalcemia. Hipermagnesemia sintomática: monitorizar sinais vitais e hidratação, ventilar se apneia, e usar cálcio EV se urgência (acompanhar a FC durante a infusão). O prognóstico é bom, sem sequela neurológica, salvo dano por hipóxia/apneia/parada na hipermagnesemia grave.",
+        "prescricao": "1) Hipomagnesemia: sulfato de magnésio 50%, 0,1 a 0,2 mL IM (PENDENTE DE VERIFICAÇÃO: a fonte, v. 3, cap. 26.2.1.3, não esclarece se o volume é por dose ou por kg; não prescrever sem conferir). Manutenção: 20 mg/kg/dia de sulfato de magnésio 50% VO (a fonte acrescenta \"0,2 mL\" sem esclarecer a unidade: PENDENTE DE VERIFICAÇÃO).\n2) Hipermagnesemia grave/urgência: gluconato de cálcio 10%, 2 mL/kg EV em bolo, com monitorização da FC; repetir após 10 min se não houver resposta.\n3) Mg > 4 mg/dL: furosemida (dose não consta na fonte: PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 26.2 (2ª ed., 2014).",
+        "cid": "P71.2, P71.8, E83.4",
+        "esp": "Neonatologia; Pediatria"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 26 Distúrbios do cálcio e magnésio, item 26.2 (p. 112-114)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "limiares, causas, quadro clínico e tratamento de hipo e hipermagnesemia"
+        }
+      ],
+      "observacoes": "Ambiguidade na dose IM do sulfato de magnésio (volume por kg não explícito) e ausência da dose de furosemida: deixadas PENDENTES. A hipocalcemia neonatal já existe no acervo e não foi repetida. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Síndrome de escape de ar do recém-nascido (pneumotórax, enfisema intersticial e pneumomediastino)",
+        "introducao": "Presença de ar em locais normalmente não aerados por perda de continuidade do epitélio respiratório: interstício (enfisema intersticial pulmonar), espaço pleural (pneumotórax), mediastino, pericárdio, peritônio, subcutâneo e vasos (embolia gasosa). O pneumotórax e o enfisema intersticial são os mais importantes. Ocorre sobretudo em RN em ventilação com pressão positiva e piora o prognóstico (doença pulmonar crônica, lesão do SNC, hemorragia peri-intraventricular, mortalidade).",
+        "criterios": "Diagnóstico essencialmente radiológico; clínica variável. Pneumotórax hipertensivo: deterioração abrupta com desconforto respiratório, cianose, bradicardia, má perfusão, hipotensão e choque; assimetria torácica, murmúrio vesicular diminuído e desvio do ictus/bulhas para o lado contrário. Pneumotórax não hipertensivo: assintomático ou taquipneia, gemido e retrações. Enfisema intersticial: piora dos parâmetros ventilatórios em prematuro ventilado, geralmente nas primeiras 48 h. Pneumomediastino: geralmente assintomático. Pneumopericárdio: pode causar tamponamento (taquicardia, depois bradicardia e queda do pulso e da PA). Pneumoperitônio: distensão abdominal abrupta.",
+        "exames": "Radiografia de tórax (hipertransparência sem trama vascular no pneumotórax; desvio do mediastino e retificação do diafragma se hipertensivo; sinal da vela ou asa de morcego no pneumomediastino; ar envolvendo todo o coração, inclusive a borda inferior, no pneumopericárdio). Em pneumotórax pequeno e bilateral, atentar para pulmão hipertransparente e silhueta cardíaca muito nítida; usar perfil com raio horizontal ou decúbito lateral com o lado afetado para cima. Transiluminação do tórax em RN sintomático (positiva se halo > 2 cm ou assimétrico).",
+        "tratamento": "Pneumotórax assintomático em RN sem ventilação: observar até a reabsorção, sem drenar. Sintomático: punção pleural de alívio e, se reacumular, dreno torácico em selo-d'água. Hipertensivo: emergência, punção imediata, mesmo antes do RX, seguida de dreno. Todo pneumotórax em RN em ventilação mecânica deve ser drenado.",
+        "conduta": "Hipertensivo com instabilidade: puncionar e depois drenar. Punção: cateter flexível 14, 16 ou 18 (ou agulha 23-25) entre o 3º e o 5º espaço intercostal na linha axilar anterior, ou no 2º espaço na linha hemiclavicular, conectado a torneira de três vias e seringa de 20 mL; aspirar até melhora. Dreno 10 a 14 French inserido por dissecção com pinça (evitar trocater) no mesmo espaço, anteriormente, conectado a selo-d'água (ou aspiração contínua de 10 a 20 cm); fixar, conferir por RX. Retirada: sem oscilação por > 24 h, clampear e retirar em 12 a 24 h; em geral 72 a 96 h; RX de controle em 6 h. Analgesia (lidocaína local e, se necessário, fentanil) e assepsia rigorosa. Transporte: drenar antes, usar válvula de Heimlich; no transporte aéreo a drenagem é obrigatória pela expansão do gás em altitude. Manter vigilância constante em todo RN sob suporte ventilatório.",
+        "prescricao": "1) Pneumotórax assintomático sem ventilação: sem medicação, apenas acompanhamento radiológico.\n2) Procedimento: antissepsia (clorexidina), botão anestésico de lidocaína no local; analgesia sistêmica com fentanil considerada conforme o estado clínico (doses: ver registro de dor no RN).\n3) Dreno torácico 10 a 14 French em selo-d'água; aspiração contínua 10 a 20 cm se necessário.\n4) Oxigênio/ventilação conforme a gravidade (ver capítulos de suporte ventilatório do MS).\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 21.4.4 e v. 2, cap. 10.8 (2ª ed., 2014).",
+        "cid": "P25.0, P25.1, P25.2, P25.3",
+        "esp": "Neonatologia; Pediatria; Medicina Intensiva"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 21.4.4 Síndrome de escape de ar (p. 23-28)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "classificação, quadro clínico, radiologia e transiluminação"
+        },
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 2, cap. 10.8 Drenagem de tórax (p. 27-29)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v2.pdf",
+          "usadoPara": "indicações, técnica de punção e drenagem, retirada do dreno"
+        },
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 8.6.5 (transporte, síndrome de escape de ar)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "válvula de Heimlich e transporte aéreo"
+        }
+      ],
+      "observacoes": "Pneumotórax de adulto e do trauma já existem no acervo; esta ficha é específica do RN. Doses de fentanil remetidas ao registro de dor neonatal. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Hipertermia neonatal",
+        "introducao": "Temperatura corporal elevada no RN, por febre materna periparto, doença do RN (infecção, desidratação, disfunção do SNC, medicamentos) ou superaquecimento ambiental (incubadora ou berço aquecido com falha de servocontrole). Importa pelo risco de lesão cerebral, sobretudo após isquemia, e pela associação da febre materna com depressão neonatal, convulsão e pior prognóstico neurológico.",
+        "criterios": "Temperatura corporal > 37,5 °C (definição da fonte, que não especifica o sítio de medida). Hipertermia ambiental: RN menos ativo, vasodilatado, extensão dos membros e temperaturas central e periférica iguais. Sepse: extremidades 2 a 3 °C mais frias que o tronco (vasoconstrição); no prematuro com infecção a hipotermia é mais comum que a febre. No RN em aleitamento exclusivo, febre com perda acentuada de peso, icterícia e sucção ineficaz sugere desidratação hipernatrêmica.",
+        "exames": "Temperatura axilar com termômetro digital (retal não recomendada) ou sensor abdominal contínuo; diferença central-periférica > 2 °C geralmente indica estresse do frio, mas pode ocorrer na hipovolemia e refletir aumento da temperatura central no RN séptico. Se houver suspeita de sepse ou desidratação, investigar conforme os registros de sepse neonatal e de perda de peso/desidratação hipernatrêmica (a fonte não lista exames específicos); investigar fatores maternos (corioamnionite, infecção urinária, anestesia peridural).",
+        "tratamento": "Tratar a causa: corrigir o ambiente térmico (revisar servocontrole, alarmes e excesso de roupa), reidratar na desidratação hipernatrêmica (a febre cede) e tratar a infecção quando houver. Não há conduta específica para temperatura elevada ao nascimento.",
+        "conduta": "Reavaliar ambiente, equipamento e roupas; checar peso (perda excessiva), sódio, icterícia e a técnica de amamentação; suspender medicamentos implicados. Se há sinais de sepse (instabilidade térmica é muito preditiva), seguir o registro de sepse neonatal. Em RN com asfixia, evitar hipertermia na fase de reperfusão.",
+        "prescricao": "1) Sem medicamento específico: tratar a causa de base (reidratação, antimicrobiano conforme sepse neonatal, correção ambiental).\n2) Antitérmicos: a fonte não os menciona para a hipertermia neonatal (dose: PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 4, cap. 32.6 (e v. 2, cap. 14.1.2.1) (2ª ed., 2014).",
+        "cid": "P81.8, P81.9",
+        "esp": "Neonatologia; Pediatria"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 4, cap. 32 Controle térmico, item 32.4 e 32.6 (p. 14, 24-25)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v4.pdf",
+          "usadoPara": "definição, causas, diagnóstico diferencial, efeitos adversos e febre materna"
+        },
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 2, cap. 14.1.2.1 Instabilidade térmica (p. 82)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v2.pdf",
+          "usadoPara": "hipertermia como sinal de sepse e diagnóstico diferencial"
+        }
+      ],
+      "observacoes": "Hipotermia neonatal já existe no acervo. Não há dose na fonte. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Ortopedia e Traumatologia",
+        "nome": "Deformidades posturais do pé do recém-nascido (pé calcaneovalgo e pé aduto) e joelho recurvado congênito",
+        "introducao": "Pé calcaneovalgo: deformidade postural oposta ao pé torto (pé dorsifletido, calcâneo proeminente, eversão), de correção espontânea. Pé aduto: desvio medial do antepé com calcanhar normal, flexível e que se corrige sozinho. Joelho recurvado: encurtamento congênito do quadríceps, com joelho arqueado para trás e flexão diminuída, às vezes luxado, associado a apresentação pélvica e displasia do quadril.",
+        "criterios": "Pé calcaneovalgo e aduto: flexíveis, corrigem à manipulação. Sinais de alerta de condição grave: pé rígido, de aspecto grave ou com alteração dos artelhos (suspeitar pé tálus vertical no lugar de calcaneovalgo); pé rígido sem correção espontânea (metatarso varo no lugar do pé aduto). Joelho recurvado: diagnóstico clínico, com graus de leve a luxação do joelho.",
+        "exames": "Diagnóstico clínico. Na presença de joelho recurvado, calcaneovalgo, torcicolo ou apresentação pélvica, a ultrassonografia do quadril é indicada após 3 semanas de vida para pesquisar displasia do desenvolvimento do quadril. Tálus vertical, metatarso varo e luxação do joelho: encaminhar ao ortopedista para avaliação (a fonte não especifica exame de imagem).",
+        "tratamento": "Calcaneovalgo: correção espontânea; manipulações feitas pela mãe nos casos acentuados e, eventualmente, órtese por curto período. Pé aduto flexível: observação (corrige espontaneamente). Metatarso varo e tálus vertical: encaminhamento precoce ao ortopedista (manipulações e gessos seriados, às vezes cirurgia). Joelho recurvado: manipulações, gessos ou talas em flexão e, nos casos de luxação, cirurgia; bom prognóstico.",
+        "conduta": "Examinar todos os RN (pés, joelhos e quadris, com manobra de Ortolani). Orientar a família sobre a evolução benigna das formas posturais e mostrar as manipulações. Encaminhar ao ortopedista pés rígidos, graves, com alteração dos artelhos ou sem correção, e todo joelho recurvado com luxação. Sempre pesquisar DDQ associada.",
+        "prescricao": "1) Sem medicação.\n2) Manipulação suave pela mãe (calcaneovalgo acentuado); órtese por curto período se necessário, sob orientação ortopédica.\n3) Pé aduto flexível: observação.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 30.1.2 a 30.1.4 (2ª ed., 2014).",
+        "cid": "Q66.4, Q66.2, Q68.2, Q66.8",
+        "esp": "Ortopedia e Traumatologia; Pediatria; Neonatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 30 Problemas ortopédicos, itens 30.1.2 a 30.1.4 (p. 170-172)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "definição, diferenciais graves e conduta"
+        }
+      ],
+      "observacoes": "Pé torto congênito e DDQ já existem no acervo. A fonte não dá tempo de uso de órtese nem esquema de manipulação. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Ortopedia e Traumatologia",
+        "nome": "Escoliose congênita",
+        "introducao": "Curvatura anormal da coluna no plano frontal causada por malformação vertebral (defeitos de formação ou segmentação). Pode ser percebida ao nascimento pela assimetria das escápulas ou do tronco, ou só aparecer com o crescimento. Pode se associar a diastematomielia, siringomielia e fusão de costelas.",
+        "criterios": "Curva da coluna com assimetria do dorso no RN ou lactente; o grau da deformidade resulta da combinação das anomalias vertebrais (defeitos em lados opostos podem se compensar).",
+        "exames": "Radiografia da coluna confirma o diagnóstico e as malformações vertebrais. Investigar outras malformações associadas (medula, costelas); a fonte cita as mais frequentes.",
+        "tratamento": "Na criança pequena a conduta é em geral expectante, com seguimento radiológico. Tratamento futuro da curva deformante, geralmente por artrodeses localizadas, pelo ortopedista/cirurgião de coluna.",
+        "conduta": "Encaminhar ao ortopedista pediátrico; solicitar RX e avaliar outras malformações. Seguir o crescimento e a progressão da curva.",
+        "prescricao": "1) Sem medicação.\n2) Conduta expectante com acompanhamento radiológico; cirurgia (artrodese) definida pelo especialista conforme a evolução.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 30.1.6 (2ª ed., 2014).",
+        "cid": "Q76.3, Q67.5",
+        "esp": "Ortopedia e Traumatologia; Pediatria"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 30.1.6 Escoliose congênita (p. 175)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "definição, diagnóstico e conduta"
+        }
+      ],
+      "observacoes": "Fonte curta; a escoliose idiopática do adolescente e a do adulto já existem no acervo e não se aplicam. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Ortopedia e Traumatologia",
+        "nome": "Infecções musculoesqueléticas neonatais (celulite e fascite necrosante, miosite, artrite séptica e osteomielite)",
+        "introducao": "Infecções graves do RN, sobretudo hospitalizado, prematuro e com outras infecções (pneumonia, meningite, diarreia). Os germes chegam por via hematogênica ou por inoculação local (punção de calcanhar, extravasamento de soro) ou são transmitidos pela mãe (lues). Estafilococo, estreptococos (grupo B), hemófilos, Gram-negativos e meningococo são os agentes citados. O diagnóstico costuma ser tardio porque o RN grave tem poucos sinais.",
+        "criterios": "Sinais escassos: muitas vezes só a falta de movimentação ativa do membro (pseudoparalisia de Parrot), posição de defesa, dor à mobilização passiva, febre inexplicada tardia. Artrite séptica: ombro, joelho, quadril e cotovelo. Osteomielite: mais no joelho (quase 70%), dor à pressão do osso; radiografia normal nos primeiros 10 dias. Celulite/fascite necrosante: toxemia, necrose extensa de pele e fáscia. Miosite supurada: abscessos musculares (forma benigna, dolorosa, febril) ou infecção difusa grave com necrose.",
+        "exames": "Punção articular (a conduta mais objetiva para identificar pus); ultrassonografia (ajuda no diagnóstico do abscesso muscular); radiografia (sem alterações nos primeiros 10 dias da osteomielite; destruição óssea e abscesso de partes moles nos casos tardios); lembrar a sífilis congênita (transmissão materna citada na fonte). Exames laboratoriais gerais (hemograma, PCR, hemoculturas): a fonte não os especifica (PENDENTE DE VERIFICAÇÃO).",
+        "tratamento": "Tratamento cirúrgico precoce associado a antibióticos que cubram Gram-positivos e Gram-negativos: artrite séptica com desbridamento e limpeza articular + antibióticos por 3 semanas; osteomielite com drenagem e desbridamento de urgência + antibióticos por 4 a 6 semanas; fascite/miosite grave com desbridamento sucessivo e antibiótico com cobertura também para anaeróbios; abscesso muscular localizado com drenagem e antibiótico.",
+        "conduta": "Alto índice de suspeita em RN em UTI: examinar ativamente as articulações e a movimentação de todos os membros; puncionar a articulação na dúvida. Internação e avaliação imediata de ortopedia. Atraso leva a lesão articular irreversível e sequela grave.",
+        "prescricao": "1) Antibioticoterapia IV de largo espectro (Gram-positivos e Gram-negativos; anaeróbios nas formas necrosantes) pelo tempo: artrite séptica 3 semanas; osteomielite 4 a 6 semanas. Fármacos, doses e intervalos: PENDENTE DE VERIFICAÇÃO (a fonte não os especifica; seguir CCIH e o registro de sepse neonatal).\n2) Drenagem/desbridamento cirúrgico.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 30.2 (2ª ed., 2014).",
+        "cid": "M00.9, M86.0, M72.6, P39.8",
+        "esp": "Ortopedia e Traumatologia; Neonatologia; Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 30.2 Infecções musculoesqueléticas neonatais (p. 176-178)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "etiologia, quadro, diagnóstico e tratamento cirúrgico/antibiótico"
+        }
+      ],
+      "observacoes": "Artrite séptica e osteomielite da criança já existem no acervo; esta ficha cobre o RN. Nenhum antibiótico ou dose é citado na fonte; PENDENTE. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Necrose gordurosa subcutânea e escleredema neonatal",
+        "introducao": "Duas alterações do subcutâneo do RN que se diferenciam pelo estado geral. Necrose gordurosa: benigna e autolimitada, em RN a termo saudável, com nódulos subcutâneos eritematosos que surgem nas 2 primeiras semanas; associada a hipotermia, trauma de parto, asfixia e hipercalcemia. Escleredema: endurecimento difuso lenhoso, em prematuro debilitado e gravemente doente, sinal inespecífico de mau prognóstico (mortalidade de 50% a 75%).",
+        "criterios": "Necrose gordurosa: bom estado geral, mamando bem, nódulos circunscritos localizados, isolados ou múltiplos, dolorosos ou não; pode haver hipercalcemia tardia (náuseas, perda de peso, baixo crescimento). Escleredema: RN pré-termo em mau estado, endurecimento simétrico de membros inferiores e nádegas progredindo para cima, poupando palmas e plantas, pele reticulada branco-amarelada; mãe doente em cerca de 25%; quadros graves associados (sepse, cardiopatia, doença pulmonar, desidratação, diarreia).",
+        "exames": "Diagnóstico clínico; biópsia mostra cristais em agulha nos adipócitos com granulomas (necrose gordurosa) ou edema e espessamento dos septos (escleredema). Pesquisar hipercalcemia na necrose gordurosa (associação descrita na fonte; exame e periodicidade não especificados: PENDENTE DE VERIFICAÇÃO). Diferenciais: celulite bacteriana e lesões de sepse.",
+        "tratamento": "Necrose gordurosa: geralmente nenhum; as lesões involuem em meses sem cicatriz. Se houver hipercalcemia: restringir cálcio e vitamina D e/ou corticoide sistêmico; etidronato descrito em casos refratários. Escleredema: sem terapia específica; suporte (equilíbrio hidroeletrolítico, controle da temperatura) e antimicrobianos se houver infecção.",
+        "conduta": "Reconhecer o RN sadio com nódulos como necrose gordurosa, tranquilizar e vigiar sinais de hipercalcemia tardia (náuseas, perda de peso, baixo crescimento). No escleredema, investigar e tratar a doença de base (sepse, cardiopatia, doença respiratória).",
+        "prescricao": "1) Necrose gordurosa sem hipercalcemia: sem medicação.\n2) Hipercalcemia associada: restrição de cálcio e vitamina D e/ou corticoide sistêmico; etidronato em casos recalcitrantes (doses: PENDENTE DE VERIFICAÇÃO; a fonte não especifica).\n3) Escleredema: suporte e tratamento da doença de base.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31.3 (2ª ed., 2014).",
+        "cid": "P83.8, P83.0",
+        "esp": "Neonatologia; Dermatologia; Pediatria"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31.3 Anormalidades do tecido subcutâneo (p. 184-186)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "definição, clínica, diferenciais (Tabela 3) e tratamento"
+        }
+      ],
+      "observacoes": "A CID P83.0 (esclerema neonatal) foi usada para o escleredema, pela correspondência de nome; a necrose gordurosa subcutânea não tem código próprio (P83.8). Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Aplasia cutânea congênita",
+        "introducao": "Ausência localizada de epiderme e derme (às vezes de subcutâneo) desde o nascimento, de causa desconhecida; fatores descritos: teratógenos maternos (metimazol), malformações, infecções e epidermólise bolhosa. O couro cabeludo (vórtice/linha média) é o local mais comum (80%).",
+        "criterios": "Úlcera assintomática estrelada de 1 a 3 cm, presente ao nascer; em 70% é única. Pode haver o \"sinal do colarinho de cabelos\" (anel de cabelos longos e escuros ao redor). Raramente associada a outras anomalias (síndrome de Addams-Oliver, trissomia do 13, síndrome 4p, fendas orais, malformações cardíacas, neurológicas, esqueléticas).",
+        "exames": "Diagnóstico clínico; diferenciar de lesão traumática de fórceps ou iatrogênica. Cariótipo (avaliação cromossômica) quando houver outras anomalias congênitas.",
+        "tratamento": "Cuidado local da lesão aberta: limpeza, antimicrobiano tópico para prevenir infecção e curativo protetor até a cicatrização. Após cicatrizar: exame anual da cicatriz (potencial neoplásico), correção estética e, nas lesões > 4 cm², cirurgia com enxerto para evitar hemorragia, trombose do seio sagital e meningite.",
+        "conduta": "Curativos e antimicrobiano tópico; avaliar malformações associadas e solicitar cariótipo se houver. Encaminhar lesões grandes ao cirurgião plástico/neurocirurgião. Prognóstico benigno, apesar da cicatriz.",
+        "prescricao": "1) Limpeza local e antimicrobiano tópico: neomicina + bacitracina ou mupirocina 2% (frequência e duração: PENDENTE DE VERIFICAÇÃO).\n2) Curativo protetor até cicatrizar.\n3) Controle da cicatriz anualmente.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31.5.1 (Quadro 15) (2ª ed., 2014).",
+        "cid": "Q84.8",
+        "esp": "Dermatologia; Neonatologia; Pediatria"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31.5.1 Aplasia cutânea congênita (p. 195-196)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "definição, associações, diagnóstico diferencial e quadro de tratamento"
+        }
+      ],
+      "observacoes": "Frequência dos tópicos não consta; PENDENTE. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Acne neonatal e melanose pustular transitória",
+        "introducao": "Acne neonatal: erupção acneiforme benigna que surge com 2 a 4 semanas de vida, por estímulo hormonal (andrógenos maternos e hiperplasia sebácea), em cerca de 50% dos lactentes. Melanose pustular transitória: dermatose benigna e autolimitada, mais comum em pele negra, com vesicopústulas superficiais que evoluem para máculas hiperpigmentadas.",
+        "criterios": "Acne: comedões, pápulas inflamatórias e pústulas em face, tórax, dorso e virilhas; pode durar até 8 meses. Melanose: vesicopústulas de 24 a 48 h, na parte inferior da face, mento, fronte, região cervical, pré-tibial e lombar; as máculas pigmentadas duram semanas a meses.",
+        "exames": "Clínico. Esfregaço de Wright na melanose mostra neutrófilos (poucos ou nenhum eosinófilo), ao contrário do eritema tóxico. Biópsia só em dúvida.",
+        "tratamento": "Acne leve: apenas higiene local. Acne grave: peróxido de benzoíla 2,5%. Melanose: sem tratamento.",
+        "conduta": "Tranquilizar a família sobre a evolução benigna; afastar impetigo, candidíase e eritema tóxico (ver registro de lesões benignas da pele do RN).",
+        "prescricao": "1) Acne leve e melanose: sem medicação, limpeza local.\n2) Acne grave: peróxido de benzoíla 2,5% tópico (frequência e tempo: PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31.4.2 e 31.4.4 (2ª ed., 2014).",
+        "cid": "L70.4, P83.8",
+        "esp": "Dermatologia; Pediatria; Neonatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31.4.2 Acne e 31.4.4 Melanose pustular transitória (p. 188)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "clínica, fisiopatologia e tratamento"
+        }
+      ],
+      "observacoes": "O eritema tóxico, a miliária e o milium já estão no lote 01. Acne infantil (L70.4) aplicada ao RN por falta de código neonatal. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Acrodermatite enteropática (deficiência de zinco)",
+        "introducao": "Distúrbio por deficiência de zinco, hereditário (autossômico recessivo, mutação do carreador intestinal de zinco SLC39A4) ou adquirido (nutrição parenteral sem zinco, bypass intestinal, doença de Crohn, fibrose cística). A forma hereditária aparece nos primeiros dias a semanas em RN que recebem leite de vaca; no RN amamentado, semanas após o desmame.",
+        "criterios": "Tríade: lesões acrais e periorificiais (vesicobolhosas, pustulosas, eczematosas), diarreia e alopecia; também irritabilidade, estomatite, glossite, atraso do desenvolvimento, candidíase e fotofobia. Placas eczematosas ou erosões simétricas em nariz, boca, orelhas, olhos, períneo, cotovelos, joelhos e dedos.",
+        "exames": "Zinco sérico < 50 mcg/dL (suspeita laboratorial); dosar zinco no leite materno quando amamentado. Diferencial: dermatose por IgA linear, psoríase, dermatite das fraldas, histiocitose e candidíase.",
+        "tratamento": "Suplementação de zinco; casos graves com zinco venoso; monitorizar zinco sérico a cada 6 a 12 meses. Melhora do humor e da irritabilidade em 1 a 2 dias; apetite, diarreia e pele em cerca de 3 dias.",
+        "conduta": "Suspeitar em lactente com dermatite periorificial e diarreia; dosar zinco, iniciar reposição e investigar a causa (genética ou adquirida). Acompanhamento de longo prazo (a forma hereditária exige reposição contínua).",
+        "prescricao": "1) Sulfato de zinco 5 mg/kg/dia, VO, dividido em 2 a 3 tomadas (PENDENTE DE VERIFICAÇÃO: a fonte, Quadro 14, não esclarece se a dose é do sal sulfato de zinco ou de zinco elementar; não prescrever sem conferir).\n2) Casos graves: cloreto de zinco IV (dose: PENDENTE DE VERIFICAÇÃO).\n3) Dosar zinco sérico a cada 6 a 12 meses.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31.4.9 (Quadro 14) (2ª ed., 2014).",
+        "cid": "E83.2",
+        "esp": "Dermatologia; Pediatria; Neonatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31.4.9 Acrodermatite enteropática (p. 193-194)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "definição, clínica, diagnóstico laboratorial e tratamento"
+        }
+      ],
+      "observacoes": "A fonte fala em 5 mg/kg/dia de sulfato de zinco sem esclarecer se é sal ou zinco elementar; conferir antes de prescrever (PENDENTE). Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Granuloma glúteo infantil",
+        "introducao": "Distúrbio benigno raro da área das fraldas, resposta granulomatosa a corpo estranho (maceração, inflamação, infecção secundária por Candida ou uso prolongado de corticoide tópico). Ocorre no período de uso de fraldas (até cerca de 3 anos).",
+        "criterios": "Eritema, pápulas e nódulos vermelho-purpúricos de 0,5 a 4 cm na região das fraldas; assintomático ou doloroso.",
+        "exames": "Clínico; biópsia se houver dúvida com sarcoma de Kaposi, linfoma, tuberculose cutânea, sífilis e micoses profundas.",
+        "tratamento": "Suspender corticoide tópico se em uso; tratar a dermatite de fralda e a candidíase associadas. Melhora espontânea em meses.",
+        "conduta": "Retirar o fator desencadeante, manter a área seca e limpa e reavaliar; encaminhar ao dermatologista em dúvida diagnóstica.",
+        "prescricao": "1) Suspender corticoide tópico em uso (se necessário, no máximo 2 semanas, segundo a fonte).\n2) Tratar candidíase/dermatite de fralda associada (ver registros específicos).\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31.4.10 (2ª ed., 2014).",
+        "cid": "L92.8, L22",
+        "esp": "Dermatologia; Pediatria"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 3, cap. 31.4.10 Granuloma glúteo infantil (p. 194-195)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v3.pdf",
+          "usadoPara": "definição, causas, diferenciais e conduta"
+        }
+      ],
+      "observacoes": "Quadro raro; fonte curta, sem doses. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Baixa produção de leite materno (hipogalactia) e demora na apojadura",
+        "introducao": "Queixa frequente de \"pouco leite\" ou leite \"fraco\". A maioria das mulheres consegue produzir leite suficiente; muitas vezes a percepção vem de insegurança materna, dos períodos de aceleração do crescimento do bebê (2 a 3 dias, por volta de 10 a 14 dias, 4 a 6 semanas e 3 meses) ou de hiperlactação. Causa principal de produção real baixa: esvaziamento ineficaz das mamas (pega inadequada, mamadas infrequentes ou curtas, horários rígidos, suplementos, chupetas, protetores de mamilo, ingurgitamento).",
+        "criterios": "Sinais no bebê: não fica saciado, chora muito, mama com muita frequência e por muito tempo, urina menos de 6 a 8 vezes ao dia, evacua pouco com fezes secas e duras; o melhor indício é o ganho de peso inadequado na curva de crescimento. Demora na apojadura: \"descida do leite\" só alguns dias após o parto.",
+        "exames": "Observar a mamada e a pega; pesar e acompanhar a curva de peso; história detalhada para causas menos frequentes: fenda labial/palatina, frênulo curto, micrognatia, macroglossia, sedação por drogas, prematuridade, síndrome de Down, hipotireoidismo, doenças neuromusculares ou do SNC, mamilos anormais, medicamentos maternos (bromocriptina, cabergolina, estrogênios, progestogênios, pseudoefedrina), doenças maternas (hipotireoidismo, diabetes não tratado, síndrome de Sheehan, tumor hipofisário), restos placentários, fadiga, distúrbio emocional, dieta muito restritiva, cirurgia mamária, tabagismo e nova gravidez.",
+        "tratamento": "Corrigir a técnica (posição e pega), aumentar a frequência das mamadas, oferecer as duas mamas, dar tempo para esvaziar e alternar as mamas se o bebê estiver sonolento, evitar mamadeira, chupeta e protetor de mamilo, hidratação adequada (excesso não aumenta o leite), repouso. Na demora da apojadura: tranquilizar, estimular a mama (sucção frequente e ordenha) e, se preciso, translactação. Medicamento galactagogo só em casos selecionados.",
+        "conduta": "Avaliar a díade na mamada, descartar causas orgânicas, reforçar a confiança da mãe e acompanhar o peso do bebê; suplementar apenas quando indicado e de forma que não prejudique a mama (copinho, translactação).",
+        "prescricao": "1) Medidas comportamentais e de técnica de amamentação (primeira linha).\n2) Galactogogo só em casos selecionados, quando as medidas anteriores não bastarem: metoclopramida 10 mg VO 3 vezes ao dia por cerca de 1 a 2 semanas (segundo a fonte; conferir bula e contraindicações antes de prescrever). A domperidona, também citada na fonte, NÃO é recomendada nesta ficha: há alerta de segurança cardíaca (prolongamento do QT) e não há fonte oficial vigente anexada (PENDENTE DE VERIFICAÇÃO).\n3) Translactação (copo/sonda junto ao mamilo) com leite humano, de preferência pasteurizado, na demora da apojadura.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7.2 e 7.13.2 (2ª ed., 2014).",
+        "cid": "O92.4, O92.3",
+        "esp": "Obstetrícia; Pediatria; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7 Dificuldades no aleitamento materno, itens 7.2 e 7.13.2 (p. 135, 143-146)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "definição, causas, medidas e galactogogo (metoclopramida)"
+        }
+      ],
+      "observacoes": "Domperidona (30 mg 3 vezes ao dia, citada na fonte de 2014) retirada pela revisão: alerta de risco cardíaco (QT) sem fonte oficial vigente anexada. Ficha de \"Aleitamento materno – dificuldades\" já existe no acervo, mas é genérica; esta trata especificamente do tema. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Hiperlactação e reflexo exacerbado de ejeção do leite",
+        "introducao": "Excesso de produção de leite ou ejeção muito forte, que pode levar a bebê engasgado, com mamadas curtas, com \"fome\" frequente por ingerir muito leite anterior (pobre em calorias e rico em lactose) e sintomas que simulam intolerância à lactose; pode causar bloqueio de ductos e mastite na mãe.",
+        "criterios": "Mama: desconforto permanente, enchimento muito rápido, dor em agulhada, áreas firmes e nodulosas, bloqueios crônicos ou mastites, dor ao início da ejeção, vazamento constante (inclusive na gestação). Bebê: engasgos e tosse, leite escorrendo da boca, dificuldade de manter a pega (larga o peito e arqueia), regurgitação, flatulência, fezes explosivas esverdeadas com assadura, ganho de peso insatisfatório ou que desacelera.",
+        "exames": "Clínico; observação da mamada e curva de peso. Considerar intolerância à lactose ou alergia apenas se houver outros sinais.",
+        "tratamento": "Oferecer uma só mama por mamada (a mesma se o bebê voltar em cerca de 1 h); ordenhar só o necessário para conforto na outra; iniciar a mamada depois do reflexo de ejeção (estimulado por ordenha) ou ordenhar um pouco antes até o fluxo diminuir; colocar o bebê para arrotar e descansar nos períodos de fluxo intenso; massagear áreas endurecidas durante a mamada.",
+        "conduta": "Orientar a mãe, acompanhar o peso do bebê e tratar complicações (bloqueio de ducto, mastite). Evitar reduzir demais a produção.",
+        "prescricao": "1) Sem medicação; medidas de manejo da amamentação.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7.12 e 7.13.1 (2ª ed., 2014).",
+        "cid": "O92.6, O92.7",
+        "esp": "Obstetrícia; Pediatria; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7, itens 7.12 e 7.13.1 (p. 143-145)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "sinais de hiperlactação e manejo"
+        }
+      ],
+      "observacoes": "CID O92.6 (galactorreia) é a mais próxima disponível; não há código específico de hiperlactação. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Candidíase mamilar e mamária na lactação",
+        "introducao": "Infecção da pele do mamilo e da aréola, ou dos ductos lactíferos, por Candida sp no puerpério; comum. Precisa ser tratada em conjunto com a boca do bebê.",
+        "criterios": "Prurido, queimação e dor em agulhadas nos mamilos que persistem após as mamadas; pele avermelhada, brilhante, com fina descamação (raramente placas brancas); dor em agulhadas dentro da mama. O bebê frequentemente tem crostas brancas na boca (diferenciar de crostas de leite, que saem facilmente sem machucar a língua).",
+        "exames": "Diagnóstico clínico; examinar a boca do bebê. Diferenciar de trauma mamilar e do vasoespasmo.",
+        "tratamento": "Tratar mãe e bebê simultaneamente, mesmo sem sinais evidentes na criança. Antifúngico tópico por duas semanas; violeta de genciana 0,5%. Se o tópico falhar: antifúngico sistêmico materno a critério médico (a fonte de 2014 cita cetoconazol oral, retirado desta ficha pela revisão por hepatotoxicidade e restrição regulatória; alternativa: fluconazol 150 mg/dia VO por 14 a 18 dias, conforme o protocolo Saúde das Mulheres 2016). Medidas gerais: secar os mamilos ao ar após as mamadas, expô-los à luz, retirar ou ferver chupetas e bicos de mamadeira.",
+        "conduta": "Tratar a díade, orientar higiene e prevenir trauma mamilar. Lembrar que muitas espécies de Candida são resistentes à nistatina.",
+        "prescricao": "1) Mamilo e aréola da mãe e boca do bebê: nistatina, clotrimazol, miconazol ou cetoconazol tópico por 2 semanas (dose/posologia: PENDENTE DE VERIFICAÇÃO; a fonte não detalha).\n2) Alternativa: violeta de genciana 0,5% nos mamilos/aréolas e na boca do bebê 1 vez ao dia por 3 a 4 dias.\n3) Falha do tópico: antifúngico sistêmico materno a critério médico. O cetoconazol oral (200 mg/dia por 10 a 20 dias, na fonte de 2014) NÃO é recomendado nesta ficha: risco de hepatotoxicidade e restrições regulatórias ao uso oral. Alternativa: fluconazol 150 mg/dia VO por 14 a 18 dias (Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres, 2016, p. 146). Verificar a compatibilidade com a lactação.\n4) Ferver bicos e chupetas por 20 min ao menos 1 vez ao dia, se não puderem ser retirados.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7.6 (2ª ed., 2014); e Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), p. 146.",
+        "cid": "B37.8, O92.2",
+        "esp": "Obstetrícia; Pediatria; Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7, item 7.6 (p. 139)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "quadro clínico, tratamento simultâneo da díade e antifúngicos"
+        },
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres, p. 146 (manejo da candidíase mamilar)",
+          "instituicao": "Ministério da Saúde; Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "fluconazol 150 mg/dia VO por 14 a 18 dias como alternativa sistêmica se o tópico falhar"
+        }
+      ],
+      "observacoes": "Cetoconazol oral (recomendado na fonte de 2014) retirado pela revisão por hepatotoxicidade e restrição regulatória; cetoconazol tópico mantido. A ficha \"Candidíase oral e dermatite de fralda\" cobre o bebê; aqui o foco é a mama. Única versão do tema (a do lote 16 foi reprovada como duplicata). Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Vasoespasmo do mamilo (fenômeno de Raynaud do mamilo) na lactação",
+        "introducao": "Isquemia intermitente do mamilo por vasoespasmo, causada por frio, compressão anormal do mamilo pela boca do bebê (pega inadequada) ou trauma mamilar importante.",
+        "criterios": "Palidez do mamilo seguida de cianose e eritema, com dor intensa em fisgadas ou queimação antes, durante ou, mais comumente, depois das mamadas, durando segundos a minutos (às vezes mais de uma hora).",
+        "exames": "Diagnóstico clínico; observar a pega. Diferenciar de candidíase e trauma mamilar.",
+        "tratamento": "Tratar a causa (corrigir a pega, tratar trauma), compressas mornas e evitar vasoconstritores (cafeína, nicotina). Nifedipino se a dor for intensa e refratária.",
+        "conduta": "Reavaliar a técnica de amamentação, aquecer os mamilos e retornar se dor persistente.",
+        "prescricao": "1) Compressas mornas nos mamilos.\n2) Dor intensa e refratária (raro): nifedipino 5 mg VO 3 vezes ao dia por 2 semanas, ou 30 a 60 mg VO 1 vez ao dia se liberação lenta; podem ser necessários 2 a 3 ciclos.\n3) Evitar cafeína e nicotina.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7.7 (2ª ed., 2014).",
+        "cid": "O92.2, I73.0",
+        "esp": "Obstetrícia; Medicina de Família e Comunidade; Pediatria"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7, item 7.7 (p. 139-140)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "quadro clínico e manejo com nifedipino"
+        }
+      ],
+      "observacoes": "Fenômeno de Raynaud geral já existe; esta ficha é específica da lactação. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Bloqueio de ductos lactíferos e galactocele",
+        "introducao": "Bloqueio de ducto: leite de uma área da mama não é bem drenado (mamadas infrequentes, remoção ineficaz, sutiã apertado, cremes que obstruem os poros), podendo evoluir para mastite. Galactocele: cisto de ducto mamário com líquido leitoso, inicialmente fluido e depois viscoso.",
+        "criterios": "Bloqueio: nódulos localizados, dolorosos, com vermelhidão e calor, em geral sem febre. Galactocele: massa lisa e redonda palpável, que pode drenar pelo mamilo.",
+        "exames": "Bloqueio: clínico. Galactocele: punção aspirativa ou ultrassonografia.",
+        "tratamento": "Bloqueio: tratamento precoce e enérgico para evitar mastite: mamadas frequentes começando pela mama afetada (queixo do bebê voltado para a área), calor local e massagem suave em direção ao mamilo antes e durante a mamada, ordenha se o bebê não esvaziar. Galactocele: aspiração e, se o cisto reencher, remoção cirúrgica.",
+        "conduta": "Esvaziar bem a mama, rever a técnica e o sutiã, evitar cremes nos mamilos; tratar como mastite se surgirem febre e sinais sistêmicos (ver registro de mastite lactacional).",
+        "prescricao": "1) Sem medicação; mamadas frequentes, calor local e massagem, ordenha.\n2) Galactocele recorrente: remoção cirúrgica.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7.8 e 7.11 (2ª ed., 2014).",
+        "cid": "O92.7, O92.2",
+        "esp": "Obstetrícia; Mastologia; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7, itens 7.8 e 7.11 (p. 140-143)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "bloqueio de ductos, galactocele e manejo"
+        }
+      ],
+      "observacoes": "Intervalo de reavaliação (24-48 h) retirado pela revisão (não consta na fonte). A galactocele fica só nesta ficha (a do lote 16 foi reprovada como duplicata). A mastite e o abscesso mamário já existem no acervo e não foram repetidos. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Mamilos planos ou invertidos e sucção débil do recém-nascido",
+        "introducao": "Mamilos planos ou invertidos podem dificultar o início da amamentação, mas não a impedem, pois o bebê pode fazer o \"bico\" com a aréola. Alguns RN aparentemente normais não sugam ou têm sucção débil nas primeiras horas ou dias; causas incluem sedação por analgesia materna no parto, disfunções orais transitórias e características anatômicas.",
+        "criterios": "Mamilo invertido: ao pressionar a aréola entre polegar e indicador, o mamilo se retrai. Sucção débil: o bebê não pega a aréola, não mantém a pega, larga o peito e chora, ou recusa uma só mama. Disfunções orais: reflexo de procura/sucção débeis, lábios invertidos, padrão mordedor, tensão oral excessiva, língua posteriorizada ou hipertônica.",
+        "exames": "Observar a mamada (posição, abertura da boca, tensão da mama); examinar a cavidade oral; lembrar de fratura de clavícula, frênulo curto e sedação como causas de dor ou recusa.",
+        "tratamento": "Dar ajuda logo após o nascimento; ordenhar o leite se o bebê não suga eficazmente e oferecer em copinho; auxiliar na pega com a aréola macia; testar posições (como a \"futebol americano\"); manobras para protrair o mamilo antes da mamada (estímulo manual, compressa fria, bomba ou seringa adaptada); intermediário de silicone fino só excepcionalmente e pelo menor tempo. Disfunções orais: treinamento oral por profissional especializado.",
+        "conduta": "Estimular a mama ao menos 5 vezes ao dia se o bebê não suga, suspender bicos e chupetas, acalmar mãe e bebê e insistir nas mamadas; exercícios com o dedo mínimo na boca do bebê.",
+        "prescricao": "1) Sem medicação.\n2) Seringa de 10 ou 20 mL adaptada (ponta cortada, êmbolo na extremidade cortada) para sucção do mamilo por 30 a 60 s, sem sucção vigorosa.\n3) Ordenha ao menos 5 vezes ao dia enquanto o bebê não suga bem.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7.1 e 7.3 (2ª ed., 2014).",
+        "cid": "O92.0, P92.2",
+        "esp": "Obstetrícia; Pediatria; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 7, itens 7.1 e 7.3 (p. 133-136)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "conduta para mamilos planos/invertidos e sucção débil"
+        }
+      ],
+      "observacoes": "A anquiloglossia e a fissura mamilar já existem no acervo. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Infecção relacionada à assistência em unidade neonatal e prevenção de infecção hospitalar",
+        "introducao": "Infecções adquiridas no hospital pelo RN, mais comuns em UTI neonatal. O contato (mãos, objetos, dispositivos) é o mecanismo mais importante; a sepse tardia, ligada a cateter central e causada principalmente por estafilococo coagulase-negativa, é a mais comum e problemática. Fatores: baixo peso (cada 100 g a menos aumenta cerca de 9% o risco), imaturidade imunológica, procedimentos invasivos, alteração da microbiota, superlotação e falta de pessoal.",
+        "criterios": "Infecção precoce: até 48 h do nascimento (germes do canal de parto ou de bacteremia materna: S. agalactiae, Listeria, E. coli). Tardia: após 48 h (germes do serviço: Gram-negativos, S. aureus, estafilococo coagulase-negativa, fungos). Sinais inespecíficos: piora do estado geral, hipo ou hipertermia, hiperglicemia, apneia, resíduo gástrico, insuficiência respiratória, choque e sangramento.",
+        "exames": "Hemograma completo com plaquetas, PCR quantitativa e hemoculturas (idealmente duas se suspeita de cateter, com cultura da ponta do cateter apenas nessa suspeita); usar os critérios nacionais de IRAS em neonatologia da Anvisa para vigilância. Rastreio de colonização por multirresistentes conforme a CCIH.",
+        "tratamento": "Tratamento orientado por cultura e pelo perfil do serviço; monoterapia sempre que possível, suspensão imediata se a infecção for afastada ou ao fim do tratamento; evitar cefalosporinas de 3ª e 4ª gerações empiricamente (reservar para meningite, insuficiência renal e resistência a aminoglicosídeos).",
+        "conduta": "Prevenção: higienização das mãos (medida mais importante), triagem de visitantes e profissionais doentes, antissepsia adequada, técnica asséptica em cateteres (cateter central, PICC, umbilical), cuidados com o circuito de ventilação, sonda gástrica e coto umbilical, isolamento de contato em multirresistentes, investigação de surtos e uso racional de antibióticos. Vacinação da equipe.",
+        "prescricao": "1) Esquema empírico sugerido: infecção precoce (até 48 h), penicilina ou ampicilina associada a um aminoglicosídeo (em geral gentamicina); infecção tardia (> 48 h), oxacilina associada à amicacina. Doses e intervalos: PENDENTE DE VERIFICAÇÃO (ver registro de sepse neonatal e a rotina da CCIH).\n2) Antissépticos: clorexidina degermante 2% (preferível a 4% em RN), solução alcoólica 0,5%, aquosa 0,2%; álcool 70% para conexões e coto umbilical; PVPI evitado (absorção de iodo e alteração tireoidiana).\n3) Trocar equipo de NPT a cada 24 h; desinfetar o hub com álcool 70% antes do uso.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 5 (2ª ed., 2014).",
+        "cid": "P39.8, P36.8, Y95",
+        "esp": "Neonatologia; Pediatria; Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 5 Prevenção da infecção hospitalar (p. 97-115)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "mecanismos, fatores de risco, classificação precoce/tardia, prevenção, antissépticos, esquemas empíricos e controle de multirresistentes"
+        }
+      ],
+      "observacoes": "Y95 (condição nosocomial) incluída como código complementar. Sepse neonatal e enterocolite já existem no acervo; esta ficha é de prevenção/controle. Doses não constam na fonte. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Diarreia em menores de 2 meses (AIDPI neonatal)",
+        "introducao": "No menor de 2 meses, a diarreia aguda leva rapidamente à desidratação e à morte; a prolongada causa problemas nutricionais. No bebê em aleitamento exclusivo, 6 a 8 evacuações líquidas por dia com bom estado geral podem ser normais; a mãe costuma notar a mudança de padrão. Sangue nas fezes pode vir de doença hemorrágica por deficiência de vitamina K, CIVD, enterocolite necrosante, fissura anal ou alergia ao leite de vaca.",
+        "criterios": "Perguntar número de evacuações, consistência, duração e presença de sangue. Desidratação: ao menos dois entre letargia/inconsciência, inquietude/irritabilidade, olhos fundos, prega cutânea e sucção débil/ausente. Diarreia prolongada: 7 dias ou mais. Diarreia com sangue: sangue nas fezes.",
+        "exames": "Avaliação clínica (hidratação, peso, perfusão); em hospital, conforme gravidade: eletrólitos e exames para investigar causa e coagulopatia; afastar enterocolite necrosante (ver registro específico).",
+        "tratamento": "Sem desidratação: Plano A em casa. Desidratação, diarreia prolongada ou com sangue: encaminhar urgentemente ao hospital com SRO no caminho; na desidratação, Plano C (reidratação IV ou por sonda); manter o aleitamento materno.",
+        "conduta": "Menor de 2 meses com desidratação fica no hospital ou em observação por no mínimo 6 h após a reidratação. Orientar sinais de perigo e retorno em 2 dias se a diarreia persistir.",
+        "prescricao": "1) Plano A: amamentar mais vezes e por mais tempo; SRO e água se amamentado exclusivamente: 50 a 100 mL em copinho após cada evacuação; se vomitar, esperar 10 min e recomeçar mais devagar; entregar 2 pacotes de SRO.\n2) Plano C: Ringer lactato ou soro fisiológico 100 mL/kg IV (30 mL/kg na 1ª hora e 70 mL/kg em 5 h), reavaliando a cada 1 a 2 h; SRO 5 mL/kg/h assim que puder beber. Sem acesso IV: SRO por sonda orogástrica 20 mL/kg/h por 6 h (120 mL/kg).\n3) Diarreia com sangue: vitamina K 1 mg IM em dose única antes do encaminhamento e primeira dose de antibiótico parenteral quando indicada (esquema: PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 9.4 (2ª ed., 2014).",
+        "cid": "P78.3, A09",
+        "esp": "Pediatria; Neonatologia; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 9 Cuidados na comunidade (AIDPI neonatal), item 9.4 (p. 177-180)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "classificação, Plano A, Plano C e vitamina K na diarreia com sangue"
+        }
+      ],
+      "observacoes": "Diarreia aguda e desidratação da criança já existem no acervo; esta ficha é específica do menor de 2 meses. Antibiótico para diarreia com sangue não especificado na fonte. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Perda de peso excessiva e desidratação hipernatrêmica do recém-nascido em aleitamento materno",
+        "introducao": "O RN perde até 10% do peso de nascimento nos primeiros dias (eliminação de líquidos e edema) e deve recuperá-lo até o 10º dia. Ingestão insuficiente de leite por dificuldades na amamentação pode causar desidratação hipernatrêmica, com febre, icterícia e sucção inadequada, nos primeiros dias ou semanas após a alta; é prevenível com apoio ao aleitamento.",
+        "criterios": "Perda > 10% do peso na primeira semana ou perda > 10% após o 10º dia classifica como problema grave de nutrição ou desidratação e exige encaminhamento urgente. Sinais: perda acentuada de peso, hipertermia, icterícia, sucção inadequada, fontanela deprimida, perfusão ruim, taquicardia. Perda > 7% do peso de nascimento com aleitamento inadequado também é fator de risco de hiperbilirrubinemia significante. Casos graves: insuficiência renal, aumento de enzimas hepáticas, CIVD, convulsões e óbito.",
+        "exames": "Peso diário; sódio, ureia e creatinina séricos (hipernatremia sugere desidratação); bilirrubina; glicemia; densidade urinária (normal 1.010 a 1.015); avaliar a mamada.",
+        "tratamento": "Reidratação (a febre desaparece), correção da oferta de leite e suporte à amamentação; prevenir hipoglicemia e hipotermia no transporte ao hospital.",
+        "conduta": "Avaliar toda criança < 2 meses quanto à alimentação, especialmente se não está em aleitamento exclusivo, recebe outros líquidos ou tem peso baixo. Orientar mamadas ao menos 8 vezes ao dia, pega e posição, retirar mamadeira, e reavaliar em 2 dias e pesar em 7 dias. Perda > 10% na primeira semana: encaminhar ao hospital segundo as normas de estabilização e transporte.",
+        "prescricao": "1) Sem medicamento específico; suporte ao aleitamento materno e reidratação orientada pelo sódio e pelo estado clínico (esquema de volume: PENDENTE DE VERIFICAÇÃO; ver registros de líquidos e eletrólitos no RN).\n2) Reavaliar em 2 dias e pesar em 7 dias.\n3) Suplemento vitamínico quando recomendado.\nBase: Ministério da Saúde, Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 9.5 e v. 4, cap. 32.6 (2ª ed., 2014).",
+        "cid": "P74.1, E87.0, P92.3",
+        "esp": "Pediatria; Neonatologia; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 1, cap. 9.5 Nutrição (p. 180-182)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v1.pdf",
+          "usadoPara": "classificação do problema de nutrição, causas de perda de peso"
+        },
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 4, cap. 32.6 Hipertermia (p. 24-25)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v4.pdf",
+          "usadoPara": "desidratação hipernatrêmica no RN em aleitamento exclusivo"
+        },
+        {
+          "titulo": "Atenção à Saúde do Recém-Nascido: guia para os profissionais de saúde, v. 2, cap. 12.2 Controle da hidratação (p. 51-52) e cap. 13 (fatores de risco)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2014 (2ª ed. atualizada)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/atencao_saude_recem_nascido_v2.pdf",
+          "usadoPara": "peso, eletrólitos e perda > 7% como fator de risco"
+        }
+      ],
+      "observacoes": "Resolução de hipernatremia neonatal (volume e velocidade de reposição) não consta na fonte lida; deixada PENDENTE. Icterícia por leite materno já existe no acervo. Não consultei documento mais recente da SBP sobre o tema; a fonte é só o manual do MS de 2014."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Toxoplasmose congênita; Infecção congênita por CMV; Hepatite B e Hepatite C perinatais; HIV (RN exposto); sífilis congênita (v. 2 cap. 15-20)",
+      "motivo": "já existem no acervo (Toxoplasmose congênita; Citomegalovirose congênita; Hepatite B na gestação e profilaxia do RN; Criança exposta à hepatite C; HIV na infância: transmissão vertical; Sífilis congênita)"
+    },
+    {
+      "tema": "Icterícia, sepse neonatal precoce, hipoglicemia, hipocalcemia (v. 2 cap. 13-14, v. 3 cap. 25-26)",
+      "motivo": "já existem no acervo (Icterícia neonatal; Sepse neonatal; Hipoglicemia neonatal; Hipocalcemia neonatal)"
+    },
+    {
+      "tema": "SDR, taquipneia transitória, síndrome de aspiração de mecônio, HPPN, pneumonia neonatal, apneia, DBP (v. 3 cap. 21-23)",
+      "motivo": "já existem no acervo"
+    },
+    {
+      "tema": "Cardiopatias congênitas, PCA, ECN, ROP, HPIV, encefalopatia hipóxico-isquêmica, convulsões neonatais, hipotermia, osteopenia da prematuridade (v. 3-4)",
+      "motivo": "já existem no acervo"
+    },
+    {
+      "tema": "Pé torto congênito, DDQ, paralisia braquial obstétrica, fratura de clavícula, sindactilia/polidactilia, torcicolo (cap. 30)",
+      "motivo": "já existem no acervo ou no lote 06"
+    },
+    {
+      "tema": "Epidermólise bolhosa, pele escaldada, hemangioma, impetigo, dermatite seborreica, dermatite de fraldas, eritema tóxico, miliária (cap. 31)",
+      "motivo": "já existem no acervo ou no lote 01"
+    },
+    {
+      "tema": "Fissura mamilar, ingurgitamento mamário, mastite, abscesso mamário (cap. 7)",
+      "motivo": "já existem no acervo"
+    },
+    {
+      "tema": "Procedimentos (cap. 10), suporte ventilatório (cap. 22), terapias auxiliares (cap. 23), transporte (cap. 8), Método Canguru (cap. 33), nutrição parenteral e enteral (cap. 34-36), seguimento após a alta (cap. 40), reanimação (cap. 2)",
+      "motivo": "não são condições clínicas (procedimentos, cuidados e protocolos) ou já têm ficha equivalente; sem ficha própria"
+    },
+    {
+      "tema": "Distúrbios hidroeletrolíticos do RN (hiponatremia, hipernatremia, hipercalemia) e anemia da prematuridade",
+      "motivo": "fonte lida (cap. 12 e 36) traz apenas orientações de oferta de líquidos e ferro, sem capítulo clínico próprio; sem dose segura, deixados de fora"
+    },
+    {
+      "tema": "Doença de Leiner, cutis marmorata, vérnix, joelho recurvado isolado",
+      "motivo": "achados fisiológicos ou muito raros; joelho recurvado incluído na ficha de deformidades do pé"
+    }
+  ]
+}

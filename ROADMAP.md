@@ -6,7 +6,7 @@ Atualizado em 08/11/2026 (v72). Cada etapa termina com as verificações do `CLA
 
 | Área | Estado |
 |---|---|
-| Conteúdo | 3.226 doenças, 1.851 medicamentos, CID-10 completo (2.045 categorias, 12.451 subcategorias), 12 protocolos de plantão, 40 escores, 16 calculadoras e mais 10 ferramentas na janela "Ferramentas" |
+| Conteúdo | 3.375 doenças (3.226 originais + 149 dos lotes revisados 01–17), 1.851 medicamentos, CID-10 completo (2.045 categorias, 12.451 subcategorias), 12 protocolos de plantão, 40 escores, 16 calculadoras e mais 10 ferramentas na janela "Ferramentas" |
 | Código | Dados em `dados/*.json`, código em `src/`, build sem dependências que gera `dist/index.html` |
 | Offline / PWA | Instalável (manifest, ícones, service worker). Testado no Chromium; **iPhone/Safari ainda não testado** |
 | Testes | ~200 testes Playwright (computador e celular): busca, CID, plantão, dose pediátrica, navegação, PWA, acessibilidade (axe, WCAG 2.1 AA), regressão contra a v71, capturas de tela, design (`docs/DESIGN.md`) e uso real |

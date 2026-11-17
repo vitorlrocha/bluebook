@@ -23,7 +23,10 @@ test.describe('Navegação no computador', () => {
 
   test('página inicial mostra a cobertura com as contagens', async ({ page }) => {
     const cov = page.locator('#detail .cov-tot');
-    await expect(cov).toContainText('3.226doenças');
+    // o acervo cresce por lotes revisados (curadoria/): a contagem mostrada tem de ser a do acervo atual (≥ 3.226)
+    const total = require('../dados/diseases.json').length;
+    expect(total).toBeGreaterThanOrEqual(3226);
+    await expect(cov).toContainText(total.toLocaleString('pt-BR') + 'doenças');
     await expect(cov).toContainText('1.851medicamentos');
     await expect(cov).toContainText('2.045categorias CID-10');
     await expect(cov).toContainText('12.451subcategorias CID-10');

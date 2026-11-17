@@ -1,0 +1,183 @@
+{
+  "lote": "07",
+  "criadoEm": "2026-11-13",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Cirurgia Geral",
+        "nome": "Escoriações e traumatismos superficiais da pele",
+        "introducao": "Lesões em que apenas a epiderme e parte da derme são atingidas (abrasões, contusões superficiais), comuns em quedas, acidentes de trânsito e esportes. O ponto de maior importância clínica é a profilaxia do tétano, que depende do tipo de ferimento (risco mínimo ou alto) e da situação vacinal da pessoa.",
+        "criterios": "Diagnóstico clínico. Classificar o ferimento segundo o Ministério da Saúde: risco mínimo de tétano = ferimento superficial, limpo, sem corpo estranho nem tecido desvitalizado; alto risco = ferimento profundo ou superficial sujo, com corpo estranho ou tecido desvitalizado, queimadura, ferida puntiforme ou por arma branca/de fogo, mordedura, politraumatismo e fratura exposta. Sempre perguntar o número de doses de vacina com componente tetânico e a data da última.",
+        "exames": "Não são necessários na lesão superficial isolada (a fonte consultada não trata de exames de imagem). Em dúvida sobre lesão profunda ou corpo estranho, ver registros de feridas e lacerações e de corpo estranho.",
+        "tratamento": "Limpeza e desinfecção do local com lavagem com solução fisiológica e substâncias oxidantes ou antissépticas, remoção de corpos estranhos e tecidos desvitalizados (desbridamento) quando existirem. Em seguida, conduta imunológica conforme o quadro do Ministério da Saúde (ver prescrição). Curativo, analgesia e antibiótico: PENDENTE DE VERIFICAÇÃO (não constam na fonte lida).",
+        "conduta": "Higienizar e desbridar; classificar o ferimento (risco mínimo ou alto); revisar o histórico vacinal. Vacinar e programar as doses seguintes quando o esquema for incerto ou incompleto, pois isso protege contra tétano em ferimentos futuros. Pessoa imunodeprimida, desnutrida grave ou idosa: além do reforço da vacina, está indicada imunoglobulina humana antitetânica (IGHAT) ou soro antitetânico (SAT). Vacina e IGHAT/SAT, quando usados juntos, devem ser aplicados em locais anatômicos diferentes.",
+        "prescricao": "Profilaxia do tétano em ferimentos (MS, Quadro 20):\n1) Esquema incerto ou menos de 3 doses: vacina com componente tetânico (dT a partir de 7 anos) em qualquer ferimento, para completar o esquema; IGHAT/SAT só se ferimento de alto risco.\n2) 3 doses ou mais, última há menos de 5 anos: sem vacina e sem IGHAT/SAT, qualquer ferimento.\n3) 3 doses ou mais, última há mais de 5 e menos de 10 anos: reforço da vacina (1 reforço) só se ferimento de alto risco; sem IGHAT/SAT em nenhum dos dois (ver nota sobre imunodeprimido, desnutrido grave e idoso na conduta).\n4) 3 doses ou mais, última há 10 anos ou mais: um reforço da vacina em qualquer ferimento; sem IGHAT/SAT em nenhum dos dois (mesma nota).\n4b) 3 doses ou mais, última há 10 anos ou mais, em situações especiais (o quadro não as define; a nota do quadro cita imunodeprimido, desnutrido grave e idoso): 1 reforço da vacina em qualquer ferimento; IGHAT/SAT não no ferimento de risco mínimo e sim no de alto risco, aplicados em local anatômico diferente da vacina.\n5) IGHAT: 250 UI por via intramuscular, mesma dose em adultos e crianças; em reexposição, intervalo mínimo de 21 dias; aplicar em grupo muscular diferente do da vacina.\n6) Analgésico e antibiótico: PENDENTE DE VERIFICAÇÃO.\nBase: Ministério da Saúde, Manual de Normas e Procedimentos para Vacinação, 2ª ed. rev., 2024 (Quadro 20 e item 13.3.14).",
+        "cid": "T14.0, S00, S10, S20, S30, S40, S50, S60, S70, S80, S90",
+        "esp": "Cirurgia Geral; Medicina de Emergência; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de Normas e Procedimentos para Vacinação, 2ª edição revisada",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde e Ambiente",
+          "ano": "2024",
+          "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/2024/manual-de-normas-e-procedimentos-para-vacinacao.pdf",
+          "usadoPara": "Quadro 20 (condutas profiláticas por tipo de ferimento e situação vacinal), classificação de risco do ferimento e item 13.3.14 (IGHAT: 250 UI IM, intervalo de 21 dias)"
+        }
+      ],
+      "observacoes": "Quadro 20 conferido linha a linha pelo revisor (texto extraído com layout de tabela) e confere com a ficha. Curativo, analgesia e antibiótico ficaram sem conteúdo por não estarem na fonte."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Intoxicação por saneantes domésticos (produtos de limpeza e água sanitária)",
+        "introducao": "Exposição por ingestão, inalação ou contato com produtos de limpeza domésticos (saneantes), como detergentes, desinfetantes e água sanitária. Em crianças até 4 anos, produtos de limpeza e higiene domésticos estão entre as causas mais frequentes de intoxicação, em geral acidental. A água sanitária é solução de hipoclorito de sódio ou de cálcio com 2,0 a 2,5% de cloro ativo; misturada com ácidos ou produtos à base de amônia gera gases tóxicos. Produtos corrosivos (ácidos e bases fortes, cloro e amônia voláteis) exigem conduta específica.",
+        "criterios": "Exposição referida ou suspeita ao produto, mais sintomas. Na ingestão de corrosivo: dificuldade de deglutir, dor, edema e eritema de lábios e língua, sialorreia e hematêmese. Olhos: dor, edema e eritema. Pele: dor intensa com pouca inflamação local. Inalação de corrosivo volátil: tosse, dispneia, cefaleia e ardor de vias aéreas superiores. Levar a embalagem do produto e registrar tipo, quantidade, via e tempo de exposição.",
+        "exames": "A fonte lida não detalha exames para este quadro. Monitorar sinais vitais, oximetria de pulso e glicemia capilar; demais exames: PENDENTE DE VERIFICAÇÃO.",
+        "tratamento": "Retirar da exposição e garantir segurança da cena. Avaliação primária e secundária; contato com a Regulação Médica e com o CIATox ou Disque-Intoxicação 0800 722 6001 para definir conduta e destino. Ingestão de corrosivo: proteger via aérea (intubação precoce se estridor); NÃO provocar vômito, NÃO passar sonda nasogástrica, NÃO dar nada por via oral, NÃO fazer lavagem gástrica nem tentar neutralizar; acesso venoso ou intraósseo, hidratação com soro fisiológico e analgesia. Carvão ativado é contraindicado em exposição a hipoclorito de sódio e a cáusticos. Pele: remover roupas contaminadas, retirar excesso de pó com pano seco e lavar com água corrente abundante ou soro fisiológico. Olhos: lavagem contínua com água ou soro fisiológico, pálpebras abertas, por no mínimo 20 minutos, podendo seguir durante o transporte; se um olho só, deitar a cabeça para o lado afetado para não contaminar o outro. Inalação: ambiente aberto, oxigênio suplementar e nebulização com soro fisiológico.",
+        "conduta": "Estabilizar como em qualquer emergência clínica, identificar o produto e acionar o CIATox. Se o produto for corrosivo volátil, retirar o paciente para local aberto e só colocá-lo na ambulância após descontaminação da pele. Encaminhar preferencialmente a hospital terciário conforme orientação da regulação. Orientar a prevenção: guardar saneantes na embalagem original, longe de alimentos, bebidas, medicamentos e do alcance de crianças e animais, e nunca misturar produtos.",
+        "prescricao": "1) Descontaminação: água corrente ou soro fisiológico (pele e olhos, mínimo 20 min nos olhos); sem indução de vômito, sem lavagem gástrica, sem carvão ativado em hipoclorito e cáusticos.\n2) Inalação com broncoespasmo: nebulização com soro fisiológico associada a fenoterol 10 gotas diluídas em 5 mL de soro fisiológico, por máscara com oxigênio a 6 L/min, repetindo a cada 20 minutos se necessário, até três nebulizações.\n3) Hidratação com soro fisiológico e analgesia conforme protocolo de analgesia do SAMU (fármaco e dose não lidos: PENDENTE DE VERIFICAÇÃO).\n4) Contato: Disque-Intoxicação 0800 722 6001 (Anvisa/CIATox).\nBase: Ministério da Saúde, Protocolos de Suporte Avançado de Vida do SAMU 192 (ATox 1, 13 e 14), 2016; Anvisa, Consumo e Saúde: água sanitária, 2012.",
+        "cid": "T55",
+        "esp": "Toxicologia; Medicina de Emergência; Pediatria"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Suporte Avançado de Vida - SAMU 192 (ATox 1 Intoxicações: medidas gerais; ATox 13 Exposição a corrosivos; ATox 14 Descontaminação)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf",
+          "usadoPara": "Condutas gerais na intoxicação, exposição a corrosivos, descontaminação (olhos, pele, inalação), fenoterol inalatório, contraindicação de carvão ativado em hipoclorito e cáusticos, Disque-Intoxicação 0800 722 6001"
+        },
+        {
+          "titulo": "Consumo e Saúde: Água sanitária - conheça um pouco mais sobre esse saneante",
+          "instituicao": "Anvisa (Ouvidoria) e DPDC",
+          "ano": "2012",
+          "url": "https://bibliotecadigital.anvisa.gov.br/jspui/bitstream/anvisa/168/1/Consumo%20e%20saude_agua%20sanitaria_conheca%20um%20pouco%20mais%20sobre%20esse%20saneante.pdf",
+          "usadoPara": "Definição de saneantes e de água sanitária (2,0 a 2,5% de cloro ativo), risco da mistura com ácidos ou amônia, medidas de armazenamento, Disque-Intoxicação 0800 722 6001"
+        }
+      ],
+      "observacoes": "Telefone conferido nas duas fontes lidas (SAMU e Anvisa). Nenhuma fonte lida trata de detergentes comuns e sabões em separado; a ficha cobre saneantes em geral e referencia o protocolo de corrosivos. Já existe 'Intoxicação por cáusticos' no acervo, com sobreposição parcial."
+    },
+    {
+      "registro": {
+        "area": "Neurologia",
+        "nome": "Sequelas de traumatismo cranioencefálico",
+        "introducao": "As incapacidades após o TCE se dividem em três grupos: físicas (motoras, visuais, táteis e outras), cognitivas (principalmente atenção, memória e funções executivas) e emocionais e comportamentais (perda de autoconfiança, desmotivação, depressão, ansiedade, dificuldade de autocontrole com desinibição, irritabilidade e agressão). Os prejuízos físicos são os mais evidentes, mas a longo prazo cognição, personalidade e comportamento pesam mais na qualidade de vida.",
+        "criterios": "História de TCE com queixas persistentes após a fase aguda. Avaliar: tônus e postura (tônus inicialmente reduzido, evolui frequentemente para espasticidade, com risco de contraturas e deformidades), ataxia e tremores, padrão hemiparético, sequelas ortopédicas de fraturas associadas, ossificação heterotópica neurogênica (quadril mais comum, depois joelho e cotovelo), distúrbios sensoriais, disfagia orofaríngea (muitas vezes silenciosa), disartria, perda auditiva, alterações de memória (queixa mais comum), atenção e função executiva, além de complicações sistêmicas (infecção, distúrbio hidroeletrolítico ou metabólico, efeito colateral de medicamento, úlcera de pressão).",
+        "exames": "A diretriz consultada não define uma bateria de exames. Na suspeita de foco infeccioso, distúrbio hidroeletrolítico ou metabólico, investigar clinicamente; avaliação da deglutição (clínica e instrumental) para disfagia; exames de imagem e demais: PENDENTE DE VERIFICAÇÃO.",
+        "tratamento": "Reabilitação interdisciplinar com foco em prevenir complicações, reduzir sequelas e favorecer integração na comunidade: cinesioterapia, posicionamento adequado, órteses, intervenção respiratória, fonoaudiologia (deglutição, fala), abordagem cognitiva e comportamental, tecnologia assistiva e acessibilidade. Espasticidade: inserir no programa de reabilitação, usar medidas físicas, cinesioterapia e órteses; se vários grupos musculares forem afetados, medicamento sistêmico para reduzir o tônus; bloqueio neuromuscular localizado com fenol ou toxina botulínica tipo A; se não bastar, encaminhar a centro de referência para avaliar bloqueio ou cirurgia neurológica/ortopédica. Dor crônica: abordagem interdisciplinar com medidas físicas, exercícios, analgésicos e adjuvantes (antidepressivos, anticonvulsivantes, neurolépticos), bloqueios anestésicos e abordagem cognitivo-comportamental. Na ossificação heterotópica, avaliação interdisciplinar antes de mobilizar e cautela para não causar trauma de partes moles.",
+        "conduta": "Examinar de forma regular nível de consciência, secreções, função urinária e intestinal, sinais vitais, pele e edemas, porque déficits cognitivos e comportamentais dificultam o relato. Tratar causas clínicas tratáveis. Mobilização precoce com avaliação prévia e cuidado. Encaminhar à reabilitação interdisciplinar, apoiar família e cuidadores e planejar retorno ao convívio familiar, escola, trabalho e lazer, respeitando as limitações de cada pessoa.",
+        "prescricao": "1) Programa de reabilitação interdisciplinar contínuo (fisioterapia, terapia ocupacional, fonoaudiologia, psicologia/neuropsicologia).\n2) Espasticidade e dor: classe terapêutica citada na fonte (medicamento sistêmico, fenol, toxina botulínica tipo A; analgésicos e adjuvantes); fármaco, dose e frequência: PENDENTE DE VERIFICAÇÃO (a diretriz não traz doses).\n3) Órteses, posicionamento e meios auxiliares de marcha conforme avaliação.\nBase: Ministério da Saúde, Diretrizes de Atenção à Reabilitação da Pessoa com Traumatismo Cranioencefálico, 2015 (itens 4.6, 6.2.2, 6.2.3 e 6.3).",
+        "cid": "T90.5",
+        "esp": "Neurologia; Neurocirurgia; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Diretrizes de Atenção à Reabilitação da Pessoa com Traumatismo Cranioencefálico",
+          "instituicao": "Ministério da Saúde, Secretaria de Atenção à Saúde",
+          "ano": "2015",
+          "url": "http://bvsms.saude.gov.br/bvs/publicacoes/diretrizes_atencao_reabilitacao_pessoa_traumatisco_cranioencefalico.pdf",
+          "usadoPara": "Seção 4.6 (principais sequelas), 6.2.2 (espasticidade), 6.2.3 (dor), 6.3 (integração na comunidade, tecnologia assistiva) e considerações finais"
+        }
+      ],
+      "observacoes": "PDF aberto e lido nos itens citados. Epilepsia pós-traumática e distúrbios do sono não foram lidos e ficaram de fora. Nenhuma dose consta na diretriz."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Sopro cardíaco inocente na criança",
+        "introducao": "O sopro cardíaco é a principal causa de encaminhamento da criança ao cardiologista pediátrico e resulta de turbulência do fluxo sanguíneo, podendo ser fisiológico ou patológico. Muitas vezes se origina do fluxo normal, sem anormalidade estrutural do coração, e então se chama sopro inocente. Virtualmente toda criança pode apresentar um em algum momento do desenvolvimento. A ausência de sopro não afasta cardiopatia (várias cardiopatias congênitas graves podem não ter sopro), e uma segunda bulha anormal costuma pesar mais que o sopro.",
+        "criterios": "Sopro inocente: sistólico, suave, de curta duração, com timbre vibratório ou musical, que muda de intensidade com a posição e é mais intenso em decúbito dorsal. Criança assintomática com sopro sistólico, que muda com a posição, de curta duração, sem estalidos nem galope, sem irradiação e de baixa intensidade provavelmente tem sopro inocente. Tipos: Still (início da sístole, 2 a 3+/6, borda esternal esquerda baixa, diminui ao sentar), sistólico aórtico (borda esternal direita alta, mais em maiores), fluxo pulmonar (2 a 3+/6, borda esternal esquerda alta, diminui ao deitar e levantar), estenose de ramo pulmonar (1 a 2+/6, axila e dorso, recém-nascidos e lactentes pequenos), supraclavicular (diminui com hiperextensão dos ombros) e zumbido venoso (contínuo, pescoço, único não sistólico). Sinais que sugerem defeito estrutural: sopro holossistólico, diastólico, intensidade igual ou maior que 3+/6, segunda bulha anormal ou que aumenta com a criança sentada ou em pé.",
+        "exames": "A diretriz da SBP não define exames de rotina: cabe ao pediatra decidir entre encaminhar ao especialista, solicitar ecocardiograma ou as duas condutas, sempre correlacionando o exame com os dados clínicos. Auscultar em local silencioso, com estetoscópio adequado e criança tranquila, e reavaliar se o primeiro exame não teve condições adequadas.",
+        "tratamento": "Não se descreve tratamento específico do sopro inocente na fonte lida. A conduta é a avaliação clínica cuidadosa e a decisão sobre encaminhamento ou ecocardiograma.",
+        "conduta": "Anamnese dirigida: história familiar de cardiopatia congênita em parentes de primeiro grau, miocardiopatia hipertrófica ou morte súbita em lactentes; doenças genéticas e do tecido conectivo, erro inato do metabolismo, doença de Kawasaki, febre reumática, exposição fetal a álcool, teratógenos, infecções e diabetes gestacional; sintomas como intolerância aos esforços (no lactente, o ato de mamar é esforço), dificuldade de ganho de peso, cianose, dor precordial, palpitação e síncope. Exame completo: sinais vitais e saturação, inspeção do precórdio, palpação (impulsão, frêmito), ausculta (ritmo, segunda bulha, estalidos), pulsos nos quatro membros (diferença entre superior e inferior sugere coarctação) e busca de dispneia, creptos, sibilos e hepatomegalia. Analisar tempo, localização, intensidade e qualidade do sopro. Qualquer achado de alerta ou dúvida: ecocardiograma e/ou cardiologista pediátrico.",
+        "prescricao": "1) Sem medicamento: o diagnóstico de sopro inocente não requer prescrição segundo a fonte lida (restrição de atividade física e profilaxia: não tratadas na fonte, PENDENTE DE VERIFICAÇÃO).\n2) Decisão sobre ecocardiograma e/ou encaminhamento ao cardiologista pediátrico a critério do pediatra, conforme a clínica.\nBase: Sociedade Brasileira de Pediatria, Departamento Científico de Cardiologia, Documento Científico nº 2, Avaliação da criança com sopro cardíaco, 2018.",
+        "cid": "R01.0",
+        "esp": "Pediatria; Cardiologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Avaliação da criança com sopro cardíaco (Documento Científico nº 2)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Departamento Científico de Cardiologia",
+          "ano": "2018",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/_21417c-DC_AvaliacCrianc_com_soproCardiaco.pdf",
+          "usadoPara": "Definição, características do sopro inocente e dos tipos, sinais de alerta, anamnese e exame físico, decisão de encaminhar ou pedir ecocardiograma"
+        }
+      ],
+      "observacoes": "PDF aberto e lido por inteiro (4 páginas). A fonte não dá critérios de alta nem restrição de atividade; ficaram PENDENTES."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Constatação de óbito no atendimento pré-hospitalar",
+        "introducao": "Procedimento do médico do SAMU 192 diante de morte evidente ou após reanimação sem sucesso, com os cuidados com a cena, a orientação à família e a documentação. A constatação do óbito e o fornecimento da Declaração de Óbito são atos distintos: em óbito não assistido o médico deve constatar, mas não atestar.",
+        "criterios": "Situações previstas: (1) corpo com sinais de morte evidente: rigidez cadavérica, livores de hipóstase, decapitação, esmagamento de crânio com perda de massa encefálica e ausência de pulso central, carbonização, segmentação do tronco ou decomposição; (2) PCR sem retorno da circulação após manobras de suporte avançado (drogas e via aérea avançada), com assistolia persistente e cumprimento do protocolo de interrupção da RCP (no PDF, protocolo AC9: considerar interromper quando houver assistolia confirmada pelo protocolo de linha reta, causas reversíveis 5H e 5T afastadas e, ainda, exaustão da equipe ou condições ambientais ou pessoais inseguras; não há tempo fixo de RCP; esforços mais prolongados em hipotermia, overdose e afogamento); (3) PCR em paciente que manifestou previamente não querer ser reanimado (Resolução CFM 1.995/2012); (4) PCR em doente terminal conhecido pelo médico, com consenso familiar em não reanimar (Resolução CFM 1.805/2006). Rigidez costuma iniciar entre 1 e 6 horas após a morte, pelos músculos da mastigação e no sentido crânio-caudal; livores iniciam em cerca de 1 h 30 min a 2 h, com máximo entre 8 e 12 h.",
+        "exames": "Não se aplica. A constatação é clínica; a definição de morte consta na Resolução CFM 1.480/1997 (morte encefálica), citada pela fonte entre os instrumentos legais.",
+        "tratamento": "Não se aplica (não há tratamento). A conduta é administrativa e de acolhimento da família.",
+        "conduta": "1) Não alterar a cena além do necessário ao atendimento. 2) Contatar o médico regulador e combinar a conduta e as orientações aos familiares; cabe ao regulador acionar as autoridades locais competentes. 3) Orientar familiares ou responsáveis sobre as providências legais; sem acesso à regulação, o médico intervencionista pode decidir as orientações ou acionar as autoridades. 4) O serviço pode fornecer documento escrito de orientações, que varia conforme IML, SVO, médico assistente e morte por causa externa ou natural. 5) Paciente com morte natural assistida pelo médico do SAMU e causa definida: fornecer o Atestado/Declaração de Óbito (Resolução CFM 2.110/2014). Óbito não assistido: constatar, não atestar; informar o regulador, que aciona polícia ou Serviço de Verificação de Óbito. 6) Em regra o SAMU não remove o corpo do local, salvo exceções pactuadas com outras instituições, em especial as policiais. A Declaração de Óbito é documento padronizado pelo MS e exigido para o sepultamento; a Certidão de Óbito é emitida pelo Cartório de Registro Civil.",
+        "prescricao": "Sem prescrição medicamentosa.\n1) Registrar horário, achados que sustentam a constatação e orientações dadas.\n2) Declaração de Óbito conforme normas do MS/CFM e rotina do serviço.\nBase: Ministério da Saúde, Protocolos de Suporte Avançado de Vida do SAMU 192, protocolo PE26 (Constatação do óbito pelo médico do SAMU 192), 2016.",
+        "cid": "R96, R98",
+        "esp": "Medicina de Emergência; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Suporte Avançado de Vida - SAMU 192 (PE26 Constatação do óbito pelo médico do SAMU 192)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf",
+          "usadoPara": "Critérios de morte evidente, situações de constatação, conduta, resoluções do CFM citadas, tempos de rigidez e livores"
+        }
+      ],
+      "observacoes": "PE26 lido integralmente. Complementa 'Atestado médico e declaração de óbito' e 'Morte encefálica', já no acervo. O PE26 cita o protocolo de interrupção da RCP como AC11, mas no PDF ele é o AC9 (PCR: Interrupção de RCP), lido e resumido nos critérios."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Ferimentos e lacerações de pele - abordagem e sutura",
+      "motivo": "já existe: Ferimentos e lacerações: sutura e profilaxia do tétano; Feridas e lacerações"
+    },
+    {
+      "tema": "Síndrome do esmagamento / lesão por esmagamento",
+      "motivo": "já existe: Lesão por esmagamento"
+    },
+    {
+      "tema": "Amputação traumática - conduta e conservação do segmento",
+      "motivo": "já existe: Amputação traumática e reimplante; Amputação traumática de dedo"
+    },
+    {
+      "tema": "Corpo estranho no olho (T15)",
+      "motivo": "já existe: Corpo estranho ocular e abrasão de córnea"
+    },
+    {
+      "tema": "Geladura/congelamento",
+      "motivo": "já existe: Geladura"
+    },
+    {
+      "tema": "Pirose (R12)",
+      "motivo": "já coberta pelas fichas de doença do refluxo gastroesofágico"
+    },
+    {
+      "tema": "Morte súbita (R96) isolada",
+      "motivo": "morte súbita no atleta e do lactente já existem; a constatação de óbito no atendimento foi escrita como ficha própria (R96, R98)"
+    },
+    {
+      "tema": "Lesão traumática de nervos periféricos (S44-S94)",
+      "motivo": "nenhuma fonte oficial sobre o tema foi aberta e lida nesta tarefa (SAMU e demais fontes lidas não o tratam); não escrito de memória"
+    },
+    {
+      "tema": "Corpo estranho no trato geniturinário (T19)",
+      "motivo": "nenhuma fonte oficial brasileira aberta e lida cobre o tema; não escrito de memória"
+    },
+    {
+      "tema": "Asfixia, estrangulamento e enforcamento (T71)",
+      "motivo": "o protocolo SAMU lido só orienta a cena do enforcamento (preservar o nó e o instrumento ao movimentar o paciente), sem protocolo clínico específico; insuficiente para uma ficha"
+    },
+    {
+      "tema": "Oligúria e anúria - abordagem (R34)",
+      "motivo": "buscas não encontraram fonte oficial (MS/SBN) aberta; apenas materiais educacionais e KDIGO sem leitura; não escrito de memória"
+    },
+    {
+      "tema": "Poliúria - abordagem (R35)",
+      "motivo": "buscas não encontraram diretriz oficial (MS/SBEM) aberta; apenas materiais de divulgação; não escrito de memória"
+    }
+  ]
+}

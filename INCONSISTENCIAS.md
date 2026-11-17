@@ -36,7 +36,7 @@ Faixa em mg/kg (mesma base: por dose ou por dia) ou máximo diário diferentes. 
 | Secnidazol | faixas sem sobreposição | 7,5 mg/kg/dose | VO 30 mg/kg/dose | alta |
 | Ampicilina | faixa da ficha sai da faixa da calculadora | 100-200 mg/kg/dia; 300-400 mg/kg/dia | EV 50-200 mg/kg/dia | média |
 | Cefuroxima | faixa da ficha sai da faixa da calculadora | 30 mg/kg/dia; 75-150 mg/kg/dia | VO 20-30 mg/kg/dia | média |
-| Cetoprofeno | faixa da ficha sai da faixa da calculadora | 1-2 mg/kg/dose | VO 1 mg/kg/dose; IM/EV 1 mg/kg/dose | média |
+| Cetoprofeno | faixa da ficha sai da faixa da calculadora | 1-2 mg/kg/dose | VO 1 mg/kg/dose | média |
 | Dipirona sódica (Metamizol) | faixa da ficha sai da faixa da calculadora | 10-25 mg/kg/dose | VO 10-12 mg/kg/dose; IM/EV 15-25 mg/kg/dose | média |
 | Domperidona | faixa da ficha sai da faixa da calculadora | 0,25-0,5 mg/kg/dose | VO 0,25 mg/kg/dose | média |
 | Gentamicina | faixa da ficha sai da faixa da calculadora | 4-5 mg/kg/dia; 5-7,5 mg/kg/dia | EV/IM 5-7,5 mg/kg/dia | média |

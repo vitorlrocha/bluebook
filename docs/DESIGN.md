@@ -204,8 +204,13 @@ O modo escuro é aplicado por `@media (prefers-color-scheme: dark)` com `:root:n
 - Aviso quando a dose digitada está acima ou abaixo da faixa usual.
 
 ### 5.13 Busca universal (dentro das listas)
-- Um quadro recolhível no topo da lista: "▸ Também em outras seções — N resultados", com a contagem por seção embaixo.
-- Fica fechado quando a aba atual tem resultados e abre sozinho quando não tem.
+- A barra de busca procura em todo o app (pedido do autor, v74). Com 2+ letras, aparece no topo da lista um quadro
+  "▾ Também em outras seções — N resultados" (ou "Busca em todo o app" quando não há seção a descontar), com a contagem
+  por seção embaixo e até 5 resultados por seção (medicamentos, doenças, CID-10, escores, antibióticos, vacinas,
+  fluxogramas, ECG, calculadoras, laboratório), cada uma com "ver todos".
+- O quadro fica **sempre aberto**, em qualquer aba (inclusive Prescrição) e no celular; o título continua recolhendo-o.
+  A lista da aba atual vem logo abaixo, como antes. No celular, digitar com uma ficha aberta volta para a lista.
+- O termo buscado aparece destacado em amarelo (`#ffe58a`) com texto escuro (`#1c1c1e`) nos dois temas (contraste AA).
 
 ### 5.14 Tela de acesso (login local, v72)
 - **Página:** fundo `--paper`, com um cartão `--surface` de raio 14 px e sombra leve, centralizado, com largura máxima de 400 px e margens de 16 px no celular.
@@ -220,6 +225,7 @@ O modo escuro é aplicado por `@media (prefers-color-scheme: dark)` com `:root:n
 - **Nota final** (12,5 px, `--ink-faint`, centralizada): o acesso fica só no aparelho, e o app é apoio e não substitui o julgamento clínico nem a bula.
 - **Sem sessão:** o `<html>` recebe a classe `bb-locked` antes de desenhar a tela, e `.app` fica oculto, para o conteúdo não piscar.
 - **Ajustes:** a seção "Conta" (e-mail, Sair, Alterar senha) e a seção "Backup do perfil" aparecem antes de "Sobre". O menu ⋮ tem "Sair (e-mail)".
+- **Com a nuvem configurada** (`src/nuvem.js`; sem ela nada muda): a tela "Criar acesso" ganha o link "Já tenho acesso · Entrar" e a tela "Entrar" de um aparelho novo, o link "Ainda não tenho acesso · Criar" (links `--accent` 600); "Esqueci a senha" passa a ter o botão principal "Enviar e-mail de redefinição" e, abaixo de um separador "outra opção", o bloco "Apagar o acesso deste aparelho" (botão secundário); a nota final explica que a conta vale em todos os aparelhos. Em Ajustes, logo depois de "Conta", a seção "Sincronização": linha de estado (`--ok` em dia, `--ink-soft` pendente/sem internet, `--bad-ink` erro), botão principal "Sincronizar agora" e a nota de privacidade (`.calc-note`).
 
 ---
 

@@ -25,10 +25,11 @@ const casca = ler('src/index.html');
 const css = ler('src/styles.css');
 const auth = ler('src/auth.js');     // acesso local (login), v72 Etapa 2
 const google = ler('src/google.js'); // Entrar com o Google + backup no Drive, v72 Etapa 5
+const nuvemJs = ler('src/nuvem.js');   // conta na nuvem + sincronização (Firebase por REST)
 const atualiza = ler('src/atualiza.js'); // atualização automática, versão e data, v73
-for (const mk of ['/*@css*/', '/*@versao*/', '/*@atualiza*/', '/*@google*/', '/*@auth*/', '/*@app*/']) if (casca.split(mk).length !== 2) throw new Error('marcador da casca: ' + mk);
+for (const mk of ['/*@css*/', '/*@versao*/', '/*@atualiza*/', '/*@google*/', '/*@nuvem*/', '/*@auth*/', '/*@app*/']) if (casca.split(mk).length !== 2) throw new Error('marcador da casca: ' + mk);
 // Usa função na substituição para que "$" nos dados não seja interpretado.
-const semVersao = casca.replace('/*@css*/', () => css).replace('/*@atualiza*/', () => atualiza).replace('/*@google*/', () => google).replace('/*@auth*/', () => auth).replace('/*@app*/', () => app);
+const semVersao = casca.replace('/*@css*/', () => css).replace('/*@atualiza*/', () => atualiza).replace('/*@google*/', () => google).replace('/*@nuvem*/', () => nuvemJs).replace('/*@auth*/', () => auth).replace('/*@app*/', () => app);
 
 /* Data da última mudança do app/conteúdo: data do último commit que tocou src/ ou dados/ (igual em qualquer
    máquina e no GitHub Actions). Sem git, usa a data do build. */
@@ -69,7 +70,8 @@ function lerEnv() {
   return env;
 }
 const env = lerEnv();
-const nuvem = env.BB_FIREBASE_API_KEY && env.BB_FIREBASE_PROJECT_ID
+// BB_SEM_NUVEM=1 força o app sem nuvem mesmo com .env (usado pelos testes: nunca falam com o Firebase real).
+const nuvem = !env.BB_SEM_NUVEM && env.BB_FIREBASE_API_KEY && env.BB_FIREBASE_PROJECT_ID
   ? { apiKey: env.BB_FIREBASE_API_KEY, projectId: env.BB_FIREBASE_PROJECT_ID }
   : null;
 if (nuvem && !/^[A-Za-z0-9_-]{20,}$/.test(nuvem.apiKey)) throw new Error('BB_FIREBASE_API_KEY com formato inesperado');

@@ -1,0 +1,336 @@
+{
+  "lote": "16",
+  "criadoEm": "2026-11-13",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Pirose (azia) e sialorreia na gestação",
+        "introducao": "Queixas frequentes e em geral fisiológicas da gestação. A pirose pode ocorrer em toda a gravidez, mas é mais intensa no final. A sialorreia (salivação excessiva) costuma incomodar muito, sobretudo no início, e tende a ser de curta duração. Em geral respondem a medidas dietéticas e de orientação.",
+        "criterios": "Diagnóstico clínico. Avaliar sempre: início dos sintomas antes da gravidez, uso de medicamentos e história pessoal ou familiar de úlcera gástrica. Afastar sinais de alerta da gestação (dor epigástrica associada a cefaleia, escotomas ou edema excessivo sugere pré-eclâmpsia) e vômitos persistentes com perda de peso (ver hiperêmese gravídica).",
+        "exames": "Não há exame de rotina para pirose ou sialorreia isoladas. Aferir a pressão arterial se houver cefaleia ou epigastralgia associadas.",
+        "tratamento": "Pirose: alimentação fracionada (pelo menos três refeições e dois lanches), evitar líquido durante as refeições e deitar-se logo após comer, ingerir líquido gelado durante a crise, elevar a cabeceira da cama, evitar frituras, café, chá mate e preto, doces, alimentos gordurosos e picantes, e evitar álcool e fumo. Se as medidas não bastarem, antiácido; bloqueadores H2 ou inibidores da bomba de prótons podem ser considerados. Sialorreia: tranquilizar (queixa comum no início da gestação), manter dieta semelhante à das náuseas e vômitos, orientar a deglutir a saliva e tomar muito líquido, sobretudo no calor; costuma dispensar medicação.",
+        "conduta": "Enfermeiro(a) ou médico(a) conduzem na atenção básica. Explicar a natureza benigna do sintoma, instituir as medidas dietéticas e reavaliar nas consultas de pré-natal. Encaminhar para avaliação médica se houver sinais de alerta, epigastralgia com hipertensão ou perda de peso por vômitos.",
+        "prescricao": "1) Medidas não farmacológicas (primeira linha): ver tratamento.\n2) Pirose refratária: hidróxido de alumínio ou de magnésio, 2 a 4 comprimidos mastigáveis após as refeições e ao deitar. Bloqueadores H2 e inibidores da bomba de prótons podem ser considerados; dose: PENDENTE DE VERIFICAÇÃO (não consta na fonte).\n3) Sialorreia: sem tratamento medicamentoso na fonte.\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Quadro 7 – Abordagem de queixas frequentes na gestação (p. 89-91).",
+        "cid": "O26.8, O99.6",
+        "esp": "Obstetrícia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Quadro 7, p. 89-91)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "definição, avaliação, medidas dietéticas, antiácido com dose e conduta (Quadro 7)"
+        }
+      ],
+      "observacoes": "Doses de bloqueador H2 e IBP não constam no protocolo e ficaram PENDENTES. Hiperêmese gravídica já existe no acervo."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Lombalgia gestacional (dor lombar na gestação)",
+        "introducao": "Dor lombar frequente na gravidez, relacionada à adaptação da postura materna, que sobrecarrega as articulações da coluna, sobretudo a lombossacral. Na maior parte dos casos é mecânica e responde a medidas posturais e analgésicos simples.",
+        "criterios": "Caracterizar a dor: mecânica ou inflamatória, tempo de evolução, fatores de melhora ou piora e relação com o movimento. Procurar sinais de alerta: febre, mal-estar geral, sintomas urinários, enrijecimento abdominal ou contrações uterinas, déficit neurológico e história de trauma.",
+        "exames": "Sem exame de rotina na dor mecânica típica. Se houver sintomas urinários ou febre: urina tipo I e urocultura (ver infecção urinária na gestação). Avaliar contrações uterinas quando houver dor associada a enrijecimento abdominal.",
+        "tratamento": "Orientação postural ao sentar e andar, evitando corrigir a lordose fisiológica; sapatos confortáveis e sem salto alto; calor local e massagens; acupuntura; alongamento e orientação postural. Se a dor persistir, analgésico simples.",
+        "conduta": "Enfermeiro(a) ou médico(a). Afastar infecção urinária, trabalho de parto prematuro e causas neurológicas antes de assumir dor mecânica. Reavaliar a cada consulta de pré-natal; encaminhar à avaliação médica ou hospitalar se houver sinais de alerta.",
+        "prescricao": "1) Paracetamol 500 a 750 mg, via oral, de 6/6 horas, se a dor não melhorar com as medidas gerais.\n2) Ou dipirona 500 a 1.000 mg, via oral, de 6/6 horas.\n3) Medidas posturais, calor local, alongamento e acupuntura como adjuvantes.\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Quadro 7 – Abordagem de queixas frequentes na gestação (p. 92-93).",
+        "cid": "O26.8",
+        "esp": "Obstetrícia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Quadro 7, p. 92-93)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "avaliação, sinais de alerta, medidas e analgésicos com dose (Quadro 7)"
+        }
+      ],
+      "observacoes": "Duração máxima do uso dos analgésicos não consta na fonte. A fonte não cita AINE nem opioide na dor lombar gestacional."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Edema, varizes e câimbras de membros inferiores na gestação",
+        "introducao": "Queixas circulatórias e musculares comuns, que pioram ao longo da gestação por vasodilatação, hipotonia vascular e estase venosa pela compressão do retorno pelo útero. O edema fisiológico surge em geral no terceiro trimestre, limita-se aos membros inferiores (às vezes às mãos), piora com o ortostatismo e desaparece pela manhã. A maioria das gestantes edemaciadas tem gestação normal.",
+        "criterios": "Edema fisiológico: bilateral, restrito aos membros inferiores, sem hipertensão nem ganho de peso excessivo. Sinais de alerta (avaliação médica): edema associado a hipertensão ou ao ganho de peso, edema generalizado, edema unilateral com dor ou sinais flogísticos (suspeita de trombose venosa profunda). Nas varizes e câimbras, avaliar dor contínua ou ao fim do dia, sinais flogísticos, edema persistente, uso de medicamentos e fadiga muscular.",
+        "exames": "Aferir a pressão arterial e o peso em toda consulta; pesquisar proteinúria se edema com hipertensão (pré-eclâmpsia); edema não é mais critério diagnóstico da pré-eclâmpsia. Investigar trombose venosa profunda se dor, calor e edema localizado em um membro.",
+        "tratamento": "Medidas gerais: evitar ortostatismo e posição sentada prolongados (inclusive em viagens), repousar com os membros elevados por 20 minutos várias vezes ao dia, alternar posições, usar meia elástica de compressão suave ou média, não usar roupas justas, ligas nem meias 3/4 ou 7/8. Não há tratamento medicamentoso para o edema fisiológico; diuréticos e dieta hipossódica são proscritos na gravidez. Câimbras: calor local, massagem da panturrilha, extensão e flexão passiva do pé, evitar alongamento excessivo ao acordar, evitar excesso de exercício e fazer alongamentos orientados por profissional.",
+        "conduta": "Enfermeiro(a) ou médico(a). Tranquilizar e orientar; reavaliar PA e edema a cada consulta; qualquer sinal de alerta leva à avaliação médica imediata (ver pré-eclâmpsia e trombose na gestação). Valorizar a possibilidade de complicação tromboembólica.",
+        "prescricao": "1) Edema fisiológico: sem medicamento; evitar diuréticos e restrição de sal.\n2) Meia elástica de suave ou média compressão e elevação dos membros.\n3) Câimbras: medidas físicas descritas; sem fármaco na fonte (suplementação: PENDENTE DE VERIFICAÇÃO).\n4) Se edema com PA >= 140/90 mmHg ou sintomas: conduzir como pré-eclâmpsia (registro próprio).\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Quadro 7 (p. 89 e 94) e Fluxograma 5 – O que fazer nos quadros de edema (p. 100).",
+        "cid": "O12.0, O22.0",
+        "esp": "Obstetrícia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Quadro 7 e Fluxograma 5, p. 89-100)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "critérios, sinais de alerta e medidas para edema, varizes e câimbras (Quadro 7 e Fluxograma 5)"
+        }
+      ],
+      "observacoes": "Nenhum medicamento para câimbra consta na fonte."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Constipação, flatulência e cólicas abdominais fisiológicas na gestação",
+        "introducao": "Obstipação é comum na gravidez, agravada pelo esforço evacuatório e pela consistência das fezes, e frequentemente se associa a fissuras e hemorroidas. Cólicas leves podem decorrer do corpo lúteo gravídico, do estiramento do ligamento redondo e de contrações uterinas, e em geral cedem espontaneamente.",
+        "criterios": "Diagnóstico clínico, após excluir sinais de alerta de dor abdominal: dor em baixo ventre de intensidade, duração e ritmo crescentes (sugere contrações uterinas), sangramento vaginal, sintomas sistêmicos e sinais de abdome agudo. Verificar sempre infecção urinária e contrações uterinas.",
+        "exames": "Sem exame de rotina. Urina tipo I e urocultura se houver sintomas urinários; avaliação obstétrica se houver contrações.",
+        "tratamento": "Obstipação e flatulência: dieta com resíduos (legumes, verduras folhosas, frutas cítricas), 6 a 8 copos de água por dia (se não houver restrição), caminhadas leves, evitar alimentos flatulentos (feijão, grão-de-bico, lentilha, repolho, brócolis, pimentão, pepino, couve) e prevenir fissuras (limpeza com água e sabão em vez de papel higiênico). Hemorroidas: dieta rica em fibras e líquidos, higiene local, banho de assento morno e anestésico tópico se necessário; tratamento esclerosante ou cirúrgico é contraindicado na gestação; trombose hemorroidária exige encaminhamento hospitalar. Cólicas: tranquilizar quanto ao caráter fisiológico.",
+        "conduta": "Enfermeiro(a) ou médico(a). Medidas gerais primeiro; medicamento só se persistirem. Cólica com sinais de alerta: avaliação médica imediata (ver trabalho de parto prematuro, infecção urinária, abortamento e abdome agudo).",
+        "prescricao": "1) Flatulência: dimeticona 40 a 80 mg, de 6/6 horas (via: PENDENTE DE VERIFICAÇÃO, a fonte não especifica).\n2) Dor abdominal intensa ou persistente (sem sinais de alerta): hioscina 10 mg, de 8/8 horas.\n3) Obstipação refratária: supositório de glicerina.\n4) Hemorroidas: banho de assento morno; anestésico tópico se necessário (produto e dose: PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Quadro 7 (p. 92-93) e Fluxograma 4 – dor abdominal e cólicas (p. 99).",
+        "cid": "O99.6, K59.0",
+        "esp": "Obstetrícia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Quadro 7 e Fluxograma 4, p. 92-99)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "avaliação, medidas, doses de dimeticona e hioscina e sinais de alerta (Quadro 7 e Fluxograma 4)"
+        }
+      ],
+      "observacoes": "Hemorroidas e fissura anal já existem no acervo (gerais); aqui aparecem só no contexto gestacional."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Diminuição da movimentação fetal (mobilograma)",
+        "introducao": "A movimentação fetal se reduz diante de hipoxemia; mudança abrupta no padrão, diminuição ou parada dos movimentos pode indicar comprometimento fetal e é sinal de alerta na gestação. A gestante deve ser orientada a percebê-los e a relatar alterações.",
+        "criterios": "Queixa de ausência, diminuição ou parada da movimentação fetal. Mobilograma a partir de 26 semanas: contar os movimentos após o café, o almoço e o jantar, em decúbito lateral esquerdo; são normais seis ou mais movimentos em uma hora.",
+        "exames": "Ausculta dos batimentos cardiofetais (BCF): frequência esperada de 110 a 160 bpm, audíveis com estetoscópio de Pinard a partir da 20ª semana e com sonar doppler a partir da 10ª-12ª semana. BCF não audíveis após a 24ª semana, alterações persistentes da frequência, ausência de movimentos fetais ou falta de crescimento uterino exigem avaliação médica ou em maternidade de referência. Conferir altura uterina e idade gestacional.",
+        "tratamento": "Não há tratamento próprio: a conduta é de avaliação da vitalidade fetal e da causa da queixa, com acompanhamento mais próximo.",
+        "conduta": "Avaliação médica no mesmo dia, com avaliação do BCF e orientação sobre o mobilograma; considerar encaminhamento ao serviço de referência. Reduzir o intervalo entre as consultas de rotina. Desaceleração do BCF durante e após contração é motivo de preocupação e de referência para serviço de maior densidade tecnológica ou maternidade. Ausência de movimentos fetais com BCF não audível: encaminhamento imediato.",
+        "prescricao": "1) Sem medicamento.\n2) Orientar mobilograma diário a partir de 26 semanas (pós-café, almoço e jantar; normal: 6 ou mais movimentos em 1 hora, em decúbito lateral esquerdo).\n3) Avaliação médica no mesmo dia; encaminhar à referência conforme BCF e quadro clínico.\n4) Exames complementares específicos (cardiotocografia, ultrassonografia): PENDENTE DE VERIFICAÇÃO (não detalhados na fonte).\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Quadro 5 – sinais de alerta (p. 85), Quadro 7 (p. 95) e ausculta dos BCF (p. 78).",
+        "cid": "O36.8",
+        "esp": "Obstetrícia"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Quadros 2, 5 e 7, p. 77-95)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "sinal de alerta, mobilograma, ausculta dos BCF e conduta (Quadros 2, 5 e 7)"
+        }
+      ],
+      "observacoes": "O protocolo é de baixo risco; a conduta hospitalar (cardiotocografia, perfil biofísico) não é detalhada e ficou PENDENTE."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Estrias, cloasma gravídico, gengivite e rinite da gestação",
+        "introducao": "Alterações fisiológicas da gestação mediadas por hormônios esteroides: estrias, hiperpigmentação cutânea e cloasma, sangramento gengival, congestão nasal e epistaxe. A maioria é benigna e regride após o parto, mas exige afastar doença de base.",
+        "criterios": "Estrias: lesões definitivas na segunda metade da gestação, no abdome inferior, quadris, coxas e mamas. Cloasma: manchas castanhas irregulares na face em 50% a 70% das gestantes; hiperpigmentação cutânea na maioria. Gengivite: vasodilatação, aumento da vascularização e edema do tecido conjuntivo, com sangramento gengival. Congestão nasal e epistaxe: embebição da mucosa nasal. Avaliar outras causas, em especial distúrbios de coagulação e síndrome HELLP no sangramento gengival ou nasal.",
+        "exames": "Sem exame de rotina. Se sangramento gengival ou nasal importante ou recorrente, avaliar coagulação e plaquetas (exame específico: PENDENTE DE VERIFICAÇÃO) e verificar a pressão arterial.",
+        "tratamento": "Estrias: não existe método comprovado de prevenção; massagem com óleos e cremes hidratantes compatíveis com a gravidez pode ser recomendada; qualquer tratamento para estrias, inclusive ácido retinoico, é contraindicado na gestação. Cloasma: evitar exposição solar direta (boné, chapéu), filtro solar no mínimo três vezes ao dia; ácido azelaico é permitido; costuma regredir após o parto, e parte dos casos precisa de tratamento dermatológico. Gengivite: escovação delicada com escova macia e fio dental, massagem da gengiva, bochechos antissépticos e atendimento odontológico sempre que possível. Congestão nasal: soro fisiológico; epistaxe leve: compressão na base do nariz.",
+        "conduta": "Enfermeiro(a) ou médico(a). Orientar o caráter fisiológico, agendar atendimento odontológico, encaminhar epistaxe grave ao especialista ou à emergência e investigar coagulopatia ou HELLP se houver sangramento associado a outros sinais.",
+        "prescricao": "1) Estrias: hidratantes compatíveis com a gestação; evitar ácido retinoico (contraindicado na gestação e na amamentação).\n2) Cloasma: filtro solar, no mínimo 3 vezes ao dia (produto: PENDENTE DE VERIFICAÇÃO); ácido azelaico permitido (concentração e posologia: PENDENTE DE VERIFICAÇÃO).\n3) Gengivite: escova macia, fio dental, massagem gengival, bochechos com solução antisséptica (produto: PENDENTE DE VERIFICAÇÃO).\n4) Congestão nasal: instilação de soro fisiológico.\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Quadro 7 – Abordagem de queixas frequentes na gestação (p. 95-96).",
+        "cid": "O99.7, O26.8",
+        "esp": "Obstetrícia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Quadro 7, p. 95-96)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "critérios e medidas de estrias, cloasma, sangramento gengival, congestão nasal e epistaxe (Quadro 7)"
+        }
+      ],
+      "observacoes": "Reúne cinco queixas fisiológicas do mesmo quadro para evitar fichas muito curtas. Concentrações e posologias não constam na fonte e ficaram PENDENTES."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Tontura, lipotimia e dispneia fisiológicas da gestação",
+        "introducao": "Fraqueza, tontura e desmaios decorrem de instabilidade hemodinâmica por vasodilatação e hipotonia vascular (ação da progesterona) e de estase sanguínea nos membros inferiores pela compressão do retorno venoso pelo útero, com queda do débito cardíaco, hipotensão e hipóxia cerebral transitória; hipoglicemia pelo jejum prolongado também contribui. A falta de ar decorre sobretudo de hiperventilação, com contribuição mecânica do útero sobre o diafragma no fim da gestação.",
+        "criterios": "Diagnóstico clínico, após excluir causas patológicas. Na tontura: aferir a pressão arterial e avaliar jejum. Na dispneia, avaliar sinais de alerta: tosse, edema, história de asma ou outras pneumopatias, sinais ou história de trombose venosa profunda, trauma recente e febre.",
+        "exames": "Pressão arterial, ausculta cardíaca e pulmonar. Se houver alteração na ausculta, encaminhar para avaliação médica. Exames adicionais: PENDENTE DE VERIFICAÇÃO (não detalhados na fonte).",
+        "tratamento": "Tontura e lipotimia: evitar inatividade e jejum prolongado, alimentação fracionada (pelo menos três refeições e dois lanches), sentar com a cabeça abaixada ou deitar em decúbito lateral esquerdo e respirar profunda e pausadamente, evitar ambientes fechados, quentes e mal ventilados, ingerir líquidos, e meias elásticas nos casos reincidentes. Dispneia: orientar que é sintoma frequente, repouso em decúbito lateral esquerdo e elevação da cabeceira.",
+        "conduta": "Enfermeiro(a) ou médico(a). Aferir a pressão arterial. Dispneia com alteração à ausculta, edema, febre, suspeita de embolia ou de pneumopatia: avaliação médica imediata.",
+        "prescricao": "1) Sem medicamento na fonte.\n2) Medidas: alimentação fracionada, hidratação, decúbito lateral esquerdo, cabeceira elevada, meia elástica se recorrente.\n3) Reavaliar pressão arterial em toda consulta.\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Quadro 7 – Abordagem de queixas frequentes na gestação (p. 90-92).",
+        "cid": "O26.8, R42",
+        "esp": "Obstetrícia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Quadro 7, p. 90-92)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "mecanismos, avaliação e medidas para tontura, desmaio e falta de ar na gestação (Quadro 7)"
+        }
+      ],
+      "observacoes": "Sem fármacos na fonte."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Anticoncepção injetável (mensal combinada e trimestral de progestágeno)",
+        "introducao": "Método hormonal de longa ação disponível no SUS em duas formas: injetável mensal combinado (enantato de noretisterona 50 mg + valerato de estradiol 5 mg) e trimestral de progestágeno (acetato de medroxiprogesterona 150 mg). Eficaz (falha típica de cerca de 3%), sem proteção contra infecções sexualmente transmissíveis; o retorno à fertilidade é gradual e pode demorar no trimestral.",
+        "criterios": "Indicado para qualquer mulher, adolescente ou adulta, que atenda aos critérios de elegibilidade da OMS (categorias 1 a 4; 3 e 4 geralmente contraindicam). Mulheres com HIV ou em terapia antirretroviral podem usar com segurança (incentivar preservativo). Não é preciso colpocitologia, exame das mamas ou exame pélvico para iniciar. Exemplos de restrição: o combinado é categoria 4 na amamentação com menos de 6 semanas de parto e categoria 3 de 6 semanas a 6 meses; a enxaqueca com aura leva a suspender o estrogênio e é categoria 3 para manter o injetável de progestágeno.",
+        "exames": "Nenhum exame obrigatório para iniciar. Teste de gravidez quando houver dúvida de gestação, atraso importante da aplicação ou amenorreia inexplicada.",
+        "tratamento": "Trimestral: a cada 13 semanas (pode adiantar ou atrasar até 2 semanas). Mensal: a cada 4 semanas (30 dias), com variação de até 7 dias. Início: a qualquer momento se houver certeza razoável de que não há gravidez, com método de apoio por 7 dias; após aborto, imediatamente; pós-parto sem amamentar: trimestral a qualquer momento se menos de 4 semanas, mensal a partir do 21º dia; amamentando, trimestral a qualquer momento se não houve retorno da menstruação (apoio por 7 dias) e mensal depois de 6 semanas do parto ou quando o leite deixar de ser o alimento principal.",
+        "conduta": "Orientar efeitos comuns: alterações menstruais (amenorreia é comum com o tempo no trimestral), alteração de peso (mensal), de humor ou desejo sexual (trimestral), cefaleia, mastalgia (mensal). Atraso do trimestral até 2 semanas: aplicar normalmente; mais de 2 semanas: abstinência ou método de apoio até a injeção, contracepção de emergência se houve sexo desprotegido nos 5 dias anteriores, e aplicar a próxima se houver certeza de não gravidez (ou se amamentação exclusiva ou quase, com menos de 6 meses de parto), com apoio por 7 dias. Atraso do mensal menor que 7 dias: aplicar sem teste; maior que 7 dias: aplicar se houver certeza de não gravidez e usar apoio por 7 dias. Reforçar a dupla proteção.",
+        "prescricao": "1) Injetável trimestral (progestágeno): acetato de medroxiprogesterona 150 mg a cada 13 semanas (3 meses); via de administração: PENDENTE DE VERIFICAÇÃO (a fonte não especifica; conferir bula).\n2) Injetável mensal (combinado): enantato de noretisterona 50 mg + valerato de estradiol 5 mg a cada 4 semanas (30 dias); via: PENDENTE DE VERIFICAÇÃO (conferir bula).\n3) Método de apoio por 7 dias após o início tardio ou após atraso que exija nova aplicação.\n4) Preservativo para proteção contra IST.\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Parte 3 – Planejamento reprodutivo, Fluxograma 5 (p. 159) e Quadros 2 e 3 (p. 161-164).",
+        "cid": "Z30.0, Z30.4",
+        "esp": "Ginecologia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Parte 3, p. 151-167)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "apresentações do SUS, início, atrasos, elegibilidade e efeitos adversos (Fluxograma 5, Quadros 2 e 3)"
+        }
+      ],
+      "observacoes": "Via de administração não consta no protocolo; ficou PENDENTE. O registro \"Anticoncepção apenas de progestágeno\" já existe; este trata do esquema injetável do SUS, inclusive o combinado."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Esquecimento da pílula anticoncepcional oral combinada: conduta",
+        "introducao": "Situação muito frequente na contracepção oral que, mal manejada, expõe à gravidez não planejada. O risco depende do número de comprimidos esquecidos e da semana da cartela.",
+        "criterios": "Mulher em uso de AOC monofásico (etinilestradiol 0,03 mg + levonorgestrel 0,15 mg, apresentação do SUS) que esqueceu comprimidos, atrasou o início da nova cartela ou teve vômitos ou diarreia.",
+        "exames": "Teste de gravidez se houver dúvida, atraso menstrual ou esquecimento prolongado.",
+        "tratamento": "Orientação conforme o tempo de esquecimento, sem tratamento medicamentoso além do retorno ao método e, se necessário, contracepção de emergência.",
+        "conduta": "1) Tomar um comprimido assim que notar o esquecimento. 2) Esqueceu um ou dois comprimidos ou atrasou a nova cartela em um ou dois dias: tomar um comprimido de imediato e o seguinte no horário regular; risco de gravidez muito baixo. 3) Esqueceu três ou mais: tomar um comprimido de imediato, usar método de apoio por sete dias; se houve sexo nos últimos cinco dias, avaliar contracepção de emergência; se o esquecimento foi na 3ª semana da cartela, iniciar nova cartela após sete dias. 4) Vômito nas primeiras duas horas após o comprimido: tomar outro assim que possível; vômito ou diarreia por mais de dois dias: seguir a conduta do item 3.",
+        "prescricao": "1) Reposição imediata do comprimido esquecido e continuação da cartela, conforme os cenários da conduta.\n2) Método de apoio (preservativo) por 7 dias quando esquecidos 3 ou mais comprimidos ou vômitos/diarreia por mais de 2 dias.\n3) Contracepção de emergência se sexo desprotegido nos últimos 5 dias (ver registro de contracepção de emergência).\n4) Minipílula: comprimido contínuo diário, sem intervalo; condutas de esquecimento da minipílula: PENDENTE DE VERIFICAÇÃO.\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Parte 3 – Planejamento reprodutivo, Fluxograma 4 (p. 158).",
+        "cid": "Z30.0, Z30.4",
+        "esp": "Ginecologia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Fluxograma 4, p. 158)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "conduta no esquecimento de AOC, vômitos e diarreia (Fluxograma 4)"
+        }
+      ],
+      "observacoes": "O protocolo não detalha o esquecimento da minipílula; ficou PENDENTE. O registro \"Anticoncepcional hormonal combinado\" já existe; este é um recorte de conduta."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Efeitos adversos e problemas com métodos contraceptivos: manejo",
+        "introducao": "Alterações menstruais e outros sintomas são os motivos mais comuns de abandono da contracepção hormonal e do DIU de cobre. A maioria não é prejudicial e diminui nos primeiros meses; o aconselhamento adequado melhora a continuidade.",
+        "criterios": "Reavaliar o uso correto do método e afastar gravidez. Sangramento inexplicável, intenso ou prolongado, dor aguda em baixo ventre ou suspeita de perfuração uterina sugerem problema não relacionado ao método e exigem avaliação.",
+        "exames": "Teste de gravidez se amenorreia; exame pélvico e investigação de IST/DIP conforme a queixa; atentar para gravidez ectópica na dor aguda em baixo ventre.",
+        "tratamento": "Sangramento irregular ou amenorreia: tranquilizar; no AOC, orientar uso correto no mesmo horário, AINE para alívio de curto prazo e, se persistir, trocar para formulação com maior dose de etinilestradiol ou, se já em 30 a 35 mcg, AOC bifásico ou trifásico. Menstruação intensa ou prolongada: AINE e suplementação de ferro; no injetável de progestágeno, AOC por 21 dias iniciando na menstruação ou etinilestradiol 50 mcg por 21 dias. Náusea: tomar à noite ou com alimento; considerar uso estendido e contínuo. Acne: pode melhorar com AOC; se persistir, formulação com acetato de ciproterona ou drospirenona por três meses. Cefaleia comum: analgésico; considerar uso estendido se ocorrer na semana sem hormônio. Enxaqueca nova: suspender métodos com estrógeno. Mastalgia: sutiã firme, compressas e analgésico. DIU de cobre: cólicas nos primeiros 3 a 6 meses são comuns; analgésico (de preferência AINE ou hioscina; evitar aspirina se sangramento intenso); se persistirem fora da menstruação, investigar e considerar retirada.",
+        "conduta": "Enfermeiro(a) ou médico(a). Aconselhar, corrigir o uso, tratar o sintoma e considerar troca de método. Em DIP não é necessário retirar o DIU, que pode ser retirado após iniciar o tratamento. Encaminhar sangramento anormal, suspeita de perfuração ou alteração aguda do humor.",
+        "prescricao": "1) Sangramento irregular em uso de AOC: AINE (dose: PENDENTE DE VERIFICAÇÃO); troca de formulação conforme texto.\n2) Menstruação intensa em uso de injetável de progestágeno: AOC, 1 comprimido por dia por 21 dias iniciando na menstruação, ou etinilestradiol 50 mcg por dia por 21 dias.\n3) Anemia: suplementação de ferro (dose: PENDENTE DE VERIFICAÇÃO neste quadro).\n4) Cólica do DIU: AINE ou hioscina (doses: PENDENTE DE VERIFICAÇÃO).\n5) Suspender métodos com estrógeno se enxaqueca.\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Parte 3 – Planejamento reprodutivo, Quadro 6 – Como lidar com problemas na contracepção (p. 165-167).",
+        "cid": "Z30.4, Z30.5",
+        "esp": "Ginecologia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Quadro 6, p. 165-167)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "manejo de alterações menstruais, náusea, acne, cefaleia, mastalgia e DIU (Quadro 6)"
+        }
+      ],
+      "observacoes": "Doses de AINE e hioscina não aparecem neste quadro e ficaram PENDENTES."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Fogachos e sintomas vasomotores do climatério: abordagem não hormonal e fitoterápica",
+        "introducao": "Fogachos e suores noturnos são típicos do climatério e muito frequentes; muitas mulheres passam pela fase sem queixas. A irregularidade menstrual é universal. A confirmação do climatério é clínica, sem dosagem hormonal, e as queixas psicossociais são as que mais afetam a qualidade de vida.",
+        "criterios": "Mulher na faixa etária esperada (40 a 65 anos) com queixas sugestivas e/ou 12 meses consecutivos de amenorreia. Se houver dúvida, FSH acima de 40 mUI/mL indica hipofunção ovariana; valores menores não confirmam. Em uso de contraceptivo hormonal, avaliar status hormonal pausando o AOC por sete dias antes de dosar o FSH. Investigar outras causas se houver sudorese noturna, calafrios, perda de peso ou outros sintomas.",
+        "exames": "Não há exames de rotina no climatério; solicitar de forma individualizada. Não há indicação de rastreamento universal de osteoporose com densitometria. Coleta oportunística de citopatológico e mamografia a partir de 50 anos conforme os protocolos próprios.",
+        "tratamento": "Medidas não farmacológicas: dormir em ambiente ventilado, roupas em camadas e de tecidos que deixem a pele respirar, beber água ou suco ao notar o sintoma, evitar tabaco, álcool e cafeína, diário para identificar gatilhos, atividade física, perda de peso se houver excesso e respiração lenta e profunda. Fitoterápicos: isoflavona de soja (a única da Rename associada ao tratamento do climatério), trevo vermelho ou cimicífuga. Terapia não hormonal se sintomas vasomotores proeminentes sem melhora: antidepressivos como primeira escolha. Terapia hormonal apenas em casos selecionados, quando não houver controle e houver prejuízo importante da qualidade de vida.",
+        "conduta": "Abordagem humanizada e com o mínimo de intervenção, valorizando hábitos de vida saudáveis, atividade física (150 minutos por semana), alimentação rica em cálcio e vitamina D e redes de apoio. Reavaliar queixas psicossociais, sono e sintomas urogenitais. Anticoncepção deve continuar a ser orientada no climatério. Terapia hormonal: a menor dose pelo menor tempo (em geral até 5 anos), evitar iniciar após 10 anos da menopausa ou acima de 59 anos, com contraindicação absoluta em câncer de mama, câncer de endométrio, doença hepática grave, sangramento genital não esclarecido, tromboembolismo e porfiria.",
+        "prescricao": "1) Fitoterapia: isoflavona de soja, extrato padronizado a 40% a 70%, 50 a 180 mg por dia em duas tomadas (12/12 h); trevo vermelho (8% de isoflavonas) 40 a 60 mg por dia, dose única; cimicífuga (2,5% a 8% de 27-deoxiactéina) 40 a 80 mg por dia. Trevo vermelho: contraindicado em gestantes, lactantes e coagulopatias, e pode potencializar anticoagulantes e interferir em contraceptivos hormonais e tamoxifeno.\n2) Terapia não hormonal (sintomas proeminentes sem melhora): paroxetina liberação prolongada 12,5 a 25 mg/dia, ou fluoxetina 20 mg/dia, ou venlafaxina 37,5 a 75 mg/dia, ou imipramina 25 a 50 mg/dia; outras: clonidina 0,1 a 0,2 mg/dia, metildopa 250 a 500 mg/dia, propranolol 80 mg/dia, cinarizina 75 mg/dia ou gabapentina 600 mg/dia. Usar a menor dose eficaz.\n3) Terapia hormonal (casos selecionados): estrogênio conjugado 0,3 a 0,625 mg, ou estradiol oral 1 a 2 mg, ou estradiol transdérmico 25 a 50 mcg, ou estradiol percutâneo 0,5 a 1,5 mg. Em mulher com útero, associar progestágeno (medroxiprogesterona 2,5 mg/dia, noretisterona 0,1 mg/dia, drospirenona 0,25 mg/dia ou progesterona micronizada 100 a 200 mg/dia), cíclico (12 a 14 dias por ciclo) ou contínuo.\n4) Atrofia urogenital: lubrificante, hidratante vaginal ou estrogênio tópico vulvovaginal.\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Parte 6 – Atenção às mulheres no climatério, Quadros 1 a 5 (p. 197-208).",
+        "cid": "N95.1",
+        "esp": "Ginecologia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Parte 6, Quadros 1-5, p. 197-208)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "critérios, medidas não farmacológicas, fitoterápicos, terapia não hormonal e hormonal com doses (Quadros 1 a 5)"
+        }
+      ],
+      "observacoes": "Já existe \"Climatério e menopausa: terapia hormonal\"; esta ficha foca nos fogachos e na abordagem não hormonal. Dose de progestágeno associado à terapia hormonal: PENDENTE."
+    },
+    {
+      "registro": {
+        "area": "Ginecologia e Obstetrícia",
+        "nome": "Dermatite de contato vulvar e prurido vulvar ou anal sem lesão evidente",
+        "introducao": "Queixa comum nas unidades básicas. O prurido vulvar ou anal tem etiologia multifatorial (infecciosa, alérgica, traumática, neoplásica, dermatológica ou hormonal) e, muitas vezes, nenhuma causa é identificada. A dermatite de contato vulvar é frequentemente desencadeada por agente irritante ou alérgeno nem sempre evidente.",
+        "criterios": "Dermatite de contato: eritema vulvar com ou sem desencadeante evidente, sem corrimento grumoso nem lesões em outras localizações. Candidíase: corrimento branco grumoso, prurido intenso e eritema mais intenso. Dermatite seborreica e psoríase: lesões em outras localizações. Prurido sem lesão: anamnese e exame cuidadosos. Sinais de alerta para neoplasia: ausência de resposta ao tratamento em um mês e discromias vulvares.",
+        "exames": "Exame físico da vulva, períneo e região perianal; avaliação do conteúdo vaginal (pH, teste das aminas e microscopia) se houver corrimento. Biópsia (por especialista) se lesão refratária, discromia, mancha ou placa de causa incerta.",
+        "tratamento": "Dermatite de contato: remover o agente causal, cuidados gerais de higiene e corticoide tópico. Prurido sem lesão: orientações de higiene e remoção de agentes que causem prurido. Candidíase: seguir o tratamento do corrimento vaginal. Dermatite seborreica e psoríase estão fora do escopo do protocolo.",
+        "conduta": "Médico(a). Manejar a causa identificada; encaminhar ao ginecologista ou dermatologista os casos refratários, com máculas, placas ou discromias vulvares (diferencial com líquen plano, líquen escleroso e neoplasias intraepiteliais vulvares) ou sem resposta em um mês.",
+        "prescricao": "1) Dermatite de contato: corticoide tópico (potência, produto e duração: PENDENTE DE VERIFICAÇÃO; não detalhados na fonte), mais remoção do agente e cuidados gerais de higiene.\n2) Candidíase associada: tratamento conforme registro de candidíase vulvovaginal.\n3) Prurido sem lesão: sem fármaco específico na fonte.\nBase: Ministério da Saúde, Protocolos da Atenção Básica: Saúde das Mulheres (2016), Parte 1 – Lesão anogenital, Fluxograma 6 e Quadro 7 (p. 35-37).",
+        "cid": "L29.2, L24.9",
+        "esp": "Ginecologia;Dermatologia;Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos da Atenção Básica: Saúde das Mulheres (Parte 1, cap. 2, p. 35-37)",
+          "instituicao": "Ministério da Saúde / Instituto Sírio-Libanês de Ensino e Pesquisa",
+          "ano": "2016",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+          "usadoPara": "causas, sinais de alerta e manejo da dermatose e do prurido vulvar/anal (Fluxograma 6, Quadro 7)"
+        }
+      ],
+      "observacoes": "Prurido de causa hormonal (menopausa) é tratado na ficha de atrofia vulvovaginal, já no acervo. Potência do corticoide ficou PENDENTE."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Linhas de Cuidado do Ministério da Saúde (linhasdecuidado.saude.gov.br): AVC, ansiedade, asma, demência, DM2, DRC, dor torácica, hepatites virais, HAS, HIV, dor lombar, insuficiência cardíaca, obesidade, puericultura, tabagismo, TEA, Zika",
+      "motivo": "As 17 linhas já têm condições equivalentes no acervo; o conteúdo clínico das páginas é em diagramas de imagem e PDFs não acessíveis por texto nesta tarefa (a página devolveu apenas o esqueleto do diagrama), então não foi possível ler um capítulo por condição. Nenhuma ficha escrita a partir delas."
+    },
+    {
+      "tema": "Sangramento uterino anormal, amenorreia, sintomas pré-menstruais, corrimento e cervicites, mastalgia, descarga papilar, dor pélvica, miomas, perda urinária, câncer de colo e de mama, violência sexual e doméstica",
+      "motivo": "já existem: Sangramento uterino anormal; Amenorreia; Síndrome pré-menstrual; Vulvovaginites na atenção primária e Cervicite e uretrite; Mastalgia e doenças benignas da mama; Descarga papilar; Dor pélvica crônica; Mioma uterino; Incontinência urinária; Câncer de colo do útero: rastreamento; Câncer de mama: rastreamento; Violência sexual; Violência doméstica contra a mulher."
+    },
+    {
+      "tema": "Náuseas e vômitos / hiperêmese gravídica; infecção urinária na gestação; ameaça de aborto e sangramento do primeiro trimestre; trabalho de parto prematuro; anemia na gestação; toxoplasmose e sífilis na gestação",
+      "motivo": "já existem: Hiperêmese gravídica; Infecção urinária na gestação; Sangramento do primeiro trimestre; Aborto espontâneo; Trabalho de parto prematuro; Anemia na gestação; Toxoplasmose na gestação; Sífilis na gestação."
+    },
+    {
+      "tema": "Úlcera genital, condiloma, herpes, cancro mole, donovanose, hemorroidas, cisto e abscesso de Bartholin, cisto de Naboth, imagens anexais e miomas à ultrassonografia",
+      "motivo": "já existem: Úlcera genital; Condiloma acuminado; Herpes genital; Cancro mole e donovanose; Hemorroidas; Cisto de Bartholin e bartolinite; Cisto de Naboth; Cisto ovariano funcional; Mioma uterino."
+    },
+    {
+      "tema": "DIU de cobre, AOC e minipílula, esterilização, contracepção de emergência, planejamento reprodutivo, climatério e terapia hormonal, aleitamento (ingurgitamento, fissura, mastite, abscesso)",
+      "motivo": "já existem: DIU de cobre e SIU; Anticoncepcional hormonal combinado; Anticoncepção apenas de progestágeno; Esterilização feminina; Contracepção de emergência; Aconselhamento pré-concepcional; Climatério e menopausa: terapia hormonal; Ingurgitamento mamário; Fissura mamilar; Mastite lactacional; Abscesso mamário."
+    },
+    {
+      "tema": "Preservativos masculino e feminino e diafragma",
+      "motivo": "O protocolo só os menciona nos quadros 2 a 4, sem fluxograma de uso; não há capítulo que sustente uma ficha própria."
+    },
+    {
+      "tema": "Cefaleia da gestação",
+      "motivo": "Tratada de forma muito breve na fonte (repouso, conversa e analgésico simples); sem conteúdo suficiente para ficha."
+    },
+    {
+      "tema": "Espessamento endometrial na pós-menopausa (achado ultrassonográfico)",
+      "motivo": "REPROVADO na revisão: a fonte (item 6.3, p. 57) só traz o limiar (>= 5 mm na pós-menopausa) e o encaminhamento à ginecologia; sem conduta prática além do que já consta em \"Câncer de endométrio e sangramento pós-menopausa\" e \"Hiperplasia endometrial\" (acervo). Sugestão: citar o limiar de 5 mm nessas fichas, se o autor quiser."
+    },
+    {
+      "tema": "Candidíase mamilar na lactação",
+      "motivo": "REPROVADO na revisão: duplicata de \"Candidíase mamilar e mamária na lactação\" (lote-15), mesma fonte (p. 145-146), sem conteúdo distinto. Alerta: o esquema do protocolo inclui cetoconazol ORAL 200 mg/dia por 10 a 20 dias, que não deve ser recomendado (restrição ANVISA/EMA por hepatotoxicidade); o revisor do lote-15 deve conferir."
+    },
+    {
+      "tema": "Galactocele",
+      "motivo": "REPROVADO na revisão: duplicata de \"Bloqueio de ductos lactíferos e galactocele\" (lote-15); fonte (p. 146) traz só uma frase (aspiração, frequentemente cirurgia)."
+    }
+  ]
+}

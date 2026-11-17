@@ -1,0 +1,200 @@
+{
+  "lote": "10",
+  "criadoEm": "2026-11-13",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Traumatismo dentoalveolar (concussão, subluxação, luxação, avulsão e fraturas dentárias)",
+        "introducao": "Lesões dos dentes e dos tecidos de suporte, frequentemente associadas a lesões de outras estruturas da face. A conduta depende do tipo de lesão e da dentição (decídua ou permanente); o médico faz a triagem de gravidade, a analgesia, a vacina antitetânica e o encaminhamento rápido à equipe de saúde bucal.",
+        "criterios": "Concussão: sensibilidade à percussão ou à mastigação, sem mobilidade nem deslocamento. Subluxação: dor discreta à percussão, pequena mobilidade, sem deslocamento, com possível sangramento sulcular. Extrusão: deslocamento do dente (vestibular, palatino ou lingual), com mobilidade dolorosa. Luxação lateral: deslocamento lateral (lingual ou palatino), com interferência oclusal e frequente fratura alveolar. Intrusão: irrigar e limpar a área para localizar o dente. Avulsão: alvéolo vazio (confirmar que não houve intrusão total). Fraturas: coronária (esmalte; esmalte e dentina; com exposição pulpar), coronorradicular e radicular.",
+        "exames": "Anamnese do trauma (como, quando e onde), sinais vitais e busca de sinais de traumatismo craniano (perda de consciência, náuseas, vômitos, cefaleia, alterações visuais). Exame extrabucal por palpação (mobilidade anormal, degrau ósseo, pontos dolorosos) e exame intrabucal de lábios, língua, gengivas, bochechas e palato. Radiografia quando disponível; sem ela, usar idade (grau de formação radicular) e quadro clínico. O teste de sensibilidade pulpar pode ser adiado, pois é frequentemente negativo logo após trauma forte.",
+        "tratamento": "Concussão: observação e dieta macia. Subluxação: analgésico, bochechos e, se a mobilidade for grande em dente permanente, contenção semirrígida por 2 semanas, com dieta pastosa por 1 semana. Extrusão: em dente permanente, reposicionar com contenção semirrígida por 2 semanas; em decíduo, reposicionar se mínima ou extrair se houver muita mobilidade. Luxação lateral: decíduo, exodontia; permanente, reposicionar, reduzir a fratura alveolar e usar contenção rígida por 3 a 6 semanas. Avulsão: dente permanente com menos de 1 hora fora e bem conservado é reimplantado imediatamente; nunca reimplantar dente decíduo. Intrusão: acompanhar a reerupção. Fraturas: desgaste, colagem do fragmento ou compósito; exposição pulpar com capeamento ou pulpotomia; radicular (terços médio e apical): o diagnóstico é radiográfico; sem radiografia, redução por pressão digital e contenção rígida por 3 meses.",
+        "conduta": "Examinar sinais de trauma craniano e lesões associadas. Conferir a vacina antitetânica. Prescrever analgésico e orientar higiene bucal (clorexidina sem álcool nos casos de avulsão e intrusão). Encaminhar à equipe de saúde bucal para a intervenção indicada. Agendar retorno na UBS para continuidade do tratamento e referenciar a serviço de maior complexidade quando necessário.",
+        "prescricao": "1) Analgésico (doses do Quadro 61 do CAB 28; conferir em bula Anvisa) e bochechos com clorexidina sem álcool quando indicado.\n2) Antibioticoterapia na luxação lateral conforme a condição bucodental (fármaco, dose e duração: PENDENTE DE VERIFICAÇÃO, não descritos para este quadro).\n3) Vacina antitetânica conforme situação vacinal.\n4) Contenção, reimplante e procedimentos restauradores: realizados pela equipe de saúde bucal.\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 28, v. II, cap. 2.21, urgências traumáticas (2013).",
+        "cid": "S02.5, S03.2",
+        "esp": "Medicina de Emergência; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, cap. 2.21 Urgências odontológicas, seção Urgências traumáticas (p. 196-198)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "todo o registro: tipos de trauma dentário, conduta por dentição e tempo de contenção"
+        }
+      ],
+      "observacoes": "Doses de analgésico não transcritas por ambiguidade do Quadro 61; antibiótico na luxação lateral sem fármaco especificado na fonte. Figura 47 (fluxograma) é imagem e não foi transcrita."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Hemorragia bucal pós-exodontia e sangramento oral espontâneo",
+        "introducao": "Cerca de 90% dos sangramentos bucais estão ligados a procedimentos cirúrgicos, principalmente extrações dentárias. Chamam-se primários os que surgem nas primeiras horas e secundários os que ocorrem em geral após 12 horas. O objetivo é deter o sangramento o mais rápido possível e investigar a causa quando há uso de anticoagulantes ou suspeita de doença sistêmica.",
+        "criterios": "Sangramento ativo no alvéolo após exodontia ou outro procedimento (primário ou secundário), ou sangramento gengival espontâneo. Investigar uso de anticoagulantes, lesões periodontais e comprometimento sistêmico.",
+        "exames": "Inspeção do alvéolo após remover o coágulo anterior, procurando ápice residual, tecido de granulação ou fragmento ósseo móvel. Se houver suspeita de comprometimento sistêmico, referenciar para avaliação médica (a fonte não detalha exames laboratoriais).",
+        "tratamento": "Três passos: revisão, sutura e compressão. Limpar a cavidade, remover o coágulo, lavar e curetar o alvéolo, colocar curativo hemostático bioabsorvível no fundo, suturar e comprimir localmente por 15 a 20 minutos. No sangramento espontâneo, compressão da área com gaze estéril e tratamento de lesões periodontais e da higiene bucal.",
+        "conduta": "Orientar após o procedimento: repouso e redução de esforço físico, alimentação pastosa fria ou gelada por 24 horas, evitar bochechos e fumo nas primeiras 24 horas. Se o paciente usa anticoagulante, o controle espontâneo é difícil; associar medidas com a equipe médica de referência. Com suspeita de doença sistêmica, encaminhar para avaliação médica; agendar investigação da causa.",
+        "prescricao": "1) Controle local do sangramento: compressão com gaze estéril, curativo hemostático bioabsorvível e sutura (equipe de saúde bucal).\n2) Analgésico conforme necessidade (dose: PENDENTE DE VERIFICAÇÃO neste capítulo; ver Quadro 61 e bula Anvisa).\n3) Uso de anticoagulante: associar medidas com a equipe médica de referência.\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 28, v. II, cap. 2.21, urgência hemorrágica (2013).",
+        "cid": "T81.0",
+        "esp": "Medicina de Emergência; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, cap. 2.21 Urgências odontológicas, seção Urgência hemorrágica (p. 199)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "todo o registro"
+        }
+      ],
+      "observacoes": "A fonte não traz exames de coagulação nem doses; marcados como pendentes. CID T81.0 (hemorragia complicando procedimento) escolhido por ser o código existente mais próximo."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Alveolite pós-exodontia (alveolite seca e supurada)",
+        "introducao": "Complicação da extração dentária que causa dor intensa. A alveolite seca é a perda do coágulo no alvéolo, com osso exposto; a alveolite supurada é uma infecção do alvéolo após curetagem insuficiente. É uma urgência pós-operatória resolvida pelo dentista, com papel do médico no reconhecimento e na analgesia.",
+        "criterios": "Alveolite seca: dor intensa, persistente, lancinante e irradiada, 24 a 48 h após a exodontia, pouco responsiva a analgésicos e pior deitado; alvéolo sem coágulo, osso esbranquiçado, mucosa ao redor normal; alimentação difícil. Alveolite supurada: mucosa do alvéolo entumecida e inflamada, superfície irregular, sensação de pulsação, com possível febre e linfadenopatia.",
+        "exames": "Diagnóstico clínico e inspeção do alvéolo; radiografia não é exigida pela fonte.",
+        "tratamento": "Alveolite seca: anestesia local, irrigação do alvéolo, colocação de implante aloplástico e antibiótico sistêmico, segundo o CAB 28. Alveolite supurada: anestesia local, inspeção, lavagem com solução salina e antisséptico local (polvidona iodada ou clorexidina a 0,12%), antibiótico e analgésico, evitando AINEs e salicilatos.",
+        "conduta": "Encaminhar à equipe de saúde bucal para o tratamento local. Retorno agendado na UBS após o atendimento de urgência.",
+        "prescricao": "1) Alveolite supurada: antibiótico e analgésico (evitar AINEs e salicilatos). Fármaco, dose e duração: PENDENTE DE VERIFICAÇÃO (a fonte não os especifica para este quadro; ver Quadro 61 e bula Anvisa).\n2) Antisséptico local: clorexidina 0,12% ou polvidona iodada no alvéolo, aplicada pelo dentista.\n3) Alveolite seca: antibiótico sistêmico segundo a fonte (esquema PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 28, v. II, cap. 2.21, urgências pós-operatórias (2013).",
+        "cid": "K10.3",
+        "esp": "Medicina de Emergência; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, cap. 2.21 Urgências odontológicas, seção Urgências pós-operatórias: alveolite (p. 205)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "todo o registro"
+        }
+      ],
+      "observacoes": "A indicação de antibiótico na alveolite seca é a posição do CAB 28; revisor deve checar se é compatível com diretrizes atuais (muitas recomendam apenas manejo local). Doses ausentes."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Luxação da articulação temporomandibular e disfunção temporomandibular aguda",
+        "introducao": "Quadros dolorosos ou de limitação da abertura da boca que envolvem músculos mastigatórios e articulação temporomandibular. Em urgência, o foco é reduzir a luxação quando existe, aliviar a dor e tranquilizar o paciente; a avaliação da oclusão fica para depois, com profissional especializado.",
+        "criterios": "Luxação condilar bilateral: côndilos palpáveis à frente das depressões pré-auriculares e paciente incapaz de fechar a boca sem ajuda, por trauma ou abertura forçada. Deslocamento de disco sem redução: redução da abertura bucal e dor, que piora à palpação dos músculos e da articulação. Disfunção muscular: dor e limitação de abertura por fadiga muscular, ligada a bruxismo, apertamento e distúrbios oclusais.",
+        "exames": "Diagnóstico clínico. Exame oclusal costuma ser adiado pela dor e pelo trismo.",
+        "tratamento": "Luxação: manobra de Nelaton (paciente sentado com cabeça reta; polegares sobre os molares inferiores, sem tocar a face oclusal; demais dedos nos ângulos da mandíbula; conduzir a mandíbula para baixo e para trás), seguida de bandagem para limitar a amplitude de movimento. Disco sem redução e disfunção muscular: tranquilizar, analgésico, anti-inflamatório e miorrelaxante.",
+        "conduta": "Após a redução, manter bandagem por 24 a 48 horas e dieta pastosa. Prescrever analgésico e relaxante muscular. Encaminhar ao dentista para avaliação oclusal e tratamento da causa (por exemplo, bruxismo).",
+        "prescricao": "1) Analgésico e miorrelaxante (fármaco, dose e duração: PENDENTE DE VERIFICAÇÃO, não especificados na fonte).\n2) Anti-inflamatório no deslocamento de disco e na disfunção muscular (dose: PENDENTE DE VERIFICAÇÃO).\n3) Dieta pastosa e bandagem por 24 a 48 h após redução da luxação.\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 28, v. II, cap. 2.21, urgências do aparelho estomatognático (2013).",
+        "cid": "K07.6, S03.0",
+        "esp": "Medicina de Emergência; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, cap. 2.21 Urgências odontológicas, seção Algias e disfunções do aparelho estomatognático (p. 200-201)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "todo o registro"
+        }
+      ],
+      "observacoes": "Sem doses na fonte. Figura 49 (fluxograma) é imagem."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Lesões traumáticas da mucosa oral (prótese, mordida pós-anestesia e queimadura)",
+        "introducao": "Úlceras e queimaduras da mucosa bucal por prótese mal adaptada, mordedura de lábio, língua ou mucosa jugal durante o efeito da anestesia local, ou por medicamento aplicado topicamente ou alimento muito quente.",
+        "criterios": "Úlcera traumática por prótese: bordas bem marcadas e correlacionadas à prótese. Mordida pós-anestesia: lesão de lábio, língua ou mucosa jugal após anestesia local, sem dor no momento do trauma. Queimadura da mucosa: história de medicamento de uso sistêmico aplicado topicamente ou alimento muito quente, com anamnese dirigida.",
+        "exames": "Diagnóstico clínico, com anamnese dirigida.",
+        "tratamento": "Suspender o uso da prótese até a cicatrização da úlcera e ajustar seus contornos quando possível. Gel anestésico local e analgésico se houver muita dor. Reforçar higiene bucal.",
+        "conduta": "Orientar quanto à higiene e ao uso correto da prótese; encaminhar ao dentista para ajuste ou confecção de nova prótese.",
+        "prescricao": "1) Gel anestésico local: posologia PENDENTE DE VERIFICAÇÃO.\n2) Analgésico se dor intensa (dose: PENDENTE DE VERIFICAÇÃO).\n3) Suspensão temporária da prótese e ajuste pelo dentista.\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 28, v. II, cap. 2.21, urgências da mucosa (2013).",
+        "cid": "K13.7, K12.1",
+        "esp": "Medicina de Emergência; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, cap. 2.21 Urgências odontológicas, seção Urgências da mucosa (p. 202)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "todo o registro"
+        }
+      ],
+      "observacoes": "Candidíase, herpes e aftas da mesma seção já existem no acervo e não foram repetidas. Sem doses na fonte; K12.1 como complemento (estomatite por prótese)."
+    },
+    {
+      "registro": {
+        "area": "Otorrino e Oftalmologia",
+        "nome": "Hemorragia subconjuntival",
+        "introducao": "Coleção de sangue sob a conjuntiva. Resulta, na maioria das vezes, do sangramento de pequenos vasos conjuntivais e melhora espontaneamente, por absorção do sangue pelo próprio organismo.",
+        "criterios": "Coleção de sangue debaixo da conjuntiva, em geral após esforço (como evacuar) ou pico hipertensivo arterial sistêmico. A conjuntiva pode permanecer vermelha por mais tempo quando há hemorragia subconjuntival associada a conjuntivite.",
+        "exames": "Medida da acuidade visual (tabela de Snellen) e exame da origem da vermelhidão conjuntival, para diferenciar de outras causas de olho vermelho.",
+        "tratamento": "Sem tratamento específico: a absorção é espontânea.",
+        "conduta": "No diagnóstico diferencial do olho vermelho, reconhecer as quatro grandes ameaças à visão (ceratites, iridociclites, glaucoma agudo e traumas), que exigem encaminhamento ao oftalmologista.",
+        "prescricao": "1) Sem tratamento específico; melhora espontânea.\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 28, v. II, cap. 2.22, olho vermelho (2013).",
+        "cid": "H11.3",
+        "esp": "Oftalmologia; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, cap. 2.22 Urgências oftalmológicas: olho vermelho (p. 207-216)",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "todo o registro: definição, causas e evolução"
+        }
+      ],
+      "observacoes": "Fonte curta: duração da absorção não informada. Registro enxuto por desenho da fonte. Revisão: retirados PA, investigação de coagulopatia e conduta específica não presentes no capítulo."
+    },
+    {
+      "registro": {
+        "area": "Otorrino e Oftalmologia",
+        "nome": "Queimadura ocular por radiação ultravioleta (fotoceratite)",
+        "introducao": "Lesão do epitélio da córnea (ceratite) por radiação ultravioleta, como a solda elétrica. A ceratite manifesta-se por dor aguda, lacrimejamento e blefaroespasmo, com melhora após colírio anestésico. O epitélio corneano costuma se regenerar em 48 a 60 horas.",
+        "criterios": "Dor ocular aguda, lacrimejamento e blefaroespasmo, com hiperemia conjuntival, após exposição à radiação ultravioleta (por exemplo, solda elétrica). Pode haver baixa da acuidade visual. Epitélio da córnea costuma se regenerar em 48 a 60 horas.",
+        "exames": "Medida da acuidade visual; exame do olho com eversão da pálpebra; fluoresceína em colírio para detectar rupturas do epitélio corneano (áreas que coram de verde).",
+        "tratamento": "Instilar uma gota de colírio anestésico, aplicar pomada antibiótica e ocluir o olho afetado. Se a dor for muito intensa, uma gota de atropina 1% colírio antes da oclusão. Se não houver nenhum desses medicamentos, ocluir o olho e encaminhar imediatamente ao oftalmologista.",
+        "conduta": "Encaminhar ao oftalmologista. A ceratite é uma das quatro grandes ameaças à visão no olho vermelho (com iridociclite, glaucoma agudo e trauma).",
+        "prescricao": "1) Colírio anestésico, 1 gota, uma vez.\n2) Pomada oftálmica antibiótica, seguida de oclusão do olho (o exemplo da fonte é associação de acetato de retinol, aminoácidos, metionina e cloranfenicol; posologia PENDENTE DE VERIFICAÇÃO).\n3) Atropina 1% colírio, 1 gota, se dor muito intensa, antes da oclusão.\nBase: Ministério da Saúde, Cadernos de Atenção Básica nº 28, v. II, cap. 2.22, olho vermelho (2013).",
+        "cid": "H16.1",
+        "esp": "Oftalmologia; Medicina de Família e Comunidade"
+      },
+      "fontes": [
+        {
+          "titulo": "Cadernos de Atenção Básica nº 28, v. II, cap. 2.22 Urgências oftalmológicas: olho vermelho (p. 207-216), seção Queimadura física por radiação UV",
+          "instituicao": "Ministério da Saúde",
+          "ano": "2013",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+          "usadoPara": "todo o registro"
+        }
+      ],
+      "observacoes": "Revisão: retirada a advertência sobre uso domiciliar do anestésico (sem fonte no capítulo); retirados \"sem melhora em 24 h\" e biomicroscopia, ausentes do capítulo. H16.1 usado por ser o código de ceratite superficial."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Pericoronarite e doença periodontal necrosante (GUN/PUN)",
+      "motivo": "já cobertas na ficha \"Urgências odontológicas na APS\" do lote 01 (inclui clorexidina nos dois quadros)"
+    },
+    {
+      "tema": "Cárie, pulpite, abscessos, otalgia, resfriado, bronquite aguda",
+      "motivo": "já usadas nos lotes 01 e 05"
+    },
+    {
+      "tema": "Anafilaxia, cefaleia, crise epiléptica, hipoglicemia/hiperglicemia, diarreia/vômito, dispneia, disúria, pele (impetigo, herpes, escabiose, rubéola), dor abdominal, dor lombar, dor torácica, crise hipertensiva, intoxicações, mordedura, queimaduras, rinossinusite, sangramento uterino, vertigem, olho vermelho, saúde mental, má notícia, violência, RCP",
+      "motivo": "já existem no acervo (nome ou sinônimo conferido)"
+    },
+    {
+      "tema": "Conjuntivite, oftalmia neonatal, episclerite, blefarite, glaucoma agudo, descolamento de retina, corpo estranho e queimadura química ocular",
+      "motivo": "já existem no acervo"
+    },
+    {
+      "tema": "Usuários hiperutilizadores, situações administrativas, urgências protéticas/restauradoras (descimentação, perda de restauração)",
+      "motivo": "não são condições clínicas para ficha médica"
+    },
+    {
+      "tema": "CAB 33 (crescimento e desenvolvimento) e CAB 26 (saúde sexual e reprodutiva)",
+      "motivo": "não abertos nesta sessão (interrompida); temas principais (puericultura, DNPM, baixa estatura, RGE do lactente, HPV, aleitamento) já existem no acervo"
+    }
+  ]
+}

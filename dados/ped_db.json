@@ -39,20 +39,20 @@
         "f": 3,
         "mx": 100,
         "fonte": "Ref",
-        "ob": "1,5 mg/kg/dose 3x/dia antes das refeições, por até 7 dias, como adjuvante da reidratação oral.",
+        "ob": "1,5 mg/kg/dose 3x/dia em intervalos regulares, junto da reidratação oral. Sachê 10 mg: 3-9 meses (< 9 kg) 1 sachê; 10-35 meses (9-13 kg) 2 sachês. Sachê 30 mg: 3-9 anos (14-27 kg) 1 sachê; > 9 anos (> 27 kg) 2 sachês. Contém sacarose. Suspender se houver reação cutânea grave.",
         "ap": [
           {
-            "l": "Sachê infantil 10 mg (lactentes < 9 kg)",
+            "l": "Sachê 10 mg (a partir de 3 meses)",
             "mg": 10,
             "u": "sachê(s)"
           },
           {
-            "l": "Sachê infantil 30 mg (≥ 13 kg)",
+            "l": "Sachê 30 mg (a partir de 3 anos)",
             "mg": 30,
             "u": "sachê(s)"
           }
         ],
-        "rev": ""
+        "rev": "Conferida em 11/2026 com a bula Tiorfan granulado (Anvisa): 1,5 mg/kg/dose 3x/dia; 10 mg contraindicado < 3 meses; 30 mg contraindicado < 3 anos"
       }
     ]
   },
@@ -329,7 +329,7 @@
         "b": "dose",
         "f": 3,
         "fonte": "HILF",
-        "ob": "HILF: 1 gota/kg/dose a cada 8 h por 2-5 dias (> 1 ano; máx. 50 gotas).",
+        "ob": "Acima de 1 ano: 1 gota/kg (1 gota = 1 mg) a cada 6 ou 8 h; 7 a 11 anos: 25 gotas a cada 6 ou 8 h; adultos: 50 gotas. Máx. 300 mg/dia. Diluir em um pouco de água. Não usar em < 1 ano.",
         "ap": [
           {
             "l": "Gotas 20 mg/mL",
@@ -338,29 +338,21 @@
             "mxMl": 2.5
           }
         ],
-        "rev": "",
+        "rev": "Conferida em 11/2026 com a bula Profenid gotas (Sanofi): 1 gota/kg a cada 6-8 h acima de 1 ano, 25 gotas aos 7-11 anos, máx. 300 mg/dia",
         "mx": 100,
         "mxd": 300
       },
       {
         "via": "IM/EV",
-        "d": [
-          1,
-          1
-        ],
-        "b": "dose",
-        "f": 3,
         "fonte": "HILF",
-        "ob": "HILF: 1 mg/kg/dose a cada 8 h (> 1 ano); EV diluído e infundido lentamente.",
+        "ob": "A dose de 1 mg/kg do documento de origem foi retirada do cálculo por contrariar a bula.",
         "ap": [
           {
-            "l": "Solução injetável 50 mg/mL",
-            "c": 50
+            "l": "Solução injetável 50 mg/mL (uso adulto)"
           }
         ],
-        "rev": "",
-        "mx": 100,
-        "mxd": 300
+        "rev": "Conferida em 11/2026 com a bula Profenid IM 100 mg/2 mL: contraindicado na faixa etária pediátrica",
+        "fixo": "Sem dose pediátrica: a bula do cetoprofeno injetável (Profenid IM) contraindica o uso na faixa etária pediátrica. Use as formas orais acima de 1 ano."
       }
     ]
   },
@@ -502,20 +494,21 @@
         "via": "VO",
         "d": [
           10,
-          15
+          20
         ],
         "b": "dose",
         "f": 2,
         "mxd": 1000,
         "fonte": "HILF",
-        "ob": "20-40 mg/kg/dia a cada 8-12 h (otite média: 40 mg/kg/dia), máx. 1 g/dia (bula).",
+        "ob": "Suspensão 375 mg/5 mL de 12/12 h: 20 mg/kg/dia (dose usual) a 40 mg/kg/dia (otite média e infecções mais graves), ou seja 10-20 mg/kg/dose; máx. 1 g/dia. A suspensão 250 mg/5 mL é dada de 8/8 h. Tomar 1 h antes ou 2 h após as refeições.",
         "ap": [
           {
             "l": "Suspensão 375 mg/5 mL (75 mg/mL)",
             "c": 75
           }
         ],
-        "rev": ""
+        "rev": "Conferida em 11/2026 com a bula Ceclor (EMS): tabelas 250 mg/5 mL (8/8 h) e 375 mg/5 mL (12/12 h), 20-40 mg/kg/dia, máx. 1 g/dia",
+        "dd": 10
       }
     ]
   },
@@ -1100,21 +1093,15 @@
     "v": [
       {
         "via": "VO",
-        "d": [
-          0.15,
-          0.15
-        ],
-        "b": "dia",
-        "f": 3,
         "fonte": "Ref",
-        "ob": "0,15 mg/kg/dia ÷ 3-4 doses. Evitar em < 2 anos (bula).",
+        "ob": "Dose fixa por idade.",
         "ap": [
           {
-            "l": "Xarope 0,4 mg/mL (2 mg/5 mL)",
-            "c": 0.4
+            "l": "Xarope 0,4 mg/mL (2 mg/5 mL)"
           }
         ],
-        "rev": ""
+        "rev": "Conferida em 11/2026 com o folheto de dexclorfeniramina da SES-SP (Farmácia Dose Certa): doses por idade, contraindicada < 2 anos",
+        "fixo": "Xarope 0,4 mg/mL (2 mg/5 mL): 2 a 6 anos 1,25 mL 3x/dia (máx. 3 mg/dia = 7,5 mL); 6 a 12 anos 2,5 mL 3x/dia (máx. 6 mg/dia = 15 mL); > 12 anos 5 mL 3-4x/dia (máx. 12 mg/dia). Contraindicada em < 2 anos."
       }
     ]
   },
@@ -1492,7 +1479,7 @@
         "b": "dia",
         "f": 2,
         "fonte": "Ref",
-        "ob": "1-3 mg/kg/dia em 1-2 doses (máx. 100 mg/dia ou 3,3 mg/kg/dia). Monitorar potássio, sobretudo com IECA.",
+        "ob": "1-3 mg/kg/dia divididos em 2 a 4 vezes (aqui em 2); máx. 3,3 mg/kg/dia (e 100 mg/dia). Monitorar potássio, sobretudo com IECA.",
         "ap": [
           {
             "l": "Comprimido 25 mg",
@@ -1505,8 +1492,9 @@
             "u": "comprimido"
           }
         ],
-        "rev": "",
-        "mxd": 100
+        "rev": "Conferida em 11/2026 com o folheto de espironolactona da SES-SP (Farmácia Dose Certa): crianças 1-3 mg/kg/dia em 2-4 doses, máx. 3,3 mg/kg/dia",
+        "mxd": 100,
+        "mdk": 3.3
       }
     ]
   },
@@ -1625,6 +1613,18 @@
     "v": [
       {
         "via": "VO",
+        "fonte": "Ref",
+        "ob": "A dose oral é fixa por idade (não por peso). A faixa de 0,3-0,6 mg/kg vale só para a via injetável. Não indicado na diarreia aguda ou persistente da criança.",
+        "ap": [
+          {
+            "l": "Gotas 10 mg/mL"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com a bula Buscopan (gotas e solução injetável): gotas por idade; a dose por kg era da via injetável e foi separada",
+        "fixo": "Gotas 10 mg/mL (20 gotas = 1 mL; 1 gota = 0,5 mg): lactentes 10 gotas (5 mg) 3x/dia; 1 a 6 anos 10-20 gotas (5-10 mg) 3x/dia; > 6 anos e adultos 20-40 gotas (10-20 mg) 3 a 5x/dia."
+      },
+      {
+        "via": "IM/EV/SC (casos graves)",
         "d": [
           0.3,
           0.6
@@ -1634,14 +1634,14 @@
         "f": 3,
         "mdk": 1.5,
         "fonte": "Ref",
-        "ob": "Bula: 0,3-0,6 mg/kg/dose, 3-5x/dia (máx. 1,5 mg/kg/dia). Evitar em < 6 anos sem orientação médica.",
+        "ob": "Lactentes e crianças < 12 anos, em casos graves: 0,3-0,6 mg/kg por dose, que pode ser repetida várias vezes ao dia, sem exceder 1,5 mg/kg/dia. Aplicar lentamente. Investigar a causa da dor antes de uso prolongado.",
         "ap": [
           {
-            "l": "Gotas 10 mg/mL",
-            "c": 10
+            "l": "Ampola 20 mg/mL",
+            "c": 20
           }
         ],
-        "rev": ""
+        "rev": "Conferida em 11/2026 com a bula Buscopan solução injetável: < 12 anos 0,3-0,6 mg/kg, máx. 1,5 mg/kg/dia"
       }
     ]
   },
@@ -1669,7 +1669,7 @@
           }
         ],
         "al": "Restrita a uso de 2ª linha por risco de reações extrapiramidais (EMA/ANVISA): evitar < 1 ano; máx. 0,5 mg/kg/dia; não exceder 5 dias.",
-        "rev": ""
+        "rev": "Conferida em 11/2026 com a bula Plasil (Sanofi): máx. 0,5 mg/kg/dia, começar pela menor dose; contraindicação < 1 ano mantida, conforme bulas atuais"
       },
       {
         "via": "IM/EV",
@@ -1691,7 +1691,7 @@
           }
         ],
         "al": "Restrita a uso de 2ª linha por risco de reações extrapiramidais (EMA/ANVISA): evitar < 1 ano; máx. 0,5 mg/kg/dia; não exceder 5 dias.",
-        "rev": ""
+        "rev": "Conferida em 11/2026 com a bula Plasil (Sanofi): máx. 0,5 mg/kg/dia, começar pela menor dose; contraindicação < 1 ano mantida, conforme bulas atuais"
       }
     ]
   },
@@ -1708,9 +1708,9 @@
         "b": "dose",
         "f": 3,
         "mx": 10,
-        "mdk": 0.75,
+        "mdk": 1,
         "fonte": "Ref",
-        "ob": "0,25 mg/kg/dose até 3x/dia antes das refeições (máx. 0,75 mg/kg/dia e 30 mg/dia).",
+        "ob": "Adolescentes ≥ 12 anos com < 35 kg: 0,25 mg/kg (0,25 mL/kg da suspensão 1 mg/mL) 3x/dia antes das refeições e, se preciso, ao deitar; máx. 1 mg/kg/dia e 35 mg/dia. A eficácia NÃO foi estabelecida em lactentes e crianças < 12 anos com < 35 kg. Comprimidos só a partir de 35 kg.",
         "ap": [
           {
             "l": "Suspensão 1 mg/mL",
@@ -1722,7 +1722,8 @@
             "u": "comprimido"
           }
         ],
-        "rev": ""
+        "rev": "Conferida em 11/2026 com a bula Peridal (Mantecorp, profissional): 0,25 mL/kg 3x/dia, máx. 1 mg/kg/dia e 35 mg/dia; eficácia não estabelecida < 12 anos e < 35 kg",
+        "mxd": 35
       }
     ]
   },
@@ -2428,43 +2429,45 @@
       {
         "via": "VO",
         "d": [
-          0.2,
-          0.2
+          0.17,
+          0.33
         ],
         "b": "dose",
         "f": 3,
         "fonte": "HILF",
-        "ob": "HILF: 1 gota/kg/dose a cada 8 h (máx. 40 gotas). Bula: contraindicada em < 1 ano.",
+        "ob": "1 a 2 gotas/kg/dose, 3x/dia (gotas 4 mg/mL: 24 gotas = 1 mL; 1 gota ≈ 0,17 mg). Contraindicada em < 1 ano (risco de agitação, irritabilidade e convulsões). Reações extrapiramidais são mais frequentes em crianças.",
         "ap": [
           {
-            "l": "Gotas 4 mg/mL",
+            "l": "Gotas pediátricas 4 mg/mL (24 gotas/mL)",
             "c": 4,
             "gt": 1,
-            "mxMl": 2
+            "gm": 24
           }
         ],
-        "rev": "",
-        "mx": 10
+        "rev": "Conferida em 11/2026 com a bula da bromoprida gotas pediátricas 4 mg/mL (Germed): 24 gotas/mL, 1-2 gotas/kg 3x/dia, contraindicada < 1 ano",
+        "mx": 10,
+        "dd": 0.17
       },
       {
         "via": "IM/EV",
         "d": [
-          0.15,
-          0.15
+          0.5,
+          1
         ],
-        "b": "dose",
+        "b": "dia",
         "f": 3,
-        "fonte": "HILF",
-        "ob": "HILF: peso × 0,03 mL a cada 8 h. O documento de origem indica NÃO usar em menores de 18 anos — confirmar na bula antes de qualquer uso.",
+        "fonte": "Ref",
+        "ob": "Crianças > 1 ano: 0,5-1 mg/kg/dia IM ou EV, divididos (aqui em 3 doses); adultos 10-20 mg/dia. Contraindicada em < 1 ano. Reações extrapiramidais podem ocorrer após dose única, sobretudo em crianças.",
         "ap": [
           {
             "l": "Ampola 10 mg/2 mL (5 mg/mL)",
-            "c": 5,
-            "mxMl": 2
+            "c": 5
           }
         ],
-        "rev": "",
-        "mx": 10
+        "rev": "Conferida em 11/2026 com a bula Plamet solução injetável (Libbs): crianças 0,5-1 mg/kg/dia, adultos 10-20 mg/dia, contraindicada < 1 ano",
+        "mx": 10,
+        "dd": 0.5,
+        "mxd": 20
       }
     ]
   },
@@ -2534,8 +2537,8 @@
         ],
         "b": "dose",
         "f": 1,
-        "fonte": "HILF",
-        "ob": "HILF (oxiuríase): 1 mL/kg em dose única; repetir em 2-3 semanas.",
+        "fonte": "Ref",
+        "ob": "1 mL/kg (10 mg/kg) em dose única; máx. 600 mg (60 mL) independente do peso. Repetir cerca de 2 semanas depois (recontaminação). Não recomendado para crianças com menos de 10 kg.",
         "ap": [
           {
             "l": "Suspensão 10 mg/mL",
@@ -2543,7 +2546,8 @@
             "mxMl": 60
           }
         ],
-        "rev": ""
+        "rev": "Conferida em 11/2026 com a bula Pyr-Pam suspensão oral 10 mg/mL: 1 mL/kg dose única, máx. 600 mg, repetir em 2 semanas, não recomendado < 10 kg",
+        "mx": 600
       }
     ]
   }

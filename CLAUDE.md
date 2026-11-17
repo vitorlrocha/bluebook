@@ -1,144 +1,71 @@
-# Bluebook — guia do projeto para o Claude Code
+# Blue Book — guia curto do projeto
 
-App de consulta clínica em português do Brasil (doenças, condutas, medicamentos, CID-10,
-escores, calculadoras, modo plantão). O app final é **um único arquivo** `dist/index.html` (~7 MB),
-sem dependências externas em tempo de execução, funciona offline. Interface inspirada nas convenções do iOS.
+App médico de consulta (doenças, CID-10, condutas, prescrições, medicamentos), em português do Brasil.
+Detalhe técnico (estrutura, build, testes, módulos): `docs/GUIA_TECNICO.md`. Visual: `docs/DESIGN.md`.
 
-## Organização do repositório (desde a v72)
-- `src/index.html`: casca HTML com os marcadores `/*@css*/` e `/*@app*/`.
-- `src/styles.css`: conteúdo do `<style>`. `src/app.js`: conteúdo do `<script>` principal (IIFE).
-- `dados/*.json`: dados extraídos. Em `src/app.js` cada variável aparece como
-  `var NOME = /*@dados:NOME*/[]` e o build insere o literal no lugar.
-  - Arquivos: seed_meds, diseases, cid_full, ped_db, medx, plantao, scores, atb, vac, flux, ecg,
-    lab, calcs, especialidades, class_groups (`.json`). A tabela de variáveis/arquivos fica em `ferramentas/lib_dados.js`.
-  - Convenções JSON para o que não é dado puro: `{"$fn": [linhas]}` = função (SCORES.interp/run, CALCS.f);
-    `{"$re": "fonte", "flags": ""}` = regex (CLASS_GROUPS); `{"$ref": "SEXO"}` = variável de `app.js`.
-  - `CALC_ITEMS` não é dado: é derivado de `CALCS` em tempo de execução (`CALCS.map`), por isso o arquivo é `calcs.json`.
-- `ferramentas/build.js` gera `dist/index.html` (Node puro, sem dependências). `dist/` não vai para o git.
-  Também copia o PWA de `src/pwa/` para `dist/`: `manifest.json`, `icones/`, `sw.js` (com a versão =
-  hash do conteúdo, que renova o cache a cada mudança) e `.nojekyll`.
-- PWA: ícones gerados de `src/pwa/icone.svg` por `node ferramentas/gerar_icones.js` (usa o Chromium do
-  Playwright; os PNG ficam no git). O registro do service worker fica no fim de `src/index.html` e é
-  ignorado quando o arquivo é aberto direto do disco (file://), que continua funcionando offline sozinho.
-- `ferramentas/testar_build.js` prova a equivalência com `referencia/index-v71-original.html`
-  (contagens, valor de cada variável e todo o resto do arquivo idêntico).
-- `ferramentas/extrair.js` foi usado uma vez para separar a v71; não é preciso rodar de novo.
-- `ferramentas/servir.js`: servidor estático local (`node ferramentas/servir.js dist 8080`).
-- Para editar conteúdo: altere `dados/*.json` (ou `src/`), rode o build e as verificações.
-- Testes de ponta a ponta (Playwright, só dependência de desenvolvimento): `testes/*.spec.js`,
-  config em `playwright.config.js`. Rodar: `npx playwright test` (faz o build e sobe o servidor na porta 4173).
-  Projetos: `computador` (1366×860) e `celular` (Pixel 7); arquivos `*.celular.spec.js` só no celular,
-  `*.ambos.spec.js` nos dois. `testes/apoio.js` falha qualquer teste com erro de JavaScript no console.
-  Testes com `test.fail` documentam problemas conhecidos (passam enquanto o problema existir).
-- Testes de regressão: `testes/regressao.spec.js` exige que ~90 buscas deem a MESMA lista que a v71
-  (`referencia/`); `testes/visual.ambos.spec.js` compara capturas de tela (claro/escuro, computador/celular)
-  — mudança visual intencional: `npx playwright test visual --update-snapshots`; `testes/acessibilidade.ambos.spec.js`
-  roda axe-core (WCAG 2.1 AA) e testa teclado (Esc, foco), botão Aa e legibilidade.
-- Ferramentas de diagnóstico (dev): `ferramentas/medir_desempenho.js [--cpu=4]` (tempo de carga e de busca),
-  `ferramentas/estilos_computados.js` (impressão digital dos estilos para provar que CSS não mudou),
-  `ferramentas/css_limpar.js` (remove só declarações sobrescritas e seletores de classes inexistentes).
-- CSS em 3 camadas (ordem importa): 1. base, 2. tema moderno (padrão), 3. acessibilidade (contraste AA).
-  Fundos azuis com texto branco usam `--accent-fill` (no escuro é mais fechado que `--accent`).
-- Busca: o texto normalizado de cada registro fica em cache (`hayOf`, `medHay`, `disHay`) e um filtro de
-  Bloom de trigramas (`matchRec`) descarta registros sem o termo — o resultado é idêntico ao de `matchTerm`.
-  Se mudar os campos pesquisados, mude só `medHay`/`disHay`.
-- A calculadora pediátrica acessível ao usuário é o quadro "Dose pediátrica por peso" na ficha do
-  medicamento (prefixo `fp-`). O painel de calculadoras (`openCalcModal`: calculadora, IG por DUM/USG, dose
-  pediátrica, renal, IMC adulto e infantil, risco CV, fluidos, infusão, corticoides) abre por: botão
-  "Calculadoras" `#calc-btn` (cabeçalho, computador); atalhos "Calculadoras" e "Idade gestacional" da página
-  inicial (`openCalcTab("ga")` abre direto uma aba); itens `data-tb="tools"` e `data-tb="ga"` da folha "Mais".
-  A lista de fórmulas `REFS.calc` é a aba "Fórmulas clínicas" (computador) / "Fórmulas clínicas (lista)" (celular).
-  Na v71 o painel estava inacessível.
+## Objetivo
+Funcionar online e offline, instalável no computador e no celular, com atualização automática, código no
+GitHub e publicação gratuita. O conteúdo está pronto e **não muda** sem pedido explícito do autor.
 
-- **Login local (Etapa 2):** `src/auth.js`, inserido pelo build no marcador `/*@auth*/` (antes do app). Ele expõe
-  `window.BBAuth` (email, sair, alterarSenha, PESSOAIS, MEDS_KEY). Chaves: `bluebook:conta` (e-mail, hash PBKDF2,
-  sal), `bluebook:sessao` (localStorage com "manter conectado", senão sessionStorage) e `bluebook:tentativas`. O script
-  no início do `<body>` põe `bb-locked` no `<html>` sem sessão válida. Ao criar uma chave de dado pessoal nova,
-  inclua-a em `PESSOAIS` (auth.js), para entrar no backup do perfil e no "Esqueci a senha".
-  Nos testes, `testes/apoio.js` entra com uma conta fictícia (teste@exemplo.com); para testar o login,
-  use `test.use({ logado: false })`.
-- **iPhone (Safari/WebKit):** projeto de teste `iphone` (iPhone 14; requer `npx playwright install webkit`).
-  O Safari limita o localStorage a ~5 MB: NUNCA grave a biblioteca (SEED_MEDS) nele. A chave
-  `formulario-clinico:medications` guarda só `{v:2, fav:{nome: true}, extras:[importados]}`; o formato antigo
-  (array completo) é migrado na 1ª leitura (`makeLocalStorageStore`). `color-scheme` por tema evita controles
-  nativos claros no tema escuro.
-- **Google (Etapa 5):** `src/google.js` (marcador `/*@google*/`, antes do auth). `CLIENT_ID` = cliente OAuth
-  "Bluebook (GitHub Pages)" do projeto Google Cloud `nimble-lead-514122-e4` (modo de teste; só funciona na origem
-  https://vitorlrocha.github.io). Vazio = botão desativado. Escopo do Drive: só `drive.appdata`. Testes simulam o Google (`testes/google.ambos.spec.js`, com service worker bloqueado).
-- **Atualização automática (v73):** `src/atualiza.js` (marcador `/*@atualiza*/`, antes do google) registra o
-  service worker, procura versão nova (ao abrir, ao voltar a internet, a cada hora), mostra "Nova versão
-  disponível · Atualizar" e o aviso "Sem internet". O `sw.js` novo fica ESPERANDO e só assume com a mensagem
-  `ATUALIZAR` ou quando o app é fechado — nunca recarregue o app sozinho. O build grava
-  `window.BB_VERSAO = {versao, build, data}` (marcador `/*@versao*/`) e `dist/versao.json`: `versao` vem do
-  `package.json` (aumente a cada entrega de conteúdo), `build` é o hash do conteúdo e `data` é a do último
-  commit que tocou `src/` ou `dados/`. Teste do cenário completo: `testes/atualizacao.ambos.spec.js`.
-- **Design:** siga `docs/DESIGN.md` (tokens, tipografia, componentes, o que não fazer). Conferido por
-  `testes/design.ambos.spec.js`. Ao mudar o visual de propósito, atualize o DESIGN.md e as capturas.
-- **Roadmap e etapas:** `ROADMAP.md`. Testes de uso real (favoritos, anotações, backup, Ajustes) em
-  `testes/uso_real.ambos.spec.js`.
+**Pronto quando:** (1) abrir sem internet, buscar um medicamento e ver a ficha completa; (2) uma alteração de
+conteúdo aparecer no app instalado após reconectar; (3) app publicado e endereço informado.
 
-## Estrutura do app (dentro de dist/index.html)
-- `<style>`: tokens de cor em `:root` (+ modo escuro em `@media (prefers-color-scheme: dark)`
-  e `:root[data-theme="dark"]`). O tema moderno fica no FIM do `<style>` e sobrescreve o anterior.
-- Um `<script>` curto logo após `<body>` aplica o zoom salvo (`localStorage "bluebook:zoom"`).
-- `<script>` principal: um IIFE em JavaScript puro. Dados embutidos:
-  - `SEED_MEDS`: 1 medicamento por linha, cada linha começa com `    {"nome":` (1.851 itens).
-    Campos: nome, classe, tarja, via, generico, referencias, apresentacoes, indicacoes, posologia,
-    contraindicacoes, interacoes, observacoes, pediatria, gestacao, lactacao, areas, esp.
-  - `DISEASES`: 1 doença por linha, cada linha começa com `    {"area":` (3.226 itens).
-    Campos: area, nome, introducao, criterios, exames, tratamento, conduta, prescricao
-    (deve ter linha "Base: ..."), cid, esp.
-  - `CID_FULL`: CID-10 completo do DATASUS {cap, grp, cat (2.045), sub (12.451)}.
-  - `PED_DB`: base da calculadora pediátrica (77 medicamentos; campos d, dd, b, f, mx, mxd, mdk,
-    un, fx, fixo, ob, al, rev, fonte).
-  - `MEDX`: mecanismo/ajuste renal/hepático/efeitos adversos/RENAME de 74 medicamentos.
-  - `PLANTAO`: 12 protocolos de emergência com doses por peso.
-  - `SCORES` (40), `ATB` (31), `VAC` (8), `FLUX` (17), `ECG` (7), `CALCS`/`CALC_ITEMS` (16), `LAB` (12),
-    `ESPECIALIDADES` (47), `CLASS_GROUPS` (59 grupos terapêuticos por regex).
-- Busca: `termSets`/`SYN`/`SYN2` (siglas), `tokMatch`, `matchTerm`, `relScore` (relevância),
-  `gsBuild`/`gsAll`/`globalSearchHtml` (busca universal), fuzzy por `editDist`.
-- Navegação: `switchViewMode(mode)`; abas extras via objeto `REFS` (`makeRef`).
-  No celular há barra de abas inferior (`#tabbar`) e folha "Mais" (`#sheet`).
-- Selo de confiabilidade: `trustLevel`/`trustBadge` ("Fonte oficial", "Revisado pelo autor",
-  "Pendente" quando o texto contém "PENDENTE DE VERIFICAÇÃO").
+## Como o app deve se comportar (decidido pelo autor em 11/11/2026)
+- Acesso: login no aparelho (cada pessoa cria o próprio acesso). Uso: público em geral.
+- Dados pessoais (favoritos, anotações etc.): sincronizam sozinhos entre os aparelhos da mesma conta.
+- Atualização: aviso "Nova versão disponível · Atualizar"; nunca recarrega no meio do uso.
 
-## Regras de conteúdo (obrigatórias)
-- Nunca inventar doses, códigos CID ou referências. Na dúvida: "PENDENTE DE VERIFICAÇÃO".
-- CID somente códigos válidos na CID-10 brasileira (DATASUS) — rodar `ferramentas/validar_cid.py`.
-- Doses pediátricas: preferir SBP, Ministério da Saúde/PCDT, bula Anvisa; citar fonte e ano.
-- Não reintroduzir botões de editar/excluir/novo medicamento.
-- Não usar marca, textos ou layout proprietário de outros apps (ex.: Whitebook).
-- **Nenhuma mudança de layout, design ou CSS pode esconder, remover ou tornar inacessível uma função existente
-  sem aviso explícito ao autor. Antes de entregar qualquer mudança visual, compare com a versão anterior: liste
-  todos os botões, abas, itens de menu, calculadoras e textos legais, e confirme que continuam acessíveis no
-  computador (1366 px) e no celular (390 px).** (Conferido por `testes/regressao_funcoes.ambos.spec.js`.)
+## Decisões técnicas (uma linha cada; o gerente decide e registra aqui)
+- Hospedagem: GitHub Pages, publicado pelo GitHub Actions a cada push na `main` → https://vitorlrocha.github.io/bluebook/
+- Repositório: `vitorlrocha/bluebook` (público); commits com o e-mail privado do GitHub.
+- App: PWA de arquivo único (`dist/index.html`), sem framework e sem dependência externa para o uso clínico.
+- Offline e atualização: service worker + `src/atualiza.js`; versão em `package.json`, publicada em `versao.json`.
+- Banco na nuvem: Firebase (plano gratuito Spark) — Authentication (e-mail/senha e Google) + Cloud Firestore em São Paulo; escolhido porque não pausa por inatividade e o autor já tem conta Google.
+- Nuvem sem SDK: o app fala com o Firebase por chamadas REST (sem biblioteca externa), para continuar em arquivo único.
+- Modelo de dados na nuvem: um documento por usuário (`usuarios/<uid>`), com um campo por registro; menos leituras e gravações (cabe no plano gratuito com uso público).
+- Conflito de sincronização: vale a alteração mais recente de cada registro; anotação editada em dois aparelhos sem internet guarda as duas versões; exclusão é marcada, não apagada.
+- Configuração da nuvem: variáveis de ambiente (`.env` local, fora do git; "Repository variables" no GitHub); só identificadores públicos; regras de acesso em `firestore.rules`.
+- Login: conta do Firebase; o aparelho guarda só o hash da senha para abrir sem internet.
+- Backup no Google Drive: mantido como opcional (pede a permissão do Drive só quando a pessoa liga o backup).
+- Selo das doenças novas: "Literatura · não conferido"; se a ficha tiver PENDENTE DE VERIFICAÇÃO, prevalece "⚠ Pendente" (mais cauteloso).
+- Ampliação do acervo: pipeline mapeador → redator → revisor de fontes → aprovação do autor por lote → integração (`docs/ESTRATEGIA_ACERVO.md`; rascunhos em `curadoria/`).
+- Equipe: agentes excluídos a pedido do autor (17/11/2026); o trabalho é feito direto na sessão, com as mesmas verificações antes de publicar.
 
-## Verificações antes de entregar qualquer mudança
-```bash
-node ferramentas/build.js                     # gera dist/index.html
-node ferramentas/checar_sintaxe.js            # todos os <script> de dist/index.html válidos
-python3 ferramentas/validar_cid.py            # deve imprimir [] (lê dist/index.html)
-node ferramentas/testar_build.js              # contagens e dados iguais aos da v71 (enquanto não houver mudança de conteúdo)
-npm run relatorios                            # regenera PENDENCIAS.md e INCONSISTENCIAS.md (após mudar dados/)
-npx playwright test                           # testes de ponta a ponta (inclui PWA/offline e relatórios em dia)
-python3 ferramentas/test_cid.py dados/cid10-datasus dados/cid_full.json dist/index.html   # se regenerar o CID
-```
-No Windows, use `py` no lugar de `python3`. O git está em
-`%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe` (não está no PATH).
-Para gerar `dados/cid_full.json` a partir dos CSVs: `python3 ferramentas/build_cid.py dados/cid10-datasus dados/cid_full.json`.
+## Regras que não podem ser quebradas
+- Nunca inventar doses, códigos CID ou referências; na dúvida, "PENDENTE DE VERIFICAÇÃO". Não alterar `dados/` sem pedido do autor.
+- Nenhuma mudança visual pode esconder ou remover uma função existente sem aviso explícito ao autor
+  (conferido por `testes/regressao_funcoes.ambos.spec.js`, no computador a 1366 px e no celular a 390 px).
+- Não recriar botões de editar, excluir ou novo medicamento. Não usar marca, texto ou layout de outros apps.
+- Nunca enviar senhas ou chaves secretas ao GitHub. Ficar sempre em planos gratuitos. Não apagar conteúdo nem dados.
+- Não afirmar que algo passou sem executar o teste.
 
-## Pendências conhecidas (sugestões para finalizar)
-1. ~~Separar dados do código~~ (feito na v72).
-2. ~~PWA instalável~~ (feito na v72; testado no Chromium — instalação no iPhone/Safari não testada).
-3. 31 fichas ainda contêm "PENDENTE DE VERIFICAÇÃO": lista completa em `PENDENCIAS.md`
-   (`ferramentas/pendencias.js`). Divergências entre ficha, calculadora pediátrica, plantão e prescrições em
-   `INCONSISTENCIAS.md` (`ferramentas/inconsistencias.js`). Os dois são gerados: corrija o dado (com fonte) e rode
-   `npm run relatorios`; nunca edite os .md à mão nem "corrija" uma divergência sem fonte.
-   `REVISAO_CLINICA.md` (`ferramentas/revisao.js`) junta os dois numa lista de trabalho por prioridade
-   (P1 = pode mostrar dose errada); também é gerado e conferido nos testes.
-4. ~~Testes automatizados (Playwright)~~ (feito na v72). Os problemas conhecidos da v71 (ranking de "AAS",
-   destaque de "Remédios") foram corrigidos na etapa R1; `testes/regressao.spec.js` lista as buscas que mudaram de propósito.
-5. ~~Limpeza de CSS, desempenho e acessibilidade~~ (feito na v72). Resta: listas com 1-2 letras digitadas
-   desenham ~1.800 itens (≈60 ms no computador, ≈370 ms em celular simulado 4× mais lento) — custo de DOM,
-   não do índice; resolver exigiria lista virtualizada ou limite de itens (mudança de interface).
-6. Publicação: hospedar (ex.: GitHub Pages/Netlify) e, se desejado, empacotar para lojas.
+## Verificações antes de publicar
+`node ferramentas/build.js` · `node ferramentas/checar_sintaxe.js` · `py ferramentas/validar_cid.py` (imprime `[]`) ·
+`node ferramentas/testar_build.js` · `npm run relatorios:checar` · `npx playwright test` (computador, celular, iPhone).
+O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`.
+
+## Testes sem travar o computador (decidido pelo autor em 17/11/2026)
+- Pasta do projeto: `C:\Users\vlprl\Projetos\bluebook` (fora do OneDrive: a sincronização de `node_modules` e das
+  gravações dos testes, somada a muitos navegadores, deixava o processador em 100%).
+- No máximo 2 navegadores em paralelo no computador (`workers: 2` no `playwright.config.js`; no GitHub fica o padrão).
+- Rodar só os testes ligados ao que mudou; a bateria completa só antes de publicar. Projeto `iphone` (WebKit) só quando necessário.
+- Gravações (trace) só das falhas (`retain-on-failure`); sem vídeo.
+- Ao terminar qualquer tarefa, encerrar tudo o que foi aberto: testes, `servir.js` e navegadores.
+- Não usar agentes (subagentes) sem pedido do autor.
+
+## Estado atual (17/11/2026)
+- No ar: versão 0.74.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
+  busca única em todo o app, acervo ampliado e doses pediátricas conferidas com bulas.
+- Em andamento: banco na nuvem (Firebase) com sincronização automática; ainda não publicado.
+  - Firebase configurado no projeto `nimble-lead-514122-e4`: login por e-mail/senha e Google ativados, domínio
+    `vitorlrocha.github.io` autorizado, Firestore criado em `southamerica-east1` (São Paulo), modo de produção
+    (tudo negado até publicar `firestore.rules`), app Web "Bluebook" registrado.
+  - `src/nuvem.js` pronto e testado. Falta: publicar as regras definitivas no console;
+    cadastrar `BB_FIREBASE_API_KEY` e `BB_FIREBASE_PROJECT_ID` como "Repository variables" no GitHub e passar
+    essas variáveis ao passo de build do workflow (a chave é colada pelo autor: a ferramenta do navegador não a lê).
+- Pendente do autor: revisão clínica (`REVISAO_CLINICA.md`, propostas em `docs/PROPOSTAS_P1.md`), teste num iPhone real.
+- Acervo ampliado (13/11/2026): +149 doenças dos lotes 01–17 revisados (campo `orig`), integradas por `ferramentas/integrar_lote.js`.
+- Calculadora pediátrica (17/11/2026): 96 de 97 vias com conferência registrada (`rev`); 11 corrigidas com bula
+  (cefaclor, bromoprida gotas/injetável, hioscina, cetoprofeno injetável sem dose pediátrica, dexclorfeniramina por idade,
+  domperidona, pirvínio, racecadotrila, espironolactona). Falta captopril (fonte primária não aberta).
+- Contagens: 3.375 doenças (3.226 originais + 149 novas) · 1.851 medicamentos · CID-10 com 2.045 categorias e 12.451 subcategorias.

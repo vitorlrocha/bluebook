@@ -14,11 +14,12 @@ test.describe('Relatórios gerados a partir de dados/', () => {
     });
   }
   test('PENDENCIAS.md encontra toda marca "PENDENTE DE VERIFICAÇÃO" dos dados', () => {
-    const { coletar } = require(path.join(raiz, 'ferramentas', 'pendencias.js'));
+    // mesma regra do relatório: cada marca conta (ALVO_G é a expressão usada por ferramentas/pendencias.js)
+    const { coletar, ALVO_G } = require(path.join(raiz, 'ferramentas', 'pendencias.js'));
     const L = require(path.join(raiz, 'ferramentas', 'lib_dados.js'));
     const fs = require('fs');
     let total = 0;
-    for (const cfg of L.VARS) total += (fs.readFileSync(path.join(raiz, 'dados', cfg.arq), 'utf8').match(/PENDENTE DE VERIFICA[ÇC][ÃA]O/gi) || []).length;
+    for (const cfg of L.VARS) total += (fs.readFileSync(path.join(raiz, 'dados', cfg.arq), 'utf8').match(new RegExp(ALVO_G.source, 'gi')) || []).length;
     expect(coletar().length).toBe(total);
   });
   test('leitura de doses do texto (mg/kg, máximos) usada no relatório', () => {

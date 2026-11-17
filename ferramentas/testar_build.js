@@ -39,12 +39,30 @@ const cnt = d => ({
 });
 const esperado = { doencas: 3226, medicamentos: 1851, cidCategorias: 2045, cidSubcategorias: 12451 };
 const cd = cnt(b);
-for (const k of Object.keys(esperado)) ok(cd[k] === esperado[k], `${k}: dist ${cd[k]} (esperado ${esperado[k]}, original ${cnt(a)[k]})`);
+// Doenças: desde a v74 o acervo cresce por lotes revisados (curadoria/, ferramentas/integrar_lote.js). As 3.226
+// originais têm de continuar intactas e na mesma ordem; as novas só podem ser ACRESCENTADAS depois delas.
+const novas = cd.doencas - esperado.doencas;
+for (const k of Object.keys(esperado)) {
+  if (k === 'doencas') ok(cd[k] >= esperado[k], `doencas: dist ${cd[k]} (originais ${esperado[k]} + ${novas} novas de lotes revisados)`);
+  else ok(cd[k] === esperado[k], `${k}: dist ${cd[k]} (esperado ${esperado[k]}, original ${cnt(a)[k]})`);
+}
 
 // 2. Dados
 for (const cfg of L.VARS) {
   let igual = true;
-  try { assert.deepStrictEqual(b.vals[cfg.v].valor, a.vals[cfg.v].valor); } catch (e) { igual = false; }
+  const vb = cfg.v === 'DISEASES' ? b.vals[cfg.v].valor.slice(0, a.vals[cfg.v].valor.length) : b.vals[cfg.v].valor;
+  try { assert.deepStrictEqual(vb, a.vals[cfg.v].valor); } catch (e) { igual = false; }
+  // Doses pediátricas: desde 11/2026 a conferência com bulas pode corrigir uma entrada. Vale se os medicamentos
+  // continuam os mesmos e na mesma ordem e se TODA via de cada entrada alterada traz o registro da conferência (rev).
+  if (!igual && cfg.v === 'PED_DB') {
+    const va = a.vals[cfg.v].valor;
+    const mud = vb.filter((e, i) => { try { assert.deepStrictEqual(e, va[i]); return false; } catch (x) { return true; } });
+    const mesmos = vb.length === va.length && vb.every((e, i) => e.k === va[i].k);
+    const semRev = mud.filter((e) => e.v.some((r) => !/conferid/i.test(r.rev || '')));
+    igual = mesmos && !semRev.length;
+    console.log(`INFO  PED_DB: ${mud.length} entrada(s) corrigidas por conferência com bula` +
+      (semRev.length ? `; SEM registro de conferência: ${semRev.map((e) => e.n).join(', ')}` : '') + (mesmos ? '' : '; lista de medicamentos mudou'));
+  }
   const bytes = a.vals[cfg.v].texto === b.vals[cfg.v].texto;
   const n = Array.isArray(a.vals[cfg.v].valor) ? a.vals[cfg.v].valor.length : Object.keys(a.vals[cfg.v].valor).length;
   ok(igual, `${cfg.v.padEnd(15)} ${String(n).padStart(5)} itens, mesmo valor${bytes ? ' (texto idêntico)' : ' (só formatação difere)'}`);

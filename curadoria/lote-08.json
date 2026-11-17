@@ -1,0 +1,104 @@
+{
+  "lote": "08",
+  "criadoEm": "2026-11-13",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Acidente por himenópteros (abelhas, vespas e formigas): envenenamento e anafilaxia",
+        "introducao": "Acidente por inoculação de veneno pelo ferrão de insetos da ordem Hymenoptera: abelhas (Apidae, sobretudo africanizadas), vespas e marimbondos (Vespidae) e formigas (Formicidae, como a formiga-de-fogo). Pode causar reação local, reação tóxica sistêmica por múltiplas picadas e reação alérgica sistêmica mediada por IgE, que pode ser fatal com uma única picada. A abelha deixa o ferrão e inocula mais veneno em uma picada (50 a 140 mg) que a vespa (2 a 17 mg por picada, que pode picar várias vezes).",
+        "criterios": "Diagnóstico clínico-epidemiológico: história da picada, inseto envolvido, número e local das picadas (ferrões na pele facilitam contar nas abelhas). Reação local: dor, eritema, edema por algumas horas. Tóxica sistêmica: em adultos geralmente mais de 100 picadas por abelhas e algumas dezenas em crianças; prurido, rubor e urticária, taquicardia, sudorese, hipertermia, hipotensão, vômitos, cólicas e broncoespasmo; rabdomiólise, hemólise e lesão renal. Síndrome de envenenamento: em geral mais de 500 picadas. Alérgica sistêmica (graus de Mueller): I com urticária generalizada, prurido, mal-estar e ansiedade; II com um desses mais dois ou mais de angioedema, broncoconstrição leve, náuseas, vômitos, diarreia, dor abdominal e tontura; III quando há dispneia, sibilos ou estridor (além de disfagia, disartria, rouquidão, fraqueza, confusão); IV com hipotensão, colapso, perda de consciência, cianose. Formigas de fogo: pápula e pústula estéril local; anafilaxia em sensibilizados.",
+        "exames": "Sem exame de rotina para confirmar o veneno. Conforme a gravidade, nos pacientes com centenas de picadas: CK total, LDH, aldolase, ALT e AST (intensidade da rabdomiólise); hemoglobina, haptoglobina sérica e bilirrubinas (intensidade da hemólise).",
+        "tratamento": "Reação local: gelo, analgésico oral e anti-histamínico local; antibiótico só se houver infecção secundária. Picada em boca ou garganta exige observação médica. Anafilaxia: adrenalina intramuscular na coxa o mais cedo possível, com transporte imediato à emergência. Envenenamento maciço: suporte, avaliar a intensidade da rabdomiólise e da hemólise, detectar precocemente a lesão renal aguda e tratar as complicações (necrose hepática, coagulopatia, arritmias). Não há soro para himenópteros disponível (antiapílico em fase de estudo clínico).",
+        "conduta": "Retirar o paciente do local. Identificar sinais de anafilaxia (cutâneos, respiratórios, gastrointestinais, cardiovasculares) e aplicar adrenalina IM de imediato, repetindo se persistirem os sintomas. Múltiplas picadas (especialmente crianças, grupo de maior risco): avaliar rabdomiólise e hemólise, detectar precocemente a lesão renal aguda e vigiar complicações cardiovasculares; quando as manifestações não forem evidentes à admissão, observar no mínimo 6 horas (orientação geral do guia para acidentes por animais peçonhentos). Em quem teve anafilaxia, orientar encaminhamento para avaliação alergológica (ver ficha Alergia a veneno de himenópteros). Trabalhadores expostos (apicultores, jardineiros, construção civil, florestais) merecem orientação ocupacional.",
+        "prescricao": "1) Anafilaxia (qualquer causa): adrenalina (epinefrina) 1:1000 (1 mg/mL) IM no terço médio da coxa anterolateral, 0,01 mg/kg, máximo 0,5 mg no adulto e 0,3 mg na criança; repetir a cada 5 a 15 minutos se sintomas persistentes ou recorrentes (a maioria precisa de 1 ou 2 doses).\n2) Reação local: gelo local, analgésico oral e anti-histamínico local (dose e fármaco: PENDENTE DE VERIFICAÇÃO, não especificados na fonte).\n3) Envenenamento maciço: suporte clínico e manejo da rabdomiólise, hemólise e lesão renal aguda conforme a gravidade (sem esquema de hidratação definido na fonte: PENDENTE DE VERIFICAÇÃO).\n4) Soroterapia: não disponível.\nBase: Ministério da Saúde, Guia de Vigilância em Saúde, 6ª ed., vol. 3, cap. 11, Acidente por himenópteros (2023)",
+        "cid": "T63.4",
+        "esp": "Medicina de Emergência"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia de Vigilância em Saúde, 6ª edição, volume 3 (capítulo 11: Acidente por himenópteros)",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde e Ambiente",
+          "ano": "2023",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6ed_v3.pdf",
+          "usadoPara": "Agentes, quadro tóxico e alérgico, classificação, diagnóstico, tratamento e dose de adrenalina"
+        }
+      ],
+      "observacoes": "Revisado: dose de adrenalina conferida no cap. 11 do vol. 3 (0,01 mg/kg, 1:1000, máx. 0,5 mg adulto e 0,3 mg criança, repetir a cada 5-15 min). Exames sem base no capítulo (função renal, eletrólitos, urina, ECG, gasometria) retirados; 'raspar ferrões' e 'hidratar/monitorar diurese' retirados por não constarem da fonte."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Febre maculosa por Rickettsia parkeri (Mata Atlântica)",
+        "introducao": "Rickettsiose transmitida por carrapato (Amblyomma ovale) causada por Rickettsia parkeri cepa Mata Atlântica, presente nas regiões Sul, Sudeste e parte do Nordeste. Doença febril aguda, autolimitada, leve a moderada, sem casos graves ou letais descritos, ao contrário da febre maculosa brasileira por R. rickettsii. Incubação de 4 a 11 dias; o carrapato precisa permanecer fixado por menos de 8 horas para transmitir.",
+        "criterios": "Febre com escara de inoculação (úlcera indolor de 0,5 a 2 cm, centro crostoso-necrótico e halo eritematoso, no local da picada), linfadenopatia regional, exantema macular, maculopapular ou maculovesicular em tronco e membros, mal-estar, cefaleia, mialgia e artralgia; sintomas respiratórios e gastrointestinais são raros. Contexto: picada de carrapato, contato com animais ou área de transmissão nos 15 dias anteriores. Diferenciar da febre maculosa brasileira (R. rickettsii), que tem evolução potencialmente grave, com exantema que evolui para petequial/purpúrico.",
+        "exames": "Sorologia por imunofluorescência indireta (padrão-ouro) em amostras pareadas: 1ª nos primeiros dias e 2ª 14 a 21 dias depois; aumento de 4 vezes no título confirma; considerar 3ª amostra se tratamento precoce. IgM tem reação cruzada (dengue, leptospirose). Imuno-histoquímica ou PCR de biópsia de lesão de pele (amostras para isolamento de preferência antes do antibiótico), isolamento em biossegurança nível 3. Hemograma (plaquetopenia, anemia), CK, LDH, transaminases, bilirrubinas. Diferenciais: dengue, leptospirose, doenças exantemáticas, febre maculosa brasileira, erliquiose.",
+        "tratamento": "Doxiciclina é o antimicrobiano de escolha em todos os casos suspeitos de rickettsiose, em qualquer faixa etária e gravidade; cloranfenicol é a alternativa se a doxiciclina não puder ser usada. Iniciar logo na suspeita, sem esperar a confirmação. Duração rotineira de 7 dias e por 3 dias após o fim da febre. Sem antibiótico profilático após picada de carrapato em quem está assintomático.",
+        "conduta": "Suspeita clínica com escara ou exantema e exposição a carrapato: iniciar doxiciclina e coletar a sorologia pareada. Remover o carrapato precocemente e orientar prevenção (roupas claras, inspeção da pele após exposição em mata). O guia descreve a forma por R. parkeri como leve a moderada, sem complicações nem letalidade; se surgirem sinais de gravidade (exantema petequial, alteração neurológica, hemorragia, insuficiência renal ou respiratória), reavaliar o diagnóstico (possível febre maculosa brasileira por R. rickettsii) e conduzir como tal, em internação. Notificar o caso suspeito de febre maculosa ao serviço de vigilância (notificação compulsória).",
+        "prescricao": "1) Adulto: doxiciclina 100 mg a cada 12 horas, VO ou EV conforme a gravidade, mantida por 3 dias após o fim da febre (rotina de 7 dias).\n2) Criança com menos de 45 kg: doxiciclina 2,2 mg/kg a cada 12 horas, VO ou EV conforme a gravidade, por 3 dias após o fim da febre; a doxiciclina deve ser priorizada.\n3) Alternativa se a doxiciclina não puder ser usada (cloranfenicol): adulto 500 mg a cada 6 horas VO, por 3 dias após o fim da febre; nos casos graves, 1 g EV a cada 6 horas até a recuperação da consciência e melhora clínica, mantendo depois por mais de 7 dias VO, 500 mg a cada 6 horas. Criança: 50 a 100 mg/kg/dia divididos de 6 em 6 horas, VO ou EV, até a recuperação da consciência e melhora clínica, no máximo 2 g/dia.\n4) Não usar antibiótico profilático em picada de carrapato em pessoa assintomática.\nBase: Ministério da Saúde, Guia de Vigilância em Saúde, 6ª ed., vol. 3, cap. 10, Febre maculosa brasileira e outras rickettsioses, Quadro 2 (2023)",
+        "cid": "A77.9",
+        "esp": "Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia de Vigilância em Saúde, 6ª edição, volume 3 (capítulo 10: Febre maculosa brasileira e outras rickettsioses)",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde e Ambiente",
+          "ano": "2023",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6ed_v3.pdf",
+          "usadoPara": "Quadro clínico da R. parkeri, diagnóstico laboratorial e esquema antimicrobiano"
+        }
+      ],
+      "observacoes": "Revisado: Quadro 2 do cap. 10 conferido (texto em ordem de leitura): doxiciclina adulto 100 mg 12/12 h; criança <45 kg 2,2 mg/kg 12/12 h; cloranfenicol adulto 500 mg 6/6 h VO (grave 1 g EV 6/6 h, depois >7 dias VO 500 mg 6/6 h) e criança 50-100 mg/kg/dia 6/6 h, máx. 2 g/dia. Acervo já tem 'Febre maculosa brasileira' e 'Febre maculosa' (só R. rickettsii, sem R. parkeri): a ficha é distinta (escara, evolução branda, A. ovale)."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Leishmaniose mucosa (tegumentar)",
+        "introducao": "Forma da leishmaniose tegumentar americana caracterizada por lesões destrutivas da mucosa das vias aéreas superiores, principalmente nasal, geralmente associada à infecção por Leishmania braziliensis, muitas vezes tardia e após lesão cutânea prévia (cicatrizes cutâneas). Causa deformidade da face e, por infecção secundária e aspiração, broncopneumonia, principal causa de óbito na forma mucosa.",
+        "criterios": "Suspeita: lesão de mucosa de vias aéreas superiores, principalmente nasal, em residente ou exposto a área de transmissão; cicatriz cutânea prévia reforça. Confirmação clínico-laboratorial: parasito em exame direto ou indireto, ou intradermorreação de Montenegro positiva, em paciente de área de transmissão. Critério clínico-epidemiológico quando não há acesso ao laboratório. Diferenciais: paracoccidioidomicose, carcinoma epidermoide e basocelular, linfomas, rinosporidiose, entomoftoromicose, hanseníase virchowiana, sífilis terciária, perfuração septal por trauma ou drogas, rinite alérgica, sinusite, sarcoidose, granulomatose de Wegener.",
+        "exames": "Parasitológico (escarificação da borda, biópsia com impressão em lâmina, punção aspirativa), cultivo in vitro com identificação da espécie, PCR, intradermorreação de Montenegro e histopatologia (dermatite granulomatosa difusa). Recomendada a confirmação parasitológica antes do tratamento, sobretudo em evolução atípica ou má resposta prévia. Avaliação otorrinolaringológica com nasofibroscopia para extensão e seguimento. Avaliar e monitorar as funções renal, cardíaca e hepática (toxicidade dos fármacos); oferecer sorologia para HIV a todo paciente com LT.",
+        "tratamento": "Tratar preferencialmente em centro de referência com avaliação otorrinolaringológica. Acima de 12 anos: antimoniato de meglumina associado à pentoxifilina, sempre que possível, como primeira escolha. Acima de 50 anos, com insuficiência renal, cardíaca ou hepática, transplantado renal ou gestante (quando o tratamento não puder esperar o parto): anfotericina B lipossomal como primeira escolha. Miltefosina oral: evidência insuficiente na forma mucosa, só com especialista, e proibida na gestação. Doses e duração não constam do guia (remetem ao Manual de Vigilância da Leishmaniose Tegumentar).",
+        "conduta": "Encaminhar ao centro de referência. Avaliar e monitorar as funções renal, cardíaca e hepática antes e durante o tratamento (toxicidade dos fármacos). Controle de complicações: infecção secundária, dificuldade de deglutição e desnutrição, obstrução laríngea (pode exigir traqueostomia). Cura clínica: regressão de todos os sinais, comprovada por exame otorrinolaringológico até 6 meses após o término. Seguimento mensal por 3 meses (6 meses se coinfecção com HIV) e depois a cada 2 meses até 12 meses. Falha ou recidiva: segundo esquema. Atentar para perda auditiva neurossensorial pelo antimoniato. Notificar o caso confirmado.",
+        "prescricao": "1) Doses e esquemas: consultar o Manual de Vigilância da Leishmaniose Tegumentar (MS, 2017) e a ficha Leishmaniose tegumentar. Primeira escolha (> 12 anos): antimoniato de meglumina associado a pentoxifilina; dose e duração: PENDENTE DE VERIFICAÇÃO (a fonte remete ao Manual de Vigilância da Leishmaniose Tegumentar, 2017).\n2) Idade > 50 anos, insuficiência renal, cardíaca ou hepática, transplante renal ou gestação sem possibilidade de adiar: anfotericina B lipossomal; dose: PENDENTE DE VERIFICAÇÃO.\n3) Miltefosina: não recomendada de rotina na forma mucosa (somente com especialista); contraindicada na gestação, com exclusão prévia de gravidez e dois métodos contraceptivos, um de barreira, do início até 4 meses após o término.\n4) Cura: regressão dos sinais, confirmada por exame otorrinolaringológico até 6 meses.\nBase: Ministério da Saúde, Guia de Vigilância em Saúde, 6ª ed. revisada, vol. 2, cap. 8, Leishmaniose tegumentar americana (2024)",
+        "cid": "B55.2",
+        "esp": "Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia de Vigilância em Saúde, 6ª edição, volume 2 (capítulo 8: Leishmaniose tegumentar americana)",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde e Ambiente",
+          "ano": "2024",
+          "url": "https://saude.sp.gov.br/resources/cve-centro-de-vigilancia-epidemiologica/publicacoes/guia-de-vigilancia-em-saude-volume-2-6a-edicao.pdf",
+          "usadoPara": "Complicações, diagnóstico, diferenciais, escolha terapêutica, critérios de cura e seguimento"
+        }
+      ],
+      "observacoes": "Já existe Leishmaniose tegumentar (forma geral); esta ficha detalha a forma mucosa. O guia não traz doses, portanto marcadas PENDENTE; sugere-se completar a partir do Manual de Vigilância da Leishmaniose Tegumentar (2017) em lote futuro."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Doenças e agravos já presentes no acervo",
+      "motivo": "Já existe: meningite/doença meningocócica, influenza, coqueluche, difteria, poliomielite, caxumba, sarampo, rubéola/SRC, tétano, varicela/herpes-zóster, botulismo, cólera, DDA, rotavírus, febre tifoide, toxoplasmose, HIV, hepatites, sífilis, corrimento uretral, hanseníase, tuberculose, MNT, micoses endêmicas (exceto coccidioidomicose), arboviroses, Chagas, LV, malária, esquistossomose, ascaridíase, ancilostomíase, estrongiloidíase, tracoma, oncocercose, filariose, febre maculosa brasileira, hantavirose, leptospirose, peste, raiva, acidentes ofídico, escorpiônico, araneísmo e Lonomia, e todos os agravos do trabalho (acidente com material biológico, intoxicação exógena, dermatoses, PAIR, LER/DORT, pneumoconioses, violências, transtornos mentais)."
+    },
+    {
+      "tema": "Doença de Chagas crônica digestiva (megaesôfago/megacólon) e Chagas congênita",
+      "motivo": "O guia trata apenas a definição e a vigilância; sem conduta terapêutica detalhada para escrever com segurança. Chagas aguda e cardíaca já existem."
+    },
+    {
+      "tema": "Vigilância das coberturas vacinais, do óbito, de anomalias, ambiental, do trabalhador, das síndromes gripais e farmacovigilância (cap. 1 do vol. 1)",
+      "motivo": "Processos de vigilância, não condições clínicas para ficha."
+    },
+    {
+      "tema": "Acidente de trabalho (geral)",
+      "motivo": "Tema de vigilância, não doença; fichas específicas já existem."
+    },
+    {
+      "tema": "Coccidioidomicose (GVS 6ª ed. rev., vol. 2)",
+      "motivo": "REPROVADA como duplicata de Coccidioidomicose (lote-02, aprovada). Doses conferidas no GVS 2024, pp. 641-642 e estão corretas; como são mais recentes que as do guia de bolso 2013 (itraconazol 400 mg/dia, anfotericina lipídica 5 mg/kg/dia), foram aplicadas na ficha do lote-02."
+    },
+    {
+      "tema": "Tricuríase (Trichuris trichiura)",
+      "motivo": "REPROVADA: dose PENDENTE (guia só cita albendazol 400 mg, sem número de doses); a ficha existente 'Verminose intestinal (parasitose)' e 'Parasitoses intestinais' já cobrem tricuríase com albendazol/mebendazol. Não acrescenta conduta clínica útil."
+    }
+  ]
+}

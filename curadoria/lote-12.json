@@ -1,0 +1,245 @@
+{
+  "lote": "12",
+  "criadoEm": "2026-11-13",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Hanseníase indeterminada",
+        "introducao": "Forma inicial e paucibacilar da hanseníase, pela qual todo doente passa, perceptível ou não. Acomete sobretudo crianças menores de 10 anos e, mais raramente, adolescentes e adultos contatos de doente não diagnosticado. Em geral a fonte de infecção, quase sempre um caso multibacilar sem diagnóstico, ainda convive com o paciente.",
+        "criterios": "Mancha única, mais clara que a pele vizinha, plana (sem alteração de relevo), de bordas mal delimitadas e seca (não sua, 'não pega poeira'). Há hipoestesia ou anestesia térmica e/ou dolorosa; a sensibilidade tátil costuma estar preservada. Sem espessamento de troncos nervosos e sem incapacidade. Prova da histamina incompleta; baciloscopia negativa; biópsia muitas vezes só mostra infiltrado inflamatório inespecífico. Exame laboratorial negativo NÃO afasta o diagnóstico clínico. Atenção: manchas hipocrômicas grandes e dispersas, em mais de um membro, com formigamento ou câimbras e nervos espessados sugerem hanseníase dimorfa macular (multibacilar).",
+        "exames": "O diagnóstico é essencialmente clínico (exame dermatoneurológico com testes de sensibilidade térmica, dolorosa e tátil). Baciloscopia de raspado intradérmico: negativa nas formas paucibacilares; se positiva, reclassificar como multibacilar. Biópsia raramente necessária. Prova da histamina (quando disponível) ajuda em lesões hipocrômicas, principalmente em crianças que não colaboram com o teste. Avaliar o grau de incapacidade física e o escore OMP ao diagnóstico.",
+        "tratamento": "Poliquimioterapia única (PQT-U, três fármacos) por 6 meses (6 doses supervisionadas em até 9 meses), iniciada já na primeira consulta após o diagnóstico, salvo contraindicação (alergia a sulfa ou rifampicina). Em dúvida entre PB e MB, sobretudo em adultos, tratar como MB. Notificar, examinar os contatos e orientar autocuidado.",
+        "conduta": "Confirmar a perda de sensibilidade na mancha e examinar nervos periféricos. Se a dúvida diagnóstica persistir, classificar como caso suspeito, explicar os sinais ao paciente e encaminhar à referência (não substituir o exame clínico por baciloscopia ou biópsia). Em manchas múltiplas hipocrômicas grandes, tratar como dimorfa (MB). Iniciar PQT, agendar retorno mensal supervisionado, avaliar neurologicamente no diagnóstico, nas reações e na alta, e investigar contatos (BCG para contatos sem sinais de doença). Alta por cura com 6 doses supervisionadas em até 9 meses.",
+        "prescricao": "1) PQT-U, 6 meses (PCDT 2022): dose mensal supervisionada de rifampicina 600 mg + clofazimina 300 mg + dapsona 100 mg; em casa, dapsona 100 mg + clofazimina 50 mg por dia, 2 horas após o almoço. Se a dapsona for suspensa por reação adversa: rifampicina 600 mg + clofazimina 300 mg + ofloxacino 400 mg (ou minociclina 100 mg) em dose mensal supervisionada, e clofazimina 50 mg + ofloxacino 400 mg (ou minociclina 100 mg) por dia em casa, por 6 meses.\n2) Crianças: usar o peso, não a idade: > 50 kg esquema do adulto; 30 a 50 kg PQT-U infantil; < 30 kg ajustar por mg/kg (ver ficha de hanseníase em menores de 15 anos).\n3) Mulheres em idade fértil: método de barreira por 7 dias após a rifampicina supervisionada (ou alongar a cartela do anticoncepcional para 28 dias, coincidindo com a cartela da PQT).\nBase: Ministério da Saúde, Guia Prático sobre a Hanseníase (SVS, 2017); PCDT de Hanseníase (Conitec, 2022), que prevalece onde diferem.",
+        "cid": "A30.0",
+        "esp": "Dermatologia;Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia Prático sobre a Hanseníase",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde",
+          "ano": "2017",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_pratico_hanseniase.pdf",
+          "usadoPara": "Classificação de Madri, formas e critérios clínicos, baciloscopia/biópsia, esquema PQT-PB, conduta em dúvida diagnóstica, precauções com rifampicina (cap. 3.1.1, 5, 6, 8)"
+        },
+        {
+          "titulo": "Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase",
+          "instituicao": "Ministério da Saúde/Conitec",
+          "ano": "2022",
+          "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/20220818_pcdt_hanseniase.pdf/view",
+          "usadoPara": "Esquema PQT-U (quadro 1), esquemas de segunda linha (quadro 5), seguimento, imunoprofilaxia de contatos (itens 10.1, 10.2.3, 13, 14); prevalece sobre o Guia 2017"
+        }
+      ],
+      "observacoes": "Dose pediátrica por mg/kg remetida à ficha de menores de 15 anos. Não há na fonte tempo específico de retorno além do mensal supervisionado."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Hanseníase tuberculóide",
+        "introducao": "Forma paucibacilar em que o sistema imune consegue destruir os bacilos; incubação em torno de 5 anos. Pode acometer crianças, inclusive lactentes, nos quais se manifesta como nódulo totalmente anestésico na face ou no tronco (hanseníase nodular da infância).",
+        "criterios": "Placa (mancha elevada) totalmente anestésica, ou placa de bordas elevadas, bem delimitadas e centro claro (anular). Menos frequentemente, nervo único espessado com perda total de sensibilidade no seu território, com ou sem alteração de função motora, de forma localizada. Baciloscopia negativa; biópsia mostra granuloma tuberculóide (epitelioide) que destrói ramos nervosos pequenos, quase sempre sem bacilos, e não confirma sozinha o diagnóstico.",
+        "exames": "Quase sempre clínico: a perda total de sensibilidade na lesão basta. Baciloscopia negativa (positiva reclassifica como MB). Biópsia só quando imprescindível, sempre correlacionada com a clínica. Avaliação neurológica simplificada, grau de incapacidade física e escore OMP ao diagnóstico.",
+        "tratamento": "PQT-U (PB) por 6 meses (doses abaixo), com monitorização neural, prevenção de incapacidades e vigilância de reações hansênicas durante e após o tratamento. Nervo espessado doloroso ou perda de função motora nova: tratar como neurite/reação e encaminhar.",
+        "conduta": "Testar sensibilidade térmica, dolorosa e tátil na lesão e comparar com pele normal; palpar nervos (ulnar, fibular comum, tibial, auricular, radial cutâneo, facial) e testar função motora. Em criança, avaliar no colo da mãe, demonstrar o teste antes e não exibir a agulha; na impossibilidade, usar prova da histamina quando disponível. Iniciar PQT-U (PB), notificar, examinar contatos e agendar retorno mensal. Em abscesso de nervo, dor neural intensa ou perda de função, encaminhar à referência.",
+        "prescricao": "1) PQT-U (PB) por 6 meses (PCDT 2022): dose mensal supervisionada de rifampicina 600 mg + clofazimina 300 mg + dapsona 100 mg; em casa, dapsona 100 mg + clofazimina 50 mg por dia. Se a dapsona for suspensa por reação adversa: rifampicina 600 mg + clofazimina 300 mg + ofloxacino 400 mg (ou minociclina 100 mg) em dose mensal supervisionada, e clofazimina 50 mg + ofloxacino 400 mg (ou minociclina 100 mg) por dia em casa, por 6 meses.\n2) Peso < 30 kg: ajustar por mg/kg (ver ficha de menores de 15 anos); 30-50 kg: PQT-U infantil; > 50 kg: esquema do adulto.\n3) Prevenção de incapacidades: autoinspeção diária, proteção de olhos, mãos e pés.\nBase: Ministério da Saúde, Guia Prático sobre a Hanseníase (SVS, 2017); PCDT de Hanseníase (Conitec, 2022), que prevalece onde diferem.",
+        "cid": "A30.1",
+        "esp": "Dermatologia;Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia Prático sobre a Hanseníase",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde",
+          "ano": "2017",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_pratico_hanseniase.pdf",
+          "usadoPara": "Descrição clínica da forma tuberculóide e da hanseníase nodular da infância, achados de baciloscopia/biópsia, abordagem da criança, esquema PQT-PB (cap. 3.1.2, 4.2, 5, 8)"
+        },
+        {
+          "titulo": "Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase",
+          "instituicao": "Ministério da Saúde/Conitec",
+          "ano": "2022",
+          "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/20220818_pcdt_hanseniase.pdf/view",
+          "usadoPara": "Esquema PQT-U (quadro 1), esquemas de segunda linha (quadro 5), seguimento, imunoprofilaxia de contatos (itens 10.1, 10.2.3, 13, 14); prevalece sobre o Guia 2017"
+        }
+      ],
+      "observacoes": "A CID A30.2 (tuberculóide borderline) não foi usada: a fonte adota a classificação de Madri. Tratamento da neurite foi remetido às fichas de reações hansênicas já existentes no acervo."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Hanseníase dimorfa",
+        "introducao": "Forma multibacilar e a mais comum (mais de 70% dos casos). Incubação longa (cerca de 10 anos ou mais) pela multiplicação lenta do bacilo. Frequente comprometimento assimétrico de nervos periféricos; pode surgir de modo agudo, com ou sem dor neural, e é a forma em que as reações imunológicas são comuns após o início ou o fim do tratamento.",
+        "criterios": "Várias manchas avermelhadas ou esbranquiçadas de bordas elevadas e mal delimitadas na periferia, ou múltiplas lesões bem delimitadas semelhantes à tuberculóide, porém de borda externa esmaecida; aspecto 'foveolar' (centro poupado). Perda parcial ou total de sensibilidade, com diminuição de sudorese e da resposta à histamina. Pode haver poucas lesões (menos de 5) de aspecto foveolar, ou manchas hipocrômicas grandes em dimídios/membros distintos (dimorfa hipocromiante), que também se classificam como MB. Espessamento nervoso assimétrico, formigamento e câimbras.",
+        "exames": "Baciloscopia da borda infiltrada das lesões (não de lóbulos e cotovelos quando há lesão) costuma ser positiva; negativa não exclui e não muda a classificação MB se a clínica for dimorfa. Biópsia: infiltrado linfo-histiocitário, de inespecífico a granulomas tuberculóides; bacilos frequentes em nervos dérmicos. Resultado negativo não exclui; a coloração de Faraco-Fite reduz falso-negativos. A clínica é soberana. Avaliação neurológica simplificada, GIF e escore OMP ao diagnóstico.",
+        "tratamento": "PQT-U (MB) por 12 meses. Vigiar e tratar precocemente reações hansênicas e neurites, que são a principal causa de lesão neural e incapacidade. Prevenção de incapacidades em todos.",
+        "conduta": "Examinar pele e nervos (palpação sistemática do crânio aos pés), confirmar alteração de sensibilidade e classificar como MB. Iniciar PQT-MB já na primeira consulta, orientar sobre urina avermelhada pela rifampicina e pigmentação por clofazimina, e avaliar hemograma/função hepática e renal se houver sintomas de intolerância à dapsona. Retorno mensal supervisionado; alta com 12 doses em até 18 meses. Sem melhora clínica após 12 doses: reavaliar contatos em busca de fonte não diagnosticada e encaminhar à referência para investigar resistência do M. leprae (PCDT 2022, item 11.2). O PCDT não autoriza prolongar a PQT-U além de 12 meses; novo ciclo com esquema de segunda linha só com resistência comprovada.",
+        "prescricao": "1) PQT-MB por 12 meses: dose mensal supervisionada de rifampicina 600 mg + dapsona 100 mg + clofazimina 300 mg; em casa, dapsona 100 mg/dia + clofazimina 50 mg/dia (2 h após o almoço).\n2) Se a dapsona for suspensa por reação adversa (PCDT 2022, quadro 5): rifampicina 600 mg + clofazimina 300 mg + ofloxacino 400 mg (ou minociclina 100 mg) em dose mensal supervisionada, e clofazimina 50 mg + ofloxacino 400 mg (ou minociclina 100 mg) por dia em casa, por 12 meses.\n3) Náuseas: metoclopramida 1 h antes. Dor epigástrica: omeprazol, ranitidina ou cimetidina pela manhã.\n4) Crianças: peso > 50 kg esquema do adulto; 30-50 kg PQT-U infantil; < 30 kg ajustar por mg/kg.\nBase: Ministério da Saúde, Guia Prático sobre a Hanseníase (SVS, 2017); PCDT de Hanseníase (Conitec, 2022), que prevalece onde diferem.",
+        "cid": "A30.3",
+        "esp": "Dermatologia;Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia Prático sobre a Hanseníase",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde",
+          "ano": "2017",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_pratico_hanseniase.pdf",
+          "usadoPara": "Formas clínicas, classificação PB/MB, baciloscopia e histopatologia, esquema PQT-MB e substituições, conduta após 12 doses (cap. 3.1.3, 5, 6, 8, 9)"
+        },
+        {
+          "titulo": "Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase",
+          "instituicao": "Ministério da Saúde/Conitec",
+          "ano": "2022",
+          "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/20220818_pcdt_hanseniase.pdf/view",
+          "usadoPara": "Esquema PQT-U (quadro 1), esquemas de segunda linha (quadro 5), seguimento, imunoprofilaxia de contatos (itens 10.1, 10.2.3, 13, 14); prevalece sobre o Guia 2017"
+        }
+      ],
+      "observacoes": "A fonte não detalha doses pediátricas MB além do Quadro 4 (mg/kg), que está na ficha de menores de 15 anos."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Hanseníase em menores de 15 anos",
+        "introducao": "Hanseníase em criança e adolescente indica transmissão recente e foco ativo próximo (em geral adulto multibacilar não diagnosticado). Pode ser indeterminada, tuberculóide (inclusive nodular da infância) ou, menos comum, dimorfa. O diagnóstico é clínico e deve ser mais cuidadosamente documentado, com protocolo específico de investigação.",
+        "criterios": "Mancha hipocrômica ou placa com alteração de sensibilidade, nódulo anestésico na face ou tronco em lactentes, nervo espessado. Queixas inespecíficas em crianças incluem dor em ossos, músculos e 'dor na carne', que podem impedir brincadeiras. Teste de sensibilidade em criança: avaliar no colo da mãe, demonstrar o teste em si e na mãe, não mostrar a agulha, pedir que a mãe cubra os olhos da criança. Se o teste não for possível e a suspeita persistir diante de lesão esbranquiçada, fazer prova da histamina quando disponível.",
+        "exames": "Exame dermatoneurológico completo, avaliação do grau de incapacidade e exame de todos os contatos. Preencher o Protocolo Complementar de Investigação Diagnóstica de Casos de Hanseníase em Menores de 15 Anos (PCID<15) e enviá-lo à Secretaria Municipal de Saúde com a ficha de notificação; a SMS decide sobre validação ou referência para confirmação. Baciloscopia e biópsia só quando indispensáveis.",
+        "tratamento": "PQT conforme o PESO (mais importante que a idade): > 50 kg esquema do adulto; 30 a 50 kg PQT-U infantil; < 30 kg dose por mg/kg. Duração PB 6 meses e MB 12 meses. Crianças com reação à sulfa que não podem receber minociclina ou ofloxacina (menores de 8 anos) e MB < 8 anos com intolerância à dapsona: encaminhar à referência.",
+        "conduta": "Suspeita: preencher PCID<15, notificar, examinar todos os contatos, iniciar PQT conforme classificação e peso, supervisão mensal e avaliação neurológica no diagnóstico, nas reações e na alta. Atenção à dose máxima de dapsona em crianças obesas (2 mg/kg/dia). Adultos com menos de 50 kg usam as doses pediátricas.",
+        "prescricao": "1) Criança < 30 kg (adaptação da PQT-U infantil, PCDT 2022, quadro 1), dose mensal supervisionada: rifampicina 10 mg/kg (suspensão oral 20 mg/mL disponível no SUS) + clofazimina 6 mg/kg + dapsona 2 mg/kg; dose diária em casa: dapsona 2 mg/kg + clofazimina 1 mg/kg. Como a clofazimina só existe em cápsulas de 50 e 100 mg, calcular a dose semanal e dividir em 2 ou 3 tomadas (ex.: 15 kg = 105 mg/semana, uma cápsula de 50 mg 2 vezes por semana).\n2) 30 a 50 kg (PQT-U infantil): dose mensal supervisionada rifampicina 450 mg + clofazimina 150 mg + dapsona 50 mg; em casa dapsona 50 mg por dia + clofazimina 50 mg em dias alternados. > 50 kg: mesmo esquema do adulto.\n3) Dose máxima diária de dapsona 2 mg/kg em adultos desnutridos ou crianças obesas.\n4) Duração: PB 6 meses; MB 12 meses.\nBase: Ministério da Saúde, Guia Prático sobre a Hanseníase (SVS, 2017); PCDT de Hanseníase (Conitec, 2022), que prevalece onde diferem.",
+        "cid": "A30.9",
+        "esp": "Pediatria;Dermatologia;Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia Prático sobre a Hanseníase",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde",
+          "ano": "2017",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_pratico_hanseniase.pdf",
+          "usadoPara": "Quadro 4 (doses por peso), abordagem da criança no teste de sensibilidade, PCID<15 (cap. 4.2, 8, 12)"
+        },
+        {
+          "titulo": "Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase",
+          "instituicao": "Ministério da Saúde/Conitec",
+          "ano": "2022",
+          "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/20220818_pcdt_hanseniase.pdf/view",
+          "usadoPara": "Esquema PQT-U (quadro 1), esquemas de segunda linha (quadro 5), seguimento, imunoprofilaxia de contatos (itens 10.1, 10.2.3, 13, 14); prevalece sobre o Guia 2017"
+        }
+      ],
+      "observacoes": "Doses pediátricas conforme PCDT 2022 (quadro 1, fonte OMS 2018). O Quadro 4 do Guia 2017 traz valores diferentes (rifampicina 10-20 mg/kg, dapsona 1-2 mg/kg com máximo de 50 mg/dia, clofazimina mensal 5 mg/kg; diária 1 mg/kg): prevalece o PCDT. Rifampicina 450 mg, clofazimina 150 mg e dapsona 50 mg na faixa de 30-50 kg vêm do PCDT."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Efeitos adversos da poliquimioterapia da hanseníase",
+        "introducao": "A PQT (rifampicina, dapsona e clofazimina) é geralmente bem tolerada, mas a dapsona exige maior atenção: sua toxicidade pode ser idiossincrática (rara) ou dose-dependente (mais frequente). Rifampicina, dada mensalmente, raramente causa efeitos; a clofazimina é segura, mas pigmenta e resseca a pele.",
+        "criterios": "Dapsona: avermelhamento, prurido e descamação da pele (face e antebraços); metemoglobinemia (falta de ar com cianose de extremidades); agranulocitose (febre e dor de garganta); hemólise (dor abdominal, fraqueza, taquicardia, mucosas descoradas). Rifampicina: urina avermelhada horas após a dose; urticária cerca de 30 minutos após a dose supervisionada; raramente síndrome tipo dengue (febre, artralgia, plaquetopenia). Clofazimina: pigmentação bronzeada, ressecamento, obstipação.",
+        "exames": "Suspeita de intolerância à dapsona: hemograma, função renal e transaminases. Anemia discreta esperada (queda de até 0,2 g% de hemoglobina por mês) não obriga suspender. Alterações prévias de função hepática, renal ou hemograma: avaliar risco-benefício da dapsona (não é contraindicação absoluta).",
+        "tratamento": "Reação alérgica cutânea à dapsona: suspender e encaminhar à referência. Sintomas de metemoglobinemia, hemólise ou hepatopatia/renal: suspender, coletar exames; confirmada a hemólise, hepatopatia ou comprometimento renal, retirar a dapsona do esquema. Agranulocitose: encaminhar com urgência. Anemia leve: ácido fólico e complexo B. Rifampicina: explicar a urina avermelhada; urticária: corticoide e anti-histamínico; síndrome tipo dengue: suspender e referenciar. Clofazimina: hidratantes; obstipação com dieta laxativa, óleo mineral ou laxantes leves.",
+        "conduta": "Orientar o paciente desde o início sobre os efeitos esperados. Dapsona suspensa (PCDT 2022, quadro 5): substituir por rifampicina 600 mg + clofazimina 300 mg + ofloxacino 400 mg (ou minociclina 100 mg) em dose mensal supervisionada, e clofazimina 50 mg + ofloxacino 400 mg (ou minociclina 100 mg) por dia em casa, por 6 meses (PB) ou 12 meses (MB). Mulheres em idade fértil: rifampicina reduz eficácia de anticoncepcional; usar barreira por 7 dias após a dose supervisionada ou alongar a cartela do anticoncepcional para 28 dias. Doses diárias 2 h após o almoço para reduzir intolerância gástrica.",
+        "prescricao": "1) Urticária por rifampicina: corticoide e anti-histamínico (dose PENDENTE DE VERIFICAÇÃO; não definida na fonte).\n2) Anemia discreta pela dapsona: ácido fólico e complexo B (dose PENDENTE DE VERIFICAÇÃO).\n3) Náuseas: metoclopramida 1 h antes da dose. Dor epigástrica: omeprazol, ranitidina ou cimetidina pela manhã (doses não definidas na fonte).\n4) Substituição da dapsona (PB 6 meses; MB 12 meses): rifampicina 600 mg + clofazimina 300 mg + ofloxacino 400 mg (ou minociclina 100 mg) em dose mensal supervisionada, e clofazimina 50 mg + ofloxacino 400 mg (ou minociclina 100 mg) por dia em casa.\n5) Dose máxima diária de dapsona 2 mg/kg em desnutridos ou crianças obesas.\nBase: Ministério da Saúde, Guia Prático sobre a Hanseníase (SVS, 2017); PCDT de Hanseníase (Conitec, 2022), que prevalece onde diferem.",
+        "cid": "A30.9",
+        "esp": "Dermatologia;Infectologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia Prático sobre a Hanseníase",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde",
+          "ano": "2017",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_pratico_hanseniase.pdf",
+          "usadoPara": "Seção 8.1 (manejo de complicações da PQT) e notas do cap. 8"
+        },
+        {
+          "titulo": "Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase",
+          "instituicao": "Ministério da Saúde/Conitec",
+          "ano": "2022",
+          "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/20220818_pcdt_hanseniase.pdf/view",
+          "usadoPara": "Esquema PQT-U (quadro 1), esquemas de segunda linha (quadro 5), seguimento, imunoprofilaxia de contatos (itens 10.1, 10.2.3, 13, 14); prevalece sobre o Guia 2017"
+        }
+      ],
+      "observacoes": "Doses de corticoide, anti-histamínico, ácido fólico e laxantes não constam na fonte: marcadas PENDENTE. CID de efeito adverso (T88.7) não usada para manter coerência com o grupo A30."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Avaliação neurológica simplificada e grau de incapacidade na hanseníase",
+        "introducao": "Avaliar a função neural é obrigatório ao diagnóstico, a cada 3 meses durante a PQT-U, na última dose supervisionada e sempre que surgirem novas queixas ou reações (PCDT 2022, item 14.1). O grau de incapacidade física (GIF, 0 a 2) mede perda de sensibilidade protetora e/ou deformidade visível por lesão neural e é indicador de diagnóstico tardio; o escore OMP (olhos, mãos e pés) detalha a soma dos graus por lado (0 a 12).",
+        "criterios": "Grau 0: força muscular e sensibilidade preservadas (sente monofilamento 2 g lilás ou toque da caneta; conta dedos a 6 m). Grau 1: diminuição de força sem deformidade visível e/ou perda de sensibilidade (olhos: resposta demorada ou ausente ao fio dental; mãos e pés: não sente 2 g). Grau 2: deficiência visível (lagoftalmo, ectrópio, entrópio, triquíase, opacidade corneana central, iridociclite, acuidade < 0,1; garras, reabsorção óssea, atrofia, mão ou pé caído, contratura, feridas tróficas ou traumáticas). Atribuir à hanseníase somente após excluir outras causas. Iridociclite (olho vermelho doloroso com pupila irregular) é urgência oftalmológica.",
+        "exames": "Inspeção, palpação e percussão dos nervos (trigêmeo, facial, auricular, radial, ulnar, mediano, fibular comum, tibial), teste de força muscular (graus 0 a 5) e de sensibilidade com estesiômetro (monofilamentos) ou caneta esferográfica, na sequência crânio-podal, registrados no formulário de Avaliação Neurológica Simplificada. Escore OMP = soma dos maiores graus de olhos, mãos e pés, direito e esquerdo.",
+        "tratamento": "Não há fármaco específico: a avaliação orienta a prevenção de incapacidades e o tratamento de neurite. Neurite aguda ou silenciosa, mãos e pés reacionais e iridociclite são urgências a encaminhar imediatamente à referência. Grau 1 sem melhora ao longo da PQT: avaliação médica e, se preciso, reabilitação.",
+        "conduta": "Registrar GIF e OMP no diagnóstico, a cada 3 meses durante a PQT-U, na última dose supervisionada, nas reações e com novas queixas, comparando os resultados; avaliar também no pós-alta. Reexaminar com monofilamento a cada retorno de paciente reacional. Notar que perda de sensibilidade nem sempre é hanseníase (ex.: notalgia parestésica, esclerodermia localizada).",
+        "prescricao": "1) Sem prescrição medicamentosa para a avaliação. Medidas conforme o grau: ver ficha de prevenção de incapacidades.\n2) Neurite/reação: ver fichas de reações hansênicas.\nBase: Ministério da Saúde, Guia Prático sobre a Hanseníase (SVS, 2017); PCDT de Hanseníase (Conitec, 2022), que prevalece onde diferem.",
+        "cid": "A30.9",
+        "esp": "Dermatologia;Infectologia;Neurologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia Prático sobre a Hanseníase",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde",
+          "ano": "2017",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_pratico_hanseniase.pdf",
+          "usadoPara": "Cap. 4 (nervos e testes), cap. 7 (Quadro 3, GIF, escore OMP) e cap. 10 (urgências)"
+        },
+        {
+          "titulo": "Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase",
+          "instituicao": "Ministério da Saúde/Conitec",
+          "ano": "2022",
+          "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/20220818_pcdt_hanseniase.pdf/view",
+          "usadoPara": "Esquema PQT-U (quadro 1), esquemas de segunda linha (quadro 5), seguimento, imunoprofilaxia de contatos (itens 10.1, 10.2.3, 13, 14); prevalece sobre o Guia 2017"
+        }
+      ],
+      "observacoes": "Descrição sem reproduzir o formulário da fonte. Sem doses."
+    },
+    {
+      "registro": {
+        "area": "Dermatologia",
+        "nome": "Investigação e vigilância de contatos de hanseníase",
+        "introducao": "A busca ativa de contatos visa diagnóstico precoce, quebra da cadeia de transmissão e identificação da fonte de infecção, independentemente de o caso índice ser paucibacilar ou multibacilar. Atenção especial a crianças e idosos.",
+        "criterios": "Contato domiciliar: quem reside ou residiu/conviveu com o doente nos últimos 5 anos antes do diagnóstico, parente ou não; familiares (pais, irmãos, avós, netos, tios) têm maior risco mesmo sem morar na casa. Contato social: convívio próximo e prolongado (vizinhos, colegas de trabalho ou escola), avaliado pelo grau e tipo de convivência.",
+        "exames": "Anamnese dirigida a sinais e sintomas de hanseníase e exame dermatoneurológico completo de todos os contatos identificados (com consentimento do caso índice). Avaliação dermatoneurológica pelo menos uma vez ao ano por 5 anos para contatos domiciliares e sociais sem doença na avaliação inicial.",
+        "tratamento": "Contato com hanseníase: tratar com PQT-U conforme a classificação. Contato sem sinais de doença: imunoprofilaxia com BCG, sem importar se o caso índice é PB ou MB, para maiores de 1 ano não vacinados ou com apenas 1 dose (comprovação por cartão de vacina ou cicatriz); explicar que a BCG não é específica e oferece alguma proteção. Contraindicada em imunodeficiência, neoplasia maligna, corticoide em dose elevada por mais de 2 semanas, tuberculose ativa, gestantes e vacinados recentemente.",
+        "conduta": "Listar contatos, examinar, oferecer BCG aos elegíveis (maiores de 1 ano, sem BCG ou com apenas 1 dose, pelo cartão ou cicatriz) e agendar o seguimento anual por 5 anos (Guia 2017; o PCDT 2022 destaca a avaliação anual dos contatos com sorologia anti-PGL1 positiva sem diagnóstico). Após os 5 anos, orientar que sinais e sintomas podem aparecer no futuro. Registrar o seguimento no prontuário. Acolher com ética para evitar estigma. A BCG pode abreviar o período de incubação em quem já está infectado.",
+        "prescricao": "1) Vacina BCG para contatos sem sinais de hanseníase, maiores de 1 ano, não vacinados ou com apenas 1 dose (dose e via conforme calendário do PNI: PENDENTE DE VERIFICAÇÃO, fonte não detalha).\n2) Reavaliação dermatoneurológica anual por 5 anos.\n3) Contraindicações da BCG: imunodeficiência, neoplasia maligna, corticoide em dose elevada (prednisona 2 mg/kg/dia em crianças até 10 kg ou 20 mg/dia ou mais acima de 10 kg) por mais de 2 semanas, tuberculose ativa, gestação, vacinação recente.\nBase: Ministério da Saúde, Guia Prático sobre a Hanseníase (SVS, 2017); PCDT de Hanseníase (Conitec, 2022), que prevalece onde diferem.",
+        "cid": "Z20.8",
+        "esp": "Medicina de Família e Comunidade;Infectologia;Dermatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Guia Prático sobre a Hanseníase",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde",
+          "ano": "2017",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_pratico_hanseniase.pdf",
+          "usadoPara": "Cap. 14 (investigação de contatos)"
+        },
+        {
+          "titulo": "Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase",
+          "instituicao": "Ministério da Saúde/Conitec",
+          "ano": "2022",
+          "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/20220818_pcdt_hanseniase.pdf/view",
+          "usadoPara": "Esquema PQT-U (quadro 1), esquemas de segunda linha (quadro 5), seguimento, imunoprofilaxia de contatos (itens 10.1, 10.2.3, 13, 14); prevalece sobre o Guia 2017"
+        }
+      ],
+      "observacoes": "Esquema de BCG por história vacinal conforme PCDT 2022 (item 13.1); dose e via PENDENTES."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Dermatoses do Caderno de Atenção Básica nº 9 (Dermatologia na Atenção Básica, MS 2002): eritrasma, intertrigo, miliária, pediculose pubiana, urticária papular (prurigo estrófulo), perniose, escabiose crostosa, queratose pilar, dermatofibroma, acrocórdon, xantelasma",
+      "motivo": "O PDF do CAB 9 não foi localizado em fonte oficial aberta (URLs do bvsms retornaram 404; cópia no repositório unasus não abriu como PDF) e o PCDT-IST 2022 não trata pediculose pubiana. Sem fonte oficial lida em até 3 buscas, nada foi escrito de memória. Obs.: o acervo já cobre quase toda a dermatologia básica (escabiose, pediculose, impetigo, dermatofitoses, eczemas, psoríase, acne, rosácea, etc.)."
+    },
+    {
+      "tema": "Hanseníase virchowiana, hanseníase (geral), reações hansênicas e neuropatia por hanseníase",
+      "motivo": "já existe: Hanseníase; Hanseníase virchowiana; Hanseníase: reações hansênicas; Neuropatia por hanseníase e por compressão"
+    },
+    {
+      "tema": "Hanseníase neural pura; recidiva de hanseníase",
+      "motivo": "o Guia Prático 2017 só cita de passagem (nervo único espessado; fluxo de investigação de recidiva sem esquema terapêutico); material insuficiente para uma ficha"
+    },
+    {
+      "tema": "Mais de 150 dermatoses (eczemas, micoses, infecções, tumores cutâneos, bolhosas, etc.)",
+      "motivo": "já existem no acervo (156 fichas em Dermatologia)"
+    },
+    {
+      "tema": "Prevenção de incapacidades e autocuidado na hanseníase (Guia Prático 2017, cap. 10)",
+      "motivo": "REPROVADO por duplicata: o lote-02 já traz 'Hanseníase: prevenção de incapacidades e sequelas neurais' (B92), fundamentada no Manual de prevenção de incapacidades (MS, 2008) e conferida com o PCDT 2022; mantida a do lote-02, a mais bem fundamentada."
+    }
+  ]
+}

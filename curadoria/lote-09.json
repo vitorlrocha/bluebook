@@ -1,0 +1,432 @@
+{
+  "lote": "09",
+  "criadoEm": "2026-11-13",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Síndrome pós-parada cardíaca: cuidados pós-ressuscitação no adulto",
+        "introducao": "Fase que se inicia com o retorno da circulação espontânea (RCE) após a RCP. É um período de alto risco de nova parada e de instabilidade respiratória e hemodinâmica, no qual o atendimento pré-hospitalar deve estabilizar o paciente e tratar a causa da parada.",
+        "criterios": "Paciente adulto com pulso e circulação restabelecidos após manobras de RCP. Mantém-se monitorização contínua porque a recorrência da parada é a principal ameaça.",
+        "exames": "Monitorização cardíaca contínua, sinais vitais e oximetria; capnografia se disponível; ECG de 12 derivações (com segunda opinião/telecardiologia, se necessário); glicemia capilar.",
+        "tratamento": "Manter ou instalar via aérea avançada, SatO2 ≥ 94% e ventilação sem hiperventilar (10 a 12 insuflações/min na parada respiratória). Tratar hipotensão (PAS < 90 mmHg) com cristaloide; tratar glicemia alterada; manter antiarrítmico quando a parada foi por FV/TV sem pulso; identificar e corrigir as causas reversíveis (5H e 5T).",
+        "conduta": "Manter monitorização cardíaca e estar pronto para reiniciar a RCP. Otimizar via aérea, ventilação e oxigenação. Medir sinais vitais, fazer ECG 12 derivações, corrigir glicemia e hipotensão. Pesquisar causas reversíveis: hipovolemia, acidose, hipóxia, hipo/hipercalemia, hipotermia; trombose coronariana ou pulmonar, tamponamento, pneumotórax hipertensivo, tóxicos. Preparar o transporte, definir o destino com a Regulação Médica e registrar procedimentos e intercorrências.",
+        "prescricao": "1) Hipotensão (PAS < 90 mmHg): 1 a 2 L de ringer lactato ou soro fisiológico 0,9% IV/IO.\n2) Antiarrítmico: manter lidocaína se a parada foi por FV/TV sem pulso (dose não detalhada no protocolo: PENDENTE DE VERIFICAÇÃO).\n3) Oxigênio titulado para SatO2 ≥ 94%; ventilação 10 a 12 por minuto, sem hiperventilar.\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo AC10 (2016).",
+        "cid": "I46.0",
+        "esp": "Medicina de Emergência;Cardiologia;Medicina Intensiva"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo AC10 – Cuidados pós-ressuscitação – adulto",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "definição, metas de oxigenação e ventilação, correção de hipotensão (1–2 L), causas reversíveis 5H/5T"
+        }
+      ],
+      "observacoes": "O protocolo cita lidocaína sem dose; ficou PENDENTE. Não há na fonte alvo de temperatura nem coronariografia; não incluídos."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Cuidados pós-ressuscitação no bebê e na criança (retorno da circulação espontânea)",
+        "introducao": "Período após o retorno da circulação espontânea (RCE) em bebê ou criança reanimados. O foco é evitar nova parada, ajustar oxigênio sem hiperóxia, tratar choque e arritmias e buscar a causa da parada.",
+        "criterios": "Paciente pediátrico com RCE depois de manobras de RCP.",
+        "exames": "Monitorização contínua de ritmo, frequência cardíaca, oximetria e sinais vitais; ECG de 12 derivações (segunda opinião se disponível); glicemia capilar; capnografia se disponível; temperatura.",
+        "tratamento": "Titular O2 para SatO2 entre 94% e 99% (evitar hiperóxia); via aérea avançada se SatO2 < 90% apesar de O2 a 100%; ventilação mecânica com parâmetros iniciais do protocolo quando disponível; tratar choque, arritmias, hipoglicemia e febre; sedar e analgesiar o intubado consciente; corrigir causas reversíveis (6H e 5T).",
+        "conduta": "Manter monitorização e estar pronto para reiniciar RCP (suspender a ventilação mecânica nesse caso). Ajustar oxigênio e ventilação. Em deterioração súbita do paciente intubado, aplicar DOPE (deslocamento, obstrução, pneumotórax, equipamento). Em agitação, tratar as causas (DOPE) e controlar dor e ansiedade. Controlar glicemia, tratar choque e arritmias (protocolos de bradicardia e taquiarritmia), tratar temperatura ≥ 38 °C, garantir direito a acompanhante, preparar transporte e contatar a Regulação Médica.",
+        "prescricao": "1) Oxigênio: titular para 94 a 99%; no cardiopata cianótico, usar a saturação basal conhecida como meta.\n2) Ventilador (parâmetros iniciais): volume corrente 6 a 8 mL/kg; tempo inspiratório 0,5 a 1 s; pressão de pico 20 a 30 cmH2O (menor valor que expanda o tórax); frequência 20 a 30 ipm no bebê e 16 a 20 ipm na criança; PEEP 3 a 5 cmH2O.\n3) Choque pós-RCE: bolus de 20 mL/kg de ringer lactato ou SF 0,9% IV/IO em 5 a 20 min; se suspeita de disfunção miocárdica, 5 a 10 mL/kg em 10 a 20 min.\n4) Analgesia e sedação: fentanil ou morfina (analgesia) e midazolam (sedação), com doses menores se instabilidade hemodinâmica; doses não detalhadas na fonte: PENDENTE DE VERIFICAÇÃO. Fentanil lento (risco de rigidez torácica); morfina causa mais hipotensão.\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo APed 11 (2016).",
+        "cid": "I46.0,I46.9",
+        "esp": "Pediatria;Medicina de Emergência;Medicina Intensiva"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo APed 11 – Cuidados pós-ressuscitação – bebê e criança",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "metas de saturação, parâmetros de ventilador, DOPE, bolus de fluidos, sedação/analgesia"
+        }
+      ],
+      "observacoes": "Doses de fentanil, morfina e midazolam não constam no protocolo: PENDENTE."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Pneumotórax aberto (ferida torácica aspirante)",
+        "introducao": "Lesão da parede torácica com comunicação franca entre o ar ambiente e a cavidade pleural, em geral por arma de fogo, arma branca ou objeto perfurante e, raramente, por trauma contuso. O ar passa pela ferida durante a respiração e compromete a ventilação.",
+        "criterios": "Ferimento aberto no tórax com passagem visível de ar através da lesão, dispneia, taquipneia (FR > 28 ipm) ou bradipneia (FR < 8 ipm), sinais de hipóxia ou cianose.",
+        "exames": "Avaliação clínica de parede torácica anterior e posterior (inclusive dorso), oximetria de pulso e pesquisa de lesões associadas; exames de imagem são hospitalares.",
+        "tratamento": "Cobertura imediata do ferimento com curativo oclusivo (plástico ou papel metálico) fixado em três lados, oxigênio em alto fluxo, acesso venoso, reposição volêmica conforme o protocolo do choque e analgesia. Ventilação com pressão positiva ou via aérea avançada se a ventilação permanecer inadequada.",
+        "conduta": "Avaliação primária do trauma com selamento imediato da ferida (3 lados fixados, para permitir saída de ar). Oxigênio para SatO2 ≥ 94%, monitorização, acesso venoso, reposição volêmica se choque e analgesia. Se o esforço respiratório piorar, suspeitar de pneumotórax hipertensivo: abrir o curativo para descomprimir e recolocá-lo. Ventilar com pressão positiva com cautela (risco de pneumotórax hipertensivo). Mobilização cuidadosa, imobilização com prancha longa quando indicada, sem atrasar o transporte; Regulação Médica para o destino.",
+        "prescricao": "1) Curativo oclusivo em 3 lados sobre a ferida.\n2) O2 em alto fluxo para SatO2 ≥ 94%.\n3) Cristaloide conforme o protocolo de choque do trauma, se necessário (volume não detalhado neste protocolo: PENDENTE DE VERIFICAÇÃO).\n4) Analgesia a considerar (fármaco e dose não detalhados nesta fonte: PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo AT11 (2016).",
+        "cid": "S27.0,S21.8",
+        "esp": "Medicina de Emergência;Cirurgia Torácica;Cirurgia Geral"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo AT11 – Pneumotórax aberto",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "definição, selamento em 3 lados, conduta e cautelas"
+        }
+      ],
+      "observacoes": "Acervo já tem pneumotórax simples/hemotórax e hipertensivo; o aberto não existia."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Trauma abdominal aberto (penetrante)",
+        "introducao": "Lesão aberta do abdome por arma de fogo, arma branca, acidente com veículo, atropelamento ou outros mecanismos, com risco de hemorragia e lesão de vísceras. Costuma haver múltiplos ferimentos.",
+        "criterios": "Ferimento aberto no abdome com mecanismo de trauma compatível. Atenção: lesões do tórax abaixo da linha mamária (anterior) ou abaixo da linha infraescapular e flancos (dorso) podem comprometer órgãos intra-abdominais.",
+        "exames": "Avaliação primária e secundária do trauma, oximetria e pressão arterial; busca de múltiplos ferimentos; informações sobre arma e distância do agressor. Exames de imagem e cirurgia são hospitalares.",
+        "tratamento": "Oxigênio, controle de sangramentos externos, acesso venoso e reposição volêmica conforme o choque do trauma. Objeto encravado: não remover, fixar e comprimir ao redor. Evisceração: não recolocar as vísceras, cobrir com compressas estéreis umedecidas com SF e plástico. Transporte rápido sem demora.",
+        "conduta": "Avaliação primária e secundária do trauma; O2 para SatO2 ≥ 94%; controlar sangramento externo; acesso venoso e reposição de volume. Sem TCE associado, restaurar a PA até 80 a 90 mmHg (evitar novo sangramento). Não palpar o abdome. Fixar objetos empalados e fazer pressão ao redor se sangrar. Considerar a imobilização da coluna cervical, tronco e membros em prancha longa, sem atrasar o transporte; Regulação Médica define o destino.",
+        "prescricao": "1) O2 em alto fluxo (SatO2 ≥ 94%).\n2) Reposição volêmica conforme protocolo de choque do trauma, alvo de PA entre 80 e 90 mmHg na ausência de TCE (tipo e volume de fluido: PENDENTE DE VERIFICAÇÃO neste protocolo).\n3) Evisceração: compressas estéreis umedecidas com SF e plástico próprio.\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo AT16 (2016).",
+        "cid": "S31.1,S36",
+        "esp": "Medicina de Emergência;Cirurgia Geral"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo AT16 – TAA – Trauma abdominal aberto",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "critérios, cuidados com empalamento e evisceração, meta de PA"
+        }
+      ],
+      "observacoes": "O acervo tem trauma abdominal fechado; o aberto não existia."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Parada respiratória no adulto",
+        "introducao": "Estado em que o paciente está irresponsivo, com respiração ausente ou agônica (gasping), mas ainda com pulso central palpável. A ventilação imediata evita a evolução para parada cardiorrespiratória.",
+        "criterios": "Paciente irresponsivo ao estímulo, respiração ausente ou agônica e pulso carotídeo presente (checado em até 10 segundos).",
+        "exames": "Checagem de responsividade, respiração e pulso central em até 10 s; reavaliação do pulso a cada 2 min; após via aérea avançada, checagem do ritmo a cada 2 min.",
+        "tratamento": "Abrir via aérea (manobra adequada à presença de trauma), ventilar com bolsa-valva-máscara com O2 em alto fluxo (10 a 15 L/min), considerar cânula orofaríngea e, assim que possível, via aérea avançada (preferencialmente intubação orotraqueal; máscara laríngea se intubação difícil). Acesso venoso ou intraósseo.",
+        "conduta": "Posicionar em superfície rígida, pedir ajuda e desfibrilador. Com pulso presente: 1 insuflação de 1 s com elevação visível do tórax, depois 1 insuflação a cada 5 a 6 s (10 a 12/min), verificando pulso a cada 2 min. Após via aérea avançada: 1 insuflação a cada 6 a 8 s (8 a 10/min) e checagem do ritmo a cada 2 min. Sem pulso: iniciar RCP. Manter a ventilação até a chegada de apoio, ao hospital ou retorno da ventilação espontânea; contatar a Regulação Médica.",
+        "prescricao": "1) Ventilação com BVM e O2 10 a 15 L/min: 10 a 12 insuflações/min (1 a cada 5-6 s) sem via aérea avançada.\n2) Com via aérea avançada: 8 a 10 insuflações/min.\n3) Sem pulso em qualquer momento: iniciar RCP.\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo AC4 (2016).",
+        "cid": "R09.2",
+        "esp": "Medicina de Emergência;Medicina Intensiva;Pneumologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo AC4 – Parada respiratória no adulto",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "critérios, frequência de ventilação, via aérea avançada"
+        }
+      ],
+      "observacoes": "Numeração AC4 conforme o corpo do documento (o sumário usa AC5)."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Parada respiratória no bebê e na criança",
+        "introducao": "Ausência ou gasping respiratório com pulso central palpável e frequência acima de 60 bpm em bebê ou criança. A ventilação precoce impede a parada cardíaca.",
+        "criterios": "Paciente irresponsivo, respiração ausente ou agônica, pulso central palpável (braquial no bebê; carotídeo ou femoral na criança) e FC > 60 bpm. Bebê: estímulo plantar para checar responsividade.",
+        "exames": "Checagem simultânea de respiração e pulso (máximo 10 s); oximetria; monitor/desfibrilador; reavaliação do pulso a cada 2 min.",
+        "tratamento": "Abrir via aérea e ventilar com BVM com O2 100% em alto fluxo; cânula orofaríngea se indicado; via aérea avançada assim que possível (intubação orotraqueal; máscara laríngea ou supraglótico se difícil); acesso IV/IO.",
+        "conduta": "Posicionar em superfície rígida e plana. Ventilar: 1 insuflação a cada 3 a 5 s (12 a 20/min), 1 s cada, com elevação do tórax; verificar pulso a cada 2 min. Com via aérea avançada: 1 insuflação a cada 3 s (20/min). Se o pulso cair a ≤ 60 bpm com má perfusão apesar de ventilação adequada, ou desaparecer, iniciar RCP (compressões primeiro). Proteger a coluna cervical no trauma; manter ventilação até a chegada ao hospital ou ventilação espontânea; garantir acompanhante e contato com a Regulação Médica.",
+        "prescricao": "1) BVM com O2 100% a 10 a 15 L/min.\n2) 12 a 20 insuflações/min (a cada 3 a 5 s) antes da via aérea avançada; 20/min depois.\n3) RCP se FC ≤ 60 bpm com perfusão inadequada ou ausência de pulso.\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo APed 6 (2016).",
+        "cid": "R09.2",
+        "esp": "Pediatria;Medicina de Emergência;Medicina Intensiva"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo APed 6 – Parada respiratória (PR) no paciente pediátrico",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "critérios, frequência de ventilação, gatilhos para RCP"
+        }
+      ],
+      "observacoes": ""
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Choque na criança: reconhecimento e ressuscitação inicial pré-hospitalar",
+        "introducao": "Má perfusão tecidual com demanda metabólica não atendida, que pode ocorrer mesmo com pressão arterial normal (choque compensado). O tipo (hipovolêmico, distributivo, cardiogênico ou obstrutivo) define o volume e o tratamento específico.",
+        "criterios": "Má perfusão periférica e de órgãos-alvo: taquicardia (sinal precoce), pele fria, pálida ou moteada, enchimento capilar > 2 s, pulsos fracos, pressão de pulso estreita; sinais tardios: rebaixamento da consciência, oligúria, hipotensão e colapso.",
+        "exames": "Glicemia capilar, pressão arterial com manguito adequado, oximetria, ECG, enchimento capilar, débito urinário (se possível); identificar a causa (SAMPLE).",
+        "tratamento": "O2 em alta concentração se SatO2 < 94%, acesso venoso (IO após duas tentativas sem sucesso em 90 s), bolus de cristaloide isotônico, prevenção de hipotermia e tratamento específico: hemorragia (controle e transporte rápido para transfusão), anafilaxia (epinefrina IM), pneumotórax hipertensivo (descompressão), arritmias.",
+        "conduta": "Avaliação primária; via aérea e ventilação; acesso IV/IO precoce; corrigir hipoglicemia; Trendelenburg se hipotenso (exceto se respiração comprometida). Ressuscitar com cristaloide e reavaliar após cada bolus. Cuidado com choque cardiogênico (volumes menores, vigiar edema pulmonar) e séptico (reavaliar antes de novo bolus). Cetoacidose com choque compensado: volume mais lento. Intoxicação por bloqueador de canal de cálcio ou beta-bloqueador: volume criterioso. Garantir acompanhante; contato com a Regulação Médica.",
+        "prescricao": "1) Cristaloide (SF 0,9% ou ringer lactato) 20 mL/kg IV/IO em 5 a 20 min; repetir e reavaliar conforme necessário (hemorrágico: até 2 a 3 vezes e transfusão o mais rápido possível).\n2) Choque séptico: 1 bolus de 20 mL/kg e reavaliar antes de repetir.\n3) Choque cardiogênico ou obstrutivo (não pneumotórax): 5 a 10 mL/kg em 10 a 20 min.\n4) Cetoacidose com choque compensado: 20 mL/kg em 60 min.\n5) Choque séptico refratário em transporte prolongado: hidrocortisona 1 a 2 mg/kg IV em bolus (máximo 100 mg).\n6) Anafilaxia: epinefrina IM conforme protocolo específico (dose não consta neste protocolo: PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo APed 17 (2016).",
+        "cid": "R57.9,R57.1,R57.8",
+        "esp": "Pediatria;Medicina de Emergência;Medicina Intensiva"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo APed17 – Choque",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "sinais clínicos, volumes de bolus por tipo de choque, hidrocortisona, observações"
+        }
+      ],
+      "observacoes": "Dose de epinefrina IM da anafilaxia não consta neste protocolo: PENDENTE (ver ficha de anafilaxia)."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Insuficiência respiratória aguda na criança: abordagem pré-hospitalar",
+        "introducao": "Oxigenação e/ou ventilação inadequadas, estágio final do desconforto respiratório. Reconhecer e tratar o desconforto precocemente evita a evolução para parada respiratória e cardíaca.",
+        "criterios": "Dificuldade respiratória súbita ou progressiva com sinais de gravidade: alteração da consciência, cianose, uso de musculatura acessória, fala entrecortada, FC > 140 bpm ou bradicardia, SatO2 < 90%; FR < 10 ou > 60 ipm em qualquer idade pediátrica sugere gravidade.",
+        "exames": "Contagem de FR por 30 s multiplicada por 2; oximetria; ausculta e simetria torácica; ECG/ritmo; pressão arterial; SAMPLE. Atenção: cardiopatia congênita cianótica pode ter SatO2 basal muito baixa.",
+        "tratamento": "Via aérea pérvia (aspirar), decúbito elevado em posição de conforto, O2 por máscara não reinalante 10 a 15 L/min se SatO2 < 94%, suporte ventilatório se necessário e tratamento da causa (crupe, anafilaxia, corpo estranho, asma).",
+        "conduta": "Considerar corpo estranho de via aérea. Indicação de intubação e ventilação assistida: hipoxemia refratária (SatO2 < 90%), instabilidade hemodinâmica, rebaixamento da consciência (Glasgow ≤ 8: via aérea avançada) ou exaustão. Acesso vascular se indicado. Seguir os protocolos de laringotraqueíte, anafilaxia, OVACE e asma. Atentar para parada respiratória e PCR. Tempo de cena mínimo se grave; contato com a Regulação Médica.",
+        "prescricao": "1) O2 por máscara não reinalante 10 a 15 L/min se SatO2 < 94%.\n2) Tratamento medicamentoso da causa conforme os protocolos específicos (crupe, asma, anafilaxia).\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo APed 18 (2016).",
+        "cid": "J96.0,J96.9",
+        "esp": "Pediatria;Medicina de Emergência;Pneumologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo APed18 – Insuficiência respiratória aguda",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "critérios de gravidade, indicações de intubação, definições"
+        }
+      ],
+      "observacoes": ""
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Vômitos na criança: abordagem pré-hospitalar",
+        "introducao": "Eliminação de conteúdo digestivo pela boca por condições agudas ou crônicas, às vezes associada a comprometimento de outros sistemas, intoxicações ou tratamentos como rádio/quimioterapia. Risco: desidratação, aspiração e choque.",
+        "criterios": "Vômitos com avaliação do aspecto (alimentar, bilioso, borra de café, fecaloide, com sangue), duração e incidência; sinais de desidratação: mucosas secas, olhos encovados, fontanela deprimida, turgor pastoso, extremidades frias, pulsos finos.",
+        "exames": "Responsividade, respiração, pulso, pressão arterial, FC, oximetria e glicemia capilar; estado de hidratação; SAMPLE.",
+        "tratamento": "Proteção da via aérea por posicionamento; acesso IV/IO se vômitos incoercíveis, desidratação ou choque; reidratação com cristaloide; antiemético nos incoercíveis; protetor gástrico em vômitos sanguinolentos.",
+        "conduta": "Impressão inicial e avaliação primária; posicionar para proteger vias aéreas; avaliação secundária e causas. Reidratar na desidratação; tratar choque; antiemético em vômitos incoercíveis; omeprazol se sangue. Metoclopramida contraindicada em pediatria; cautela com antieméticos em choque, depressão respiratória/consciência, suspeita de hipertensão intracraniana ou obstrução digestiva. Contato com a Regulação Médica.",
+        "prescricao": "1) Desidratação: cristaloide 50 mL/kg IV em 1 h; repetir se persistirem sinais.\n2) Choque: cristaloide 20 mL/kg IV/IO em 5 a 20 min, repetindo enquanto houver sinais.\n3) Ondansetrona IV lenta (2 a 5 min): 0,1 mg/kg até 40 kg; acima de 40 kg 4 mg (apresentação 2 mg/mL).\n4) Dimenidrinato IV: 1 mg/kg/dose (máx. 30 mg), lento; não usar no 1º mês de vida.\n5) Vômito com sangue: omeprazol IV (> 10 kg ou > 1 ano; 10 a 20 kg: 10 mg; > 20 kg: 20 mg, lento).\n6) Metoclopramida: contraindicada em crianças.\nObs.: o protocolo de 2016 também citava ranitidina; ela não consta aqui porque a Anvisa proibiu a comercialização, distribuição, fabricação e importação do cloridrato de ranitidina em 2020 (Resolução-RE 3.259, de 26/08/2020, por risco de formação de NDMA).\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo APed 28 (2016).",
+        "cid": "R11",
+        "esp": "Pediatria;Medicina de Emergência;Gastroenterologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo APed28 – Vômitos",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "critérios, avaliação, doses de ondansetrona, dimenidrinato, omeprazol, hidratação, contraindicações"
+        }
+      ],
+      "observacoes": "Ranitidina (3 mg/kg IV, máx. 50 mg), citada no APed 28 (2016), foi retirada da ficha: a Anvisa proibiu o cloridrato de ranitidina (todas as apresentações e lotes) pela Resolução-RE 3.259, de 26/08/2020, publicada no DOU de 27/08/2020, por possibilidade de formação de NDMA (texto reproduzido na Nota Técnica CAF 15/2022 da SES-SP e no relatório Conitec 695/2021). Substituto citado no protocolo: omeprazol."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Bradicardia no bebê e na criança",
+        "introducao": "Frequência cardíaca abaixo da esperada para idade e atividade. Em bebês e crianças geralmente é secundária (hipóxia, acidose, hipotensão, hipotermia, drogas) e, com má perfusão, indica parada iminente. Pode ser primária (cardiopatia congênita ou adquirida).",
+        "criterios": "FC lenta para a idade (sintomática geralmente < 60 bpm) com sinais de comprometimento cardiopulmonar: choque, alteração aguda do estado mental, hipotensão, desconforto/insuficiência respiratória. Ritmos: bradicardia sinusal, BAV 1º, 2º (tipos 1 e 2) e 3º graus.",
+        "exames": "Monitor de ECG (identificar ritmo), ECG 12 derivações sem retardar o tratamento, oximetria, pressão arterial com manguito adequado, estado neurológico, SAMPLE.",
+        "tratamento": "Primeiro oxigenar e ventilar; se FC ≤ 60 bpm com má perfusão apesar disso, RCP; epinefrina; atropina se tônus vagal aumentado, intoxicação colinérgica ou BAV primário; marcapasso transcutâneo se refratária.",
+        "conduta": "Via aérea, O2 e ventilação assistida, acesso IV/IO, tratar causas (hipóxia e vagal). Sem comprometimento: apoiar ABC, O2, observar e transportar para unidade com cardiologia pediátrica. Com comprometimento persistente: RCP de boa qualidade, via aérea avançada, e, após 2 min sem melhora, fármacos. Atropina não é indicada em BAV por hipóxia ou acidose. Considerar analgesia/sedação para o marcapasso; atentar para PCR.",
+        "prescricao": "1) Epinefrina IV/IO 0,01 mg/kg (0,1 mL/kg da solução 1:10.000; máx. 1 mg), repetir a cada 3 a 5 min; infusão contínua 0,1 a 0,3 mcg/kg/min se bomba disponível.\n2) Atropina IV/IO 0,02 mg/kg (mínimo 0,1 mg, máximo 0,5 mg/dose), repetível uma vez em 5 min, se tônus vagal aumentado, toxicidade colinérgica (organofosforados e carbamatos: podem exigir doses maiores) ou BAV primário.\n3) Marcapasso transcutâneo se sem resposta, em bloqueio AV total ou disfunção sinusal.\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo APed 15 (2016).",
+        "cid": "R00.1,I44.2",
+        "esp": "Pediatria;Cardiologia;Medicina de Emergência"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo APed 15 – Bradicardia",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "critérios, doses de epinefrina e atropina, marcapasso, observações"
+        }
+      ],
+      "observacoes": "Numeração APed 15 conforme o corpo do documento (o sumário numera diferente)."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Taquiarritmias com pulso no bebê e na criança",
+        "introducao": "Frequência cardíaca elevada para a idade e atividade. A taquicardia sinusal (sintoma de causa como febre, dor, hipovolemia) deve ser distinguida da taquicardia supraventricular (TSV) e da taquicardia ventricular (TV, incomum e geralmente associada a cardiopatia).",
+        "criterios": "Taquicardia sinusal: causa conhecida, P presentes, FC < 220 bpm no bebê e < 180 bpm na criança, R-R variável. TSV: início súbito, FC ≥ 220 (bebê) ou ≥ 180 bpm (criança), P ausentes, R-R constante, QRS estreito (≤ 0,09 s). QRS largo (> 0,09 s): TV ou TSV com aberrância. Instabilidade: desconforto respiratório, sinais de choque, rebaixamento da consciência, colapso.",
+        "exames": "ECG 12 derivações (ritmo e QRS) sem retardar a urgência; monitorização, PA, oximetria, glicemia capilar e SAMPLE.",
+        "tratamento": "Taquicardia sinusal: tratar a causa, sem reduzir FC. TSV estável: manobra vagal e adenosina; instável: adenosina se acesso disponível ou cardioversão sincronizada. QRS largo instável: cardioversão sincronizada imediata. Amiodarona ou lidocaína em TV estável, com especialista.",
+        "conduta": "Via aérea, O2 (SatO2 < 94%), acesso IV/IO, tratar causas 6H e 5T. Manobras vagais: gelo sobre a metade superior da face por 15 a 20 s, canudo, Valsalva; nunca pressão ocular. TSV estável que não reverte com duas adenosinas: transporte e cardiologista. Sedar na cardioversão sem atrasá-la. Reativar o modo SYNC a cada choque. Atenção para PCR e contato com a Regulação Médica.",
+        "prescricao": "1) Adenosina IV/IO rápida: 0,1 mg/kg (máx. 6 mg), seguida de flush de 5 a 10 mL de SF; se falhar, 0,2 mg/kg (máx. 12 mg). Reduzir dose se carbamazepina, dipiridamol ou coração transplantado; evitar se Wolff-Parkinson-White.\n2) Cardioversão elétrica sincronizada, com sedação: 0,5 a 1 J/kg, depois 2 J/kg.\n3) Amiodarona 5 mg/kg IV/IO (máx. 300 mg) em 20 a 60 min (parar se hipotensão ou QRS alargar).\n4) Lidocaína (alternativa): ataque 1 mg/kg IV/IO, manutenção 20 a 50 mcg/kg/min.\n5) Torsades de pointes: sulfato de magnésio 25 a 50 mg/kg IV/IO (máx. 2 g) em 10 a 20 min.\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo APed 16 (2016).",
+        "cid": "I47.1,R00.0,I47.2",
+        "esp": "Pediatria;Cardiologia;Medicina de Emergência"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo APed 16 – Taquiarritmia com pulso",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "critérios, doses, cardioversão, manobras vagais, algoritmo"
+        }
+      ],
+      "observacoes": ""
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Síndromes tóxicas (toxíndromes): reconhecimento pré-hospitalar",
+        "introducao": "Conjuntos de sinais e sintomas que sugerem a classe do agente intoxicante, permitindo antecipar o tratamento mesmo sem identificar a substância. Muitas vezes o quadro é misto ou envolve mais de uma droga.",
+        "criterios": "Anticolinérgica: rubor, pele seca e quente, mucosas secas, hipertermia, midríase, retenção urinária, delírio e alucinações. Simpatomimética: agitação, sudorese, midríase, taquicardia, hipertensão, hipertermia, convulsões. Colinérgica: salivação, lacrimejamento, micção, diarreia, cólica, vômito, fasciculações, broncoespasmo. Opioide: miose, depressão respiratória e neurológica. Depressiva sedativo-hipnótica: sonolência, coma, depressão respiratória, hipotensão. Extrapiramidal: distonia, trismo, opistótono. Metemoglobinêmica: cianose com palidez e confusão.",
+        "exames": "Avaliação de FC, PA, FR, temperatura, pupilas, pele e mucosas, sudorese, ruídos hidroaéreos e distensão abdominal; busca do agente (frascos, produtos, relato). Método ACENA para a cena.",
+        "tratamento": "Segurança da cena e EPI; avaliação primária/secundária; identificar a síndrome e o agente; seguir o protocolo específico e as medidas gerais. Antídotos citados: naloxona (opioides), flumazenil (benzodiazepínicos), biperideno (extrapiramidal), atropina e hidroxocobalamina conforme o agente, glicose e tiamina no álcool.",
+        "conduta": "Garantir segurança, EPI, avaliar ABC. Reconhecer a síndrome pelos sinais, relacionar ao agente (cocaína e anfetamínicos; atropina, tricíclicos, Solanaceae; organofosforados e carbamatos, \"chumbinho\"; opioides; benzodiazepínicos, barbitúricos, etanol; fenotiazínicos, metoclopramida, lítio; nitritos, dapsona) e acionar o protocolo específico. Em exposições a pesticidas, atender em local arejado, longe da contaminação. Estimar quantidade e tempo da exposição; consultar centro de intoxicação via Regulação.",
+        "prescricao": "1) Sem dose única: o tratamento depende do agente (protocolos específicos ATox).\n2) Antídotos: naloxona (opioides), flumazenil (benzodiazepínicos), biperideno (extrapiramidal), atropina (organofosforados/carbamatos), hidroxocobalamina (cianeto), glicose e tiamina (álcool), midazolam ou diazepam (convulsões por drogas de abuso). Doses: PENDENTE DE VERIFICAÇÃO (não constam neste protocolo).\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo ATox 2 (2016).",
+        "cid": "T65.9,T50.9",
+        "esp": "Toxicologia;Medicina de Emergência;Clínica Médica"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo ATox 2 – Síndromes tóxicas",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "tabelas de síndromes, agentes, antídotos e observações"
+        }
+      ],
+      "observacoes": "Algumas colunas numéricas (FC, PA, FR, T) das tabelas do PDF não saíram na extração; usei apenas o texto legível. Antídotos sem doses: PENDENTE."
+    },
+    {
+      "registro": {
+        "area": "Ortopedia e Traumatologia",
+        "nome": "Trauma de membros superiores e inferiores: atendimento pré-hospitalar",
+        "introducao": "Lesão traumática de extremidades (fraturas, luxações, ferimentos), com risco de hemorragia e de comprometimento vascular ou neurológico distal. Sempre buscar lesões associadas pela cinemática do trauma.",
+        "criterios": "Dor, ferimento, deformidade, crepitação, encurtamento, alterações sensitivas, vasculares ou motoras do membro.",
+        "exames": "Avaliação primária e secundária do trauma; pulso periférico, perfusão, sensibilidade e mobilidade antes e depois da imobilização. Radiografia é hospitalar.",
+        "tratamento": "Controlar sangramento com curativo compressivo estéril, limpar sujidade grosseira com soro fisiológico, cobrir feridas, imobilizar, repor volume se choque e considerar analgesia.",
+        "conduta": "Avaliação primária e secundária; curativo compressivo; enxague breve de ferimentos abertos com SF se muita sujidade; curativo estéril; reposição volêmica conforme o choque do trauma. Avaliar pulso, perfusão, sensibilidade e mobilidade; imobilizar com a técnica mais adequada e reavaliar. Mobilização cuidadosa com imobilização de coluna cervical, tronco e membros em prancha longa, sem atrasar o transporte; analgesia; Regulação Médica para o destino.",
+        "prescricao": "1) Analgesia: considerar (fármaco e dose não detalhados neste protocolo: ver protocolo de manejo da dor; PENDENTE DE VERIFICAÇÃO).\n2) Reposição volêmica: conforme protocolo de choque do trauma, se necessário.\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo AT19 (2016).",
+        "cid": "T14.2,T14.3,T11.9",
+        "esp": "Ortopedia e Traumatologia;Medicina de Emergência"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo AT19 – Trauma de membros superiores e inferiores",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "critérios e conduta"
+        }
+      ],
+      "observacoes": "Complementa as fichas de fratura exposta e amputação do acervo."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Hemorragia externa grave de extremidade: compressão e torniquete",
+        "introducao": "Sangramento externo visível, causa evitável de choque hemorrágico e morte no trauma. A compressão direta é a primeira medida; o torniquete é reservado ao membro com hemorragia incontrolável.",
+        "criterios": "Ferimento com sangramento externo visível na avaliação inicial; torniquete se hemorragia de membro persiste após compressão direta e curativo compressivo.",
+        "exames": "Pulso e perfusão distais antes e depois do curativo ou do torniquete; reavaliação do local para novos sangramentos; registro do horário do torniquete.",
+        "tratamento": "Compressão manual direta com gaze/compressa e curativo compressivo; se não controlar, torniquete proximal ao ferimento, com pressão que cesse sangramento e fluxo arterial distal.",
+        "conduta": "EPI, expor a ferida, checar pulso e perfusão, aplicar gaze e compressão manual até parar, e curativo compressivo. Se sangrar através do curativo, não retirá-lo; colocar novo por cima com mais pressão. Não remover objetos encravados: comprimir ao lado. Couro cabeludo: comprimir pelas bordas. Torniquete (dispositivo comercial, esfigmomanômetro ou recurso com ≥ 10 cm de largura) logo acima da lesão; anotar o horário; idealmente não manter por mais de 2 horas; torniquete frouxo piora o sangramento. Considerar analgesia.",
+        "prescricao": "1) Compressão direta e curativo compressivo como primeira opção.\n2) Torniquete se sangramento persistir (largura ≥ 10 cm); tempo ideal < 2 h; registrar horário.\n3) Analgesia: ver protocolo de manejo da dor (PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo AP18 e AP19 (2016).",
+        "cid": "T14.5",
+        "esp": "Medicina de Emergência;Cirurgia Geral;Angiologia e Cirurgia Vascular"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo AP18 e AP19 – Controle de hemorragias: compressão direta e torniquete",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "indicações, técnica, tempo e observações"
+        }
+      ],
+      "observacoes": "Fonte é protocolo de procedimento (AP); o registro descreve a situação clínica."
+    },
+    {
+      "registro": {
+        "area": "Urgência e Emergência",
+        "nome": "Contaminação por agente químico: descontaminação pré-hospitalar",
+        "introducao": "Remoção física ou neutralização de agente químico ingerido, inalado ou em contato com pele e olhos. A segurança da equipe vem primeiro, inclusive em acidentes com produtos perigosos, em que a equipe não deve entrar na zona quente antes de conhecer o produto.",
+        "criterios": "Exposição a agente tóxico por via digestiva, respiratória, cutânea ou ocular, ou cena com produto perigoso (veículo-tanque, placas de risco, vazamento, odores, incêndio).",
+        "exames": "Identificação do produto (painel de segurança, rótulo de risco, ficha de emergência, FISPQ, informantes), tempo e quantidade; contato com centro de intoxicação (Disque-Intoxicação 0800 722 6001).",
+        "tratamento": "Via digestiva: não induzir vômito, não dar líquidos; lavagem gástrica, como regra, não deve ser feita no pré-hospitalar (raramente, em transporte prolongado ou área remota, a critério do médico habilitado); carvão ativado só em transporte prolongado e na 1ª hora. Respiratória: ar livre, O2, nebulização. Cutânea: retirar roupas e lavar com água corrente. Ocular: irrigação por ≥ 20 min.",
+        "conduta": "Segurança da cena e EPI completo; decidir se o paciente pode ser manipulado antes da descontaminação; seguir o protocolo do agente. Pele: cortar vestes, retirar excesso de pó, lavar com água corrente (cabelos, axilas, umbigo, genitais, unhas), evitar hipotermia, aguardar equipe especializada nas contaminações extensas. Olhos: lavar do canto nasal para o lateral, pálpebras abertas, lateralizando se um olho. Primeiro a chegar a produto perigoso: manter distância, vento às costas, evitar locais baixos, informar a Regulação.",
+        "prescricao": "1) Carvão ativado (se disponível, atendimento remoto e dentro da 1ª hora, vias aéreas protegidas): 1 g/kg, máximo 50 g, diluído em 8 mL de SF ou água por grama, por sonda nasogástrica, em decúbito lateral esquerdo; esvaziar após cerca de 30 min. Ineficaz em álcoois, ferro e lítio; contraindicado em hidrocarbonetos, óleos essenciais, hipoclorito e cáusticos.\n2) Via respiratória: nebulização com SF; com broncoespasmo, fenoterol 10 gotas em 5 mL de SF com O2 6 L/min, repetir a cada 20 min até 3 vezes.\n3) Olhos: água ou SF contínuo por ≥ 20 min.\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo ATox 14, 16 e 17 (2016).",
+        "cid": "T65.9,T65.8",
+        "esp": "Toxicologia;Medicina de Emergência;Clínica Médica"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo ATox 14 – Descontaminação (e ATox 16 e 17 – produtos perigosos)",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "vias de contaminação, carvão ativado, nebulização, lavagem ocular, conduta na cena"
+        }
+      ],
+      "observacoes": "Há fichas de intoxicações específicas; esta ficha cobre o princípio geral de descontaminação."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Febre na criança: manejo pré-hospitalar",
+        "introducao": "Elevação da temperatura em resposta a diferentes estímulos. No atendimento pré-hospitalar, mede-se e trata-se o desconforto e se identifica a causa provável, sem retardar a avaliação.",
+        "criterios": "Temperatura axilar > 37,8 °C, retal ≥ 38,3 °C ou oral > 38 °C; extremidades frias, tremores, calafrios, alteração do humor ou da consciência, desidratação.",
+        "exames": "Temperatura (axilar, oral ou retal), pressão arterial, FC, oximetria, glicemia capilar, exame físico detalhado e SAMPLE.",
+        "tratamento": "Medidas físicas (retirar excesso de roupa, compressas mornas ou frias, nunca geladas nem com álcool) e antitérmico: paracetamol, ibuprofeno ou dipirona, geralmente se T > 38,5 °C (limiar menor se convulsão febril prévia, dor, desidratação, taquipneia).",
+        "conduta": "Avaliação primária, via aérea, posição de conforto, medidas físicas, avaliação secundária e causas; antitérmico conforme o limiar e sem repetir antes do intervalo mínimo. Evitar AAS abaixo de 12 anos (síndrome de Reye). Contato com a Regulação Médica e registro.",
+        "prescricao": "1) Paracetamol VO 10 a 15 mg/kg/dose a cada 4 a 6 h (1 gota/kg da solução 200 mg/mL, máx. 35 gotas); evitar em deficiência de G6PD.\n2) Ibuprofeno VO 5 a 10 mg/kg/dose a cada 6 h (máx. 200 mg/dose); contraindicado até 6 meses.\n3) Dipirona 10 a 15 mg/kg/dose a cada 6 h: VO 0,5 gota/kg (máx. 40 gotas); IM/IV 0,02 a 0,03 mL/kg (máx. 1 g); não usar abaixo de 3 meses ou 5 kg; IV não abaixo de 1 ano ou 9 kg; evitar em G6PD, alcoolizados e alergia.\n4) Não usar AAS em < 12 anos.\nBase: Ministério da Saúde, Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida, 2ª ed., protocolo APed 27 (2016).",
+        "cid": "R50.9",
+        "esp": "Pediatria;Medicina de Emergência"
+      },
+      "fontes": [
+        {
+          "titulo": "Protocolos de Intervenção para o SAMU 192 – Suporte Avançado de Vida (2ª ed.), protocolo APed27 – Febre",
+          "instituicao": "Ministério da Saúde (Secretaria de Atenção à Saúde, com PROADI-SUS/Hospital Alemão Oswaldo Cruz)",
+          "ano": "2016",
+          "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-avancado-de-vida-1.pdf/@@download/file",
+          "usadoPara": "critérios, limiares, doses e contraindicações"
+        }
+      ],
+      "observacoes": "Existe \"Febre sem sinais de localização (lactente)\" no acervo; esta ficha é o manejo sintomático pré-hospitalar em qualquer idade pediátrica."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Bradicardia, taquiarritmia, choque, SCA, dissecção de aorta, HAS, ICD, AVC, asma, DPOC, EAP, inconsciência, convulsão, hipotermia, hiper/hipoglicemia, dor abdominal, HDA/HDB, anafilaxia, cólica nefrética, epistaxe, hemoptise, agitação, autoagressão (adulto)",
+      "motivo": "já existem no acervo"
+    },
+    {
+      "tema": "TCE, trauma de face, ocular, costelas, tórax instável, pneumotórax simples/hipertensivo, hemotórax, contusão pulmonar, tamponamento, TAF, TRM, fratura exposta, amputação, pelve, esmagamento, compartimental, queimadura, afogamento",
+      "motivo": "já existem no acervo"
+    },
+    {
+      "tema": "Distocia de ombros, apresentação pélvica, prolapso de cordão, hemorragia gestacional e puerperal, pré-eclâmpsia/eclâmpsia, trabalho de parto, parto iminente, trauma na gestante, PCR na gestante",
+      "motivo": "já existem no acervo"
+    },
+    {
+      "tema": "Laringotraqueíte, asma pediátrica, anafilaxia, hipotermia, hipoglicemia, cetoacidose, epistaxe, afogamento, queimadura na criança; intoxicações por CO, cianeto, organofosforados, drogas de abuso, álcool, solventes, corrosivos, fumaça, animais peçonhentos, plantas, depressores do SNC",
+      "motivo": "já existem no acervo"
+    },
+    {
+      "tema": "OVACE, constatação de óbito, escoriações, saneantes, sequelas de TCE",
+      "motivo": "cobertos pelo lote 07 ou já existem"
+    },
+    {
+      "tema": "Cesárea post-mortem (AGO16)",
+      "motivo": "listada no sumário, mas o texto do protocolo não consta no PDF (apenas o título); sem fonte lida"
+    },
+    {
+      "tema": "PCR adulto/pediátrica, algoritmos, decisão de não ressuscitação",
+      "motivo": "PCR já existe; os demais são algoritmos/decisões, não ficha clínica"
+    },
+    {
+      "tema": "Protocolos de procedimentos (AP), especiais (PE), múltiplas vítimas, aeromédico, transporte inter-hospitalar, imobilização, escalas",
+      "motivo": "não são condições clínicas"
+    },
+    {
+      "tema": "Crise convulsiva e estado de mal epiléptico na criança: abordagem pré-hospitalar",
+      "motivo": "REPROVADO na revisão: duplicata de \"Estado de mal epiléptico pediátrico\", \"Crise convulsiva febril\", \"Convulsão febril complexa e primeira crise afebril\" e \"Convulsões neonatais\" (mesma sequência diazepam/midazolam, fenitoína, fenobarbital; neonato). Doses do APed 22 conferidas, mas sem conduta nova o bastante; se quiser, enriquecer a ficha \"Estado de mal epiléptico pediátrico\" com as vias retal/IM/intranasal do APed 22."
+    },
+    {
+      "tema": "Rebaixamento do nível de consciência na criança",
+      "motivo": "REPROVADO na revisão: duplicata de \"Coma e rebaixamento do nível de consciência\" e \"Coma: abordagem inicial\" (+ \"Estado vegetativo...\"); conduta do APed 21 é avaliação ABCDE/Glasgow ≤ 8 sem dose própria (hipoglicemia ficou PENDENTE)."
+    }
+  ]
+}

@@ -11,7 +11,7 @@ const { test, expect } = require('./apoio');
 const PORTA = 4181;
 const BASE = `http://localhost:${PORTA}/bluebook/`;
 let srv, site;
-/* cópia recursiva simples (fs.cpSync encerra o processo neste Windows/OneDrive) */
+/* cópia recursiva simples (fs.cpSync encerrava o processo quando a pasta estava no OneDrive) */
 function copiar(de, para) {
   fs.mkdirSync(para, { recursive: true });
   for (const n of fs.readdirSync(de)) {

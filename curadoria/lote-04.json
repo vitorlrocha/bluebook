@@ -1,0 +1,140 @@
+{
+  "lote": "04",
+  "criadoEm": "2026-11-12",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Kwashiorkor (desnutrição grave edematosa)",
+        "introducao": "Forma clássica de desnutrição aguda grave em crianças caracterizada por edema, alterações de cabelo e pele, esteatose hepática e hipoalbuminemia. O edema é multifatorial; entre os determinantes principais estão o aumento do estresse oxidativo e a redução da defesa antioxidante, com maior permeabilidade endotelial. O plano terapêutico é o mesmo do marasmo, e há carência múltipla de micronutrientes.",
+        "criterios": "Edema de intensidade variável: + (ambos os pés), ++ (pés, pernas, mãos e antebraços) ou +++ (generalizado, incluindo face). Cabelo descolorido (branco-acinzentado), ralo e quebradiço; dermatose com pele xerótica, aspecto de esmalte descascado e coloração avermelhada; esteatose hepática e hipoalbuminemia.",
+        "exames": "Segundo a fonte, não é necessário dosar vitaminas e minerais. Glicemia capilar ou sérica na admissão (hipoglicemia: < 54 mg/dL); avaliar eletrólitos (potássio, magnésio, fósforo; o sódio pode estar falsamente baixo no início); coletar culturas se houver suspeita de infecção. Albumina e demais exames de rotina: PENDENTE DE VERIFICAÇÃO.",
+        "tratamento": "Seguir os 10 passos da diretriz da OMS: (1) tratar ou prevenir hipoglicemia; (2) hipotermia; (3) desidratação e choque, de preferência com reidratação oral com ReSoMal ou SRO diluído, e via intravenosa com solução de baixo teor de sódio (soro ao meio, ringer) apenas na desidratação grave, sem resposta à via oral ou com suspeita de choque; (4) distúrbios hidroeletrolíticos; (5) infecções (culturas e antibiótico); (6) reposição de micronutrientes antes da recuperação nutricional; (7) iniciar a alimentação com cautela, de preferência com dieta isenta ou pobre em lactose e de baixa osmolaridade; (8) progredir a dieta; (9) estimulação sensorial e emocional; (10) preparar a alta e o seguimento.",
+        "conduta": "Internar na presença de edema +++ ou de complicação: sem apetite, vômitos intratáveis, convulsão ou piora da consciência, desidratação grave ou choque, hipoglicemia, hipotermia, febre alta (> 39 °C central ou > 38,5 °C axilar), infecção, anemia grave, dermatose intensa, sinais oculares de deficiência de vitamina A. Sinais clássicos de infecção e desidratação podem estar ausentes; a queda do apetite é sinal precoce de infecção e a volta do apetite indica melhora. Alta a considerar em ≥ 6 meses com escore z peso/estatura ou IMC ≥ -2, circunferência braquial ≥ 12,5 cm e ausência de edema há pelo menos 2 semanas; manter suplementação de micronutrientes e acompanhamento frequente com a rede do território.",
+        "prescricao": "1) Reidratação, dieta terapêutica (F-75, F-100), antibiótico, glicose e micronutrientes: doses PENDENTE DE VERIFICAÇÃO neste registro; ver as doses do registro \"Desnutrição grave (SAM)\" deste acervo e confirmar no Manual de atendimento da criança com desnutrição grave em nível hospitalar (MS/OPAS/SBP, 2005).\n2) Hipoglicemia: glicemia < 54 mg/dL; hipotermia: retal < 35,5 °C ou axilar < 35,0 °C.\n3) Dieta isenta ou com baixo teor de lactose e de baixa osmolaridade, iniciada o mais cedo possível e com cautela.\nBase: Sociedade Brasileira de Pediatria, Nota de Alerta nº 41 (2023), que resume a diretriz da OMS e o manual MS/OPAS/SBP 2005; o documento não traz doses.",
+        "cid": "E40",
+        "esp": "Pediatria; Nutrologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Princípios da abordagem e tratamento da desnutrição grave em crianças (Nota de Alerta nº 41)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Dep. Científico de Nutrologia",
+          "ano": "2023",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/23924c-NA-PrincipiosAbordagemTratam_Desnutr_Grave_Crc__NL2022.pdf",
+          "usadoPara": "Definição das formas clínicas, critérios (escore z, circunferência braquial, graus de edema), critérios de hospitalização e de alta, os 10 passos do tratamento. O documento não traz doses; remete ao Manual MS/OPAS/SBP 2005 e à diretriz da OMS 2021, não lidos."
+        }
+      ],
+      "observacoes": "Sem doses nesta ficha (a fonte não as traz). Forma já descrita dentro de \"Desnutrição grave (SAM)\"; ficha criada para cobrir o CID E40. Revisor: conferir doses no manual de 2005 se quiser complementar."
+    },
+    {
+      "registro": {
+        "area": "Pediatria",
+        "nome": "Marasmo (desnutrição grave não edematosa)",
+        "introducao": "Forma clássica de desnutrição aguda grave em crianças, com intenso consumo do tecido subcutâneo e sem edema. O plano terapêutico é o mesmo do kwashiorkor, e há carências múltiplas de micronutrientes. A causa pode ser primária (social, econômica, ambiental) ou secundária a doenças agudas ou crônicas.",
+        "criterios": "Perda acentuada de tecido subcutâneo (fácies senil, olhos encovados, fontanela deprimida, proeminências ósseas visíveis), com escore z peso/estatura ou IMC < -3 desvios-padrão e/ou circunferência braquial < 11,5 cm. Em menores de 6 meses, ver os critérios de internação na conduta.",
+        "exames": "Glicemia capilar ou sérica na admissão (hipoglicemia: < 54 mg/dL); eletrólitos (potássio, magnésio, fósforo); culturas se houver suspeita de infecção. Na desnutrição secundária, investigar a doença de base (pneumopatia, cardiopatia, nefropatia, neuropatia, má absorção). Exames de rotina adicionais: PENDENTE DE VERIFICAÇÃO.",
+        "tratamento": "Os mesmos 10 passos do kwashiorkor: estabilização (hipoglicemia, hipotermia, desidratação e choque, distúrbios hidroeletrolíticos, infecção, micronutrientes e início cuidadoso da dieta), reabilitação (progressão da dieta e estimulação sensorial e emocional) e seguimento após a alta. O tratamento pode ser hospitalar, ambulatorial ou domiciliar; o hospitalar é recomendado se houver suspeita de complicações.",
+        "conduta": "Identificar logo os distúrbios metabólicos e infecciosos de maior risco de morte. Em menores de 6 meses, internar se escore z < -3, edema bilateral, perda recente de peso, ganho inadequado por longo período ou dificuldade de amamentação após orientação. Usar curvas de crescimento e controle de ingestão e perdas. Alta em menores de 6 meses: boa aceitação do leite materno ou da dieta, ganho de peso efetivo e escore z ≥ -2. Seguimento com a rede do território, mantendo a suplementação de micronutrientes.",
+        "prescricao": "1) Dieta terapêutica, reidratação, antibiótico, glicose e micronutrientes: doses PENDENTE DE VERIFICAÇÃO neste registro; ver as doses do registro \"Desnutrição grave (SAM)\" deste acervo e confirmar no Manual MS/OPAS/SBP (2005).\n2) Preferir dieta isenta ou de baixo teor de lactose e de baixa osmolaridade; monitorar potássio, magnésio e fósforo durante a realimentação.\nBase: Sociedade Brasileira de Pediatria, Nota de Alerta nº 41 (2023), que resume a diretriz da OMS e o manual MS/OPAS/SBP 2005; o documento não traz doses.",
+        "cid": "E41",
+        "esp": "Pediatria; Nutrologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Princípios da abordagem e tratamento da desnutrição grave em crianças (Nota de Alerta nº 41)",
+          "instituicao": "Sociedade Brasileira de Pediatria, Dep. Científico de Nutrologia",
+          "ano": "2023",
+          "url": "https://www.sbp.com.br/fileadmin/user_upload/23924c-NA-PrincipiosAbordagemTratam_Desnutr_Grave_Crc__NL2022.pdf",
+          "usadoPara": "Definição das formas clínicas, critérios (escore z, circunferência braquial, graus de edema), critérios de hospitalização e de alta, os 10 passos do tratamento. O documento não traz doses; remete ao Manual MS/OPAS/SBP 2005 e à diretriz da OMS 2021, não lidos."
+        }
+      ],
+      "observacoes": "Sem doses (a fonte não as traz). Cobre o CID E41; a ficha \"Desnutrição grave (SAM)\" já traz as doses."
+    },
+    {
+      "registro": {
+        "area": "Endocrinologia e Metabologia",
+        "nome": "Pelagra (deficiência de niacina)",
+        "introducao": "Doença nutricional por deficiência de niacina (vitamina PP), clássica pela tríade dermatite, diarreia e demência (\"três Ds\"). Causada por deficiência de niacina e/ou triptofano; ocorre em populações cuja base alimentar é o sorgo, em má absorção e em situações de fome (por exemplo, campos de refugiados).",
+        "criterios": "Dermatite com placas vermelho-escuras, bem delimitadas e simétricas em áreas expostas (testa, pescoço, antebraços, pernas), com pele muito descamativa e pigmentada, às vezes com bolhas hemorrágicas. Nas formas mais graves, sintomas gastrointestinais (glossite, estomatite, diarreia) e neuropsiquiátricos. Diagnóstico clínico.",
+        "exames": "A fonte não descreve exame de confirmação (diagnóstico clínico). Outros exames: PENDENTE DE VERIFICAÇÃO.",
+        "tratamento": "Nicotinamida por via oral, em dose igual para crianças e adultos, mantida até a cura completa, associada a dieta rica em proteínas. Em surtos populacionais, melhorar a ração alimentar (por exemplo, com amendoim ou vegetais secos) até atender à necessidade diária, de cerca de 15 mg/dia para adultos.",
+        "conduta": "Suspeitar na tríade de dermatite em área exposta, diarreia e alterações neuropsiquiátricas em contexto de dieta pobre. Iniciar nicotinamida sem esperar confirmação laboratorial e orientar dieta rica em proteínas. Em surto, corrigir a ração alimentar da população.",
+        "prescricao": "1) Nicotinamida (vitamina PP) 100 mg VO, 3 vezes ao dia, para crianças e adultos, até a cura completa (número de dias: PENDENTE DE VERIFICAÇÃO).\n2) Dieta rica em proteínas.\n3) Necessidade diária do adulto: cerca de 15 mg.\nBase: Médecins Sans Frontières, Clinical guidelines, Pellagra (consulta em 2026), fonte internacional usada por não se ter localizado diretriz brasileira específica; confirmar apresentação e dose com a bula vigente no Brasil.",
+        "cid": "E52",
+        "esp": "Clínica Médica; Nutrologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Pellagra (Clinical guidelines)",
+          "instituicao": "Médecins Sans Frontières",
+          "ano": "2026 (consulta)",
+          "url": "https://medicalguidelines.msf.org/en/viewport/CG/english/pellagra-16689716.html",
+          "usadoPara": "Quadro clínico, nicotinamida 100 mg 3 vezes ao dia VO até a cura, dieta rica em proteína, necessidade diária de 15 mg. Fonte internacional (sem diretriz do Ministério da Saúde localizada)."
+        }
+      ],
+      "observacoes": "Fonte de ONG internacional (MSF), não brasileira/OMS: o revisor decide se aceita. Duração em dias PENDENTE."
+    },
+    {
+      "registro": {
+        "area": "Endocrinologia e Metabologia",
+        "nome": "Escorbuto (deficiência de vitamina C)",
+        "introducao": "Doença da carência de ácido ascórbico (vitamina C). A fonte consultada trata o escorbuto como indicação de tratamento e prevenção com vitamina C oral e informa que a dose terapêutica ótima não está estabelecida.",
+        "criterios": "Suspeita em pessoa com dieta pobre em vitamina C. A fonte lida (só a monografia do medicamento) não descreve critérios clínicos nem laboratoriais: PENDENTE DE VERIFICAÇÃO.",
+        "exames": "Não descritos na fonte lida. Dosagem de ácido ascórbico e exames para afastar coagulopatia: PENDENTE DE VERIFICAÇÃO.",
+        "tratamento": "Ácido ascórbico por via oral por pelo menos 2 semanas ou mais, até a resolução dos sintomas, seguido de dose preventiva enquanto persistir a situação de risco. A tolerância é boa nas doses indicadas.",
+        "conduta": "Iniciar vitamina C oral e manter por no mínimo 2 semanas e até a resolução dos sintomas; depois passar à dose de prevenção. Cuidados: acima de 1 g/dia pode haver desconforto gastrointestinal e nefrolitíase; a partir de 2 g/dia pode haver interferência na dosagem de glicose no sangue e na urina; na gestação não é contraindicado, mas a ingestão diária não deve passar de 1 g; na amamentação, não é contraindicado. Corrigir a dieta.",
+        "prescricao": "Esquemas alternativos (a fonte oferece dois; escolher um). 1) Esquema A (3 vezes ao dia, VO): 1 mês a 11 anos, 100 mg; 12 anos ou mais e adultos, 250 mg.\n2) Esquema B (2 vezes ao dia, VO): 1 a 3 anos, 100 mg; 4 a 11 anos, 250 mg; 12 anos ou mais e adultos, 500 mg.\n3) Duração: no mínimo 2 semanas ou até a resolução dos sintomas. A fonte informa que a dose ótima não está estabelecida.\n4) Prevenção: 50 mg 1 vez ao dia (crianças e adultos), enquanto durar o risco.\n5) Menores de 1 mês: PENDENTE DE VERIFICAÇÃO.\nBase: Médecins Sans Frontières, Essential drugs, ácido ascórbico oral (consulta em 2026), fonte internacional; confirmar com a bula vigente no Brasil.",
+        "cid": "E54",
+        "esp": "Clínica Médica; Nutrologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Ascorbic acid = vitamin C oral (Essential drugs)",
+          "instituicao": "Médecins Sans Frontières",
+          "ano": "2026 (consulta)",
+          "url": "https://medicalguidelines.msf.org/en/viewport/EssDr/english/ascorbic-acid-vitamin-c-oral-16685261.html",
+          "usadoPara": "Doses de tratamento e prevenção, duração, cuidados. Fonte internacional; sem diretriz do Ministério da Saúde localizada."
+        }
+      ],
+      "observacoes": "Fonte de ONG internacional (MSF); ficha enxuta porque a fonte lida cobre só o medicamento (critérios clínicos e exames PENDENTES)."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Síndrome de deficiência congênita de iodo (E00) e bócio/distúrbios por deficiência de iodo (E01)",
+      "motivo": "Nenhuma fonte oficial pôde ser lida (relatório Pró-Iodo da Anvisa devolveu só a página sem texto; sem outra fonte em 3 buscas). E03.1 já existe como \"Hipotireoidismo congênito\" e bócios como \"Bócio multinodular\"."
+    },
+    {
+      "tema": "Desnutrição proteico-calórica moderada (E44)",
+      "motivo": "Sem fonte lida que cubra desnutrição moderada/leve (a nota da SBP cobre só a grave); já existem \"Desnutrição proteico-calórica\" (E46) e \"Desnutrição grave (SAM)\" (E43)."
+    },
+    {
+      "tema": "Hipoparatireoidismo pós-cirúrgico e transtornos pós-procedimento (E89)",
+      "motivo": "Já existe: \"Hipoparatireoidismo\" e \"Hipoparatireoidismo e hipocalcemia\" (E20.9), além de \"Tireoidectomia: nódulos e câncer de tireoide\"."
+    },
+    {
+      "tema": "Episódio maníaco isolado (F30)",
+      "motivo": "Sem fonte lida: o PCDT do transtorno bipolar tipo I (Conitec) foi localizado, mas o PDF não pôde ser lido; já existem \"Transtorno bipolar tipo I: episódio maníaco\" e \"Transtorno bipolar (episódio maníaco)\" (F31)."
+    },
+    {
+      "tema": "Transtorno delirante induzido (F24)",
+      "motivo": "Nenhuma fonte oficial lida de diagnóstico/tratamento."
+    },
+    {
+      "tema": "Psicose não orgânica não especificada / outros psicóticos não orgânicos (F28-F29)",
+      "motivo": "Nenhuma fonte oficial lida; F23 (transtorno psicótico breve) já existe."
+    },
+    {
+      "tema": "Deficiência intelectual (F70-F79)",
+      "motivo": "Já existe: \"Deficiência intelectual\" (F79), em Pediatria."
+    },
+    {
+      "tema": "Transtornos mistos de conduta e das emoções (F92)",
+      "motivo": "Nenhuma fonte oficial lida; já existem \"Transtorno de conduta\" (F91.9) e \"Transtorno desafiador de oposição\" (F91.3)."
+    },
+    {
+      "tema": "Deficiência de zinco (E60)",
+      "motivo": "Revisão: a única fonte é material AIDPI regional (Yanomami e Ye'kwana) sobre diarreia infantil, que não trata a deficiência de zinco (critérios, exames, adultos, outras causas) e tem dose interna inconsistente (comprimidos '2x ao dia' vs 20 mg/dia). Reapresentar só com fonte brasileira sobre a deficiência (ex.: AIDPI Criança geral para zinco na diarreia, ficha própria de diarreia)."
+    }
+  ]
+}

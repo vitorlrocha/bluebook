@@ -250,6 +250,8 @@
       updateMany: function (map) { Object.keys(map).forEach(function (id) { aplicar(id, map[id]); }); salvar(); notify(); return Promise.resolve(); },
       addMany: function (arr) { arr.forEach(function (d, i) { novo(d, i + 1); }); salvar(); notify(); return Promise.resolve(); },
       update: function (id, data) { aplicar(id, data); salvar(); notify(); return Promise.resolve(); },
+      /* Nuvem (src/nuvem.js): os favoritos foram regravados no localStorage pela sincronização; relê e devolve a lista. */
+      recarregar: function () { est = null; return readAll(); },
       replaceAll: function (items) {
         var idx = indice(); est = { v: 2, fav: {}, extras: [] };
         (items || []).forEach(function (m) { if (!m || !m.nome) return; if (idx[low(m.nome)] !== undefined) { if (m.favorito) est.fav[low(m.nome)] = true; } else est.extras.push(m); });
@@ -1337,7 +1339,7 @@
   function noteSectionHtml(type, name) {
     var k = type + ":" + name, n = NOTES[k] || {};
     return '<div class="section note-section"><h3>Minhas anotações</h3>' +
-      '<textarea id="note-text" placeholder="Escreva aqui observações pessoais (ficam salvas neste navegador/aparelho).">' + escapeHtml(n.t || "") + '</textarea>' +
+      '<textarea id="note-text" data-nota="' + escapeHtml(k) + '" placeholder="Escreva aqui observações pessoais (ficam salvas neste navegador/aparelho).">' + escapeHtml(n.t || "") + '</textarea>' +
       '<div class="note-meta"><label><input type="checkbox" id="note-rev"' + (n.rev ? " checked" : "") + '> Marcar para revisão/correção</label>' +
       '<span>Conteúdo compilado pelo Bluebook · revisão geral em ' + APP_REV_DATE + ' · confirmar na bula, no Bulário Anvisa e nas diretrizes vigentes.</span></div></div>';
   }
@@ -1443,7 +1445,14 @@
     bigArea = ""; espFilter = "";
     if (kind === "m") { classFilter = ""; searchTerm = term; selectedId = val; switchViewMode("meds"); }
     else if (kind === "d") { diseaseAreaFilter = ""; diseaseSearchTerm = term; selectedDiseaseIdx = parseInt(val, 10); switchViewMode("diseases"); }
-    else if (kind === "cc") { diseaseAreaFilter = ""; diseaseSearchTerm = val; selectedDiseaseIdx = null; switchViewMode("diseases"); }
+    else if (kind === "cc") {
+      /* código CID de uma doença do app: lista as doenças com o código e já abre a ficha da primeira */
+      diseaseAreaFilter = ""; diseaseSearchTerm = val; selectedDiseaseIdx = null;
+      for (var di = 0; di < DISEASES.length && selectedDiseaseIdx === null; di++) {
+        if (String(DISEASES[di].cid || "").split(/[,;]/).some(function (c) { return c.trim() === val; })) selectedDiseaseIdx = di;
+      }
+      switchViewMode("diseases");
+    }
     else if (kind === "cb") { diseaseAreaFilter = ""; diseaseSearchTerm = "cid:" + val; selectedDiseaseIdx = null; switchViewMode("diseases"); }
     else if (kind === "s") { scoreSearchTerm = ""; selectedScoreId = val; switchViewMode("scores"); }
     else if (kind === "a") { atbSearchTerm = ""; selectedAtbId = val; switchViewMode("atb"); }
@@ -1487,9 +1496,13 @@
         html += '<div class="recent-box"><h5>Recentes</h5>' + rec.map(function (r) { return '<button type="button" class="recent-chip" data-rt="' + r.t + '" data-rn="' + escapeHtml(r.n) + '">' + escapeHtml(r.n) + "</button>"; }).join("") + "</div>";
       }
     } else {
-      var skip = viewMode === "meds" ? ["m"] : viewMode === "diseases" ? ["d"] : viewMode === "scores" ? ["s"] : viewMode === "atb" ? ["a"] : [];
-      var localN = sidebarEl.querySelectorAll(".med-item").length;
-      html = globalSearchHtml(term, skip, localN === 0);
+      /* Pedido do autor (v74): a barra de busca procura em TODO o app. O quadro com os resultados das outras seções
+         (medicamentos, doenças, CID-10, escores…) fica SEMPRE aberto, em qualquer aba; continua recolhível pelo
+         título. A lista da aba atual segue logo abaixo, como antes. */
+      gsBuild();
+      var skip = viewMode === "meds" || viewMode === "rx" ? ["m"] : viewMode === "diseases" ? ["d"] : viewMode === "scores" ? ["s"] : viewMode === "atb" ? ["a"]
+        : GS.r[viewMode] ? [viewMode] : [];    // abas de referência (CID-10, vacinas…): não repete a própria lista
+      html = globalSearchHtml(term, skip, true);
     }
     if (html) sidebarEl.insertAdjacentHTML("afterbegin", html);
   }
@@ -1513,6 +1526,7 @@
   var _rss = renderScoreSidebar; renderScoreSidebar = function () { _rss.apply(this, arguments); decorateSidebar(); };
   var _rsb = renderSidebar; renderSidebar = function () { _rsb.apply(this, arguments); decorateSidebar(); };
   var _rdsb = renderDiseaseSidebar; renderDiseaseSidebar = function () { _rdsb.apply(this, arguments); decorateSidebar(); };
+  var _rrxs = renderRxSidebar; renderRxSidebar = function () { _rrxs.apply(this, arguments); decorateSidebar(); };
 
   /* ---------------- Prescrição: verificador de interações ---------------- */
   var RX = lsGet("bluebook:rx", []);
@@ -1718,6 +1732,10 @@
   function trustLevel(kind, x) {
     var s = JSON.stringify(x);
     if (/PENDENTE DE VERIFICA/i.test(s)) return "pend";
+    /* Doenças que entraram por um lote revisado (ferramentas/integrar_lote.js, campo orig: "lote-NN") ainda não
+       passaram pela revisão do autor: selo "Literatura · não conferido", nunca "Revisado pelo autor". O campo orig
+       não é exibido nem entra na busca (disHay e a busca universal usam só os campos nomeados). */
+    if (kind === "d" && x.orig) return "lit";
     if (kind === "m" && CONF_M[x.nome]) return "ok";
     if (kind === "d" && /PCDT[^.\n]*Portaria/i.test(String(x.prescricao || ""))) return "ok";
     return AUTHOR_REVIEW ? "rev" : "lit";
@@ -2580,7 +2598,37 @@
     var feito = store && store.updateMany && Object.keys(map).length ? store.updateMany(map) : Promise.resolve();
     return feito.then(function () { setTimeout(function () { location.reload(); }, 600); });
   }
-  window.BBPerfil = { dados: perfilDados, importar: perfilImportar };
+  /* Nuvem (src/nuvem.js): depois que a sincronização grava no localStorage o que veio de outro aparelho, relê as
+     variáveis em memória e redesenha a tela atual — o app NÃO é recarregado. Se a pessoa está digitando num campo
+     da ficha (anotação, prescrição, peso), a tela só é redesenhada quando ela sair do campo, para não perder o
+     que está sendo digitado nem fechar o teclado. A anotação em edição nem chega aqui: src/nuvem.js adia o
+     registro enquanto o campo tem o foco (perfilEditando). */
+  var redesenhoPendente = false;
+  var TELAS_PESSOAIS = { meds: 1, diseases: 1, rx: 1, plantao: 1 };
+  function campoEmUso() { var a = document.activeElement; return !!(a && detailEl.contains(a) && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)); }
+  function lista(v) { return Array.isArray(v) ? v : []; }
+  function objeto(v, padrao) { return v && typeof v === "object" && !Array.isArray(v) ? v : padrao; }
+  function redesenhar() { redesenhoPendente = false; if (TELAS_PESSOAIS[viewMode]) render(); }
+  function perfilRecarregarMemoria() {
+    NOTES = objeto(lsGet("bluebook:notes", {}), {});
+    RECENTS = lista(lsGet("bluebook:recents", []));
+    HIST = lista(lsGet("bluebook:hist", []));
+    disFavs = lista(lsGet("bluebook:disease-favs", []));
+    RX = lista(lsGet("bluebook:rx", []));
+    RXPT = objeto(lsGet("bluebook:rxpt", null), { gest: false, lact: false, ped: false });
+    RXD = objeto(lsGet("bluebook:rxd", {}), {});
+    RXH = objeto(lsGet("bluebook:rxh", null), { pac: "", pres: "", crm: "" });
+    try { PL_KG = parseFloat(window.localStorage.getItem("bluebook:pl-kg") || "0") || 0; } catch (e) { PL_KG = 0; }
+    if (store && store.recarregar) medications = store.recarregar();
+    if (campoEmUso()) { redesenhoPendente = true; return; }
+    redesenhar();
+  }
+  detailEl.addEventListener("focusout", function () {
+    if (redesenhoPendente) setTimeout(function () { if (redesenhoPendente && !campoEmUso()) redesenhar(); }, 0);
+  });
+  /* Chave ("m:Nome" ou "d:Nome") da anotação que está sendo digitada agora, ou null. */
+  function perfilEditando() { var ta = document.getElementById("note-text"); return ta && document.activeElement === ta ? ta.getAttribute("data-nota") : null; }
+  window.BBPerfil = { dados: perfilDados, importar: perfilImportar, recarregarMemoria: perfilRecarregarMemoria, editando: perfilEditando };
 
   function perfilResumo() {
     var p = perfilDados(), notas = 0, dfav = 0;
@@ -2677,6 +2725,22 @@
     setTimeout(atualizar, 2000);
   })();
 
+  /* Ajustes → Sincronização (src/nuvem.js). Só existe quando o app foi gerado com a nuvem configurada. */
+  function ligarSinc() {
+    var N = window.BBNuvem, st = document.getElementById("sinc-status"), bt = document.getElementById("sinc-agora");
+    function desenhar() {
+      if (!document.body.contains(st)) { document.removeEventListener("bb:nuvem", desenhar); return; }
+      var e = N.estado();
+      st.textContent = e.texto;
+      st.style.color = !e.conectado || e.erro ? "var(--bad-ink)" : e.pendente || !e.online || e.sincronizando ? "var(--ink-soft)" : "var(--ok)";
+      bt.disabled = e.sincronizando || !e.conectado;
+    }
+    bt.addEventListener("click", function () { N.sincronizar({ busca: true }).then(desenhar); desenhar(); });
+    document.addEventListener("bb:nuvem", desenhar);
+    window.addEventListener("online", desenhar); window.addEventListener("offline", desenhar);
+    desenhar();
+  }
+
   function ligarConta(overlay) {
     var A = window.BBAuth;
     document.getElementById("conta-sair").addEventListener("click", function () { overlay.remove(); A.sair(); });
@@ -2693,6 +2757,7 @@
       }).catch(function (err) { st.textContent = err && err.message ? err.message : "Não foi possível alterar a senha."; });
     });
     if (document.getElementById("settings-drive")) ligarDrive(overlay);
+    if (document.getElementById("settings-sinc")) ligarSinc();
     document.getElementById("perfil-export").addEventListener("click", function () {
       var p = perfilDados();
       downloadJson("bluebook-perfil-" + todayInputValue() + ".json", { tipo: "bluebook-perfil", versao: 1, email: A.email(), exportadoEm: new Date().toISOString(), dados: p.dados, favoritos: p.favoritos });
@@ -2757,6 +2822,15 @@
         '<button type="button" class="btn" id="cs-salvar" style="margin-top:8px;">Salvar nova senha</button>' +
         '<p id="cs-status" class="calc-note" role="status"></p></div>' +
         '</div>' +
+        /* Nuvem (src/nuvem.js): estado da sincronização automática. Sem nuvem configurada, a seção não aparece. */
+        (window.BBNuvem && window.BBNuvem.configurado() ? (
+          '<div class="field" id="settings-sinc"><label>Sincronização</label>' +
+          '<p id="sinc-status" class="body-text" role="status" style="margin:0 0 8px 0;font-size:14px;"></p>' +
+          '<div style="display:flex;gap:8px;flex-wrap:wrap;"><button type="button" class="btn" id="sinc-agora">Sincronizar agora</button></div>' +
+          '<p class="calc-note" style="margin-top:8px;">Suas anotações, favoritos, recentes, buscas recentes, prescrição em andamento (medicamentos, doses, prescritor e CRM) e o peso do plantão vão para a sua conta na nuvem e aparecem sozinhos nos seus outros aparelhos. ' +
+          'O campo “Paciente” da prescrição fica só neste aparelho. ' +
+          '<strong>Não escreva nas anotações nome ou dados que identifiquem pacientes</strong> (LGPD: dados de saúde são sensíveis).</p></div>'
+        ) : "") +
         '<div class="field" id="settings-perfil"><label>Backup do perfil</label>' +
         '<p class="body-text" style="margin:0 0 10px 0;font-size:13px;color:var(--ink-soft);">Anotações, favoritos, recentes, prescrições e peso do plantão, ligados ao seu e-mail. Use para levar o perfil a outro aparelho (crie lá o acesso com o mesmo e-mail) ou como cópia de segurança. A senha não vai no arquivo.</p>' +
         '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
@@ -3446,6 +3520,9 @@
     });
   }
   searchInput.addEventListener("input", function () {
+    /* Celular: com uma ficha aberta a lista fica escondida; ao digitar (2+ letras) ela volta, para os resultados de
+       todo o app aparecerem. A ficha continua selecionada (toque nela de novo na lista). */
+    if (searchInput.value.trim().length >= 2 && window.matchMedia && window.matchMedia("(max-width: 780px)").matches) document.body.classList.remove("showing-detail");
     if (REFS[viewMode]) {
       REFS[viewMode].st.term = searchInput.value;
       REFS[viewMode].side();

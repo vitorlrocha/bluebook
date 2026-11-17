@@ -1,0 +1,307 @@
+{
+  "lote": "02",
+  "criadoEm": "2026-11-13",
+  "doencas": [
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Psitacose (ornitose)",
+        "introducao": "Infecção aguda por Chlamydia psittaci, adquirida por inalação de poeira contaminada por excretas de aves (psitacídeos, pombos, perus, gansos) e, mais raramente, de caprinos e ovinos. Cursa como pneumonia atípica; em geral leve a moderada, mais grave em idosos sem tratamento. Doença ocupacional (abatedouros, lojas de animais, criadores). Transmissão pessoa a pessoa é rara.",
+        "criterios": "Febre, prostração, tosse, cefaleia e calafrios com acometimento de vias aéreas; pode haver epistaxe, esplenomegalia, distensão abdominal, obstipação ou diarreia, delírio e roséolas semelhantes às da febre tifoide. Incubação de 1 a 4 semanas. Diagnóstico clínico-epidemiológico (contato com aves) e sorológico: aumento de 4 vezes nos títulos entre fase aguda e convalescença (coletas com 2 a 3 semanas de intervalo); título de 1:32 com quadro sugestivo é evidência de infecção.",
+        "exames": "Sorologia pareada (fixação do complemento e/ou Elisa). Radiografia de tórax: consolidação lobar, ou padrão intersticial/miliar, com ou sem derrame. Isolamento do agente em sangue, secreções ou tecidos é possível, mas difícil e restrito a laboratórios especializados.",
+        "tratamento": "Antibioticoterapia dirigida (doxiciclina em adultos; eritromicina em menores de 7 anos). Complicações pouco frequentes: pericardite, miocardite, endocardite, tromboflebite superficial, hepatite, encefalopatia.",
+        "conduta": "Suspeitar em pneumonia atípica com exposição a aves. Tratar precocemente para evitar complicações. Diagnóstico diferencial: pneumonia por outras clamídias, Legionella, Rickettsia ou Mycoplasma; endocardite com cultura negativa; febre tifoide se houver roséolas. Não é de notificação compulsória (só investigação de surtos). Identificar a origem das aves e avaliar contatos para febre ou sintomas. Há relato de doença grave com aborto em gestante exposta a ovelha infectada.",
+        "prescricao": "1) Adultos: doxiciclina 100 mg VO de 12/12 h por 14 a 21 dias.\n2) Menores de 7 anos: eritromicina 30 a 40 mg/kg/dia VO, dividida de 6/6 h (duração: PENDENTE DE VERIFICAÇÃO, não definida na fonte).\n3) Gestantes: conduta PENDENTE DE VERIFICAÇÃO (a fonte não trata do tratamento na gestação).\nBase: Ministério da Saúde, Doenças infecciosas e parasitárias: guia de bolso, cap. Psitacose (8ª ed. rev., 1ª reimpr., 2013).",
+        "cid": "A70",
+        "esp": "Infectologia; Pneumologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Doenças infecciosas e parasitárias: guia de bolso (Psitacose; Coccidioidomicose)",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde",
+          "ano": "2013 (8ª ed. rev., 1ª reimpr.)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/doencas_infecciosas_parasitarias_guia_bolso.pdf",
+          "usadoPara": "definição, clínica, diagnóstico, tratamento com doses, vigilância"
+        }
+      ],
+      "observacoes": "Fonte oficial brasileira lida e conferida pelo revisor (cap. Psitacose, p. 334-335). Edição conferida na ficha catalográfica: 8ª ed. rev., 1ª reimpr., 2013."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Coccidioidomicose",
+        "introducao": "Micose sistêmica por Coccidioides, predominantemente pulmonar, que pode comprometer pele, laringe, ossos, articulações e meninges. Adquire-se por inalação de artroconídios do solo seco e alcalino; não é contagiosa de pessoa a pessoa. No Brasil, os casos descritos vieram do Nordeste e se associaram à caça de tatu; é doença rara e inusitada no país. A forma disseminada é rara e fatal, mais importante em pessoas com aids.",
+        "criterios": "Cerca de 60% têm infecção primária inaparente. Sintomáticos: sintomas respiratórios baixos, febre, sudorese noturna, dor pleural, dispneia, tosse, artralgia, anorexia; eritema nodoso, polimorfo e exantemas em até um quinto. Radiografia: adenomegalia hilar, infiltrado e derrame pleural; até 5% ficam com coccidioidoma (nódulo) ou cavitação. Forma disseminada: lesões pulmonares com abscessos em subcutâneo, pele, ossos e SNC. Incubação de 1 a 3 semanas (GVS 2024, vol. 2, p. 631). Epidemiologia: exposição ao solo em área endêmica (caça de tatu no Brasil).",
+        "exames": "Exame micológico direto (escarro, pus, LCR, raspado de pele, biópsia) e cultura em ágar Sabouraud, em laboratório com segurança nível II e manipulação das culturas em contenção NB3. Histopatologia: esférulas com endosporos. Sorologia (IgM; níveis de IgG requerem avaliação criteriosa). Teste cutâneo com esferulina tem pouco valor diagnóstico.",
+        "tratamento": "Anfotericina B seguida de azólico oral prolongado; fluconazol é preferido nas formas com SNC pelo bom nível cerebral. Critério de cura: clínico mais negativação do exame micológico.",
+        "conduta": "Diagnóstico diferencial: tuberculose (inclusive meníngea), paracoccidioidomicose, esporotricose, histoplasmose, neoplasias e leishmaniose visceral em áreas onde coexistem. Seguir com rigor pacientes com HIV/aids pelo risco de disseminação. Não é de notificação compulsória nacional nem objeto de vigilância de rotina; notificar os casos suspeitos onde a norma estadual ou municipal exigir e investigar o local provável de infecção (GVS 2024, vol. 2, p. 642). Biossegurança estrita no manejo de amostras. Educação em saúde em áreas de risco.",
+        "prescricao": "1) Forma pulmonar aguda grave: complexo lipídico de anfotericina B 5 mg/kg/dia EV (se indisponível, anfotericina B lipossomal 3 mg/kg/dia EV; desoxicolato só se não houver formulação lipídica), por várias semanas até melhora clínica e radiológica; depois manutenção com itraconazol 400 mg/dia VO.\n2) Pulmonar aguda moderada ou crônica: itraconazol 400 mg/dia VO por 6 a 24 meses, até a cura (avaliada principalmente pela clínica); fluconazol em dose semelhante é alternativa.\n3) Disseminada sem SNC (pele, osteoarticular): itraconazol 400 a 600 mg/dia VO (fluconazol como alternativa); anfotericina B nos casos graves ou de localização crítica, como coluna.\n4) Meningoencefalite ou forma tumoral do SNC: fluconazol 400 mg até 1.200 mg/dia nos casos mais graves (itraconazol em doses semelhantes como alternativa); anfotericina B intratecal na resistência ou contraindicação aos azólicos (dose e duração não definidas na fonte); fluconazol supressivo por toda a vida.\n5) Gestante no 3º trimestre: anfotericina B (azólicos contraindicados pelo risco de teratogenia); após o parto, pode-se trocar por itraconazol conforme a clínica.\nBase: Ministério da Saúde, Guia de Vigilância em Saúde, 6ª ed. revisada, vol. 2, cap. 6, Coccidioidomicose (2024), pp. 641-642 (doses); Doenças infecciosas e parasitárias: guia de bolso (8ª ed. rev., 2013), demais dados.",
+        "cid": "B38.9",
+        "esp": "Infectologia; Pneumologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Doenças infecciosas e parasitárias: guia de bolso (Psitacose; Coccidioidomicose)",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde",
+          "ano": "2013 (8ª ed. rev., 1ª reimpr.)",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/doencas_infecciosas_parasitarias_guia_bolso.pdf",
+          "usadoPara": "clínica, diagnóstico, tratamento e doses, vigilância"
+        },
+        {
+          "titulo": "Guia de Vigilância em Saúde, 6ª edição revisada, volume 2 (capítulo 6: Coccidioidomicose)",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde e Ambiente",
+          "ano": "2024",
+          "url": "https://saude.sp.gov.br/resources/cve-centro-de-vigilancia-epidemiologica/publicacoes/guia-de-vigilancia-em-saude-volume-2-6a-edicao.pdf",
+          "usadoPara": "Doses e esquemas de tratamento (fonte mais recente; substitui as doses do guia de bolso de 2013). Cópia do PDF oficial hospedada pelo CVE-SP; o endereço bvsms do volume 2 retorna 404."
+        }
+      ],
+      "observacoes": "Conferido pelo revisor (cap. Coccidioidomicose, p. 112-114): doses e esquema idênticos à fonte. A fonte é antiga e brasileira; não há contradição com outra fonte lida. | Revisão do lote 08 (13/11/2026): doses (pp. 641-642), incubação de 1 a 3 semanas (p. 631) e notificação (p. 642: não compulsória nacional) atualizadas pelo GVS 6ª ed. rev. vol. 2; antes: itraconazol 300 mg/dia e 'dose total 1-3 g' de anfotericina."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Febre por mordedura de rato",
+        "introducao": "Zoonose bacteriana transmitida por mordedura ou arranhadura de roedores (ou contato com secreções). Dois agentes: Streptobacillus moniliformis (forma mais comum; febre de Haverhill) e Spirillum minus (mais associado a viagem à Ásia). Doença rara, mas com complicações graves se não tratada.",
+        "criterios": "S. moniliformis: incubação de 3 a 10 dias; febre, calafrios, mialgia, cefaleia e vômitos; exantema maculopapular das extremidades 2 a 4 dias após a febre; cerca de 50% têm poliartrite. S. minus: início em 7 a 21 dias, com a mordida já parcialmente cicatrizada: febre, úlcera local, linfangite, linfadenopatia e exantema de placas violáceas ou vermelhas. Complicações se não tratada: abscessos, artrite séptica, pneumonia, hepatite, nefrite, meningite, endocardite (a de maior risco de morte), miocardite, pericardite.",
+        "exames": "S. moniliformis: hemocultura, líquido sinovial, outros fluidos e tecidos ou lesão primária, colhidos antes do antimicrobiano; o germe não cresce em ágar de rotina (avisar o laboratório); Gram com bacilos gram-negativos pleomórficos apoia. S. minus: não cresce em meios artificiais; diagnóstico por espiroquetas em campo escuro ou colorações.",
+        "tratamento": "Penicilina G intravenosa por no mínimo 7 dias, seguida de penicilina oral. Alergia: doxiciclina ou estreptomicina. Endocardite: associar penicilina G a estreptomicina ou gentamicina.",
+        "conduta": "Considerar em febre, exantema e artralgia com contato com roedores. Se o quadro lembrar febre maculosa e o diagnóstico for incerto, a doxiciclina pode ser a primeira escolha, inclusive em crianças. Procurar endocardite, a complicação mais grave. Notificação no Brasil: PENDENTE DE VERIFICAÇÃO.",
+        "prescricao": "1) Penicilina G IV por no mínimo 7 dias e depois penicilina VO (doses, intervalo e duração total: PENDENTE DE VERIFICAÇÃO; a fonte não traz).\n2) Alergia à penicilina: doxiciclina ou estreptomicina (doses: PENDENTE DE VERIFICAÇÃO).\n3) Endocardite: penicilina G IV mais estreptomicina ou gentamicina (doses: PENDENTE DE VERIFICAÇÃO).\nBase: CDC (EUA), Clinical Overview of Rat Bite Fever (fonte internacional, complemento; sem documento brasileiro lido), página vigente em 2026.",
+        "cid": "A25.1",
+        "esp": "Infectologia; Clínica Médica"
+      },
+      "fontes": [
+        {
+          "titulo": "Clinical Overview of Rat Bite Fever",
+          "instituicao": "CDC (Centers for Disease Control and Prevention), complemento por ausência de documento brasileiro lido",
+          "ano": "página vigente em 2026",
+          "url": "https://www.cdc.gov/rat-bite-fever/hcp/clinical-overview/index.html",
+          "usadoPara": "clínica, diagnóstico, esquema antimicrobiano (sem doses)"
+        }
+      ],
+      "observacoes": "CDC não informa doses. Sem fonte brasileira lida. CID A25.1 refere-se a S. moniliformis; S. minus seria A25.0 (não usada)."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Febre recorrente transmitida por carrapato mole (borreliose)",
+        "introducao": "Borreliose causada por espiroquetas do gênero Borrelia, com episódios febris recorrentes por variação antigênica do agente. Ficha de referência internacional, baseada na febre recorrente por carrapato mole (doença rara ou não confirmada no Brasil); a ocorrência e o manejo no Brasil não foram confirmados em fonte brasileira lida. Não confundir com a doença de Lyme.",
+        "criterios": "Febre em episódios recorrentes com exposição a carrapato mole em área de risco. Laboratório pode mostrar trombocitopenia, leucocitose, bilirrubina levemente elevada, VHS elevado e TP/TTPa levemente prolongados. A descrição detalhada dos sintomas não constava da página lida.",
+        "exames": "Esfregaço de sangue (campo escuro ou corado) durante a febre: espiroquetas podem estar em altas concentrações (cerca de 10^6/mL), melhor em paciente sintomático e sem tratamento. PCR em sangue total é mais sensível e útil em fase assintomática ou logo após iniciar tratamento. Sorologia pode não diferenciar de outras borrelioses e dar falso positivo para Lyme. Cultura restrita a laboratórios especializados.",
+        "tratamento": "Antibioticoterapia por 10 dias (doxiciclina preferida). Gestantes e comprometimento neurológico: beta-lactâmico parenteral por 10 a 14 dias com monitorização. Observar reação de Jarisch-Herxheimer.",
+        "conduta": "Colher esfregaço antes do antibiótico. Vigiar as primeiras 4 horas de tratamento pela reação de Jarisch-Herxheimer (até 50% dos casos; calafrios, hipotensão, febre alta), de difícil distinção da crise febril; SDRA é rara. Interpretar sorologia à luz de viagens e exposição.",
+        "prescricao": "1) Adultos (sem gestação nem acometimento neurológico), por 10 dias, uma opção: doxiciclina IV ou VO 100 mg de 12/12 h (preferida); azitromicina VO 500 mg/dia; penicilina G IV 4.000.000 UI de 6/6 h; ceftriaxona IV 2 g/dia.\n2) Crianças, por 10 dias: doxiciclina 2,2 mg/kg/dose de 12/12 h (máx. 100 mg/dose); azitromicina 10 mg/kg/dia (máx. 500 mg/dia); penicilina G IV 50.000 a 100.000 UI/kg de 6/6 h (máx. 4.000.000 UI/dose); ceftriaxona IV 50 a 75 mg/kg/dia (máx. 2 g/dia).\n3) Gestantes ou com envolvimento neurológico: beta-lactâmico parenteral 10 a 14 dias (doses: PENDENTE DE VERIFICAÇÃO).\nBase: CDC (EUA), Clinical Guidance for Soft Tick Relapsing Fever (fonte internacional, complemento; sem documento brasileiro lido), página vigente em 2026.",
+        "cid": "A68.9",
+        "esp": "Infectologia; Clínica Médica"
+      },
+      "fontes": [
+        {
+          "titulo": "Clinical Guidance for Soft Tick Relapsing Fever (STRF)",
+          "instituicao": "CDC (Centers for Disease Control and Prevention), complemento por ausência de documento brasileiro lido",
+          "ano": "página vigente em 2026",
+          "url": "https://www.cdc.gov/relapsing-fever/hcp/soft-tick-relapsing-fever/index.html",
+          "usadoPara": "diagnóstico, tratamento com doses, Jarisch-Herxheimer"
+        }
+      ],
+      "observacoes": "Cobre só a forma por carrapato mole; febre recorrente por piolho (A68.0) e por carrapato duro não foram lidas. Dados CDC (EUA); epidemiologia brasileira PENDENTE."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Tifo exantemático epidêmico (Rickettsia prowazekii)",
+        "introducao": "Rickettsiose transmitida por piolho do corpo, associada a aglomeração e condições precárias, e também a contato com esquilos-voadores nos EUA. A recrudescência tardia (doença de Brill-Zinsser) ocorre meses ou anos após infecção não tratada, em estresse ou imunidade comprometida, e pode reintroduzir o agente e causar surtos.",
+        "criterios": "Início abrupto 8 a 16 dias após exposição: febre, calafrios, cefaleia, alteração do estado mental, taquipneia, tosse, mialgia, náusea, vômito. Exantema maculopapular em 2 a 3 dias, do tronco para extremidades, poupando palmas e plantas; pode faltar e não deve guiar o diagnóstico. Atraso do tratamento: complicações neurológicas (confusão, convulsão, coma) e vasculite disseminada. Laboratório: bilirrubina e transaminases elevadas, trombocitopenia.",
+        "exames": "Diagnóstico clínico-epidemiológico, pois os testes são pouco confiáveis no início. Confirmação por sorologia pareada (aumento de 4 vezes entre a fase aguda e a convalescente, 2 a 10 semanas depois), imuno-histoquímica, PCR ou cultura, em laboratório de referência. Na doença de Brill-Zinsser, IgG sobe sem aumento de IgM.",
+        "tratamento": "Doxiciclina é o tratamento de escolha em qualquer idade, iniciada sem esperar confirmação. Tratar a infestação por piolhos com pediculicida.",
+        "conduta": "Comunicar imediatamente a vigilância em saúde (a fonte CDC orienta notificar de imediato o departamento de saúde; regra brasileira de notificação: PENDENTE DE VERIFICAÇÃO). Não adiar a doxiciclina por exames. Desinfestar pacientes e controlar infestação; precauções em ambientes fechados e aglomerados. Gestantes: conduta PENDENTE DE VERIFICAÇÃO (não tratada na fonte).",
+        "prescricao": "1) Adultos acima de 45 kg: doxiciclina 100 mg 2 vezes ao dia (via oral; via parenteral: PENDENTE DE VERIFICAÇÃO).\n2) Crianças abaixo de 45 kg: doxiciclina 2,2 mg/kg/dose 2 vezes ao dia (máx. 100 mg/dose).\n3) Duração: pelo menos 3 dias após a febre cessar e até melhora clínica, em geral no mínimo 7 a 10 dias.\n4) Piolhos: pediculicida em gel ou creme (produto e posologia: PENDENTE DE VERIFICAÇÃO).\nBase: CDC (EUA), Clinical Overview of Epidemic Typhus (fonte internacional, complemento; sem documento brasileiro lido), página vigente em 2026.",
+        "cid": "A75.0",
+        "esp": "Infectologia; Clínica Médica"
+      },
+      "fontes": [
+        {
+          "titulo": "Clinical Overview of Epidemic Typhus",
+          "instituicao": "CDC (Centers for Disease Control and Prevention), complemento por ausência de documento brasileiro lido",
+          "ano": "página vigente em 2026",
+          "url": "https://www.cdc.gov/typhus/hcp/clinical-overview/clinical-overview-of-epidemic-typhus.html",
+          "usadoPara": "clínica, diagnóstico, doxiciclina e duração, Brill-Zinsser"
+        }
+      ],
+      "observacoes": "Sem fonte brasileira; situação epidemiológica no Brasil não verificada."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Listeriose",
+        "introducao": "Infecção por Listeria monocytogenes, adquirida principalmente por alimentos contaminados. Doença invasiva em idosos, imunocomprometidos, gestantes e recém-nascidos; adultos jovens saudáveis raramente têm doença invasiva. Letalidade em torno de 20%; cerca de 25% dos casos associados à gestação terminam em perda fetal ou morte neonatal. Quase todos os casos invasivos são hospitalizados.",
+        "criterios": "Gestação: em geral quadro gripal leve ou assintomático, com risco de aborto, natimorto, parto prematuro e sepse/meningite neonatal. Recém-nascido: forma precoce (até 6 dias, transplacentária) e tardia (7 a 28 dias); granulomatose infantisséptica. Adultos: sepse, meningite, meningoencefalite e focos (artrite séptica, osteomielite, prótese, tórax, abdome, pele, olho). Pessoas saudáveis podem ter gastroenterite febril autolimitada com dose alta.",
+        "exames": "Cultura de sítios estéreis (hemocultura; líquor conforme a clínica). Cultura de fezes não é recomendada para diagnóstico nem rastreio (eliminação intermitente em cerca de 5% sem infecção). Sorologia tem baixa sensibilidade e especificidade e não é recomendada. Em expostos assintomáticos não há indicação de exame nem tratamento; orientar retorno se sintomas em até 2 meses.",
+        "tratamento": "Doença invasiva: ampicilina intravenosa associada a gentamicina por 14 a 21 dias em não alérgicos. Casos leves com exposição conhecida, afebris: ampicilina ou amoxicilina oral é citada, sem dados de eficácia; se a hemocultura isolar Listeria, usar o esquema padrão.",
+        "conduta": "Gestante com febre sem outra causa ou exposição: colher hemocultura antes do antibiótico e discutir com infectologia/obstetrícia (a fonte CDC adota febre acima de 38,1 °C sem outra causa em pessoa de alto risco como gatilho para testar e tratar como listeriose presumida, e remete a parecer do ACOG, não lido). Recém-nascido e meningite: doses e esquemas PENDENTES DE VERIFICAÇÃO. Alergia a beta-lactâmico: alternativa PENDENTE DE VERIFICAÇÃO. Prevenção: orientar gestantes e imunodeprimidos sobre alimentos de risco (conteúdo detalhado não lido na fonte).",
+        "prescricao": "1) Doença invasiva (não alérgicos): ampicilina IV mais gentamicina por 14 a 21 dias (doses: PENDENTE DE VERIFICAÇÃO; a fonte não traz).\n2) Caso leve com exposição e hemocultura negativa: ampicilina ou amoxicilina VO é citada, sem dados de eficácia (dose: PENDENTE DE VERIFICAÇÃO).\n3) Gestação e recém-nascido: esquemas PENDENTES DE VERIFICAÇÃO.\nBase: CDC (EUA), Clinical Overview of Listeria Infection e Clinical Care of Listeria (fonte internacional, complemento; sem documento brasileiro lido), páginas vigentes em 2026.",
+        "cid": "A32.9",
+        "esp": "Infectologia; Obstetrícia"
+      },
+      "fontes": [
+        {
+          "titulo": "Clinical Overview of Listeria Infection",
+          "instituicao": "CDC (Centers for Disease Control and Prevention), complemento por ausência de documento brasileiro lido",
+          "ano": "página vigente em 2026",
+          "url": "https://www.cdc.gov/listeria/hcp/clinical-overview/index.html",
+          "usadoPara": "grupos de risco, apresentações na gestação e no recém-nascido"
+        },
+        {
+          "titulo": "Clinical Care of Listeria",
+          "instituicao": "CDC (Centers for Disease Control and Prevention), complemento por ausência de documento brasileiro lido",
+          "ano": "página vigente em 2026",
+          "url": "https://www.cdc.gov/listeria/hcp/clinical-care/index.html",
+          "usadoPara": "diagnóstico e esquema antibiótico sem doses"
+        }
+      ],
+      "observacoes": "Sem doses nas fontes lidas; gestação/RN e alergia ficaram PENDENTES. Recomenda-se complementar com Manual de Gestação de Alto Risco/MS ou protocolo neonatal."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Febre hemorrágica por arenavírus do Novo Mundo (incluindo vírus Sabiá, Brasil)",
+        "introducao": "Grupo de febres hemorrágicas virais por arenavírus sul-americanos (Junín, Machupo, Guanarito, Chapare, Sabiá). No Brasil, o vírus Sabiá causa a febre hemorrágica brasileira, e a fonte CDC lista o Brasil como país de ocorrência do vírus Sabiá (reservatório desconhecido, provavelmente roedores).",
+        "criterios": "Incubação de 3 a 21 dias conforme o vírus. Febre, mal-estar e cefaleia por 5 a 7 dias, seguidos de encefalite, insuficiência renal, hemorragia e hipotensão; citopenias, sobretudo plaquetopenia. Sabiá pode causar faringite, náusea e vômito; Chapare, envolvimento neurológico e sangramento gengival grave.",
+        "exames": "Testagem decidida em conjunto com a vigilância em saúde e laboratório de referência; muitos vírus só são testados em laboratórios especializados, com plano prévio de coleta e embalagem. Manter investigação de diagnósticos diferenciais (malária, entre outros).",
+        "tratamento": "Suporte: reposição volêmica cuidadosa (risco de extravasamento capilar), oxigênio, monitorização de glicose e eletrólitos. Ribavirina já foi usada em arenaviroses do Novo Mundo (uso compassivo, não aprovada para essa indicação nos EUA).",
+        "conduta": "Em caso suspeito, acionar de imediato a vigilância em saúde, que coordena a testagem com o laboratório de referência. Isolamento em quarto individual com banheiro privativo, porta fechada, equipe mínima e registro de entradas; evitar procedimentos geradores de aerossol (se necessários, quarto com pressão negativa). EPI: avental, protetor facial, máscara e duas luvas (paciente estável); macacão ou avental impermeável, PAPR ou N95, duas luvas e protetor de botas (instável, com sangramento, vômito ou diarreia).",
+        "prescricao": "1) Suporte clínico em ambiente isolado, conforme acima.\n2) Ribavirina: uso compassivo em arenavírus do Novo Mundo; dose, via e duração PENDENTES DE VERIFICAÇÃO (a fonte não traz).\n3) Plasma de convalescente é eficaz na febre hemorrágica argentina, disponível apenas na Argentina.\nBase: CDC (EUA), Yellow Book, Post-Travel Evaluation to Rule Out Viral Special Pathogen Infection (fonte internacional, complemento; sem documento brasileiro lido), página vigente em 2026.",
+        "cid": "A96",
+        "esp": "Infectologia; Medicina Intensiva"
+      },
+      "fontes": [
+        {
+          "titulo": "Yellow Book: Post-Travel Evaluation to Rule Out Viral Special Pathogen Infection",
+          "instituicao": "CDC (Centers for Disease Control and Prevention), complemento por ausência de documento brasileiro lido",
+          "ano": "página vigente em 2026",
+          "url": "https://www.cdc.gov/yellow-book/hcp/post-travel-evaluation/post-travel-evaluation-to-rule-out-viral-special-pathogen-infection.html",
+          "usadoPara": "arenavírus do Novo Mundo: clínica, diagnóstico, suporte, precauções"
+        }
+      ],
+      "observacoes": "Sem documento do MS lido. Sem doses."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Triquinose (triquinelose)",
+        "introducao": "Parasitose por Trichinella, adquirida pelo consumo de carne crua ou malcozida de animais infectados, em geral carne de suíno malcozida e caça (urso, javali, felinos silvestres, raposa, lobo, foca, morsa); linguiça e charque caseiros dessas carnes também transmitem. Cerca de 3 a 4 semanas depois, as larvas se alojam nas células musculares esqueléticas.",
+        "criterios": "Fase intestinal (incubação de 1 a 2 dias): diarreia, nas primeiras semanas. Fase de invasão muscular (2 a 8 semanas ou mais, conforme a dose infectante): febre, mialgia e edema, sobretudo de face, por dias a semanas; os sinais costumam diminuir após alguns meses. Formas graves: miocardite, encefalite e doença tromboembólica. A infecção estimula eosinofilia. Epidemiologia: ingestão de carne crua ou malpassada de animais infectados.",
+        "exames": "Sorologia (EIA, o teste mais usado): IgG detectável cerca de 12 a 60 dias após a infecção, com pico no 2º ou 3º mês e persistência por 10 anos ou mais; se a primeira amostra for negativa ou fraca, testar pelo menos duas amostras com semanas de intervalo para ver soroconversão; pode haver reação cruzada com outras parasitoses. Biópsia de músculo esquelético (0,2 a 0,5 g; digestão artificial ou histologia), menos usada, identifica a espécie. Diagnóstico = história de consumo da carne + quadro compatível + larvas ou anticorpos específicos. Em tratamentos longos, hemogramas seriados pelo risco de supressão medular.",
+        "tratamento": "Antiparasitário (albendazol ou mebendazol). Casos graves podem exigir corticoide (dose e duração não informadas). Se o tratamento não começar nos primeiros dias, podem ser necessários cursos mais longos ou repetidos.",
+        "conduta": "Gestantes: segurança incerta; os fármacos não são aprovados na gestação, e a OMS admite uso no 2º e 3º trimestres em campanhas de massa, pesando risco e benefício. Lactantes: dose única de albendazol pode ser usada; mebendazol compatível com amamentação. Crianças: albendazol não aprovado em menores de 2 anos; segurança abaixo de 6 anos não totalmente estabelecida; poucos dados de mebendazol em menores de 2 anos.",
+        "prescricao": "1) Albendazol 400 mg VO 2 vezes ao dia por 8 a 14 dias (adultos e crianças).\n2) Ou mebendazol 200 a 400 mg VO 3 vezes ao dia por 3 dias, depois 400 a 500 mg 3 vezes ao dia por 10 dias.\n3) Corticoide em casos graves: dose e duração PENDENTES DE VERIFICAÇÃO.\nBase: CDC (EUA), Clinical Care of Trichinellosis (atualizada em 12/03/2024) e Clinical Overview of Trichinellosis (22/05/2024) (fonte internacional, complemento; sem documento brasileiro lido).",
+        "cid": "B75",
+        "esp": "Infectologia; Clínica Médica"
+      },
+      "fontes": [
+        {
+          "titulo": "Clinical Care of Trichinellosis",
+          "instituicao": "CDC (Centers for Disease Control and Prevention), complemento por ausência de documento brasileiro lido",
+          "ano": "página vigente em 2026",
+          "url": "https://www.cdc.gov/trichinellosis/hcp/clinical-care/index.html",
+          "usadoPara": "tratamento com doses, populações especiais"
+        },
+        {
+          "titulo": "Clinical Overview of Trichinellosis",
+          "instituicao": "CDC (Centers for Disease Control and Prevention), complemento por ausência de documento brasileiro lido",
+          "ano": "2024-05-22",
+          "url": "https://www.cdc.gov/trichinellosis/hcp/clinical-overview/index.html",
+          "usadoPara": "clínica, diagnóstico, epidemiologia (adicionada pelo revisor)"
+        }
+      ],
+      "observacoes": "Clínica e diagnóstico completados pelo revisor com a página Clinical Overview do CDC. Sem fonte brasileira; sem dose de corticoide."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Hanseníase: prevenção de incapacidades e sequelas neurais",
+        "introducao": "Complemento do tratamento quimioterápico da hanseníase: avaliar a função neural, classificar o grau de incapacidade e ensinar autocuidado para evitar deformidades. Tem maior risco quem tem história de reação ou neurite, ou grau de incapacidade 1 ou 2 já no diagnóstico. Úlcera plantar decorre da perda de sensibilidade protetora e do trauma repetido.",
+        "criterios": "Grau 0: nenhum problema nos olhos, mãos e pés devido à hanseníase. Grau 1: diminuição ou perda de sensibilidade (córnea, palma ou planta; não sentir o monofilamento de 2 g ou o toque leve de caneta); o PCDT 2022 inclui também a diminuição da força muscular em mãos, pés ou olhos. Grau 2: olhos com lagoftalmo e/ou ectrópio, triquíase, opacidade central da córnea ou acuidade visual menor que 0,1 (não conta dedos a 6 m); mãos e pés com úlceras tróficas e lesões traumáticas, garras, reabsorção, mão ou pé caído, contratura do tornozelo. Registra-se o maior grau de cada segmento; o escore olhos-mãos-pés (OMP no PCDT 2022) soma os seis segmentos (0 a 12).",
+        "exames": "Avaliação neurológica (face, nariz, olhos, membros superiores e inferiores) no diagnóstico; a cada 3 meses durante o tratamento e ao final (PCDT 2022: no diagnóstico, a cada 3 meses e ao final do tratamento; repetir com novas queixas e nas reações); mensalmente durante neurites e reações ou se houver suspeita, durante e após o tratamento; diante de queixas (atenção às neuropatias silenciosas); e na alta. Classificar o grau de incapacidade no diagnóstico e na alta.",
+        "tratamento": "Quimioterapia específica, corticoterapia (neurites e reações), cirurgia quando indicada e monitorização regular preservam acuidade visual e função neural. Autocuidado diário: exame dos pés e dos sapatos, cuidados com a marcha, proteção e lubrificação dos olhos. Lagoftalmo, ectrópio e triquíase: lubrificação artificial, retirada de cílios que tocam o globo e cirurgia.",
+        "conduta": "Úlcera de córnea: encaminhamento URGENTE ao oftalmologista; limpeza ocular e curativo com lubrificante e pomada (lente no curativo oclusivo em lagoftalmo/ectrópio; não ocluir em queimadura química, lavar 15 a 30 minutos). Exercícios ativos são contraindicados em neurite aguda, mão ou pé reacional, traumatismo, úlceras e processos infecciosos. Pé reacional (ENH): elevação da perna e repouso. Dificuldades não resolvidas na unidade básica seguem para referência com contrarreferência. Estimular inclusão social e orientar exame de contatos e BCG.",
+        "prescricao": "1) Avaliação neurológica e do grau de incapacidade nos momentos acima.\n2) Autocuidado e medidas locais conforme manual.\n3) Corticoide em neurite e reações: ver registro de reações hansênicas; doses não lidas neste manual (PENDENTE DE VERIFICAÇÃO).\nBase: Ministério da Saúde, Manual de prevenção de incapacidades, Cadernos de prevenção e reabilitação em hanseníase n. 1, 3ª ed. (2008); conferido com o PCDT de Hanseníase 2022 (Portaria SCTIE/MS 67/2022), item 7.1, sem contradição.",
+        "cid": "B92",
+        "esp": "Infectologia; Dermatologia"
+      },
+      "fontes": [
+        {
+          "titulo": "Manual de prevenção de incapacidades (Cadernos de prevenção e reabilitação em hanseníase, n. 1, 3ª ed.)",
+          "instituicao": "Ministério da Saúde, Secretaria de Vigilância em Saúde",
+          "ano": "2008",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_prevencao_incapacidades.pdf",
+          "usadoPara": "grau de incapacidade, periodicidade da avaliação neurológica, autocuidado, cuidados oculares"
+        },
+        {
+          "titulo": "Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase (item 7.1, Avaliação Neurológica Simplificada)",
+          "instituicao": "Ministério da Saúde/Conitec",
+          "ano": "2022",
+          "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/20220818_pcdt_hanseniase.pdf/view",
+          "usadoPara": "conferência de periodicidade da ANS, grau de incapacidade, escore OMP (adicionada pelo revisor)"
+        }
+      ],
+      "observacoes": "Manual de 2008 conferido; PCDT 2022 lido pelo revisor: não contradiz periodicidade nem graus; apenas acrescenta força muscular ao grau 1. Registro sem doses. Complementa as fichas existentes \"Hanseníase\" e \"Hanseníase: reações hansênicas\" (foco distinto: incapacidades)."
+    },
+    {
+      "registro": {
+        "area": "Infectologia",
+        "nome": "Síndrome do choque tóxico estreptocócico (doença invasiva por estreptococo do grupo A)",
+        "introducao": "Infecções graves por Streptococcus pyogenes: síndrome do choque tóxico estreptocócico (STSS), com choque e falência de órgãos de início súbito, e fasciite necrosante tipo II. Mortalidade da fasciite estimada em 15 a 20%, maior com a idade e com STSS.",
+        "criterios": "STSS: pródromo gripal (calafrios, febre, mialgia, náusea, vômito) que evolui rápido para sepse, hipotensão em 24 a 48 horas, taquicardia, taquipneia e falência de sangue, rim, fígado e pulmão. Critérios: hipotensão, envolvimento de múltiplos órgãos e isolamento de estreptococo do grupo A. Fasciite: dor desproporcional ao exame, eritema, calor, edema; em 24 a 48 horas pele escura, bolhas com conteúdo hemorrágico, anestesia, gangrena, possível síndrome compartimental. Em criança com varicela, os sinais cutâneos podem faltar.",
+        "exames": "Hemoculturas e culturas de focos; Gram e cultura de material operatório. Leucocitose, plaquetopenia, CPK elevada e azotemia são comuns na fasciite. TC ou RM podem ajudar, mas não devem atrasar a exploração cirúrgica.",
+        "tratamento": "Internação (terapia intensiva se grave) com ressuscitação e suporte de órgãos. Antibiótico precoce de amplo espectro parenteral; confirmado estreptococo do grupo A, penicilina associada a clindamicina (a clindamicina reduz a produção de toxina). Reavaliar o esquema em 24 a 48 horas. Desbridamento cirúrgico precoce e agressivo é o tratamento principal da fasciite; imunoglobulina intravenosa pode ser considerada em casos graves, sem eficácia comprovada.",
+        "conduta": "A fasciite necrosante tem ficha própria no acervo (\"Fasciite necrosante\"); aqui é tratada como complicação. Suspeitar de fasciite em dor desproporcional; não atrasar a cirurgia por imagem; ferida aberta e reinspeção em 24 horas; fasciotomia na síndrome compartimental. Contatos domiciliares de caso confirmado: sem profilaxia nem triagem rotineira; considerar se houver pessoas com 65 anos ou mais ou de risco aumentado.",
+        "prescricao": "1) Penicilina em altas doses mais clindamicina, IV, após confirmação do estreptococo do grupo A (doses, intervalos e duração: PENDENTE DE VERIFICAÇÃO; as fontes lidas não informam).\n2) Antes da confirmação: antibioticoterapia parenteral de amplo espectro guiada pelo Gram (esquema: PENDENTE DE VERIFICAÇÃO).\n3) IVIG: considerar em casos graves e precoces (dose: PENDENTE DE VERIFICAÇÃO).\nBase: CDC (EUA), Clinical Guidance for Streptococcal Toxic Shock Syndrome e Type II Necrotizing Fasciitis (fonte internacional, complemento; sem documento brasileiro lido), páginas vigentes em 2026.",
+        "cid": "A40.0",
+        "esp": "Infectologia; Medicina Intensiva"
+      },
+      "fontes": [
+        {
+          "titulo": "Clinical Guidance for Streptococcal Toxic Shock Syndrome",
+          "instituicao": "CDC (Centers for Disease Control and Prevention), complemento por ausência de documento brasileiro lido",
+          "ano": "página vigente em 2026",
+          "url": "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/streptococcal-toxic-shock-syndrome.html",
+          "usadoPara": "definição, critérios, tratamento"
+        },
+        {
+          "titulo": "Clinical Guidance for Type II Necrotizing Fasciitis",
+          "instituicao": "CDC (Centers for Disease Control and Prevention), complemento por ausência de documento brasileiro lido",
+          "ano": "página vigente em 2026",
+          "url": "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/necrotizing-fasciitis.html",
+          "usadoPara": "clínica, desbridamento, antibióticos"
+        }
+      ],
+      "observacoes": "Sem doses. Pode sobrepor-se a \"Sepse/choque séptico\" e a fichas de partes moles; o revisor decide."
+    }
+  ],
+  "pulados": [
+    {
+      "tema": "Erisipeloide (A26)",
+      "motivo": "Nenhuma fonte oficial aberta e lida nesta tarefa."
+    },
+    {
+      "tema": "Tétano obstétrico (A34)",
+      "motivo": "Já existem \"Tétano\" e \"Tétano acidental e neonatal\" (A35); o guia de bolso do MS lido não define a forma obstétrica; evitar duplicata."
+    },
+    {
+      "tema": "Encefalites por arbovírus (A83) e encefalite viral aguda (A86)",
+      "motivo": "As fontes do MS achadas só tratam de vigilância/classificação, sem manejo clínico. Já existem \"Encefalite herpética\" e \"Meningite viral e encefalite herpética\"."
+    },
+    {
+      "tema": "Tricuríase (B79)",
+      "motivo": "Sem página oficial de tratamento aberta nas 3 buscas (CDC retornou 404). Já existe \"Verminose intestinal (parasitose)\" (B77, B80, B82.9)."
+    },
+    {
+      "tema": "Sequelas de tuberculose pulmonar (B90)",
+      "motivo": "Não localizado capítulo do MS sobre sequelas; só artigos genéricos. Já existe ficha de tuberculose pulmonar."
+    },
+    {
+      "tema": "Difilobotríase (B70.0)",
+      "motivo": "Reprovado na revisão: a única fonte lida (CDC Clinical Care) só traz tratamento e precauções; sem clínica, diagnóstico ou epidemiologia a ficha não tem conteúdo clínico útil. Reabrir com fonte que descreva o quadro e o diagnóstico (ex.: CDC \"About Diphyllobothrium\" ou documento do MS)."
+    }
+  ]
+}
