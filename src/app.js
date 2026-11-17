@@ -1735,7 +1735,7 @@
     /* Doenças que entraram por um lote revisado (ferramentas/integrar_lote.js, campo orig: "lote-NN") ainda não
        passaram pela revisão do autor: selo "Literatura · não conferido", nunca "Revisado pelo autor". O campo orig
        não é exibido nem entra na busca (disHay e a busca universal usam só os campos nomeados). */
-    if (kind === "d" && x.orig) return "lit";
+    if (x.orig) return "lit"; /* doença ou medicamento acrescentado depois da revisão do autor (campo orig) */
     if (kind === "m" && CONF_M[x.nome]) return "ok";
     if (kind === "d" && /PCDT[^.\n]*Portaria/i.test(String(x.prescricao || ""))) return "ok";
     return AUTHOR_REVIEW ? "rev" : "lit";
@@ -2736,6 +2736,21 @@
       bt.disabled = e.sincronizando || !e.conectado;
     }
     bt.addEventListener("click", function () { N.sincronizar({ busca: true }).then(desenhar); desenhar(); });
+    var xb = document.getElementById("sinc-excluir-btn"), xp = document.getElementById("sinc-excluir");
+    xb.addEventListener("click", function () { xp.hidden = !xp.hidden; xb.setAttribute("aria-expanded", xp.hidden ? "false" : "true"); });
+    document.getElementById("sx-confirmar").addEventListener("click", function () {
+      var xs = document.getElementById("sx-status"), sen = document.getElementById("sx-senha");
+      xs.style.color = "var(--bad-ink)";
+      if (!document.getElementById("sx-ok").checked) { xs.textContent = "Marque a confirmação para continuar."; return; }
+      if (sen && !sen.value) { xs.textContent = "Informe a sua senha."; return; }
+      xs.style.color = "var(--ink-soft)"; xs.textContent = "Excluindo…";
+      N.excluirConta(sen ? sen.value : "").then(function () {
+        xs.style.color = "var(--ok)";
+        xs.textContent = "Conta e dados da nuvem excluídos. Este aparelho continua funcionando só com os dados locais.";
+        if (sen) sen.value = "";
+        desenhar();
+      }).catch(function (e) { xs.style.color = "var(--bad-ink)"; xs.textContent = N.mensagem(e, "excluir"); });
+    });
     document.addEventListener("bb:nuvem", desenhar);
     window.addEventListener("online", desenhar); window.addEventListener("offline", desenhar);
     desenhar();
@@ -2829,7 +2844,15 @@
           '<div style="display:flex;gap:8px;flex-wrap:wrap;"><button type="button" class="btn" id="sinc-agora">Sincronizar agora</button></div>' +
           '<p class="calc-note" style="margin-top:8px;">Suas anotações, favoritos, recentes, buscas recentes, prescrição em andamento (medicamentos, doses, prescritor e CRM) e o peso do plantão vão para a sua conta na nuvem e aparecem sozinhos nos seus outros aparelhos. ' +
           'O campo “Paciente” da prescrição fica só neste aparelho. ' +
-          '<strong>Não escreva nas anotações nome ou dados que identifiquem pacientes</strong> (LGPD: dados de saúde são sensíveis).</p></div>'
+          '<strong>Não escreva nas anotações nome ou dados que identifiquem pacientes</strong> (LGPD: dados de saúde são sensíveis).</p>' +
+          /* LGPD (direito de eliminação): apaga a conta e os dados pessoais guardados na nuvem. */
+          '<button type="button" class="btn-ghost btn" id="sinc-excluir-btn" aria-expanded="false" style="margin-top:10px;">Excluir minha conta na nuvem</button>' +
+          '<div id="sinc-excluir" hidden style="margin-top:10px;">' +
+          '<p class="calc-note" style="margin:0 0 8px 0;">Apaga, de forma definitiva, a sua conta e todos os seus dados pessoais guardados na nuvem (anotações, favoritos, recentes e prescrições sincronizadas). Os dados deste aparelho continuam aqui até você sair ou limpar o navegador. Precisa de internet.</p>' +
+          (window.BBAuth.temSenha() ? '<label for="sx-senha" style="font-size:13px;">Sua senha (para confirmar)</label><input type="password" id="sx-senha" autocomplete="current-password">' : "") +
+          '<label style="font-size:13px;display:flex;gap:8px;align-items:flex-start;margin-top:6px;"><input type="checkbox" id="sx-ok" style="width:auto;margin-top:3px;"> Entendo que a exclusão na nuvem não pode ser desfeita.</label>' +
+          '<button type="button" class="btn" id="sx-confirmar" style="margin-top:8px;background:var(--danger);">Excluir conta e dados na nuvem</button>' +
+          '<p id="sx-status" class="calc-note" role="status"></p></div></div>'
         ) : "") +
         '<div class="field" id="settings-perfil"><label>Backup do perfil</label>' +
         '<p class="body-text" style="margin:0 0 10px 0;font-size:13px;color:var(--ink-soft);">Anotações, favoritos, recentes, prescrições e peso do plantão, ligados ao seu e-mail. Use para levar o perfil a outro aparelho (crie lá o acesso com o mesmo e-mail) ou como cópia de segurança. A senha não vai no arquivo.</p>' +
@@ -2849,7 +2872,8 @@
       /* v72 (docs/DESIGN.md §7): no celular o rodapé fica oculto; o aviso legal aparece aqui. */
       '<div class="field" id="settings-about"><label>Sobre</label>' +
       '<p class="body-text" style="margin:0;font-size:13px;color:var(--ink-soft);">O Bluebook é uma ferramenta de apoio à consulta: não substitui o julgamento clínico nem a bula. ' +
-      escapeHtml((document.querySelector("footer") || {}).textContent ? document.querySelector("footer").textContent.trim() : "") + "</p></div>" +
+      escapeHtml((document.querySelector("footer") || {}).textContent ? document.querySelector("footer").textContent.trim() : "") + "</p>" +
+      '<p class="body-text" style="margin:8px 0 0 0;font-size:13px;"><a href="privacidade.html" target="_blank" rel="noopener" id="link-privacidade">Política de privacidade e termos de uso</a></p></div>' +
       /* v73: versão, data, verificação de atualização e instalação (src/atualiza.js). */
       '<div class="field" id="settings-versao"><label>Versão e atualização</label>' +
       '<p class="body-text" id="versao-linha" style="margin:0;font-size:14px;"></p>' +

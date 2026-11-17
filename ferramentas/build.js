@@ -81,6 +81,9 @@ if (nuvem && !/^[a-z0-9-]{4,}$/.test(nuvem.projectId)) throw new Error('BB_FIREB
 const hash = require('crypto').createHash('sha256').update(semVersao).update(JSON.stringify(nuvem));
 fs.copyFileSync(path.join(pwa, 'manifest.json'), path.join(pasta, 'manifest.json'));
 hash.update(fs.readFileSync(path.join(pwa, 'manifest.json')));
+// Política de privacidade e termos de uso (página própria, também guardada para uso offline pelo sw.js)
+fs.copyFileSync(path.join(pwa, 'privacidade.html'), path.join(pasta, 'privacidade.html'));
+hash.update(fs.readFileSync(path.join(pwa, 'privacidade.html')));
 fs.mkdirSync(path.join(pasta, 'icones'), { recursive: true });
 for (const f of fs.readdirSync(path.join(pwa, 'icones')).sort()) {
   const b = fs.readFileSync(path.join(pwa, 'icones', f));

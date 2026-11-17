@@ -6,16 +6,16 @@ Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSIS
 
 | Prioridade | Itens |
 |---|---:|
-| Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 9 |
+| Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 4 |
 | Prioridade 2 — faixas divergentes e doses a confirmar | 181 |
-| Prioridade 3 — completar informação (sem risco de dose) | 47 |
-| **Total** | **237** |
+| Prioridade 3 — completar informação (sem risco de dose) | 49 |
+| **Total** | **234** |
 
 Informativo: 16 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
 
 ## Prioridade 1 — pode mostrar dose errada (revisar primeiro)
 
-### Ficha × calculadora pediátrica (sem sobreposição) (2)
+### Ficha × calculadora pediátrica (sem sobreposição) (1)
 
 Conferir em: bula no Bulário Eletrônico da Anvisa (seção Posologia, uso pediátrico) e SBP quando houver.
 Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
@@ -23,29 +23,24 @@ Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
 | Feito | Onde | O que conferir |
 |:---:|---|---|
 | ☐ | Captopril | Ficha (Pediatria): 0,01-0,05 mg/kg/dose · Calculadora: VO 0,3-0,5 mg/kg/dose |
-| ☐ | Secnidazol | Ficha (Pediatria): 7,5 mg/kg/dose · Calculadora: VO 30 mg/kg/dose |
 
-### Plantão × calculadora pediátrica (3)
+### Plantão × calculadora pediátrica (2)
 
 Conferir em: diretriz citada no protocolo (campo "fonte" do protocolo) e bula Anvisa do fármaco.
 Arquivo: `dados/plantao.json e dados/ped_db.json`
 
 | Feito | Onde | O que conferir |
 |:---:|---|---|
-| ☐ | Crise convulsiva / estado de mal epiléptico — Diazepam (Retal) | Plantão: máx. 20 mg · Calculadora: Retal máx. 10 mg (máximo diferente) |
 | ☐ | Crise de asma grave — Prednisolona/prednisona (VO) | Plantão: máx. 40 mg · Calculadora: VO máx. 60 mg (máximo diferente) |
 | ☐ | Sepse e choque séptico — Hidrocortisona (choque refratário a catecolaminas) (EV) | Plantão: 2 mg/kg/dose · máx. 100 mg · Calculadora: EV/IM 4-8 mg/kg/dose · máx. 250 mg (dose fora da faixa) |
 
-### Calculadora pediátrica: texto × número usado no cálculo (4)
+### Calculadora pediátrica: texto × número usado no cálculo (1)
 
 Conferir em: SBP (documento científico/guia prático do tema) ou bula Anvisa; conferir também o texto "ob" e "rev" da própria entrada.
 Arquivo: `dados/ped_db.json`
 
 | Feito | Onde | O que conferir |
 |:---:|---|---|
-| ☐ | Dexametasona (IM/EV) | máx. por dose — texto: "máx. 10 mg/dose" · campo mx: 16 mg |
-| ☐ | Carbamazepina (VO) | máx. diário — texto: "máx. 1.000 mg/dia" · campo mxd: 1200 mg |
-| ☐ | Hidroclorotiazida (VO) | máx. diário — texto: "máx. 37,5 mg/dia" · campo mxd: 100 mg |
 | ☐ | Hidroxizina (VO) | máx. diário — texto: "máx. 50 mg/dia" · campo mxd: 100 mg |
 
 ## Prioridade 2 — faixas divergentes e doses a confirmar
@@ -257,7 +252,7 @@ Arquivo: `dados/seed_meds.json`
 
 ## Prioridade 3 — completar informação (sem risco de dose)
 
-### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (29)
+### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (31)
 
 Conferir em: bula Anvisa (Bulário Eletrônico) e lista CMED vigente; PCDT/Conitec se for medicamento de alto custo.
 Arquivo: `dados/seed_meds.json`
@@ -293,6 +288,8 @@ Arquivo: `dados/seed_meds.json`
 | ☐ | Necrose gordurosa subcutânea e escleredema neonatal — Exames | …septos (escleredema). Pesquisar hipercalcemia na necrose gordurosa (associação descrita na fonte; exame e periodicidade não especificados: PENDENTE DE VERIFICAÇÃO). Diferenciais: celulite bacteriana e lesões de sepse. |
 | ☐ | Estrias, cloasma gravídico, gengivite e rinite da gestação — Exames | Sem exame de rotina. Se sangramento gengival ou nasal importante ou recorrente, avaliar coagulação e plaquetas (exame específico: PENDENTE DE VERIFICAÇÃO) e verificar a pressão arterial. |
 | ☐ | Tontura, lipotimia e dispneia fisiológicas da gestação — Exames | Pressão arterial, ausculta cardíaca e pulmonar. Se houver alteração na ausculta, encaminhar para avaliação médica. Exames adicionais: PENDENTE DE VERIFICAÇÃO (não detalhados na fonte). |
+| ☐ | Sepse e choque séptico — itens | Dose de estresse: PENDENTE DE VERIFICAÇÃO em fonte brasileira (a diretriz pediátrica da Surviving Sepsis Campaign não define dose). Considera… |
+| ☐ | Captopril — al — via VO | Não usar esta calculadora para recém-nascidos: a dose inicial é muito menor (ver ficha). Dose inicial pediátrica: PENDENTE DE VERIFICAÇÃO (a tabela da SBP 2019 diverge do valor usado aqui). Titular com PA, potássio e creatinina. |
 
 ### Prescrição sem a linha "Base:" (referência) (16)
 

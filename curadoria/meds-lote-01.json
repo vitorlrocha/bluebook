@@ -1,0 +1,120 @@
+{
+  "lote": "meds-01",
+  "criadoEm": "2026-11-17",
+  "observacao": "Medicamentos da RENAME 2024 que faltavam no app. Cada ficha foi escrita a partir da fonte aberta e lida nesta tarefa (campo fontes).",
+  "medicamentos": [
+    {
+      "registro": {
+        "nome": "Óleo mineral",
+        "classe": "Laxante lubrificante",
+        "tarja": "Sem tarja (venda livre)",
+        "via": "Oral",
+        "generico": "Sim",
+        "referencias": "Nujol, Mineroleo, Dólio",
+        "apresentacoes": "Óleo mineral (vaselina líquida) 100%, frascos para uso oral.",
+        "indicacoes": "Constipação intestinal (prisão de ventre), por curto período.",
+        "posologia": "Adultos: 15 mL (1 colher de sopa) à noite e 15 mL na manhã seguinte; sem efeito, 30 mL à noite e 15 mL pela manhã. Crianças acima de 6 anos: 1 a 2 mL/kg 1x/dia (à noite ou pela manhã). Não usar por mais de 7 dias sem orientação médica.",
+        "contraindicacoes": "Crianças menores de 6 anos; náuseas, vômitos ou dor abdominal sem diagnóstico; dificuldade para engolir; refluxo gastroesofágico; pacientes acamados; gravidez; sangramento retal.",
+        "interacoes": "Não tomar junto com as refeições. O uso prolongado reduz a absorção das vitaminas lipossolúveis (A, D, E e K).",
+        "observacoes": "Risco de aspiração e pneumonia lipídica, maior em crianças pequenas, idosos, acamados e pessoas com disfagia. Pode causar prurido anal; evitar após cirurgia anal ou retal. Fonte: texto da bula do óleo mineral (bula.com.br, consulta 11/2026).",
+        "gestacao": "Evitar — a bula lista a gravidez entre as contraindicações; o uso prolongado pode causar distúrbio de coagulação e sangramento no recém-nascido.",
+        "lactacao": "Usar só com recomendação médica (bula).",
+        "pediatria": "Contraindicado em menores de 6 anos (risco de aspiração). Acima de 6 anos: 1 a 2 mL/kg 1x/dia.",
+        "areas": "Clínica Médica; Pediatria",
+        "esp": "Clínica Médica; Gastroenterologia; Pediatria"
+      },
+      "fontes": [{"titulo": "Bula de Óleo Mineral", "instituicao": "bula.com.br (texto de bula)", "ano": 2026, "url": "https://bula.com.br/oleo-mineral", "usadoPara": "posologia, contraindicações, riscos"}]
+    },
+    {
+      "registro": {
+        "nome": "Hipromelose (colírio)",
+        "classe": "Lubrificante ocular",
+        "tarja": "Sem tarja (venda livre)",
+        "via": "Oftálmica",
+        "generico": "Não",
+        "referencias": "Filmcel",
+        "apresentacoes": "Solução oftálmica estéril 5 mg/mL (0,5%), frasco conta-gotas de 10 mL (22 gotas/mL; 0,227 mg/gota).",
+        "indicacoes": "Lubrificante ocular na síndrome do olho seco; conforto de quem usa lentes de contato duras; alívio dos tecidos oculares ressecados ou irritados (por exemplo, após tonometria).",
+        "posologia": "1 gota em cada olho, quantas vezes for necessário para aliviar os sintomas, ou conforme orientação médica. Mesma dose em idosos.",
+        "contraindicacoes": "Alergia a qualquer componente da fórmula.",
+        "interacoes": "Não são conhecidas interações com outros medicamentos.",
+        "observacoes": "Não usar com lentes de contato gelatinosas. Se surgir irritação persistente, suspender e procurar oftalmologista. Fonte: bula do profissional Filmcel (hipromelose 5 mg/mL).",
+        "gestacao": "Usar só com orientação médica (a bula não traz restrição específica além disso).",
+        "lactacao": "Uso tópico ocular; a bula não traz restrição específica.",
+        "pediatria": "A bula não traz dose diferente por idade.",
+        "areas": "Clínica Médica; Pediatria",
+        "esp": "Oftalmologia; Clínica Médica"
+      },
+      "fontes": [{"titulo": "Filmcel (hipromelose) – bula do profissional", "instituicao": "bulas.med.br (texto da bula registrada, Reg. ANVISA 1.0147.0059)", "ano": 2026, "url": "https://www.bulas.med.br/p/bulas-de-medicamentos/bula/1341048/filmcel.htm", "usadoPara": "toda a ficha"}]
+    },
+    {
+      "registro": {
+        "nome": "Idursulfase",
+        "classe": "Terapia de reposição enzimática (mucopolissacaridose tipo II)",
+        "tarja": "Tarja vermelha (uso hospitalar)",
+        "via": "Intravenosa",
+        "generico": "Não",
+        "referencias": "Elaprase",
+        "apresentacoes": "Solução concentrada para infusão 2 mg/mL, frasco-ampola com 3 mL (6 mg), uso único.",
+        "indicacoes": "Síndrome de Hunter (mucopolissacaridose tipo II, MPS II).",
+        "posologia": "0,5 mg/kg IV 1x/semana. Volume do frasco = peso (kg) × 0,5 ÷ 2 mg/mL; diluir em 100 mL de cloreto de sódio 0,9% e infundir com filtro de 0,2 µm. Infusão em 3 h, que pode ser reduzida aos poucos para 1 h se não houver reação; não passar de 8 h no total.",
+        "contraindicacoes": "Hipersensibilidade à idursulfase ou a qualquer componente da fórmula.",
+        "interacoes": "A bula não descreve interações relevantes.",
+        "observacoes": "Reações anafiláticas com risco de vida podem ocorrer durante a infusão, inclusive bifásicas e anos após o início do tratamento: infundir em serviço preparado para anafilaxia e observar o paciente. Fonte: bula Elaprase (Takeda), paciente e profissional.",
+        "gestacao": "Consultar o médico antes do uso; a bula não traz dados suficientes na gestação.",
+        "lactacao": "Não usar durante a amamentação sem orientação médica (bula).",
+        "pediatria": "Uso seguro descrito entre 16 meses e 18 anos de idade na bula atual.",
+        "areas": "Clínica Médica; Pediatria",
+        "esp": "Genética Médica; Pediatria"
+      },
+      "fontes": [
+        {"titulo": "Elaprase – bula do paciente", "instituicao": "Takeda", "ano": 2026, "url": "https://assets-dam.takeda.com/image/upload/v1784300660/LOC/pt-br/Products/Elaprase/Elaprase_Bula_Paciente.pdf", "usadoPara": "dose, diluição, tempo de infusão, idade, amamentação"},
+        {"titulo": "Elaprase – bula", "instituicao": "Shire/Takeda (cópia saudedireta.com.br)", "ano": 2026, "url": "https://www.saudedireta.com.br/catinc/drugs/bulas/elaprase.pdf", "usadoPara": "indicação, contraindicação, anafilaxia"}
+      ]
+    },
+    {
+      "registro": {
+        "nome": "Onasemnogeno abeparvoveque",
+        "classe": "Terapia gênica (vetor viral adeno-associado AAV9)",
+        "tarja": "Tarja vermelha (uso hospitalar)",
+        "via": "Intravenosa",
+        "generico": "Não",
+        "referencias": "Zolgensma",
+        "apresentacoes": "Suspensão para infusão IV 2,0 × 10^13 genomas virais (gv)/mL; kit com 2 a 14 frascos (5,5 mL ou 8,3 mL), montado conforme o peso.",
+        "indicacoes": "Atrofia muscular espinhal (AME) em pacientes abaixo de 2 anos com mutação bialélica do SMN1 e diagnóstico clínico de AME tipo I, ou mutação bialélica do SMN1 com até 3 cópias do SMN2.",
+        "posologia": "Dose única de 1,1 × 10^14 gv/kg, em infusão IV lenta de 60 minutos; o kit e o volume vêm da tabela da bula por faixa de peso (2,6 a 21 kg). Não repetir. Prednisolona oral 1 mg/kg/dia desde 1 dia antes e por 30 dias depois da infusão; se ALT/AST e bilirrubina normais (abaixo de 2 × LSN), reduzir aos poucos em 28 dias; nunca suspender de forma abrupta.",
+        "contraindicacoes": "A bula não lista contraindicações. Adiar a infusão em infecção ativa até resolução e estabilidade clínica.",
+        "interacoes": "Ajustar o calendário vacinal ao corticoide: vacinas vivas (tríplice viral, varicela) são contraindicadas durante corticoide em dose imunossupressora. A bula recomenda profilaxia sazonal do vírus sincicial respiratório.",
+        "observacoes": "ADVERTÊNCIA de hepatotoxicidade: houve insuficiência hepática aguda, inclusive fatal. Antes: anticorpos anti-AAV9, ALT, AST, bilirrubina, albumina, TP/RNI, TTPA, creatinina e hemograma com plaquetas. Depois: ALT, AST, bilirrubina e plaquetas regularmente, por pelo menos 3 meses. Pode haver trombocitopenia (em geral nas 2 primeiras semanas) e microangiopatia trombótica. Fonte: bula profissional Zolgensma (Novartis, VPS17).",
+        "gestacao": "Não se aplica (uso pediátrico abaixo de 2 anos).",
+        "lactacao": "Não se aplica (uso pediátrico abaixo de 2 anos).",
+        "pediatria": "Indicado só abaixo de 2 anos, de 2,6 a 21 kg, em dose única calculada pelo peso.",
+        "areas": "Pediatria",
+        "esp": "Genética Médica; Neurologia; Pediatria"
+      },
+      "fontes": [{"titulo": "Zolgensma – bula para o profissional de saúde (VPS17)", "instituicao": "Novartis Biociências", "ano": 2025, "url": "https://www.pro.novartis.com/br-pt/sites/pro_novartis_com_br/files/2025-11/Bula-ZOLGENSMA-Suspensao-para-injecao-intravenosa-Medico.pdf", "usadoPara": "toda a ficha"}]
+    },
+    {
+      "registro": {
+        "nome": "Micronutrientes em pó (NutriSUS)",
+        "classe": "Suplemento de vitaminas e minerais (fortificação de alimentos)",
+        "tarja": "Sem tarja (venda livre)",
+        "via": "Oral",
+        "generico": "Não",
+        "referencias": "NutriSUS (sachê de micronutrientes em pó)",
+        "apresentacoes": "Sachê de 1 g com 15 vitaminas e minerais: vitamina A 400 µg RE, D 5 µg, E 5 mg, C 30 mg, B1 0,5 mg, B2 0,5 mg, B6 0,5 mg, B12 0,9 µg, niacina 6 mg, ácido fólico 150 µg, ferro 10 mg, zinco 4,1 mg, cobre 0,56 mg, selênio 17 µg e iodo 90 µg.",
+        "indicacoes": "Prevenção de anemia e de carências de micronutrientes em crianças de 6 a 24 meses atendidas na Atenção Primária (estratégia NutriSUS do Ministério da Saúde).",
+        "posologia": "1 sachê por dia, misturado a UMA refeição pronta e já servida no prato (consistência pastosa, como papas e purês, ou arroz com feijão); oferecer primeiro a porção com o pó. Ciclos de 60 sachês aos 6, 12 e 18 meses de idade (consumidos em 2 a 3 meses, com pausa até o ciclo seguinte). No máximo 1 sachê por dia.",
+        "contraindicacoes": "Não associar a outro suplemento de ferro. Não usar por via injetável.",
+        "interacoes": "A criança no NutriSUS não deve receber outro suplemento de ferro e não precisa da megadose de vitamina A.",
+        "observacoes": "Não misturar em líquidos (leite, água, suco) nem em alimentos duros, e não aquecer o pó. Superdose é improvável (seriam necessários pelo menos 20 sachês num dia). Fonte: Instrutivo NutriSUS (Ministério da Saúde, 2022).",
+        "gestacao": "Não se aplica (uso em crianças de 6 a 24 meses).",
+        "lactacao": "Não se aplica (uso em crianças de 6 a 24 meses).",
+        "pediatria": "Crianças de 6 a 24 meses: 1 sachê/dia em uma refeição, em ciclos de 60 sachês.",
+        "areas": "Pediatria",
+        "esp": "Pediatria; Nutrologia"
+      },
+      "fontes": [{"titulo": "Instrutivo da estratégia de fortificação da alimentação infantil com micronutrientes em pó – NutriSUS", "instituicao": "Ministério da Saúde (SAPS)", "ano": 2022, "url": "https://cosemssc.org.br/wp-content/uploads/2022/03/instrutivo_nutrisus.pdf", "usadoPara": "toda a ficha"}]
+    }
+  ]
+}

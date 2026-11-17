@@ -102,6 +102,12 @@ test.describe('PWA', () => {
     await page.goto('/?origem=atalho');
     await expect(page.locator('.brand h1')).toContainText('Bluebook');
     await expect(page.locator('#sidebar .med-item').first()).toBeAttached();
+
+    // a política de privacidade e os termos de uso têm página própria e também abrem sem internet
+    await page.goto('/privacidade.html');
+    await expect(page.locator('h1')).toHaveText('Privacidade e termos de uso');
+    await expect(page.locator('#privacidade')).toContainText('LGPD');
+    await expect(page.locator('#termos')).toContainText('não substitui');
   });
 
   test('sem service worker (arquivo aberto do disco) o registro é ignorado', async ({ page }) => {

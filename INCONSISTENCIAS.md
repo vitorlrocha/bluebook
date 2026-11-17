@@ -6,10 +6,10 @@ Gerado por `node ferramentas/inconsistencias.js` a partir de `dados/*.json`. **N
 
 | Verificação | Itens |
 |---|---:|
-| 1. Calculadora pediátrica: texto × números da mesma ficha | 4 |
-| 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 9 |
+| 1. Calculadora pediátrica: texto × números da mesma ficha | 1 |
+| 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 8 |
 | 3. Associações sem calculadora pediátrica (informativo) | 16 |
-| 4. Plantão × calculadora pediátrica | 3 |
+| 4. Plantão × calculadora pediátrica | 2 |
 | 5. Prescrição das doenças pediátricas × calculadora pediátrica | 8 |
 | 6. Prescrições sem linha "Base:" | 16 |
 | 7. Detalhes (MEDX) sem ficha de mesmo nome | 0 |
@@ -21,9 +21,6 @@ O texto de observação (`ob`) cita um máximo diferente do campo numérico usad
 
 | Fármaco | Via | O quê | Texto | Campo |
 |---|---|---|---|---|
-| Dexametasona | IM/EV | máx. por dose | texto: "máx. 10 mg/dose" | campo mx: 16 mg |
-| Carbamazepina | VO | máx. diário | texto: "máx. 1.000 mg/dia" | campo mxd: 1200 mg |
-| Hidroclorotiazida | VO | máx. diário | texto: "máx. 37,5 mg/dia" | campo mxd: 100 mg |
 | Hidroxizina | VO | máx. diário | texto: "máx. 50 mg/dia" | campo mxd: 100 mg |
 
 ## 2. Ficha do medicamento (Pediatria) × calculadora pediátrica
@@ -33,7 +30,6 @@ Faixa em mg/kg (mesma base: por dose ou por dia) ou máximo diário diferentes. 
 | Medicamento | Divergência | Ficha (campo Pediatria) | Calculadora (PED_DB) | Prioridade |
 |---|---|---|---|---|
 | Captopril | faixas sem sobreposição | 0,01-0,05 mg/kg/dose | VO 0,3-0,5 mg/kg/dose | alta |
-| Secnidazol | faixas sem sobreposição | 7,5 mg/kg/dose | VO 30 mg/kg/dose | alta |
 | Ampicilina | faixa da ficha sai da faixa da calculadora | 100-200 mg/kg/dia; 300-400 mg/kg/dia | EV 50-200 mg/kg/dia | média |
 | Cefuroxima | faixa da ficha sai da faixa da calculadora | 30 mg/kg/dia; 75-150 mg/kg/dia | VO 20-30 mg/kg/dia | média |
 | Cetoprofeno | faixa da ficha sai da faixa da calculadora | 1-2 mg/kg/dose | VO 1 mg/kg/dose | média |
@@ -71,7 +67,6 @@ Dose por kg do protocolo fora da faixa da calculadora, ou máximo por dose difer
 
 | Protocolo | Item | Plantão | Calculadora (PED_DB) | Divergência |
 |---|---|---|---|---|
-| Crise convulsiva / estado de mal epiléptico | Diazepam (Retal) | máx. 20 mg | Retal máx. 10 mg | máximo diferente |
 | Crise de asma grave | Prednisolona/prednisona (VO) | máx. 40 mg | VO máx. 60 mg | máximo diferente |
 | Sepse e choque séptico | Hidrocortisona (choque refratário a catecolaminas) (EV) | 2 mg/kg/dose · máx. 100 mg | EV/IM 4-8 mg/kg/dose · máx. 250 mg | dose fora da faixa |
 

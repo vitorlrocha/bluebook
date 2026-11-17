@@ -26,7 +26,10 @@ conteúdo aparecer no app instalado após reconectar; (3) app publicado e endere
 - Conflito de sincronização: vale a alteração mais recente de cada registro; anotação editada em dois aparelhos sem internet guarda as duas versões; exclusão é marcada, não apagada.
 - Configuração da nuvem: variáveis de ambiente (`.env` local, fora do git; "Repository variables" no GitHub); só identificadores públicos; regras de acesso em `firestore.rules`.
 - Login: conta do Firebase; o aparelho guarda só o hash da senha para abrir sem internet.
+- Privacidade (LGPD): página própria `privacidade.html` (política + termos, também offline), link em Ajustes → Sobre e na tela de entrada; Ajustes → Sincronização → "Excluir minha conta na nuvem" apaga a conta (Firebase Auth) e o documento (Firestore; `firestore.rules` permite delete só ao dono).
+- Prioridade 1 da revisão clínica (17/11/2026): diazepam retal com teto de 20 mg na calculadora (AES 2016 e rótulo FDA, igual ao Plantão); dexametasona IM/EV com teto de 10 mg/dose (documento de origem); captopril e hidrocortisona do Plantão ficam PENDENTE de fonte brasileira.
 - Backup no Google Drive: mantido como opcional (pede a permissão do Drive só quando a pessoa liga o backup).
+- Medicamentos novos: lote `curadoria/meds-lote-NN.json` escrito a partir da bula ou documento oficial aberto (URL em `fontes`, "Fonte:" nas observações), integrado por `ferramentas/integrar_meds.js` no fim de `seed_meds.json` com `orig` (selo "Literatura · não conferido"); os 1.851 originais não mudam.
 - Selo das doenças novas: "Literatura · não conferido"; se a ficha tiver PENDENTE DE VERIFICAÇÃO, prevalece "⚠ Pendente" (mais cauteloso).
 - Ampliação do acervo: pipeline mapeador → redator → revisor de fontes → aprovação do autor por lote → integração (`docs/ESTRATEGIA_ACERVO.md`; rascunhos em `curadoria/`).
 - Equipe: agentes excluídos a pedido do autor (17/11/2026); o trabalho é feito direto na sessão, com as mesmas verificações antes de publicar.
@@ -54,8 +57,8 @@ O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`
 - Não usar agentes (subagentes) sem pedido do autor.
 
 ## Estado atual (17/11/2026)
-- No ar: versão 0.74.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
-  busca única em todo o app, acervo ampliado e doses pediátricas conferidas com bulas.
+- No ar: versão 0.75.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
+  busca única em todo o app, acervo ampliado, doses pediátricas conferidas com bulas, política de privacidade e exclusão da conta.
 - Em andamento: banco na nuvem (Firebase) com sincronização automática; ainda não publicado.
   - Firebase configurado no projeto `nimble-lead-514122-e4`: login por e-mail/senha e Google ativados, domínio
     `vitorlrocha.github.io` autorizado, Firestore criado em `southamerica-east1` (São Paulo), modo de produção
@@ -68,4 +71,4 @@ O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`
 - Calculadora pediátrica (17/11/2026): 96 de 97 vias com conferência registrada (`rev`); 11 corrigidas com bula
   (cefaclor, bromoprida gotas/injetável, hioscina, cetoprofeno injetável sem dose pediátrica, dexclorfeniramina por idade,
   domperidona, pirvínio, racecadotrila, espironolactona). Falta captopril (fonte primária não aberta).
-- Contagens: 3.375 doenças (3.226 originais + 149 novas) · 1.851 medicamentos · CID-10 com 2.045 categorias e 12.451 subcategorias.
+- Contagens: 3.375 doenças (3.226 originais + 149 novas) · 1.856 medicamentos (1.851 originais + 5 novos) · CID-10 com 2.045 categorias e 12.451 subcategorias.

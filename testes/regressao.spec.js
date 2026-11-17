@@ -20,10 +20,10 @@ const MODOS = {
 // v72: a sigla entre parênteses do próprio registro sobe na relevância ("Ácido acetilsalicílico (AAS)" em 1º).
 const MUDANCAS_INTENCIONAIS = new Set(['meds:AAS', 'meds:aas']);
 
-async function coletar(page, url, nV71) {
+async function coletar(page, url, nV71, mV71, medsNovos) {
   await page.goto(url);
   await expect(page.locator('#sidebar .med-item').first()).toBeAttached();
-  return page.evaluate(([MODOS, nV71]) => {
+  return page.evaluate(([MODOS, nV71, mV71, medsNovos]) => {
     const inp = document.getElementById('search-input');
     /* Retrato da barra lateral: { html, quadro }.
        - html: a lista da aba, SEM o quadro da busca em todo o app e sem as doenças novas dos lotes (índice >= nº de
@@ -33,9 +33,12 @@ async function coletar(page, url, nV71) {
     function retrato() {
       const sb = document.getElementById('sidebar').cloneNode(true);
       const box = sb.querySelector('details.gs-box');
-      const quadro = box ? [...box.querySelectorAll('.gs-item')].map((b) => b.getAttribute('data-gk') + '|' + String(b.getAttribute('data-gv')).replace(/^local-\d+-(\d+)-[a-z0-9]+$/, 'med$1')).filter((x) => !/^(d|cc|cid)\|/.test(x)) : null;
+      const quadro = box ? [...box.querySelectorAll('.gs-item')].map((b) => b.getAttribute('data-gk') + '|' + String(b.getAttribute('data-gv')).replace(/^local-\d+-(\d+)-[a-z0-9]+$/, 'med$1')).filter((x) => !/^(d|cc|cid)\|/.test(x) && !(/\|med(\d+)$/.test(x) && Number(x.match(/\|med(\d+)$/)[1]) >= mV71)) : null;
       if (box) box.remove();
       sb.querySelectorAll('.med-item[data-idx]').forEach((b) => { if (Number(b.getAttribute('data-idx')) >= nV71) b.remove(); });
+      // medicamentos novos dos lotes conferidos com bula (curadoria/meds-lote-*): entram no fim da biblioteca
+      sb.querySelectorAll('.med-item[data-id]').forEach((b) => { const m = /^local-0-(\d+)-seed$/.exec(b.getAttribute('data-id') || ''); if (m && Number(m[1]) >= mV71) b.remove(); });
+      sb.querySelectorAll('.med-item[data-rxadd]').forEach((b) => { if (medsNovos.includes(b.getAttribute('data-rxadd'))) b.remove(); });
       let ant = null;
       [...sb.children].forEach((el) => {
         if (!el.classList.contains('letter-group-label')) { ant = null; return; }
@@ -54,7 +57,7 @@ async function coletar(page, url, nV71) {
       out[modo + ':(vazio)'] = retrato();
     }
     return out;
-  }, [MODOS, nV71]);
+  }, [MODOS, nV71, mV71, medsNovos]);
 }
 
 test('buscas produzem a mesma lista que a v71', async ({ page, browserName }, info) => {
@@ -63,9 +66,13 @@ test('buscas produzem a mesma lista que a v71', async ({ page, browserName }, in
   // nº de doenças da v71, lido do próprio arquivo de referência (1 doença por linha começando com {"area":)
   const nV71 = (require('fs').readFileSync(ORIGINAL, 'utf8').match(/^ {4}\{"area":/gm) || []).length;
   expect(nV71).toBeGreaterThan(3000);
+  // idem para os medicamentos (1 por linha começando com {"nome":) e os nomes dos que vieram de lotes (campo orig)
+  const mV71 = (require('fs').readFileSync(ORIGINAL, 'utf8').match(/^ {4}\{"nome":/gm) || []).length;
+  expect(mV71).toBe(1851);
+  const medsNovos = require('../dados/seed_meds.json').filter((m) => m.orig).map((m) => m.nome);
   await page.route('**/v71-original.html', (r) => r.fulfill({ path: ORIGINAL, contentType: 'text/html; charset=utf-8' }));
-  const antes = await coletar(page, '/v71-original.html', nV71);
-  const depois = await coletar(page, '/', nV71);
+  const antes = await coletar(page, '/v71-original.html', nV71, mV71, medsNovos);
+  const depois = await coletar(page, '/', nV71, mV71, medsNovos);
   // Lista da aba: idêntica à v71 (fora as mudanças intencionais).
   // Aba CID-10: o texto de busca de cada categoria inclui as doenças do app com aquele código, então as doenças novas
   // podem ACRESCENTAR categorias à lista (nunca tirar). Ali vale: todos os itens da v71 continuam, na mesma ordem.

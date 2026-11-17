@@ -4,12 +4,14 @@ Gerado por `node ferramentas/pendencias.js` a partir de `dados/*.json`. **Não e
 
 Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo = duas linhas). Regra do projeto: **nada é preenchido sem fonte citada** (preferir SBP, Ministério da Saúde/PCDT, bula Anvisa; citar fonte e ano).
 
-**Total: 128 registro(s), 195 trecho(s).**
+**Total: 130 registro(s), 197 trecho(s).**
 
 | Seção | Registros | Trechos |
 |---|---:|---:|
 | Medicamentos | 19 | 27 |
 | Doenças | 109 | 168 |
+| Plantão | 1 | 1 |
+| Calculadora pediátrica | 1 | 1 |
 
 ## Medicamentos (`dados/seed_meds.json`)
 
@@ -215,3 +217,15 @@ Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo 
 | Urgências odontológicas na APS: pulpite, abscesso periapical e abscesso periodontal | Prescrição | …stolato de eritromicina 1 a 2 g/dia, em tomadas a cada 6 ou 12 h (Quadro 61; conferir em bula Anvisa) (criança 20 a 30 mg/kg/dia). Duração: PENDENTE DE VERIFICAÇÃO (não informada na fonte). 4) Clorexidina 0,12% em bochechos na doença periodontal necrosante e na p… |
 | Urgências odontológicas na APS: pulpite, abscesso periapical e abscesso periodontal | Prescrição | …AÇÃO (não informada na fonte). 4) Clorexidina 0,12% em bochechos na doença periodontal necrosante e na pericoronarite (frequência e duração PENDENTE DE VERIFICAÇÃO). 5) Encaminhar à equipe de saúde bucal para o procedimento definitivo. Base: Ministério da Saúde,… |
 | Uso de álcool na gestação: rastreamento e conduta pré-natal | Prescrição | …dicamentosa específica; abordagem comportamental e multiprofissional (tratamento farmacológico do transtorno por uso de álcool na gestação: PENDENTE DE VERIFICAÇÃO, não consta no capítulo). Base: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS)… |
+
+## Plantão (`dados/plantao.json`)
+
+| Registro | Campo | Trecho |
+|---|---|---|
+| Sepse e choque séptico | itens | Dose de estresse: PENDENTE DE VERIFICAÇÃO em fonte brasileira (a diretriz pediátrica da Surviving Sepsis Campaign não define dose). Considera… |
+
+## Calculadora pediátrica (`dados/ped_db.json`)
+
+| Registro | Campo | Trecho |
+|---|---|---|
+| Captopril | al — via VO | Não usar esta calculadora para recém-nascidos: a dose inicial é muito menor (ver ficha). Dose inicial pediátrica: PENDENTE DE VERIFICAÇÃO (a tabela da SBP 2019 diverge do valor usado aqui). Titular com PA, potássio e creatinina. |

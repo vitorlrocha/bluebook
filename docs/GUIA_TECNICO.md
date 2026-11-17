@@ -111,7 +111,7 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
   e `:root[data-theme="dark"]`). O tema moderno fica no FIM do `<style>` e sobrescreve o anterior.
 - Um `<script>` curto logo após `<body>` aplica o zoom salvo (`localStorage "bluebook:zoom"`).
 - `<script>` principal: um IIFE em JavaScript puro. Dados embutidos:
-  - `SEED_MEDS`: 1 medicamento por linha, cada linha começa com `    {"nome":` (1.851 itens).
+  - `SEED_MEDS`: 1 medicamento por linha, cada linha começa com `    {"nome":` (1.851 originais + lotes `curadoria/meds-lote-*.json` integrados por `ferramentas/integrar_meds.js`, campo `orig`).
     Campos: nome, classe, tarja, via, generico, referencias, apresentacoes, indicacoes, posologia,
     contraindicacoes, interacoes, observacoes, pediatria, gestacao, lactacao, areas, esp.
   - `DISEASES`: 1 doença por linha, cada linha começa com `    {"area":` (3.375 itens: as 3.226 originais da v71 e, no fim, as dos lotes revisados, com o campo `orig` e o selo "Literatura · não conferido").

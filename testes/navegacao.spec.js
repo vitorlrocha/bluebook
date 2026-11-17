@@ -27,7 +27,9 @@ test.describe('Navegação no computador', () => {
     const total = require('../dados/diseases.json').length;
     expect(total).toBeGreaterThanOrEqual(3226);
     await expect(cov).toContainText(total.toLocaleString('pt-BR') + 'doenças');
-    await expect(cov).toContainText('1.851medicamentos');
+    const meds = require('../dados/seed_meds.json').length;   // ≥ 1.851 (lotes conferidos com bula)
+    expect(meds).toBeGreaterThanOrEqual(1851);
+    await expect(cov).toContainText(meds.toLocaleString('pt-BR') + 'medicamentos');
     await expect(cov).toContainText('2.045categorias CID-10');
     await expect(cov).toContainText('12.451subcategorias CID-10');
   });

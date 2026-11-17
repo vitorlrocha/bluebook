@@ -888,7 +888,8 @@
             "u": "comprimido"
           }
         ],
-        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)",
+        "al": "Na crise de asma (GINA 2024): máx. 40 mg/dia, por 3 a 5 dias."
       }
     ]
   },
@@ -919,7 +920,8 @@
             "c": 1
           }
         ],
-        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)",
+        "al": "Na crise de asma (GINA 2024): máx. 40 mg/dia, por 3 a 5 dias."
       }
     ]
   },
@@ -976,16 +978,16 @@
         "dd": 0.15,
         "b": "dose",
         "f": 3,
-        "mx": 16,
+        "mx": 10,
         "fonte": "HILF",
-        "ob": "HILF: ataque 0,6 mg/kg e manutenção 0,15 mg/kg (máx. 10 mg/dose).",
+        "ob": "HILF: ataque 0,6 mg/kg e manutenção 0,15 mg/kg (máx. 10 mg/dose). A SBP (Crupe, 2017) usa 0,15 a 0,6 mg/kg em dose única e não cita teto.",
         "ap": [
           {
             "l": "Solução injetável 4 mg/mL",
             "c": 4
           }
         ],
-        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com); meningite Hib: 0,15 mg/kg a cada 6 h por 2-4 dias; edema cerebral 0,2 mg/kg/dia"
+        "rev": "Conferida em 11/2026: teto do cálculo igualado ao do documento de origem (10 mg/dose); SBP Crupe 2017 sem teto definido"
       }
     ]
   },
@@ -1233,7 +1235,7 @@
         "dd": 0.5,
         "b": "dose",
         "f": 1,
-        "mx": 10,
+        "mx": 20,
         "fonte": "Ref",
         "ob": "0,5 mg/kg (2-5 anos), 0,3 mg/kg (6-11 anos), 0,2 mg/kg (≥ 12 anos); repetir em 4-12 h se necessário. Não estabelecido < 2 anos (retal).",
         "ap": [
@@ -1242,7 +1244,7 @@
             "c": 5
           }
         ],
-        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+        "rev": "Conferida em 11/2026 com a diretriz da American Epilepsy Society (2016; diazepam retal até 20 mg) e o rótulo FDA do Diastat (doses unitárias até 20 mg); teto igualado ao do Plantão"
       }
     ]
   },
@@ -1412,9 +1414,9 @@
             "u": "comprimido"
           }
         ],
-        "mxd": 1200,
-        "al": "Risco de SJS/NET: considerar HLA-B*1502 em ascendência asiática.",
-        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+        "mxd": 1000,
+        "al": "Risco de SJS/NET: considerar HLA-B*1502 em ascendência asiática. Acima de 15 anos o máximo é 1.200 mg/dia.",
+        "rev": "Conferida em 11/2026 com o rótulo FDA do Tegretol (DailyMed): < 6 anos máx. 35 mg/kg/dia; 6-15 anos máx. 1.000 mg/dia; > 15 anos 1.200 mg/dia"
       }
     ]
   },
@@ -1511,9 +1513,9 @@
         "dd": 1,
         "b": "dia",
         "f": 2,
-        "mxd": 100,
+        "mxd": 37.5,
         "fonte": "Ref",
-        "ob": "1-2 mg/kg/dia em 1-2 doses; < 6 meses: até 3 mg/kg/dia em 2 doses; máx. 37,5 mg/dia < 2 anos e 100 mg/dia 2-12 anos.",
+        "ob": "1-2 mg/kg/dia em 1-2 doses. Hipertensão (SBP 2019): máx. 37,5 mg/dia. Rótulo FDA (edema): máx. 37,5 mg/dia < 2 anos e 100 mg/dia de 2 a 12 anos; < 6 meses: até 3 mg/kg/dia em 2 doses.",
         "ap": [
           {
             "l": "Comprimido 25 mg",
@@ -1521,7 +1523,7 @@
             "u": "comprimido"
           }
         ],
-        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+        "rev": "Conferida em 11/2026 com SBP, Manual de Orientação \"Hipertensão arterial na infância e adolescência\" (2019), Quadro 8 (máx. 37,5 mg/dia) e o rótulo FDA (DailyMed)"
       }
     ]
   },
@@ -1548,7 +1550,8 @@
             "u": "comprimido"
           }
         ],
-        "rev": ""
+        "rev": "Conferida em 11/2026 com SBP, Manual de Orientação \"Hipertensão arterial na infância e adolescência\" (2019), Quadro 8: máximo de 6 mg/kg/dia confirmado; dose inicial pendente",
+        "al": "Não usar esta calculadora para recém-nascidos: a dose inicial é muito menor (ver ficha). Dose inicial pediátrica: PENDENTE DE VERIFICAÇÃO (a tabela da SBP 2019 diverge do valor usado aqui). Titular com PA, potássio e creatinina."
       }
     ]
   },
@@ -2417,8 +2420,9 @@
             "mxMl": 10
           }
         ],
-        "rev": "Conferida em 11/2026 com rótulo FDA/literatura pediátrica (via Drugs.com)",
-        "mxd": 100
+        "rev": "Conferida em 11/2026 com o rótulo FDA do cloridrato de hidroxizina (DailyMed): < 6 anos 50 mg/dia; ≥ 6 anos 50-100 mg/dia",
+        "mxd": 100,
+        "al": "Menores de 6 anos: máximo de 50 mg/dia."
       }
     ]
   },

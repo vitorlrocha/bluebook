@@ -25,7 +25,7 @@ function novoServidor() {
     protecao: false,     // true = como o Firebase com proteção de enumeração: INVALID_LOGIN_CREDENTIALS
   };
 }
-const CORS = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Authorization, Content-Type', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, OPTIONS' };
+const CORS = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Authorization, Content-Type', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE, OPTIONS' };
 
 async function tratar(S, ap, route) {
   const req = route.request(), url = new URL(req.url());
@@ -68,6 +68,12 @@ async function tratar(S, ap, route) {
       if (!S.usuarios[email]) S.usuarios[email] = { uid: 'u' + (++S.seq), senha: null };
       return json(sessao(email));
     }
+    if (acao === 'delete') {                    // exclusão da conta (exige token do próprio usuário)
+      const email = porUid(String(b.idToken).slice(3));
+      if (!email) return erroIdt('INVALID_ID_TOKEN');
+      delete S.usuarios[email];
+      return json({ kind: 'identitytoolkit#DeleteAccountResponse' });
+    }
     return erroIdt('OPERATION_NOT_ALLOWED');
   }
   if (url.hostname === 'securetoken.googleapis.com') {
@@ -109,6 +115,7 @@ async function tratar(S, ap, route) {
     S.gravacoes++;
     return json({ name: nome, fields: S.docs[uid].fields, createTime: S.docs[uid].createTime, updateTime: agora });
   }
+  if (req.method() === 'DELETE') { delete S.docs[uid]; return json({}); }   // firestore.rules: só o dono apaga
   return erroFs(400, 'INVALID_ARGUMENT');
 }
 /* Registros guardados no servidor para o usuário: { chave: texto ou null }. */
@@ -639,6 +646,43 @@ test.describe('Nuvem: conta e sincronização entre dois aparelhos', () => {
     expect(JSON.parse(registros(S)['um|rxh'])).toEqual({ pres: 'Dra. Teste', crm: '00000/SP' });
     expect(await B.page.evaluate(() => JSON.parse(localStorage.getItem('bluebook:rxh')))).toEqual({ pac: 'Paciente do B', pres: 'Dra. Teste', crm: '00000/SP' });
     await fechar(A, B);
+  });
+
+  test('LGPD: excluir a conta na nuvem apaga a conta e o documento, pede senha e confirmação, e mantém os dados do aparelho', async ({ browser }, info) => {
+    const S = novoServidor();
+    const A = await aparelho(browser, info, S);
+    await criarAcesso(A.page);
+    await abrirMed(A.page, 'Amoxicilina');
+    await anotar(A.page, 'nota que deve sumir da nuvem');
+    expect(await sinc(A.page)).toMatch(/^Sincronizado às/);
+    const uid = S.usuarios[EMAIL].uid;
+    expect(S.docs[uid]).toBeTruthy();
+    await abrirAjustes(A.page);
+    await expect(A.page.locator('#settings-about a#link-privacidade')).toHaveAttribute('href', 'privacidade.html');
+    await A.page.locator('#sinc-excluir-btn').click();
+    // sem a confirmação marcada e sem a senha, nada acontece
+    await A.page.locator('#sx-confirmar').click();
+    await expect(A.page.locator('#sx-status')).toHaveText('Marque a confirmação para continuar.');
+    await A.page.locator('#sx-ok').check();
+    await A.page.locator('#sx-confirmar').click();
+    await expect(A.page.locator('#sx-status')).toHaveText('Informe a sua senha.');
+    // senha errada: recusada, nada apagado
+    await A.page.locator('#sx-senha').fill('senha-errada-999');
+    await A.page.locator('#sx-confirmar').click();
+    await expect(A.page.locator('#sx-status')).toContainText('E-mail ou senha incorretos');
+    expect(S.usuarios[EMAIL]).toBeTruthy();
+    expect(S.docs[uid]).toBeTruthy();
+    // senha certa: conta e documento apagados na nuvem
+    await A.page.locator('#sx-senha').fill(SENHA);
+    await A.page.locator('#sx-confirmar').click();
+    await expect(A.page.locator('#sx-status')).toHaveText('Conta e dados da nuvem excluídos. Este aparelho continua funcionando só com os dados locais.');
+    expect(S.usuarios[EMAIL]).toBeUndefined();
+    expect(S.docs[uid]).toBeUndefined();
+    expect(await A.page.evaluate(() => localStorage.getItem('bluebook:nuvem'))).toBeNull();
+    // os dados deste aparelho continuam
+    expect((await notas(A.page))['m:Amoxicilina'].t).toBe('nota que deve sumir da nuvem');
+    expect(A.erros).toEqual([]);
+    await fechar(A);
   });
 });
 

@@ -4,8 +4,9 @@
 // Modelo (src/nuvem.js): UM documento por pessoa, em usuarios/<id da conta>, com os campos
 //   v   = versão do formato (número inteiro)
 //   reg = mapa de registros: "<tipo>|<id>" → { v: texto ou null (apagado), mod: milissegundos, ap: aparelho }
-// Só quem está conectado com aquela conta lê ou grava o próprio documento. Ninguém apaga o documento pelo app
-// (exclusões são marcas dentro de "reg"). Todo o resto do banco é fechado para todo mundo.
+// Só quem está conectado com aquela conta lê, grava ou apaga o próprio documento. Exclusões de registros são marcas
+// dentro de "reg"; o documento inteiro só é apagado quando a pessoa exclui a conta (Ajustes → Excluir minha conta
+// na nuvem; LGPD, direito de eliminação). Todo o resto do banco é fechado para todo mundo.
 //
 // Limite de tamanho: o Firestore já recusa documentos acima de 1 MiB; aqui limitamos também o número de
 // registros (o app para em 3.000 e em ~900 KB e avisa a pessoa).
@@ -21,7 +22,8 @@ service cloud.firestore {
         && request.resource.data.v is int
         && request.resource.data.reg is map
         && request.resource.data.reg.size() <= 3000;
-      // list (consultar vários usuários) e delete: negados.
+      allow delete: if request.auth != null && request.auth.uid == uid;
+      // list (consultar vários usuários): negado.
     }
 
     // Qualquer outro caminho (inclusive subcoleções de usuarios): negado.

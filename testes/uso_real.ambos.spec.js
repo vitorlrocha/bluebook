@@ -85,9 +85,11 @@ test('backup: exportar e importar de volta não duplica; medicamento novo é imp
   const caminho = await dl.path();
   const fs = require('fs');
   const dados = JSON.parse(fs.readFileSync(caminho, 'utf8'));
-  expect(dados.medications.length).toBe(1851);
+  const nMeds = require('../dados/seed_meds.json').length;   // a biblioteca cresce por lotes conferidos (curadoria/meds-lote-*)
+  expect(nMeds).toBeGreaterThanOrEqual(1851);
+  expect(dados.medications.length).toBe(nMeds);
   await page.locator('#import-file').setInputFiles(caminho);
-  await expect(page.locator('#import-status')).toHaveText('0 medicamento(s) importado(s). 1851 já existiam e foram ignorados.');
+  await expect(page.locator('#import-status')).toHaveText('0 medicamento(s) importado(s). ' + nMeds + ' já existiam e foram ignorados.');
   const novo = { name: 'novo.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify([{ nome: 'Medicamento de teste importado', classe: 'Teste' }])) };
   await page.locator('#import-file').setInputFiles(novo);
   await expect(page.locator('#import-status')).toHaveText('1 medicamento(s) importado(s). 0 já existiam e foram ignorados.');

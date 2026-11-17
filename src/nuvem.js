@@ -169,6 +169,7 @@
     if (c === "SENHA_DIFERENTE") return "A senha desta conta na nuvem é diferente da senha deste aparelho. Saia e entre de novo, com internet, usando a senha atual da conta.";
     if (c === "CREDENTIAL_TOO_OLD_LOGIN_AGAIN" || c === "TOKEN_EXPIRED" || c === "INVALID_ID_TOKEN" || c === "SEM_SESSAO") return "Por segurança, saia, entre de novo com internet e repita a operação.";
     if (c === "ARMAZENAMENTO") return "Não foi possível salvar neste navegador (sem espaço ou armazenamento bloqueado).";
+    if (c === "SEM_NUVEM") return "A sincronização não está disponível nesta versão do app.";
     if (c === "PERMISSION_DENIED") return "A nuvem recusou o acesso aos seus dados. Saia, entre de novo e, se continuar, avise o responsável pelo app.";
     if (c === "RESOURCE_EXHAUSTED") return "A nuvem atingiu o limite de uso de hoje. A sincronização volta sozinha; seus dados continuam salvos neste aparelho.";
     if (c === "GRANDE") return "Seus dados pessoais passaram do limite da nuvem. Apague anotações antigas para voltar a sincronizar.";
@@ -456,11 +457,33 @@
     return e;
   }
 
+  /* ---------------- Exclusão da conta (LGPD: direito de eliminação) ---------------- */
+  /* Apaga o documento da pessoa no Firestore e a conta no Firebase Authentication. Os dados deste aparelho ficam
+     (a pessoa decide à parte). Contas com senha: entra de novo para ter um token recente (o Firebase exige login
+     recente para excluir). Contas só do Google: usa o token atual; se for antigo, pede para sair e entrar de novo. */
+  function excluirConta(senha) {
+    var s = sessao();
+    if (!cfg()) return Promise.reject(erro("SEM_NUVEM"));
+    if (!s) return Promise.reject(erro("SEM_SESSAO"));
+    if (!online()) return Promise.reject(erro("REDE"));
+    var p = senha ? entrar(s.email, senha).then(function () { return idToken; }) : token();
+    return p.then(function (t) {
+      return chamar(urlDoc(s.uid), { method: "DELETE", headers: { Authorization: "Bearer " + t } }, true)
+        .catch(function (e) { if (e.cod !== "NOT_FOUND") throw e; })
+        .then(function () { return idt("delete", { idToken: t }); });
+    }).then(function () {
+      idToken = null; idUid = null;
+      try { localStorage.removeItem(K_NUVEM); localStorage.removeItem(K_SINC); } catch (e) { /* nada a fazer */ }
+      avisar();
+      return true;
+    });
+  }
+
   window.BBNuvem = {
     configurado: function () { return !!cfg(); },
     estado: estado, sincronizar: sincronizar,
     criarConta: criarConta, entrar: entrar, ligar: ligar, entrarGoogle: entrarGoogle,
-    redefinir: redefinir, trocarSenha: trocarSenha, mensagem: mensagem
+    redefinir: redefinir, trocarSenha: trocarSenha, mensagem: mensagem, excluirConta: excluirConta
   };
 
   /* Gatilhos. Sem nuvem configurada, cada um deles sai na primeira linha. */

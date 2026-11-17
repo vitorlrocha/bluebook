@@ -7,6 +7,7 @@ var CACHE = 'bluebook-' + VERSAO;
 var ARQUIVOS = [
   './index.html',
   './manifest.json',
+  './privacidade.html',
   './icones/icone-192.png',
   './icones/icone-512.png',
   './icones/apple-touch-icon.png',
@@ -43,8 +44,10 @@ self.addEventListener('fetch', function (e) {
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // links externos (ex.: Bulário Anvisa) seguem pela rede
   if (req.mode === 'navigate') {
-    // Qualquer navegação dentro do escopo abre o app guardado (funciona sem internet).
-    e.respondWith(caches.match('./index.html').then(function (r) { return r || fetch(req); }));
+    // A página de privacidade e termos tem endereço próprio; qualquer outra navegação dentro do escopo abre o app
+    // guardado (as duas funcionam sem internet).
+    var pag = /\/privacidade\.html$/.test(url.pathname) ? './privacidade.html' : './index.html';
+    e.respondWith(caches.match(pag).then(function (r) { return r || fetch(req); }));
     return;
   }
   e.respondWith(caches.match(req, { ignoreSearch: true }).then(function (r) { return r || fetch(req); }));

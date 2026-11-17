@@ -44,13 +44,18 @@ const cd = cnt(b);
 const novas = cd.doencas - esperado.doencas;
 for (const k of Object.keys(esperado)) {
   if (k === 'doencas') ok(cd[k] >= esperado[k], `doencas: dist ${cd[k]} (originais ${esperado[k]} + ${novas} novas de lotes revisados)`);
+  else if (k === 'medicamentos') ok(cd[k] >= esperado[k], `medicamentos: dist ${cd[k]} (originais ${esperado[k]} + ${cd[k] - esperado[k]} de lotes conferidos com bula)`);
   else ok(cd[k] === esperado[k], `${k}: dist ${cd[k]} (esperado ${esperado[k]}, original ${cnt(a)[k]})`);
 }
 
 // 2. Dados
+const CORRECOES = {
+  SEED_MEDS: { chave: (m) => m.nome, itens: ['Secnidazol'] },            // campo Pediatria falava de metronidazol
+  PLANTAO: { chave: (p) => p.id, itens: ['sepse'] },                       // hidrocortisona: dose sem fonte → PENDENTE
+};
 for (const cfg of L.VARS) {
   let igual = true;
-  const vb = cfg.v === 'DISEASES' ? b.vals[cfg.v].valor.slice(0, a.vals[cfg.v].valor.length) : b.vals[cfg.v].valor;
+  const vb = (cfg.v === 'DISEASES' || cfg.v === 'SEED_MEDS') ? b.vals[cfg.v].valor.slice(0, a.vals[cfg.v].valor.length) : b.vals[cfg.v].valor;
   try { assert.deepStrictEqual(vb, a.vals[cfg.v].valor); } catch (e) { igual = false; }
   // Doses pediátricas: desde 11/2026 a conferência com bulas pode corrigir uma entrada. Vale se os medicamentos
   // continuam os mesmos e na mesma ordem e se TODA via de cada entrada alterada traz o registro da conferência (rev).
@@ -62,6 +67,16 @@ for (const cfg of L.VARS) {
     igual = mesmos && !semRev.length;
     console.log(`INFO  PED_DB: ${mud.length} entrada(s) corrigidas por conferência com bula` +
       (semRev.length ? `; SEM registro de conferência: ${semRev.map((e) => e.n).join(', ')}` : '') + (mesmos ? '' : '; lista de medicamentos mudou'));
+  }
+  // Correções clínicas aprovadas pelo autor (revisão de prioridade 1, docs/PROPOSTAS_P1.md, 17/11/2026): só os itens
+  // listados aqui podem diferir da v71; qualquer outra diferença continua sendo falha.
+  if (!igual && CORRECOES[cfg.v]) {
+    const va = a.vals[cfg.v].valor, chave = CORRECOES[cfg.v].chave, ok_ = CORRECOES[cfg.v].itens;
+    const mud = vb.filter((e, i) => { try { assert.deepStrictEqual(e, va[i]); return false; } catch (x) { return true; } });
+    const fora = mud.filter((e) => !ok_.includes(chave(e)));
+    igual = vb.length === va.length && !fora.length;
+    console.log(`INFO  ${cfg.v}: ${mud.length} item(ns) corrigido(s) com aprovação do autor (${mud.map(chave).join(', ')})` +
+      (fora.length ? `; FORA DA LISTA: ${fora.map(chave).join(', ')}` : ''));
   }
   const bytes = a.vals[cfg.v].texto === b.vals[cfg.v].texto;
   const n = Array.isArray(a.vals[cfg.v].valor) ? a.vals[cfg.v].valor.length : Object.keys(a.vals[cfg.v].valor).length;

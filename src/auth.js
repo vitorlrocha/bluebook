@@ -90,7 +90,8 @@
     return '<p class="auth-nota">' + (nuvem()
       ? "Sua conta vale em todos os seus aparelhos: anotações, favoritos e prescrições sincronizam sozinhos. Depois do primeiro acesso, o app abre sem internet. "
       : "O acesso fica guardado só neste aparelho e funciona sem internet. ") +
-      "O Bluebook é uma ferramenta de apoio: não substitui o julgamento clínico nem a bula.</p>";
+      "O Bluebook é uma ferramenta de apoio: não substitui o julgamento clínico nem a bula. " +
+      'Ao criar ou usar o acesso, você concorda com a <a href="privacidade.html" target="_blank" rel="noopener" id="auth-privacidade">Política de privacidade e os Termos de uso</a>.</p>';
   }
   /* Etapa 5: "Entrar com o Google" (src/google.js). Fica desativado se o Client ID não estiver configurado. */
   function googleOk() { return !!(window.BBGoogle && window.BBGoogle.configurado()); }

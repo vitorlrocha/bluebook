@@ -14,7 +14,7 @@ escores, calculadoras, dose pediátrica por peso e modo plantão, num único arq
 | Conteúdo | Quantidade |
 |---|---:|
 | Doenças (com conduta e prescrição) | 3.375 (3.226 originais + 149 dos lotes revisados 01–17) |
-| Medicamentos | 1.851 |
+| Medicamentos | 1.856 (1.851 originais + 5 conferidos com bula) |
 | CID-10 (DATASUS) | 2.045 categorias · 12.451 subcategorias |
 | Protocolos de plantão · escores · calculadoras | 12 · 40 · 16 (+ 10 ferramentas) |
 

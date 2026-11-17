@@ -47,3 +47,19 @@ test('doença vinda de lote mostra "Literatura · não conferido" e o campo orig
   await page.locator('#sidebar .med-item[data-idx]').first().click();
   await expect(page.locator('#detail .trust').first()).toHaveText('✓ Revisado pelo autor');
 });
+
+// Medicamentos acrescentados por lote conferido com bula (ferramentas/integrar_meds.js, orig: "meds-NN") seguem a
+// mesma regra. Usa um medicamento real do lote meds-01 (Idursulfase) e um original (Omeprazol) como controle.
+test('medicamento vindo de lote mostra "Literatura · não conferido" e o campo orig não aparece', async ({ page }) => {
+  const med = require('../dados/seed_meds.json').find((m) => m.nome === 'Idursulfase');
+  expect(med && med.orig, 'Idursulfase vem do lote meds-01').toBe('meds-01');
+  await abrir(page);
+  await page.locator('#search-input').fill('Idursulfase');
+  await page.locator('#sidebar .med-item', { hasText: /^Idursulfase/ }).first().click();
+  await expect(page.locator('#detail h2').first()).toHaveText('Idursulfase');
+  await expect(page.locator('#detail .trust').first()).toHaveText('Literatura · não conferido');
+  await expect(page.locator('#detail')).not.toContainText('meds-01');
+  await page.locator('#search-input').fill('Omeprazol');
+  await page.locator('#sidebar .med-item', { hasText: /^Omeprazol/ }).first().click();
+  await expect(page.locator('#detail .trust').first()).toHaveText('✓ Revisado pelo autor');
+});
