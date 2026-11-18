@@ -250,8 +250,6 @@
       updateMany: function (map) { Object.keys(map).forEach(function (id) { aplicar(id, map[id]); }); salvar(); notify(); return Promise.resolve(); },
       addMany: function (arr) { arr.forEach(function (d, i) { novo(d, i + 1); }); salvar(); notify(); return Promise.resolve(); },
       update: function (id, data) { aplicar(id, data); salvar(); notify(); return Promise.resolve(); },
-      /* Nuvem (src/nuvem.js): os favoritos foram regravados no localStorage pela sincronização; relê e devolve a lista. */
-      recarregar: function () { est = null; return readAll(); },
       replaceAll: function (items) {
         var idx = indice(); est = { v: 2, fav: {}, extras: [] };
         (items || []).forEach(function (m) { if (!m || !m.nome) return; if (idx[low(m.nome)] !== undefined) { if (m.favorito) est.fav[low(m.nome)] = true; } else est.extras.push(m); });
@@ -1339,7 +1337,7 @@
   function noteSectionHtml(type, name) {
     var k = type + ":" + name, n = NOTES[k] || {};
     return '<div class="section note-section"><h3>Minhas anotações</h3>' +
-      '<textarea id="note-text" data-nota="' + escapeHtml(k) + '" placeholder="Escreva aqui observações pessoais (ficam salvas neste navegador/aparelho).">' + escapeHtml(n.t || "") + '</textarea>' +
+      '<textarea id="note-text" placeholder="Escreva aqui observações pessoais (ficam salvas neste navegador/aparelho).">' + escapeHtml(n.t || "") + '</textarea>' +
       '<div class="note-meta"><label><input type="checkbox" id="note-rev"' + (n.rev ? " checked" : "") + '> Marcar para revisão/correção</label>' +
       '<span>Conteúdo compilado pelo Bluebook · revisão geral em ' + APP_REV_DATE + ' · confirmar na bula, no Bulário Anvisa e nas diretrizes vigentes.</span></div></div>';
   }
@@ -1359,6 +1357,65 @@
     var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "bluebook-anotacoes.json";
     document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 60000);   /* v72: o Safari/iPhone ainda lê o blob depois do clique; revogar cedo cortava o download */
   }
+  /* ---------------- Meus dados (menu ⋮): backup em arquivo JSON, sem conta e sem servidor ----------------
+     Favoritos (medicamentos e doenças), anotações, histórico (recentes e buscas), prescrição em andamento, peso do
+     plantão e tamanho do texto. Tudo vem do localStorage deste aparelho. Ao importar: anotações e favoritos são
+     SOMADOS aos que já existem (a anotação do arquivo vale quando a mesma ficha tem as duas); histórico e ajustes
+     passam a ser os do arquivo. O conteúdo clínico não muda. Aceita também o backup de perfil de Ajustes. */
+  var MD_CHAVES = ["bluebook:notes", "bluebook:disease-favs", "bluebook:recents", "bluebook:hist", "bluebook:rx",
+    "bluebook:rxpt", "bluebook:rxd", "bluebook:rxh", "bluebook:pl-kg", "bluebook:zoom"];
+  function meusDadosExportar() {
+    var dados = {};
+    MD_CHAVES.forEach(function (k) { try { var v = window.localStorage.getItem(k); if (v !== null) dados[k] = v; } catch (e) {} });
+    var favs = medications.filter(function (m) { return m.favorito; }).map(function (m) { return m.nome; });
+    downloadJson("bluebook-meus-dados-" + todayInputValue() + ".json",
+      { tipo: "bluebook-meus-dados", versao: 1, exportadoEm: new Date().toISOString(), dados: dados, favoritos: favs });
+  }
+  function mdJson(s, padrao) { try { var v = JSON.parse(s); return v === null || v === undefined ? padrao : v; } catch (e) { return padrao; } }
+  function meusDadosImportar(p) {
+    var dados = p.dados || {};
+    MD_CHAVES.forEach(function (k) {
+      if (typeof dados[k] !== "string") return;
+      var novo = dados[k];
+      if (k === "bluebook:notes") {
+        var atual = mdJson(window.localStorage.getItem(k), {}), vem = mdJson(novo, null);
+        if (!vem || typeof vem !== "object" || Array.isArray(vem)) return;
+        novo = JSON.stringify(Object.assign({}, atual && typeof atual === "object" ? atual : {}, vem));
+      } else if (k === "bluebook:disease-favs") {
+        var a = mdJson(window.localStorage.getItem(k), []), b = mdJson(novo, null);
+        if (!Array.isArray(b)) return;
+        if (!Array.isArray(a)) a = [];
+        novo = JSON.stringify(a.concat(b.filter(function (n) { return a.indexOf(n) === -1; })));
+      }
+      try { window.localStorage.setItem(k, novo); } catch (e) {}
+    });
+    var nomes = {}; (p.favoritos || []).forEach(function (n) { nomes[String(n).trim().toLowerCase()] = 1; });
+    var map = {}; medications.forEach(function (m) { if (nomes[(m.nome || "").trim().toLowerCase()] && !m.favorito) map[m.id] = { favorito: true }; });
+    return store && store.updateMany && Object.keys(map).length ? store.updateMany(map) : Promise.resolve();
+  }
+  (function ligarMeusDados() {
+    var bExp = document.getElementById("meus-dados-exportar"), bImp = document.getElementById("meus-dados-importar"), arq = document.getElementById("meus-dados-arquivo");
+    if (!bExp || !bImp || !arq) return;
+    function fecharMenu() { var mm = document.getElementById("more-menu"); if (mm) mm.hidden = true; var mb = document.getElementById("more-btn"); if (mb) mb.setAttribute("aria-expanded", "false"); }
+    bExp.addEventListener("click", function () { fecharMenu(); meusDadosExportar(); });
+    bImp.addEventListener("click", function () { fecharMenu(); arq.click(); });
+    arq.addEventListener("change", function () {
+      var file = arq.files[0];
+      if (!file) return;
+      var rd = new FileReader();
+      rd.onload = function () {
+        arq.value = "";
+        var p = mdJson(rd.result, null);
+        if (!p || (p.tipo !== "bluebook-meus-dados" && p.tipo !== "bluebook-perfil") || !p.dados || typeof p.dados !== "object") {
+          window.alert("Este arquivo não é um backup de dados do Bluebook.");
+          return;
+        }
+        if (!window.confirm("Importar os dados deste arquivo? Anotações e favoritos serão somados aos atuais; histórico e ajustes serão substituídos. O app será recarregado.")) return;
+        meusDadosImportar(p).then(function () { location.reload(); });
+      };
+      rd.readAsText(file);
+    });
+  })();
   /* ---------------- Busca global (todo o app) ---------------- */
   function cidCats(s) {
     var out = []; String(s || "").replace(/[A-Z]\d\d(?:\.\d+)?/g, function (m) { out.push(m.slice(0, 3)); return m; });
@@ -2598,37 +2655,7 @@
     var feito = store && store.updateMany && Object.keys(map).length ? store.updateMany(map) : Promise.resolve();
     return feito.then(function () { setTimeout(function () { location.reload(); }, 600); });
   }
-  /* Nuvem (src/nuvem.js): depois que a sincronização grava no localStorage o que veio de outro aparelho, relê as
-     variáveis em memória e redesenha a tela atual — o app NÃO é recarregado. Se a pessoa está digitando num campo
-     da ficha (anotação, prescrição, peso), a tela só é redesenhada quando ela sair do campo, para não perder o
-     que está sendo digitado nem fechar o teclado. A anotação em edição nem chega aqui: src/nuvem.js adia o
-     registro enquanto o campo tem o foco (perfilEditando). */
-  var redesenhoPendente = false;
-  var TELAS_PESSOAIS = { meds: 1, diseases: 1, rx: 1, plantao: 1 };
-  function campoEmUso() { var a = document.activeElement; return !!(a && detailEl.contains(a) && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)); }
-  function lista(v) { return Array.isArray(v) ? v : []; }
-  function objeto(v, padrao) { return v && typeof v === "object" && !Array.isArray(v) ? v : padrao; }
-  function redesenhar() { redesenhoPendente = false; if (TELAS_PESSOAIS[viewMode]) render(); }
-  function perfilRecarregarMemoria() {
-    NOTES = objeto(lsGet("bluebook:notes", {}), {});
-    RECENTS = lista(lsGet("bluebook:recents", []));
-    HIST = lista(lsGet("bluebook:hist", []));
-    disFavs = lista(lsGet("bluebook:disease-favs", []));
-    RX = lista(lsGet("bluebook:rx", []));
-    RXPT = objeto(lsGet("bluebook:rxpt", null), { gest: false, lact: false, ped: false });
-    RXD = objeto(lsGet("bluebook:rxd", {}), {});
-    RXH = objeto(lsGet("bluebook:rxh", null), { pac: "", pres: "", crm: "" });
-    try { PL_KG = parseFloat(window.localStorage.getItem("bluebook:pl-kg") || "0") || 0; } catch (e) { PL_KG = 0; }
-    if (store && store.recarregar) medications = store.recarregar();
-    if (campoEmUso()) { redesenhoPendente = true; return; }
-    redesenhar();
-  }
-  detailEl.addEventListener("focusout", function () {
-    if (redesenhoPendente) setTimeout(function () { if (redesenhoPendente && !campoEmUso()) redesenhar(); }, 0);
-  });
-  /* Chave ("m:Nome" ou "d:Nome") da anotação que está sendo digitada agora, ou null. */
-  function perfilEditando() { var ta = document.getElementById("note-text"); return ta && document.activeElement === ta ? ta.getAttribute("data-nota") : null; }
-  window.BBPerfil = { dados: perfilDados, importar: perfilImportar, recarregarMemoria: perfilRecarregarMemoria, editando: perfilEditando };
+  window.BBPerfil = { dados: perfilDados, importar: perfilImportar };
 
   function perfilResumo() {
     var p = perfilDados(), notas = 0, dfav = 0;
@@ -2725,37 +2752,6 @@
     setTimeout(atualizar, 2000);
   })();
 
-  /* Ajustes → Sincronização (src/nuvem.js). Só existe quando o app foi gerado com a nuvem configurada. */
-  function ligarSinc() {
-    var N = window.BBNuvem, st = document.getElementById("sinc-status"), bt = document.getElementById("sinc-agora");
-    function desenhar() {
-      if (!document.body.contains(st)) { document.removeEventListener("bb:nuvem", desenhar); return; }
-      var e = N.estado();
-      st.textContent = e.texto;
-      st.style.color = !e.conectado || e.erro ? "var(--bad-ink)" : e.pendente || !e.online || e.sincronizando ? "var(--ink-soft)" : "var(--ok)";
-      bt.disabled = e.sincronizando || !e.conectado;
-    }
-    bt.addEventListener("click", function () { N.sincronizar({ busca: true }).then(desenhar); desenhar(); });
-    var xb = document.getElementById("sinc-excluir-btn"), xp = document.getElementById("sinc-excluir");
-    xb.addEventListener("click", function () { xp.hidden = !xp.hidden; xb.setAttribute("aria-expanded", xp.hidden ? "false" : "true"); });
-    document.getElementById("sx-confirmar").addEventListener("click", function () {
-      var xs = document.getElementById("sx-status"), sen = document.getElementById("sx-senha");
-      xs.style.color = "var(--bad-ink)";
-      if (!document.getElementById("sx-ok").checked) { xs.textContent = "Marque a confirmação para continuar."; return; }
-      if (sen && !sen.value) { xs.textContent = "Informe a sua senha."; return; }
-      xs.style.color = "var(--ink-soft)"; xs.textContent = "Excluindo…";
-      N.excluirConta(sen ? sen.value : "").then(function () {
-        xs.style.color = "var(--ok)";
-        xs.textContent = "Conta e dados da nuvem excluídos. Este aparelho continua funcionando só com os dados locais.";
-        if (sen) sen.value = "";
-        desenhar();
-      }).catch(function (e) { xs.style.color = "var(--bad-ink)"; xs.textContent = N.mensagem(e, "excluir"); });
-    });
-    document.addEventListener("bb:nuvem", desenhar);
-    window.addEventListener("online", desenhar); window.addEventListener("offline", desenhar);
-    desenhar();
-  }
-
   function ligarConta(overlay) {
     var A = window.BBAuth;
     document.getElementById("conta-sair").addEventListener("click", function () { overlay.remove(); A.sair(); });
@@ -2772,7 +2768,6 @@
       }).catch(function (err) { st.textContent = err && err.message ? err.message : "Não foi possível alterar a senha."; });
     });
     if (document.getElementById("settings-drive")) ligarDrive(overlay);
-    if (document.getElementById("settings-sinc")) ligarSinc();
     document.getElementById("perfil-export").addEventListener("click", function () {
       var p = perfilDados();
       downloadJson("bluebook-perfil-" + todayInputValue() + ".json", { tipo: "bluebook-perfil", versao: 1, email: A.email(), exportadoEm: new Date().toISOString(), dados: p.dados, favoritos: p.favoritos });
@@ -2837,23 +2832,6 @@
         '<button type="button" class="btn" id="cs-salvar" style="margin-top:8px;">Salvar nova senha</button>' +
         '<p id="cs-status" class="calc-note" role="status"></p></div>' +
         '</div>' +
-        /* Nuvem (src/nuvem.js): estado da sincronização automática. Sem nuvem configurada, a seção não aparece. */
-        (window.BBNuvem && window.BBNuvem.configurado() ? (
-          '<div class="field" id="settings-sinc"><label>Sincronização</label>' +
-          '<p id="sinc-status" class="body-text" role="status" style="margin:0 0 8px 0;font-size:14px;"></p>' +
-          '<div style="display:flex;gap:8px;flex-wrap:wrap;"><button type="button" class="btn" id="sinc-agora">Sincronizar agora</button></div>' +
-          '<p class="calc-note" style="margin-top:8px;">Suas anotações, favoritos, recentes, buscas recentes, prescrição em andamento (medicamentos, doses, prescritor e CRM) e o peso do plantão vão para a sua conta na nuvem e aparecem sozinhos nos seus outros aparelhos. ' +
-          'O campo “Paciente” da prescrição fica só neste aparelho. ' +
-          '<strong>Não escreva nas anotações nome ou dados que identifiquem pacientes</strong> (LGPD: dados de saúde são sensíveis).</p>' +
-          /* LGPD (direito de eliminação): apaga a conta e os dados pessoais guardados na nuvem. */
-          '<button type="button" class="btn-ghost btn" id="sinc-excluir-btn" aria-expanded="false" style="margin-top:10px;">Excluir minha conta na nuvem</button>' +
-          '<div id="sinc-excluir" hidden style="margin-top:10px;">' +
-          '<p class="calc-note" style="margin:0 0 8px 0;">Apaga, de forma definitiva, a sua conta e todos os seus dados pessoais guardados na nuvem (anotações, favoritos, recentes e prescrições sincronizadas). Os dados deste aparelho continuam aqui até você sair ou limpar o navegador. Precisa de internet.</p>' +
-          (window.BBAuth.temSenha() ? '<label for="sx-senha" style="font-size:13px;">Sua senha (para confirmar)</label><input type="password" id="sx-senha" autocomplete="current-password">' : "") +
-          '<label style="font-size:13px;display:flex;gap:8px;align-items:flex-start;margin-top:6px;"><input type="checkbox" id="sx-ok" style="width:auto;margin-top:3px;"> Entendo que a exclusão na nuvem não pode ser desfeita.</label>' +
-          '<button type="button" class="btn" id="sx-confirmar" style="margin-top:8px;background:var(--danger);">Excluir conta e dados na nuvem</button>' +
-          '<p id="sx-status" class="calc-note" role="status"></p></div></div>'
-        ) : "") +
         '<div class="field" id="settings-perfil"><label>Backup do perfil</label>' +
         '<p class="body-text" style="margin:0 0 10px 0;font-size:13px;color:var(--ink-soft);">Anotações, favoritos, recentes, prescrições e peso do plantão, ligados ao seu e-mail. Use para levar o perfil a outro aparelho (crie lá o acesso com o mesmo e-mail) ou como cópia de segurança. A senha não vai no arquivo.</p>' +
         '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +

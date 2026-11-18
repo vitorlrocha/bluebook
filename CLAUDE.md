@@ -1,7 +1,8 @@
 # Blue Book — guia curto do projeto
 
 App médico de consulta (doenças, CID-10, condutas, prescrições, medicamentos), em português do Brasil.
-Detalhe técnico (estrutura, build, testes, módulos): `docs/GUIA_TECNICO.md`. Visual: `docs/DESIGN.md`.
+Guia principal do autor: `BLUEBOOK-GUIA.md` (prevalece; regras contra regressão na Parte 6).
+Detalhe técnico (estrutura, build, testes, módulos): `docs/GUIA_TECNICO.md`. Visual: `docs/DESIGN.md`. Publicar: `docs/PUBLICAR.md`.
 
 ## Objetivo
 Funcionar online e offline, instalável no computador e no celular, com atualização automática, código no
@@ -12,7 +13,9 @@ conteúdo aparecer no app instalado após reconectar; (3) app publicado e endere
 
 ## Como o app deve se comportar (decidido pelo autor em 11/11/2026)
 - Acesso: login no aparelho (cada pessoa cria o próprio acesso). Uso: público em geral.
-- Dados pessoais (favoritos, anotações etc.): sincronizam sozinhos entre os aparelhos da mesma conta.
+- App estático e offline (decidido pelo autor em 18/11/2026): dados clínicos embutidos no app; favoritos, anotações,
+  histórico e ajustes só no aparelho (localStorage). Backup por arquivo: menu ⋮ → Exportar / Importar meus dados.
+- Sem Firebase, sem banco de dados externo, sem serviço pago e sem login novo sem perguntar antes ao autor.
 - Atualização: aviso "Nova versão disponível · Atualizar"; nunca recarrega no meio do uso.
 
 ## Decisões técnicas (uma linha cada; o gerente decide e registra aqui)
@@ -20,13 +23,10 @@ conteúdo aparecer no app instalado após reconectar; (3) app publicado e endere
 - Repositório: `vitorlrocha/bluebook` (público); commits com o e-mail privado do GitHub.
 - App: PWA de arquivo único (`dist/index.html`), sem framework e sem dependência externa para o uso clínico.
 - Offline e atualização: service worker + `src/atualiza.js`; versão em `package.json`, publicada em `versao.json`.
-- Banco na nuvem: Firebase (plano gratuito Spark) — Authentication (e-mail/senha e Google) + Cloud Firestore em São Paulo; escolhido porque não pausa por inatividade e o autor já tem conta Google.
-- Nuvem sem SDK: o app fala com o Firebase por chamadas REST (sem biblioteca externa), para continuar em arquivo único.
-- Modelo de dados na nuvem: um documento por usuário (`usuarios/<uid>`), com um campo por registro; menos leituras e gravações (cabe no plano gratuito com uso público).
-- Conflito de sincronização: vale a alteração mais recente de cada registro; anotação editada em dois aparelhos sem internet guarda as duas versões; exclusão é marcada, não apagada.
-- Configuração da nuvem: variáveis de ambiente (`.env` local, fora do git; "Repository variables" no GitHub); só identificadores públicos; regras de acesso em `firestore.rules`.
-- Login: conta do Firebase; o aparelho guarda só o hash da senha para abrir sem internet.
-- Privacidade (LGPD): página própria `privacidade.html` (política + termos, também offline), link em Ajustes → Sobre e na tela de entrada; Ajustes → Sincronização → "Excluir minha conta na nuvem" apaga a conta (Firebase Auth) e o documento (Firestore; `firestore.rules` permite delete só ao dono).
+- Firebase removido a pedido do autor (18/11/2026): saíram `src/nuvem.js`, `firestore.rules`, `.env.exemplo`, a seção
+  Sincronização/Excluir conta de Ajustes e as variáveis do build; login e Google voltaram ao comportamento local da v73.
+- Login: só no aparelho; o aparelho guarda só o hash da senha (abre sem internet).
+- Privacidade (LGPD): página própria `privacidade.html` (política + termos, também offline), link em Ajustes → Sobre e na tela de entrada.
 - Prioridade 1 da revisão clínica (17/11/2026): diazepam retal com teto de 20 mg na calculadora (AES 2016 e rótulo FDA, igual ao Plantão); dexametasona IM/EV com teto de 10 mg/dose (documento de origem); captopril e hidrocortisona do Plantão ficam PENDENTE de fonte brasileira.
 - Backup no Google Drive: mantido como opcional (pede a permissão do Drive só quando a pessoa liga o backup).
 - Medicamentos novos: lote `curadoria/meds-lote-NN.json` escrito a partir da bula ou documento oficial aberto (URL em `fontes`, "Fonte:" nas observações), integrado por `ferramentas/integrar_meds.js` no fim de `seed_meds.json` com `orig` (selo "Literatura · não conferido"); os 1.851 originais não mudam.
@@ -56,16 +56,9 @@ O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`
 - Ao terminar qualquer tarefa, encerrar tudo o que foi aberto: testes, `servir.js` e navegadores.
 - Não usar agentes (subagentes) sem pedido do autor.
 
-## Estado atual (17/11/2026)
-- No ar: versão 0.75.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
-  busca única em todo o app, acervo ampliado, doses pediátricas conferidas com bulas, política de privacidade e exclusão da conta.
-- Em andamento: banco na nuvem (Firebase) com sincronização automática; ainda não publicado.
-  - Firebase configurado no projeto `nimble-lead-514122-e4`: login por e-mail/senha e Google ativados, domínio
-    `vitorlrocha.github.io` autorizado, Firestore criado em `southamerica-east1` (São Paulo), modo de produção
-    (tudo negado até publicar `firestore.rules`), app Web "Bluebook" registrado.
-  - `src/nuvem.js` pronto e testado. Falta: publicar as regras definitivas no console;
-    cadastrar `BB_FIREBASE_API_KEY` e `BB_FIREBASE_PROJECT_ID` como "Repository variables" no GitHub e passar
-    essas variáveis ao passo de build do workflow (a chave é colada pelo autor: a ferramenta do navegador não a lê).
+## Estado atual (18/11/2026)
+- No ar: versão 0.76.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
+  busca única em todo o app, acervo ampliado, doses pediátricas conferidas com bulas, política de privacidade.
 - Pendente do autor: revisão clínica (`REVISAO_CLINICA.md`, propostas em `docs/PROPOSTAS_P1.md`), teste num iPhone real.
 - Acervo ampliado (13/11/2026): +149 doenças dos lotes 01–17 revisados (campo `orig`), integradas por `ferramentas/integrar_lote.js`.
 - Calculadora pediátrica (17/11/2026): 96 de 97 vias com conferência registrada (`rev`); 11 corrigidas com bula

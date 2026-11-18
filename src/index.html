@@ -58,6 +58,9 @@
             <button class="menu-item" id="seed-btn">Carregar biblioteca</button>
             <a class="menu-item" href="https://consultas.anvisa.gov.br/#/bulario/" target="_blank" rel="noopener">Bulário Anvisa</a>
             <button class="menu-item" id="export-notes-btn">Exportar anotações</button>
+            <button class="menu-item" id="meus-dados-exportar">Exportar meus dados</button>
+            <button class="menu-item" id="meus-dados-importar">Importar meus dados</button>
+            <input type="file" id="meus-dados-arquivo" accept="application/json,.json" hidden>
             <button class="menu-item" id="settings-btn">Ajustes</button>
             <button class="menu-item" id="logout-btn" hidden>Sair</button>
           </div>
@@ -95,7 +98,6 @@
 
 <script>/*@atualiza*/</script>
 <script>/*@google*/</script>
-<script>/*@nuvem*/</script>
 <script>/*@auth*/</script>
 <script>/*@app*/</script>
 <!-- O service worker (uso offline e atualização automática) é registrado por src/atualiza.js. -->

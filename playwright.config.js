@@ -11,8 +11,6 @@ module.exports = defineConfig({
   expect: { timeout: 7000 },
   fullyParallel: true,
   retries: process.env.CI ? 1 : 0,
-  // No computador de casa, no máximo 2 navegadores ao mesmo tempo, para não travar a máquina.
-  workers: process.env.CI ? undefined : 2,
   reporter: [['list'], ['html', { open: 'never', outputFolder: 'testes/relatorio' }]],
   outputDir: 'testes/resultados',
   use: {
@@ -25,9 +23,6 @@ module.exports = defineConfig({
     command: `node ferramentas/build.js && node ferramentas/servir.js dist ${PORTA}`,
     url: `http://localhost:${PORTA}/`,
     reuseExistingServer: !process.env.CI,
-    // Os testes NUNCA falam com o Firebase de verdade: o build de teste sai sem nuvem, mesmo que exista um .env.
-    // (testes/nuvem.ambos.spec.js liga uma nuvem simulada por window.__BB_NUVEM_TESTE.)
-    env: { BB_SEM_NUVEM: '1' },
     timeout: 60000,
   },
   projects: [

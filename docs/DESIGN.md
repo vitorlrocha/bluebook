@@ -225,7 +225,6 @@ O modo escuro é aplicado por `@media (prefers-color-scheme: dark)` com `:root:n
 - **Nota final** (12,5 px, `--ink-faint`, centralizada): o acesso fica só no aparelho, e o app é apoio e não substitui o julgamento clínico nem a bula.
 - **Sem sessão:** o `<html>` recebe a classe `bb-locked` antes de desenhar a tela, e `.app` fica oculto, para o conteúdo não piscar.
 - **Ajustes:** a seção "Conta" (e-mail, Sair, Alterar senha) e a seção "Backup do perfil" aparecem antes de "Sobre". O menu ⋮ tem "Sair (e-mail)".
-- **Com a nuvem configurada** (`src/nuvem.js`; sem ela nada muda): a tela "Criar acesso" ganha o link "Já tenho acesso · Entrar" e a tela "Entrar" de um aparelho novo, o link "Ainda não tenho acesso · Criar" (links `--accent` 600); "Esqueci a senha" passa a ter o botão principal "Enviar e-mail de redefinição" e, abaixo de um separador "outra opção", o bloco "Apagar o acesso deste aparelho" (botão secundário); a nota final explica que a conta vale em todos os aparelhos. Em Ajustes, logo depois de "Conta", a seção "Sincronização": linha de estado (`--ok` em dia, `--ink-soft` pendente/sem internet, `--bad-ink` erro), botão principal "Sincronizar agora" e a nota de privacidade (`.calc-note`).
 
 ---
 

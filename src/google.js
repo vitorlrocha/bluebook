@@ -4,9 +4,6 @@
      do Google e há internet: o app continua 100% offline sem ele.
    - Escopos: e-mail/perfil (para saber o e-mail verificado) e drive.appdata — uma pasta OCULTA e privada do
      app dentro do Drive da pessoa. O Bluebook não enxerga nenhum outro arquivo do Drive.
-     Com a nuvem configurada (src/nuvem.js), "Entrar com o Google" pede SÓ e-mail/perfil; a permissão do Drive
-     só é pedida quando a pessoa liga ou usa o backup no Drive. Sem a nuvem, vale o comportamento antigo:
-     entrar com o Google já liga o backup no Drive.
    - O backup é o mesmo "perfil" de Ajustes (anotações, favoritos, recentes, prescrições, peso do plantão),
      num único arquivo bluebook-perfil.json. Sem senha, sem hash.
    - O token do Google vale ~1 hora e só pode ser renovado com um toque da pessoa (o navegador bloqueia a
@@ -20,7 +17,7 @@
      "Bluebook (GitHub Pages)", tipo aplicativo da Web, origem autorizada https://vitorlrocha.github.io.
      App em modo de teste: só os usuários de teste cadastrados no console conseguem entrar. */
   var CLIENT_ID = "937386831610-3nnitjchhtbsnlofgueoq1ig69h7l5sr.apps.googleusercontent.com";
-  var ESC_BASE = "openid email profile", ESC_DRIVE = "https://www.googleapis.com/auth/drive.appdata";
+  var SCOPES = "openid email profile https://www.googleapis.com/auth/drive.appdata";
   var GSI = "https://accounts.google.com/gsi/client";
   var DRIVE = "https://www.googleapis.com/drive/v3/files";
   var UPLOAD = "https://www.googleapis.com/upload/drive/v3/files";
@@ -28,8 +25,7 @@
   var K = "bluebook:drive";          // { email, conectado, fileId, ultimo, hash }
   var INTERVALO = 20000;
 
-  var token = null, expira = 0, gsi = null, enviando = false, temDrive = false;
-  function nuvemLigada() { return !!(window.BBNuvem && window.BBNuvem.configurado()); }
+  var token = null, expira = 0, gsi = null, enviando = false;
 
   function clientId() { return window.__BB_GOOGLE_CLIENT_ID || CLIENT_ID; }   // testes injetam um ID fictício
   function ler() { try { return JSON.parse(localStorage.getItem(K) || "null") || {}; } catch (e) { return {}; } }
@@ -37,7 +33,6 @@
   function avisar() { try { document.dispatchEvent(new CustomEvent("bb:drive", { detail: estado() })); } catch (e) {} }
   function online() { return navigator.onLine !== false; }
   function tokenValido() { return !!token && Date.now() < expira; }
-  function tokenDrive() { return tokenValido() && temDrive; }      // o token atual inclui a permissão do Drive?
   function hashDe(s) { var h = 5381; for (var i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0; return String(h >>> 0); }
 
   function carregarGsi() {
@@ -54,17 +49,17 @@
     return gsi;
   }
   /* Abre a janela do Google (precisa ser chamada a partir de um toque/clique). */
-  function pedirToken(prompt, drive) {
+  function pedirToken(prompt) {
     return carregarGsi().then(function () {
       return new Promise(function (ok, falha) {
         var tc = window.google.accounts.oauth2.initTokenClient({
-          client_id: clientId(), scope: drive ? ESC_BASE + " " + ESC_DRIVE : ESC_BASE, prompt: prompt || "",
+          client_id: clientId(), scope: SCOPES, prompt: prompt || "",
           callback: function (r) {
             if (!r || r.error || !r.access_token) { falha(new Error(r && r.error === "access_denied" ? "Acesso ao Google não autorizado." : "O Google não autorizou o acesso.")); return; }
-            if (drive && window.google.accounts.oauth2.hasGrantedAllScopes && !window.google.accounts.oauth2.hasGrantedAllScopes(r, ESC_DRIVE)) {
+            if (window.google.accounts.oauth2.hasGrantedAllScopes && !window.google.accounts.oauth2.hasGrantedAllScopes(r, "https://www.googleapis.com/auth/drive.appdata")) {
               falha(new Error("Para o backup, autorize o acesso à pasta do app no Google Drive.")); return;
             }
-            token = r.access_token; temDrive = !!drive; expira = Date.now() + Math.max(60, (Number(r.expires_in) || 3600) - 120) * 1000;
+            token = r.access_token; expira = Date.now() + Math.max(60, (Number(r.expires_in) || 3600) - 120) * 1000;
             ok(token);
           },
           error_callback: function (e) { falha(new Error(e && e.type === "popup_closed" ? "Janela do Google fechada." : "A janela do Google foi bloqueada ou fechada.")); }
@@ -77,7 +72,7 @@
     opts = opts || {};
     opts.headers = Object.assign({ Authorization: "Bearer " + token }, opts.headers || {});
     return fetch(url, opts).then(function (r) {
-      if (r.status === 401) { token = null; expira = 0; temDrive = false; throw new Error("Sessão do Google expirou. Toque em Sincronizar."); }
+      if (r.status === 401) { token = null; expira = 0; throw new Error("Sessão do Google expirou. Toque em Sincronizar."); }
       if (!r.ok) throw new Error("Google Drive respondeu " + r.status + ".");
       return r.status === 204 ? null : r.json();
     });
@@ -120,18 +115,17 @@
     var d = ler(), p = perfilAtual();
     var h = p ? hashDe(JSON.stringify([p.dados, p.favoritos])) : null;
     return { configurado: !!clientId(), conectado: !!d.conectado, email: d.email || null, ultimo: d.ultimo || null,
-      pendente: !!(d.conectado && p && h !== d.hash), tokenValido: tokenDrive(), online: online() };
+      pendente: !!(d.conectado && p && h !== d.hash), tokenValido: tokenValido(), online: online() };
   }
-  /* Entrar com o Google: devolve o e-mail verificado. Sem a nuvem, também deixa o Drive pronto (mesmo token);
-     com a nuvem, pede só e-mail/perfil e o token serve para obter a conta do Firebase (ultimoToken). */
-  function entrar() { return pedirToken("select_account", !nuvemLigada()).then(emailGoogle); }
+  /* Entrar com o Google: devolve o e-mail verificado. Também deixa o Drive pronto (mesmo token). */
+  function entrar() { return pedirToken("select_account").then(emailGoogle); }
   /* Chamado pelo login (src/auth.js) depois que o e-mail foi aceito: liga o backup no Drive. */
   function vincular(email) { var d = ler(); d.email = email; d.conectado = true; gravar(d); }
   /* Ajustes → Conectar: o e-mail do Google precisa ser o mesmo da conta do Bluebook. */
   function conectar() {
     var A = window.BBAuth;
-    return pedirToken("", true).then(emailGoogle).then(function (email) {
-      if (!A || email !== A.email()) { token = null; temDrive = false; throw new Error("A conta Google (" + email + ") é diferente da conta do Bluebook (" + (A && A.email()) + ")."); }
+    return pedirToken("").then(emailGoogle).then(function (email) {
+      if (!A || email !== A.email()) { token = null; throw new Error("A conta Google (" + email + ") é diferente da conta do Bluebook (" + (A && A.email()) + ")."); }
       var d = ler(); d.email = email; d.conectado = true; gravar(d);
       return backup();
     });
@@ -143,7 +137,7 @@
     if (!d.conectado) return Promise.reject(new Error("Conecte o Google Drive primeiro."));
     if (d.email && d.email !== p.email) return Promise.reject(new Error("O Drive conectado é de outra conta (" + d.email + ")."));
     var h = hashDe(JSON.stringify([p.dados, p.favoritos]));
-    var vai = tokenDrive() ? Promise.resolve() : pedirToken("", true);
+    var vai = tokenValido() ? Promise.resolve() : pedirToken("");
     enviando = true;
     return vai.then(function () { return enviar(p); }).then(function () {
       var d2 = ler(); d2.hash = h; d2.ultimo = new Date().toISOString(); gravar(d2);
@@ -152,7 +146,7 @@
   }
   function restaurar() {
     var A = window.BBAuth;
-    var vai = tokenDrive() ? Promise.resolve() : pedirToken("", true);
+    var vai = tokenValido() ? Promise.resolve() : pedirToken("");
     return vai.then(acharArquivo).then(function (id) {
       if (!id) throw new Error("Ainda não há backup do Bluebook neste Google Drive.");
       return api(DRIVE + "/" + id + "?alt=media");
@@ -164,7 +158,7 @@
   }
   function desconectar() {
     try { if (token && window.google && window.google.accounts) window.google.accounts.oauth2.revoke(token, function () {}); } catch (e) {}
-    token = null; expira = 0; temDrive = false;
+    token = null; expira = 0;
     try { localStorage.removeItem(K); } catch (e) {}
     avisar();
   }
@@ -176,8 +170,7 @@
     backup().catch(function () { avisar(); });
   }
 
-  window.BBGoogle = { configurado: function () { return !!clientId(); }, entrar: entrar,
-    ultimoToken: function () { return tokenValido() ? token : null; }, vincular: vincular, conectar: conectar, backup: backup,
+  window.BBGoogle = { configurado: function () { return !!clientId(); }, entrar: entrar, vincular: vincular, conectar: conectar, backup: backup,
     restaurar: restaurar, desconectar: desconectar, estado: estado, ARQUIVO: ARQ };
 
   setInterval(automatico, INTERVALO);

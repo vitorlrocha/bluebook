@@ -65,35 +65,14 @@ sem dependências externas em tempo de execução, funciona offline. Interface i
 - **Google (Etapa 5):** `src/google.js` (marcador `/*@google*/`, antes do auth). `CLIENT_ID` = cliente OAuth
   "Bluebook (GitHub Pages)" do projeto Google Cloud `nimble-lead-514122-e4` (modo de teste; só funciona na origem
   https://vitorlrocha.github.io). Vazio = botão desativado. Escopo do Drive: só `drive.appdata`. Testes simulam o Google (`testes/google.ambos.spec.js`, com service worker bloqueado).
-- **Nuvem (conta + sincronização):** `src/nuvem.js` (marcador `/*@nuvem*/`, depois do google e antes do auth) expõe
-  `window.BBNuvem`. Fala com o Firebase só por REST (`fetch`, sem SDK): Identity Toolkit (`accounts:signUp`,
-  `signInWithPassword`, `sendOobCode`, `update`, `signInWithIdp`), `securetoken` (renovação) e Firestore. Só roda se o
-  build gravar `window.BB_NUVEM = {apiKey, projectId}` (variáveis `BB_FIREBASE_API_KEY`/`BB_FIREBASE_PROJECT_ID`, do
-  `.env` ou das "Repository variables"; `BB_SEM_NUVEM=1` desliga — é o que o `playwright.config.js` usa, para os testes
-  nunca falarem com o Firebase real). Sem isso, nenhuma chamada sai e o app é só local.
-  - No aparelho: `bluebook:nuvem` = `{uid, email, refreshToken}` (o idToken fica na memória; a senha nunca é guardada)
-    e `bluebook:sinc` = `{uid, ap, ultimo, reg}` — o último estado conhecido de cada registro (`v`, `mod`, `suj` = falta
-    enviar, `bm` = `mod` que a nuvem tinha). "Esqueci a senha → apagar acesso" remove as duas chaves.
-  - Na nuvem: um documento `usuarios/<uid>` com o mapa `reg`; chave `"<tipo>|<id>"` → `{v: texto ou null, mod, ap}`.
-    Tipos: `nota|m:Nome`/`nota|d:Nome`, `favm|nome minúsculo`, `favd|Nome`, `um|recents|hist|rx|rxpt|rxd|rxh|pl-kg`
-    (`um|rxh` leva só prescritor e CRM; o campo "Paciente" não sai do aparelho). Os medicamentos importados (`extras`)
-    não sincronizam. Regras em `firestore.rules` (colar no console do Firebase).
-  - Ciclo (`sincronizar`): tira o retrato do localStorage, marca o que mudou (`mod = agora`; sumiu = `v: null`), lê o
-    documento, mescla (`mesclar`, função pura) e grava o documento inteiro com `currentDocument.updateTime` (ou
-    `exists=false`); pré-condição recusada → lê e mescla de novo, até 3 vezes. Conflito: vale o `mod` maior; anotação
-    alterada nos dois lados → texto mais recente + "— versão do outro aparelho (data):" com o outro (sem repetir);
-    anotação apagada de um lado e editada do outro → fica o texto. Gatilhos: login, volta da internet, app oculto,
-    a cada 20 s (só grava se houver mudança) e busca a cada 5 min.
-  - Depois de aplicar o que veio da nuvem chama `window.BBPerfil.recarregarMemoria()` (`src/app.js`), que relê as
-    variáveis e redesenha sem recarregar; se há um campo da ficha em uso, redesenha ao sair dele. A anotação com o
-    cursor (`BBPerfil.editando()`) não é tocada enquanto estiver em edição. Ao criar uma chave de dado pessoal nova,
-    inclua-a também em `retrato`/`aplicarLocal` (nuvem.js) e em `perfilRecarregarMemoria` (app.js).
-  - Login com nuvem (`src/auth.js`): criar acesso e 1º login num aparelho novo exigem internet; depois vale o hash
-    local (offline). Conta antiga só local é criada no Firebase no login seguinte (`BBNuvem.ligar`). "Esqueci a senha"
-    envia o e-mail do Firebase; "Alterar senha" troca primeiro na nuvem. Com nuvem, "Entrar com o Google" pede só
-    `openid email profile` e usa `signInWithIdp`; o Drive só pede permissão ao ligar o backup.
-  - Testes: `testes/nuvem.ambos.spec.js` (Firebase simulado em memória, 2 aparelhos = 2 contextos; a configuração de
-    teste entra por `window.__BB_NUVEM_TESTE`).
+- **Meus dados (backup em arquivo):** menu ⋮ → "Exportar meus dados" / "Importar meus dados" (`src/app.js`,
+  `meusDadosExportar`/`meusDadosImportar`). Arquivo `bluebook-meus-dados-AAAA-MM-DD.json` = `{tipo: "bluebook-meus-dados",
+  versao: 1, dados: {chave do localStorage: texto}, favoritos: [nomes de medicamentos]}` com as chaves de `MD_CHAVES`
+  (anotações, favoritos de doenças, recentes, buscas, prescrição, peso do plantão, zoom). Ao importar, anotações e
+  favoritos são somados; histórico e ajustes são substituídos; aceita também o backup de perfil de Ajustes.
+  Ao criar uma chave de dado pessoal nova, inclua-a em `MD_CHAVES` e em `PESSOAIS` (`src/auth.js`).
+- **Sem nuvem:** o Firebase foi removido a pedido do autor (18/11/2026). Nenhum dado pessoal sai do aparelho, exceto o
+  backup opcional no Google Drive que a pessoa liga em Ajustes.
 - **Atualização automática (v73):** `src/atualiza.js` (marcador `/*@atualiza*/`, antes do google) registra o
   service worker, procura versão nova (ao abrir, ao voltar a internet, a cada hora), mostra "Nova versão
   disponível · Atualizar" e o aviso "Sem internet". O `sw.js` novo fica ESPERANDO e só assume com a mensagem

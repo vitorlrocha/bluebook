@@ -45,6 +45,61 @@ test('consulta: exportar anotações gera um arquivo JSON com a anotação', asy
   expect(dados.some((d) => d.anotacao === 'teste de exportação' && d.tipo === 'medicamento')).toBe(true);
 });
 
+test('meus dados: exportar pelo menu ⋮ e importar de volta restaura favoritos, anotações, histórico e ajustes', async ({ page }) => {
+  await abrir(page);
+  await abrirMed(page, 'Amoxicilina');
+  await page.locator('#detail-fav-btn').click();
+  await expect(page.locator('#detail-fav-btn')).toHaveClass(/is-fav/);
+  await page.locator('#note-text').fill('anotação para o backup');
+  await page.locator('#note-text').blur();
+  await page.evaluate(() => { localStorage.setItem('bluebook:zoom', '130'); localStorage.setItem('bluebook:pl-kg', '18'); });
+  // exportar
+  await page.locator('#more-btn').click();
+  const espera = page.waitForEvent('download');
+  await page.locator('#meus-dados-exportar').click();
+  const dl = await espera;
+  expect(dl.suggestedFilename()).toMatch(/^bluebook-meus-dados-\d{4}-\d{2}-\d{2}\.json$/);
+  const caminho = await dl.path();
+  const fs = require('fs');
+  const arq = JSON.parse(fs.readFileSync(caminho, 'utf8'));
+  expect(arq.tipo).toBe('bluebook-meus-dados');
+  expect(arq.favoritos).toContain('Amoxicilina');
+  expect(JSON.parse(arq.dados['bluebook:notes'])['m:Amoxicilina'].t).toBe('anotação para o backup');
+  expect(arq.dados['bluebook:zoom']).toBe('130');
+  expect(JSON.parse(arq.dados['bluebook:recents'] || '[]').length).toBeGreaterThan(0);   // histórico vai junto
+  // apaga tudo isso do aparelho (como num aparelho novo)
+  await page.evaluate(() => { ['bluebook:notes', 'bluebook:zoom', 'bluebook:pl-kg', 'bluebook:recents'].forEach((k) => localStorage.removeItem(k)); localStorage.removeItem('formulario-clinico:medications'); });
+  await page.reload();
+  await expect(page.locator('#sidebar .med-item').first()).toBeAttached();
+  // importar
+  page.once('dialog', (d) => { expect(d.type()).toBe('confirm'); d.accept(); });
+  await page.locator('#more-btn').click();
+  const escolha = page.waitForEvent('filechooser');
+  await page.locator('#meus-dados-importar').click();
+  const recarregou = page.waitForEvent('load');
+  await (await escolha).setFiles(caminho);
+  await recarregou;
+  await expect(page.locator('#sidebar .med-item').first()).toBeAttached();
+  expect(await page.evaluate(() => localStorage.getItem('bluebook:zoom'))).toBe('130');
+  expect(await page.evaluate(() => localStorage.getItem('bluebook:pl-kg'))).toBe('18');
+  await abrirMed(page, 'Amoxicilina');
+  await expect(page.locator('#note-text')).toHaveValue('anotação para o backup');
+  await expect(page.locator('#detail-fav-btn')).toHaveClass(/is-fav/);
+});
+
+test('meus dados: arquivo que não é backup do Bluebook é recusado sem mudar nada', async ({ page }) => {
+  await abrir(page);
+  const antes = await page.evaluate(() => JSON.stringify(Object.assign({}, localStorage)));
+  let msg = '';
+  page.once('dialog', (d) => { msg = d.message(); d.accept(); });
+  await page.locator('#more-btn').click();
+  const escolha = page.waitForEvent('filechooser');
+  await page.locator('#meus-dados-importar').click();
+  await (await escolha).setFiles({ name: 'outro.json', mimeType: 'application/json', buffer: Buffer.from('{"qualquer":1}') });
+  await expect.poll(() => msg).toBe('Este arquivo não é um backup de dados do Bluebook.');
+  expect(await page.evaluate(() => JSON.stringify(Object.assign({}, localStorage)))).toBe(antes);
+});
+
 test('plantão: peso inválido (0, negativo, texto) não mostra dose calculada', async ({ page }, info) => {
   await abrir(page);
   if (info.project.name !== 'computador') {

@@ -16,7 +16,6 @@
   h1 { font-size: 1.6rem; margin: 0 0 4px; }
   h2 { font-size: 1.25rem; margin: 0 0 8px; }
   h3 { font-size: 1.02rem; margin: 18px 0 4px; }
-  p, li { color: var(--ink); }
   .sub { color: var(--soft); margin: 0 0 20px; }
   a { color: var(--accent); }
   ul { padding-left: 1.2em; }
@@ -27,52 +26,43 @@
 <main>
   <nav><a href="./">← Voltar ao Bluebook</a></nav>
   <h1>Privacidade e termos de uso</h1>
-  <p class="sub">Bluebook — aplicativo gratuito de consulta médica. Vigente desde 17/11/2026.</p>
+  <p class="sub">Bluebook — aplicativo gratuito de consulta médica. Vigente desde 18/11/2026.</p>
 
   <article id="privacidade">
     <h2>Política de privacidade</h2>
-    <p>Esta política explica quais dados pessoais o Bluebook trata, para quê e como você controla esses dados, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
+    <p>Esta política explica quais dados pessoais o Bluebook trata e como você controla esses dados, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
 
-    <h3>1. Sem conta: tudo fica no seu aparelho</h3>
-    <p>O conteúdo do app (doenças, medicamentos, CID-10, calculadoras) vem junto com o próprio app. Favoritos, anotações, recentes, prescrições e ajustes ficam guardados apenas no armazenamento do seu navegador, neste aparelho. Nada disso é enviado a ninguém.</p>
+    <h3>1. Tudo fica no seu aparelho</h3>
+    <p>O Bluebook é um site estático: o conteúdo (doenças, medicamentos, CID-10, calculadoras) vem junto com o próprio app e funciona sem internet. Favoritos, anotações, histórico, prescrição em andamento e ajustes ficam guardados apenas no armazenamento do navegador deste aparelho (localStorage). O Bluebook não tem servidor de dados nem banco de dados na nuvem: nada disso é enviado a ninguém.</p>
 
-    <h3>2. Com conta: o que é guardado e onde</h3>
+    <h3>2. Acesso no aparelho</h3>
+    <p>Se você criar um acesso com e-mail e senha, ele também fica só neste aparelho. A senha nunca é guardada em texto: o aparelho guarda apenas um resumo cifrado (hash) para conferir a senha, inclusive sem internet.</p>
+
+    <h3>3. Opções do Google (só se você usar)</h3>
     <ul>
-      <li><strong>E-mail e senha.</strong> A conta é criada no Firebase Authentication (Google). A senha nunca é guardada em texto: o Firebase guarda só uma versão cifrada dela, e o seu aparelho guarda um resumo cifrado (hash) para permitir a entrada sem internet.</li>
-      <li><strong>Seus dados pessoais do app</strong> — anotações, favoritos, itens recentes, buscas recentes, prescrição em andamento (medicamentos, doses, nome e CRM do prescritor) e o peso usado no Plantão — são sincronizados no Cloud Firestore (Google), em servidores em São Paulo, para aparecerem nos seus outros aparelhos.</li>
-      <li><strong>O campo “Paciente” da prescrição nunca sai do aparelho.</strong></li>
-      <li><strong>Entrar com o Google</strong> pede só o seu e-mail e o perfil básico (nome e foto). O app não lê seus e-mails, contatos ou arquivos.</li>
-      <li><strong>Backup no Google Drive</strong> é opcional e só é ligado se você pedir em Ajustes. Ele usa uma pasta própria do Bluebook; o app não vê seus outros arquivos.</li>
+      <li><strong>Entrar com o Google</strong> usa a janela do próprio Google para confirmar o seu e-mail. O app não recebe a sua senha do Google nem lê seus e-mails, contatos ou arquivos.</li>
+      <li><strong>Backup no Google Drive</strong> guarda uma cópia dos seus dados pessoais do app numa pasta privada do Bluebook dentro do seu Drive. O app não vê seus outros arquivos.</li>
     </ul>
 
-    <h3>3. Não escreva dados de pacientes</h3>
-    <p>O Bluebook não é prontuário. Não escreva nas anotações nome, documento ou qualquer dado que identifique um paciente: dados de saúde são dados sensíveis pela LGPD.</p>
+    <h3>4. Não escreva dados de pacientes</h3>
+    <p>O Bluebook não é prontuário. Não escreva nas anotações nome, documento ou qualquer dado que identifique um paciente: dados de saúde são dados sensíveis pela LGPD. O campo “Paciente” da prescrição fica só neste aparelho.</p>
 
-    <h3>4. Para que usamos os dados</h3>
-    <p>Somente para prestar o serviço que você pediu: manter o seu acesso e sincronizar os seus dados entre os seus aparelhos (LGPD, art. 7º, V). Não há publicidade, não há venda nem compartilhamento de dados para marketing e o app não usa ferramentas de análise de comportamento ou rastreamento.</p>
+    <h3>5. O que o app não faz</h3>
+    <p>Não há publicidade, não há venda nem compartilhamento de dados e o app não usa ferramentas de análise de comportamento ou rastreamento.</p>
 
-    <h3>5. Quem mais trata os dados</h3>
-    <ul>
-      <li><strong>Google (Firebase e, se você ligar, Google Drive)</strong>, como operador, para autenticação, banco de dados e backup. Parte do processamento da autenticação pode ocorrer fora do Brasil, com as garantias contratuais do Google (LGPD, art. 33).</li>
-      <li><strong>GitHub (GitHub Pages)</strong>, que hospeda o app. Como qualquer site, o servidor registra dados técnicos de acesso (como endereço IP) por segurança.</li>
-    </ul>
-
-    <h3>6. Por quanto tempo</h3>
-    <p>Enquanto a sua conta existir. Você pode apagar tudo a qualquer momento (item 7). Os dados deste aparelho somem quando você usa “Apagar acesso e dados deste aparelho” na tela de entrada ou limpa os dados do navegador.</p>
+    <h3>6. Hospedagem</h3>
+    <p>O app é hospedado como site estático (GitHub Pages). Como qualquer site, o servidor de hospedagem registra dados técnicos de acesso (como endereço IP) por segurança; o Bluebook não tem acesso a esses registros para outros fins.</p>
 
     <h3>7. Seus direitos e como exercê-los</h3>
-    <p>Você pode confirmar, acessar, corrigir, levar consigo e eliminar os seus dados (LGPD, art. 18):</p>
     <ul>
-      <li><strong>Acessar e levar:</strong> Ajustes → Backup do perfil → Exportar perfil (.json).</li>
-      <li><strong>Corrigir:</strong> edite ou apague as anotações e favoritos no próprio app; a nuvem acompanha.</li>
-      <li><strong>Eliminar:</strong> Ajustes → Sincronização → <em>Excluir minha conta na nuvem</em> apaga a conta e todos os dados guardados na nuvem, de forma definitiva.</li>
-      <li><strong>Outros pedidos ou dúvidas:</strong> pela página do projeto em <a href="https://github.com/vitorlrocha/bluebook/issues" rel="noopener">github.com/vitorlrocha/bluebook</a> (aba Issues). Não escreva dados pessoais na mensagem pública: peça um contato e responderemos por canal privado.</li>
+      <li><strong>Levar seus dados:</strong> menu ⋮ → <em>Exportar meus dados</em> gera um arquivo .json com favoritos, anotações, histórico e ajustes.</li>
+      <li><strong>Restaurar ou levar a outro aparelho:</strong> menu ⋮ → <em>Importar meus dados</em>.</li>
+      <li><strong>Corrigir:</strong> edite ou apague anotações e favoritos no próprio app.</li>
+      <li><strong>Apagar:</strong> na tela de entrada, “Esqueci a senha” → <em>Apagar acesso e dados deste aparelho</em>; ou limpe os dados do site no navegador. O backup no Google Drive, se você o ligou, pode ser apagado nas configurações do seu Google Drive (dados de apps).</li>
+      <li><strong>Dúvidas:</strong> pela página do projeto em <a href="https://github.com/vitorlrocha/bluebook/issues" rel="noopener">github.com/vitorlrocha/bluebook</a> (aba Issues). Não escreva dados pessoais na mensagem pública.</li>
     </ul>
 
-    <h3>8. Segurança</h3>
-    <p>Toda comunicação usa conexão cifrada (HTTPS). As regras do banco de dados só permitem que cada pessoa leia, grave ou apague o próprio documento; ninguém consegue listar ou ver dados de outra conta.</p>
-
-    <h3>9. Mudanças nesta política</h3>
+    <h3>8. Mudanças nesta política</h3>
     <p>Se esta política mudar, a data de vigência no topo desta página é atualizada.</p>
   </article>
 
@@ -84,8 +74,8 @@
     <p>O conteúdo é resumido de fontes oficiais e da literatura, com a fonte indicada sempre que possível. Pode haver erros ou desatualização. Cada ficha mostra um selo do nível de conferência (“Revisado pelo autor”, “Fonte oficial”, “Literatura · não conferido” ou “⚠ Pendente”). Confirme doses e condutas na bula e no protocolo antes de qualquer decisão.</p>
     <h3>3. Responsabilidade</h3>
     <p>As decisões clínicas são de responsabilidade de quem as toma. O app é oferecido como está, sem garantia de que esteja livre de erros ou sempre disponível.</p>
-    <h3>4. Sua conta</h3>
-    <p>Você é responsável por manter a sua senha em segredo e por não registrar dados de pacientes. Contas usadas para abuso do serviço podem ser desativadas.</p>
+    <h3>4. Seus dados</h3>
+    <p>Seus dados pessoais ficam no seu aparelho. Faça cópias com “Exportar meus dados”: se o navegador for limpo ou o aparelho for perdido, os dados não podem ser recuperados por nós.</p>
     <h3>5. Custos</h3>
     <p>O Bluebook é gratuito.</p>
     <h3>6. Mudanças</h3>

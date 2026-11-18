@@ -64,7 +64,7 @@ test.describe('Regressão de funções (correções da v73)', () => {
     await page.locator('#more-btn').click();
     const itens = page.locator('#more-menu .menu-item:not([hidden])');
     await expect(itens.filter({ hasText: /^Sair/ })).toHaveCount(1);   // conta (Etapa 2)
-    for (const [sel, txt] of [['#seed-btn', 'Carregar biblioteca'], ['#more-menu a.menu-item', 'Bulário Anvisa'], ['#export-notes-btn', 'Exportar anotações'], ['#settings-btn', 'Ajustes']]) {
+    for (const [sel, txt] of [['#seed-btn', 'Carregar biblioteca'], ['#more-menu a.menu-item', 'Bulário Anvisa'], ['#export-notes-btn', 'Exportar anotações'], ['#meus-dados-exportar', 'Exportar meus dados'], ['#meus-dados-importar', 'Importar meus dados'], ['#settings-btn', 'Ajustes']]) {
       const el = page.locator(sel);
       await expect(el, txt).toBeVisible();
       await expect(el).toHaveText(new RegExp('^' + txt));   // "Carregar biblioteca (1851)" traz a contagem
