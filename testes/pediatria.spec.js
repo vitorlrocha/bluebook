@@ -145,6 +145,26 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#fp-out')).toContainText('100 mg');      // 40 mg/kg/dia × 10 kg ÷ 4
   });
 
+  test('lote 04: cefotaxima (95 mg/mL), valaciclovir com teto, cefuroxima EV e montelucaste por idade', async ({ page }) => {
+    await abrirFicha(page, 'Cefotaxima');
+    await page.locator('#fp-weight').fill('10');
+    await expect(page.locator('#fp-out')).toContainText('250 mg');      // 100 mg/kg/dia × 10 kg ÷ 4
+    await expect(page.locator('#fp-out')).toContainText('2,63 mL');     // ÷ 95 mg/mL
+    await abrirFicha(page, 'Valaciclovir');
+    await page.locator('#fp-weight').fill('60');
+    await expect(page.locator('#fp-out')).toContainText('travada em 1000 mg');   // 20 mg/kg × 60 = 1.200 → teto 1 g
+    await abrirFicha(page, 'Cefuroxima');
+    await page.locator('#fp-via').selectOption({ label: 'EV/IM (> 3 meses)' });
+    await page.locator('#fp-weight').fill('12');
+    await expect(page.locator('#fp-out')).toContainText('300 mg');      // 75 mg/kg/dia × 12 kg ÷ 3
+    await expect(page.locator('#fp-out')).toContainText('3,33 mL');     // ÷ 90 mg/mL
+    await page.locator('#search-input').fill('Montelucaste sódico');
+    const id = await page.locator('#sidebar .med-item[data-id]').evaluateAll((els) =>
+      els.filter((e) => e.querySelector('.med-item-main').firstChild.textContent.trim() === 'Montelucaste sódico').map((e) => e.getAttribute('data-id'))[0]);
+    await page.locator(`#sidebar .med-item[data-id="${id}"]`).click();
+    await expect(page.locator('#detail')).toContainText('2 a 5 anos 4 mg');
+  });
+
   test('dose acima da faixa usual gera aviso', async ({ page }) => {
     await abrirFicha(page, 'Dipirona sódica (Metamizol)');
     await page.locator('#fp-weight').fill('10');

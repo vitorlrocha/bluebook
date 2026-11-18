@@ -7,9 +7,9 @@ Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSIS
 | Prioridade | Itens |
 |---|---:|
 | Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 5 |
-| Prioridade 2 — faixas divergentes e doses a confirmar | 181 |
+| Prioridade 2 — faixas divergentes e doses a confirmar | 183 |
 | Prioridade 3 — completar informação (sem risco de dose) | 54 |
-| **Total** | **240** |
+| **Total** | **242** |
 
 Informativo: 18 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
 
@@ -46,7 +46,7 @@ Arquivo: `dados/ped_db.json`
 
 ## Prioridade 2 — faixas divergentes e doses a confirmar
 
-### Ficha × calculadora pediátrica (faixas diferentes) (7)
+### Ficha × calculadora pediátrica (faixas diferentes) (8)
 
 Conferir em: bula no Bulário Eletrônico da Anvisa (seção Posologia, uso pediátrico) e SBP quando houver.
 Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
@@ -57,11 +57,12 @@ Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
 | ☐ | Domperidona | faixa da ficha sai da faixa da calculadora — Ficha: 0,25-0,5 mg/kg/dose · Calculadora: VO 0,25 mg/kg/dose |
 | ☐ | Hidrocortisona (injetável) | faixa da ficha sai da faixa da calculadora — Ficha: 2-4 mg/kg/dose · Calculadora: EV/IM 4-8 mg/kg/dose |
 | ☐ | Cetoprofeno | faixa da ficha sai da faixa da calculadora — Ficha: 1-2 mg/kg/dose · Calculadora: VO 1 mg/kg/dose |
-| ☐ | Cefuroxima | faixa da ficha sai da faixa da calculadora — Ficha: 30 mg/kg/dia; 75-150 mg/kg/dia · Calculadora: VO 20-30 mg/kg/dia |
+| ☐ | Cefuroxima | faixa da ficha sai da faixa da calculadora — Ficha: 30 mg/kg/dia; 75-150 mg/kg/dia · Calculadora: VO 20-30 mg/kg/dia; EV/IM (> 3 meses) 50-100 mg/kg/dia |
 | ☐ | Ampicilina | faixa da ficha sai da faixa da calculadora — Ficha: 100-200 mg/kg/dia; 300-400 mg/kg/dia · Calculadora: EV 50-200 mg/kg/dia |
 | ☐ | Gentamicina | faixa da ficha sai da faixa da calculadora — Ficha: 4-5 mg/kg/dia; 5-7,5 mg/kg/dia · Calculadora: EV/IM 5-7,5 mg/kg/dia |
+| ☐ | Oxcarbazepina | faixa da ficha sai da faixa da calculadora — Ficha: 10-20 mg/kg/dia · Calculadora: VO (adjuvante, 2 a 16 anos) 8-10 mg/kg/dia |
 
-### Prescrição de doença pediátrica × calculadora (8)
+### Prescrição de doença pediátrica × calculadora (9)
 
 Conferir em: diretriz citada na linha "Base:" da própria doença; SBP/Ministério da Saúde (PCDT) para a dose pediátrica.
 Arquivo: `dados/diseases.json (campo prescricao) e dados/ped_db.json`
@@ -72,6 +73,7 @@ Arquivo: `dados/diseases.json (campo prescricao) e dados/ped_db.json`
 | ☐ | Infecção do trato urinário na infância — Cefalexina | Prescrição: "cefalexina 10 mg/kg/dia." · Calculadora: VO 25-100 mg/kg/dia |
 | ☐ | Infecção do trato urinário na infância — Nitrofurantoína | Prescrição: "nitrofurantoína 1-2 mg/kg/dia" · Calculadora: VO 5-7 mg/kg/dia |
 | ☐ | Febre sem sinais de localização (lactente) — Ampicilina | Prescrição: "ampicilina 300 mg/kg/dia 6/6 h" · Calculadora: EV 50-200 mg/kg/dia |
+| ☐ | Febre sem sinais de localização (lactente) — Cefotaxima | Prescrição: "cefotaxima 200-300 mg/kg/dia 6/6 h" · Calculadora: EV/IM (1 mês a 12 anos, < 50 kg) 50-180 mg/kg/dia |
 | ☐ | Meningite neonatal — Ampicilina | Prescrição: "Ampicilina 300 mg/kg/dia" · Calculadora: EV 50-200 mg/kg/dia |
 | ☐ | Refluxo vesicoureteral — Cefalexina | Prescrição: "Cefalexina 10 mg/kg/dia à noite" · Calculadora: VO 25-100 mg/kg/dia |
 | ☐ | Endocardite em cardiopatia congênita — Ampicilina | Prescrição: "Ampicilina 300 mg/kg/dia" · Calculadora: EV 50-200 mg/kg/dia |

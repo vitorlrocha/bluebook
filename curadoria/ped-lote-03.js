@@ -12,7 +12,7 @@ const NOVOS = [
   { k: 'ceftazidima', n: 'Ceftazidima', v: [
     { via: 'EV (1 mês a 12 anos)', d: [30, 50], dd: 30, b: 'dose', f: 3, mxd: 6000, fonte: 'Ref',
       ob: '30 a 50 mg/kg EV de 8/8 h, até 6 g/dia; a dose maior fica para imunodeprimidos ou fibrose cística. Recém-nascido (0-4 semanas): 30 mg/kg de 12/12 h. Ajustar na insuficiência renal.',
-      ap: [{ l: 'Frasco 1 g (reconstituir conforme a bula; ex.: 1 g em 10 mL = 100 mg/mL)', c: 100 }],
+      ap: [{ l: 'Frasco 1 g (concentração após reconstituir: conforme a bula do produto; informe abaixo)' }],
       rev: R('da ceftazidima: 1 mês-12 anos 30-50 mg/kg de 8/8 h até 6 g/dia; neonatos 30 mg/kg de 12/12 h') },
   ] },
   { k: 'amicacina', n: 'Amicacina', v: [
@@ -25,11 +25,11 @@ const NOVOS = [
   { k: 'piperacilina + tazobactam', n: 'Piperacilina + Tazobactam', v: [
     { via: 'EV (> 9 meses e até 40 kg)', d: [112.5, 112.5], dd: 112.5, b: 'dose', f: 3, mx: 4500, fonte: 'Ref',
       ob: '112,5 mg/kg (100 mg de piperacilina + 12,5 mg de tazobactam) EV em 30 min: de 8/8 h na apendicite/peritonite; de 6/6 h na pneumonia hospitalar (mude doses/dia para 4). Acima de 40 kg: dose de adulto. Dose pediátrica na insuficiência renal não definida.',
-      ap: [{ l: 'Frasco 4,5 g (reconstituir conforme a bula; ex.: 4,5 g em 20 mL ≈ 200 mg/mL)', c: 200 }],
+      ap: [{ l: 'Frasco 4,5 g + 20 mL de diluente = 202,5 mg/mL (diluir depois a 20-80 mg/mL de piperacilina)', c: 202.5 }],
       rev: R('da piperacilina-tazobactam: > 9 meses 112,5 mg/kg de 8/8 h (apendicite/peritonite) ou 6/6 h (pneumonia hospitalar); > 40 kg adulto') },
     { via: 'EV (2 a 9 meses)', d: [90, 90], dd: 90, b: 'dose', f: 3, fonte: 'Ref',
       ob: '90 mg/kg (80 mg de piperacilina + 10 mg de tazobactam) EV em 30 min: de 8/8 h na apendicite/peritonite; de 6/6 h na pneumonia hospitalar. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto nessa faixa).',
-      ap: [{ l: 'Frasco 2,25 g (reconstituir conforme a bula; ex.: 2,25 g em 10 mL ≈ 200 mg/mL)', c: 200 }],
+      ap: [{ l: 'Frasco 2,25 g + 10 mL de diluente = 202,5 mg/mL (diluir depois a 20-80 mg/mL de piperacilina)', c: 202.5 }],
       rev: R('da piperacilina-tazobactam: 2-9 meses 90 mg/kg de 8/8 h ou 6/6 h conforme a indicação') },
   ] },
   { k: 'eritromicina', n: 'Eritromicina', nao: ['gel', 'topic', 'colirio', 'pomada'], v: [
