@@ -59,14 +59,16 @@ for (const cfg of L.VARS) {
   try { assert.deepStrictEqual(vb, a.vals[cfg.v].valor); } catch (e) { igual = false; }
   // Doses pediátricas: desde 11/2026 a conferência com bulas pode corrigir uma entrada. Vale se os medicamentos
   // continuam os mesmos e na mesma ordem e se TODA via de cada entrada alterada traz o registro da conferência (rev).
+  // Medicamentos NOVOS na calculadora (prioridade 3, curadoria/ped-lote-*.js) só podem ser acrescentados no fim, e
+  // também precisam do registro de conferência em toda via.
   if (!igual && cfg.v === 'PED_DB') {
-    const va = a.vals[cfg.v].valor;
-    const mud = vb.filter((e, i) => { try { assert.deepStrictEqual(e, va[i]); return false; } catch (x) { return true; } });
-    const mesmos = vb.length === va.length && vb.every((e, i) => e.k === va[i].k);
-    const semRev = mud.filter((e) => e.v.some((r) => !/conferid/i.test(r.rev || '')));
+    const va = a.vals[cfg.v].valor, todos = b.vals[cfg.v].valor, base = todos.slice(0, va.length), novos = todos.slice(va.length);
+    const mud = base.filter((e, i) => { try { assert.deepStrictEqual(e, va[i]); return false; } catch (x) { return true; } });
+    const mesmos = base.length === va.length && base.every((e, i) => e.k === va[i].k);
+    const semRev = mud.concat(novos).filter((e) => e.v.some((r) => !/conferid/i.test(r.rev || '')));
     igual = mesmos && !semRev.length;
-    console.log(`INFO  PED_DB: ${mud.length} entrada(s) corrigidas por conferência com bula` +
-      (semRev.length ? `; SEM registro de conferência: ${semRev.map((e) => e.n).join(', ')}` : '') + (mesmos ? '' : '; lista de medicamentos mudou'));
+    console.log(`INFO  PED_DB: ${mud.length} entrada(s) corrigidas e ${novos.length} nova(s) (${novos.map((e) => e.n).join(', ') || '—'}), todas conferidas com fonte` +
+      (semRev.length ? `; SEM registro de conferência: ${semRev.map((e) => e.n).join(', ')}` : '') + (mesmos ? '' : '; lista de medicamentos originais mudou'));
   }
   // Correções clínicas aprovadas pelo autor (revisão de prioridade 1, docs/PROPOSTAS_P1.md, 17/11/2026): só os itens
   // listados aqui podem diferir da v71; qualquer outra diferença continua sendo falha.

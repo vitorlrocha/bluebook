@@ -75,6 +75,36 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#fp-out')).toContainText('0,3 mL');   // ÷ 500 mg/mL
   });
 
+  // Lote 01 da prioridade 3 (curadoria/ped-lote-01.js): medicamentos acrescentados com bula/resumo oficial lido.
+  test('lote 01: levetiracetam 10 kg → 100 mg (1 mL) 2x/dia; trava em 30 mg/kg/dose', async ({ page }) => {
+    await abrirFicha(page, 'Levetiracetam');
+    await page.locator('#fp-weight').fill('10');
+    const out = page.locator('#fp-out');
+    await expect(out).toContainText('100 mg');
+    await expect(out).toContainText('1 mL');
+    await expect(out).toContainText('2x/dia (a cada 12 h)');
+    await page.locator('#fp-dose').fill('40');               // acima do máximo de 30 mg/kg/dose (60 mg/kg/dia)
+    await expect(out).toContainText('travada em 300 mg');
+  });
+
+  test('lote 01: midazolam IV 10 kg → 0,5 mg; penicilina V em UI; cetirizina por idade', async ({ page }) => {
+    await abrirFicha(page, 'Midazolam');
+    await expect(page.locator('#fp-hint .calc-warning')).toContainText('depressão respiratória');
+    await page.locator('#fp-weight').fill('10');
+    await expect(page.locator('#fp-out')).toContainText('0,5 mg');      // 0,05 mg/kg × 10 kg
+    await expect(page.locator('#fp-out')).toContainText('0,1 mL');      // ÷ 5 mg/mL
+    await abrirFicha(page, 'Penicilina V (Fenoximetilpenicilina potássica)');
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('400.000 UI');  // 40.000 UI/kg/dia × 20 kg ÷ 2
+    await expect(page.locator('#fp-out')).toContainText('5 mL');        // ÷ 80.000 UI/mL
+    await page.locator('#search-input').fill('Cetirizina');
+    const id = await page.locator('#sidebar .med-item[data-id]').evaluateAll((els) =>
+      els.filter((e) => e.querySelector('.med-item-main').firstChild.textContent.trim() === 'Cetirizina').map((e) => e.getAttribute('data-id'))[0]);
+    await page.locator(`#sidebar .med-item[data-id="${id}"]`).click();
+    await expect(page.locator('#detail h2').first()).toHaveText('Cetirizina');
+    await expect(page.locator('#detail')).toContainText('2 a 6 anos 2,5 mL (2,5 mg) 2x/dia');
+  });
+
   test('dose acima da faixa usual gera aviso', async ({ page }) => {
     await abrirFicha(page, 'Dipirona sódica (Metamizol)');
     await page.locator('#fp-weight').fill('10');

@@ -57,11 +57,14 @@ O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`
 - Não usar agentes (subagentes) sem pedido do autor.
 
 ## Estado atual (18/11/2026)
-- No ar: versão 0.76.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
+- No ar: versão 0.77.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
   busca única em todo o app, acervo ampliado, doses pediátricas conferidas com bulas, política de privacidade.
 - Pendente do autor: revisão clínica (`REVISAO_CLINICA.md`, propostas em `docs/PROPOSTAS_P1.md`), teste num iPhone real.
 - Acervo ampliado (13/11/2026): +149 doenças dos lotes 01–17 revisados (campo `orig`), integradas por `ferramentas/integrar_lote.js`.
 - Calculadora pediátrica (17/11/2026): 96 de 97 vias com conferência registrada (`rev`); 11 corrigidas com bula
   (cefaclor, bromoprida gotas/injetável, hioscina, cetoprofeno injetável sem dose pediátrica, dexclorfeniramina por idade,
   domperidona, pirvínio, racecadotrila, espironolactona). Falta captopril (fonte primária não aberta).
+- Prioridade 3 (calculadora pediátrica dos mais usados), lote 01 (18/11/2026): +4 medicamentos (midazolam, levetiracetam,
+  cetirizina, penicilina V) em `curadoria/ped-lote-01.js`, cada um com bula/resumo oficial; PED_DB com 81. Próximos sem fonte
+  clara ainda: morfina, fentanil, cetamina, naloxona, sulfato de magnésio, cefadroxila.
 - Contagens: 3.375 doenças (3.226 originais + 149 novas) · 1.856 medicamentos (1.851 originais + 5 novos) · CID-10 com 2.045 categorias e 12.451 subcategorias.

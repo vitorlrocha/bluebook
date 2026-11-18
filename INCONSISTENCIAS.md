@@ -8,8 +8,8 @@ Gerado por `node ferramentas/inconsistencias.js` a partir de `dados/*.json`. **N
 |---|---:|
 | 1. Calculadora pediátrica: texto × números da mesma ficha | 1 |
 | 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 8 |
-| 3. Associações sem calculadora pediátrica (informativo) | 16 |
-| 4. Plantão × calculadora pediátrica | 2 |
+| 3. Associações sem calculadora pediátrica (informativo) | 17 |
+| 4. Plantão × calculadora pediátrica | 3 |
 | 5. Prescrição das doenças pediátricas × calculadora pediátrica | 8 |
 | 6. Prescrições sem linha "Base:" | 16 |
 | 7. Detalhes (MEDX) sem ficha de mesmo nome | 0 |
@@ -60,6 +60,7 @@ Desde a v72 (Etapa 3) uma ficha de associação ("A + B") não usa mais os parâ
 | Paracetamol + Clorfeniramina + Fenilefrina | Paracetamol |
 | Dexclorfeniramina + Betametasona | Dexclorfeniramina |
 | Loratadina + Pseudoefedrina | Loratadina |
+| Cetirizina + Pseudoefedrina | Cetirizina |
 
 ## 4. Plantão × calculadora pediátrica
 
@@ -67,6 +68,7 @@ Dose por kg do protocolo fora da faixa da calculadora, ou máximo por dose difer
 
 | Protocolo | Item | Plantão | Calculadora (PED_DB) | Divergência |
 |---|---|---|---|---|
+| Crise convulsiva / estado de mal epiléptico | Midazolam (sem acesso venoso) (IM) | 0,2 mg/kg/dose · máx. 10 mg | IM (sedação, 1 a 15 anos) 0,05-0,15 mg/kg/dose · máx. 10 mg | dose fora da faixa |
 | Crise de asma grave | Prednisolona/prednisona (VO) | máx. 40 mg | VO máx. 60 mg | máximo diferente |
 | Sepse e choque séptico | Hidrocortisona (choque refratário a catecolaminas) (EV) | 2 mg/kg/dose · máx. 100 mg | EV/IM 4-8 mg/kg/dose · máx. 250 mg | dose fora da faixa |
 

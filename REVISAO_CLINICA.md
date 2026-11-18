@@ -6,12 +6,12 @@ Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSIS
 
 | Prioridade | Itens |
 |---|---:|
-| Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 4 |
+| Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 5 |
 | Prioridade 2 — faixas divergentes e doses a confirmar | 181 |
-| Prioridade 3 — completar informação (sem risco de dose) | 49 |
-| **Total** | **234** |
+| Prioridade 3 — completar informação (sem risco de dose) | 50 |
+| **Total** | **236** |
 
-Informativo: 16 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
+Informativo: 17 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
 
 ## Prioridade 1 — pode mostrar dose errada (revisar primeiro)
 
@@ -24,13 +24,14 @@ Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
 |:---:|---|---|
 | ☐ | Captopril | Ficha (Pediatria): 0,01-0,05 mg/kg/dose · Calculadora: VO 0,3-0,5 mg/kg/dose |
 
-### Plantão × calculadora pediátrica (2)
+### Plantão × calculadora pediátrica (3)
 
 Conferir em: diretriz citada no protocolo (campo "fonte" do protocolo) e bula Anvisa do fármaco.
 Arquivo: `dados/plantao.json e dados/ped_db.json`
 
 | Feito | Onde | O que conferir |
 |:---:|---|---|
+| ☐ | Crise convulsiva / estado de mal epiléptico — Midazolam (sem acesso venoso) (IM) | Plantão: 0,2 mg/kg/dose · máx. 10 mg · Calculadora: IM (sedação, 1 a 15 anos) 0,05-0,15 mg/kg/dose · máx. 10 mg (dose fora da faixa) |
 | ☐ | Crise de asma grave — Prednisolona/prednisona (VO) | Plantão: máx. 40 mg · Calculadora: VO máx. 60 mg (máximo diferente) |
 | ☐ | Sepse e choque séptico — Hidrocortisona (choque refratário a catecolaminas) (EV) | Plantão: 2 mg/kg/dose · máx. 100 mg · Calculadora: EV/IM 4-8 mg/kg/dose · máx. 250 mg (dose fora da faixa) |
 
@@ -252,7 +253,7 @@ Arquivo: `dados/seed_meds.json`
 
 ## Prioridade 3 — completar informação (sem risco de dose)
 
-### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (31)
+### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (32)
 
 Conferir em: bula Anvisa (Bulário Eletrônico) e lista CMED vigente; PCDT/Conitec se for medicamento de alto custo.
 Arquivo: `dados/seed_meds.json`
@@ -290,6 +291,7 @@ Arquivo: `dados/seed_meds.json`
 | ☐ | Tontura, lipotimia e dispneia fisiológicas da gestação — Exames | Pressão arterial, ausculta cardíaca e pulmonar. Se houver alteração na ausculta, encaminhar para avaliação médica. Exames adicionais: PENDENTE DE VERIFICAÇÃO (não detalhados na fonte). |
 | ☐ | Sepse e choque séptico — itens | Dose de estresse: PENDENTE DE VERIFICAÇÃO em fonte brasileira (a diretriz pediátrica da Surviving Sepsis Campaign não define dose). Considera… |
 | ☐ | Captopril — al — via VO | Não usar esta calculadora para recém-nascidos: a dose inicial é muito menor (ver ficha). Dose inicial pediátrica: PENDENTE DE VERIFICAÇÃO (a tabela da SBP 2019 diverge do valor usado aqui). Titular com PA, potássio e creatinina. |
+| ☐ | Midazolam — Observação (calculadora) — via Retal (sedação, > 6 meses) | …de 0,3-0,5 mg/kg com aplicador plástico na seringa (completar com água até 10 mL se o volume for pequeno); não repetir. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (a bula não traz). |
 
 ### Prescrição sem a linha "Base:" (referência) (16)
 
