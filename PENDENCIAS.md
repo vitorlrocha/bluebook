@@ -4,14 +4,14 @@ Gerado por `node ferramentas/pendencias.js` a partir de `dados/*.json`. **Não e
 
 Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo = duas linhas). Regra do projeto: **nada é preenchido sem fonte citada** (preferir SBP, Ministério da Saúde/PCDT, bula Anvisa; citar fonte e ano).
 
-**Total: 131 registro(s), 198 trecho(s).**
+**Total: 133 registro(s), 201 trecho(s).**
 
 | Seção | Registros | Trechos |
 |---|---:|---:|
 | Medicamentos | 19 | 27 |
 | Doenças | 109 | 168 |
 | Plantão | 1 | 1 |
-| Calculadora pediátrica | 2 | 2 |
+| Calculadora pediátrica | 4 | 5 |
 
 ## Medicamentos (`dados/seed_meds.json`)
 
@@ -229,4 +229,7 @@ Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo 
 | Registro | Campo | Trecho |
 |---|---|---|
 | Captopril | al — via VO | Não usar esta calculadora para recém-nascidos: a dose inicial é muito menor (ver ficha). Dose inicial pediátrica: PENDENTE DE VERIFICAÇÃO (a tabela da SBP 2019 diverge do valor usado aqui). Titular com PA, potássio e creatinina. |
+| Cetamina | Observação (calculadora) — via IV (indução anestésica) | …2 mg/kg, anestesia de 5-10 min) ou 1 a 2 mg/kg a 0,5 mg/kg/min. A faixa é a do rótulo (sem tabela pediátrica separada). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO. |
+| Cetamina | Observação (calculadora) — via IM (indução anestésica) | …g em geral dá anestesia em 3-4 min, por 12-25 min (rótulo; a bula brasileira do Ketamin cita 9-13 mg/kg IM em crianças). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO. |
+| Fentanil | Observação (calculadora) — via IV (anestesia, 2 a 12 anos) | …a partir de 2 a 3 mcg/kg. Fora da anestesia (analgesia/sedação) e em menores de 2 anos: seguir o protocolo do serviço. Dose máxima em mcg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto pediátrico). |
 | Midazolam | Observação (calculadora) — via Retal (sedação, > 6 meses) | …de 0,3-0,5 mg/kg com aplicador plástico na seringa (completar com água até 10 mL se o volume for pequeno); não repetir. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (a bula não traz). |

@@ -8,8 +8,8 @@ Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSIS
 |---|---:|
 | Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 5 |
 | Prioridade 2 — faixas divergentes e doses a confirmar | 181 |
-| Prioridade 3 — completar informação (sem risco de dose) | 50 |
-| **Total** | **236** |
+| Prioridade 3 — completar informação (sem risco de dose) | 53 |
+| **Total** | **239** |
 
 Informativo: 17 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
 
@@ -253,7 +253,7 @@ Arquivo: `dados/seed_meds.json`
 
 ## Prioridade 3 — completar informação (sem risco de dose)
 
-### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (32)
+### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (35)
 
 Conferir em: bula Anvisa (Bulário Eletrônico) e lista CMED vigente; PCDT/Conitec se for medicamento de alto custo.
 Arquivo: `dados/seed_meds.json`
@@ -292,6 +292,9 @@ Arquivo: `dados/seed_meds.json`
 | ☐ | Sepse e choque séptico — itens | Dose de estresse: PENDENTE DE VERIFICAÇÃO em fonte brasileira (a diretriz pediátrica da Surviving Sepsis Campaign não define dose). Considera… |
 | ☐ | Captopril — al — via VO | Não usar esta calculadora para recém-nascidos: a dose inicial é muito menor (ver ficha). Dose inicial pediátrica: PENDENTE DE VERIFICAÇÃO (a tabela da SBP 2019 diverge do valor usado aqui). Titular com PA, potássio e creatinina. |
 | ☐ | Midazolam — Observação (calculadora) — via Retal (sedação, > 6 meses) | …de 0,3-0,5 mg/kg com aplicador plástico na seringa (completar com água até 10 mL se o volume for pequeno); não repetir. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (a bula não traz). |
+| ☐ | Fentanil — Observação (calculadora) — via IV (anestesia, 2 a 12 anos) | …a partir de 2 a 3 mcg/kg. Fora da anestesia (analgesia/sedação) e em menores de 2 anos: seguir o protocolo do serviço. Dose máxima em mcg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto pediátrico). |
+| ☐ | Cetamina — Observação (calculadora) — via IV (indução anestésica) | …2 mg/kg, anestesia de 5-10 min) ou 1 a 2 mg/kg a 0,5 mg/kg/min. A faixa é a do rótulo (sem tabela pediátrica separada). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO. |
+| ☐ | Cetamina — Observação (calculadora) — via IM (indução anestésica) | …g em geral dá anestesia em 3-4 min, por 12-25 min (rótulo; a bula brasileira do Ketamin cita 9-13 mg/kg IM em crianças). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO. |
 
 ### Prescrição sem a linha "Base:" (referência) (16)
 

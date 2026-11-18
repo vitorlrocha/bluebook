@@ -2317,6 +2317,9 @@
   function pedFind(nome) {
     var s = stripAccents((nome || "").toLowerCase()), best = null;
     PED_DB.forEach(function (e) {
+      /* "nao": trechos do nome que excluem a entrada (ex.: "transdermico" no fentanil, "(s-)" na cetamina): outra
+         forma ou outro fármaco com o mesmo começo de nome não herda a dose. */
+      if (e.nao && e.nao.some(function (x) { return s.indexOf(x) !== -1; })) return;
       if (s.indexOf(e.k) === 0 && (!best || e.k.length > best.k.length)) best = e;
     });
     /* v72 (Etapa 3, INCONSISTENCIAS.md §3): uma associação ("A + B") não herda os parâmetros do fármaco

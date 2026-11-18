@@ -105,6 +105,31 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#detail')).toContainText('2 a 6 anos 2,5 mL (2,5 mg) 2x/dia');
   });
 
+  test('lote 02: naloxona, cefadroxila e fentanil em mcg; adesivo e escetamina não herdam a dose', async ({ page }) => {
+    await abrirFicha(page, 'Naloxona');
+    await page.locator('#fp-weight').fill('10');
+    await expect(page.locator('#fp-out')).toContainText('0,1 mg');      // 0,01 mg/kg × 10 kg
+    await expect(page.locator('#fp-out')).toContainText('0,25 mL');     // ÷ 0,4 mg/mL
+    await abrirFicha(page, 'Cefadroxila');
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('300 mg');      // 30 mg/kg/dia × 20 kg ÷ 2
+    await expect(page.locator('#fp-out')).toContainText('6 mL');        // ÷ 50 mg/mL
+    await abrirFicha(page, 'Fentanil');
+    await expect(page.locator('#fp-hint .calc-warning')).toContainText('depressão respiratória');
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('40 mcg');      // 2 mcg/kg × 20 kg
+    await expect(page.locator('#fp-out')).toContainText('0,8 mL');      // ÷ 50 mcg/mL
+    for (const nome of ['Fentanil transdérmico', 'Cetamina (S-)']) {
+      await page.locator('#search-input').fill(nome);
+      const id = await page.locator('#sidebar .med-item[data-id]').evaluateAll((els, n) =>
+        els.filter((e) => e.querySelector('.med-item-main').firstChild.textContent.trim() === n).map((e) => e.getAttribute('data-id'))[0], nome);
+      await page.locator(`#sidebar .med-item[data-id="${id}"]`).click();
+      await expect(page.locator('#detail h2').first()).toHaveText(nome);
+      await expect(page.locator('#detail')).not.toContainText('anestesia, 2 a 12 anos');
+      await expect(page.locator('#detail')).not.toContainText('indução anestésica');
+    }
+  });
+
   test('dose acima da faixa usual gera aviso', async ({ page }) => {
     await abrirFicha(page, 'Dipirona sódica (Metamizol)');
     await page.locator('#fp-weight').fill('10');

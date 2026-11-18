@@ -43,7 +43,7 @@ const fmt = (x) => String(Math.round(x * 1000) / 1000).replace('.', ',');
 const sobrepoe = (a, b) => a.lo <= b.hi && b.lo <= a.hi;
 
 /* mesma regra do app (pedFind em src/app.js): prefixo normalizado mais longo; associação só com entrada própria */
-function pedPrefixo(PED, nome) { const s = sem(nome); let best = null; PED.forEach((e) => { if (s.indexOf(e.k) === 0 && (!best || e.k.length > best.k.length)) best = e; }); return best; }
+function pedPrefixo(PED, nome) { const s = sem(nome); let best = null; PED.forEach((e) => { if (e.nao && e.nao.some((x) => s.indexOf(x) !== -1)) return; if (s.indexOf(e.k) === 0 && (!best || e.k.length > best.k.length)) best = e; }); return best; }   // nao = mesma regra do app
 function pedFind(PED, nome) { const b = pedPrefixo(PED, nome); return b && /\+/.test(nome) && !/\+/.test(b.n) ? null : b; }
 /* Só rotas com faixa em mg/kg (penicilina cristalina, por exemplo, é em UI/kg e não é comparável). */
 function rotasComDose(e) { return (e.v || []).filter((r) => Array.isArray(r.d) && r.d.length === 2 && (r.un || 'mg') === 'mg').map((r) => ({ via: r.via, lo: r.d[0], hi: r.d[1], base: r.b || 'dose', mx: r.mx, mxd: r.mxd, ob: r.ob || '' })); }
