@@ -8,7 +8,7 @@ Gerado por `node ferramentas/inconsistencias.js` a partir de `dados/*.json`. **N
 |---|---:|
 | 1. Calculadora pediátrica: texto × números da mesma ficha | 1 |
 | 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 9 |
-| 3. Associações sem calculadora pediátrica (informativo) | 18 |
+| 3. Associações sem calculadora pediátrica (informativo) | 22 |
 | 4. Plantão × calculadora pediátrica | 3 |
 | 5. Prescrição das doenças pediátricas × calculadora pediátrica | 9 |
 | 6. Prescrições sem linha "Base:" | 16 |
@@ -47,6 +47,10 @@ Desde a v72 (Etapa 3) uma ficha de associação ("A + B") não usa mais os parâ
 |---|---|
 | Ampicilina + Sulbactam | Ampicilina |
 | Lidocaína + Prilocaína | Lidocaína (uso local) |
+| Anlodipino + Valsartana | Anlodipino besilato |
+| Anlodipino + Losartana | Anlodipino besilato |
+| Anlodipino + Atenolol | Anlodipino besilato |
+| Enalapril + Hidroclorotiazida | Enalapril maleato |
 | Captopril + Hidroclorotiazida | Captopril |
 | Hidroclorotiazida + Espironolactona | Hidroclorotiazida |
 | Ceftazidima + Avibactam | Ceftazidima |

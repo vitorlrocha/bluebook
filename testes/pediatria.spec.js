@@ -174,6 +174,23 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#fp-out')).toContainText('travada em 600 mg');
   });
 
+  test('lote 06: enalapril, ciprofloxacino com teto, difenidramina e fenitoína oral', async ({ page }) => {
+    await abrirFicha(page, 'Enalapril maleato');
+    await page.locator('#fp-weight').fill('25');
+    await expect(page.locator('#fp-out')).toContainText('2 mg');        // 0,08 mg/kg × 25 kg
+    await abrirFicha(page, 'Ciprofloxacino');
+    await page.locator('#fp-weight').fill('80');
+    await page.locator('#fp-dose').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('travada em 750 mg');
+    await abrirFicha(page, 'Cloridrato de difenidramina');
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('25 mg');       // 5 mg/kg/dia × 20 kg ÷ 4
+    await abrirFicha(page, 'Fenitoína');
+    await page.locator('#fp-via').selectOption({ label: 'VO (manutenção)' });
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('50 mg');       // 5 mg/kg/dia × 20 kg ÷ 2
+  });
+
   test('dose acima da faixa usual gera aviso', async ({ page }) => {
     await abrirFicha(page, 'Dipirona sódica (Metamizol)');
     await page.locator('#fp-weight').fill('10');
