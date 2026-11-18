@@ -57,7 +57,7 @@ O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`
 - Não usar agentes (subagentes) sem pedido do autor.
 
 ## Estado atual (18/11/2026)
-- No ar: versão 0.80.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
+- No ar: versão 0.81.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
   busca única em todo o app, acervo ampliado, doses pediátricas conferidas com bulas, política de privacidade.
 - Pendente do autor: revisão clínica (`REVISAO_CLINICA.md`, propostas em `docs/PROPOSTAS_P1.md`), teste num iPhone real.
 - Acervo ampliado (13/11/2026): +149 doenças dos lotes 01–17 revisados (campo `orig`), integradas por `ferramentas/integrar_lote.js`.
@@ -69,5 +69,6 @@ O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`
   fentanil, cetamina, naloxona) por rótulo FDA/DailyMed em `curadoria/ped-lote-02.js`; campo `nao` exclui formas com o mesmo
   começo de nome (adesivo de fentanil, escetamina). Lote 03: +5 (ceftazidima, amicacina, piperacilina-tazobactam,
   eritromicina, flumazenil) por rótulo FDA. Lote 04: +6 (cefepima, cefotaxima, montelucaste, oxcarbazepina, topiramato,
-  valaciclovir) e via EV da cefuroxima. Concentrações após reconstituir só quando o rótulo traz. PED_DB com 96. Sem fonte pediátrica ainda: morfina, sulfato de magnésio.
+  valaciclovir) e via EV da cefuroxima. Concentrações após reconstituir só quando o rótulo traz. Lote 05: +3 (linezolida, esomeprazol por
+  peso/idade, budesonida nebulização). PED_DB com 99. Sem fonte pediátrica ainda: morfina, sulfato de magnésio.
 - Contagens: 3.375 doenças (3.226 originais + 149 novas) · 1.856 medicamentos (1.851 originais + 5 novos) · CID-10 com 2.045 categorias e 12.451 subcategorias.

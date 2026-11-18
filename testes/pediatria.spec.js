@@ -165,6 +165,15 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#detail')).toContainText('2 a 5 anos 4 mg');
   });
 
+  test('lote 05: linezolida 10 kg → 100 mg (50 mL a 2 mg/mL); teto de 600 mg', async ({ page }) => {
+    await abrirFicha(page, 'Linezolida');
+    await page.locator('#fp-weight').fill('10');
+    await expect(page.locator('#fp-out')).toContainText('100 mg');
+    await expect(page.locator('#fp-out')).toContainText('50 mL');
+    await page.locator('#fp-weight').fill('70');
+    await expect(page.locator('#fp-out')).toContainText('travada em 600 mg');
+  });
+
   test('dose acima da faixa usual gera aviso', async ({ page }) => {
     await abrirFicha(page, 'Dipirona sódica (Metamizol)');
     await page.locator('#fp-weight').fill('10');
