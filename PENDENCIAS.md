@@ -4,14 +4,14 @@ Gerado por `node ferramentas/pendencias.js` a partir de `dados/*.json`. **Não e
 
 Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo = duas linhas). Regra do projeto: **nada é preenchido sem fonte citada** (preferir SBP, Ministério da Saúde/PCDT, bula Anvisa; citar fonte e ano).
 
-**Total: 133 registro(s), 201 trecho(s).**
+**Total: 134 registro(s), 202 trecho(s).**
 
 | Seção | Registros | Trechos |
 |---|---:|---:|
 | Medicamentos | 19 | 27 |
 | Doenças | 109 | 168 |
 | Plantão | 1 | 1 |
-| Calculadora pediátrica | 4 | 5 |
+| Calculadora pediátrica | 5 | 6 |
 
 ## Medicamentos (`dados/seed_meds.json`)
 
@@ -233,3 +233,4 @@ Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo 
 | Cetamina | Observação (calculadora) — via IM (indução anestésica) | …g em geral dá anestesia em 3-4 min, por 12-25 min (rótulo; a bula brasileira do Ketamin cita 9-13 mg/kg IM em crianças). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO. |
 | Fentanil | Observação (calculadora) — via IV (anestesia, 2 a 12 anos) | …a partir de 2 a 3 mcg/kg. Fora da anestesia (analgesia/sedação) e em menores de 2 anos: seguir o protocolo do serviço. Dose máxima em mcg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto pediátrico). |
 | Midazolam | Observação (calculadora) — via Retal (sedação, > 6 meses) | …de 0,3-0,5 mg/kg com aplicador plástico na seringa (completar com água até 10 mL se o volume for pequeno); não repetir. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (a bula não traz). |
+| Piperacilina + Tazobactam | Observação (calculadora) — via EV (2 a 9 meses) | …e piperacilina + 10 mg de tazobactam) EV em 30 min: de 8/8 h na apendicite/peritonite; de 6/6 h na pneumonia hospitalar. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto nessa faixa). |

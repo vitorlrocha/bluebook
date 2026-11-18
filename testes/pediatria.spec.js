@@ -130,6 +130,21 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     }
   });
 
+  test('lote 03: amicacina, ceftazidima, flumazenil e eritromicina', async ({ page }) => {
+    await abrirFicha(page, 'Amicacina');
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('150 mg');      // 15 mg/kg/dia × 20 kg ÷ 2
+    await abrirFicha(page, 'Ceftazidima');
+    await page.locator('#fp-weight').fill('10');
+    await expect(page.locator('#fp-out')).toContainText('300 mg');      // 30 mg/kg × 10 kg
+    await abrirFicha(page, 'Flumazenil');
+    await page.locator('#fp-weight').fill('40');
+    await expect(page.locator('#fp-out')).toContainText('travada em 0,2 mg');   // 0,4 mg calculado → teto 0,2 mg
+    await abrirFicha(page, 'Eritromicina');
+    await page.locator('#fp-weight').fill('10');
+    await expect(page.locator('#fp-out')).toContainText('100 mg');      // 40 mg/kg/dia × 10 kg ÷ 4
+  });
+
   test('dose acima da faixa usual gera aviso', async ({ page }) => {
     await abrirFicha(page, 'Dipirona sódica (Metamizol)');
     await page.locator('#fp-weight').fill('10');

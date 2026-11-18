@@ -8,10 +8,10 @@ Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSIS
 |---|---:|
 | Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 5 |
 | Prioridade 2 — faixas divergentes e doses a confirmar | 181 |
-| Prioridade 3 — completar informação (sem risco de dose) | 53 |
-| **Total** | **239** |
+| Prioridade 3 — completar informação (sem risco de dose) | 54 |
+| **Total** | **240** |
 
-Informativo: 17 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
+Informativo: 18 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
 
 ## Prioridade 1 — pode mostrar dose errada (revisar primeiro)
 
@@ -253,7 +253,7 @@ Arquivo: `dados/seed_meds.json`
 
 ## Prioridade 3 — completar informação (sem risco de dose)
 
-### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (35)
+### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (36)
 
 Conferir em: bula Anvisa (Bulário Eletrônico) e lista CMED vigente; PCDT/Conitec se for medicamento de alto custo.
 Arquivo: `dados/seed_meds.json`
@@ -295,6 +295,7 @@ Arquivo: `dados/seed_meds.json`
 | ☐ | Fentanil — Observação (calculadora) — via IV (anestesia, 2 a 12 anos) | …a partir de 2 a 3 mcg/kg. Fora da anestesia (analgesia/sedação) e em menores de 2 anos: seguir o protocolo do serviço. Dose máxima em mcg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto pediátrico). |
 | ☐ | Cetamina — Observação (calculadora) — via IV (indução anestésica) | …2 mg/kg, anestesia de 5-10 min) ou 1 a 2 mg/kg a 0,5 mg/kg/min. A faixa é a do rótulo (sem tabela pediátrica separada). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO. |
 | ☐ | Cetamina — Observação (calculadora) — via IM (indução anestésica) | …g em geral dá anestesia em 3-4 min, por 12-25 min (rótulo; a bula brasileira do Ketamin cita 9-13 mg/kg IM em crianças). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO. |
+| ☐ | Piperacilina + Tazobactam — Observação (calculadora) — via EV (2 a 9 meses) | …e piperacilina + 10 mg de tazobactam) EV em 30 min: de 8/8 h na apendicite/peritonite; de 6/6 h na pneumonia hospitalar. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto nessa faixa). |
 
 ### Prescrição sem a linha "Base:" (referência) (16)
 
