@@ -191,6 +191,21 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#fp-out')).toContainText('50 mg');       // 5 mg/kg/dia × 20 kg ÷ 2
   });
 
+  test('lotes 07 e 08: abacavir, losartana, poractanto e aztreonam', async ({ page }) => {
+    await abrirFicha(page, 'Abacavir');
+    await page.locator('#fp-weight').fill('10');
+    await expect(page.locator('#fp-out')).toContainText('80 mg');       // 8 mg/kg × 10 kg
+    await abrirFicha(page, 'Losartana potássica');
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('14 mg');       // 0,7 mg/kg × 20 kg
+    await abrirFicha(page, 'Poractanto alfa');
+    await page.locator('#fp-weight').fill('1.5');
+    await expect(page.locator('#fp-out')).toContainText('300 mg');      // 200 mg/kg × 1,5 kg
+    await abrirFicha(page, 'Aztreonam');
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('600 mg');      // 30 mg/kg × 20 kg
+  });
+
   test('dose acima da faixa usual gera aviso', async ({ page }) => {
     await abrirFicha(page, 'Dipirona sódica (Metamizol)');
     await page.locator('#fp-weight').fill('10');

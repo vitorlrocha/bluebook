@@ -1,0 +1,167 @@
+// Lote 07 da calculadora pediátrica (prioridade 3): lote grande, montado a partir de ~94 rótulos FDA baixados do
+// DailyMed (NLM/NIH) em 24/11/2026. Um script extraiu os trechos de dose pediátrica; cada entrada abaixo foi escrita
+// à mão a partir do trecho lido (o setid do rótulo fica no campo rev). Onde o rótulo não trazia um número, ficou
+// "PENDENTE DE VERIFICAÇÃO". Uso: node curadoria/ped-lote-07.js  (acrescenta no fim; não altera os existentes)
+'use strict';
+const path = require('path');
+const fs = require('fs');
+const L = require(path.join(__dirname, '..', 'ferramentas', 'lib_dados'));
+const cfg = L.VARS.find((c) => c.v === 'PED_DB');
+const P = L.lerDados(cfg);
+const R = (nome, setid, x) => 'Conferida em 11/2026 com o rótulo FDA de ' + nome + ' (DailyMed setid ' + setid.slice(0, 8) + '): ' + x;
+// via calculável
+const C = (via, o, rev) => Object.assign({ via, b: 'dose', f: 1, fonte: 'Ref', rev }, o);
+// via com dose fixa/tabela (sem cálculo)
+const F = (via, fixo, ob, ap, rev) => ({ via, fixo, ob, ap: [{ l: ap }], fonte: 'Ref', rev });
+const PEND = ' Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).';
+
+const NOVOS = [
+  { k: 'abacavir', n: 'Abacavir', v: [C('VO (≥ 3 meses)', { d: [8, 8], dd: 8, f: 2, mxd: 600,
+    ob: '8 mg/kg 2x/dia ou 16 mg/kg 1x/dia, até 600 mg/dia, sempre com outros antirretrovirais.',
+    ap: [{ l: 'Comprimido 300 mg', mg: 300, u: 'comprimido(s)' }] }, R('abacavir', '5676d391', '≥ 3 meses 8 mg/kg 2x/dia ou 16 mg/kg 1x/dia, máx. 600 mg/dia'))] },
+  { k: 'acetilcisteina', n: 'Acetilcisteína', v: [F('EV (intoxicação por paracetamol)',
+    'Total de 300 mg/kg em 3 bolsas seguidas (21 h): 1ª 150 mg/kg em 1 h; 2ª 50 mg/kg em 4 h; 3ª 100 mg/kg em 16 h. Diluente: 5-20 kg — 3, 7 e 14 mL/kg; 21-40 kg — 100, 250 e 500 mL.',
+    'Esquema EV do antídoto; para a forma oral mucolítica, ver a ficha. Avaliar continuar após 21 h conforme níveis e transaminases.', 'Acetilcisteína injetável (antídoto)',
+    R('acetilcisteína injetável', '3b0310d2', '300 mg/kg em 3 bolsas (150/50/100 mg/kg) e diluição por peso'))] },
+  { k: 'adenosina', n: 'Adenosina', v: [C('EV (TSV, < 50 kg)', { d: [0.05, 0.1], dd: 0.1,
+    ob: 'Bolus EV rápido (central ou periférico) seguido de flush. Sem reversão em 1-2 min: repetir aumentando 0,05-0,1 mg/kg a cada dose, até reverter ou chegar a 0,3 mg/kg por dose.' + PEND,
+    ap: [{ l: 'Ampola 3 mg/mL (6 mg/2 mL)', c: 3 }] }, R('adenosina injetável', 'd28ff4f3', '< 50 kg 0,05-0,1 mg/kg, aumentos de 0,05-0,1 mg/kg, máx. 0,3 mg/kg por dose'))] },
+  { k: 'atomoxetina', n: 'Atomoxetina', v: [C('VO (TDAH, até 70 kg)', { d: [0.5, 1.2], dd: 0.5, b: 'dia', mdk: 1.4, mxd: 100,
+    ob: 'Iniciar ~0,5 mg/kg/dia e, após ≥ 3 dias, subir para ~1,2 mg/kg/dia (1x de manhã ou dividido em 2). Não passar de 1,4 mg/kg/dia ou 100 mg (o menor). Acima de 70 kg: 40 mg → 80 mg/dia. Com inibidor forte da CYP2D6 ou metabolizador lento: começar em 0,5 mg/kg/dia e só subir se necessário.',
+    ap: [{ l: 'Cápsula 10 mg', mg: 10, u: 'cápsula(s)' }, { l: 'Cápsula 25 mg', mg: 25, u: 'cápsula(s)' }] }, R('atomoxetina', 'f98c3424', '≤ 70 kg 0,5 → 1,2 mg/kg/dia, máx. 1,4 mg/kg/dia ou 100 mg'))] },
+  { k: 'atorvastatina', n: 'Atorvastatina', v: [F('VO (≥ 10 anos)', 'Hipercolesterolemia familiar heterozigótica: início 10 mg 1x/dia. Homozigótica: 10 a 20 mg 1x/dia. Ajustar pelo LDL.', 'Dose fixa.', 'Comprimido 10 e 20 mg', R('atorvastatina', 'f7cc5704', '≥ 10 anos HeFH 10 mg; HoFH 10-20 mg'))] },
+  { k: 'benznidazol', n: 'Benznidazol', v: [C('VO (Chagas, 2 a 12 anos)', { d: [5, 8], dd: 5, b: 'dia', f: 2, mdk: 8,
+    ob: '5 a 8 mg/kg/dia em 2 tomadas (≈ 12/12 h) por 60 dias. O rótulo traz tabela por faixa de peso com os comprimidos de 12,5 mg e 100 mg.',
+    ap: [{ l: 'Comprimido 12,5 mg', mg: 12.5, u: 'comprimido(s)' }, { l: 'Comprimido 100 mg', mg: 100, u: 'comprimido(s)' }] }, R('benznidazol', '8983d6a0', '2-12 anos 5-8 mg/kg/dia em 2 tomadas por 60 dias'))] },
+  { k: 'cefixima', n: 'Cefixima', v: [C('VO (≥ 6 meses)', { d: [8, 8], dd: 8, b: 'dia', f: 2,
+    ob: '8 mg/kg/dia em dose única ou 4 mg/kg de 12/12 h (suspensão).' + ' Teto diário: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Suspensão 100 mg/5 mL (20 mg/mL)', c: 20 }] }, R('cefixima', '6f1df975', '≥ 6 meses 8 mg/kg/dia 1x ou 4 mg/kg 12/12 h'))] },
+  { k: 'cefoxitina', n: 'Cefoxitina', v: [C('EV (≥ 3 meses)', { d: [80, 160], dd: 100, b: 'dia', f: 4,
+    ob: '80 a 160 mg/kg/dia divididos em 4 a 6 doses iguais; profilaxia cirúrgica: 30-40 mg/kg por dose nos horários do rótulo.' + ' Teto diário: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Frasco-ampola 1 g (concentração após reconstituir: conforme a bula; informe abaixo)' }] }, R('cefoxitina', '658a0dc6', '≥ 3 meses 80-160 mg/kg/dia em 4-6 doses'))] },
+  { k: 'celecoxibe', n: 'Celecoxibe', v: [F('VO (artrite idiopática juvenil)', '10 a 25 kg: 50 mg 2x/dia; acima de 25 kg: 100 mg 2x/dia.', 'Dose fixa por peso.', 'Cápsula 100 mg', R('celecoxibe', '5eff2336', 'AIJ ≥ 10-25 kg 50 mg 2x/dia; > 25 kg 100 mg 2x/dia'))] },
+  { k: 'ciproeptadina', n: 'Ciproeptadina', v: [C('VO (2 a 6 anos)', { d: [0.25, 0.25], dd: 0.25, b: 'dia', f: 2,
+    ob: 'Dose diária total de ≈ 0,25 mg/kg (ou 8 mg/m²), dividida ao longo do dia (número de tomadas: PENDENTE DE VERIFICAÇÃO). Em adultos não passar de 0,5 mg/kg/dia.',
+    ap: [{ l: 'Xarope 2 mg/5 mL (0,4 mg/mL)', c: 0.4 }] }, R('ciproeptadina', 'e6d91eae', '2-6 anos ≈ 0,25 mg/kg/dia ou 8 mg/m²'))] },
+  { k: 'cisatracurio', n: 'Cisatracúrio', v: [
+    C('EV (intubação, 1 a 23 meses)', { d: [0.15, 0.15], dd: 0.15, ob: 'Bolus em 5-10 s. Só com via aérea e ventilação garantidas.' + PEND, ap: [{ l: 'Solução 2 mg/mL', c: 2 }] }, R('cisatracúrio', '67908e20', '1-23 meses 0,15 mg/kg')),
+    C('EV (intubação, 2 a 12 anos)', { d: [0.1, 0.15], dd: 0.1, ob: 'Bolus em 5-10 s. Só com via aérea e ventilação garantidas.' + PEND, ap: [{ l: 'Solução 2 mg/mL', c: 2 }] }, R('cisatracúrio', '67908e20', '2-12 anos 0,1-0,15 mg/kg'))] },
+  { k: 'clomipramina', n: 'Clomipramina', v: [F('VO (TOC, ≥ 10 anos)', 'Iniciar 25 mg/dia (com refeições, pode dividir); nas 2 primeiras semanas subir até 3 mg/kg/dia ou 100 mg (o menor); depois, aos poucos, até 3 mg/kg/dia ou 200 mg (o menor).', 'Alerta de ideação suicida em crianças e adolescentes.', 'Comprimido 25 mg', R('clomipramina', 'eff91018', 'crianças/adolescentes 25 mg/dia até 3 mg/kg ou 100 mg, depois até 3 mg/kg ou 200 mg'))] },
+  { k: 'cloroquina', n: 'Cloroquina', v: [C('VO (profilaxia da malária)', { d: [5, 5], dd: 5, f: 1, un: 'mg (base)',
+    ob: '5 mg de cloroquina base por kg, 1x por semana, sempre no mesmo dia.' + ' Teto semanal: PENDENTE DE VERIFICAÇÃO. Risco de retinopatia acima de 2,3 mg/kg/dia de fosfato em uso prolongado.',
+    ap: [{ l: 'Comprimido 150 mg (base)', mg: 150, u: 'comprimido(s)' }] }, R('fosfato de cloroquina', '06c69e2b', 'profilaxia pediátrica 5 mg base/kg 1x/semana'))] },
+  { k: 'dantroleno', n: 'Dantroleno', v: [C('EV (hipertermia maligna)', { d: [1, 1], dd: 1, mdk: 10,
+    ob: 'Push EV rápido de no mínimo 1 mg/kg, repetindo até os sinais cederem ou até a dose acumulada de 10 mg/kg. Profilaxia: 2,5 mg/kg em ≈ 1 h, começando ~1h15 antes da anestesia.',
+    ap: [{ l: 'Frasco 20 mg (reconstituir conforme a bula; informe a concentração)' }] }, R('Dantrium IV', '4df35098', 'HM: ≥ 1 mg/kg EV rápido até 10 mg/kg acumulados; profilaxia 2,5 mg/kg'))] },
+  { k: 'daptomicina', n: 'Daptomicina', v: [F('EV (1 a 17 anos)', 'Pele (até 14 dias): 12-17 anos 5 mg/kg; 7-11 anos 7 mg/kg; 2-6 anos 9 mg/kg; 1-< 2 anos 10 mg/kg — 1x/dia. Bacteremia por S. aureus (até 42 dias): 12-17 anos 7 mg/kg; 7-11 anos 9 mg/kg; 1-6 anos 12 mg/kg — 1x/dia.', 'Infundir em 30 min (≥ 7 anos) ou 60 min (< 7 anos); em criança não fazer em bolus de 2 min.', 'Pó 350 e 500 mg', R('daptomicina', '74176769', 'tabelas pediátricas por idade (pele e bacteremia)'))] },
+  { k: 'deflazacorte', n: 'Deflazacorte', v: [C('VO (Duchenne, ≥ 2 anos)', { d: [0.9, 0.9], dd: 0.9, b: 'dia', f: 1, mdk: 0.9,
+    ob: '≈ 0,9 mg/kg/dia 1x/dia; 1,2 mg/kg/dia não traz benefício e tem mais efeitos adversos. Suspender aos poucos.',
+    ap: [{ l: 'Comprimido 6 mg', mg: 6, u: 'comprimido(s)' }, { l: 'Comprimido 30 mg', mg: 30, u: 'comprimido(s)' }] }, R('Emflaza', '31b347d2', '≥ 2 anos 0,9 mg/kg/dia 1x/dia'))] },
+  { k: 'diazoxido', n: 'Diazóxido', v: [
+    C('VO (hipoglicemia hiperinsulinêmica, criança)', { d: [3, 8], dd: 3, b: 'dia', f: 3, mdk: 8, ob: 'Início 3 mg/kg/dia em 3 doses (8/8 h) ou 2 (12/12 h); máx. 8 mg/kg/dia.', ap: [{ l: 'Suspensão oral 50 mg/mL', c: 50 }] }, R('Proglycem', 'b16c7832', 'crianças 3 mg/kg/dia até 8 mg/kg/dia')),
+    C('VO (lactente e recém-nascido)', { d: [8, 15], dd: 8, b: 'dia', f: 3, mdk: 15, ob: 'Início 8 mg/kg/dia em 3 doses (8/8 h) ou 2 (12/12 h); máx. 15 mg/kg/dia.', ap: [{ l: 'Suspensão oral 50 mg/mL', c: 50 }] }, R('Proglycem', 'b16c7832', 'lactentes e RN 8 mg/kg/dia até 15 mg/kg/dia'))] },
+  { k: 'dicloxacilina', n: 'Dicloxacilina', v: [C('VO (criança)', { d: [12.5, 25], dd: 12.5, b: 'dia', f: 4,
+    ob: 'Leve a moderada: 12,5 mg/kg/dia; grave: 25 mg/kg/dia, divididos de 6/6 h. Adulto: 125 a 250 mg de 6/6 h.' + ' Teto: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Cápsula 250 mg', mg: 250, u: 'cápsula(s)' }] }, R('dicloxacilina', '5d291f1b', 'crianças 12,5 (leve) a 25 mg/kg/dia (grave) de 6/6 h'))] },
+  { k: 'dolutegravir', n: 'Dolutegravir', v: [F('VO (HIV)', 'A partir de 20 kg: 50 mg 1x/dia. Comprimido dispersível 5 mg (por peso, ≥ 4 semanas): 3-< 6 kg 5 mg; 6-< 10 kg 15 mg; 10-< 14 kg 20 mg; 14-< 20 kg 25 mg — 1x/dia. RN a termo ≥ 2 kg: até 14 dias 5 mg em dias alternados; 15 dias-< 4 semanas 5 mg/dia.', 'Comprimido dispersível e comprimido revestido não são equivalentes mg a mg.', 'Comprimido 50 mg', R('Tivicay/Tivicay PD', '63df5af3', 'tabelas pediátricas por peso e neonatal'))] },
+  { k: 'entecavir', n: 'Entecavir', v: [C('VO (hepatite B, ≥ 10 kg, virgem de tratamento)', { d: [0.015, 0.015], dd: 0.015, mx: 0.5,
+    ob: '0,015 mg/kg 1x/dia (até 0,5 mg). Com experiência a lamivudina: 0,03 mg/kg (até 1 mg). Acima de 30 kg: 0,5 mg (virgem) ou 1 mg. O rótulo traz tabela em mL da solução 0,05 mg/mL.',
+    ap: [{ l: 'Comprimido 0,5 mg', mg: 0.5, u: 'comprimido(s)' }] }, R('entecavir', 'def332bf', 'pediatria 0,015 mg/kg até 0,5 mg (virgem); 0,03 mg/kg até 1 mg (resistência à lamivudina)'))] },
+  { k: 'ertapenem', n: 'Ertapenem', v: [C('EV/IM (3 meses a 12 anos)', { d: [15, 15], dd: 15, f: 2, mxd: 1000,
+    ob: '15 mg/kg 2x/dia, sem passar de 1 g/dia. EV: diluir a ≤ 20 mg/mL.',
+    ap: [{ l: 'Frasco 1 g (concentração após reconstituir: conforme a bula; informe abaixo)' }] }, R('ertapenem', 'c4da28cb', '3 meses-12 anos 15 mg/kg 2x/dia, máx. 1 g/dia'))] },
+  { k: 'escitalopram', n: 'Escitalopram', v: [F('VO', 'Ansiedade generalizada (≥ 7 anos): início 10 mg 1x/dia. Depressão maior (≥ 12 anos): 10 mg 1x/dia.', 'Alerta de ideação suicida em crianças e adolescentes.', 'Comprimido 10 mg', R('Lexapro', '13bb8267', 'TAG ≥ 7 anos 10 mg; TDM ≥ 12 anos 10 mg'))] },
+  { k: 'etomidato', n: 'Etomidato', v: [C('EV (indução, > 10 anos)', { d: [0.2, 0.6], dd: 0.3,
+    ob: '0,2 a 0,6 mg/kg (usual 0,3 mg/kg) em 30-60 s. Reduz o cortisol (cuidado na sepse). Uso em ≤ 10 anos não estabelecido no rótulo.' + PEND,
+    ap: [{ l: 'Ampola 2 mg/mL', c: 2 }] }, R('etomidato', '98002094', '> 10 anos 0,2-0,6 mg/kg, usual 0,3 mg/kg'))] },
+  { k: 'etossuximida', n: 'Etossuximida', v: [C('VO (crise de ausência)', { d: [20, 20], dd: 20, b: 'dia', f: 2,
+    ob: 'A dose ótima para a maioria das crianças é 20 mg/kg/dia (início e aumento graduais conforme a bula; número de tomadas: PENDENTE DE VERIFICAÇÃO).' + ' Teto: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Xarope 50 mg/mL', c: 50 }, { l: 'Cápsula 250 mg', mg: 250, u: 'cápsula(s)' }] }, R('etossuximida', '19c924c2', 'dose ótima pediátrica 20 mg/kg/dia'))] },
+  { k: 'filgrastima', n: 'Filgrastima', v: [C('SC/EV', { d: [5, 5], dd: 5, f: 1, un: 'mcg',
+    ob: 'Neutropenia por quimioterapia: 5 mcg/kg/dia (subir 5 mcg/kg por ciclo conforme o nadir). Transplante de medula: 10 mcg/kg/dia. Neutropenia congênita: 6 mcg/kg 2x/dia.' + ' Teto: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Solução 300 mcg/mL', c: 300 }] }, R('filgrastim (Releuko)', '74e1ec6e', '5 mcg/kg/dia; TMO 10 mcg/kg/dia; congênita 6 mcg/kg 2x/dia'))] },
+  { k: 'fluvoxamina', n: 'Fluvoxamina', v: [F('VO (TOC, 8 a 17 anos)', 'Início 25 mg à noite; aumentar 25 mg a cada 4-7 dias. Máximo: 200 mg/dia (8-11 anos) ou 300 mg/dia (12-17 anos).', 'Alerta de ideação suicida em crianças e adolescentes.', 'Comprimido 50 mg', R('fluvoxamina', '6eeb14df', '8-17 anos 25 mg/dia, máx. 200 (8-11) ou 300 mg/dia (12-17)'))] },
+  { k: 'gabapentina', n: 'Gabapentina', v: [C('VO (epilepsia focal, 3 a 11 anos)', { d: [10, 40], dd: 10, b: 'dia', f: 3,
+    ob: 'Início 10-15 mg/kg/dia em 3 tomadas, subindo em ≈ 3 dias. Manutenção: 3-4 anos 40 mg/kg/dia; 5-11 anos 25-35 mg/kg/dia, em 3 tomadas.' + ' Teto: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Cápsula 300 mg', mg: 300, u: 'cápsula(s)' }] }, R('gabapentina', '969cccfc', '3-11 anos início 10-15 mg/kg/dia; manutenção 40 (3-4 anos) e 25-35 mg/kg/dia (5-11 anos)'))] },
+  { k: 'granisetrona', n: 'Granisetrona', v: [C('EV (quimioterapia, 2 a 16 anos)', { d: [10, 10], dd: 10, un: 'mcg',
+    ob: '10 mcg/kg EV até 30 min antes da quimioterapia, só nos dias de quimio.' + ' Teto: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Ampola 1 mg/mL (1.000 mcg/mL)', c: 1000 }] }, R('granisetrona injetável', '8d88adba', '2-16 anos 10 mcg/kg'))] },
+  { k: 'guanfacina', n: 'Guanfacina XR', v: [C('VO (TDAH, liberação prolongada)', { d: [0.05, 0.12], dd: 0.05, b: 'dia', f: 1, mxd: 7,
+    ob: 'Alvo de 0,05 a 0,12 mg/kg/dia (1 a 7 mg) 1x/dia, de manhã ou à noite.',
+    ap: [{ l: 'Comprimido LP 1 mg', mg: 1, u: 'comprimido(s)' }] }, R('guanfacina LP', '07a701e2', '0,05-0,12 mg/kg/dia, 1-7 mg 1x/dia'))] },
+  { k: 'haloperidol', n: 'Haloperidol', nao: ['decanoato'], v: [C('VO (criança)', { d: [0.05, 0.15], dd: 0.05, b: 'dia', f: 2, mdk: 0.15,
+    ob: 'Psicose: 0,05-0,15 mg/kg/dia; transtornos de comportamento e Tourette: 0,05-0,075 mg/kg/dia. Casos graves podem precisar de mais. Número de tomadas: PENDENTE DE VERIFICAÇÃO (aqui 2).',
+    ap: [{ l: 'Solução oral gotas 2 mg/mL', c: 2, gt: 1 }] }, R('haloperidol comprimido', 'afb3ac3e', 'psicose 0,05-0,15; comportamento/Tourette 0,05-0,075 mg/kg/dia'))] },
+  { k: 'heparina', n: 'Heparina não fracionada', nao: ['baixo peso'], v: [C('EV (bolus inicial)', { d: [75, 100], dd: 75, un: 'UI',
+    ob: 'Bolus de 75 a 100 UI/kg em 10 min. Manutenção: lactentes 25-30 UI/kg/h (< 2 meses ≈ 28 UI/kg/h); > 1 ano 18-20 UI/kg/h; ajustar pelo TTPa. Evitar frascos com álcool benzílico em neonatos.',
+    ap: [{ l: 'Frasco 5.000 UI/mL', c: 5000 }] }, R('heparina sódica', '7014808d', 'bolus 75-100 UI/kg; manutenção 25-30 (lactente) e 18-20 UI/kg/h (> 1 ano)'))] },
+  { k: 'indometacina', n: 'Indometacina', v: [F('EV (fechamento do canal arterial, prematuro)', '3 doses com intervalo conforme a bula (mg/kg): < 48 h de vida — 0,2 / 0,1 / 0,1; 2-7 dias — 0,2 / 0,2 / 0,2; > 7 dias — 0,2 / 0,25 / 0,25.', 'Suspender as próximas doses se anúria ou oligúria (< 0,6 mL/kg/h) até normalizar a função renal.', 'Ampola EV 1 mg', R('indometacina injetável', 'ec482425', 'PCA: esquema por idade na 1ª dose'))] },
+  { k: 'lacosamida', n: 'Lacosamida', v: [C('VO (< 50 kg)', { d: [2, 12], dd: 2, b: 'dia', f: 2,
+    ob: 'Início 2 mg/kg/dia em 2 tomadas, aumentando 2 mg/kg/dia por semana até a manutenção: < 30 kg 12 mg/kg/dia; 30-< 50 kg 8 mg/kg/dia. A partir de 50 kg: 100 mg/dia → até 400 mg/dia.',
+    ap: [{ l: 'Xarope 10 mg/mL', c: 10 }] }, R('lacosamida solução oral', 'ba4e2e28', 'início 2 mg/kg/dia; alvo 12 (< 30 kg) e 8 mg/kg/dia (30-50 kg)'))] },
+  { k: 'lamivudina', n: 'Lamivudina', v: [C('VO (solução, HIV)', { d: [5, 5], dd: 5, f: 2, mxd: 300,
+    ob: '5 mg/kg 2x/dia ou 10 mg/kg 1x/dia, até 300 mg/dia. Comprimido sulcado 150 mg por peso: 14-< 20 kg 150 mg/dia; 20-< 25 kg 225 mg/dia; ≥ 25 kg 300 mg/dia.',
+    ap: [{ l: 'Solução oral 10 mg/mL', c: 10 }, { l: 'Comprimido 150 mg', mg: 150, u: 'comprimido(s)' }] }, R('lamivudina', '34c02bcc', 'solução 5 mg/kg 2x/dia ou 10 mg/kg 1x/dia, máx. 300 mg/dia'))] },
+  { k: 'lisdexanfetamina', n: 'Lisdexanfetamina', v: [F('VO (TDAH, ≥ 6 anos)', 'Início 30 mg 1x/dia pela manhã; aumentar 10 a 20 mg por semana. Dose usual 30-70 mg/dia; máximo 70 mg/dia.', 'Dose fixa.', 'Cápsula 30 mg', R('lisdexanfetamina', 'efbde0f6', '≥ 6 anos 30 mg/dia, até 70 mg/dia'))] },
+  { k: 'carbonato de litio', n: 'Carbonato de lítio', v: [F('VO (bipolar, ≥ 7 anos)', 'Acima de 30 kg: 300 mg 3x/dia, aumentando 300 mg a cada 3 dias. 20-30 kg: 300 mg 2x/dia, aumentando 300 mg por semana. Alvo: lítio sérico 0,8-1,2 mEq/L (agudo) e 0,8-1,0 (manutenção).', 'Ajustar pelo nível sérico de lítio.', 'Comprimido 300 mg', R('carbonato de lítio', 'b839ff4b', '≥ 7 anos: > 30 kg 300 mg 3x/dia; 20-30 kg 300 mg 2x/dia'))] },
+  { k: 'mefloquina', n: 'Mefloquina', v: [C('VO (profilaxia da malária)', { d: [5, 5], dd: 5, f: 1, mx: 250,
+    ob: '≈ 5 mg/kg 1x por semana; acima de 45 kg, 1 comprimido de 250 mg/semana. Tratamento (P. falciparum): 20 a 25 mg/kg (ver bula).',
+    ap: [{ l: 'Comprimido 250 mg', mg: 250, u: 'comprimido(s)' }] }, R('mefloquina', '09716a24', 'profilaxia ≈ 5 mg/kg/semana; > 45 kg 250 mg; tratamento 20-25 mg/kg'))] },
+  { k: 'meloxicam', n: 'Meloxicam', v: [F('VO (artrite idiopática juvenil)', 'Comprimido: 7,5 mg 1x/dia em crianças com 60 kg ou mais. (Nos estudos, 0,125 mg/kg/dia até 7,5 mg.)', 'Para crianças menores, usar formulação líquida com dose por kg (não disponível na apresentação cadastrada).', 'Comprimido 7,5 mg', R('meloxicam', '20ec4646', 'AIJ ≥ 60 kg 7,5 mg 1x/dia'))] },
+  { k: 'metformina', n: 'Metformina', nao: ['liberacao prolongada'], v: [F('VO (DM2, ≥ 10 anos)', 'Início 500 mg 2x/dia com as refeições; ajustes e dose máxima pediátrica: PENDENTE DE VERIFICAÇÃO.', 'Dose fixa inicial.', 'Comprimido 500 mg', R('metformina', '0ff1ba75', '≥ 10 anos início 500 mg 2x/dia'))] },
+  { k: 'metilprednisolona', n: 'Metilprednisolona (succinato)', v: [C('EV/IM (asma grave, NHLBI)', { d: [1, 2], dd: 1, b: 'dia', f: 2,
+    ob: 'Asma não controlada: 1 a 2 mg/kg/dia em dose única ou dividida. Faixa inicial geral: 0,11-1,6 mg/kg/dia em 3-4 doses; não usar menos de 0,5 mg/kg/24 h. Pulsoterapia: 30 mg/kg EV em ≥ 30 min. Teto diário em mg: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Frasco 40 mg (concentração após reconstituir: conforme a bula; informe abaixo)' }] }, R('Solu-Medrol', 'ea2f9b6f', 'NHLBI 1-2 mg/kg/dia; faixa 0,11-1,6 mg/kg/dia; pulso 30 mg/kg'))] },
+  { k: 'miltefosina', n: 'Miltefosina', v: [F('VO (leishmaniose)', '30 a 44 kg: 50 mg 2x/dia; 45 kg ou mais: 50 mg 3x/dia — por 28 dias, com refeições.', 'Dose fixa por peso.', 'Cápsula 50 mg', R('Impavido', '57c515c8', '30-44 kg 50 mg 2x/dia; ≥ 45 kg 50 mg 3x/dia, 28 dias'))] },
+  { k: 'nevirapina', n: 'Nevirapina', v: [F('VO (HIV, ≥ 15 dias)', '150 mg/m² 1x/dia por 14 dias (introdução), depois 150 mg/m² 2x/dia. Dose total até 400 mg/dia.', 'Não aumentar se houver exantema na introdução. Calcular a superfície corporal (Mosteller) na aba Calculadoras.', 'Comprimido 200 mg', R('nevirapina', '5f6c3eed', '150 mg/m² 1x/dia 14 dias, depois 2x/dia; máx. 400 mg/dia'))] },
+  { k: 'nifurtimox', n: 'Nifurtimox', v: [
+    C('VO (Chagas, < 41 kg)', { d: [10, 20], dd: 10, b: 'dia', f: 3, mdk: 20, ob: '10 a 20 mg/kg/dia em 3 tomadas com alimento, por 60 dias (RN a termo ≥ 2,5 kg inclusive).', ap: [{ l: 'Comprimido 30 mg', mg: 30, u: 'comprimido(s)' }, { l: 'Comprimido 120 mg', mg: 120, u: 'comprimido(s)' }] }, R('Lampit', '90d09714', '< 41 kg 10-20 mg/kg/dia em 3 tomadas, 60 dias')),
+    C('VO (Chagas, ≥ 41 kg)', { d: [8, 10], dd: 8, b: 'dia', f: 3, mdk: 10, ob: '8 a 10 mg/kg/dia em 3 tomadas com alimento, por 60 dias.', ap: [{ l: 'Comprimido 120 mg', mg: 120, u: 'comprimido(s)' }] }, R('Lampit', '90d09714', '≥ 41 kg 8-10 mg/kg/dia em 3 tomadas, 60 dias'))] },
+  { k: 'nitroprussiato', n: 'Nitroprussiato de sódio', v: [F('EV (infusão contínua)', 'Dose usual 0,5 a 10 mcg/kg/min; a dose máxima não deve durar mais de 10 min. Acima de 2 mcg/kg/min aumenta o risco de intoxicação por cianeto.', 'Use a calculadora de bomba de infusão (mcg/kg/min) da aba Calculadoras. Monitorar PA continuamente.', 'Frasco-ampola 50 mg', R('nitroprussiato de sódio', '820eadcb', '0,5-10 mcg/kg/min; cianeto > 2 mcg/kg/min'))] },
+  { k: 'olanzapina', n: 'Olanzapina', nao: ['pamoato'], v: [F('VO (adolescentes 13 a 17 anos)', 'Esquizofrenia e mania bipolar: início 2,5 a 5 mg 1x/dia; alvo 10 mg/dia.', 'Dose fixa.', 'Comprimido 2,5 e 5 mg', R('olanzapina', '2cb1bebe', 'adolescentes início 2,5-5 mg, alvo 10 mg/dia'))] },
+  { k: 'palonossetrona', n: 'Palonossetrona', v: [C('EV (quimioterapia, criança)', { d: [20, 20], dd: 20, un: 'mcg', mx: 1500,
+    ob: '20 mcg/kg (máx. 1,5 mg) em infusão, 30 min antes da quimioterapia.',
+    ap: [{ l: 'Frasco 0,25 mg (concentração: conforme a bula; informe abaixo)' }] }, R('palonossetrona', 'bb2be46a', 'pediatria 20 mcg/kg, máx. 1,5 mg'))] },
+  { k: 'perampanel', n: 'Perampanel', v: [F('VO (epilepsia)', 'Crises focais: início 2 mg à noite, subir 2 mg por semana; manutenção 8-12 mg/dia. Tônico-clônica generalizada (≥ 12 anos): início 2 mg. Com indutores enzimáticos (≥ 4 anos): início 4 mg.', 'Dose fixa; ajuste semanal.', 'Comprimido 2 mg', R('Fycompa', '71cf3309', 'início 2 mg (4 mg com indutores); manutenção 8-12 mg'))] },
+  { k: 'pirimetamina', n: 'Pirimetamina', v: [C('VO (toxoplasmose, criança)', { d: [1, 1], dd: 1, b: 'dia', f: 2,
+    ob: '1 mg/kg/dia dividido em 2 doses iguais.' + ' Duração e teto: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Comprimido 25 mg', mg: 25, u: 'comprimido(s)' }] }, R('pirimetamina', '2c57a992', 'pediatria 1 mg/kg/dia em 2 doses'))] },
+  { k: 'praziquantel', n: 'Praziquantel', v: [C('VO (esquistossomose)', { d: [20, 25], dd: 20, f: 3,
+    ob: 'Esquistossomose: 20 mg/kg 3x no mesmo dia (intervalo de 4-6 h). Clonorquíase/opistorquíase: 25 mg/kg 3x no mesmo dia.' + ' Idade mínima: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Comprimido 600 mg', mg: 600, u: 'comprimido(s)' }, { l: 'Comprimido 150 mg', mg: 150, u: 'comprimido(s)' }] }, R('Biltricide', '34ce1cdd', 'esquistossomose 20 mg/kg 3x/dia; clonorquíase 25 mg/kg 3x/dia, 1 dia'))] },
+  { k: 'propofol', n: 'Propofol', v: [C('EV (indução, 3 a 16 anos)', { d: [2.5, 3.5], dd: 2.5,
+    ob: 'ASA I-II: 2,5 a 3,5 mg/kg para indução. Só com monitorização e via aérea.' + PEND,
+    ap: [{ l: 'Emulsão 10 mg/mL', c: 10 }] }, R('propofol', '76ae0147', '3-16 anos 2,5-3,5 mg/kg na indução'))] },
+  { k: 'raltegravir', n: 'Raltegravir', v: [F('VO (HIV)', '≥ 25 kg: 400 mg 2x/dia (comprimido revestido). Comprimido mastigável (≈ 6 mg/kg/dose 2x/dia): 25-< 28 kg 150 mg; 28-< 40 kg 200 mg; ≥ 40 kg 300 mg — 2x/dia. ≥ 40 kg virgem/suprimido: também 1.200 mg 1x/dia.', 'Formulações não são intercambiáveis mg a mg.', 'Comprimido 400 mg', R('Isentress', '89a5ec53', 'tabelas pediátricas por peso e formulação'))] },
+  { k: 'risperidona', n: 'Risperidona', nao: ['acao prolongada'], v: [F('VO', 'Irritabilidade no autismo: início 0,25 mg/dia (< 20 kg) ou 0,5 mg/dia (≥ 20 kg). Mania bipolar (10-17 anos): início 0,5 mg, alvo 1-2,5 mg/dia. Esquizofrenia (13-17 anos): início 0,5 mg, alvo 3 mg/dia (faixa 1-6 mg).', 'Dose fixa por idade/peso.', 'Solução oral 1 mg/mL', R('risperidona', '07d43bf6', 'autismo 0,25/0,5 mg; bipolar 0,5→1-2,5 mg; esquizofrenia 0,5→3 mg'))] },
+  { k: 'rosuvastatina', n: 'Rosuvastatina', v: [F('VO', 'Hipercolesterolemia familiar heterozigótica: 8-< 10 anos 5-10 mg/dia; ≥ 10 anos 5-20 mg/dia. Homozigótica (≥ 7 anos): 20 mg/dia.', 'Dose fixa por idade.', 'Comprimido 5 e 10 mg', R('rosuvastatina', '02797697', 'HeFH 5-10 mg (8-10 anos), 5-20 mg (≥ 10 anos); HoFH 20 mg'))] },
+  { k: 'rufinamida', n: 'Rufinamida', v: [C('VO (Lennox-Gastaut, ≥ 1 ano)', { d: [10, 45], dd: 10, b: 'dia', f: 2, mdk: 45, mxd: 3200,
+    ob: 'Início 10 mg/kg/dia em 2 tomadas com alimento; subir ≈ 10 mg/kg a cada 2 dias até 45 mg/kg/dia (máx. 3.200 mg/dia). Com valproato: começar abaixo de 10 mg/kg/dia.',
+    ap: [{ l: 'Comprimido 100 mg', mg: 100, u: 'comprimido(s)' }, { l: 'Comprimido 200 mg', mg: 200, u: 'comprimido(s)' }] }, R('rufinamida', 'e2ba061a', '≥ 1 ano 10 → 45 mg/kg/dia, máx. 3.200 mg/dia'))] },
+  { k: 'sapropterina', n: 'Sapropterina', v: [C('VO (fenilcetonúria)', { d: [5, 20], dd: 10, b: 'dia', f: 1, mdk: 20,
+    ob: 'Início: 1 mês-6 anos 10 mg/kg 1x/dia; ≥ 7 anos 10-20 mg/kg 1x/dia. Ajuste na faixa de 5-20 mg/kg/dia pela fenilalanina sérica.',
+    ap: [{ l: 'Comprimido solúvel 100 mg', mg: 100, u: 'comprimido(s)' }] }, R('Kuvan', 'af38711e', 'início 10 mg/kg (1 mês-6 anos) ou 10-20 mg/kg (≥ 7 anos); faixa 5-20'))] },
+  { k: 'sinvastatina', n: 'Sinvastatina', v: [F('VO (≥ 10 anos)', 'Hipercolesterolemia familiar heterozigótica: 10 a 40 mg 1x/dia (doses acima de 40 mg não estudadas em crianças).', 'Dose fixa.', 'Comprimido 10 e 20 mg', R('sinvastatina', 'faa81817', '≥ 10 anos HeFH 10-40 mg/dia'))] },
+  { k: 'succinilcolina', n: 'Succinilcolina (Suxametônio)', v: [
+    C('EV (lactente e criança pequena)', { d: [2, 2], dd: 2, ob: 'Intubação de emergência. Risco de hipercalemia e bradicardia (considerar atropina).' + PEND, ap: [{ l: 'Frasco 100 mg (concentração após diluir: informe abaixo)' }] }, R('succinilcolina', '7d0f0431', 'lactentes e crianças pequenas 2 mg/kg EV')),
+    C('EV (criança maior e adolescente)', { d: [1, 1], dd: 1, ob: 'Intubação de emergência.' + PEND, ap: [{ l: 'Frasco 100 mg (concentração após diluir: informe abaixo)' }] }, R('succinilcolina', '7d0f0431', 'crianças maiores e adolescentes 1 mg/kg EV'))] },
+  { k: 'sugamadex', n: 'Sugamadex', v: [C('EV (reversão de rocurônio/vecurônio)', { d: [2, 4], dd: 2,
+    ob: '2 mg/kg se reapareceu a 2ª resposta ao TOF; 4 mg/kg se 1-2 respostas pós-tetânicas sem TOF. Reversão imediata após 1,2 mg/kg de rocurônio: 16 mg/kg. Em pediatria pode-se diluir a 10 mg/mL para precisão.' + PEND,
+    ap: [{ l: 'Frasco 100 mg/mL (200 mg/2 mL)', c: 100 }, { l: 'Diluído a 10 mg/mL', c: 10 }] }, R('sugamadex', '607fb53a', '2 ou 4 mg/kg conforme o bloqueio; 16 mg/kg imediato; diluição pediátrica 10 mg/mL'))] },
+  { k: 'sulfassalazina', n: 'Sulfassalazina', v: [C('VO (retocolite, ≥ 6 anos)', { d: [30, 60], dd: 40, b: 'dia', f: 4,
+    ob: 'Ataque: 40 a 60 mg/kg/dia divididos em 3 a 6 doses. Manutenção: 30 mg/kg/dia em 4 doses.' + ' Teto em mg: PENDENTE DE VERIFICAÇÃO.',
+    ap: [{ l: 'Comprimido 500 mg', mg: 500, u: 'comprimido(s)' }] }, R('sulfassalazina', '3254432e', '≥ 6 anos 40-60 mg/kg/dia (ataque), 30 mg/kg/dia (manutenção)'))] },
+  { k: 'voriconazol', n: 'Voriconazol', v: [
+    C('VO (2 a < 12 anos)', { d: [9, 9], dd: 9, f: 2, mx: 350, ob: 'Aspergilose/candidíase invasiva: 9 mg/kg 12/12 h (máx. 350 mg por dose); suspensão 0,225 mL/kg. Começar pela via EV. Esofagite por Candida: mesma dose oral.', ap: [{ l: 'Comprimido 50 mg', mg: 50, u: 'comprimido(s)' }] }, R('voriconazol suspensão', '2b262849', 'pediatria VO 9 mg/kg 12/12 h, máx. 350 mg')),
+    C('EV (2 a < 12 anos, ataque nas primeiras 24 h)', { d: [9, 9], dd: 9, f: 2, ob: 'Ataque: 9 mg/kg 12/12 h nas primeiras 24 h; depois 8 mg/kg 12/12 h (mude a dose para 8).' + PEND, ap: [{ l: 'Frasco 200 mg (concentração após reconstituir: informe abaixo)' }] }, R('voriconazol', '2b262849', 'pediatria EV 9 mg/kg 12/12 h nas 24 h, depois 8 mg/kg'))] },
+  { k: 'zidovudina', n: 'Zidovudina (AZT)', v: [F('VO (HIV, por peso)', '4-< 9 kg: 24 mg/kg/dia (12 mg/kg 2x/dia ou 8 mg/kg 3x/dia); 9-< 30 kg: 18 mg/kg/dia (9 mg/kg 2x/dia ou 6 mg/kg 3x/dia); ≥ 30 kg: 600 mg/dia (300 mg 2x/dia). Alternativa por superfície corporal (ver bula).', 'Transmissão vertical (parto): 2 mg/kg EV na mãe em 1 h, depois 1 mg/kg/h até o clampeamento do cordão.', 'Solução oral 10 mg/mL', R('Retrovir', '6df09f15', 'tabela pediátrica por peso; esquema no parto'))] },
+];
+
+let n = 0;
+for (const e of NOVOS) {
+  if (P.some((x) => x.k === e.k)) { console.log('já existe, pulado:', e.k); continue; }
+  P.push(e); n++;
+}
+fs.writeFileSync(path.join(L.RAIZ, 'dados', cfg.arq), L.formatarArquivo(cfg, P), 'utf8');
+console.log('OK', n, 'medicamento(s) novos na calculadora pediátrica; total', P.length);

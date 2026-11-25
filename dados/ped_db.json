@@ -3715,5 +3715,2109 @@
         "rev": "Conferida em 11/2026 com o rótulo FDA (DailyMed, 11/2026) do Primaxin: ≥ 3 meses 15-25 mg/kg de 6/6 h (máx. 4 g/dia); < 3 meses por idade"
       }
     ]
+  },
+  {
+    "k": "abacavir",
+    "n": "Abacavir",
+    "v": [
+      {
+        "via": "VO (≥ 3 meses)",
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de abacavir (DailyMed setid 5676d391): ≥ 3 meses 8 mg/kg 2x/dia ou 16 mg/kg 1x/dia, máx. 600 mg/dia",
+        "d": [
+          8,
+          8
+        ],
+        "dd": 8,
+        "mxd": 600,
+        "ob": "8 mg/kg 2x/dia ou 16 mg/kg 1x/dia, até 600 mg/dia, sempre com outros antirretrovirais.",
+        "ap": [
+          {
+            "l": "Comprimido 300 mg",
+            "mg": 300,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "acetilcisteina",
+    "n": "Acetilcisteína",
+    "v": [
+      {
+        "via": "EV (intoxicação por paracetamol)",
+        "fixo": "Total de 300 mg/kg em 3 bolsas seguidas (21 h): 1ª 150 mg/kg em 1 h; 2ª 50 mg/kg em 4 h; 3ª 100 mg/kg em 16 h. Diluente: 5-20 kg — 3, 7 e 14 mL/kg; 21-40 kg — 100, 250 e 500 mL.",
+        "ob": "Esquema EV do antídoto; para a forma oral mucolítica, ver a ficha. Avaliar continuar após 21 h conforme níveis e transaminases.",
+        "ap": [
+          {
+            "l": "Acetilcisteína injetável (antídoto)"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de acetilcisteína injetável (DailyMed setid 3b0310d2): 300 mg/kg em 3 bolsas (150/50/100 mg/kg) e diluição por peso"
+      }
+    ]
+  },
+  {
+    "k": "adenosina",
+    "n": "Adenosina",
+    "v": [
+      {
+        "via": "EV (TSV, < 50 kg)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de adenosina injetável (DailyMed setid d28ff4f3): < 50 kg 0,05-0,1 mg/kg, aumentos de 0,05-0,1 mg/kg, máx. 0,3 mg/kg por dose",
+        "d": [
+          0.05,
+          0.1
+        ],
+        "dd": 0.1,
+        "ob": "Bolus EV rápido (central ou periférico) seguido de flush. Sem reversão em 1-2 min: repetir aumentando 0,05-0,1 mg/kg a cada dose, até reverter ou chegar a 0,3 mg/kg por dose. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Ampola 3 mg/mL (6 mg/2 mL)",
+            "c": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "atomoxetina",
+    "n": "Atomoxetina",
+    "v": [
+      {
+        "via": "VO (TDAH, até 70 kg)",
+        "b": "dia",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de atomoxetina (DailyMed setid f98c3424): ≤ 70 kg 0,5 → 1,2 mg/kg/dia, máx. 1,4 mg/kg/dia ou 100 mg",
+        "d": [
+          0.5,
+          1.2
+        ],
+        "dd": 0.5,
+        "mdk": 1.4,
+        "mxd": 100,
+        "ob": "Iniciar ~0,5 mg/kg/dia e, após ≥ 3 dias, subir para ~1,2 mg/kg/dia (1x de manhã ou dividido em 2). Não passar de 1,4 mg/kg/dia ou 100 mg (o menor). Acima de 70 kg: 40 mg → 80 mg/dia. Com inibidor forte da CYP2D6 ou metabolizador lento: começar em 0,5 mg/kg/dia e só subir se necessário.",
+        "ap": [
+          {
+            "l": "Cápsula 10 mg",
+            "mg": 10,
+            "u": "cápsula(s)"
+          },
+          {
+            "l": "Cápsula 25 mg",
+            "mg": 25,
+            "u": "cápsula(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "atorvastatina",
+    "n": "Atorvastatina",
+    "v": [
+      {
+        "via": "VO (≥ 10 anos)",
+        "fixo": "Hipercolesterolemia familiar heterozigótica: início 10 mg 1x/dia. Homozigótica: 10 a 20 mg 1x/dia. Ajustar pelo LDL.",
+        "ob": "Dose fixa.",
+        "ap": [
+          {
+            "l": "Comprimido 10 e 20 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de atorvastatina (DailyMed setid f7cc5704): ≥ 10 anos HeFH 10 mg; HoFH 10-20 mg"
+      }
+    ]
+  },
+  {
+    "k": "benznidazol",
+    "n": "Benznidazol",
+    "v": [
+      {
+        "via": "VO (Chagas, 2 a 12 anos)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de benznidazol (DailyMed setid 8983d6a0): 2-12 anos 5-8 mg/kg/dia em 2 tomadas por 60 dias",
+        "d": [
+          5,
+          8
+        ],
+        "dd": 5,
+        "mdk": 8,
+        "ob": "5 a 8 mg/kg/dia em 2 tomadas (≈ 12/12 h) por 60 dias. O rótulo traz tabela por faixa de peso com os comprimidos de 12,5 mg e 100 mg.",
+        "ap": [
+          {
+            "l": "Comprimido 12,5 mg",
+            "mg": 12.5,
+            "u": "comprimido(s)"
+          },
+          {
+            "l": "Comprimido 100 mg",
+            "mg": 100,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "cefixima",
+    "n": "Cefixima",
+    "v": [
+      {
+        "via": "VO (≥ 6 meses)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de cefixima (DailyMed setid 6f1df975): ≥ 6 meses 8 mg/kg/dia 1x ou 4 mg/kg 12/12 h",
+        "d": [
+          8,
+          8
+        ],
+        "dd": 8,
+        "ob": "8 mg/kg/dia em dose única ou 4 mg/kg de 12/12 h (suspensão). Teto diário: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Suspensão 100 mg/5 mL (20 mg/mL)",
+            "c": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "cefoxitina",
+    "n": "Cefoxitina",
+    "v": [
+      {
+        "via": "EV (≥ 3 meses)",
+        "b": "dia",
+        "f": 4,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de cefoxitina (DailyMed setid 658a0dc6): ≥ 3 meses 80-160 mg/kg/dia em 4-6 doses",
+        "d": [
+          80,
+          160
+        ],
+        "dd": 100,
+        "ob": "80 a 160 mg/kg/dia divididos em 4 a 6 doses iguais; profilaxia cirúrgica: 30-40 mg/kg por dose nos horários do rótulo. Teto diário: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Frasco-ampola 1 g (concentração após reconstituir: conforme a bula; informe abaixo)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "celecoxibe",
+    "n": "Celecoxibe",
+    "v": [
+      {
+        "via": "VO (artrite idiopática juvenil)",
+        "fixo": "10 a 25 kg: 50 mg 2x/dia; acima de 25 kg: 100 mg 2x/dia.",
+        "ob": "Dose fixa por peso.",
+        "ap": [
+          {
+            "l": "Cápsula 100 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de celecoxibe (DailyMed setid 5eff2336): AIJ ≥ 10-25 kg 50 mg 2x/dia; > 25 kg 100 mg 2x/dia"
+      }
+    ]
+  },
+  {
+    "k": "ciproeptadina",
+    "n": "Ciproeptadina",
+    "v": [
+      {
+        "via": "VO (2 a 6 anos)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de ciproeptadina (DailyMed setid e6d91eae): 2-6 anos ≈ 0,25 mg/kg/dia ou 8 mg/m²",
+        "d": [
+          0.25,
+          0.25
+        ],
+        "dd": 0.25,
+        "ob": "Dose diária total de ≈ 0,25 mg/kg (ou 8 mg/m²), dividida ao longo do dia (número de tomadas: PENDENTE DE VERIFICAÇÃO). Em adultos não passar de 0,5 mg/kg/dia.",
+        "ap": [
+          {
+            "l": "Xarope 2 mg/5 mL (0,4 mg/mL)",
+            "c": 0.4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "cisatracurio",
+    "n": "Cisatracúrio",
+    "v": [
+      {
+        "via": "EV (intubação, 1 a 23 meses)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de cisatracúrio (DailyMed setid 67908e20): 1-23 meses 0,15 mg/kg",
+        "d": [
+          0.15,
+          0.15
+        ],
+        "dd": 0.15,
+        "ob": "Bolus em 5-10 s. Só com via aérea e ventilação garantidas. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Solução 2 mg/mL",
+            "c": 2
+          }
+        ]
+      },
+      {
+        "via": "EV (intubação, 2 a 12 anos)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de cisatracúrio (DailyMed setid 67908e20): 2-12 anos 0,1-0,15 mg/kg",
+        "d": [
+          0.1,
+          0.15
+        ],
+        "dd": 0.1,
+        "ob": "Bolus em 5-10 s. Só com via aérea e ventilação garantidas. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Solução 2 mg/mL",
+            "c": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "clomipramina",
+    "n": "Clomipramina",
+    "v": [
+      {
+        "via": "VO (TOC, ≥ 10 anos)",
+        "fixo": "Iniciar 25 mg/dia (com refeições, pode dividir); nas 2 primeiras semanas subir até 3 mg/kg/dia ou 100 mg (o menor); depois, aos poucos, até 3 mg/kg/dia ou 200 mg (o menor).",
+        "ob": "Alerta de ideação suicida em crianças e adolescentes.",
+        "ap": [
+          {
+            "l": "Comprimido 25 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de clomipramina (DailyMed setid eff91018): crianças/adolescentes 25 mg/dia até 3 mg/kg ou 100 mg, depois até 3 mg/kg ou 200 mg"
+      }
+    ]
+  },
+  {
+    "k": "cloroquina",
+    "n": "Cloroquina",
+    "v": [
+      {
+        "via": "VO (profilaxia da malária)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de fosfato de cloroquina (DailyMed setid 06c69e2b): profilaxia pediátrica 5 mg base/kg 1x/semana",
+        "d": [
+          5,
+          5
+        ],
+        "dd": 5,
+        "un": "mg (base)",
+        "ob": "5 mg de cloroquina base por kg, 1x por semana, sempre no mesmo dia. Teto semanal: PENDENTE DE VERIFICAÇÃO. Risco de retinopatia acima de 2,3 mg/kg/dia de fosfato em uso prolongado.",
+        "ap": [
+          {
+            "l": "Comprimido 150 mg (base)",
+            "mg": 150,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "dantroleno",
+    "n": "Dantroleno",
+    "v": [
+      {
+        "via": "EV (hipertermia maligna)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Dantrium IV (DailyMed setid 4df35098): HM: ≥ 1 mg/kg EV rápido até 10 mg/kg acumulados; profilaxia 2,5 mg/kg",
+        "d": [
+          1,
+          1
+        ],
+        "dd": 1,
+        "mdk": 10,
+        "ob": "Push EV rápido de no mínimo 1 mg/kg, repetindo até os sinais cederem ou até a dose acumulada de 10 mg/kg. Profilaxia: 2,5 mg/kg em ≈ 1 h, começando ~1h15 antes da anestesia.",
+        "ap": [
+          {
+            "l": "Frasco 20 mg (reconstituir conforme a bula; informe a concentração)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "daptomicina",
+    "n": "Daptomicina",
+    "v": [
+      {
+        "via": "EV (1 a 17 anos)",
+        "fixo": "Pele (até 14 dias): 12-17 anos 5 mg/kg; 7-11 anos 7 mg/kg; 2-6 anos 9 mg/kg; 1-< 2 anos 10 mg/kg — 1x/dia. Bacteremia por S. aureus (até 42 dias): 12-17 anos 7 mg/kg; 7-11 anos 9 mg/kg; 1-6 anos 12 mg/kg — 1x/dia.",
+        "ob": "Infundir em 30 min (≥ 7 anos) ou 60 min (< 7 anos); em criança não fazer em bolus de 2 min.",
+        "ap": [
+          {
+            "l": "Pó 350 e 500 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de daptomicina (DailyMed setid 74176769): tabelas pediátricas por idade (pele e bacteremia)"
+      }
+    ]
+  },
+  {
+    "k": "deflazacorte",
+    "n": "Deflazacorte",
+    "v": [
+      {
+        "via": "VO (Duchenne, ≥ 2 anos)",
+        "b": "dia",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Emflaza (DailyMed setid 31b347d2): ≥ 2 anos 0,9 mg/kg/dia 1x/dia",
+        "d": [
+          0.9,
+          0.9
+        ],
+        "dd": 0.9,
+        "mdk": 0.9,
+        "ob": "≈ 0,9 mg/kg/dia 1x/dia; 1,2 mg/kg/dia não traz benefício e tem mais efeitos adversos. Suspender aos poucos.",
+        "ap": [
+          {
+            "l": "Comprimido 6 mg",
+            "mg": 6,
+            "u": "comprimido(s)"
+          },
+          {
+            "l": "Comprimido 30 mg",
+            "mg": 30,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "diazoxido",
+    "n": "Diazóxido",
+    "v": [
+      {
+        "via": "VO (hipoglicemia hiperinsulinêmica, criança)",
+        "b": "dia",
+        "f": 3,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Proglycem (DailyMed setid b16c7832): crianças 3 mg/kg/dia até 8 mg/kg/dia",
+        "d": [
+          3,
+          8
+        ],
+        "dd": 3,
+        "mdk": 8,
+        "ob": "Início 3 mg/kg/dia em 3 doses (8/8 h) ou 2 (12/12 h); máx. 8 mg/kg/dia.",
+        "ap": [
+          {
+            "l": "Suspensão oral 50 mg/mL",
+            "c": 50
+          }
+        ]
+      },
+      {
+        "via": "VO (lactente e recém-nascido)",
+        "b": "dia",
+        "f": 3,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Proglycem (DailyMed setid b16c7832): lactentes e RN 8 mg/kg/dia até 15 mg/kg/dia",
+        "d": [
+          8,
+          15
+        ],
+        "dd": 8,
+        "mdk": 15,
+        "ob": "Início 8 mg/kg/dia em 3 doses (8/8 h) ou 2 (12/12 h); máx. 15 mg/kg/dia.",
+        "ap": [
+          {
+            "l": "Suspensão oral 50 mg/mL",
+            "c": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "dicloxacilina",
+    "n": "Dicloxacilina",
+    "v": [
+      {
+        "via": "VO (criança)",
+        "b": "dia",
+        "f": 4,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de dicloxacilina (DailyMed setid 5d291f1b): crianças 12,5 (leve) a 25 mg/kg/dia (grave) de 6/6 h",
+        "d": [
+          12.5,
+          25
+        ],
+        "dd": 12.5,
+        "ob": "Leve a moderada: 12,5 mg/kg/dia; grave: 25 mg/kg/dia, divididos de 6/6 h. Adulto: 125 a 250 mg de 6/6 h. Teto: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Cápsula 250 mg",
+            "mg": 250,
+            "u": "cápsula(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "dolutegravir",
+    "n": "Dolutegravir",
+    "v": [
+      {
+        "via": "VO (HIV)",
+        "fixo": "A partir de 20 kg: 50 mg 1x/dia. Comprimido dispersível 5 mg (por peso, ≥ 4 semanas): 3-< 6 kg 5 mg; 6-< 10 kg 15 mg; 10-< 14 kg 20 mg; 14-< 20 kg 25 mg — 1x/dia. RN a termo ≥ 2 kg: até 14 dias 5 mg em dias alternados; 15 dias-< 4 semanas 5 mg/dia.",
+        "ob": "Comprimido dispersível e comprimido revestido não são equivalentes mg a mg.",
+        "ap": [
+          {
+            "l": "Comprimido 50 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Tivicay/Tivicay PD (DailyMed setid 63df5af3): tabelas pediátricas por peso e neonatal"
+      }
+    ]
+  },
+  {
+    "k": "entecavir",
+    "n": "Entecavir",
+    "v": [
+      {
+        "via": "VO (hepatite B, ≥ 10 kg, virgem de tratamento)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de entecavir (DailyMed setid def332bf): pediatria 0,015 mg/kg até 0,5 mg (virgem); 0,03 mg/kg até 1 mg (resistência à lamivudina)",
+        "d": [
+          0.015,
+          0.015
+        ],
+        "dd": 0.015,
+        "mx": 0.5,
+        "ob": "0,015 mg/kg 1x/dia (até 0,5 mg). Com experiência a lamivudina: 0,03 mg/kg (até 1 mg). Acima de 30 kg: 0,5 mg (virgem) ou 1 mg. O rótulo traz tabela em mL da solução 0,05 mg/mL.",
+        "ap": [
+          {
+            "l": "Comprimido 0,5 mg",
+            "mg": 0.5,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "ertapenem",
+    "n": "Ertapenem",
+    "v": [
+      {
+        "via": "EV/IM (3 meses a 12 anos)",
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de ertapenem (DailyMed setid c4da28cb): 3 meses-12 anos 15 mg/kg 2x/dia, máx. 1 g/dia",
+        "d": [
+          15,
+          15
+        ],
+        "dd": 15,
+        "mxd": 1000,
+        "ob": "15 mg/kg 2x/dia, sem passar de 1 g/dia. EV: diluir a ≤ 20 mg/mL.",
+        "ap": [
+          {
+            "l": "Frasco 1 g (concentração após reconstituir: conforme a bula; informe abaixo)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "escitalopram",
+    "n": "Escitalopram",
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "Ansiedade generalizada (≥ 7 anos): início 10 mg 1x/dia. Depressão maior (≥ 12 anos): 10 mg 1x/dia.",
+        "ob": "Alerta de ideação suicida em crianças e adolescentes.",
+        "ap": [
+          {
+            "l": "Comprimido 10 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Lexapro (DailyMed setid 13bb8267): TAG ≥ 7 anos 10 mg; TDM ≥ 12 anos 10 mg"
+      }
+    ]
+  },
+  {
+    "k": "etomidato",
+    "n": "Etomidato",
+    "v": [
+      {
+        "via": "EV (indução, > 10 anos)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de etomidato (DailyMed setid 98002094): > 10 anos 0,2-0,6 mg/kg, usual 0,3 mg/kg",
+        "d": [
+          0.2,
+          0.6
+        ],
+        "dd": 0.3,
+        "ob": "0,2 a 0,6 mg/kg (usual 0,3 mg/kg) em 30-60 s. Reduz o cortisol (cuidado na sepse). Uso em ≤ 10 anos não estabelecido no rótulo. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Ampola 2 mg/mL",
+            "c": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "etossuximida",
+    "n": "Etossuximida",
+    "v": [
+      {
+        "via": "VO (crise de ausência)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de etossuximida (DailyMed setid 19c924c2): dose ótima pediátrica 20 mg/kg/dia",
+        "d": [
+          20,
+          20
+        ],
+        "dd": 20,
+        "ob": "A dose ótima para a maioria das crianças é 20 mg/kg/dia (início e aumento graduais conforme a bula; número de tomadas: PENDENTE DE VERIFICAÇÃO). Teto: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Xarope 50 mg/mL",
+            "c": 50
+          },
+          {
+            "l": "Cápsula 250 mg",
+            "mg": 250,
+            "u": "cápsula(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "filgrastima",
+    "n": "Filgrastima",
+    "v": [
+      {
+        "via": "SC/EV",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de filgrastim (Releuko) (DailyMed setid 74e1ec6e): 5 mcg/kg/dia; TMO 10 mcg/kg/dia; congênita 6 mcg/kg 2x/dia",
+        "d": [
+          5,
+          5
+        ],
+        "dd": 5,
+        "un": "mcg",
+        "ob": "Neutropenia por quimioterapia: 5 mcg/kg/dia (subir 5 mcg/kg por ciclo conforme o nadir). Transplante de medula: 10 mcg/kg/dia. Neutropenia congênita: 6 mcg/kg 2x/dia. Teto: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Solução 300 mcg/mL",
+            "c": 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "fluvoxamina",
+    "n": "Fluvoxamina",
+    "v": [
+      {
+        "via": "VO (TOC, 8 a 17 anos)",
+        "fixo": "Início 25 mg à noite; aumentar 25 mg a cada 4-7 dias. Máximo: 200 mg/dia (8-11 anos) ou 300 mg/dia (12-17 anos).",
+        "ob": "Alerta de ideação suicida em crianças e adolescentes.",
+        "ap": [
+          {
+            "l": "Comprimido 50 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de fluvoxamina (DailyMed setid 6eeb14df): 8-17 anos 25 mg/dia, máx. 200 (8-11) ou 300 mg/dia (12-17)"
+      }
+    ]
+  },
+  {
+    "k": "gabapentina",
+    "n": "Gabapentina",
+    "v": [
+      {
+        "via": "VO (epilepsia focal, 3 a 11 anos)",
+        "b": "dia",
+        "f": 3,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de gabapentina (DailyMed setid 969cccfc): 3-11 anos início 10-15 mg/kg/dia; manutenção 40 (3-4 anos) e 25-35 mg/kg/dia (5-11 anos)",
+        "d": [
+          10,
+          40
+        ],
+        "dd": 10,
+        "ob": "Início 10-15 mg/kg/dia em 3 tomadas, subindo em ≈ 3 dias. Manutenção: 3-4 anos 40 mg/kg/dia; 5-11 anos 25-35 mg/kg/dia, em 3 tomadas. Teto: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Cápsula 300 mg",
+            "mg": 300,
+            "u": "cápsula(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "granisetrona",
+    "n": "Granisetrona",
+    "v": [
+      {
+        "via": "EV (quimioterapia, 2 a 16 anos)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de granisetrona injetável (DailyMed setid 8d88adba): 2-16 anos 10 mcg/kg",
+        "d": [
+          10,
+          10
+        ],
+        "dd": 10,
+        "un": "mcg",
+        "ob": "10 mcg/kg EV até 30 min antes da quimioterapia, só nos dias de quimio. Teto: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Ampola 1 mg/mL (1.000 mcg/mL)",
+            "c": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "guanfacina",
+    "n": "Guanfacina XR",
+    "v": [
+      {
+        "via": "VO (TDAH, liberação prolongada)",
+        "b": "dia",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de guanfacina LP (DailyMed setid 07a701e2): 0,05-0,12 mg/kg/dia, 1-7 mg 1x/dia",
+        "d": [
+          0.05,
+          0.12
+        ],
+        "dd": 0.05,
+        "mxd": 7,
+        "ob": "Alvo de 0,05 a 0,12 mg/kg/dia (1 a 7 mg) 1x/dia, de manhã ou à noite.",
+        "ap": [
+          {
+            "l": "Comprimido LP 1 mg",
+            "mg": 1,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "haloperidol",
+    "n": "Haloperidol",
+    "nao": [
+      "decanoato"
+    ],
+    "v": [
+      {
+        "via": "VO (criança)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de haloperidol comprimido (DailyMed setid afb3ac3e): psicose 0,05-0,15; comportamento/Tourette 0,05-0,075 mg/kg/dia",
+        "d": [
+          0.05,
+          0.15
+        ],
+        "dd": 0.05,
+        "mdk": 0.15,
+        "ob": "Psicose: 0,05-0,15 mg/kg/dia; transtornos de comportamento e Tourette: 0,05-0,075 mg/kg/dia. Casos graves podem precisar de mais. Número de tomadas: PENDENTE DE VERIFICAÇÃO (aqui 2).",
+        "ap": [
+          {
+            "l": "Solução oral gotas 2 mg/mL",
+            "c": 2,
+            "gt": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "heparina",
+    "n": "Heparina não fracionada",
+    "nao": [
+      "baixo peso"
+    ],
+    "v": [
+      {
+        "via": "EV (bolus inicial)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de heparina sódica (DailyMed setid 7014808d): bolus 75-100 UI/kg; manutenção 25-30 (lactente) e 18-20 UI/kg/h (> 1 ano)",
+        "d": [
+          75,
+          100
+        ],
+        "dd": 75,
+        "un": "UI",
+        "ob": "Bolus de 75 a 100 UI/kg em 10 min. Manutenção: lactentes 25-30 UI/kg/h (< 2 meses ≈ 28 UI/kg/h); > 1 ano 18-20 UI/kg/h; ajustar pelo TTPa. Evitar frascos com álcool benzílico em neonatos.",
+        "ap": [
+          {
+            "l": "Frasco 5.000 UI/mL",
+            "c": 5000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "indometacina",
+    "n": "Indometacina",
+    "v": [
+      {
+        "via": "EV (fechamento do canal arterial, prematuro)",
+        "fixo": "3 doses com intervalo conforme a bula (mg/kg): < 48 h de vida — 0,2 / 0,1 / 0,1; 2-7 dias — 0,2 / 0,2 / 0,2; > 7 dias — 0,2 / 0,25 / 0,25.",
+        "ob": "Suspender as próximas doses se anúria ou oligúria (< 0,6 mL/kg/h) até normalizar a função renal.",
+        "ap": [
+          {
+            "l": "Ampola EV 1 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de indometacina injetável (DailyMed setid ec482425): PCA: esquema por idade na 1ª dose"
+      }
+    ]
+  },
+  {
+    "k": "lacosamida",
+    "n": "Lacosamida",
+    "v": [
+      {
+        "via": "VO (< 50 kg)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de lacosamida solução oral (DailyMed setid ba4e2e28): início 2 mg/kg/dia; alvo 12 (< 30 kg) e 8 mg/kg/dia (30-50 kg)",
+        "d": [
+          2,
+          12
+        ],
+        "dd": 2,
+        "ob": "Início 2 mg/kg/dia em 2 tomadas, aumentando 2 mg/kg/dia por semana até a manutenção: < 30 kg 12 mg/kg/dia; 30-< 50 kg 8 mg/kg/dia. A partir de 50 kg: 100 mg/dia → até 400 mg/dia.",
+        "ap": [
+          {
+            "l": "Xarope 10 mg/mL",
+            "c": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "lamivudina",
+    "n": "Lamivudina",
+    "v": [
+      {
+        "via": "VO (solução, HIV)",
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de lamivudina (DailyMed setid 34c02bcc): solução 5 mg/kg 2x/dia ou 10 mg/kg 1x/dia, máx. 300 mg/dia",
+        "d": [
+          5,
+          5
+        ],
+        "dd": 5,
+        "mxd": 300,
+        "ob": "5 mg/kg 2x/dia ou 10 mg/kg 1x/dia, até 300 mg/dia. Comprimido sulcado 150 mg por peso: 14-< 20 kg 150 mg/dia; 20-< 25 kg 225 mg/dia; ≥ 25 kg 300 mg/dia.",
+        "ap": [
+          {
+            "l": "Solução oral 10 mg/mL",
+            "c": 10
+          },
+          {
+            "l": "Comprimido 150 mg",
+            "mg": 150,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "lisdexanfetamina",
+    "n": "Lisdexanfetamina",
+    "v": [
+      {
+        "via": "VO (TDAH, ≥ 6 anos)",
+        "fixo": "Início 30 mg 1x/dia pela manhã; aumentar 10 a 20 mg por semana. Dose usual 30-70 mg/dia; máximo 70 mg/dia.",
+        "ob": "Dose fixa.",
+        "ap": [
+          {
+            "l": "Cápsula 30 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de lisdexanfetamina (DailyMed setid efbde0f6): ≥ 6 anos 30 mg/dia, até 70 mg/dia"
+      }
+    ]
+  },
+  {
+    "k": "carbonato de litio",
+    "n": "Carbonato de lítio",
+    "v": [
+      {
+        "via": "VO (bipolar, ≥ 7 anos)",
+        "fixo": "Acima de 30 kg: 300 mg 3x/dia, aumentando 300 mg a cada 3 dias. 20-30 kg: 300 mg 2x/dia, aumentando 300 mg por semana. Alvo: lítio sérico 0,8-1,2 mEq/L (agudo) e 0,8-1,0 (manutenção).",
+        "ob": "Ajustar pelo nível sérico de lítio.",
+        "ap": [
+          {
+            "l": "Comprimido 300 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de carbonato de lítio (DailyMed setid b839ff4b): ≥ 7 anos: > 30 kg 300 mg 3x/dia; 20-30 kg 300 mg 2x/dia"
+      }
+    ]
+  },
+  {
+    "k": "mefloquina",
+    "n": "Mefloquina",
+    "v": [
+      {
+        "via": "VO (profilaxia da malária)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de mefloquina (DailyMed setid 09716a24): profilaxia ≈ 5 mg/kg/semana; > 45 kg 250 mg; tratamento 20-25 mg/kg",
+        "d": [
+          5,
+          5
+        ],
+        "dd": 5,
+        "mx": 250,
+        "ob": "≈ 5 mg/kg 1x por semana; acima de 45 kg, 1 comprimido de 250 mg/semana. Tratamento (P. falciparum): 20 a 25 mg/kg (ver bula).",
+        "ap": [
+          {
+            "l": "Comprimido 250 mg",
+            "mg": 250,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "meloxicam",
+    "n": "Meloxicam",
+    "v": [
+      {
+        "via": "VO (artrite idiopática juvenil)",
+        "fixo": "Comprimido: 7,5 mg 1x/dia em crianças com 60 kg ou mais. (Nos estudos, 0,125 mg/kg/dia até 7,5 mg.)",
+        "ob": "Para crianças menores, usar formulação líquida com dose por kg (não disponível na apresentação cadastrada).",
+        "ap": [
+          {
+            "l": "Comprimido 7,5 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de meloxicam (DailyMed setid 20ec4646): AIJ ≥ 60 kg 7,5 mg 1x/dia"
+      }
+    ]
+  },
+  {
+    "k": "metformina",
+    "n": "Metformina",
+    "nao": [
+      "liberacao prolongada"
+    ],
+    "v": [
+      {
+        "via": "VO (DM2, ≥ 10 anos)",
+        "fixo": "Início 500 mg 2x/dia com as refeições; ajustes e dose máxima pediátrica: PENDENTE DE VERIFICAÇÃO.",
+        "ob": "Dose fixa inicial.",
+        "ap": [
+          {
+            "l": "Comprimido 500 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de metformina (DailyMed setid 0ff1ba75): ≥ 10 anos início 500 mg 2x/dia"
+      }
+    ]
+  },
+  {
+    "k": "metilprednisolona",
+    "n": "Metilprednisolona (succinato)",
+    "v": [
+      {
+        "via": "EV/IM (asma grave, NHLBI)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Solu-Medrol (DailyMed setid ea2f9b6f): NHLBI 1-2 mg/kg/dia; faixa 0,11-1,6 mg/kg/dia; pulso 30 mg/kg",
+        "d": [
+          1,
+          2
+        ],
+        "dd": 1,
+        "ob": "Asma não controlada: 1 a 2 mg/kg/dia em dose única ou dividida. Faixa inicial geral: 0,11-1,6 mg/kg/dia em 3-4 doses; não usar menos de 0,5 mg/kg/24 h. Pulsoterapia: 30 mg/kg EV em ≥ 30 min. Teto diário em mg: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Frasco 40 mg (concentração após reconstituir: conforme a bula; informe abaixo)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "miltefosina",
+    "n": "Miltefosina",
+    "v": [
+      {
+        "via": "VO (leishmaniose)",
+        "fixo": "30 a 44 kg: 50 mg 2x/dia; 45 kg ou mais: 50 mg 3x/dia — por 28 dias, com refeições.",
+        "ob": "Dose fixa por peso.",
+        "ap": [
+          {
+            "l": "Cápsula 50 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Impavido (DailyMed setid 57c515c8): 30-44 kg 50 mg 2x/dia; ≥ 45 kg 50 mg 3x/dia, 28 dias"
+      }
+    ]
+  },
+  {
+    "k": "nevirapina",
+    "n": "Nevirapina",
+    "v": [
+      {
+        "via": "VO (HIV, ≥ 15 dias)",
+        "fixo": "150 mg/m² 1x/dia por 14 dias (introdução), depois 150 mg/m² 2x/dia. Dose total até 400 mg/dia.",
+        "ob": "Não aumentar se houver exantema na introdução. Calcular a superfície corporal (Mosteller) na aba Calculadoras.",
+        "ap": [
+          {
+            "l": "Comprimido 200 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de nevirapina (DailyMed setid 5f6c3eed): 150 mg/m² 1x/dia 14 dias, depois 2x/dia; máx. 400 mg/dia"
+      }
+    ]
+  },
+  {
+    "k": "nifurtimox",
+    "n": "Nifurtimox",
+    "v": [
+      {
+        "via": "VO (Chagas, < 41 kg)",
+        "b": "dia",
+        "f": 3,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Lampit (DailyMed setid 90d09714): < 41 kg 10-20 mg/kg/dia em 3 tomadas, 60 dias",
+        "d": [
+          10,
+          20
+        ],
+        "dd": 10,
+        "mdk": 20,
+        "ob": "10 a 20 mg/kg/dia em 3 tomadas com alimento, por 60 dias (RN a termo ≥ 2,5 kg inclusive).",
+        "ap": [
+          {
+            "l": "Comprimido 30 mg",
+            "mg": 30,
+            "u": "comprimido(s)"
+          },
+          {
+            "l": "Comprimido 120 mg",
+            "mg": 120,
+            "u": "comprimido(s)"
+          }
+        ]
+      },
+      {
+        "via": "VO (Chagas, ≥ 41 kg)",
+        "b": "dia",
+        "f": 3,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Lampit (DailyMed setid 90d09714): ≥ 41 kg 8-10 mg/kg/dia em 3 tomadas, 60 dias",
+        "d": [
+          8,
+          10
+        ],
+        "dd": 8,
+        "mdk": 10,
+        "ob": "8 a 10 mg/kg/dia em 3 tomadas com alimento, por 60 dias.",
+        "ap": [
+          {
+            "l": "Comprimido 120 mg",
+            "mg": 120,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "nitroprussiato",
+    "n": "Nitroprussiato de sódio",
+    "v": [
+      {
+        "via": "EV (infusão contínua)",
+        "fixo": "Dose usual 0,5 a 10 mcg/kg/min; a dose máxima não deve durar mais de 10 min. Acima de 2 mcg/kg/min aumenta o risco de intoxicação por cianeto.",
+        "ob": "Use a calculadora de bomba de infusão (mcg/kg/min) da aba Calculadoras. Monitorar PA continuamente.",
+        "ap": [
+          {
+            "l": "Frasco-ampola 50 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de nitroprussiato de sódio (DailyMed setid 820eadcb): 0,5-10 mcg/kg/min; cianeto > 2 mcg/kg/min"
+      }
+    ]
+  },
+  {
+    "k": "olanzapina",
+    "n": "Olanzapina",
+    "nao": [
+      "pamoato"
+    ],
+    "v": [
+      {
+        "via": "VO (adolescentes 13 a 17 anos)",
+        "fixo": "Esquizofrenia e mania bipolar: início 2,5 a 5 mg 1x/dia; alvo 10 mg/dia.",
+        "ob": "Dose fixa.",
+        "ap": [
+          {
+            "l": "Comprimido 2,5 e 5 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de olanzapina (DailyMed setid 2cb1bebe): adolescentes início 2,5-5 mg, alvo 10 mg/dia"
+      }
+    ]
+  },
+  {
+    "k": "palonossetrona",
+    "n": "Palonossetrona",
+    "v": [
+      {
+        "via": "EV (quimioterapia, criança)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de palonossetrona (DailyMed setid bb2be46a): pediatria 20 mcg/kg, máx. 1,5 mg",
+        "d": [
+          20,
+          20
+        ],
+        "dd": 20,
+        "un": "mcg",
+        "mx": 1500,
+        "ob": "20 mcg/kg (máx. 1,5 mg) em infusão, 30 min antes da quimioterapia.",
+        "ap": [
+          {
+            "l": "Frasco 0,25 mg (concentração: conforme a bula; informe abaixo)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "perampanel",
+    "n": "Perampanel",
+    "v": [
+      {
+        "via": "VO (epilepsia)",
+        "fixo": "Crises focais: início 2 mg à noite, subir 2 mg por semana; manutenção 8-12 mg/dia. Tônico-clônica generalizada (≥ 12 anos): início 2 mg. Com indutores enzimáticos (≥ 4 anos): início 4 mg.",
+        "ob": "Dose fixa; ajuste semanal.",
+        "ap": [
+          {
+            "l": "Comprimido 2 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Fycompa (DailyMed setid 71cf3309): início 2 mg (4 mg com indutores); manutenção 8-12 mg"
+      }
+    ]
+  },
+  {
+    "k": "pirimetamina",
+    "n": "Pirimetamina",
+    "v": [
+      {
+        "via": "VO (toxoplasmose, criança)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de pirimetamina (DailyMed setid 2c57a992): pediatria 1 mg/kg/dia em 2 doses",
+        "d": [
+          1,
+          1
+        ],
+        "dd": 1,
+        "ob": "1 mg/kg/dia dividido em 2 doses iguais. Duração e teto: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Comprimido 25 mg",
+            "mg": 25,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "praziquantel",
+    "n": "Praziquantel",
+    "v": [
+      {
+        "via": "VO (esquistossomose)",
+        "b": "dose",
+        "f": 3,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Biltricide (DailyMed setid 34ce1cdd): esquistossomose 20 mg/kg 3x/dia; clonorquíase 25 mg/kg 3x/dia, 1 dia",
+        "d": [
+          20,
+          25
+        ],
+        "dd": 20,
+        "ob": "Esquistossomose: 20 mg/kg 3x no mesmo dia (intervalo de 4-6 h). Clonorquíase/opistorquíase: 25 mg/kg 3x no mesmo dia. Idade mínima: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Comprimido 600 mg",
+            "mg": 600,
+            "u": "comprimido(s)"
+          },
+          {
+            "l": "Comprimido 150 mg",
+            "mg": 150,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "propofol",
+    "n": "Propofol",
+    "v": [
+      {
+        "via": "EV (indução, 3 a 16 anos)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de propofol (DailyMed setid 76ae0147): 3-16 anos 2,5-3,5 mg/kg na indução",
+        "d": [
+          2.5,
+          3.5
+        ],
+        "dd": 2.5,
+        "ob": "ASA I-II: 2,5 a 3,5 mg/kg para indução. Só com monitorização e via aérea. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Emulsão 10 mg/mL",
+            "c": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "raltegravir",
+    "n": "Raltegravir",
+    "v": [
+      {
+        "via": "VO (HIV)",
+        "fixo": "≥ 25 kg: 400 mg 2x/dia (comprimido revestido). Comprimido mastigável (≈ 6 mg/kg/dose 2x/dia): 25-< 28 kg 150 mg; 28-< 40 kg 200 mg; ≥ 40 kg 300 mg — 2x/dia. ≥ 40 kg virgem/suprimido: também 1.200 mg 1x/dia.",
+        "ob": "Formulações não são intercambiáveis mg a mg.",
+        "ap": [
+          {
+            "l": "Comprimido 400 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Isentress (DailyMed setid 89a5ec53): tabelas pediátricas por peso e formulação"
+      }
+    ]
+  },
+  {
+    "k": "risperidona",
+    "n": "Risperidona",
+    "nao": [
+      "acao prolongada"
+    ],
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "Irritabilidade no autismo: início 0,25 mg/dia (< 20 kg) ou 0,5 mg/dia (≥ 20 kg). Mania bipolar (10-17 anos): início 0,5 mg, alvo 1-2,5 mg/dia. Esquizofrenia (13-17 anos): início 0,5 mg, alvo 3 mg/dia (faixa 1-6 mg).",
+        "ob": "Dose fixa por idade/peso.",
+        "ap": [
+          {
+            "l": "Solução oral 1 mg/mL"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de risperidona (DailyMed setid 07d43bf6): autismo 0,25/0,5 mg; bipolar 0,5→1-2,5 mg; esquizofrenia 0,5→3 mg"
+      }
+    ]
+  },
+  {
+    "k": "rosuvastatina",
+    "n": "Rosuvastatina",
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "Hipercolesterolemia familiar heterozigótica: 8-< 10 anos 5-10 mg/dia; ≥ 10 anos 5-20 mg/dia. Homozigótica (≥ 7 anos): 20 mg/dia.",
+        "ob": "Dose fixa por idade.",
+        "ap": [
+          {
+            "l": "Comprimido 5 e 10 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de rosuvastatina (DailyMed setid 02797697): HeFH 5-10 mg (8-10 anos), 5-20 mg (≥ 10 anos); HoFH 20 mg"
+      }
+    ]
+  },
+  {
+    "k": "rufinamida",
+    "n": "Rufinamida",
+    "v": [
+      {
+        "via": "VO (Lennox-Gastaut, ≥ 1 ano)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de rufinamida (DailyMed setid e2ba061a): ≥ 1 ano 10 → 45 mg/kg/dia, máx. 3.200 mg/dia",
+        "d": [
+          10,
+          45
+        ],
+        "dd": 10,
+        "mdk": 45,
+        "mxd": 3200,
+        "ob": "Início 10 mg/kg/dia em 2 tomadas com alimento; subir ≈ 10 mg/kg a cada 2 dias até 45 mg/kg/dia (máx. 3.200 mg/dia). Com valproato: começar abaixo de 10 mg/kg/dia.",
+        "ap": [
+          {
+            "l": "Comprimido 100 mg",
+            "mg": 100,
+            "u": "comprimido(s)"
+          },
+          {
+            "l": "Comprimido 200 mg",
+            "mg": 200,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "sapropterina",
+    "n": "Sapropterina",
+    "v": [
+      {
+        "via": "VO (fenilcetonúria)",
+        "b": "dia",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Kuvan (DailyMed setid af38711e): início 10 mg/kg (1 mês-6 anos) ou 10-20 mg/kg (≥ 7 anos); faixa 5-20",
+        "d": [
+          5,
+          20
+        ],
+        "dd": 10,
+        "mdk": 20,
+        "ob": "Início: 1 mês-6 anos 10 mg/kg 1x/dia; ≥ 7 anos 10-20 mg/kg 1x/dia. Ajuste na faixa de 5-20 mg/kg/dia pela fenilalanina sérica.",
+        "ap": [
+          {
+            "l": "Comprimido solúvel 100 mg",
+            "mg": 100,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "sinvastatina",
+    "n": "Sinvastatina",
+    "v": [
+      {
+        "via": "VO (≥ 10 anos)",
+        "fixo": "Hipercolesterolemia familiar heterozigótica: 10 a 40 mg 1x/dia (doses acima de 40 mg não estudadas em crianças).",
+        "ob": "Dose fixa.",
+        "ap": [
+          {
+            "l": "Comprimido 10 e 20 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de sinvastatina (DailyMed setid faa81817): ≥ 10 anos HeFH 10-40 mg/dia"
+      }
+    ]
+  },
+  {
+    "k": "succinilcolina",
+    "n": "Succinilcolina (Suxametônio)",
+    "v": [
+      {
+        "via": "EV (lactente e criança pequena)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de succinilcolina (DailyMed setid 7d0f0431): lactentes e crianças pequenas 2 mg/kg EV",
+        "d": [
+          2,
+          2
+        ],
+        "dd": 2,
+        "ob": "Intubação de emergência. Risco de hipercalemia e bradicardia (considerar atropina). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Frasco 100 mg (concentração após diluir: informe abaixo)"
+          }
+        ]
+      },
+      {
+        "via": "EV (criança maior e adolescente)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de succinilcolina (DailyMed setid 7d0f0431): crianças maiores e adolescentes 1 mg/kg EV",
+        "d": [
+          1,
+          1
+        ],
+        "dd": 1,
+        "ob": "Intubação de emergência. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Frasco 100 mg (concentração após diluir: informe abaixo)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "sugamadex",
+    "n": "Sugamadex",
+    "v": [
+      {
+        "via": "EV (reversão de rocurônio/vecurônio)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de sugamadex (DailyMed setid 607fb53a): 2 ou 4 mg/kg conforme o bloqueio; 16 mg/kg imediato; diluição pediátrica 10 mg/mL",
+        "d": [
+          2,
+          4
+        ],
+        "dd": 2,
+        "ob": "2 mg/kg se reapareceu a 2ª resposta ao TOF; 4 mg/kg se 1-2 respostas pós-tetânicas sem TOF. Reversão imediata após 1,2 mg/kg de rocurônio: 16 mg/kg. Em pediatria pode-se diluir a 10 mg/mL para precisão. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Frasco 100 mg/mL (200 mg/2 mL)",
+            "c": 100
+          },
+          {
+            "l": "Diluído a 10 mg/mL",
+            "c": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "sulfassalazina",
+    "n": "Sulfassalazina",
+    "v": [
+      {
+        "via": "VO (retocolite, ≥ 6 anos)",
+        "b": "dia",
+        "f": 4,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de sulfassalazina (DailyMed setid 3254432e): ≥ 6 anos 40-60 mg/kg/dia (ataque), 30 mg/kg/dia (manutenção)",
+        "d": [
+          30,
+          60
+        ],
+        "dd": 40,
+        "ob": "Ataque: 40 a 60 mg/kg/dia divididos em 3 a 6 doses. Manutenção: 30 mg/kg/dia em 4 doses. Teto em mg: PENDENTE DE VERIFICAÇÃO.",
+        "ap": [
+          {
+            "l": "Comprimido 500 mg",
+            "mg": 500,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "voriconazol",
+    "n": "Voriconazol",
+    "v": [
+      {
+        "via": "VO (2 a < 12 anos)",
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de voriconazol suspensão (DailyMed setid 2b262849): pediatria VO 9 mg/kg 12/12 h, máx. 350 mg",
+        "d": [
+          9,
+          9
+        ],
+        "dd": 9,
+        "mx": 350,
+        "ob": "Aspergilose/candidíase invasiva: 9 mg/kg 12/12 h (máx. 350 mg por dose); suspensão 0,225 mL/kg. Começar pela via EV. Esofagite por Candida: mesma dose oral.",
+        "ap": [
+          {
+            "l": "Comprimido 50 mg",
+            "mg": 50,
+            "u": "comprimido(s)"
+          }
+        ]
+      },
+      {
+        "via": "EV (2 a < 12 anos, ataque nas primeiras 24 h)",
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de voriconazol (DailyMed setid 2b262849): pediatria EV 9 mg/kg 12/12 h nas 24 h, depois 8 mg/kg",
+        "d": [
+          9,
+          9
+        ],
+        "dd": 9,
+        "ob": "Ataque: 9 mg/kg 12/12 h nas primeiras 24 h; depois 8 mg/kg 12/12 h (mude a dose para 8). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Frasco 200 mg (concentração após reconstituir: informe abaixo)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "zidovudina",
+    "n": "Zidovudina (AZT)",
+    "v": [
+      {
+        "via": "VO (HIV, por peso)",
+        "fixo": "4-< 9 kg: 24 mg/kg/dia (12 mg/kg 2x/dia ou 8 mg/kg 3x/dia); 9-< 30 kg: 18 mg/kg/dia (9 mg/kg 2x/dia ou 6 mg/kg 3x/dia); ≥ 30 kg: 600 mg/dia (300 mg 2x/dia). Alternativa por superfície corporal (ver bula).",
+        "ob": "Transmissão vertical (parto): 2 mg/kg EV na mãe em 1 h, depois 1 mg/kg/h até o clampeamento do cordão.",
+        "ap": [
+          {
+            "l": "Solução oral 10 mg/mL"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Retrovir (DailyMed setid 6df09f15): tabela pediátrica por peso; esquema no parto"
+      }
+    ]
+  },
+  {
+    "k": "baloxavir marboxila",
+    "n": "Baloxavir marboxila",
+    "v": [
+      {
+        "via": "VO (influenza, ≥ 5 anos)",
+        "fixo": "Dose única: 20 a < 80 kg — 40 mg; 80 kg ou mais — 80 mg. Suspensão oral (frasco): < 20 kg — 2 mg/kg; 20 a < 80 kg — 40 mg (20 mL).",
+        "ob": "Dose única, o mais cedo possível após o início dos sintomas.",
+        "ap": [
+          {
+            "l": "Comprimido 20 e 40 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Xofluza (DailyMed setid b58b2899): ≥ 5 anos: 20-< 80 kg 40 mg; ≥ 80 kg 80 mg; suspensão < 20 kg 2 mg/kg"
+      }
+    ]
+  },
+  {
+    "k": "beractanto",
+    "n": "Beractanto",
+    "v": [
+      {
+        "via": "Intratraqueal (prematuro com SDR)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Survanta (DailyMed setid 7ef9e3a5): 100 mg/kg (4 mL/kg), até 4 doses, ≥ 6 h, até 48 h de vida",
+        "d": [
+          100,
+          100
+        ],
+        "dd": 100,
+        "un": "mg (fosfolipídios)",
+        "ob": "100 mg de fosfolipídios/kg de peso ao nascer (4 mL/kg) por dose; até 4 doses, com intervalo de pelo menos 6 h, nas primeiras 48 h de vida.",
+        "ap": [
+          {
+            "l": "Suspensão 25 mg/mL",
+            "c": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "poractanto alfa",
+    "n": "Poractanto alfa",
+    "v": [
+      {
+        "via": "Intratraqueal (prematuro com SDR)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Curosurf (DailyMed setid 99bef307): inicial 2,5 mL/kg; repetir 1,25 mL/kg até 2x; total máx. 5 mL/kg",
+        "d": [
+          200,
+          200
+        ],
+        "dd": 200,
+        "un": "mg (fosfolipídios)",
+        "mdk": 400,
+        "ob": "Dose inicial 2,5 mL/kg de peso ao nascer (200 mg/kg). Até 2 doses adicionais de 1,25 mL/kg (100 mg/kg) a cada ≈ 12 h. Total máximo 5 mL/kg (400 mg/kg).",
+        "ap": [
+          {
+            "l": "Suspensão 80 mg/mL",
+            "c": 80
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "efavirenz",
+    "n": "Efavirenz",
+    "v": [
+      {
+        "via": "VO (HIV, ≥ 3 anos e ≥ 10 kg)",
+        "fixo": "1x/dia por peso: 10-< 15 kg 200 mg; 15-< 20 kg 250 mg; 20-< 25 kg 300 mg; 25-< 32,5 kg 350 mg; 32,5-< 40 kg 400 mg; ≥ 40 kg 600 mg.",
+        "ob": "Com rifampicina e ≥ 50 kg: 800 mg/dia.",
+        "ap": [
+          {
+            "l": "Comprimido 600 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Sustiva (DailyMed setid 04b5c345): tabela pediátrica por peso; > 40 kg 600 mg"
+      }
+    ]
+  },
+  {
+    "k": "hidroxicloroquina",
+    "n": "Hidroxicloroquina (sulfato)",
+    "v": [
+      {
+        "via": "VO (malária, profilaxia, ≥ 31 kg)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Plaquenil (DailyMed setid 34496b43): ≥ 31 kg profilaxia 6,5 mg/kg até 400 mg/semana; tratamento 13 mg/kg e 6,5 mg/kg",
+        "d": [
+          6.5,
+          6.5
+        ],
+        "dd": 6.5,
+        "mx": 400,
+        "ob": "Profilaxia: 6,5 mg/kg (até 400 mg) 1x por semana, começando 2 semanas antes da viagem e mantendo 4 semanas após. Tratamento (≥ 31 kg): 13 mg/kg (até 800 mg), depois 6,5 mg/kg (até 400 mg) com 6, 24 e 48 h. Acima de 5 mg/kg/dia em uso crônico aumenta o risco de retinopatia.",
+        "ap": [
+          {
+            "l": "Comprimido 200 mg",
+            "mg": 200,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "lansoprazol",
+    "n": "Lansoprazol",
+    "v": [
+      {
+        "via": "VO (DRGE)",
+        "fixo": "1 a 11 anos (DRGE e esofagite erosiva, até 12 semanas): ≤ 30 kg 15 mg 1x/dia; > 30 kg 30 mg 1x/dia. 12 a 17 anos: DRGE não erosiva 15 mg 1x/dia (até 8 semanas); esofagite erosiva 30 mg 1x/dia.",
+        "ob": "Dose fixa por peso/idade.",
+        "ap": [
+          {
+            "l": "Cápsula 15 e 30 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Prevacid (DailyMed setid 71ba78cb): 1-11 anos ≤ 30 kg 15 mg, > 30 kg 30 mg; 12-17 anos 15 ou 30 mg"
+      }
+    ]
+  },
+  {
+    "k": "losartana",
+    "n": "Losartana potássica",
+    "v": [
+      {
+        "via": "VO (hipertensão, criança)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Cozaar (DailyMed setid 9949448f): início 0,7 mg/kg (até 50 mg); > 1,4 mg/kg ou 100 mg não estudados",
+        "d": [
+          0.7,
+          1.4
+        ],
+        "dd": 0.7,
+        "mx": 100,
+        "ob": "Início 0,7 mg/kg 1x/dia (até 50 mg); ajustar pela PA. Doses acima de 1,4 mg/kg (ou 100 mg) por dia não foram estudadas em crianças.",
+        "ap": [
+          {
+            "l": "Comprimido 50 mg",
+            "mg": 50,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "naproxeno",
+    "n": "Naproxeno",
+    "nao": [
+      "sodico"
+    ],
+    "v": [
+      {
+        "via": "VO (artrite idiopática juvenil, > 2 anos)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de naproxeno (DailyMed setid 307aa67f): AIJ ≈ 10 mg/kg/dia em 2 tomadas; máx. 15 mg/kg/dia",
+        "d": [
+          10,
+          10
+        ],
+        "dd": 10,
+        "mdk": 15,
+        "ob": "≈ 10 mg/kg/dia em 2 tomadas. Em > 2 anos, doses únicas de 2,5-5 mg/kg (suspensão), sem passar de 15 mg/kg/dia.",
+        "ap": [
+          {
+            "l": "Comprimido 250 mg",
+            "mg": 250,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "posaconazol",
+    "n": "Posaconazol",
+    "v": [
+      {
+        "via": "EV (profilaxia, ≥ 2 anos e ≥ 10 kg)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Noxafil (DailyMed setid b073b082): EV ≥ 10 kg 6 mg/kg (máx. 300 mg) 2x no dia 1, depois 1x/dia",
+        "d": [
+          6,
+          6
+        ],
+        "dd": 6,
+        "mx": 300,
+        "ob": "Ataque: 6 mg/kg (até 300 mg) 2x no 1º dia; manutenção 6 mg/kg (até 300 mg) 1x/dia a partir do 2º dia. Comprimido de liberação retardada só acima de 40 kg (300 mg 2x no 1º dia, depois 1x/dia).",
+        "ap": [
+          {
+            "l": "Frasco EV 300 mg (concentração após diluir: informe abaixo)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "pregabalina",
+    "n": "Pregabalina",
+    "v": [
+      {
+        "via": "VO (crises focais, ≥ 30 kg)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Lyrica (DailyMed setid 60185c88): ≥ 30 kg 2,5 → 10 mg/kg/dia (máx. 600 mg)",
+        "d": [
+          2.5,
+          10
+        ],
+        "dd": 2.5,
+        "mdk": 10,
+        "mxd": 600,
+        "ob": "Início 2,5 mg/kg/dia; máximo 10 mg/kg/dia (até 600 mg), em 2 ou 3 tomadas.",
+        "ap": [
+          {
+            "l": "Cápsula 50 mg",
+            "mg": 50,
+            "u": "cápsula(s)"
+          },
+          {
+            "l": "Cápsula 75 mg",
+            "mg": 75,
+            "u": "cápsula(s)"
+          }
+        ]
+      },
+      {
+        "via": "VO (crises focais, < 30 kg, ≥ 1 mês)",
+        "b": "dia",
+        "f": 3,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Lyrica (DailyMed setid 60185c88): < 30 kg 3,5 → 14 mg/kg/dia",
+        "d": [
+          3.5,
+          14
+        ],
+        "dd": 3.5,
+        "mdk": 14,
+        "ob": "Início 3,5 mg/kg/dia; máximo 14 mg/kg/dia. 1 mês a < 4 anos: 3 tomadas/dia; ≥ 4 anos: 2 ou 3 tomadas.",
+        "ap": [
+          {
+            "l": "Cápsula 50 mg",
+            "mg": 50,
+            "u": "cápsula(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "quetiapina",
+    "n": "Quetiapina",
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "Esquizofrenia (13-17 anos): dia 1 25 mg 2x/dia, aumentando até 400-800 mg/dia (máx. 800 mg/dia). Mania bipolar (10-17 anos, monoterapia): dia 1 25 mg 2x/dia, com aumento progressivo (ver bula).",
+        "ob": "Dose fixa com escalonamento.",
+        "ap": [
+          {
+            "l": "Comprimido 25 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Seroquel (DailyMed setid 8ae62aaf): adolescentes 13-17 anos esquizofrenia 400-800 mg/dia; bipolar 10-17 anos início 25 mg 2x/dia"
+      }
+    ]
+  },
+  {
+    "k": "tenofovir (disoproxila)",
+    "n": "Tenofovir (disoproxila)",
+    "v": [
+      {
+        "via": "VO (≥ 12 anos e ≥ 35 kg)",
+        "fixo": "300 mg 1x/dia, com ou sem alimento (HIV-1 ou hepatite B crônica).",
+        "ob": "Abaixo de 35 kg o rótulo traz outras formulações (pó oral).",
+        "ap": [
+          {
+            "l": "Comprimido 300 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Viread (DailyMed setid 1fdae465): ≥ 12 anos e ≥ 35 kg 300 mg 1x/dia"
+      }
+    ]
+  },
+  {
+    "k": "valsartana",
+    "n": "Valsartana",
+    "v": [
+      {
+        "via": "VO (hipertensão, 1 a 16 anos)",
+        "b": "dose",
+        "f": 1,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Diovan (DailyMed setid 5ddba454): 1-16 anos início 1 mg/kg (até 40 mg), até 4 mg/kg (máx. 160 mg)",
+        "d": [
+          1,
+          4
+        ],
+        "dd": 1,
+        "mx": 160,
+        "ob": "Início 1 mg/kg 1x/dia (até 40 mg); em casos selecionados 2 mg/kg. Ajustar pela PA até 4 mg/kg 1x/dia (máx. 160 mg/dia). De 1 a 5 anos, preferir a suspensão oral.",
+        "ap": [
+          {
+            "l": "Comprimido 40 mg",
+            "mg": 40,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "vigabatrina",
+    "n": "Vigabatrina",
+    "v": [
+      {
+        "via": "VO (espasmos infantis)",
+        "b": "dia",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Sabril (DailyMed setid a5d389d2): espasmos infantis 50 → 150 mg/kg/dia em 2 tomadas",
+        "d": [
+          50,
+          150
+        ],
+        "dd": 50,
+        "mdk": 150,
+        "ob": "Início 50 mg/kg/dia (25 mg/kg 2x/dia); aumentar 25-50 mg/kg/dia a cada 3 dias até no máximo 150 mg/kg/dia (75 mg/kg 2x/dia). Alerta de perda visual permanente.",
+        "ap": [
+          {
+            "l": "Sachê 500 mg",
+            "mg": 500,
+            "u": "sachê(s)"
+          }
+        ]
+      },
+      {
+        "via": "VO (crises focais refratárias, 2 a 16 anos)",
+        "fixo": "Dose diária total (em 2 tomadas), início → manutenção: 10-15 kg 350 → 1.050 mg; > 15-20 kg 450 → 1.300 mg; > 20-25 kg 500 → 1.500 mg; > 25-60 kg 500 → 2.000 mg. Acima de 60 kg: dose de adulto.",
+        "ob": "Aumentos semanais conforme a resposta.",
+        "ap": [
+          {
+            "l": "Comprimido 500 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Sabril (DailyMed setid a5d389d2): crises focais 2-16 anos tabela por peso"
+      }
+    ]
+  },
+  {
+    "k": "brivaracetam",
+    "n": "Brivaracetam",
+    "v": [
+      {
+        "via": "VO (≥ 1 mês, 20 a < 50 kg)",
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Briviact (DailyMed setid 3cf2f439): 20-< 50 kg 0,5-2 mg/kg 2x/dia",
+        "d": [
+          0.5,
+          2
+        ],
+        "dd": 0.5,
+        "ob": "Início 0,5-1 mg/kg 2x/dia; manutenção 0,5-2 mg/kg 2x/dia (1-4 mg/kg/dia). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Comprimido 25 mg",
+            "mg": 25,
+            "u": "comprimido(s)"
+          }
+        ]
+      },
+      {
+        "via": "VO (11 a < 20 kg)",
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Briviact (DailyMed setid 3cf2f439): 11-< 20 kg 0,5-2,5 mg/kg 2x/dia",
+        "d": [
+          0.5,
+          2.5
+        ],
+        "dd": 0.5,
+        "ob": "Início 0,5-1,25 mg/kg 2x/dia; manutenção 0,5-2,5 mg/kg 2x/dia (1-5 mg/kg/dia). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Comprimido 10 mg",
+            "mg": 10,
+            "u": "comprimido(s)"
+          }
+        ]
+      },
+      {
+        "via": "VO (< 11 kg)",
+        "b": "dose",
+        "f": 2,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Briviact (DailyMed setid 3cf2f439): < 11 kg 0,75-3 mg/kg 2x/dia",
+        "d": [
+          0.75,
+          3
+        ],
+        "dd": 0.75,
+        "ob": "Início 0,75-1,5 mg/kg 2x/dia; manutenção 0,75-3 mg/kg 2x/dia (1,5-6 mg/kg/dia). Acima de 50 kg: 25-50 mg 2x/dia (manutenção 25-100 mg 2x/dia). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Comprimido 10 mg",
+            "mg": 10,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "aripiprazol",
+    "n": "Aripiprazol",
+    "nao": [
+      "acao prolongada"
+    ],
+    "v": [
+      {
+        "via": "VO",
+        "fixo": "Dose diária (início / recomendada / máxima): esquizofrenia em adolescentes 2 / 10 / 30 mg; mania bipolar pediátrica 2 / 10 / 30 mg; irritabilidade no autismo 2 / 5-10 / 15 mg; Tourette < 50 kg 2 / 5 / 10 mg e ≥ 50 kg 2 / 10 / 20 mg.",
+        "ob": "Metabolizador lento da CYP2D6: metade da dose usual.",
+        "ap": [
+          {
+            "l": "Comprimido 5 e 10 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Abilify (DailyMed setid c040bd1d): tabela de doses pediátricas por indicação"
+      }
+    ]
+  },
+  {
+    "k": "aztreonam",
+    "n": "Aztreonam",
+    "v": [
+      {
+        "via": "EV (criança)",
+        "b": "dose",
+        "f": 3,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Azactam (DailyMed setid 9a105eaf): pediatria 30 mg/kg de 6/6-8/8 h, máx. 120 mg/kg/dia",
+        "d": [
+          30,
+          30
+        ],
+        "dd": 30,
+        "mdk": 120,
+        "ob": "30 mg/kg de 8/8 h (infecções leves a moderadas) ou de 6/6 ou 8/8 h (moderadas a graves); máx. 120 mg/kg/dia.",
+        "ap": [
+          {
+            "l": "Frasco 1 g (concentração após reconstituir: informe abaixo)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "k": "fluoxetina",
+    "n": "Fluoxetina",
+    "nao": [
+      "semanal"
+    ],
+    "v": [
+      {
+        "via": "VO (TOC, criança e adolescente)",
+        "fixo": "Adolescentes e crianças de maior peso: início 10 mg/dia, 20 mg/dia após 2 semanas; faixa 20-60 mg/dia. Crianças de menor peso: início 10 mg/dia; faixa 20-30 mg/dia.",
+        "ob": "Alerta de ideação suicida em crianças e adolescentes.",
+        "ap": [
+          {
+            "l": "Solução oral gotas 20 mg/mL"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de Prozac (DailyMed setid c88f33ed): TOC pediátrico: início 10 mg, faixas 20-60 e 20-30 mg/dia"
+      }
+    ]
+  },
+  {
+    "k": "oxibutinina",
+    "n": "Oxibutinina",
+    "v": [
+      {
+        "via": "VO (> 5 anos)",
+        "fixo": "Xarope 5 mg/5 mL: 5 mg (1 colher de chá) 2x/dia; máximo 5 mg 3x/dia.",
+        "ob": "Dose fixa.",
+        "ap": [
+          {
+            "l": "Comprimido 5 mg"
+          }
+        ],
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de oxibutinina xarope (DailyMed setid fe4ed76b): > 5 anos 5 mg 2x/dia, máx. 5 mg 3x/dia"
+      }
+    ]
+  },
+  {
+    "k": "clorpromazina",
+    "n": "Clorpromazina",
+    "v": [
+      {
+        "via": "VO (problemas graves de comportamento, 6 meses a 12 anos)",
+        "b": "dose",
+        "f": 4,
+        "fonte": "Ref",
+        "rev": "Conferida em 11/2026 com o rótulo FDA de clorpromazina comprimido (DailyMed setid d43718e5): pediatria 6 meses-12 anos VO 1/4 mg/lb (≈ 0,55 mg/kg) de 4/4-6/6 h",
+        "d": [
+          0.55,
+          0.55
+        ],
+        "dd": 0.55,
+        "ob": "1/4 mg por libra (≈ 0,55 mg/kg) VO a cada 4-6 h, se necessário (ex.: criança de 18 kg ≈ 10 mg). Não usar abaixo de 6 meses salvo situação que ameace a vida. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico).",
+        "ap": [
+          {
+            "l": "Comprimido 25 mg",
+            "mg": 25,
+            "u": "comprimido(s)"
+          }
+        ]
+      }
+    ]
   }
 ]

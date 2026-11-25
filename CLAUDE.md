@@ -57,7 +57,7 @@ O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`
 - Não usar agentes (subagentes) sem pedido do autor.
 
 ## Estado atual (18/11/2026)
-- No ar: versão 0.82.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
+- No ar: versão 0.83.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
   busca única em todo o app, acervo ampliado, doses pediátricas conferidas com bulas, política de privacidade.
 - Pendente do autor: revisão clínica (`REVISAO_CLINICA.md`, propostas em `docs/PROPOSTAS_P1.md`), teste num iPhone real.
 - Acervo ampliado (13/11/2026): +149 doenças dos lotes 01–17 revisados (campo `orig`), integradas por `ferramentas/integrar_lote.js`.
@@ -72,5 +72,5 @@ O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`
   valaciclovir) e via EV da cefuroxima. Concentrações após reconstituir só quando o rótulo traz. Lote 05: +3 (linezolida, esomeprazol por
   peso/idade, budesonida nebulização). Lote 06 (lote grande, 18 inclusões): enalapril, acetazolamida,
   griseofulvina, clobazam, pantoprazol EV, ciprofloxacino, difenidramina, levocetirizina, levotiroxina, loperamida, sertralina,
-  anlodipino, fitomenadiona, metilfenidato, fluticasona nasal, digoxina, imipenem-cilastatina e fenitoína oral. PED_DB com 116. Sem fonte pediátrica ainda: morfina, sulfato de magnésio.
+  anlodipino, fitomenadiona, metilfenidato, fluticasona nasal, digoxina, imipenem-cilastatina e fenitoína oral. Lotes 07 (61) e 08 (20), rótulos FDA do DailyMed com setid no campo rev: antirretrovirais, anticonvulsivantes, psiquiatria, bloqueadores neuromusculares, surfactantes, anti-hipertensivos, antiparasitários e outros; teto ausente no rótulo = PENDENTE. PED_DB com 197. Sem fonte pediátrica ainda: morfina, sulfato de magnésio.
 - Contagens: 3.375 doenças (3.226 originais + 149 novas) · 1.856 medicamentos (1.851 originais + 5 novos) · CID-10 com 2.045 categorias e 12.451 subcategorias.

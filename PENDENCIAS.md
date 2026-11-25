@@ -4,14 +4,14 @@ Gerado por `node ferramentas/pendencias.js` a partir de `dados/*.json`. **Não e
 
 Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo = duas linhas). Regra do projeto: **nada é preenchido sem fonte citada** (preferir SBP, Ministério da Saúde/PCDT, bula Anvisa; citar fonte e ano).
 
-**Total: 136 registro(s), 204 trecho(s).**
+**Total: 160 registro(s), 233 trecho(s).**
 
 | Seção | Registros | Trechos |
 |---|---:|---:|
 | Medicamentos | 19 | 27 |
 | Doenças | 109 | 168 |
 | Plantão | 1 | 1 |
-| Calculadora pediátrica | 7 | 8 |
+| Calculadora pediátrica | 31 | 37 |
 
 ## Medicamentos (`dados/seed_meds.json`)
 
@@ -229,10 +229,39 @@ Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo 
 | Registro | Campo | Trecho |
 |---|---|---|
 | Acetazolamida | Observação (calculadora) — via VO (epilepsia, adjuvante) | Dose diária total de 8 a 30 mg/kg, dividida. Cuidado com acidose metabólica, hipopotassemia e cálculo renal. Teto em mg: PENDENTE DE VERIFICAÇÃO. |
+| Adenosina | Observação (calculadora) — via EV (TSV, < 50 kg) | …sh. Sem reversão em 1-2 min: repetir aumentando 0,05-0,1 mg/kg a cada dose, até reverter ou chegar a 0,3 mg/kg por dose. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| Brivaracetam | Observação (calculadora) — via VO (≥ 1 mês, 20 a < 50 kg) | Início 0,5-1 mg/kg 2x/dia; manutenção 0,5-2 mg/kg 2x/dia (1-4 mg/kg/dia). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| Brivaracetam | Observação (calculadora) — via VO (11 a < 20 kg) | Início 0,5-1,25 mg/kg 2x/dia; manutenção 0,5-2,5 mg/kg 2x/dia (1-5 mg/kg/dia). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| Brivaracetam | Observação (calculadora) — via VO (< 11 kg) | …2x/dia; manutenção 0,75-3 mg/kg 2x/dia (1,5-6 mg/kg/dia). Acima de 50 kg: 25-50 mg 2x/dia (manutenção 25-100 mg 2x/dia). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
 | Captopril | al — via VO | Não usar esta calculadora para recém-nascidos: a dose inicial é muito menor (ver ficha). Dose inicial pediátrica: PENDENTE DE VERIFICAÇÃO (a tabela da SBP 2019 diverge do valor usado aqui). Titular com PA, potássio e creatinina. |
+| Cefixima | Observação (calculadora) — via VO (≥ 6 meses) | 8 mg/kg/dia em dose única ou 4 mg/kg de 12/12 h (suspensão). Teto diário: PENDENTE DE VERIFICAÇÃO. |
+| Cefoxitina | Observação (calculadora) — via EV (≥ 3 meses) | 80 a 160 mg/kg/dia divididos em 4 a 6 doses iguais; profilaxia cirúrgica: 30-40 mg/kg por dose nos horários do rótulo. Teto diário: PENDENTE DE VERIFICAÇÃO. |
 | Cetamina | Observação (calculadora) — via IV (indução anestésica) | …2 mg/kg, anestesia de 5-10 min) ou 1 a 2 mg/kg a 0,5 mg/kg/min. A faixa é a do rótulo (sem tabela pediátrica separada). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO. |
 | Cetamina | Observação (calculadora) — via IM (indução anestésica) | …g em geral dá anestesia em 3-4 min, por 12-25 min (rótulo; a bula brasileira do Ketamin cita 9-13 mg/kg IM em crianças). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO. |
+| Ciproeptadina | Observação (calculadora) — via VO (2 a 6 anos) | Dose diária total de ≈ 0,25 mg/kg (ou 8 mg/m²), dividida ao longo do dia (número de tomadas: PENDENTE DE VERIFICAÇÃO). Em adultos não passar de 0,5 mg/kg/dia. |
+| Cisatracúrio | Observação (calculadora) — via EV (intubação, 1 a 23 meses) | Bolus em 5-10 s. Só com via aérea e ventilação garantidas. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| Cisatracúrio | Observação (calculadora) — via EV (intubação, 2 a 12 anos) | Bolus em 5-10 s. Só com via aérea e ventilação garantidas. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
 | Cloridrato de difenidramina | Observação (calculadora) — via EV/IM (exceto prematuro e recém-nascido) | 5 mg/kg em 24 h (ou 150 mg/m²/24 h), divididos; máximo de 300 mg/dia. Número de tomadas: PENDENTE DE VERIFICAÇÃO (aqui 4 por dia). |
+| Cloroquina | Observação (calculadora) — via VO (profilaxia da malária) | 5 mg de cloroquina base por kg, 1x por semana, sempre no mesmo dia. Teto semanal: PENDENTE DE VERIFICAÇÃO. Risco de retinopatia acima de 2,3 mg/kg/dia de fosfato em uso prolongado. |
+| Clorpromazina | Observação (calculadora) — via VO (problemas graves de comportamento, 6 meses a 12 anos) | …cada 4-6 h, se necessário (ex.: criança de 18 kg ≈ 10 mg). Não usar abaixo de 6 meses salvo situação que ameace a vida. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| Dicloxacilina | Observação (calculadora) — via VO (criança) | Leve a moderada: 12,5 mg/kg/dia; grave: 25 mg/kg/dia, divididos de 6/6 h. Adulto: 125 a 250 mg de 6/6 h. Teto: PENDENTE DE VERIFICAÇÃO. |
+| Etomidato | Observação (calculadora) — via EV (indução, > 10 anos) | …,6 mg/kg (usual 0,3 mg/kg) em 30-60 s. Reduz o cortisol (cuidado na sepse). Uso em ≤ 10 anos não estabelecido no rótulo. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| Etossuximida | Observação (calculadora) — via VO (crise de ausência) | A dose ótima para a maioria das crianças é 20 mg/kg/dia (início e aumento graduais conforme a bula; número de tomadas: PENDENTE DE VERIFICAÇÃO). Teto: PENDENTE DE VERIFICAÇÃO. |
+| Etossuximida | Observação (calculadora) — via VO (crise de ausência) | …a para a maioria das crianças é 20 mg/kg/dia (início e aumento graduais conforme a bula; número de tomadas: PENDENTE DE VERIFICAÇÃO). Teto: PENDENTE DE VERIFICAÇÃO. |
 | Fentanil | Observação (calculadora) — via IV (anestesia, 2 a 12 anos) | …a partir de 2 a 3 mcg/kg. Fora da anestesia (analgesia/sedação) e em menores de 2 anos: seguir o protocolo do serviço. Dose máxima em mcg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto pediátrico). |
+| Filgrastima | Observação (calculadora) — via SC/EV | …mcg/kg/dia (subir 5 mcg/kg por ciclo conforme o nadir). Transplante de medula: 10 mcg/kg/dia. Neutropenia congênita: 6 mcg/kg 2x/dia. Teto: PENDENTE DE VERIFICAÇÃO. |
+| Gabapentina | Observação (calculadora) — via VO (epilepsia focal, 3 a 11 anos) | Início 10-15 mg/kg/dia em 3 tomadas, subindo em ≈ 3 dias. Manutenção: 3-4 anos 40 mg/kg/dia; 5-11 anos 25-35 mg/kg/dia, em 3 tomadas. Teto: PENDENTE DE VERIFICAÇÃO. |
+| Granisetrona | Observação (calculadora) — via EV (quimioterapia, 2 a 16 anos) | 10 mcg/kg EV até 30 min antes da quimioterapia, só nos dias de quimio. Teto: PENDENTE DE VERIFICAÇÃO. |
+| Haloperidol | Observação (calculadora) — via VO (criança) | …0,05-0,15 mg/kg/dia; transtornos de comportamento e Tourette: 0,05-0,075 mg/kg/dia. Casos graves podem precisar de mais. Número de tomadas: PENDENTE DE VERIFICAÇÃO (aqui 2). |
+| Metformina | fixo — via VO (DM2, ≥ 10 anos) | Início 500 mg 2x/dia com as refeições; ajustes e dose máxima pediátrica: PENDENTE DE VERIFICAÇÃO. |
+| Metilprednisolona (succinato) | Observação (calculadora) — via EV/IM (asma grave, NHLBI) | …inicial geral: 0,11-1,6 mg/kg/dia em 3-4 doses; não usar menos de 0,5 mg/kg/24 h. Pulsoterapia: 30 mg/kg EV em ≥ 30 min. Teto diário em mg: PENDENTE DE VERIFICAÇÃO. |
 | Midazolam | Observação (calculadora) — via Retal (sedação, > 6 meses) | …de 0,3-0,5 mg/kg com aplicador plástico na seringa (completar com água até 10 mL se o volume for pequeno); não repetir. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (a bula não traz). |
 | Piperacilina + Tazobactam | Observação (calculadora) — via EV (2 a 9 meses) | …e piperacilina + 10 mg de tazobactam) EV em 30 min: de 8/8 h na apendicite/peritonite; de 6/6 h na pneumonia hospitalar. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto nessa faixa). |
+| Pirimetamina | Observação (calculadora) — via VO (toxoplasmose, criança) | 1 mg/kg/dia dividido em 2 doses iguais. Duração e teto: PENDENTE DE VERIFICAÇÃO. |
+| Praziquantel | Observação (calculadora) — via VO (esquistossomose) | Esquistossomose: 20 mg/kg 3x no mesmo dia (intervalo de 4-6 h). Clonorquíase/opistorquíase: 25 mg/kg 3x no mesmo dia. Idade mínima: PENDENTE DE VERIFICAÇÃO. |
+| Propofol | Observação (calculadora) — via EV (indução, 3 a 16 anos) | ASA I-II: 2,5 a 3,5 mg/kg para indução. Só com monitorização e via aérea. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| Succinilcolina (Suxametônio) | Observação (calculadora) — via EV (lactente e criança pequena) | Intubação de emergência. Risco de hipercalemia e bradicardia (considerar atropina). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| Succinilcolina (Suxametônio) | Observação (calculadora) — via EV (criança maior e adolescente) | Intubação de emergência. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| Sugamadex | Observação (calculadora) — via EV (reversão de rocurônio/vecurônio) | …sem TOF. Reversão imediata após 1,2 mg/kg de rocurônio: 16 mg/kg. Em pediatria pode-se diluir a 10 mg/mL para precisão. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| Sulfassalazina | Observação (calculadora) — via VO (retocolite, ≥ 6 anos) | Ataque: 40 a 60 mg/kg/dia divididos em 3 a 6 doses. Manutenção: 30 mg/kg/dia em 4 doses. Teto em mg: PENDENTE DE VERIFICAÇÃO. |
+| Voriconazol | Observação (calculadora) — via EV (2 a < 12 anos, ataque nas primeiras 24 h) | Ataque: 9 mg/kg 12/12 h nas primeiras 24 h; depois 8 mg/kg 12/12 h (mude a dose para 8). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
