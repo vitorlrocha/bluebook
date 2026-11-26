@@ -39,6 +39,8 @@ async function coletar(page, url, nV71, mV71, medsNovos, calcsNovas) {
       if (box) box.remove();
       // calculadoras novas (curadoria/calcs-lote-*): entram no fim da lista de fórmulas
       sb.querySelectorAll('.med-item[data-ref]').forEach((b) => { if (calcsNovas.includes(b.getAttribute('data-ref'))) b.remove(); });
+      // escores novos (curadoria/escores-lote-*): idem, no fim da lista de escores
+      sb.querySelectorAll('.med-item[data-score]').forEach((b) => { if (calcsNovas.includes(b.getAttribute('data-score'))) b.remove(); });
       sb.querySelectorAll('.med-item[data-idx]').forEach((b) => { if (Number(b.getAttribute('data-idx')) >= nV71) b.remove(); });
       // medicamentos novos dos lotes conferidos com bula (curadoria/meds-lote-*): entram no fim da biblioteca
       sb.querySelectorAll('.med-item[data-id]').forEach((b) => { const m = /^local-0-(\d+)-seed$/.exec(b.getAttribute('data-id') || ''); if (m && Number(m[1]) >= mV71) b.remove(); });
@@ -75,8 +77,8 @@ test('buscas produzem a mesma lista que a v71', async ({ page, browserName }, in
   expect(mV71).toBe(1851);
   const medsNovos = require('../dados/seed_meds.json').filter((m) => m.orig).map((m) => m.nome);
   await page.route('**/v71-original.html', (r) => r.fulfill({ path: ORIGINAL, contentType: 'text/html; charset=utf-8' }));
-  // calculadoras novas: as 16 primeiras de dados/calcs.json são as da v71
-  const calcsNovas = require('../dados/calcs.json').slice(16).map((c) => c.id);
+  // calculadoras e escores novos: as 16 primeiras de dados/calcs.json e os 40 primeiros de dados/scores.json são da v71
+  const calcsNovas = require('../dados/calcs.json').slice(16).map((c) => c.id).concat(require('../dados/scores.json').slice(40).map((s) => s.id));
   const antes = await coletar(page, '/v71-original.html', nV71, mV71, medsNovos, calcsNovas);
   const depois = await coletar(page, '/', nV71, mV71, medsNovos, calcsNovas);
   // Lista da aba: idêntica à v71 (fora as mudanças intencionais).

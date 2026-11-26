@@ -70,14 +70,14 @@ for (const cfg of L.VARS) {
     console.log(`INFO  PED_DB: ${mud.length} entrada(s) corrigidas e ${novos.length} nova(s) (${novos.map((e) => e.n).join(', ') || '—'}), todas conferidas com fonte` +
       (semRev.length ? `; SEM registro de conferência: ${semRev.map((e) => e.n).join(', ')}` : '') + (mesmos ? '' : '; lista de medicamentos originais mudou'));
   }
-  // Calculadoras clínicas NOVAS (prioridade 4, curadoria/calcs-lote-*.js): as originais continuam idênticas e na
-  // mesma ordem; as novas só entram no fim e cada uma precisa de fórmula e referência.
-  if (!igual && cfg.v === 'CALCS') {
+  // Calculadoras e escores NOVOS (prioridade 4, curadoria/calcs-lote-*.js e escores-lote-*.js): os originais continuam
+  // idênticos e na mesma ordem; os novos só entram no fim e cada um precisa de referência (e fórmula ou interpretação).
+  if (!igual && (cfg.v === 'CALCS' || cfg.v === 'SCORES')) {
     const va = a.vals[cfg.v].valor, todos = b.vals[cfg.v].valor, novas = todos.slice(va.length);
     let base = true; try { assert.deepStrictEqual(todos.slice(0, va.length), va); } catch (x) { base = false; }
-    const semRef = novas.filter((c) => !c.ref || !c.formula || !c.id);
+    const semRef = novas.filter((c) => !c.ref || !c.id || !(cfg.v === 'CALCS' ? c.formula : c.interp));
     igual = base && !semRef.length;
-    console.log(`INFO  CALCS: ${novas.length} calculadora(s) nova(s) (${novas.map((c) => c.id).join(', ') || '—'})` +
+    console.log(`INFO  ${cfg.v}: ${novas.length} item(ns) novo(s) (${novas.map((c) => c.id).join(', ') || '—'})` +
       (semRef.length ? `; SEM fórmula/referência: ${semRef.map((c) => c.id).join(', ')}` : '') + (base ? '' : '; calculadoras originais mudaram'));
   }
   // Correções clínicas aprovadas pelo autor (revisão de prioridade 1, docs/PROPOSTAS_P1.md, 17/11/2026): só os itens
