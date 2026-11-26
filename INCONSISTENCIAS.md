@@ -6,10 +6,10 @@ Gerado por `node ferramentas/inconsistencias.js` a partir de `dados/*.json`. **N
 
 | Verificação | Itens |
 |---|---:|
-| 1. Calculadora pediátrica: texto × números da mesma ficha | 1 |
-| 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 22 |
-| 3. Associações sem calculadora pediátrica (informativo) | 35 |
-| 4. Plantão × calculadora pediátrica | 6 |
+| 1. Calculadora pediátrica: texto × números da mesma ficha | 0 |
+| 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 17 |
+| 3. Associações sem calculadora pediátrica (informativo) | 34 |
+| 4. Plantão × calculadora pediátrica | 5 |
 | 5. Prescrição das doenças pediátricas × calculadora pediátrica | 9 |
 | 6. Prescrições sem linha "Base:" | 16 |
 | 7. Detalhes (MEDX) sem ficha de mesmo nome | 0 |
@@ -19,9 +19,7 @@ Gerado por `node ferramentas/inconsistencias.js` a partir de `dados/*.json`. **N
 
 O texto de observação (`ob`) cita um máximo diferente do campo numérico usado no cálculo (`mx`/`mxd`), ou a dose padrão está fora da faixa.
 
-| Fármaco | Via | O quê | Texto | Campo |
-|---|---|---|---|---|
-| Hidroxizina | VO | máx. diário | texto: "máx. 50 mg/dia" | campo mxd: 100 mg |
+_Nenhuma._
 
 ## 2. Ficha do medicamento (Pediatria) × calculadora pediátrica
 
@@ -30,12 +28,7 @@ Faixa em mg/kg (mesma base: por dose ou por dia) ou máximo diário diferentes. 
 | Medicamento | Divergência | Ficha (campo Pediatria) | Calculadora (PED_DB) | Prioridade |
 |---|---|---|---|---|
 | Captopril | faixas sem sobreposição | 0,01-0,05 mg/kg/dose | VO 0,3-0,5 mg/kg/dose | alta |
-| Estiripentol | faixas sem sobreposição | 60 mg/kg/dia | VO (Dravet, ≥ 6 meses e ≥ 7 kg) 50 mg/kg/dia | alta |
-| Etossuximida | faixas sem sobreposição | 60 mg/kg/dia | VO (crise de ausência) 20 mg/kg/dia | alta |
-| Felbamato | faixas sem sobreposição | 60 mg/kg/dia | VO (Lennox-Gastaut, 2 a 14 anos) 15-45 mg/kg/dia | alta |
 | Metilprednisolona (succinato) | faixas sem sobreposição | 15-30 mg/kg/dia | EV/IM (asma grave, NHLBI) 1-2 mg/kg/dia | alta |
-| Rufinamida | faixas sem sobreposição | 60 mg/kg/dia | VO (Lennox-Gastaut, ≥ 1 ano) 10-45 mg/kg/dia | alta |
-| Sulfadiazina (oral) | faixas sem sobreposição | 6-8 mg/kg/dia | VO (> 2 meses) 150 mg/kg/dia | alta |
 | Ampicilina | faixa da ficha sai da faixa da calculadora | 100-200 mg/kg/dia; 300-400 mg/kg/dia | EV 50-200 mg/kg/dia | média |
 | Benznidazol | faixa da ficha sai da faixa da calculadora | 5-10 mg/kg/dia | VO (Chagas, 2 a 12 anos) 5-8 mg/kg/dia | média |
 | Cefuroxima | faixa da ficha sai da faixa da calculadora | 30 mg/kg/dia; 75-150 mg/kg/dia | VO 20-30 mg/kg/dia; EV/IM (> 3 meses) 50-100 mg/kg/dia | média |
@@ -81,7 +74,6 @@ Desde a v72 (Etapa 3) uma ficha de associação ("A + B") não usa mais os parâ
 | Efavirenz + Tenofovir + Lamivudina | Efavirenz |
 | Tramadol + Paracetamol | Tramadol |
 | Tramadol + Dexcetoprofeno | Tramadol |
-| Dexametasona + Neomicina + Polimixina B (colírio) | Dexametasona |
 | Nistatina + Óxido de zinco | Nistatina (suspensão oral) |
 | Gentamicina + Betametasona | Gentamicina |
 | Hidrocortisona + Neomicina + Bacitracina | Hidrocortisona (injetável) |
@@ -102,7 +94,6 @@ Dose por kg do protocolo fora da faixa da calculadora, ou máximo por dose difer
 |---|---|---|---|---|
 | Bradicardia e taquiarritmias | Adenosina — 2ª dose (EV rápido + flush SF) | 0,2 mg/kg/dose · máx. 12 mg | EV (TSV, < 50 kg) 0,05-0,1 mg/kg/dose | dose fora da faixa |
 | Crise convulsiva / estado de mal epiléptico | Midazolam (sem acesso venoso) (IM) | 0,2 mg/kg/dose · máx. 10 mg | IM (sedação, 1 a 15 anos) 0,05-0,15 mg/kg/dose · máx. 10 mg | dose fora da faixa |
-| Crise de asma grave | Prednisolona/prednisona (VO) | máx. 40 mg | VO máx. 60 mg | máximo diferente |
 | Sepse e choque séptico | Hidrocortisona (choque refratário a catecolaminas) (EV) | 2 mg/kg/dose · máx. 100 mg | EV/IM 4-8 mg/kg/dose · máx. 250 mg | dose fora da faixa |
 | Intubação em sequência rápida | Rocurônio (EV) | 1 mg/kg/dose · máx. 100 mg | EV (intubação) 0,45-0,6 mg/kg/dose | dose fora da faixa |
 | Intubação em sequência rápida | Succinilcolina (EV) | 1,5 mg/kg/dose · máx. 150 mg | EV (lactente e criança pequena) 2 mg/kg/dose; EV (criança maior e adolescente) 1 mg/kg/dose | dose fora da faixa |

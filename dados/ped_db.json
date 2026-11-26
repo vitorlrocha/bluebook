@@ -183,6 +183,11 @@
         "al": "Aminoglicosídeo: nefro e ototóxico — ajustar pela função renal e dosar nível sérico.",
         "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
       }
+    ],
+    "nao": [
+      "colirio",
+      "pomada",
+      "creme"
     ]
   },
   {
@@ -603,6 +608,11 @@
         "mxd": 4000,
         "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
       }
+    ],
+    "nao": [
+      "gel",
+      "creme",
+      "vaginal"
     ]
   },
   {
@@ -774,6 +784,10 @@
         "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)",
         "mdk": 60
       }
+    ],
+    "nao": [
+      "pomada",
+      "creme"
     ]
   },
   {
@@ -885,7 +899,61 @@
     "n": "Prednisona",
     "v": [
       {
-        "via": "VO",
+        "via": "VO (crise de asma, ≥ 2 anos)",
+        "d": [
+          0.5,
+          2
+        ],
+        "dd": 1,
+        "b": "dose",
+        "f": 1,
+        "mx": 40,
+        "fonte": "Ref",
+        "ob": "1-2 mg/kg/dia 1x/dia por 3-5 dias, máx. 40 mg/dia (GINA 2024). Asma/crupe/alergia: 1-2 mg/kg/dia (máx. 40-60 mg/dia) por 3-5 dias; imunossupressão: individualizar.",
+        "ap": [
+          {
+            "l": "Comprimido 5 mg",
+            "mg": 5,
+            "u": "comprimido"
+          },
+          {
+            "l": "Comprimido 20 mg",
+            "mg": 20,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO.",
+        "al": "Na crise de asma (GINA 2024): máx. 40 mg/dia, por 3 a 5 dias."
+      },
+      {
+        "via": "VO (crise de asma, < 2 anos)",
+        "d": [
+          0.5,
+          2
+        ],
+        "dd": 1,
+        "b": "dose",
+        "f": 1,
+        "mx": 20,
+        "fonte": "Ref",
+        "ob": "1-2 mg/kg/dia 1x/dia por 3-5 dias, máx. 20 mg/dia abaixo de 2 anos (GINA 2024). Asma/crupe/alergia: 1-2 mg/kg/dia (máx. 40-60 mg/dia) por 3-5 dias; imunossupressão: individualizar.",
+        "ap": [
+          {
+            "l": "Comprimido 5 mg",
+            "mg": 5,
+            "u": "comprimido"
+          },
+          {
+            "l": "Comprimido 20 mg",
+            "mg": 20,
+            "u": "comprimido"
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO.",
+        "al": "Na crise de asma (GINA 2024): máx. 40 mg/dia, por 3 a 5 dias."
+      },
+      {
+        "via": "VO (outras indicações)",
         "d": [
           0.5,
           2
@@ -895,7 +963,7 @@
         "f": 1,
         "mx": 60,
         "fonte": "Ref",
-        "ob": "Asma/crupe/alergia: 1-2 mg/kg/dia (máx. 40-60 mg/dia) por 3-5 dias; imunossupressão: individualizar.",
+        "ob": "Asma/crupe/alergia: 1-2 mg/kg/dia (máx. 40-60 mg/dia) por 3-5 dias; imunossupressão: individualizar. Teto de 60 mg da diretriz NHLBI; na asma use as vias acima.",
         "ap": [
           {
             "l": "Comprimido 5 mg",
@@ -918,7 +986,59 @@
     "n": "Prednisolona (solução oral)",
     "v": [
       {
-        "via": "VO",
+        "via": "VO (crise de asma, ≥ 2 anos)",
+        "d": [
+          1,
+          2
+        ],
+        "dd": 1,
+        "b": "dose",
+        "f": 1,
+        "mx": 40,
+        "fonte": "HILF + Ref",
+        "ob": "1-2 mg/kg/dia 1x/dia por 3-5 dias, máx. 40 mg/dia (GINA 2024). HILF: peso ÷ 3 = mL (3 mg/mL) 1x/dia por 5-7 dias (1 mg/kg).",
+        "ap": [
+          {
+            "l": "Solução oral 3 mg/mL",
+            "c": 3,
+            "mxMl": 20
+          },
+          {
+            "l": "Solução oral 1 mg/mL",
+            "c": 1
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO.",
+        "al": "Na crise de asma (GINA 2024): máx. 40 mg/dia, por 3 a 5 dias."
+      },
+      {
+        "via": "VO (crise de asma, < 2 anos)",
+        "d": [
+          1,
+          2
+        ],
+        "dd": 1,
+        "b": "dose",
+        "f": 1,
+        "mx": 20,
+        "fonte": "HILF + Ref",
+        "ob": "1-2 mg/kg/dia 1x/dia por 3-5 dias, máx. 20 mg/dia abaixo de 2 anos (GINA 2024). HILF: peso ÷ 3 = mL (3 mg/mL) 1x/dia por 5-7 dias (1 mg/kg).",
+        "ap": [
+          {
+            "l": "Solução oral 3 mg/mL",
+            "c": 3,
+            "mxMl": 20
+          },
+          {
+            "l": "Solução oral 1 mg/mL",
+            "c": 1
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO.",
+        "al": "Na crise de asma (GINA 2024): máx. 40 mg/dia, por 3 a 5 dias."
+      },
+      {
+        "via": "VO (outras indicações)",
         "d": [
           1,
           2
@@ -928,7 +1048,7 @@
         "f": 1,
         "mx": 60,
         "fonte": "HILF + Ref",
-        "ob": "HILF: peso ÷ 3 = mL (3 mg/mL) 1x/dia por 5-7 dias (1 mg/kg).",
+        "ob": "HILF: peso ÷ 3 = mL (3 mg/mL) 1x/dia por 5-7 dias (1 mg/kg). Teto de 60 mg da diretriz NHLBI; na asma use as vias acima.",
         "ap": [
           {
             "l": "Solução oral 3 mg/mL",
@@ -943,6 +1063,9 @@
         "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)",
         "al": "Na crise de asma (GINA 2024): máx. 40 mg/dia, por 3 a 5 dias."
       }
+    ],
+    "nao": [
+      "colirio"
     ]
   },
   {
@@ -1009,6 +1132,11 @@
         ],
         "rev": "Conferida em 11/2026: teto do cálculo igualado ao do documento de origem (10 mg/dose); SBP Crupe 2017 sem teto definido"
       }
+    ],
+    "nao": [
+      "colirio",
+      "pomada",
+      "creme"
     ]
   },
   {
@@ -1035,6 +1163,10 @@
         ],
         "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
       }
+    ],
+    "nao": [
+      "creme",
+      "pomada"
     ]
   },
   {
@@ -1125,6 +1257,9 @@
         "rev": "Conferida em 11/2026 com o folheto de dexclorfeniramina da SES-SP (Farmácia Dose Certa): doses por idade, contraindicada < 2 anos",
         "fixo": "Xarope 0,4 mg/mL (2 mg/5 mL): 2 a 6 anos 1,25 mL 3x/dia (máx. 3 mg/dia = 7,5 mL); 6 a 12 anos 2,5 mL 3x/dia (máx. 6 mg/dia = 15 mL); > 12 anos 5 mL 3-4x/dia (máx. 12 mg/dia). Contraindicada em < 2 anos."
       }
+    ],
+    "nao": [
+      "creme"
     ]
   },
   {
@@ -2173,6 +2308,10 @@
         "al": "Segurança não estabelecida em crianças < 15 kg (rótulo FDA).",
         "rev": "Conferida em 11/2026: SBP — GPA Parasitoses intestinais: diagnóstico e tratamento; rótulo FDA"
       }
+    ],
+    "nao": [
+      "creme",
+      "locao"
     ]
   },
   {
@@ -2275,6 +2414,11 @@
         ],
         "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
       }
+    ],
+    "nao": [
+      "gel",
+      "creme",
+      "locao"
     ]
   },
   {
@@ -2445,7 +2589,7 @@
     "n": "Hidroxizina",
     "v": [
       {
-        "via": "VO",
+        "via": "VO (< 6 anos)",
         "d": [
           0.66667,
           0.66667
@@ -2453,7 +2597,7 @@
         "b": "dose",
         "f": 3,
         "fonte": "HILF",
-        "ob": "HILF: peso ÷ 3 = mL a cada 8 h (≈ 0,67 mg/kg/dose; 2 mg/kg/dia). Rótulo: prurido/ansiedade < 6 anos máx. 50 mg/dia; ≥ 6 anos 50-100 mg/dia, em doses divididas; sedação 0,6 mg/kg dose única.",
+        "ob": "HILF: peso ÷ 3 = mL a cada 8 h (≈ 0,67 mg/kg/dose; 2 mg/kg/dia). Sedação: 0,6 mg/kg dose única (rótulo). Rótulo: prurido/ansiedade abaixo de 6 anos, máx. 50 mg/dia em doses divididas.",
         "ap": [
           {
             "l": "Solução oral 2 mg/mL (10 mg/5 mL)",
@@ -2461,7 +2605,28 @@
             "mxMl": 10
           }
         ],
-        "rev": "Conferida em 11/2026 com o rótulo FDA do cloridrato de hidroxizina (DailyMed): < 6 anos 50 mg/dia; ≥ 6 anos 50-100 mg/dia",
+        "rev": "Conferida em 11/2026 com o rótulo FDA do cloridrato de hidroxizina (DailyMed): < 6 anos máx. 50 mg/dia; ≥ 6 anos 50-100 mg/dia. Teto separado por idade em 26/11/2026 (revisão P1).",
+        "mxd": 50,
+        "al": "Menores de 6 anos: máximo de 50 mg/dia."
+      },
+      {
+        "via": "VO (≥ 6 anos)",
+        "d": [
+          0.66667,
+          0.66667
+        ],
+        "b": "dose",
+        "f": 3,
+        "fonte": "HILF",
+        "ob": "HILF: peso ÷ 3 = mL a cada 8 h (≈ 0,67 mg/kg/dose; 2 mg/kg/dia). Sedação: 0,6 mg/kg dose única (rótulo). Rótulo: prurido/ansiedade a partir de 6 anos, 50-100 mg/dia em doses divididas.",
+        "ap": [
+          {
+            "l": "Solução oral 2 mg/mL (10 mg/5 mL)",
+            "c": 2,
+            "mxMl": 10
+          }
+        ],
+        "rev": "Conferida em 11/2026 com o rótulo FDA do cloridrato de hidroxizina (DailyMed): < 6 anos máx. 50 mg/dia; ≥ 6 anos 50-100 mg/dia. Teto separado por idade em 26/11/2026 (revisão P1).",
         "mxd": 100,
         "al": "Menores de 6 anos: máximo de 50 mg/dia."
       }

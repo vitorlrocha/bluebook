@@ -50,7 +50,9 @@ for (const k of Object.keys(esperado)) {
 
 // 2. Dados
 const CORRECOES = {
-  SEED_MEDS: { chave: (m) => m.nome, itens: ['Secnidazol'] },            // campo Pediatria falava de metronidazol
+  // Secnidazol: campo Pediatria falava de metronidazol. 26/11/2026 (revisão P1, decisão do autor): o campo Pediatria
+  // destas 5 fichas era texto de outro remédio; trocado pela dose do rótulo FDA (curadoria/revisao-p1-2611.js).
+  SEED_MEDS: { chave: (m) => m.nome, itens: ['Secnidazol', 'Etossuximida', 'Rufinamida', 'Estiripentol', 'Felbamato', 'Sulfadiazina (oral)'] },
   PLANTAO: { chave: (p) => p.id, itens: ['sepse'] },                       // hidrocortisona: dose sem fonte → PENDENTE
 };
 for (const cfg of L.VARS) {

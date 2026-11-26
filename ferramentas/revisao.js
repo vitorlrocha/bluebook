@@ -35,11 +35,19 @@ function montar() {
   P.filter((i) => !/Posologia|Pediatria|Prescrição|Conduta|Tratamento/.test(i.campo)).forEach((i) => add(3, 'PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros', `${i.nome} — ${i.campo}`, i.trecho, FONTE.pend, i.arquivo));
   R.semBase.forEach((x) => add(3, 'Prescrição sem a linha "Base:" (referência)', `${x[0]} (${x[1]})`, 'Acrescentar a linha "Base: ..." com a diretriz usada', 'a diretriz que embasou a prescrição (sociedade/ano)', 'dados/diseases.json (campo prescricao)'));
   R.pedSemFicha.forEach((x) => add(3, 'Calculadora pediátrica sem ficha de medicamento', x[0], 'Existe na calculadora, mas não há ficha com esse nome', 'decidir: criar a ficha (com fonte) ou manter só como protocolo de referência', 'dados/ped_db.json e dados/seed_meds.json'));
-  return { itens, assoc: R.assoc.length };
+  // Itens que o autor já conferiu e aceitou como diferença esperada (ferramentas/revisao_conferidas.json). Casa pelo
+  // texto exato: se o dado mudar depois, o item volta para a lista.
+  const CONF = JSON.parse(fs.readFileSync(path.join(__dirname, 'revisao_conferidas.json'), 'utf8'));
+  const conferidos = [];
+  for (let i = itens.length - 1; i >= 0; i--) {
+    const c = CONF.find((x) => x.onde === itens[i].onde && x.oque === itens[i].oque);
+    if (c) conferidos.unshift(Object.assign({}, itens[i], { nota: c.nota, data: c.data })), itens.splice(i, 1);
+  }
+  return { itens, conferidos, assoc: R.assoc.length };
 }
 
 function markdown() {
-  const { itens, assoc } = montar();
+  const { itens, conferidos, assoc } = montar();
   const TIT = { 1: 'Prioridade 1 — pode mostrar dose errada (revisar primeiro)', 2: 'Prioridade 2 — faixas divergentes e doses a confirmar', 3: 'Prioridade 3 — completar informação (sem risco de dose)' };
   let md = '# Revisão clínica — lista de trabalho\n\n' +
     'Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSISTENCIAS.md`. **Não edite à mão**: ' +
@@ -58,6 +66,12 @@ function markdown() {
       md += `\n### ${g} (${arr.length})\n\nConferir em: ${arr[0].conferir}.\nArquivo: \`${arr[0].arquivo}\`\n\n| Feito | Onde | O que conferir |\n|:---:|---|---|\n`;
       for (const i of arr) md += `| ☐ | ${esc(i.onde)} | ${esc(i.oque)} |\n`;
     }
+  }
+  if (conferidos.length) {
+    md += `\n## Conferidas pelo autor — diferença esperada (${conferidos.length})\n\nNão contam nas prioridades. ` +
+      'Lista em `ferramentas/revisao_conferidas.json`; se o dado mudar, o item volta para a prioridade de origem.\n\n' +
+      '| Feito | Onde | Diferença | Por que é esperada | Data |\n|:---:|---|---|---|---|\n';
+    for (const i of conferidos) md += `| ☑ | ${esc(i.onde)} | ${esc(i.oque)} | ${esc(i.nota)} | ${esc(i.data)} |\n`;
   }
   return md;
 }

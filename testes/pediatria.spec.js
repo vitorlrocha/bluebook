@@ -222,6 +222,30 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#fp-out')).toContainText('5 mg');        // 7 mg travado em 5 mg
   });
 
+  test('revisão P1 (26/11/2026): prednisolona na asma trava em 40 mg; hidroxizina < 6 anos trava em 50 mg/dia', async ({ page }) => {
+    await abrirFicha(page, 'Prednisolona (solução oral)');
+    await page.locator('#fp-weight').fill('30');
+    await page.locator('#fp-dose').fill('2');
+    await expect(page.locator('#fp-out')).toContainText('travada em 40 mg');   // 60 mg → teto GINA 40 mg
+    await abrirFicha(page, 'Hidroxizina');
+    await page.locator('#fp-via').selectOption({ label: 'VO (< 6 anos)' });
+    await page.locator('#fp-weight').fill('30');
+    await expect(page.locator('#fp-out')).toContainText('máxima diária');      // 20 mg × 3 = 60 → limitado a 50 mg/dia
+  });
+
+  test('revisão P1 (26/11/2026): colírio, creme e gel não herdam a dose sistêmica', async ({ page }) => {
+    for (const nome of ['Prednisolona (colírio)', 'Gentamicina (colírio)', 'Hidrocortisona (creme)', 'Clindamicina (gel)']) {
+      await page.locator('#search-input').fill(nome);
+      const ids = await page.locator('#sidebar .med-item[data-id]').evaluateAll((els, n) =>
+        els.filter((e) => e.querySelector('.med-item-main').firstChild.textContent.trim() === n).map((e) => e.getAttribute('data-id')), nome);
+      expect(ids.length, nome).toBeGreaterThan(0);
+      await page.locator(`#sidebar .med-item[data-id="${ids[0]}"]`).click();
+      await expect(page.locator('#detail h2').first()).toHaveText(nome);
+      await expect(page.locator('#fp-weight'), nome).toHaveCount(0);
+    }
+    await abrirFicha(page, 'Gentamicina');   // a forma sistêmica continua com a calculadora
+  });
+
   test('dose acima da faixa usual gera aviso', async ({ page }) => {
     await abrirFicha(page, 'Dipirona sódica (Metamizol)');
     await page.locator('#fp-weight').fill('10');

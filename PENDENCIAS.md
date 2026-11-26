@@ -4,14 +4,14 @@ Gerado por `node ferramentas/pendencias.js` a partir de `dados/*.json`. **Não e
 
 Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo = duas linhas). Regra do projeto: **nada é preenchido sem fonte citada** (preferir SBP, Ministério da Saúde/PCDT, bula Anvisa; citar fonte e ano).
 
-**Total: 174 registro(s), 250 trecho(s).**
+**Total: 178 registro(s), 256 trecho(s).**
 
 | Seção | Registros | Trechos |
 |---|---:|---:|
-| Medicamentos | 19 | 27 |
+| Medicamentos | 21 | 29 |
 | Doenças | 109 | 168 |
 | Plantão | 1 | 1 |
-| Calculadora pediátrica | 45 | 54 |
+| Calculadora pediátrica | 47 | 58 |
 
 ## Medicamentos (`dados/seed_meds.json`)
 
@@ -22,6 +22,8 @@ Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo 
 | Danicopana | Posologia | Dose fixa VO 3x/dia (conforme bula). PENDENTE DE VERIFICAÇÃO do esquema vigente. |
 | Deslanosídeo (lanatosídeo C) | Posologia | Digitalização rápida: 0,8-1,2 mg EV em doses fracionadas; manutenção 0,2-0,4 mg/dia. PENDENTE DE VERIFICAÇÃO — individualizar por função renal e uso prévio de digital. |
 | Estavudina | Apresentações | PENDENTE DE VERIFICAÇÃO (consulte a bula) |
+| Etossuximida | Pediatria | …11/2026): a dose ótima para a maioria das crianças é 20 mg/kg/dia, com início e aumento graduais conforme a bula. Número de tomadas e teto: PENDENTE DE VERIFICAÇÃO. |
+| Felbamato | Pediatria | …kg/dia em 3 ou 4 tomadas, reduzindo os outros anticonvulsivantes em 20%, e aumento de 15 mg/kg/dia por semana até 45 mg/kg/dia. Teto em mg: PENDENTE DE VERIFICAÇÃO. |
 | Fezolinetante | Nomes comerciais | PENDENTE DE VERIFICAÇÃO (sem registro na lista CMED 10/2026) |
 | Fezolinetante | Apresentações | PENDENTE DE VERIFICAÇÃO (consulte a bula) |
 | Fitusirana | Posologia | Esquema SC periódico fixo (ex.: a cada 2 meses) conforme bula. PENDENTE DE VERIFICAÇÃO do esquema vigente. |
@@ -268,6 +270,10 @@ Cada linha é uma marca "PENDENTE DE VERIFICAÇÃO" (duas marcas no mesmo campo 
 | Piperacilina + Tazobactam | Observação (calculadora) — via EV (2 a 9 meses) | …e piperacilina + 10 mg de tazobactam) EV em 30 min: de 8/8 h na apendicite/peritonite; de 6/6 h na pneumonia hospitalar. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto nessa faixa). |
 | Pirimetamina | Observação (calculadora) — via VO (toxoplasmose, criança) | 1 mg/kg/dia dividido em 2 doses iguais. Duração e teto: PENDENTE DE VERIFICAÇÃO. |
 | Praziquantel | Observação (calculadora) — via VO (esquistossomose) | Esquistossomose: 20 mg/kg 3x no mesmo dia (intervalo de 4-6 h). Clonorquíase/opistorquíase: 25 mg/kg 3x no mesmo dia. Idade mínima: PENDENTE DE VERIFICAÇÃO. |
+| Prednisolona (solução oral) | Revisão — via VO (crise de asma, ≥ 2 anos) | ….com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO. |
+| Prednisolona (solução oral) | Revisão — via VO (crise de asma, < 2 anos) | ….com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO. |
+| Prednisona | Revisão — via VO (crise de asma, ≥ 2 anos) | ….com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO. |
+| Prednisona | Revisão — via VO (crise de asma, < 2 anos) | ….com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO. |
 | Primidona | Observação (calculadora) — via VO (< 8 anos, manutenção) | …9 100 mg 2x/dia; a partir do dia 10, 125-250 mg 3x/dia. Manutenção usual 125-250 mg 3x/dia ou 10-25 mg/kg/dia divididos. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
 | Propofol | Observação (calculadora) — via EV (indução, 3 a 16 anos) | ASA I-II: 2,5 a 3,5 mg/kg para indução. Só com monitorização e via aérea. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
 | Rabeprazol | fixo — via VO (≥ 12 anos) | DRGE sintomática: 20 mg 1x/dia (duração: PENDENTE DE VERIFICAÇÃO). |

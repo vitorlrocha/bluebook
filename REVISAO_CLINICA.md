@@ -6,52 +6,14 @@ Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSIS
 
 | Prioridade | Itens |
 |---|---:|
-| Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 14 |
-| Prioridade 2 — faixas divergentes e doses a confirmar | 190 |
-| Prioridade 3 — completar informação (sem risco de dose) | 102 |
-| **Total** | **306** |
+| Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 0 |
+| Prioridade 2 — faixas divergentes e doses a confirmar | 192 |
+| Prioridade 3 — completar informação (sem risco de dose) | 106 |
+| **Total** | **298** |
 
-Informativo: 35 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
+Informativo: 34 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
 
 ## Prioridade 1 — pode mostrar dose errada (revisar primeiro)
-
-### Ficha × calculadora pediátrica (sem sobreposição) (7)
-
-Conferir em: bula no Bulário Eletrônico da Anvisa (seção Posologia, uso pediátrico) e SBP quando houver.
-Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
-
-| Feito | Onde | O que conferir |
-|:---:|---|---|
-| ☐ | Captopril | Ficha (Pediatria): 0,01-0,05 mg/kg/dose · Calculadora: VO 0,3-0,5 mg/kg/dose |
-| ☐ | Metilprednisolona (succinato) | Ficha (Pediatria): 15-30 mg/kg/dia · Calculadora: EV/IM (asma grave, NHLBI) 1-2 mg/kg/dia |
-| ☐ | Etossuximida | Ficha (Pediatria): 60 mg/kg/dia · Calculadora: VO (crise de ausência) 20 mg/kg/dia |
-| ☐ | Rufinamida | Ficha (Pediatria): 60 mg/kg/dia · Calculadora: VO (Lennox-Gastaut, ≥ 1 ano) 10-45 mg/kg/dia |
-| ☐ | Sulfadiazina (oral) | Ficha (Pediatria): 6-8 mg/kg/dia · Calculadora: VO (> 2 meses) 150 mg/kg/dia |
-| ☐ | Estiripentol | Ficha (Pediatria): 60 mg/kg/dia · Calculadora: VO (Dravet, ≥ 6 meses e ≥ 7 kg) 50 mg/kg/dia |
-| ☐ | Felbamato | Ficha (Pediatria): 60 mg/kg/dia · Calculadora: VO (Lennox-Gastaut, 2 a 14 anos) 15-45 mg/kg/dia |
-
-### Plantão × calculadora pediátrica (6)
-
-Conferir em: diretriz citada no protocolo (campo "fonte" do protocolo) e bula Anvisa do fármaco.
-Arquivo: `dados/plantao.json e dados/ped_db.json`
-
-| Feito | Onde | O que conferir |
-|:---:|---|---|
-| ☐ | Bradicardia e taquiarritmias — Adenosina — 2ª dose (EV rápido + flush SF) | Plantão: 0,2 mg/kg/dose · máx. 12 mg · Calculadora: EV (TSV, < 50 kg) 0,05-0,1 mg/kg/dose (dose fora da faixa) |
-| ☐ | Crise convulsiva / estado de mal epiléptico — Midazolam (sem acesso venoso) (IM) | Plantão: 0,2 mg/kg/dose · máx. 10 mg · Calculadora: IM (sedação, 1 a 15 anos) 0,05-0,15 mg/kg/dose · máx. 10 mg (dose fora da faixa) |
-| ☐ | Crise de asma grave — Prednisolona/prednisona (VO) | Plantão: máx. 40 mg · Calculadora: VO máx. 60 mg (máximo diferente) |
-| ☐ | Sepse e choque séptico — Hidrocortisona (choque refratário a catecolaminas) (EV) | Plantão: 2 mg/kg/dose · máx. 100 mg · Calculadora: EV/IM 4-8 mg/kg/dose · máx. 250 mg (dose fora da faixa) |
-| ☐ | Intubação em sequência rápida — Rocurônio (EV) | Plantão: 1 mg/kg/dose · máx. 100 mg · Calculadora: EV (intubação) 0,45-0,6 mg/kg/dose (dose fora da faixa) |
-| ☐ | Intubação em sequência rápida — Succinilcolina (EV) | Plantão: 1,5 mg/kg/dose · máx. 150 mg · Calculadora: EV (lactente e criança pequena) 2 mg/kg/dose; EV (criança maior e adolescente) 1 mg/kg/dose (dose fora da faixa) |
-
-### Calculadora pediátrica: texto × número usado no cálculo (1)
-
-Conferir em: SBP (documento científico/guia prático do tema) ou bula Anvisa; conferir também o texto "ob" e "rev" da própria entrada.
-Arquivo: `dados/ped_db.json`
-
-| Feito | Onde | O que conferir |
-|:---:|---|---|
-| ☐ | Hidroxizina (VO) | máx. diário — texto: "máx. 50 mg/dia" · campo mxd: 100 mg |
 
 ## Prioridade 2 — faixas divergentes e doses a confirmar
 
@@ -95,13 +57,15 @@ Arquivo: `dados/diseases.json (campo prescricao) e dados/ped_db.json`
 | ☐ | Endocardite em cardiopatia congênita — Ampicilina | Prescrição: "Ampicilina 300 mg/kg/dia" · Calculadora: EV 50-200 mg/kg/dia |
 | ☐ | Hidronefrose antenatal — Amoxicilina | Prescrição: "Amoxicilina 10 mg/kg/dia profilática em casos selecionados." · Calculadora: VO 25-90 mg/kg/dia |
 
-### PENDENTE DE VERIFICAÇÃO em dose/conduta (166)
+### PENDENTE DE VERIFICAÇÃO em dose/conduta (168)
 
 Conferir em: bula Anvisa (Bulário Eletrônico) e lista CMED vigente; PCDT/Conitec se for medicamento de alto custo.
 Arquivo: `dados/seed_meds.json`
 
 | Feito | Onde | O que conferir |
 |:---:|---|---|
+| ☐ | Etossuximida — Pediatria | …11/2026): a dose ótima para a maioria das crianças é 20 mg/kg/dia, com início e aumento graduais conforme a bula. Número de tomadas e teto: PENDENTE DE VERIFICAÇÃO. |
+| ☐ | Felbamato — Pediatria | …kg/dia em 3 ou 4 tomadas, reduzindo os outros anticonvulsivantes em 20%, e aumento de 15 mg/kg/dia por semana até 45 mg/kg/dia. Teto em mg: PENDENTE DE VERIFICAÇÃO. |
 | ☐ | Pacritinibe — Posologia | 200 mg VO 2x/dia (conforme bula). PENDENTE DE VERIFICAÇÃO do esquema vigente no Brasil. |
 | ☐ | Momelotinibe — Posologia | 200 mg VO 1x/dia (conforme bula). PENDENTE DE VERIFICAÇÃO do esquema vigente no Brasil. |
 | ☐ | Inluntestrante — Posologia | 400 mg VO 1x/dia (conforme bula). PENDENTE DE VERIFICAÇÃO do esquema vigente no Brasil. |
@@ -271,7 +235,7 @@ Arquivo: `dados/seed_meds.json`
 
 ## Prioridade 3 — completar informação (sem risco de dose)
 
-### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (84)
+### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (88)
 
 Conferir em: bula Anvisa (Bulário Eletrônico) e lista CMED vigente; PCDT/Conitec se for medicamento de alto custo.
 Arquivo: `dados/seed_meds.json`
@@ -308,6 +272,10 @@ Arquivo: `dados/seed_meds.json`
 | ☐ | Estrias, cloasma gravídico, gengivite e rinite da gestação — Exames | Sem exame de rotina. Se sangramento gengival ou nasal importante ou recorrente, avaliar coagulação e plaquetas (exame específico: PENDENTE DE VERIFICAÇÃO) e verificar a pressão arterial. |
 | ☐ | Tontura, lipotimia e dispneia fisiológicas da gestação — Exames | Pressão arterial, ausculta cardíaca e pulmonar. Se houver alteração na ausculta, encaminhar para avaliação médica. Exames adicionais: PENDENTE DE VERIFICAÇÃO (não detalhados na fonte). |
 | ☐ | Sepse e choque séptico — itens | Dose de estresse: PENDENTE DE VERIFICAÇÃO em fonte brasileira (a diretriz pediátrica da Surviving Sepsis Campaign não define dose). Considera… |
+| ☐ | Prednisona — Revisão — via VO (crise de asma, ≥ 2 anos) | ….com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO. |
+| ☐ | Prednisona — Revisão — via VO (crise de asma, < 2 anos) | ….com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO. |
+| ☐ | Prednisolona (solução oral) — Revisão — via VO (crise de asma, ≥ 2 anos) | ….com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO. |
+| ☐ | Prednisolona (solução oral) — Revisão — via VO (crise de asma, < 2 anos) | ….com). Teto da GINA 2024 na crise de asma, igual ao Plantão (decisão do autor, 26/11/2026). Entre 2 e 5 anos a GINA pode trazer teto menor: PENDENTE DE VERIFICAÇÃO. |
 | ☐ | Captopril — al — via VO | Não usar esta calculadora para recém-nascidos: a dose inicial é muito menor (ver ficha). Dose inicial pediátrica: PENDENTE DE VERIFICAÇÃO (a tabela da SBP 2019 diverge do valor usado aqui). Titular com PA, potássio e creatinina. |
 | ☐ | Midazolam — Observação (calculadora) — via Retal (sedação, > 6 meses) | …de 0,3-0,5 mg/kg com aplicador plástico na seringa (completar com água até 10 mL se o volume for pequeno); não repetir. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (a bula não traz). |
 | ☐ | Fentanil — Observação (calculadora) — via IV (anestesia, 2 a 12 anos) | …a partir de 2 a 3 mcg/kg. Fora da anestesia (analgesia/sedação) e em menores de 2 anos: seguir o protocolo do serviço. Dose máxima em mcg: PENDENTE DE VERIFICAÇÃO (o rótulo não traz teto pediátrico). |
@@ -396,3 +364,17 @@ Arquivo: `dados/ped_db.json e dados/seed_meds.json`
 |:---:|---|---|
 | ☐ | Dimenidrato | Existe na calculadora, mas não há ficha com esse nome |
 | ☐ | Pirvínio | Existe na calculadora, mas não há ficha com esse nome |
+
+## Conferidas pelo autor — diferença esperada (7)
+
+Não contam nas prioridades. Lista em `ferramentas/revisao_conferidas.json`; se o dado mudar, o item volta para a prioridade de origem.
+
+| Feito | Onde | Diferença | Por que é esperada | Data |
+|:---:|---|---|---|---|
+| ☑ | Captopril | Ficha (Pediatria): 0,01-0,05 mg/kg/dose · Calculadora: VO 0,3-0,5 mg/kg/dose | Faixas de idades diferentes: a ficha cita o recém-nascido; a calculadora é da criança (SBP 2019). | 26/11/2026 |
+| ☑ | Metilprednisolona (succinato) | Ficha (Pediatria): 15-30 mg/kg/dia · Calculadora: EV/IM (asma grave, NHLBI) 1-2 mg/kg/dia | Indicações diferentes: a ficha cita a pulsoterapia; a calculadora é da asma grave (e cita a pulsoterapia no texto). | 26/11/2026 |
+| ☑ | Bradicardia e taquiarritmias — Adenosina — 2ª dose (EV rápido + flush SF) | Plantão: 0,2 mg/kg/dose · máx. 12 mg · Calculadora: EV (TSV, < 50 kg) 0,05-0,1 mg/kg/dose (dose fora da faixa) | O Plantão segue o PALS (2ª dose 0,2 mg/kg); a calculadora segue o rótulo FDA (aumentos de 0,05-0,1 mg/kg). | 26/11/2026 |
+| ☑ | Crise convulsiva / estado de mal epiléptico — Midazolam (sem acesso venoso) (IM) | Plantão: 0,2 mg/kg/dose · máx. 10 mg · Calculadora: IM (sedação, 1 a 15 anos) 0,05-0,15 mg/kg/dose · máx. 10 mg (dose fora da faixa) | Indicações diferentes: convulsão (AES 2016) no Plantão; sedação (bula) na calculadora. | 26/11/2026 |
+| ☑ | Sepse e choque séptico — Hidrocortisona (choque refratário a catecolaminas) (EV) | Plantão: 2 mg/kg/dose · máx. 100 mg · Calculadora: EV/IM 4-8 mg/kg/dose · máx. 250 mg (dose fora da faixa) | Indicações diferentes: choque/insuficiência adrenal no Plantão (a calculadora traz 2-3 mg/kg, máx. 100 mg, no texto da crise adrenal); a faixa numérica da calculadora é da anafilaxia e asma grave. | 26/11/2026 |
+| ☑ | Intubação em sequência rápida — Rocurônio (EV) | Plantão: 1 mg/kg/dose · máx. 100 mg · Calculadora: EV (intubação) 0,45-0,6 mg/kg/dose (dose fora da faixa) | O Plantão segue o PALS para sequência rápida (0,6-1,2 mg/kg); o rótulo FDA traz só a intubação eletiva e não recomenda sequência rápida em pediatria. | 26/11/2026 |
+| ☑ | Intubação em sequência rápida — Succinilcolina (EV) | Plantão: 1,5 mg/kg/dose · máx. 150 mg · Calculadora: EV (lactente e criança pequena) 2 mg/kg/dose; EV (criança maior e adolescente) 1 mg/kg/dose (dose fora da faixa) | Diretrizes diferentes: o Plantão (PALS) usa 1,5 mg/kg e cita 2 mg/kg no lactente; a calculadora segue o rótulo FDA por idade. | 26/11/2026 |
