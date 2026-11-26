@@ -151,6 +151,26 @@
           }
         ],
         "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+      },
+      {
+        "via": "EV (meningite)",
+        "d": [
+          300,
+          400
+        ],
+        "dd": 300,
+        "b": "dia",
+        "f": 4,
+        "mxd": 12000,
+        "fonte": "Ref",
+        "ob": "Meningite: 300-400 mg/kg/dia em 4 a 6 doses (máx. 12 g/dia). No recém-nascido a dose depende da idade gestacional e dos dias de vida: ver a via EV.",
+        "ap": [
+          {
+            "l": "Frasco 1 g (diluir conforme bula)",
+            "c": 100
+          }
+        ],
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com). Via própria criada em 26/11/2026 (revisão P2, decisão do autor) a partir do texto desta entrada."
       }
     ]
   },

@@ -7,9 +7,9 @@ Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSIS
 | Prioridade | Itens |
 |---|---:|
 | Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 0 |
-| Prioridade 2 — faixas divergentes e doses a confirmar | 192 |
+| Prioridade 2 — faixas divergentes e doses a confirmar | 170 |
 | Prioridade 3 — completar informação (sem risco de dose) | 106 |
-| **Total** | **298** |
+| **Total** | **276** |
 
 Informativo: 34 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
 
@@ -17,45 +17,23 @@ Informativo: 34 fichas de associação ficaram sem calculadora pediátrica por d
 
 ## Prioridade 2 — faixas divergentes e doses a confirmar
 
-### Ficha × calculadora pediátrica (faixas diferentes) (15)
+### Ficha × calculadora pediátrica (faixas diferentes) (1)
 
 Conferir em: bula no Bulário Eletrônico da Anvisa (seção Posologia, uso pediátrico) e SBP quando houver.
 Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
 
 | Feito | Onde | O que conferir |
 |:---:|---|---|
-| ☐ | Dipirona sódica (Metamizol) | faixa da ficha sai da faixa da calculadora — Ficha: 10-25 mg/kg/dose · Calculadora: VO 10-12 mg/kg/dose; IM/EV 15-25 mg/kg/dose |
-| ☐ | Naproxeno | faixa da ficha sai da faixa da calculadora — Ficha: 10-15 mg/kg/dia · Calculadora: VO (artrite idiopática juvenil, > 2 anos) 10 mg/kg/dia |
-| ☐ | Domperidona | faixa da ficha sai da faixa da calculadora — Ficha: 0,25-0,5 mg/kg/dose · Calculadora: VO 0,25 mg/kg/dose |
 | ☐ | Hidrocortisona (injetável) | faixa da ficha sai da faixa da calculadora — Ficha: 2-4 mg/kg/dose · Calculadora: EV/IM 4-8 mg/kg/dose |
-| ☐ | Clorpromazina | faixa da ficha sai da faixa da calculadora — Ficha: 0,5-1 mg/kg/dose · Calculadora: VO (problemas graves de comportamento, 6 meses a 12 anos) 0,55 mg/kg/dose |
-| ☐ | Cetoprofeno | faixa da ficha sai da faixa da calculadora — Ficha: 1-2 mg/kg/dose · Calculadora: VO 1 mg/kg/dose |
-| ☐ | Metimazol (Tiamazol) | faixa da ficha sai da faixa da calculadora — Ficha: 0,2-0,5 mg/kg/dia · Calculadora: VO (hipertireoidismo, criança — início) 0,4 mg/kg/dia |
-| ☐ | Cefuroxima | faixa da ficha sai da faixa da calculadora — Ficha: 30 mg/kg/dia; 75-150 mg/kg/dia · Calculadora: VO 20-30 mg/kg/dia; EV/IM (> 3 meses) 50-100 mg/kg/dia |
-| ☐ | Ampicilina | faixa da ficha sai da faixa da calculadora — Ficha: 100-200 mg/kg/dia; 300-400 mg/kg/dia · Calculadora: EV 50-200 mg/kg/dia |
-| ☐ | Gentamicina | faixa da ficha sai da faixa da calculadora — Ficha: 4-5 mg/kg/dia; 5-7,5 mg/kg/dia · Calculadora: EV/IM 5-7,5 mg/kg/dia |
-| ☐ | Levofloxacino | faixa da ficha sai da faixa da calculadora — Ficha: 5-10 mg/kg/dose · Calculadora: VO/EV (antraz inalatório pós-exposição ou peste, ≥ 6 meses) 8 mg/kg/dose |
-| ☐ | Oxcarbazepina | faixa da ficha sai da faixa da calculadora — Ficha: 10-20 mg/kg/dia · Calculadora: VO (adjuvante, 2 a 16 anos) 8-10 mg/kg/dia |
-| ☐ | Lincomicina | faixa da ficha sai da faixa da calculadora — Ficha: 20-40 mg/kg/dia · Calculadora: EV (> 1 mês) 10-20 mg/kg/dia |
-| ☐ | Benznidazol | faixa da ficha sai da faixa da calculadora — Ficha: 5-10 mg/kg/dia · Calculadora: VO (Chagas, 2 a 12 anos) 5-8 mg/kg/dia |
-| ☐ | Nifurtimox | faixa da ficha sai da faixa da calculadora — Ficha: 5-10 mg/kg/dia · Calculadora: VO (Chagas, < 41 kg) 10-20 mg/kg/dia; VO (Chagas, ≥ 41 kg) 8-10 mg/kg/dia |
 
-### Prescrição de doença pediátrica × calculadora (9)
+### Prescrição de doença pediátrica × calculadora (1)
 
 Conferir em: diretriz citada na linha "Base:" da própria doença; SBP/Ministério da Saúde (PCDT) para a dose pediátrica.
 Arquivo: `dados/diseases.json (campo prescricao) e dados/ped_db.json`
 
 | Feito | Onde | O que conferir |
 |:---:|---|---|
-| ☐ | Meningite bacteriana na infância — Ampicilina | Prescrição: "ampicilina 300 mg/kg/dia EV" · Calculadora: EV 50-200 mg/kg/dia |
-| ☐ | Infecção do trato urinário na infância — Cefalexina | Prescrição: "cefalexina 10 mg/kg/dia." · Calculadora: VO 25-100 mg/kg/dia |
-| ☐ | Infecção do trato urinário na infância — Nitrofurantoína | Prescrição: "nitrofurantoína 1-2 mg/kg/dia" · Calculadora: VO 5-7 mg/kg/dia |
-| ☐ | Febre sem sinais de localização (lactente) — Ampicilina | Prescrição: "ampicilina 300 mg/kg/dia 6/6 h" · Calculadora: EV 50-200 mg/kg/dia |
 | ☐ | Febre sem sinais de localização (lactente) — Cefotaxima | Prescrição: "cefotaxima 200-300 mg/kg/dia 6/6 h" · Calculadora: EV/IM (1 mês a 12 anos, < 50 kg) 50-180 mg/kg/dia |
-| ☐ | Meningite neonatal — Ampicilina | Prescrição: "Ampicilina 300 mg/kg/dia" · Calculadora: EV 50-200 mg/kg/dia |
-| ☐ | Refluxo vesicoureteral — Cefalexina | Prescrição: "Cefalexina 10 mg/kg/dia à noite" · Calculadora: VO 25-100 mg/kg/dia |
-| ☐ | Endocardite em cardiopatia congênita — Ampicilina | Prescrição: "Ampicilina 300 mg/kg/dia" · Calculadora: EV 50-200 mg/kg/dia |
-| ☐ | Hidronefrose antenatal — Amoxicilina | Prescrição: "Amoxicilina 10 mg/kg/dia profilática em casos selecionados." · Calculadora: VO 25-90 mg/kg/dia |
 
 ### PENDENTE DE VERIFICAÇÃO em dose/conduta (168)
 
@@ -365,7 +343,7 @@ Arquivo: `dados/ped_db.json e dados/seed_meds.json`
 | ☐ | Dimenidrato | Existe na calculadora, mas não há ficha com esse nome |
 | ☐ | Pirvínio | Existe na calculadora, mas não há ficha com esse nome |
 
-## Conferidas pelo autor — diferença esperada (7)
+## Conferidas pelo autor — diferença esperada (19)
 
 Não contam nas prioridades. Lista em `ferramentas/revisao_conferidas.json`; se o dado mudar, o item volta para a prioridade de origem.
 
@@ -378,3 +356,15 @@ Não contam nas prioridades. Lista em `ferramentas/revisao_conferidas.json`; se 
 | ☑ | Sepse e choque séptico — Hidrocortisona (choque refratário a catecolaminas) (EV) | Plantão: 2 mg/kg/dose · máx. 100 mg · Calculadora: EV/IM 4-8 mg/kg/dose · máx. 250 mg (dose fora da faixa) | Indicações diferentes: choque/insuficiência adrenal no Plantão (a calculadora traz 2-3 mg/kg, máx. 100 mg, no texto da crise adrenal); a faixa numérica da calculadora é da anafilaxia e asma grave. | 26/11/2026 |
 | ☑ | Intubação em sequência rápida — Rocurônio (EV) | Plantão: 1 mg/kg/dose · máx. 100 mg · Calculadora: EV (intubação) 0,45-0,6 mg/kg/dose (dose fora da faixa) | O Plantão segue o PALS para sequência rápida (0,6-1,2 mg/kg); o rótulo FDA traz só a intubação eletiva e não recomenda sequência rápida em pediatria. | 26/11/2026 |
 | ☑ | Intubação em sequência rápida — Succinilcolina (EV) | Plantão: 1,5 mg/kg/dose · máx. 150 mg · Calculadora: EV (lactente e criança pequena) 2 mg/kg/dose; EV (criança maior e adolescente) 1 mg/kg/dose (dose fora da faixa) | Diretrizes diferentes: o Plantão (PALS) usa 1,5 mg/kg e cita 2 mg/kg no lactente; a calculadora segue o rótulo FDA por idade. | 26/11/2026 |
+| ☑ | Dipirona sódica (Metamizol) | faixa da ficha sai da faixa da calculadora — Ficha: 10-25 mg/kg/dose · Calculadora: VO 10-12 mg/kg/dose; IM/EV 15-25 mg/kg/dose | Vias diferentes: a ficha junta VO e EV (10-25); a calculadora separa VO 10-12 e IM/EV 15-25. | 26/11/2026 |
+| ☑ | Naproxeno | faixa da ficha sai da faixa da calculadora — Ficha: 10-15 mg/kg/dia · Calculadora: VO (artrite idiopática juvenil, > 2 anos) 10 mg/kg/dia | A calculadora (10 mg/kg/dia, teto 15 mg/kg/dia) está dentro da faixa da ficha. | 26/11/2026 |
+| ☑ | Metimazol (Tiamazol) | faixa da ficha sai da faixa da calculadora — Ficha: 0,2-0,5 mg/kg/dia · Calculadora: VO (hipertireoidismo, criança — início) 0,4 mg/kg/dia | A dose inicial da calculadora (0,4 mg/kg/dia) está dentro da faixa da ficha. | 26/11/2026 |
+| ☑ | Cefuroxima | faixa da ficha sai da faixa da calculadora — Ficha: 30 mg/kg/dia; 75-150 mg/kg/dia · Calculadora: VO 20-30 mg/kg/dia; EV/IM (> 3 meses) 50-100 mg/kg/dia | A ficha cita 150 mg/kg/dia, que o rótulo reserva para osso e articulação (já no texto da calculadora). | 26/11/2026 |
+| ☑ | Gentamicina | faixa da ficha sai da faixa da calculadora — Ficha: 4-5 mg/kg/dia; 5-7,5 mg/kg/dia · Calculadora: EV/IM 5-7,5 mg/kg/dia | Idades diferentes: a ficha cita o recém-nascido (4-5 mg/kg/dia); a calculadora é da criança. | 26/11/2026 |
+| ☑ | Levofloxacino | faixa da ficha sai da faixa da calculadora — Ficha: 5-10 mg/kg/dose · Calculadora: VO/EV (antraz inalatório pós-exposição ou peste, ≥ 6 meses) 8 mg/kg/dose | Indicações diferentes: a ficha cita tuberculose MDR e casos selecionados; a calculadora é do rótulo FDA (antraz e peste). | 26/11/2026 |
+| ☑ | Oxcarbazepina | faixa da ficha sai da faixa da calculadora — Ficha: 8-10 mg/kg/dia; 60 mg/kg/dia · Calculadora: VO (adjuvante, 2 a 16 anos) 8-10 mg/kg/dia | Os 60 mg/kg/dia da ficha valem só de 2 a < 4 anos, como no rótulo FDA (texto da calculadora). | 26/11/2026 |
+| ☑ | Benznidazol | faixa da ficha sai da faixa da calculadora — Ficha: 5-8 mg/kg/dia; 5-10 mg/kg/dia · Calculadora: VO (Chagas, 2 a 12 anos) 5-8 mg/kg/dia | A ficha registra o valor antigo sem fonte (5-10) ao lado do rótulo FDA (5-8), que é o usado na calculadora. | 26/11/2026 |
+| ☑ | Infecção do trato urinário na infância — Cefalexina | Prescrição: "cefalexina 10 mg/kg/dia." · Calculadora: VO 25-100 mg/kg/dia | Dose de profilaxia (10 mg/kg/dia), não de tratamento. | 26/11/2026 |
+| ☑ | Infecção do trato urinário na infância — Nitrofurantoína | Prescrição: "nitrofurantoína 1-2 mg/kg/dia" · Calculadora: VO 5-7 mg/kg/dia | Dose de profilaxia (1-2 mg/kg/dia), não de tratamento. | 26/11/2026 |
+| ☑ | Refluxo vesicoureteral — Cefalexina | Prescrição: "Cefalexina 10 mg/kg/dia à noite" · Calculadora: VO 25-100 mg/kg/dia | Dose de profilaxia (10 mg/kg/dia à noite), não de tratamento. | 26/11/2026 |
+| ☑ | Hidronefrose antenatal — Amoxicilina | Prescrição: "Amoxicilina 10 mg/kg/dia profilática em casos selecionados." · Calculadora: VO 25-90 mg/kg/dia | Dose de profilaxia (10 mg/kg/dia), não de tratamento. | 26/11/2026 |

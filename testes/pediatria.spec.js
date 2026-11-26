@@ -233,6 +233,13 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#fp-out')).toContainText('máxima diária');      // 20 mg × 3 = 60 → limitado a 50 mg/dia
   });
 
+  test('revisão P2 (26/11/2026): ampicilina tem via de meningite (300 mg/kg/dia, teto 12 g/dia)', async ({ page }) => {
+    await abrirFicha(page, 'Ampicilina');
+    await page.locator('#fp-via').selectOption({ label: 'EV (meningite)' });
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('1500 mg');       // 300 mg/kg/dia × 20 kg ÷ 4
+  });
+
   test('revisão P1 (26/11/2026): colírio, creme e gel não herdam a dose sistêmica', async ({ page }) => {
     for (const nome of ['Prednisolona (colírio)', 'Gentamicina (colírio)', 'Hidrocortisona (creme)', 'Clindamicina (gel)']) {
       await page.locator('#search-input').fill(nome);

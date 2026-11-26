@@ -7,10 +7,10 @@ Gerado por `node ferramentas/inconsistencias.js` a partir de `dados/*.json`. **N
 | Verificação | Itens |
 |---|---:|
 | 1. Calculadora pediátrica: texto × números da mesma ficha | 0 |
-| 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 17 |
+| 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 11 |
 | 3. Associações sem calculadora pediátrica (informativo) | 34 |
 | 4. Plantão × calculadora pediátrica | 5 |
-| 5. Prescrição das doenças pediátricas × calculadora pediátrica | 9 |
+| 5. Prescrição das doenças pediátricas × calculadora pediátrica | 5 |
 | 6. Prescrições sem linha "Base:" | 16 |
 | 7. Detalhes (MEDX) sem ficha de mesmo nome | 0 |
 | 8. Calculadora pediátrica sem ficha correspondente | 2 |
@@ -29,21 +29,15 @@ Faixa em mg/kg (mesma base: por dose ou por dia) ou máximo diário diferentes. 
 |---|---|---|---|---|
 | Captopril | faixas sem sobreposição | 0,01-0,05 mg/kg/dose | VO 0,3-0,5 mg/kg/dose | alta |
 | Metilprednisolona (succinato) | faixas sem sobreposição | 15-30 mg/kg/dia | EV/IM (asma grave, NHLBI) 1-2 mg/kg/dia | alta |
-| Ampicilina | faixa da ficha sai da faixa da calculadora | 100-200 mg/kg/dia; 300-400 mg/kg/dia | EV 50-200 mg/kg/dia | média |
-| Benznidazol | faixa da ficha sai da faixa da calculadora | 5-10 mg/kg/dia | VO (Chagas, 2 a 12 anos) 5-8 mg/kg/dia | média |
+| Benznidazol | faixa da ficha sai da faixa da calculadora | 5-8 mg/kg/dia; 5-10 mg/kg/dia | VO (Chagas, 2 a 12 anos) 5-8 mg/kg/dia | média |
 | Cefuroxima | faixa da ficha sai da faixa da calculadora | 30 mg/kg/dia; 75-150 mg/kg/dia | VO 20-30 mg/kg/dia; EV/IM (> 3 meses) 50-100 mg/kg/dia | média |
-| Cetoprofeno | faixa da ficha sai da faixa da calculadora | 1-2 mg/kg/dose | VO 1 mg/kg/dose | média |
-| Clorpromazina | faixa da ficha sai da faixa da calculadora | 0,5-1 mg/kg/dose | VO (problemas graves de comportamento, 6 meses a 12 anos) 0,55 mg/kg/dose | média |
 | Dipirona sódica (Metamizol) | faixa da ficha sai da faixa da calculadora | 10-25 mg/kg/dose | VO 10-12 mg/kg/dose; IM/EV 15-25 mg/kg/dose | média |
-| Domperidona | faixa da ficha sai da faixa da calculadora | 0,25-0,5 mg/kg/dose | VO 0,25 mg/kg/dose | média |
 | Gentamicina | faixa da ficha sai da faixa da calculadora | 4-5 mg/kg/dia; 5-7,5 mg/kg/dia | EV/IM 5-7,5 mg/kg/dia | média |
 | Hidrocortisona (injetável) | faixa da ficha sai da faixa da calculadora | 2-4 mg/kg/dose | EV/IM 4-8 mg/kg/dose | média |
 | Levofloxacino | faixa da ficha sai da faixa da calculadora | 5-10 mg/kg/dose | VO/EV (antraz inalatório pós-exposição ou peste, ≥ 6 meses) 8 mg/kg/dose | média |
-| Lincomicina | faixa da ficha sai da faixa da calculadora | 20-40 mg/kg/dia | EV (> 1 mês) 10-20 mg/kg/dia | média |
 | Metimazol (Tiamazol) | faixa da ficha sai da faixa da calculadora | 0,2-0,5 mg/kg/dia | VO (hipertireoidismo, criança — início) 0,4 mg/kg/dia | média |
 | Naproxeno | faixa da ficha sai da faixa da calculadora | 10-15 mg/kg/dia | VO (artrite idiopática juvenil, > 2 anos) 10 mg/kg/dia | média |
-| Nifurtimox | faixa da ficha sai da faixa da calculadora | 5-10 mg/kg/dia | VO (Chagas, < 41 kg) 10-20 mg/kg/dia; VO (Chagas, ≥ 41 kg) 8-10 mg/kg/dia | média |
-| Oxcarbazepina | faixa da ficha sai da faixa da calculadora | 10-20 mg/kg/dia | VO (adjuvante, 2 a 16 anos) 8-10 mg/kg/dia | média |
+| Oxcarbazepina | faixa da ficha sai da faixa da calculadora | 8-10 mg/kg/dia; 60 mg/kg/dia | VO (adjuvante, 2 a 16 anos) 8-10 mg/kg/dia | média |
 
 ## 3. Associações sem calculadora pediátrica (informativo)
 
@@ -104,14 +98,10 @@ Doenças da área Pediatria: dose em mg/kg citada logo após o nome do fármaco,
 
 | Doença | Fármaco | Trecho da prescrição | Calculadora (PED_DB) |
 |---|---|---|---|
-| Meningite bacteriana na infância | Ampicilina | ampicilina 300 mg/kg/dia EV | EV 50-200 mg/kg/dia |
 | Infecção do trato urinário na infância | Cefalexina | cefalexina 10 mg/kg/dia. | VO 25-100 mg/kg/dia |
 | Infecção do trato urinário na infância | Nitrofurantoína | nitrofurantoína 1-2 mg/kg/dia | VO 5-7 mg/kg/dia |
-| Febre sem sinais de localização (lactente) | Ampicilina | ampicilina 300 mg/kg/dia 6/6 h | EV 50-200 mg/kg/dia |
 | Febre sem sinais de localização (lactente) | Cefotaxima | cefotaxima 200-300 mg/kg/dia 6/6 h | EV/IM (1 mês a 12 anos, < 50 kg) 50-180 mg/kg/dia |
-| Meningite neonatal | Ampicilina | Ampicilina 300 mg/kg/dia | EV 50-200 mg/kg/dia |
 | Refluxo vesicoureteral | Cefalexina | Cefalexina 10 mg/kg/dia à noite | VO 25-100 mg/kg/dia |
-| Endocardite em cardiopatia congênita | Ampicilina | Ampicilina 300 mg/kg/dia | EV 50-200 mg/kg/dia |
 | Hidronefrose antenatal | Amoxicilina | Amoxicilina 10 mg/kg/dia profilática em casos selecionados. | VO 25-90 mg/kg/dia |
 
 ## 6. Prescrições sem linha "Base:"
