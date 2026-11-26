@@ -20,10 +20,10 @@ const MODOS = {
 // v72: a sigla entre parênteses do próprio registro sobe na relevância ("Ácido acetilsalicílico (AAS)" em 1º).
 const MUDANCAS_INTENCIONAIS = new Set(['meds:AAS', 'meds:aas']);
 
-async function coletar(page, url, nV71, mV71, medsNovos) {
+async function coletar(page, url, nV71, mV71, medsNovos, calcsNovas) {
   await page.goto(url);
   await expect(page.locator('#sidebar .med-item').first()).toBeAttached();
-  return page.evaluate(([MODOS, nV71, mV71, medsNovos]) => {
+  return page.evaluate(([MODOS, nV71, mV71, medsNovos, calcsNovas]) => {
     const inp = document.getElementById('search-input');
     /* Retrato da barra lateral: { html, quadro }.
        - html: a lista da aba, SEM o quadro da busca em todo o app e sem as doenças novas dos lotes (índice >= nº de
@@ -33,8 +33,12 @@ async function coletar(page, url, nV71, mV71, medsNovos) {
     function retrato() {
       const sb = document.getElementById('sidebar').cloneNode(true);
       const box = sb.querySelector('details.gs-box');
-      const quadro = box ? [...box.querySelectorAll('.gs-item')].map((b) => b.getAttribute('data-gk') + '|' + String(b.getAttribute('data-gv')).replace(/^local-\d+-(\d+)-[a-z0-9]+$/, 'med$1')).filter((x) => !/^(d|cc|cid)\|/.test(x) && !(/\|med(\d+)$/.test(x) && Number(x.match(/\|med(\d+)$/)[1]) >= mV71)) : null;
+      const quadro = box ? [...box.querySelectorAll('.gs-item')].map((b) => b.getAttribute('data-gk') + '|' + String(b.getAttribute('data-gv')).replace(/^local-\d+-(\d+)-[a-z0-9]+$/, 'med$1')).filter((x) => !/^(d|cc|cid)\|/.test(x) && !calcsNovas.includes(x.split('|')[1]) && !(/\|med(\d+)$/.test(x) && Number(x.match(/\|med(\d+)$/)[1]) >= mV71)) : null;
+      // seções do quadro onde uma calculadora nova entrou entre os 5 primeiros (pode empurrar um item antigo para fora)
+      const desloc = box ? [...new Set([...box.querySelectorAll('.gs-item')].filter((b) => calcsNovas.includes(b.getAttribute('data-gv'))).map((b) => b.getAttribute('data-gk')))] : [];
       if (box) box.remove();
+      // calculadoras novas (curadoria/calcs-lote-*): entram no fim da lista de fórmulas
+      sb.querySelectorAll('.med-item[data-ref]').forEach((b) => { if (calcsNovas.includes(b.getAttribute('data-ref'))) b.remove(); });
       sb.querySelectorAll('.med-item[data-idx]').forEach((b) => { if (Number(b.getAttribute('data-idx')) >= nV71) b.remove(); });
       // medicamentos novos dos lotes conferidos com bula (curadoria/meds-lote-*): entram no fim da biblioteca
       sb.querySelectorAll('.med-item[data-id]').forEach((b) => { const m = /^local-0-(\d+)-seed$/.exec(b.getAttribute('data-id') || ''); if (m && Number(m[1]) >= mV71) b.remove(); });
@@ -47,7 +51,7 @@ async function coletar(page, url, nV71, mV71, medsNovos) {
       });
       const rel = sb.querySelector('.letter-group-label');
       if (rel && /^Resultados por relevância \(\d+\)$/.test(rel.textContent)) rel.textContent = 'Resultados por relevância (' + sb.querySelectorAll('.med-item').length + ')';
-      return { html: sb.innerHTML.replace(/local-\d+-\d+-[a-z0-9]+/g, 'ID'), quadro };
+      return { html: sb.innerHTML.replace(/local-\d+-\d+-[a-z0-9]+/g, 'ID'), quadro, desloc };
     }
     const out = {};
     for (const [modo, termos] of Object.entries(MODOS)) {
@@ -57,7 +61,7 @@ async function coletar(page, url, nV71, mV71, medsNovos) {
       out[modo + ':(vazio)'] = retrato();
     }
     return out;
-  }, [MODOS, nV71, mV71, medsNovos]);
+  }, [MODOS, nV71, mV71, medsNovos, calcsNovas]);
 }
 
 test('buscas produzem a mesma lista que a v71', async ({ page, browserName }, info) => {
@@ -71,8 +75,10 @@ test('buscas produzem a mesma lista que a v71', async ({ page, browserName }, in
   expect(mV71).toBe(1851);
   const medsNovos = require('../dados/seed_meds.json').filter((m) => m.orig).map((m) => m.nome);
   await page.route('**/v71-original.html', (r) => r.fulfill({ path: ORIGINAL, contentType: 'text/html; charset=utf-8' }));
-  const antes = await coletar(page, '/v71-original.html', nV71, mV71, medsNovos);
-  const depois = await coletar(page, '/', nV71, mV71, medsNovos);
+  // calculadoras novas: as 16 primeiras de dados/calcs.json são as da v71
+  const calcsNovas = require('../dados/calcs.json').slice(16).map((c) => c.id);
+  const antes = await coletar(page, '/v71-original.html', nV71, mV71, medsNovos, calcsNovas);
+  const depois = await coletar(page, '/', nV71, mV71, medsNovos, calcsNovas);
   // Lista da aba: idêntica à v71 (fora as mudanças intencionais).
   // Aba CID-10: o texto de busca de cada categoria inclui as doenças do app com aquele código, então as doenças novas
   // podem ACRESCENTAR categorias à lista (nunca tirar). Ali vale: todos os itens da v71 continuam, na mesma ordem.
@@ -90,7 +96,10 @@ test('buscas produzem a mesma lista que a v71', async ({ page, browserName }, in
   const quadros = Object.keys(antes).filter((k) => {
     if (!antes[k].quadro) return false;
     const modo = k.split(':')[0], esperado = antes[k].quadro.filter((x) => x.split('|')[0] !== modo);
-    return JSON.stringify(esperado) !== JSON.stringify(depois[k].quadro || []);
+    // Numa seção em que entrou calculadora nova, só vale que os itens antigos que sobraram mantêm a ordem.
+    const d = depois[k].desloc || [], fora = (x) => d.includes(x.split('|')[0]);
+    const tem = new Set(depois[k].quadro || []), esp2 = esperado.filter((x) => !fora(x) || tem.has(x));
+    return JSON.stringify(esp2) !== JSON.stringify(depois[k].quadro || []);
   });
   expect(quadros, 'quadro da busca global diferente da v71').toEqual([]);
   expect(Object.keys(antes).length).toBeGreaterThan(80);
