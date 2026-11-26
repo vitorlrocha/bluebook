@@ -6,16 +6,16 @@ Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSIS
 
 | Prioridade | Itens |
 |---|---:|
-| Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 10 |
-| Prioridade 2 — faixas divergentes e doses a confirmar | 187 |
-| Prioridade 3 — completar informação (sem risco de dose) | 85 |
-| **Total** | **282** |
+| Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 14 |
+| Prioridade 2 — faixas divergentes e doses a confirmar | 190 |
+| Prioridade 3 — completar informação (sem risco de dose) | 102 |
+| **Total** | **306** |
 
-Informativo: 33 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
+Informativo: 35 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
 
 ## Prioridade 1 — pode mostrar dose errada (revisar primeiro)
 
-### Ficha × calculadora pediátrica (sem sobreposição) (4)
+### Ficha × calculadora pediátrica (sem sobreposição) (7)
 
 Conferir em: bula no Bulário Eletrônico da Anvisa (seção Posologia, uso pediátrico) e SBP quando houver.
 Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
@@ -26,8 +26,11 @@ Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
 | ☐ | Metilprednisolona (succinato) | Ficha (Pediatria): 15-30 mg/kg/dia · Calculadora: EV/IM (asma grave, NHLBI) 1-2 mg/kg/dia |
 | ☐ | Etossuximida | Ficha (Pediatria): 60 mg/kg/dia · Calculadora: VO (crise de ausência) 20 mg/kg/dia |
 | ☐ | Rufinamida | Ficha (Pediatria): 60 mg/kg/dia · Calculadora: VO (Lennox-Gastaut, ≥ 1 ano) 10-45 mg/kg/dia |
+| ☐ | Sulfadiazina (oral) | Ficha (Pediatria): 6-8 mg/kg/dia · Calculadora: VO (> 2 meses) 150 mg/kg/dia |
+| ☐ | Estiripentol | Ficha (Pediatria): 60 mg/kg/dia · Calculadora: VO (Dravet, ≥ 6 meses e ≥ 7 kg) 50 mg/kg/dia |
+| ☐ | Felbamato | Ficha (Pediatria): 60 mg/kg/dia · Calculadora: VO (Lennox-Gastaut, 2 a 14 anos) 15-45 mg/kg/dia |
 
-### Plantão × calculadora pediátrica (5)
+### Plantão × calculadora pediátrica (6)
 
 Conferir em: diretriz citada no protocolo (campo "fonte" do protocolo) e bula Anvisa do fármaco.
 Arquivo: `dados/plantao.json e dados/ped_db.json`
@@ -38,6 +41,7 @@ Arquivo: `dados/plantao.json e dados/ped_db.json`
 | ☐ | Crise convulsiva / estado de mal epiléptico — Midazolam (sem acesso venoso) (IM) | Plantão: 0,2 mg/kg/dose · máx. 10 mg · Calculadora: IM (sedação, 1 a 15 anos) 0,05-0,15 mg/kg/dose · máx. 10 mg (dose fora da faixa) |
 | ☐ | Crise de asma grave — Prednisolona/prednisona (VO) | Plantão: máx. 40 mg · Calculadora: VO máx. 60 mg (máximo diferente) |
 | ☐ | Sepse e choque séptico — Hidrocortisona (choque refratário a catecolaminas) (EV) | Plantão: 2 mg/kg/dose · máx. 100 mg · Calculadora: EV/IM 4-8 mg/kg/dose · máx. 250 mg (dose fora da faixa) |
+| ☐ | Intubação em sequência rápida — Rocurônio (EV) | Plantão: 1 mg/kg/dose · máx. 100 mg · Calculadora: EV (intubação) 0,45-0,6 mg/kg/dose (dose fora da faixa) |
 | ☐ | Intubação em sequência rápida — Succinilcolina (EV) | Plantão: 1,5 mg/kg/dose · máx. 150 mg · Calculadora: EV (lactente e criança pequena) 2 mg/kg/dose; EV (criança maior e adolescente) 1 mg/kg/dose (dose fora da faixa) |
 
 ### Calculadora pediátrica: texto × número usado no cálculo (1)
@@ -51,7 +55,7 @@ Arquivo: `dados/ped_db.json`
 
 ## Prioridade 2 — faixas divergentes e doses a confirmar
 
-### Ficha × calculadora pediátrica (faixas diferentes) (12)
+### Ficha × calculadora pediátrica (faixas diferentes) (15)
 
 Conferir em: bula no Bulário Eletrônico da Anvisa (seção Posologia, uso pediátrico) e SBP quando houver.
 Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
@@ -64,10 +68,13 @@ Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
 | ☐ | Hidrocortisona (injetável) | faixa da ficha sai da faixa da calculadora — Ficha: 2-4 mg/kg/dose · Calculadora: EV/IM 4-8 mg/kg/dose |
 | ☐ | Clorpromazina | faixa da ficha sai da faixa da calculadora — Ficha: 0,5-1 mg/kg/dose · Calculadora: VO (problemas graves de comportamento, 6 meses a 12 anos) 0,55 mg/kg/dose |
 | ☐ | Cetoprofeno | faixa da ficha sai da faixa da calculadora — Ficha: 1-2 mg/kg/dose · Calculadora: VO 1 mg/kg/dose |
+| ☐ | Metimazol (Tiamazol) | faixa da ficha sai da faixa da calculadora — Ficha: 0,2-0,5 mg/kg/dia · Calculadora: VO (hipertireoidismo, criança — início) 0,4 mg/kg/dia |
 | ☐ | Cefuroxima | faixa da ficha sai da faixa da calculadora — Ficha: 30 mg/kg/dia; 75-150 mg/kg/dia · Calculadora: VO 20-30 mg/kg/dia; EV/IM (> 3 meses) 50-100 mg/kg/dia |
 | ☐ | Ampicilina | faixa da ficha sai da faixa da calculadora — Ficha: 100-200 mg/kg/dia; 300-400 mg/kg/dia · Calculadora: EV 50-200 mg/kg/dia |
 | ☐ | Gentamicina | faixa da ficha sai da faixa da calculadora — Ficha: 4-5 mg/kg/dia; 5-7,5 mg/kg/dia · Calculadora: EV/IM 5-7,5 mg/kg/dia |
+| ☐ | Levofloxacino | faixa da ficha sai da faixa da calculadora — Ficha: 5-10 mg/kg/dose · Calculadora: VO/EV (antraz inalatório pós-exposição ou peste, ≥ 6 meses) 8 mg/kg/dose |
 | ☐ | Oxcarbazepina | faixa da ficha sai da faixa da calculadora — Ficha: 10-20 mg/kg/dia · Calculadora: VO (adjuvante, 2 a 16 anos) 8-10 mg/kg/dia |
+| ☐ | Lincomicina | faixa da ficha sai da faixa da calculadora — Ficha: 20-40 mg/kg/dia · Calculadora: EV (> 1 mês) 10-20 mg/kg/dia |
 | ☐ | Benznidazol | faixa da ficha sai da faixa da calculadora — Ficha: 5-10 mg/kg/dia · Calculadora: VO (Chagas, 2 a 12 anos) 5-8 mg/kg/dia |
 | ☐ | Nifurtimox | faixa da ficha sai da faixa da calculadora — Ficha: 5-10 mg/kg/dia · Calculadora: VO (Chagas, < 41 kg) 10-20 mg/kg/dia; VO (Chagas, ≥ 41 kg) 8-10 mg/kg/dia |
 
@@ -264,7 +271,7 @@ Arquivo: `dados/seed_meds.json`
 
 ## Prioridade 3 — completar informação (sem risco de dose)
 
-### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (67)
+### PENDENTE DE VERIFICAÇÃO em apresentação/nome comercial/outros (84)
 
 Conferir em: bula Anvisa (Bulário Eletrônico) e lista CMED vigente; PCDT/Conitec se for medicamento de alto custo.
 Arquivo: `dados/seed_meds.json`
@@ -338,6 +345,23 @@ Arquivo: `dados/seed_meds.json`
 | ☐ | Brivaracetam — Observação (calculadora) — via VO (11 a < 20 kg) | Início 0,5-1,25 mg/kg 2x/dia; manutenção 0,5-2,5 mg/kg 2x/dia (1-5 mg/kg/dia). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
 | ☐ | Brivaracetam — Observação (calculadora) — via VO (< 11 kg) | …2x/dia; manutenção 0,75-3 mg/kg 2x/dia (1,5-6 mg/kg/dia). Acima de 50 kg: 25-50 mg 2x/dia (manutenção 25-100 mg 2x/dia). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
 | ☐ | Clorpromazina — Observação (calculadora) — via VO (problemas graves de comportamento, 6 meses a 12 anos) | …cada 4-6 h, se necessário (ex.: criança de 18 kg ≈ 10 mg). Não usar abaixo de 6 meses salvo situação que ameace a vida. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| ☐ | Levofloxacino — Observação (calculadora) — via VO/EV (antraz inalatório pós-exposição ou peste, ≥ 6 meses) | …2/12 h (máx. 250 mg por dose). Comprimidos só acima de 30 kg. Uso pediátrico por mais de 14 dias não foi estudado. Doses a partir de 50 kg: PENDENTE DE VERIFICAÇÃO. |
+| ☐ | Lincomicina — Observação (calculadora) — via IM (> 1 mês) | Infecções graves: 10 mg/kg IM a cada 24 h. Mais graves: 10 mg/kg a cada 12 h ou com mais frequência. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| ☐ | Lincomicina — Observação (calculadora) — via EV (> 1 mês) | 10 a 20 mg/kg/dia conforme a gravidade, em doses divididas como no adulto (ver bula), sempre diluída e em infusão. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| ☐ | Minociclina — Observação (calculadora) — via VO (> 8 anos) | …ue 4 mg/kg; depois 2 mg/kg de 12/12 h, sem passar da dose usual do adulto. Abaixo de 8 anos: risco de manchar os dentes. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| ☐ | Remdesivir — Observação (calculadora) — via EV (≥ 28 dias e 3 a < 40 kg — manutenção) | Ataque 5 mg/kg no 1º dia; depois 2,5 mg/kg 1x/dia. 40 kg ou mais: 200 mg no 1º dia e 100 mg/dia. Entre 1,5 e < 3 kg: PENDENTE DE VERIFICAÇÃO (tabela da bula). |
+| ☐ | Triclabendazol — Observação (calculadora) — via VO (fasciolíase, ≥ 6 anos) | Duas doses de 10 mg/kg com 12 h de intervalo (tratamento de um dia só). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| ☐ | Rocurônio — Observação (calculadora) — via EV (intubação) | …écnica e a idade. Não recomendado para sequência rápida em pediatria (rótulo). Só com via aérea e ventilação garantidas. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| ☐ | Vecurônio — Observação (calculadora) — via EV (intubação, 10 a 16 anos) | …10 anos podem precisar de dose inicial um pouco maior e reforços mais frequentes. Abaixo de 7 semanas: não estabelecido. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| ☐ | Felbamato — Observação (calculadora) — via VO (Lennox-Gastaut, 2 a 14 anos) | …g/dia em 3 ou 4 tomadas (reduzindo os outros anticonvulsivantes em 20%); subir 15 mg/kg/dia por semana até 45 mg/kg/dia. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| ☐ | Primidona — Observação (calculadora) — via VO (< 8 anos, manutenção) | …9 100 mg 2x/dia; a partir do dia 10, 125-250 mg 3x/dia. Manutenção usual 125-250 mg 3x/dia ou 10-25 mg/kg/dia divididos. Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| ☐ | Metimazol (Tiamazol) — Observação (calculadora) — via VO (hipertireoidismo, criança — início) | Início 0,4 mg/kg/dia dividido em 3 tomadas de 8/8 h. Manutenção: PENDENTE DE VERIFICAÇÃO. Preferido ao propiltiouracil em crianças (risco hepático). Dose máxima em mg: PENDENTE DE VERIFICA… |
+| ☐ | Metimazol (Tiamazol) — Observação (calculadora) — via VO (hipertireoidismo, criança — início) | …o em 3 tomadas de 8/8 h. Manutenção: PENDENTE DE VERIFICAÇÃO. Preferido ao propiltiouracil em crianças (risco hepático). Dose máxima em mg: PENDENTE DE VERIFICAÇÃO (o trecho lido do rótulo não traz teto pediátrico). |
+| ☐ | Pegfilgrastim — fixo — via SC (quimioterapia mielossupressora) | ≥ 45 kg: 6 mg 1x por ciclo. Abaixo de 45 kg: dose por peso — PENDENTE DE VERIFICAÇÃO (tabela da bula). |
+| ☐ | Filgrastim peguilado — fixo — via SC (quimioterapia mielossupressora) | ≥ 45 kg: 6 mg 1x por ciclo. Abaixo de 45 kg: dose por peso — PENDENTE DE VERIFICAÇÃO (tabela da bula). |
+| ☐ | Tocilizumabe — fixo — via EV/SC (AIJ poliarticular) | EV a cada 4 semanas: < 30 kg 10 mg/kg; ≥ 30 kg 8 mg/kg. SC: < 30 kg 162 mg a cada 3 semanas; ≥ 30 kg: PENDENTE DE VERIFICAÇÃO. |
+| ☐ | Tocilizumabe — Observação (calculadora) — via EV/SC (AIJ poliarticular) | AIJ sistêmica (≥ 2 anos) e síndrome de liberação de citocinas: dose PENDENTE DE VERIFICAÇÃO. |
+| ☐ | Rabeprazol — fixo — via VO (≥ 12 anos) | DRGE sintomática: 20 mg 1x/dia (duração: PENDENTE DE VERIFICAÇÃO). |
 
 ### Prescrição sem a linha "Base:" (referência) (16)
 

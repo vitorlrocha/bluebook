@@ -206,6 +206,22 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#fp-out')).toContainText('600 mg');      // 30 mg/kg × 20 kg
   });
 
+  test('lote 09: canabidiol, metildopa, dalteparina em UI e neostigmina com teto', async ({ page }) => {
+    await abrirFicha(page, 'Canabidiol');
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('50 mg');       // 2,5 mg/kg × 20 kg
+    await abrirFicha(page, 'Metildopa');
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('100 mg');      // 10 mg/kg/dia × 20 kg ÷ 2
+    await abrirFicha(page, 'Dalteparina');
+    await page.locator('#fp-weight').fill('10');
+    await expect(page.locator('#fp-out')).toContainText('1.500 UI');    // 150 UI/kg × 10 kg
+    await abrirFicha(page, 'Neostigmina');
+    await page.locator('#fp-weight').fill('100');
+    await page.locator('#fp-dose').fill('0.07');
+    await expect(page.locator('#fp-out')).toContainText('5 mg');        // 7 mg travado em 5 mg
+  });
+
   test('dose acima da faixa usual gera aviso', async ({ page }) => {
     await abrirFicha(page, 'Dipirona sódica (Metamizol)');
     await page.locator('#fp-weight').fill('10');
