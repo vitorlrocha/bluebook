@@ -10,7 +10,7 @@ Gerado por `node ferramentas/inconsistencias.js` a partir de `dados/*.json`. **N
 | 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 11 |
 | 3. Associações sem calculadora pediátrica (informativo) | 34 |
 | 4. Plantão × calculadora pediátrica | 5 |
-| 5. Prescrição das doenças pediátricas × calculadora pediátrica | 5 |
+| 5. Prescrição das doenças pediátricas × calculadora pediátrica | 7 |
 | 6. Prescrições sem linha "Base:" | 16 |
 | 7. Detalhes (MEDX) sem ficha de mesmo nome | 0 |
 | 8. Calculadora pediátrica sem ficha correspondente | 2 |
@@ -103,6 +103,8 @@ Doenças da área Pediatria: dose em mg/kg citada logo após o nome do fármaco,
 | Febre sem sinais de localização (lactente) | Cefotaxima | cefotaxima 200-300 mg/kg/dia 6/6 h | EV/IM (1 mês a 12 anos, < 50 kg) 50-180 mg/kg/dia |
 | Refluxo vesicoureteral | Cefalexina | Cefalexina 10 mg/kg/dia à noite | VO 25-100 mg/kg/dia |
 | Hidronefrose antenatal | Amoxicilina | Amoxicilina 10 mg/kg/dia profilática em casos selecionados. | VO 25-90 mg/kg/dia |
+| Infecção relacionada à assistência em unidade neonatal e prevenção de infecção hospitalar | Ampicilina | ampicilina 200 mg/kg/dia com gentamicina 5 mg/kg/dia | EV 50-200 mg/kg/dia; EV (meningite) 300-400 mg/kg/dia |
+| Infecção relacionada à assistência em unidade neonatal e prevenção de infecção hospitalar | Amicacina | amicacina 20 mg/kg/dia quando a unidade tiver resistência à gentamicina | EV/IM 15 mg/kg/dia |
 
 ## 6. Prescrições sem linha "Base:"
 
