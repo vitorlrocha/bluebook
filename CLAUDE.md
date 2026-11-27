@@ -57,7 +57,7 @@ O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`
 - Não usar agentes (subagentes) sem pedido do autor.
 
 ## Estado atual (18/11/2026)
-- No ar: versão 0.89.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
+- No ar: versão 0.90.0 — offline, instalável, atualização automática com aviso, login local, Google e backup no Drive,
   busca única em todo o app, acervo ampliado, doses pediátricas conferidas com bulas, política de privacidade.
 - Pendente do autor: revisão clínica (`REVISAO_CLINICA.md`, propostas em `docs/PROPOSTAS_P1.md`), teste num iPhone real.
 - Acervo ampliado (13/11/2026): +149 doenças dos lotes 01–17 revisados (campo `orig`), integradas por `ferramentas/integrar_lote.js`.
@@ -79,4 +79,5 @@ O git fica em `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\git\cmd\git.exe`
 - Revisão P2 de faixas (26/11/2026, curadoria/revisao-p2-2611.js): campo Pediatria de Oxcarbazepina, Nifurtimox, Benznidazol, Domperidona, Cetoprofeno, Clorpromazina e Lincomicina trocado pela bula/rótulo (alertas não relacionados a dose mantidos); ampicilina ganhou via "EV (meningite)" 300-400 mg/kg/dia (máx. 12 g). Mais 12 diferenças esperadas em revisao_conferidas.json (19 no total). Faltam fonte: hidrocortisona na anafilaxia (ficha 2-4 × calculadora 4-8 mg/kg) e cefotaxima 200-300 mg/kg/dia na febre sem sinais.
 - PENDENTES de dose nas prescrições (26/11/2026, curadoria/pendentes-presc-01.js): 6 resolvidos com rótulo FDA da mesma indicação (doxiciclina EV no tifo, via IM da medroxiprogesterona, via oral da dimeticona, piridostigmina na miastenia, varfarina inicial, mupirocina no impetigo do RN). A maioria dos restantes é "a fonte da doença não traz a dose" e precisa de diretriz brasileira específica. Sem fonte pediátrica ainda: morfina, sulfato de magnésio.
 - PENDENTES nas prescrições, lote 02 (26/11/2026, curadoria/pendentes-presc-02.js): 16 trechos resolvidos com diretriz brasileira lida no PDF — SAMU 192 SAV 2ª ed. 2016 (AC7, AC10, AC37, AT4, APed26, APed30, APed31, ATox 3, 4, 7, 8, 11), PCDT Hanseníase 2022 (10.1.2), Manual LT 2017 (6.2.5), Manual TB 2019 (8.2, 8.6) e Atenção à Saúde do RN 2014 (v. 2 cap. 14.2.1; v. 3 cap. 23.5). Novas diferenças esperadas no relatório: ampicilina e amicacina neonatais (dose do RN, não da criança), ainda não marcadas como conferidas.
+- PENDENTES nas prescrições, lote 03 (27/11/2026, curadoria/pendentes-presc-03.js): analgésico e anti-inflamatório de 5 fichas odontológicas pelo Quadro 61 do CAB 28 v. II (2013), sem escolher antibiótico, miorrelaxante ou gel onde a fonte não especifica; benznidazol na gestação pelo PCDT de Chagas 2018. Ampicilina e amicacina neonatais marcadas como conferidas (21 em revisao_conferidas.json).
 - Contagens: 3.375 doenças (3.226 originais + 149 novas) · 1.856 medicamentos (1.851 originais + 5 novos) · CID-10 com 2.045 categorias e 12.451 subcategorias.

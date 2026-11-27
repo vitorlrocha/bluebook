@@ -7,9 +7,9 @@ Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSIS
 | Prioridade | Itens |
 |---|---:|
 | Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 0 |
-| Prioridade 2 — faixas divergentes e doses a confirmar | 151 |
+| Prioridade 2 — faixas divergentes e doses a confirmar | 144 |
 | Prioridade 3 — completar informação (sem risco de dose) | 106 |
-| **Total** | **257** |
+| **Total** | **250** |
 
 Informativo: 34 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
 
@@ -26,7 +26,7 @@ Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
 |:---:|---|---|
 | ☐ | Hidrocortisona (injetável) | faixa da ficha sai da faixa da calculadora — Ficha: 2-4 mg/kg/dose · Calculadora: EV/IM 4-8 mg/kg/dose |
 
-### Prescrição de doença pediátrica × calculadora (3)
+### Prescrição de doença pediátrica × calculadora (1)
 
 Conferir em: diretriz citada na linha "Base:" da própria doença; SBP/Ministério da Saúde (PCDT) para a dose pediátrica.
 Arquivo: `dados/diseases.json (campo prescricao) e dados/ped_db.json`
@@ -34,10 +34,8 @@ Arquivo: `dados/diseases.json (campo prescricao) e dados/ped_db.json`
 | Feito | Onde | O que conferir |
 |:---:|---|---|
 | ☐ | Febre sem sinais de localização (lactente) — Cefotaxima | Prescrição: "cefotaxima 200-300 mg/kg/dia 6/6 h" · Calculadora: EV/IM (1 mês a 12 anos, < 50 kg) 50-180 mg/kg/dia |
-| ☐ | Infecção relacionada à assistência em unidade neonatal e prevenção de infecção hospitalar — Ampicilina | Prescrição: "ampicilina 200 mg/kg/dia com gentamicina 5 mg/kg/dia" · Calculadora: EV 50-200 mg/kg/dia; EV (meningite) 300-400 mg/kg/dia |
-| ☐ | Infecção relacionada à assistência em unidade neonatal e prevenção de infecção hospitalar — Amicacina | Prescrição: "amicacina 20 mg/kg/dia quando a unidade tiver resistência à gentamicina" · Calculadora: EV/IM 15 mg/kg/dia |
 
-### PENDENTE DE VERIFICAÇÃO em dose/conduta (147)
+### PENDENTE DE VERIFICAÇÃO em dose/conduta (142)
 
 Conferir em: bula Anvisa (Bulário Eletrônico) e lista CMED vigente; PCDT/Conitec se for medicamento de alto custo.
 Arquivo: `dados/seed_meds.json`
@@ -112,7 +110,6 @@ Arquivo: `dados/seed_meds.json`
 | ☐ | Otalgia (dor de ouvido): abordagem diagnóstica na atenção primária — Prescrição | …média aguda, otite externa, cerume impactado, corpo estranho, etc.). 2) Analgésico simples conforme necessidade; fármaco, dose e intervalo: PENDENTE DE VERIFICAÇÃO (não definidos no capítulo lido). 3) Evitar cotonete e manipulação do conduto. Base: Ministério da… |
 | ☐ | Cárie dentária (abordagem na atenção primária) — Prescrição | 1) Escovação com dentifrício fluoretado e fio dental, orientados individualmente; frequência e concentração do dentifrício: PENDENTE DE VERIFICAÇÃO (o caderno não detalha). 2) Flúor tópico (bochecho semanal ou diário ou gel trimestral) somente nas… |
 | ☐ | Cárie dentária (abordagem na atenção primária) — Prescrição | …detalha). 2) Flúor tópico (bochecho semanal ou diário ou gel trimestral) somente nas situações coletivas de risco descritas; concentrações: PENDENTE DE VERIFICAÇÃO. 3) Aconselhamento dietético: reduzir a frequência de açúcar. 4) Dor odontogênica: analgésico simpl… |
-| ☐ | Cárie dentária (abordagem na atenção primária) — Prescrição | …rações: PENDENTE DE VERIFICAÇÃO. 3) Aconselhamento dietético: reduzir a frequência de açúcar. 4) Dor odontogênica: analgésico simples, dose PENDENTE DE VERIFICAÇÃO; antibiótico não é tratamento da cárie. 5) Encaminhar ao cirurgião-dentista para raspagem, selament… |
 | ☐ | Pré-eclâmpsia sobreposta à hipertensão crônica — Prescrição | …Crise hipertensiva e sulfato de magnésio: conforme o registro "Pré-eclâmpsia com sinais de gravidade". Doses e esquemas não citados acima: PENDENTE DE VERIFICAÇÃO. Base: Ministério da Saúde, Manual de Gestação de Alto Risco (2022), cap. 11 (pré-eclâmpsia) e cap.… |
 | ☐ | Parto gemelar e complicações da gestação múltipla — Prescrição | …rostol) disponíveis. 3) Preparo cervical e indução com as mesmas drogas e posologias da gestação única. Doses e esquemas não citados acima: PENDENTE DE VERIFICAÇÃO. Base: Ministério da Saúde, Manual de Gestação de Alto Risco (2022), cap. 17 (gestação múltipla) |
 | ☐ | Pneumonia congênita e pneumonia neonatal precoce — Prescrição | …acima de 4 doses (mesmo guia, v. 3, cap. 23.5). 3) Oxigênio e suporte ventilatório conforme gravidade. Doses e esquemas não citados acima: PENDENTE DE VERIFICAÇÃO. Base: Ministério da Saúde, Atenção à Saúde do Recém-Nascido, vol. 3 (2014), cap. 21 (dificuldade r… |
@@ -127,13 +124,10 @@ Arquivo: `dados/seed_meds.json`
 | ☐ | Acidente por himenópteros (abelhas, vespas e formigas): envenenamento e anafilaxia — Prescrição | …ou recorrentes (a maioria precisa de 1 ou 2 doses). 2) Reação local: gelo local, analgésico oral e anti-histamínico local (dose e fármaco: PENDENTE DE VERIFICAÇÃO, não especificados na fonte). 3) Envenenamento maciço: suporte clínico e manejo da rabdomiólise, he… |
 | ☐ | Acidente por himenópteros (abelhas, vespas e formigas): envenenamento e anafilaxia — Prescrição | …: suporte clínico e manejo da rabdomiólise, hemólise e lesão renal aguda conforme a gravidade (sem esquema de hidratação definido na fonte: PENDENTE DE VERIFICAÇÃO). 4) Soroterapia: não disponível. Base: Ministério da Saúde, Guia de Vigilância em Saúde, 6ª ed., v… |
 | ☐ | Traumatismo dentoalveolar (concussão, subluxação, luxação, avulsão e fraturas dentárias) — Prescrição | …m clorexidina sem álcool quando indicado. 2) Antibioticoterapia na luxação lateral conforme a condição bucodental (fármaco, dose e duração: PENDENTE DE VERIFICAÇÃO, não descritos para este quadro). 3) Vacina antitetânica conforme situação vacinal. 4) Contenção, r… |
-| ☐ | Hemorragia bucal pós-exodontia e sangramento oral espontâneo — Prescrição | …compressão com gaze estéril, curativo hemostático bioabsorvível e sutura (equipe de saúde bucal). 2) Analgésico conforme necessidade (dose: PENDENTE DE VERIFICAÇÃO neste capítulo; ver Quadro 61 e bula Anvisa). 3) Uso de anticoagulante: associar medidas com a equi… |
-| ☐ | Alveolite pós-exodontia (alveolite seca e supurada) — Prescrição | 1) Alveolite supurada: antibiótico e analgésico (evitar AINEs e salicilatos). Fármaco, dose e duração: PENDENTE DE VERIFICAÇÃO (a fonte não os especifica para este quadro; ver Quadro 61 e bula Anvisa). 2) Antisséptico local: c… |
+| ☐ | Alveolite pós-exodontia (alveolite seca e supurada) — Prescrição | …x. 8 comprimidos/dia) (Cadernos de Atenção Básica nº 28, v. II, Quadro 61; conferir em bula Anvisa). Antibiótico (fármaco, dose e duração): PENDENTE DE VERIFICAÇÃO (a fonte não o especifica para este quadro; o Quadro 61 lista amoxicilina e estolato de eritromicin… |
 | ☐ | Alveolite pós-exodontia (alveolite seca e supurada) — Prescrição | …clorexidina 0,12% ou polvidona iodada no alvéolo, aplicada pelo dentista. 3) Alveolite seca: antibiótico sistêmico segundo a fonte (esquema PENDENTE DE VERIFICAÇÃO). Base: Ministério da Saúde, Cadernos de Atenção Básica nº 28, v. II, cap. 2.21, urgências pós-oper… |
-| ☐ | Luxação da articulação temporomandibular e disfunção temporomandibular aguda — Prescrição | 1) Analgésico e miorrelaxante (fármaco, dose e duração: PENDENTE DE VERIFICAÇÃO, não especificados na fonte). 2) Anti-inflamatório no deslocamento de disco e na disfunção muscular… |
-| ☐ | Luxação da articulação temporomandibular e disfunção temporomandibular aguda — Prescrição | …duração: PENDENTE DE VERIFICAÇÃO, não especificados na fonte). 2) Anti-inflamatório no deslocamento de disco e na disfunção muscular (dose: PENDENTE DE VERIFICAÇÃO). 3) Dieta pastosa e bandagem por 24 a 48 h após redução da luxação. Base: Ministério da Saúde, Cad… |
-| ☐ | Lesões traumáticas da mucosa oral (prótese, mordida pós-anestesia e queimadura) — Prescrição | 1) Gel anestésico local: posologia PENDENTE DE VERIFICAÇÃO. 2) Analgésico se dor intensa (dose: PENDENTE DE VERIFICAÇÃO). 3) Suspensão temporária da prótese e… |
-| ☐ | Lesões traumáticas da mucosa oral (prótese, mordida pós-anestesia e queimadura) — Prescrição | 1) Gel anestésico local: posologia PENDENTE DE VERIFICAÇÃO. 2) Analgésico se dor intensa (dose: PENDENTE DE VERIFICAÇÃO). 3) Suspensão temporária da prótese e ajuste pelo dentista. Base: Ministério da Saúde, Cadernos de… |
+| ☐ | Luxação da articulação temporomandibular e disfunção temporomandibular aguda — Prescrição | …8 comprimidos/dia) (Cadernos de Atenção Básica nº 28, v. II, Quadro 61; conferir em bula Anvisa). Miorrelaxante (fármaco, dose e duração): PENDENTE DE VERIFICAÇÃO, não especificado na fonte. 2) Anti-inflamatório no deslocamento de disco e na disfunção muscular:… |
+| ☐ | Lesões traumáticas da mucosa oral (prótese, mordida pós-anestesia e queimadura) — Prescrição | 1) Gel anestésico local: posologia PENDENTE DE VERIFICAÇÃO. 2) Analgésico se dor intensa: paracetamol, adulto 3 a 4 g/dia em 3 ou 4 tomadas (máx. 4 g/dia), cr… |
 | ☐ | Queimadura ocular por radiação ultravioleta (fotoceratite) — Prescrição | …ótica, seguida de oclusão do olho (o exemplo da fonte é associação de acetato de retinol, aminoácidos, metionina e cloranfenicol; posologia PENDENTE DE VERIFICAÇÃO). 3) Atropina 1% colírio, 1 gota, se dor muito intensa, antes da oclusão. Base: Ministério da Saúde… |
 | ☐ | Lipofuscinose ceroide neuronal tipo 2 (CLN2, deficiência de TPP1) — Prescrição | …analgesia e demais medidas de suporte: individualizar conforme os PCDT de Epilepsia e de Dor Crônica (doses não detalhadas neste protocolo: PENDENTE DE VERIFICAÇÃO nos PCDT específicos). Base: Ministério da Saúde/Conitec, PCDT da Lipofuscinose Ceroide Neuronal ti… |
 | ☐ | Efeitos adversos da poliquimioterapia da hanseníase — Prescrição | 1) Urticária por rifampicina: corticoide e anti-histamínico (dose PENDENTE DE VERIFICAÇÃO; não definida na fonte). 2) Anemia discreta pela dapsona: ácido fólico e complexo B (dose PENDENTE… |
@@ -142,7 +136,6 @@ Arquivo: `dados/seed_meds.json`
 | ☐ | Espasticidade focal e segmentar (PCDT): toxina botulínica e reabilitação — Prescrição | …s músculos, definida pela intensidade da espasticidade, comprometimento funcional, peso e número e tamanho dos músculos; doses por músculo: PENDENTE DE VERIFICAÇÃO na bula do produto, o PCDT não as detalha. 2) Intervalo mínimo entre aplicações de 3 a 4 meses; rea… |
 | ☐ | Mucopolissacaridose tipo I (síndromes de Hurler, Hurler-Scheie e Scheie) — Prescrição | …Pré-medicação com antipirético ou anti-histamínico 60 min antes: recomendação da bula, decisão do médico assistente (doses não detalhadas: PENDENTE DE VERIFICAÇÃO). Base: Ministério da Saúde/Conitec, PCDT da Mucopolissacaridose tipo I, Portaria Conjunta SAES/SEC… |
 | ☐ | Infecção pelo HIV em crianças e adolescentes: início e manejo da terapia antirretroviral — Prescrição | …(AZT, 3TC, abacavir, TDF, lopinavir/ritonavir, darunavir/ritonavir, raltegravir) por peso ou superfície corporal: ver o Apêndice E do PCDT (PENDENTE DE VERIFICAÇÃO neste registro). Base: Ministério da Saúde/Conitec, PCDT para Manejo da Infecção pelo HIV em Crianç… |
-| ☐ | Doença de Chagas na gestação e transmissão congênita — Prescrição | Sem prescrição antiparasitária na gestação, exceto doença aguda grave (decisão especializada; doses de benznidazol/nifurtimox: PENDENTE DE VERIFICAÇÃO, não constam no capítulo). Pós-parto e fora da lactação: tratamento com benznidazol conforme protoc… |
 | ☐ | Hepatite C na gestação — Prescrição | …PCDT de hepatite C (ver ficha de hepatite C crônica). Vacinar contra hepatites A e B se suscetível (esquema: consultar calendário vigente; PENDENTE DE VERIFICAÇÃO no capítulo). Base: Ministério da Saúde, Manual de Gestação de Alto Risco (SAPS/DEPROS), 2022 (cap.… |
 | ☐ | Doença falciforme e talassemia na gestação — Prescrição | …or via oral durante toda a gestação (doença falciforme). Analgesia na crise: escalonar potência conforme dor (fármacos e doses específicos: PENDENTE DE VERIFICAÇÃO, não constam no capítulo). Não prescrever ferro de rotina nem quelantes de ferro. Base: Ministério… |
 | ☐ | Miastenia gravis na gestação e no parto — Prescrição | …mg/dia); no trabalho de parto, via endovenosa na dose equivalente a 1/3 da dose oral. 2) Corticoide como imunossupressor de escolha (dose: PENDENTE DE VERIFICAÇÃO), atentando para piora transitória inicial e intolerância a carboidratos. 3) Evitar a lista de fárm… |
@@ -324,7 +317,7 @@ Arquivo: `dados/ped_db.json e dados/seed_meds.json`
 | ☐ | Dimenidrato | Existe na calculadora, mas não há ficha com esse nome |
 | ☐ | Pirvínio | Existe na calculadora, mas não há ficha com esse nome |
 
-## Conferidas pelo autor — diferença esperada (19)
+## Conferidas pelo autor — diferença esperada (21)
 
 Não contam nas prioridades. Lista em `ferramentas/revisao_conferidas.json`; se o dado mudar, o item volta para a prioridade de origem.
 
@@ -349,3 +342,5 @@ Não contam nas prioridades. Lista em `ferramentas/revisao_conferidas.json`; se 
 | ☑ | Infecção do trato urinário na infância — Nitrofurantoína | Prescrição: "nitrofurantoína 1-2 mg/kg/dia" · Calculadora: VO 5-7 mg/kg/dia | Dose de profilaxia (1-2 mg/kg/dia), não de tratamento. | 26/11/2026 |
 | ☑ | Refluxo vesicoureteral — Cefalexina | Prescrição: "Cefalexina 10 mg/kg/dia à noite" · Calculadora: VO 25-100 mg/kg/dia | Dose de profilaxia (10 mg/kg/dia à noite), não de tratamento. | 26/11/2026 |
 | ☑ | Hidronefrose antenatal — Amoxicilina | Prescrição: "Amoxicilina 10 mg/kg/dia profilática em casos selecionados." · Calculadora: VO 25-90 mg/kg/dia | Dose de profilaxia (10 mg/kg/dia), não de tratamento. | 26/11/2026 |
+| ☑ | Infecção relacionada à assistência em unidade neonatal e prevenção de infecção hospitalar — Ampicilina | Prescrição: "ampicilina 200 mg/kg/dia com gentamicina 5 mg/kg/dia" · Calculadora: EV 50-200 mg/kg/dia; EV (meningite) 300-400 mg/kg/dia | Dose neonatal do guia Atenção à Saúde do RN (MS 2014, v. 2 cap. 14.2.1); a calculadora é da criança. | 27/11/2026 |
+| ☑ | Infecção relacionada à assistência em unidade neonatal e prevenção de infecção hospitalar — Amicacina | Prescrição: "amicacina 20 mg/kg/dia quando a unidade tiver resistência à gentamicina" · Calculadora: EV/IM 15 mg/kg/dia | Dose neonatal do guia Atenção à Saúde do RN (MS 2014, v. 2 cap. 14.2.1); a calculadora é da criança. | 27/11/2026 |
