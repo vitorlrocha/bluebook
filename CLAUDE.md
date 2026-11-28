@@ -36,6 +36,7 @@ conteúdo aparecer no app instalado após reconectar; (3) app publicado e endere
 
 ## Regras que não podem ser quebradas
 - Nunca inventar doses, códigos CID ou referências; na dúvida, "PENDENTE DE VERIFICAÇÃO". Não alterar `dados/` sem pedido do autor.
+- Fontes e doses seguem `docs/CRITERIOS_FONTES.md` (decisão do autor, 27/11/2026): brasileira primeiro (MS/Conitec → sociedades → bula Anvisa), internacional como 2ª opção (`Ref. internacional:`, para a futura edição EUA); dose-base que faça sentido para a doença, sem transferir entre profilaxia/tratamento, SNC/endocardite, RN/criança/adulto, gestação; aplicar em massa, por fonte.
 - Nenhuma mudança visual pode esconder ou remover uma função existente sem aviso explícito ao autor
   (conferido por `testes/regressao_funcoes.ambos.spec.js`, no computador a 1366 px e no celular a 390 px).
 - Não recriar botões de editar, excluir ou novo medicamento. Não usar marca, texto ou layout de outros apps.

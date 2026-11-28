@@ -20,7 +20,7 @@ Modelo de qualidade: `curadoria/lote-01.json` (aprovado pelo revisor) — copie 
   Se existir, PULE e anote "já existe: <nome>". Se o tema não fizer sentido como ficha clínica, pule e explique.
 - Toda dose (droga, dose, via, frequência, duração) tem de estar na fonte que você leu. Sem fonte: "PENDENTE DE
   VERIFICAÇÃO". Na dúvida, descreva a conduta sem dose.
-- Fontes, nesta ordem: Ministério da Saúde/PCDT/Conitec, sociedades brasileiras, bula Anvisa; OMS/CDC/NICE só como
+- Fontes e dose: siga `docs/CRITERIOS_FONTES.md` (hierarquia A–E e regra da dose-base). Em resumo: Ministério da Saúde/PCDT/Conitec, sociedades brasileiras, bula Anvisa; OMS/CDC/NICE só como
   complemento ou quando não houver brasileira (diga isso na linha Base).
 - Escreva com suas palavras; nunca copie frases das fontes nem de outros apps.
 - `prescricao` termina com `Base: <instituição, documento, ano>`. CID só se existir em `dados/cid_full.json`

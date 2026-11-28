@@ -5,7 +5,7 @@ só cria `curadoria/revisao-lote-NN.md` (um por lote) e, se mandado, `curadoria/
 `docs/ESTRATEGIA_ACERVO.md`. Modelo de revisão: `curadoria/revisao-lote-01.md`.
 
 ## O que conferir (economia: foque no que pode causar dano)
-1. Rode `node curadoria/checar_lote.js curadoria/lote-NN.json`.
+1. Rode `node curadoria/checar_lote.js curadoria/lote-NN.json`. Critérios de fonte e de dose: `docs/CRITERIOS_FONTES.md`.
 2. Para CADA registro: abra a fonte citada (URL em `fontes`) e confira TODO número clínico — dose, via, frequência,
    duração, limiares, idades gestacionais, valores de exame — e as condutas principais. Prosa geral: amostre.
    Se a fonte não puder ser aberta, o registro não é aprovado.
