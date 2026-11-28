@@ -240,6 +240,16 @@ test.describe('Calculadora pediátrica (ficha do medicamento)', () => {
     await expect(page.locator('#fp-out')).toContainText('1500 mg');       // 300 mg/kg/dia × 20 kg ÷ 4
   });
 
+  test('revisão P2 (27/11/2026): hidrocortisona injetável na anafilaxia pelo SAMU (5-10 mg/kg/dose, teto 250 mg)', async ({ page }) => {
+    await abrirFicha(page, 'Hidrocortisona (injetável)');
+    await page.locator('#fp-weight').fill('20');
+    await expect(page.locator('#fp-out')).toContainText('Dose por tomada100 mg');   // dose padrão 5 mg/kg × 20 kg
+    await expect(page.locator('#fp-out')).toContainText('5 mg/kg/dose');
+    await page.locator('#fp-weight').fill('60');
+    await expect(page.locator('#fp-out')).toContainText('travada em 250 mg');      // 5 mg/kg × 60 kg = 300 → teto 250
+    await expect(page.locator('#detail')).toContainText('APed26');
+  });
+
   test('revisão P1 (26/11/2026): colírio, creme e gel não herdam a dose sistêmica', async ({ page }) => {
     for (const nome of ['Prednisolona (colírio)', 'Gentamicina (colírio)', 'Hidrocortisona (creme)', 'Clindamicina (gel)']) {
       await page.locator('#search-input').fill(nome);

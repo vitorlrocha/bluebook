@@ -1166,22 +1166,22 @@
       {
         "via": "EV/IM",
         "d": [
-          4,
-          8
+          5,
+          10
         ],
-        "dd": 4,
+        "dd": 5,
         "b": "dose",
         "f": 4,
         "mx": 250,
         "fonte": "Ref",
-        "ob": "Anafilaxia/asma grave: 4-8 mg/kg/dose (máx. 250 mg). Crise adrenal: 2-3 mg/kg EV/IO em bolus (máx. 100 mg), depois 50-100 mg/m²/dia em 4 doses. Reposição fisiológica: 8-10 mg/m²/dia VO em 3 doses; estresse: dobrar/triplicar a dose na febre.",
+        "ob": "Anafilaxia: 5-10 mg/kg/dose IV/IO (máx. 250 mg) — Protocolo SAMU 192 – Suporte Avançado de Vida, 2ª ed., MS, 2016, APed26. Rótulo FDA/AAP (anafilaxia e asma grave): 4-8 mg/kg/dose, máx. 250 mg. Crise adrenal: 2-3 mg/kg EV/IO em bolus (máx. 100 mg), depois 50-100 mg/m²/dia em 4 doses. Reposição fisiológica: 8-10 mg/m²/dia VO em 3 doses; estresse: dobrar/triplicar a dose na febre.",
         "ap": [
           {
             "l": "Frasco 100 mg/2 mL (50 mg/mL — confira a bula)",
             "c": 50
           }
         ],
-        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com)"
+        "rev": "Conferida em 11/2026 com rótulos FDA e diretrizes AAP/IDSA/PIDS/AHA (via Drugs.com). Faixa trocada em 27/11/2026 (revisão P2, decisão do autor) pela do Protocolo SAMU 192 – Suporte Avançado de Vida, 2ª ed., MS, 2016, APed26; conferida no PDF original."
       }
     ],
     "nao": [

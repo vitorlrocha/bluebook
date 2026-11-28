@@ -7,7 +7,7 @@ Gerado por `node ferramentas/inconsistencias.js` a partir de `dados/*.json`. **N
 | Verificação | Itens |
 |---|---:|
 | 1. Calculadora pediátrica: texto × números da mesma ficha | 0 |
-| 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 11 |
+| 2. Ficha do medicamento (Pediatria) × calculadora pediátrica | 10 |
 | 3. Associações sem calculadora pediátrica (informativo) | 34 |
 | 4. Plantão × calculadora pediátrica | 5 |
 | 5. Prescrição das doenças pediátricas × calculadora pediátrica | 7 |
@@ -33,7 +33,6 @@ Faixa em mg/kg (mesma base: por dose ou por dia) ou máximo diário diferentes. 
 | Cefuroxima | faixa da ficha sai da faixa da calculadora | 30 mg/kg/dia; 75-150 mg/kg/dia | VO 20-30 mg/kg/dia; EV/IM (> 3 meses) 50-100 mg/kg/dia | média |
 | Dipirona sódica (Metamizol) | faixa da ficha sai da faixa da calculadora | 10-25 mg/kg/dose | VO 10-12 mg/kg/dose; IM/EV 15-25 mg/kg/dose | média |
 | Gentamicina | faixa da ficha sai da faixa da calculadora | 4-5 mg/kg/dia; 5-7,5 mg/kg/dia | EV/IM 5-7,5 mg/kg/dia | média |
-| Hidrocortisona (injetável) | faixa da ficha sai da faixa da calculadora | 2-4 mg/kg/dose | EV/IM 4-8 mg/kg/dose | média |
 | Levofloxacino | faixa da ficha sai da faixa da calculadora | 5-10 mg/kg/dose | VO/EV (antraz inalatório pós-exposição ou peste, ≥ 6 meses) 8 mg/kg/dose | média |
 | Metimazol (Tiamazol) | faixa da ficha sai da faixa da calculadora | 0,2-0,5 mg/kg/dia | VO (hipertireoidismo, criança — início) 0,4 mg/kg/dia | média |
 | Naproxeno | faixa da ficha sai da faixa da calculadora | 10-15 mg/kg/dia | VO (artrite idiopática juvenil, > 2 anos) 10 mg/kg/dia | média |
@@ -88,7 +87,7 @@ Dose por kg do protocolo fora da faixa da calculadora, ou máximo por dose difer
 |---|---|---|---|---|
 | Bradicardia e taquiarritmias | Adenosina — 2ª dose (EV rápido + flush SF) | 0,2 mg/kg/dose · máx. 12 mg | EV (TSV, < 50 kg) 0,05-0,1 mg/kg/dose | dose fora da faixa |
 | Crise convulsiva / estado de mal epiléptico | Midazolam (sem acesso venoso) (IM) | 0,2 mg/kg/dose · máx. 10 mg | IM (sedação, 1 a 15 anos) 0,05-0,15 mg/kg/dose · máx. 10 mg | dose fora da faixa |
-| Sepse e choque séptico | Hidrocortisona (choque refratário a catecolaminas) (EV) | 2 mg/kg/dose · máx. 100 mg | EV/IM 4-8 mg/kg/dose · máx. 250 mg | dose fora da faixa |
+| Sepse e choque séptico | Hidrocortisona (choque refratário a catecolaminas) (EV) | 2 mg/kg/dose · máx. 100 mg | EV/IM 5-10 mg/kg/dose · máx. 250 mg | dose fora da faixa |
 | Intubação em sequência rápida | Rocurônio (EV) | 1 mg/kg/dose · máx. 100 mg | EV (intubação) 0,45-0,6 mg/kg/dose | dose fora da faixa |
 | Intubação em sequência rápida | Succinilcolina (EV) | 1,5 mg/kg/dose · máx. 150 mg | EV (lactente e criança pequena) 2 mg/kg/dose; EV (criança maior e adolescente) 1 mg/kg/dose | dose fora da faixa |
 

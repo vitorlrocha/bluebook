@@ -54,7 +54,8 @@ const CORRECOES = {
   // destas 5 fichas era texto de outro remédio; trocado pela dose do rótulo FDA (curadoria/revisao-p1-2611.js).
   // Revisão P2 (26/11/2026, curadoria/revisao-p2-2611.js): mais 7 fichas com o campo Pediatria trocado pela bula/rótulo.
   SEED_MEDS: { chave: (m) => m.nome, itens: ['Secnidazol', 'Etossuximida', 'Rufinamida', 'Estiripentol', 'Felbamato', 'Sulfadiazina (oral)',
-    'Oxcarbazepina', 'Nifurtimox', 'Benznidazol', 'Domperidona', 'Cetoprofeno', 'Clorpromazina', 'Lincomicina'] },
+    'Oxcarbazepina', 'Nifurtimox', 'Benznidazol', 'Domperidona', 'Cetoprofeno', 'Clorpromazina', 'Lincomicina',
+    'Hidrocortisona (injetável)'] },  // 27/11/2026: anafilaxia pelo SAMU APed26 (curadoria/revisao-p2-2711.js)
   PLANTAO: { chave: (p) => p.id, itens: ['sepse'] },                       // hidrocortisona: dose sem fonte → PENDENTE
 };
 for (const cfg of L.VARS) {

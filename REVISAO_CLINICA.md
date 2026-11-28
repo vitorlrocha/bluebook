@@ -7,33 +7,15 @@ Gerado por `node ferramentas/revisao.js` a partir de `PENDENCIAS.md` e `INCONSIS
 | Prioridade | Itens |
 |---|---:|
 | Prioridade 1 — pode mostrar dose errada (revisar primeiro) | 0 |
-| Prioridade 2 — faixas divergentes e doses a confirmar | 117 |
+| Prioridade 2 — faixas divergentes e doses a confirmar | 115 |
 | Prioridade 3 — completar informação (sem risco de dose) | 106 |
-| **Total** | **223** |
+| **Total** | **221** |
 
 Informativo: 34 fichas de associação ficaram sem calculadora pediátrica por decisão de projeto (ver INCONSISTENCIAS.md §3).
 
 ## Prioridade 1 — pode mostrar dose errada (revisar primeiro)
 
 ## Prioridade 2 — faixas divergentes e doses a confirmar
-
-### Ficha × calculadora pediátrica (faixas diferentes) (1)
-
-Conferir em: bula no Bulário Eletrônico da Anvisa (seção Posologia, uso pediátrico) e SBP quando houver.
-Arquivo: `dados/seed_meds.json (campo pediatria) e dados/ped_db.json`
-
-| Feito | Onde | O que conferir |
-|:---:|---|---|
-| ☐ | Hidrocortisona (injetável) | faixa da ficha sai da faixa da calculadora — Ficha: 2-4 mg/kg/dose · Calculadora: EV/IM 4-8 mg/kg/dose |
-
-### Prescrição de doença pediátrica × calculadora (1)
-
-Conferir em: diretriz citada na linha "Base:" da própria doença; SBP/Ministério da Saúde (PCDT) para a dose pediátrica.
-Arquivo: `dados/diseases.json (campo prescricao) e dados/ped_db.json`
-
-| Feito | Onde | O que conferir |
-|:---:|---|---|
-| ☐ | Febre sem sinais de localização (lactente) — Cefotaxima | Prescrição: "cefotaxima 200-300 mg/kg/dia 6/6 h" · Calculadora: EV/IM (1 mês a 12 anos, < 50 kg) 50-180 mg/kg/dia |
 
 ### PENDENTE DE VERIFICAÇÃO em dose/conduta (115)
 
@@ -290,7 +272,7 @@ Arquivo: `dados/ped_db.json e dados/seed_meds.json`
 | ☐ | Dimenidrato | Existe na calculadora, mas não há ficha com esse nome |
 | ☐ | Pirvínio | Existe na calculadora, mas não há ficha com esse nome |
 
-## Conferidas pelo autor — diferença esperada (21)
+## Conferidas pelo autor — diferença esperada (22)
 
 Não contam nas prioridades. Lista em `ferramentas/revisao_conferidas.json`; se o dado mudar, o item volta para a prioridade de origem.
 
@@ -300,7 +282,7 @@ Não contam nas prioridades. Lista em `ferramentas/revisao_conferidas.json`; se 
 | ☑ | Metilprednisolona (succinato) | Ficha (Pediatria): 15-30 mg/kg/dia · Calculadora: EV/IM (asma grave, NHLBI) 1-2 mg/kg/dia | Indicações diferentes: a ficha cita a pulsoterapia; a calculadora é da asma grave (e cita a pulsoterapia no texto). | 26/11/2026 |
 | ☑ | Bradicardia e taquiarritmias — Adenosina — 2ª dose (EV rápido + flush SF) | Plantão: 0,2 mg/kg/dose · máx. 12 mg · Calculadora: EV (TSV, < 50 kg) 0,05-0,1 mg/kg/dose (dose fora da faixa) | O Plantão segue o PALS (2ª dose 0,2 mg/kg); a calculadora segue o rótulo FDA (aumentos de 0,05-0,1 mg/kg). | 26/11/2026 |
 | ☑ | Crise convulsiva / estado de mal epiléptico — Midazolam (sem acesso venoso) (IM) | Plantão: 0,2 mg/kg/dose · máx. 10 mg · Calculadora: IM (sedação, 1 a 15 anos) 0,05-0,15 mg/kg/dose · máx. 10 mg (dose fora da faixa) | Indicações diferentes: convulsão (AES 2016) no Plantão; sedação (bula) na calculadora. | 26/11/2026 |
-| ☑ | Sepse e choque séptico — Hidrocortisona (choque refratário a catecolaminas) (EV) | Plantão: 2 mg/kg/dose · máx. 100 mg · Calculadora: EV/IM 4-8 mg/kg/dose · máx. 250 mg (dose fora da faixa) | Indicações diferentes: choque/insuficiência adrenal no Plantão (a calculadora traz 2-3 mg/kg, máx. 100 mg, no texto da crise adrenal); a faixa numérica da calculadora é da anafilaxia e asma grave. | 26/11/2026 |
+| ☑ | Sepse e choque séptico — Hidrocortisona (choque refratário a catecolaminas) (EV) | Plantão: 2 mg/kg/dose · máx. 100 mg · Calculadora: EV/IM 5-10 mg/kg/dose · máx. 250 mg (dose fora da faixa) | Indicações diferentes: choque/insuficiência adrenal no Plantão (a calculadora traz 2-3 mg/kg, máx. 100 mg, no texto da crise adrenal); a faixa numérica da calculadora é da anafilaxia (SAMU APed26, desde 27/11/2026). | 26/11/2026 |
 | ☑ | Intubação em sequência rápida — Rocurônio (EV) | Plantão: 1 mg/kg/dose · máx. 100 mg · Calculadora: EV (intubação) 0,45-0,6 mg/kg/dose (dose fora da faixa) | O Plantão segue o PALS para sequência rápida (0,6-1,2 mg/kg); o rótulo FDA traz só a intubação eletiva e não recomenda sequência rápida em pediatria. | 26/11/2026 |
 | ☑ | Intubação em sequência rápida — Succinilcolina (EV) | Plantão: 1,5 mg/kg/dose · máx. 150 mg · Calculadora: EV (lactente e criança pequena) 2 mg/kg/dose; EV (criança maior e adolescente) 1 mg/kg/dose (dose fora da faixa) | Diretrizes diferentes: o Plantão (PALS) usa 1,5 mg/kg e cita 2 mg/kg no lactente; a calculadora segue o rótulo FDA por idade. | 26/11/2026 |
 | ☑ | Dipirona sódica (Metamizol) | faixa da ficha sai da faixa da calculadora — Ficha: 10-25 mg/kg/dose · Calculadora: VO 10-12 mg/kg/dose; IM/EV 15-25 mg/kg/dose | Vias diferentes: a ficha junta VO e EV (10-25); a calculadora separa VO 10-12 e IM/EV 15-25. | 26/11/2026 |
@@ -313,6 +295,7 @@ Não contam nas prioridades. Lista em `ferramentas/revisao_conferidas.json`; se 
 | ☑ | Benznidazol | faixa da ficha sai da faixa da calculadora — Ficha: 5-8 mg/kg/dia; 5-10 mg/kg/dia · Calculadora: VO (Chagas, 2 a 12 anos) 5-8 mg/kg/dia | A ficha registra o valor antigo sem fonte (5-10) ao lado do rótulo FDA (5-8), que é o usado na calculadora. | 26/11/2026 |
 | ☑ | Infecção do trato urinário na infância — Cefalexina | Prescrição: "cefalexina 10 mg/kg/dia." · Calculadora: VO 25-100 mg/kg/dia | Dose de profilaxia (10 mg/kg/dia), não de tratamento. | 26/11/2026 |
 | ☑ | Infecção do trato urinário na infância — Nitrofurantoína | Prescrição: "nitrofurantoína 1-2 mg/kg/dia" · Calculadora: VO 5-7 mg/kg/dia | Dose de profilaxia (1-2 mg/kg/dia), não de tratamento. | 26/11/2026 |
+| ☑ | Febre sem sinais de localização (lactente) — Cefotaxima | Prescrição: "cefotaxima 200-300 mg/kg/dia 6/6 h" · Calculadora: EV/IM (1 mês a 12 anos, < 50 kg) 50-180 mg/kg/dia | Dose de meningite, acima da faixa geral do rótulo FDA usada na calculadora; sem fonte brasileira com dose de meningite (o FTN 2010 só traz 50 mg/kg/dose por idade e peso no RN). Decisão do autor. | 27/11/2026 |
 | ☑ | Refluxo vesicoureteral — Cefalexina | Prescrição: "Cefalexina 10 mg/kg/dia à noite" · Calculadora: VO 25-100 mg/kg/dia | Dose de profilaxia (10 mg/kg/dia à noite), não de tratamento. | 26/11/2026 |
 | ☑ | Hidronefrose antenatal — Amoxicilina | Prescrição: "Amoxicilina 10 mg/kg/dia profilática em casos selecionados." · Calculadora: VO 25-90 mg/kg/dia | Dose de profilaxia (10 mg/kg/dia), não de tratamento. | 26/11/2026 |
 | ☑ | Infecção relacionada à assistência em unidade neonatal e prevenção de infecção hospitalar — Ampicilina | Prescrição: "ampicilina 200 mg/kg/dia com gentamicina 5 mg/kg/dia" · Calculadora: EV 50-200 mg/kg/dia; EV (meningite) 300-400 mg/kg/dia | Dose neonatal do guia Atenção à Saúde do RN (MS 2014, v. 2 cap. 14.2.1); a calculadora é da criança. | 27/11/2026 |
