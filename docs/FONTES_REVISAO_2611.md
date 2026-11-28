@@ -35,3 +35,11 @@ Endereço de cada rótulo: `https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?set
 ## Remissões às fichas do app
 
 Onde nenhuma fonte trazia a dose da indicação, o texto diz "ver a ficha X deste app". A dose fica na ficha do medicamento, e nada foi copiado. Os scripts `pendentes-presc-04.js` e `-05.js` conferem que cada ficha citada existe.
+
+## Aplicação em massa dos critérios (lote 06, 27/11/2026)
+
+| Fonte | Usada em | Endereço |
+|---|---|---|
+| Lista Nacional de Notificação Compulsória (Portaria GM/MS nº 11.211, de 13/05/2026, Anexo I) | notificação no tifo epidêmico e na febre por mordedura de rato | https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-11.211-de-13-de-maio-de-2026-705371404 |
+| Guia para o Uso de Hemocomponentes, 2ª ed. (MS, 2015) | plasma, plaquetas, crioprecipitado e transfusão maciça | https://bvsms.saude.gov.br/bvs/publicacoes/guia_uso_hemocomponentes_2ed.pdf |
+| Formulário Terapêutico Nacional 2010 | permetrina, hidrocortisona 1%, minipílula, injetável mensal IM, lidocaína gel | https://bvsms.saude.gov.br/bvs/publicacoes/formulario_terapeutico_nacional_2010.pdf |
